@@ -825,6 +825,75 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 - Si tuvieras que definir en una sola frase lo que más urge cambiar en la forma en que se gestiona la información laboral en tu empresa, ¿cuál sería?
 - ¿Hay algún punto relevante sobre tu experiencia en el trabajo que no hayamos tocado y te gustaría agregar?
 
+### 2.2.2. Registro de entrevistas
+
+**Segmento 1:** **Personal de Recursos Humanos**
+
+**Entrevista 1:**
+
+Nombre: Carmen Julia Elena Kichi Zavala 
+
+Edad:  22 años
+
+Distrito: Surco 
+
+Link de la entrevista: [Entrevista 1 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6USPJ4)
+
+Timing donde inicia la entrevista: 00:00
+
+Duración completa de la entrevista: 4 minutos 54 segundos 
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+Carmen Julia Elena Kichi Zavala tiene 22 años, reside en el distrito de Surco, es soltera y vive con sus padres y su abuela. Es licenciada en Psicología Organizacional por la Universidad Norbert Wiener y se desempeña desde hace ocho meses como asistente de Reclutamiento y Selección en el área comercial de Grupo Carza (parte de Grupo Coril e Integra Retail), una empresa de retail de productos electrónicos, línea blanca, línea marrón y motos con cerca de 2,000 colaboradores a nivel nacional. Describe la relación con el personal como fluctuante y llena de imprevistos debido al volumen masivo de altas y bajas del sector comercial, lo que le exige operar con urgencia y generar cierta sobrecarga al coordinar entre 30 y 40 ingresos diarios. En su rutina disfruta gestionar la entrega de accesos y códigos de venta para nuevos colaboradores, pero le abruma la gestión de ceses por bajo rendimiento y el seguimiento manual e individualizado para la legalización notarial del formato Vida Ley.
+En el aspecto tecnológico y operativo, Carmen utiliza mayoritariamente una laptop para el trabajo pesado y un celular corporativo para la comunicación fluida vía WhatsApp; navegadores como Microsoft Edge (aprovechando convenios con Copilot) y Chrome, e intercala herramientas como Excel, correo institucional y plataformas como Ecotech y Buk para la carga de legajos y datos de uniformes o tallas. Respecto a los procesos internos, la empresa cuenta con un organigrama documentado en el directorio de RR. HH. que no está a la vista directa del personal, mientras que las vacaciones se controlan de forma centralizada en Excel mediante fórmulas y se amortiguan con una cuponera de días libres administrada por Clima y Cultura. La asistencia se marca mediante huella digital en secretaría -aunque su contrato es no fiscalizable- y las notificaciones de convenios o beneficios se difunden por correo y grupos de WhatsApp.
+
+
+**Entrevista 2:**
+
+Nombre: José Vladimir Muñoz Toledo 
+
+Edad: 25 años
+
+Distrito: Pueblo Libre
+
+Link de la entrevista: [Entrevista 2 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=LU4tZ1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjk0LjY4fX0%3D)
+
+Timing donde inicia la entrevista: 04:54
+
+Duración completa de la entrevista: 4 minutos 49 segundos
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+José Vladimir Muñoz Toledo tiene 25 años, reside en el distrito de Pueblo Libre y es soltero. Vive con su hermano, depende aún de sus padres y no tiene personas a su cargo. Se encuentra cursando estudios universitarios en la carrera de Arquitectura y Urbanismo, y de forma paralela labora en una pequeña empresa familiar dedicada a la venta y distribución de productos para negocios, la cual cuenta con aproximadamente 25 colaboradores distribuidos en las áreas de administración, ventas, almacén y reparto. Describe una cultura de trabajo altamente familiar e informal, en la que las responsabilidades se asumen de manera dinámica y la jerarquía es vertical pero accesible, pues todos se conocen directamente. La relación de trabajo es cercana y no requiere de protocolos estructurados de comunicación corporativa, aunque carecen de un organigrama formal o actualizado en plataformas digitales.
+En el plano operativo y tecnológico, la empresa no emplea softwares especializados de Gestión Humana ni sistemas automatizados para la validación de flujos. La administración de legajos e información de personal la realiza José junto a sus primos mediante hojas de cálculo en Excel, carpetas digitales compartidas y expedientes en físico archivados en fólderes manila por la gerencia. Las solicitudes de vacaciones o permisos no cuentan con una plataforma de autogestión: el colaborador lo conversa directamente con el jefe de área, quien coordina con la administración para verificar la disponibilidad de reemplazos antes de autorizarlo. El control de los días acumulados, gozados y pendientes se actualiza manualmente en fórmulas de Excel o anotaciones en papel, revisándose dicho archivo de forma previa a cualquier aprobación.
+
+
+**Entrevista 3:**
+
+Nombre: Jimena Vasquez 
+
+Edad: 22 años
+
+Distrito: Chorrillos
+
+Link de la entrevista: [Entrevista 3 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=Zg0vWd&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTgzLjgxfX0%3D)
+
+Timing donde inicia la entrevista: 09:43
+
+Duración completa de la entrevista: 4 minutos 41 segundos
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+Jimena Vasquez tiene 22 años, vive en el distrito de Chorrillos, es soltera, habita con su familia y no posee personas a su cargo. Es bachiller en Psicología con especialización en el área organizacional y de recursos humanos, y labora desde hace cuatro meses como asistente de RR. HH. en Manpower, una multinacional de gestión del talento y tercerización de servicios (RPO) con una amplia nómina de colaboradores distribuidos en sectores como retail y alimentos. Describe la relación con el personal como cercana y orientada al bienestar y la salud mental a través del área de People. En su rutina disfruta el contacto directo con postulantes durante las entrevistas y la exposición de ofertas de empleo, pero desearía automatizar el registro manual y repetitivo de información y la mensajería masiva por correo y WhatsApp. Ante imprevistos opera de forma autónoma buscando soluciones antes de escalar con su equipo o coordinadora, gestionando sus procesos con dinamismo bajo una estructura organizada en equipos como "multicuentas".
+En el ámbito tecnológico e infraestructura, Ximena trabaja exclusivamente desde una laptop corporativa con restricciones de seguridad que le impiden acceder a bases de datos desde su celular (Android), aunque desearía contar con mayor movilidad para consultas urgentes. Su entorno digital diario incluye Google Chrome, Microsoft Teams para reuniones internas, Google Meet para entrevistas, Pandap, Google Forms, correo institucional y WhatsApp, además de un intranet corporativo estructurado donde consulta asignaciones, capacitaciones y el organigrama. La gestión de legajos se apoya en bases de datos e intensivos archivos de Excel; las vacaciones se coordinan formalmente por correo, se agendan en el calendario y se notifican vía intranet; y el marcaje de asistencia se efectúa mediante huella digital o photocheck en accesos automatizados. El cálculo de planillas y la entrega de beneficios son derivados a áreas específicas mediante sistemas internos integrados.
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
