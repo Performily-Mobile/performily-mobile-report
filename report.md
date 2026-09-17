@@ -677,3 +677,1055 @@ Los dos segmentos conviven en la misma organización y sus problemas se retroali
 Esta división en dos segmentos se corresponde con la arquitectura de la solución. El bounded context de IAM define dos roles, personal de Recursos Humanos y colaborador, y las aplicaciones móviles exponen dos experiencias diferenciadas: administración y autogestión. En consecuencia, el Landing Page presenta dos call to action, uno por segmento, que dirigen a la descarga de la aplicación y a la sección de ayuda correspondiente.
 
 <div style="page-break-after: always;"></div>
+# Capítulo II: Requirements Development and Software Solution Design
+
+## 2.1. Competidores
+
+### 2.1.1. Análisis competitivo
+
+| Competitive Analysis Landscape |  |  |  |  |  |
+| :---- | :---- | ----- | ----- | ----- | ----- |
+| ¿Por qué llevar a cabo este análisis? | El presente Competitive Analysis Landscape tiene como finalidad conocer las principales soluciones móviles que compiten en el mercado de gestión de recursos humanos. El análisis permite comparar sus propuestas de valor, funcionalidades, segmentos, modelos comerciales y canales de distribución para identificar oportunidades de diferenciación para Flowboard. |  |  |  |  |
+| Nombres de los competidores |  | ![Figura 5. 2.1.1. Análisis competitivo](assets/figura-05.png) Flowboard | ![Figura 6. 2.1.1. Análisis competitivo](assets/figura-06.png) Buk | ![Figura 7. 2.1.1. Análisis competitivo](assets/figura-07.png) Factorial | ![Figura 8. 2.1.1. Análisis competitivo](assets/figura-08.png) Sesame HR |
+| Perfil | Overview | Solución móvil para gestionar el vínculo laboral en organizaciones en crecimiento. Centraliza la información del colaborador, asistencia, beneficios, remuneración referencial y solicitudes. Está compuesta por una aplicación Android nativa, una aplicación cross-platform y un RESTful API. | Plataforma integral de gestión de personas disponible mediante web y aplicación móvil. Centraliza planillas, asistencia, documentos, beneficios, vacaciones, selección y desarrollo organizacional. | Plataforma de recursos humanos y gestión empresarial disponible mediante web y aplicación móvil. Integra información del personal, control horario, ausencias, documentos, turnos, gastos y procesos de talento. | Plataforma multidispositivo de recursos humanos orientada a la gestión del tiempo y la experiencia del empleado. Permite gestionar asistencia, vacaciones, turnos, documentos y comunicación interna. |
+|  | Ventaja competitiva ¿Qué valor ofrece a los clientes? | Prioriza la experiencia móvil de colaboradores que no disponen de una computadora corporativa. Permite consultar información laboral y seguir solicitudes desde Android, contempla conectividad intermitente y protege información sensible mediante autenticación biométrica. | Ofrece una solución integral adaptada a la legislación peruana. Incluye planillas, asistencia y desarrollo organizacional dentro de un ecosistema consolidado, con soporte e implementación local. | Reúne procesos de recursos humanos, tiempo, talento y gastos en una plataforma modular. Su aplicación móvil incluye control horario, turnos, notificaciones y autenticación biométrica. | Destaca por una experiencia móvil intuitiva y por sus diferentes métodos de registro de asistencia. Facilita el autoservicio, la comunicación y la aprobación rápida de vacaciones y ausencias. |
+| Perfil de Marketing | Mercado objetivo | Organizaciones formales de Lima Metropolitana y Callao con entre 50 y 500 colaboradores, especialmente aquellas con personal operativo o sin acceso permanente a una computadora corporativa. | Empresas peruanas y latinoamericanas de diferentes tamaños que buscan centralizar y automatizar integralmente sus procesos de recursos humanos y planillas. | Pequeñas y medianas empresas que requieren digitalizar y ampliar progresivamente la gestión de recursos humanos, tiempo, talento y gastos. | Pequeñas, medianas y grandes empresas con equipos presenciales, híbridos o móviles que necesitan administrar horarios, asistencia y comunicación desde diferentes dispositivos. |
+|  | Estrategias de marketing | Landing page, demostraciones de la aplicación, contenido educativo sobre digitalización de recursos humanos, difusión en redes profesionales y contacto directo con organizaciones del segmento objetivo. | Posicionamiento digital, contenidos especializados, estudios sobre recursos humanos, eventos, demostraciones comerciales y venta consultiva mediante especialistas locales. | Marketing de contenidos, demostraciones gratuitas, posicionamiento en buscadores, presencia en redes profesionales y campañas dirigidas a responsables de recursos humanos y pequeñas empresas. | Prueba gratuita, demostraciones, contenido educativo, posicionamiento digital y campañas enfocadas en control horario, productividad y experiencia del empleado. |
+| Perfil de producto | Productos & Servicios | Perfil laboral, estructura organizacional, asistencia, consulta de remuneración y beneficios, saldo de vacaciones, solicitudes, aprobaciones, notificaciones e indicadores para Recursos Humanos. No calcula planillas ni emite boletas de pago. | Portal del colaborador, planillas, asistencia, documentos, firma electrónica, beneficios, onboarding, desempeño, selección, capacitación, encuestas y reportería. | Directorio de empleados, documentos, firma electrónica, ausencias, control horario, turnos, onboarding, reclutamiento, desempeño, gastos y reportes. | Control horario, vacaciones, ausencias, turnos, documentos, comunicación interna, onboarding, evaluaciones, encuestas e informes de recursos humanos. |
+|  | Precios & Costos | Modelo preliminar de suscripción mensual por colaborador activo, con planes escalables según las funcionalidades habilitadas. El precio deberá validarse durante las entrevistas y pruebas del modelo de negocio. | Suscripción mensual calculada según el número de perfiles activos y los módulos seleccionados. El precio se configura mediante una cotización adaptada a cada organización. | Suscripción por usuario y módulos contratados. El precio publicado parte de una tarifa referencial por usuario, pero la propuesta final se adapta a las necesidades de la empresa. | Suscripción modular según el tamaño de la empresa y las funcionalidades contratadas. Ofrece demostración y periodo de prueba antes de la contratación. |
+|  | Canales de distribución (Web y/o Móvil) | Landing page, distribución de versiones de prueba mediante Firebase App Distribution y aplicación móvil para Android. Una publicación posterior podría realizarse mediante Google Play. | Sitio web, equipo comercial, demostraciones, soporte local y aplicación móvil distribuida mediante Google Play y App Store. | Sitio web, equipo comercial, demostraciones y aplicación disponible mediante Google Play y App Store. | Sitio web, demostraciones, prueba gratuita y aplicación móvil disponible mediante Google Play y App Store. |
+| Análisis SWOT | Fortalezas | Enfoque mobile-first; funcionamiento previsto con conectividad intermitente; seguridad biométrica; alcance claro; interfaz centrada en el colaborador; coexistencia con sistemas contables o de planillas. | Adaptación a la normativa peruana; soporte local; amplio catálogo de módulos; planillas integradas; experiencia consolidada en Latinoamérica. | Plataforma modular; aplicación móvil madura; variedad de funcionalidades; autenticación biométrica; posibilidad de registrar asistencia sin conexión. | Interfaz móvil intuitiva; diversos métodos de registro de asistencia; solicitudes y aprobaciones móviles; comunicación interna; disponibilidad en Android e iOS. |
+|  | Debilidades | Producto académico todavía en desarrollo; sin una base consolidada de clientes; solo será validado en Android durante el ciclo; no calcula planillas; no realiza importación masiva de datos históricos. | Su amplitud funcional puede incrementar el costo y la complejidad de implementación para organizaciones que solo necesitan funciones básicas de autoservicio móvil. | Algunas funciones administrativas, reportes y configuraciones continúan disponibles únicamente en la versión web. Su amplitud puede generar una curva de aprendizaje mayor. | Su adaptación principal responde al mercado español, por lo que determinadas funciones legales o laborales pueden requerir adecuación para el contexto peruano. |
+|  | Oportunidades | Crecimiento del acceso móvil en el Perú; organizaciones que todavía trabajan con hojas de cálculo; necesidad de autoservicio para personal operativo; demanda de trazabilidad y transparencia laboral. | Expansión de la digitalización empresarial y demanda de plataformas integrales adaptadas a la legislación de cada país latinoamericano. | Mayor adopción de soluciones SaaS modulares y demanda de automatización entre pequeñas y medianas empresas. | Crecimiento del trabajo móvil e híbrido y mayor necesidad de administrar horarios, ausencias y comunicación mediante teléfonos celulares. |
+|  | Amenazas | Competidores con mayor capital, reconocimiento y número de funcionalidades; resistencia organizacional al cambio; preocupación por la privacidad; cambios normativos y dependencia de plataformas móviles. | Entrada de soluciones internacionales con precios más bajos y aparición de productos especializados con experiencias móviles más simples. | Competidores regionales con mayor adaptación a las normas laborales y tributarias peruanas. | Competidores locales con planillas y cumplimiento laboral peruano integrado, además de plataformas internacionales con mayores recursos comerciales. |
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+
+**Fortalezas y Oportunidades**
+
+**Estrategia:** diferenciación mediante una experiencia mobile-first. Posicionar a Flowboard como una solución móvil especializada en la autogestión de información laboral para organizaciones en crecimiento cuyos colaboradores no disponen permanentemente de una computadora corporativa.
+
+**Sustento:** el 95,4 % de los hogares peruanos cuenta con telefonía móvil, mientras que solo el 37,8 % dispone de al menos una computadora. En Lima Metropolitana, área geográfica inicial del proyecto, el 80,5 % de los hogares tiene acceso a internet (INEI, 2025b).
+
+**Tácticas:**
+
+1. Grabar demostraciones desde un dispositivo físico mostrando la consulta del saldo de vacaciones, las boletas y el estado de una solicitud.
+2. Publicar el Landing Page con call to action de descarga diferenciados por segmento.
+3. Ejecutar un piloto en un área de una organización del segmento inicial, midiendo el tiempo de acceso a la información antes y después.
+
+**Indicadores de validación:** al menos 60 % de los colaboradores invitados instala la aplicación durante el primer mes; 70 % de las consultas frecuentes se resuelve en autoservicio; la consulta de información laboral se completa en menos de 5 minutos.
+
+**Debilidades y Oportunidades**
+
+**Estrategia:** generación de confianza mediante una implementación sencilla. Reducir el impacto de la falta de trayectoria comercial de Flowboard mediante demostraciones funcionales, acompañamiento inicial y una comunicación clara de las funcionalidades incluidas en el producto.
+
+**Sustento:** la oportunidad está en las organizaciones que todavía administran información mediante hojas de cálculo, documentos físicos y canales informales. El INEI registró en 2024 un total de 99 231 pequeñas empresas y 21 468 medianas y grandes, un universo de referencia de 120 699 organizaciones (INEI, 2025a). El mercado efectivo deberá delimitarse según ubicación, cantidad de colaboradores y nivel de digitalización.
+
+**Tácticas:**
+
+1. Ofrecer una demostración funcional del producto a cada organización interesada.
+2. Entregar una guía de uso breve dirigida al analista de Recursos Humanos.
+3. Dictar una sesión de capacitación de no más de 45 minutos.
+4. Habilitar un canal de soporte directo durante el periodo de piloto.
+
+**Indicadores de validación:** configuración inicial de una organización en un máximo de 30 minutos; respuesta a consultas del piloto en menos de 24 horas; valoración mínima de 4 sobre 5 en facilidad de uso.
+
+**Fortalezas y Amenazas**
+
+**Estrategia:** diferenciación basada en accesibilidad y seguridad móvil. Aprovechar el enfoque mobile-first, el funcionamiento con conectividad intermitente y la autenticación biométrica para diferenciar a Flowboard de competidores consolidados como Buk, Factorial y Rex+.
+
+**Sustento:** la estrategia sigue los controles del OWASP Mobile Application Security Verification Standard, que exigen cifrar los datos sensibles almacenados localmente (MASVS-STORAGE-1 y MASVS-STORAGE-2) y requerir autenticación antes de exponer información altamente sensible (MASVS-AUTH-1 a MASVS-AUTH-3).
+
+**Tácticas:**
+
+1. Cifrar el almacenamiento local de la información sincronizada en el dispositivo.
+2. Exigir verificación biométrica antes de mostrar remuneraciones, boletas y beneficios.
+3. Guardar el token de sesión en almacenamiento seguro, sin conservar credenciales en texto plano.
+4. Usar HTTPS en toda comunicación con el RESTful API.
+5. Demostrar el modo sin conexión en la sustentación, desactivando la red durante la exposición.
+
+**Indicadores de validación:** 100 % de los accesos a remuneraciones y beneficios protegidos por autenticación biométrica o un mecanismo alternativo seguro; 100 % de las comunicaciones con el API sobre HTTPS; al menos 95 % de la información previamente sincronizada consultable durante una interrupción temporal de internet.
+
+**Debilidades y Amenazas**
+
+**Estrategia:** especialización y control del alcance funcional. Evitar la competencia directa con plataformas que poseen más recursos, reconocimiento y módulos, concentrando el desarrollo en las necesidades principales de los segmentos seleccionados.
+
+**Sustento:** Flowboard no calcula remuneraciones ni genera boletas de pago, y no realiza administración contable. Publica las boletas que carga el área de Recursos Humanos y muestra la remuneración asignada. Se presenta como una solución complementaria al sistema de planillas que la organización ya utiliza, especializada en centralizar la información laboral y facilitar el acceso móvil de los colaboradores.
+
+**Tácticas:**
+
+1. Destinar al menos el 80 % del esfuerzo de cada sprint a las funcionalidades del alcance aprobado.
+2. Exigir criterios de aceptación y pruebas para el 100 % de las historias prioritarias.
+3. Revisar y cerrar los defectos críticos antes de liberar cada versión piloto.
+
+**Indicadores de validación:** cero defectos críticos abiertos al liberar la versión piloto; solicitudes aprobadas en menos de 24 horas; 100 % de solicitudes con estado y responsable registrados; retención superior al 90 % de las organizaciones del piloto después del primer periodo de evaluación.
+### 2.3.6. Ubiquitous Language
+
+El Ubiquitous Language, o lenguaje ubicuo, tiene como objetivo establecer un vocabulario común, claro y consistente entre todas las personas involucradas en el proyecto, como los usuarios, responsables de recursos humanos, desarrolladores y contribuidores.
+
+Este lenguaje permite que los conceptos relacionados con la gestión de recursos humanos y el funcionamiento de la aplicación tengan el mismo significado para todos los contribuidores. De esta manera, se evitan ambigüedades y se facilita la comunicación durante el análisis, desarrollo, documentación y mantenimiento del sistema.
+
+| Término | Definición |
+| ----- | ----- |
+| Organization (Organización) | Empresa o institución que utiliza la plataforma para gestionar a sus colaboradores. |
+| Employee (Colaborador) | Persona que forma parte de la organización y cuya información laboral es gestionada en la plataforma. |
+| Employee Profile (Perfil del colaborador) | Conjunto de datos personales, laborales y organizacionales asociados a un colaborador. |
+| Position (Puesto) | Cargo que ocupa un colaborador dentro de la organización, con funciones y condiciones definidas. |
+| Area (Área) | Unidad organizativa que agrupa a un conjunto de colaboradores bajo una misma función o departamento. |
+| Organizational Hierarchy (Jerarquía organizacional) | Empresa o institución que utiliza la aplicación para gestionar a sus colaboradores. |
+| Position (Puesto) | Cargo que ocupa un colaborador dentro de la organización, con funciones y condiciones definidas. |
+| Area (Área) | Unidad organizativa que agrupa a un conjunto de colaboradores bajo una misma función o departamento. |
+| Organizational Hierarchy (Jerarquía organizacional) | Relación de dependencia entre áreas y entre colaboradores, que determina quién supervisa a quién y quién autoriza sus solicitudes. |
+| Manager (Jefe directo) | Colaborador responsable de supervisar a uno o más colaboradores y de aprobar o rechazar sus solicitudes. |
+| HR Officer (Responsable de Recursos Humanos) | Persona encargada de administrar la información laboral y los procesos relacionados con los colaboradores de la organización. |
+| Employment Contract (Contrato laboral) | Registro que establece las condiciones y la duración de la relación laboral entre el colaborador y la organización. |
+| Contract Type (Tipo de contrato) | Modalidad bajo la cual se establece la relación laboral, por ejemplo plazo indeterminado, plazo fijo o locación de servicios. |
+| Hire Date (Fecha de ingreso) | Fecha en que inicia formalmente la relación laboral y a partir de la cual se computan la antigüedad y los derechos del colaborador. |
+| Employment Status (Estado del colaborador) | Situación vigente del vínculo laboral: activo, cesado o suspendido. |
+| Attendance (Asistencia) | Registro de la presencia del colaborador durante las jornadas laborales programadas. |
+| Work Schedule (Jornada laboral) | Tiempo establecido durante el cual el colaborador debe realizar sus actividades. |
+| Worked Hours (Horas de trabajo) | Cantidad de horas efectivamente registradas para un colaborador en un período determinado. |
+| Late Arrival (Tardanza) | Ingreso del colaborador después del horario establecido por la organización. |
+| Absence (Falta) | Inasistencia del colaborador durante una jornada laboral programada. |
+| Attendance Record (Registro de asistencia) | Anotación individual de asistencia, tardanza o falta correspondiente a una fecha específica. |
+| Assigned Salary (Sueldo asignado) | Remuneración establecida para un colaborador según su puesto y su contrato, que la plataforma registra y muestra sin calcularla. |
+| Position Minimum Wage (Sueldo mínimo por puesto) | Remuneración mínima de referencia definida por la organización para un puesto determinado. |
+| Benefit (Beneficio) | Compensación adicional a la remuneración que la organización otorga al colaborador. |
+| Statutory Bonus (Gratificación) | Beneficio de periodicidad establecida que la organización entrega al colaborador. |
+| Food Basket (Canasta) | Beneficio en especie que la organización entrega al colaborador en fechas determinadas. |
+| Vacation (Vacaciones) | Período de descanso remunerado al que tiene derecho un colaborador. |
+| Vacation Balance (Saldo de vacaciones) | Días de vacaciones disponibles para un colaborador en un momento dado, resultado de los días acumulados menos los días usados. |
+| Accrued Days (Días acumulados) | Días de vacaciones generados por el colaborador según su antigüedad y su régimen laboral. |
+| Used Days (Días usados) | Días de vacaciones que el colaborador ya ha gozado. |
+| Request (Solicitud) | Petición formal que un colaborador dirige a la organización para obtener una autorización relacionada con su vínculo laboral. |
+| Vacation Request (Solicitud de vacaciones) | Petición del colaborador para gozar una cantidad determinada de días de su saldo de vacaciones. |
+| Leave Request (Solicitud de licencia) | Petición del colaborador para ausentarse durante un período por una causa contemplada por la organización. |
+| Time-Off Request (Solicitud de permiso) | Petición del colaborador para ausentarse durante una fracción de la jornada o por un período breve. |
+| Request Status (Estado de la solicitud) | Situación en la que se encuentra una solicitud dentro de su flujo: pendiente, aprobada o rechazada. |
+| Approver (Aprobador) | Colaborador que, según la jerarquía organizacional, tiene la facultad de aprobar o rechazar una solicitud determinada. |
+| Approval Workflow (Flujo de aprobación) | Secuencia mediante la cual una solicitud es dirigida a su aprobador, revisada y resuelta, dejando registro de quién la resolvió y cuándo. |
+| Notification (Notificación) | Aviso que la organización dirige al colaborador o al aprobador para informar sobre el estado de una solicitud.
+## 2.6. Tactical-Level Domain-Driven Design
+
+### 2.6.1. Bounded Context: IAM
+
+Contexto genérico que administra la identidad, las credenciales y el control de acceso por rol. Da soporte a la restricción legal declarada en el Capítulo I, según la cual cada colaborador visualiza únicamente su propia información.
+
+#### 2.6.1.1. Domain Layer
+
+En esta capa se define el núcleo del dominio de autenticación y seguridad, estableciendo las reglas de negocio, agregados, comandos, consultas y contratos de persistencia.
+
+Sub-capa Model \- Aggregates, Entities, Value Objects y Enumerations :
+
+| Tipo | Nombre | Descripción yresponsabilidad | Miembros principales | Relación con otroselementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | UserAccount | Cuenta de acceso de una persona a la plataforma.Encapsula las credenciales,el rol y el estado, y custodia las invariantes de seguridad del contexto. | Atributos: id, employeeId, credentials, role, status, mustChangePassword, lastSignInAt. Métodos: changePassword(), resetPassword(), changeRole(), disable(), enable(), registerSignIn(), canSignIn(), isHrStaff(). | Compuesto por Credentials . Referencia Role y AccountStatus .Referencia EmployeeId del Shared Kernel. Publica loseventos del contexto. |
+| Entity | Role | Rol institucional asignadoa la cuenta. Se modelacomo entidad porque sepersiste en catálogo ypuede ampliarse sinrecompilar. | Atributos: id, name : RoleType. Métodos: getStringName(), getDefaultRole(). Regla: el aprobador no es un rol, se deriva detener subordinados en Workspace | Referenciado por UserAccount . Tipado por RoleType. |
+| Value Object | Credentials | Par de nombre de usuarioy hash de contraseña. Suinmutabilidad obliga areemplazar el objetocompleto en cada cambiode clave. | Atributos: username , passwordHash . Método: withPasswordHash() | Componente de UserAccount |
+| Value Object | Username | Nombre de usuario con elque se inicia sesión. | Atributo: value . Invariantes: no vacío, entre 3 y 120 caracteres, enminúsculas, correo corporativo o número de documento cuando nohay correo | Componente de Credentials |
+| Value Object | PasswordHash | Hash de la contraseña.Nunca conserva la clave enclaro. | Atributo: value . Invariantes: formato BCrypt de 60 caracteres conprefijo $2a$, $2b$ o $2y$ | Componente de Credentials . Producidopor HashingService |
+| Value Object | PlainPassword | Contraseña en claro, devida transitoria y nuncapersistida. Concentra lapolítica de complejidad. | Atributo: value . Método: unmetRequirements() . Invariantes:mínimo 8 caracteres, con mayúscula, minúscula, dígito y símbolo | Transformado en PasswordHash medianteBCrypt |
+| Enumeration | RoleType | Perfiles autorizados: HR_STAFF y EMPLOYEE | Valores enumerados | Tipa a Role |
+| Enumeration | AccountStatus | Estado de la cuenta: ACTIVE y DISABLED. | Valores enumerados | Propiedad de UserAccount |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción yresponsabilidad | Miembros principales | Relación con otroselementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | CreateUserAccountCommand | Da de alta una cuenta con contraseña temporal para un colaborador recién registrado. | employeeId, username , roleName | Emitido por EmployeeRegisteredEventHandler |
+| Command | SignInCommand | Encapsula las credenciales presentadas para autenticar. | username , password | Procesado por UserAccountCommandServiceImpl |
+| Command | SignOutCommand | Cierra la sesión activa y revoca el token vigente. | userAccountId , token | Procesado por UserAccountCommandServiceImpl |
+| Command | ChangePasswordCommand | Cambia la contraseña, incluido el cambio obligatorio del primer ingreso. | userAccountId , currentPassword, newPassword | Procesado por UserAccountCommandServiceImpl |
+| Command | ResetPasswordCommand | Restablece la contraseña con una nueva clave temporal, a solicitud del rol HR_STAFF. | userAccountId | Rechazado si la cuenta está deshabilitada. |
+| Command | ChangeRoleCommand | Cambia el rol de una cuenta. | userAccountId , roleName | Rechazado si deja a la organización cincuentas HR_STAFF activas |
+| Command | DisableUserAccountCommand | Deshabilita la cuenta de uncolaborador cesado. | employeeId , reason | Emitido por EmployeeTerminatedEventHandler |
+| Query | GetUserAccountByIdQuery | Recupera una cuenta por su identificador. | userAccountId | Procesada por UserAccountQueryServiceImpl |
+| Query | GetUserAccountByUsernameQuery | Verifica la existencia de una cuenta con su nombre de usuario. | username | Usada en la autenticación y para impedir duplicados. |
+| Query | GetUserAccountByEmployeeIdQuery | Recupera la cuenta asociada a un colaborador. | employeeId | Usada por los event handlers del contexto |
+| DomainEvent | UserAccountCreated | Notifica el alta de una cuenta con su contraseña temporal. | userAccountId , employeeId , username , occurredOn | Consumido por el servicio de notificaciones para entregar la credencial inicial. |
+| DomainEvent | UserSignedIn | Notifica un inicio de sesión exitoso. | userAccountId , occurredOn | Registro de auditoría de accesos |
+| DomainEvent | UserAccountDisabled | Notifica la inhabilitación de una cuenta | userAccountId , reason, occurredOn | Consumido por el registro de auditoría |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | UserAccountCommandService | Contrato de las operaciones de escritura sobre cuentas. | handle() sobrecargado para los siete comandos del contexto | Implementado en Application. |
+| Interface | UserAccountQueryService | Contrato de las operaciones de lectura sobre cuentas. | handle() sobrecargado para las tres queries del contexto | Implementado en Application. |
+| Interface | UserAccountRepository | Contrato de persistencia del agregado UserAccount | handle() sobrecargado para las tres queries del contexto | Implementado en Infrastructure |
+| Interface | RoleRepository | Contrato de persistencia del catálogo de roles. | handle() sobrecargado para las tres queries del contexto | Implementado en Infrastructure |
+
+#### 2.6.1.2. Interface Layer
+
+Esta capa gestiona la interacción con los clientes externos (frontend o clientes REST), exponiendo recursos HTTP, transformadores de datos y controladores de entrada.
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | SignInResource, ChangePasswordResource,ResetPasswordResource, ChangeRoleResource | Estructuras de entrada de las peticiones HTTP del contexto. | Campos correspondientes a cada comando | Recibidos por los controladores. |
+| Resource | AuthenticatedUserResource | Respuesta de una autenticación exitosa.Expone el token y los datos mínimos del perfil, incluido mustChangePassword para que la aplicación redirige al cambio obligatorio. | id , username , role , mustChangePassword , token | Producido por su assembler |
+| Resource | UserAccountResource | Representación de una desacoplada del agregado. Nunca Expone el hash de contraseña. | id , username , role , status , employeeId , lastSignInAt | Producido por su assembler. |
+| Assembler | SignInCommandFromResourceAssembler,AuthenticatedUserResourceFromEntityAssembler,UserAccountResourceFromEntityAssembler | Transforman entre recursos REST y objetos de dominio. | toCommandFromResource() , toResourceFromEntity() | Usados por los controladores |
+| Controller | AuthenticationController | Endpoints de acceso y seguridad. | POST/api/v1/authentication/sign-in , POST/api/v1/authentication/sign-out , POST/api/v1/authentication/change-password | Invoca UserAccountCommandService |
+| Controller | UserAccountsController | Endpoints de administración y consulta de cuentas. | GET /api/v1/user-accounts/{id} , GET/api/v1/user-accounts , POST/api/v1/user-accounts/{id}/reset-password, PATCH /api/v1/user-accounts/{id}/role | Restringido al rol HR STAFF,salvo la consulta de la propia cuenta. |
+| Facade | IamContextFacade | Fachada que expone a los demás contextos las capacidades de identidad sin revelar el modelo interno. | createUserAccount(employeeId,username, roleName) : Long , disableUserAccount(employeeId): void , fetchRoleByUserAccountId(id) :String , isTokenValid(token) :boolean | Consumido por Workspace,Request, Payroll y los demás contextos |
+
+#### 2.6.1.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | UserAccountCommandServiceImpl | Implementa el alta, laautenticación, el cierre de sesión, elcambio y el restablecimiento decontraseña, el cambio de rol y lainhabilitación. Genera lacontraseña temporal, verifica lacomplejidad mediante PlainPassword y hace cumplir lainvariante de la última cuentaHR_STAFF activa. | Depende de UserAccountRepository , RoleRepository , HashingService , TokenService | Implementa UserAccountCommandService . |
+| QueryHandler | UserAccountQueryServiceImpl | Implementa la recuperación decuentas según los criterios de lasqueries del dominio. | Depende de UserAccountRepository | Implementa UserAccountQueryService . |
+| EventHandler | EmployeeRegisteredEventHandler | Reacciona al alta de uncolaborador en Workspacecreando su cuenta con contraseñatemporal. Materializa el Escenario01 del Domain Message Flow. | on(event : EmployeeRegistered): void | Emite CreateUserAccountCommand |
+| EventHandler | EmployeeTerminatedEventHandler | Reacciona al cese en Workspacedeshabilitando de inmediato lacuenta. Materializa el Escenario 06y la regla de negocio del canvas. | on(event : EmployeeTerminated): void | Emite DisableUserAccountCommand |
+| EventHandler | EmployeeReinstatedEventHandler | Reacciona a la reincorporación deun colaborador rehabilitando sucuenta con una nueva contraseñatemporal. | on(event : EmployeeReinstated): void | Emite ResetPasswordCommand yhabilita la cuenta |
+| Interface | HashingService | Contrato para el cifrado y laverificación de contraseñas. | encode(password :PlainPassword) : PasswordHash , matches(raw, hash) : boolean | Implementado en Infrastructure |
+| Interface | TokenService | Contrato para la emisión,validación y revocación de tokensde sesión. | generateToken() , getUserAccountIdFromToken() , validateToken() , revokeToken() | Implementado en Infrastructure |
+
+#### 2.6.1.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaUserAccountRepository | Implementación de UserAccountRepository con Spring DataJPA sobre la tabla user_accounts | Extiende JpaRepository<UserAccount,Long> y la interfaz del dominio | Persistencia del agregado |
+| RepositoryImpl | JpaRoleRepository, JpaRevokedTokenRepository | Persistencia del catálogo roles y de lalista de revocación revoked_tokens | Métodos derivados de Spring DataJPA | Sostienen el cierre de sesión efectivo. |
+| ServiceImpl | BCryptHashingService | Implementación de HashingService sobre BCrypt de Spring Security. Garantizael formato que exige el Value Object PasswordHash | encode() , matches() | Inyectado en el commandservice |
+| ServiceImpl | JwtTokenService | Implementación de TokenService sobreJSON Web Tokens, con revocaciónpersistida | generateToken() , validateToken() , revokeToken() | Consulta JpaRevokedTokenRepository |
+| Filter | BearerAuthorizationRequestFilter | Intercepta cada petición, extrae el tokendel encabezado Authorization yestablece el contexto de seguridad.Sostiene el control de acceso por rol queexige la Ley N.° 29733 | doFilterInternal() | Usa TokenService |
+| Adapter(móvil) | BiometricAuthenticator | Accede al sensor biométrico deldispositivo para verificar la identidad deforma local. Componente de aprendizaje autónomo del proyecto. En Kotlin se implementa sobre androidx.biometric.BiometricPrompt ;en Flutter, sobre el paquete local_auth .La plantilla biométrica nunca sale de hardware seguro del dispositivo ni se transmite al API, por lo que no aparece enel modelo de dominio del servidor | isBiometricAvailable() , authenticate(reason) , authenticateForSensitiveData() | Invocado por UnlockSessionUseCase yantes de mostrar boletas en Payroll |
+| Adapter(móvil) | SecureTokenStorage | Resguarda cifrado el token de sesión en eldispositivo. En Kotlin con EncryptedSharedPreferences sobreAndroid Keystore; en Flutter con flutter_secure_storage . Cumple loscontroles MASVS-STORAGE-1 y MASVS-STORAGE-2 de OWASP | saveToken() , readToken() , clearToken() | Desbloqueado por BiometricAuthenticator |
+| DataSource(móvil) | AuthRemoteDataSource | Cliente HTTP de los endpoints de autenticación. Retrofit en Kotlin, Dio enFlutter | signIn() , signOut() , changePassword() | Consumido por SignInUseCase |
+| DAO(móvil) | SessionDao | Acceso a la tabla local session , que conserva los datos mínimos del perfil para abrir la aplicación sin conectividad. No Almacena el token ni el hash de contraseña. | upsertSession() , getActiveSession() , clearSession() | Room en Kotlin, Drift en Flutter |
+| Use Case(móvil) | SignInUseCase,UnlockSessionUseCase | Coordinan el ingreso con credenciales y el desbloqueo biométrico sin reingresar la contraseña | invoke() | Consumidos por LoginViewModel |
+| View Model(móvil) | LoginViewModel | Gestiona el estado del acceso y decide entre credenciales y biometría según la disponibilidad del sensor y la existencia de un token resguardado. Redirige al cambio obligatorio cuando mustChangePassword está activo | onSignInClicked() , onBiometricUnlockRequested() | Observado por LoginScreen |
+
+#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram del bounded context IAM, mostrando cómo sus componentes se distribuyen entre la aplicación móvil y el API Backend de Flowboard.
+
+![Figura 29. 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-29.png)
+Enlace de la figura: https://drive.google.com/file/d/1gcdgO-cC5cpBQgW-5ptXY4vbpGzktU2E/view?usp=sharing
+
+En la Mobile App, el flujo de autenticación comienza en **Login UI**, cuya lógica de presentación es gestionada por **LoginViewModel**. Este delega las operaciones de inicio de sesión y desbloqueo en SignInUseCase / UnlockSessionUseCase, que coordina el acceso remoto mediante AuthRemoteDataSource, el almacenamiento seguro del token mediante **SecureTokenStorage** y la autenticación local mediante **BiometricAuthenticator**.
+
+Para soportar el funcionamiento con conectividad limitada, **SessionDao** administra la información local necesaria para recuperar la sesión y acceder a información previamente sincronizada.
+
+En el API Backend, **AuthenticationController** y **UserAccountsController** reciben las solicitudes provenientes de la aplicación y delegan las operaciones correspondientes a **UserAccountCommandServiceImpl** y **UserAccountQueryServiceImpl**. Las operaciones de autenticación utilizan **BCryptHashingService** para verificar credenciales y **JwtTokenService** para generar y validar tokens.
+
+El acceso a la persistencia se realiza mediante los repositorios JPA del contexto IAM, mientras que **BearerAuthorizationRequestFilter** intercepta las solicitudes protegidas para validar el token recibido. Finalmente, **IamContextFacade** funciona como punto de integración controlado para que otros bounded contexts puedan consultar capacidades de identidad sin depender directamente del modelo interno de IAM.
+
+#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer de IAM.
+
+![Figura 30. 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-30.png)
+Enlace de la figura: https://drive.google.com/file/d/1J62k1rAa5mILgF6E-m6QOc13bLvpoAYJ/view?usp=sharing
+
+**UserAccount** constituye el Aggregate Root del contexto y concentra el estado y comportamiento de una cuenta de acceso. Mantiene la referencia al colaborador mediante **EmployeeId**, sus **Credentials**, el Role, el **AccountStatus** y las propiedades necesarias para controlar el acceso y cambio de contraseña.
+
+Las credenciales se encapsulan mediante el Value Object **Credentials**, compuesto por **Username** y **PasswordHash**. **PlainPassword** representa temporalmente una contraseña antes de ser procesada mediante BCrypt y contiene las reglas de complejidad necesarias para aceptar una contraseña válida.
+
+**Role** representa el rol institucional asociado a una cuenta y se restringe mediante **RoleType** a los valores **HR_STAFF** y **EMPLOYEE**. Por otro lado, **AccountStatus** permite distinguir entre cuentas **ACTIVE** y **DISABLED**.
+
+El agregado también concentra reglas como la existencia de una única cuenta por colaborador, la imposibilidad de autenticación para cuentas deshabilitadas y la obligación de realizar un cambio de contraseña cuando la cuenta ha sido creada con credenciales temporales.
+
+##### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el diagrama de base de datos para la persistencia correspondiente al bounded context IAM.
+
+![Figura 31. 2.6.1.6.2. Bounded Context Database Design Diagram](assets/figura-31.png)
+Enlace de la figura: https://drive.google.com/file/d/1Pa3Ak4XGjTBNyrgEEYFkQsJQbhgfV5oD/view?usp=sharing
+
+La tabla principal es **user_accounts**, donde se almacena la información persistente del Aggregate Root **UserAccount**, incluyendo el identificador del colaborador, nombre de usuario, hash de contraseña, rol, estado de la cuenta y datos relacionados con el último acceso.
+
+La tabla **roles** contiene los roles disponibles dentro de IAM y mantiene una relación de uno a muchos con **user_accounts**. La tabla **revoked_tokens**, por su parte, registra los tokens JWT invalidados antes de su expiración, permitiendo que el backend rechace sesiones que hayan sido cerradas o revocadas.
+
+El campo **employee_id** funciona como una **referencia lógica hacia el bounded context Workspace**, en lugar de una clave foránea directa entre las bases de datos de ambos contextos. De esta manera, IAM conserva su independencia y únicamente almacena el identificador necesario para relacionar una cuenta de acceso con su colaborador.
+
+### 2.6.2. Bounded Context: Workspace
+
+Contexto principal y upstream del ecosistema. Gobierna el ciclo de vida del colaborador, la estructura departamental de áreas y puestos, el historial de asignaciones laborales y las líneas de reporte jerárquico. Es el contexto que habilita el ruteo correcto de las aprobaciones, porque es donde se declara quién es el jefe directo de quién, y el que custodia el sueldo de referencia de cada puesto.
+
+#### 2.6.2.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | Employee | Ficha única del colaborador.Consolida su informaciónpersonal, laboral, documental yjerárquica, y custodia lasinvariantes estructurales delcontexto. | Atributos: id, name, identityDocument, birthDate, contactInfo, address, contractType, employmentPeriod, status, termination, area, position, directManagerId, jobAssignmen ts, documents. Métodos: updatePersonalData(), assignJob() , assignDirectManager(), removeDirectManager(), terminate(), reinstate(), suspend(), attachDocument(), isActive(), hasDirectManager(). Invariantes: documento de identidad no repetible entre colaboradores activos, un colaborador no puede ser su propio jefe directo, la jerarquía no admite ciclos, un colaborador con subordinados no puede cesarse hasta reasignarlos, solo los cesados pueden reincorporarse, el puesto debe pertenecer al área asignada, y todo cambio de área o puesto cierra la asignación vigente y abre una nueva | Compuesto por JobAssignment y EmployeeDocument .Referencia Area , Position y EmployeeId del SharedKernel. El organigrama es unaconsulta construida sobre directManagerId , no unaentidad. |
+| Entity | Area | Unidad organizativa que agrupacolaboradores bajo una mismafunción. | Atributos: id , name , description , active .Métodos: rename() , activate() , deactivate() . Reglas: nombre único, y un áreacon colaboradores activos no puede desactivarse | Referenciada por Employee , Position y JobAssignment |
+| Entity | Position | Cargo que ocupa uncolaborador, con su sueldo dereferencia. | Atributos: id , title , area , referenceSalary :Money , active . Métodos: updateReferenceSalary() , belongsTo() , deactivate() | Referenciada por Employee .El sueldo mínimo por puestovive aquí, no en Payroll |
+| Entity | JobAssignment | Registro histórico de cadaasignación de área y puesto deun colaborador, con su motivo ysu vigencia. | Atributos: id , area , position , changeType , startDate , endDate . Métodos: close() , isCurrent() | Entidad interna del agregado Employee . Tipada por AssignmentChangeType |
+| Entity | EmployeeDocument | Documento del expediente delcolaborador. | Atributos: id , documentType , file :FileReference , uploadedAt . Reglas: solovalores del catálogo, y formatos PDF, JPG o PNGhasta el tamaño configurado | Entidad interna del agregado Employee |
+| Value Objects | PersonName,IdentityDocument,BirthDate, ContactInfo,PhoneNumber, Address,EmploymentPeriod,TerminationDetails | Encapsulan y validan los datospersonales y laborales delcolaborador, evitando laproliferación de atributosprimitivos en el agregado. | Cada uno con su valor y sus reglas de validación. EmploymentPeriod define el inicio y el fin delvínculo; TerminationDetails registra la fecha yel motivo del cese | Componentes inmutables de Employee |
+| Enumerations | EmploymentStatus,ContractType,IdentityDocumentType,DocumentType,AssignmentChangeType | Catálogos cerrados delcontexto. EmploymentStatus :ACTIVE, SUSPENDED,TERMINATED. ContractType :INDEFINITE, FIXED_TERM,PART_TIME, INTERNSHIP. AssignmentChangeType : HIRE,REASSIGNMENT,REINSTATEMENT. DocumentType reúne los nuevetipos de documento delexpediente | Valores enumerados | Tipan a los agregados yentidades del contexto |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | RegisterEmployeeCommand | Alta de un colaborador con su primera asignación de área y puesto. | Datos personales, contacto,dirección, tipo de contrato,fecha de ingreso, areaId, positionId | Desencadena EmployeeRegistered |
+| Command | UpdateEmployeePersonalDataCommand | Actualiza los datos personales y de contacto. | employeeId y los ValueObjects correspondientes | Procesado por EmployeeCommandServiceImpl |
+| Command | AssignJobCommand | Reasigna área y puesto,cerrando la asignación vigente. | employeeId, areaId, positionId, effectiveDate | Valida que el puesto pertenezca al área |
+| Command | AssignDirectManagerCommand | Asigna o reasigna el jefe directo. | employeeId , managerId | Valida la autojefatura y la ausencia deciclos. Desencadena DirectManagerAssigned |
+| Command | TerminateEmployeeCommand | Registra el cese del colaborador. | employeeId , terminationDate , reason | Rechazado si conserva subordinados sinreasignar. Desencadena EmployeeTerminated |
+| Command | ReinstateEmployeeCommand | Reincorpora a un colaborador cesado abriendo un nuevo período de empleo. | employeeId, areaId, positionId, reinstatementDate | Desencadena EmployeeReinstated |
+| Command | AttachEmployeeDocumentCommand | Adjunta un documento al expediente. | employeeId , documentType , file | Valida tipo y tamaño de archivo |
+| Command | CreateAreaCommand, UpdateAreaCommand,CreatePositionCommand,UpdatePositionSalaryCommand | Administran el catálogo de áreas y puestos. | Campos de cada operación | Procesados por OrganizationCommandServiceImpl |
+| Query | GetEmployeeByIdQuery | Recupera la ficha completa de un colaborador | employeeId | Procesada por EmployeeQueryServiceImpl |
+| Query | GetAllEmployeesByAreaQuery | Recupera los colaboradores de un área. | areaId, onlyActive | Alimenta el directorio y los indicadores operativos |
+| Query | GetDirectManagerByEmployeeIdQuery | Resuelve el jefe directo de un colaborador. | employeeId | Consumida por Request a través de la fachada |
+| Query | GetOrganizationChartQuery | Construye el organigrama recorriendo las relaciones directManagerId | rootEmployeeId | Alimenta la vista de organigrama de laaplicación móvil |
+| Query | GetJobAssignmentHistoryQuery | Recupera el historial de asignaciones de uncolaborador | employeeId | Alimenta la vista de trayectoria laboral |
+| Domain Event | EmployeeRegistered | Notifica el alta de un colaborador.Corresponde al evento Colaborador Registrado Del canvas | employeeId, username, areaId, contractType, hireDate, occurredOn | Consumido por IAM, que crea la cuenta, ypor Benefits, que inicializa el saldo devacaciones |
+| Domain Event | DirectManagerAssigned | Notifica un cambio en la línea de reporte | employeeId, managerId, occurredOn | Consumido por Request para actualizar elruteo de aprobaciones |
+| Domain Event | EmployeeTerminated | Notifica el cese.Corresponde al evento Cese Registrado | employeeId, terminationDate, occurredOn | Consumido por IAM, Request, Attendancey Benefits. |
+| Domain Event | EmployeeReinstated | Notifica la reincorporación de un colaborador cesado | employeeId, reinstatementDate, occurredOn | Consumido por IAM y Benefits |
+| Domain Event | AreaCreated | Notifica la creación de un área | areaId, name, occurredOn | Consumido por Wellbeing para asociaroficinas a áreas |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | EmployeeCommandService,EmployeeQueryService | Contratos de escritura y lectura sobre colaboradores. | handle() sobrecargado por comando y consulta | Implementados enApplication. |
+| Interface | OrganizationCommandService,OrganizationQueryService | Contratos sobre el catálogo de áreas y puestos. | handle() sobrecargado | Implementados enApplication. |
+| Interface | EmployeeRepository | Persistencia del agregado Employee | findByIdentityDocument(), findAllByAreaId(), findAllByDirectManagerId(), existsActiveByIdentityDocument(), countActiveSubordinates() | Implementado enInfrastructure. |
+| Interface | AreaRepository, PositionRepository | Persistencia de las entidades de catálogo | findByName(), existsByName(), findAllByAreaId() | Implementado enInfrastructure. |
+
+#### 2.6.2.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | RegisterEmployeeResource,UpdateEmployeeResource, AssignJobResource,TerminateEmployeeResource,AttachDocumentResource | Estructuras de entrada de las operaciones sobre colaboradores. | Campos de cada comando | Recibidos por EmployeesController |
+| Resource | EmployeeResource, EmployeeSummaryResource | Respuestas con la ficha completa y con la versión reducida para listados. | id, fullName ,identityDocument, position, area, contractType, status, directManagerName, hireDate | Producidos por sus assemblers |
+| Resource | AreaResource, PositionResource,JobAssignmentResource, OrganizationChartResource | Respuestas del catálogo organizativo, del historial de asignaciones y del organigrama en árbol. | Campos de cada entidad | Producidos por susassemblers |
+| Assembler | EmployeeResourceFromEntityAssembler,RegisterEmployeeCommandFromResourceAssembler,OrganizationChartResourceFromEntityAssembler ysus equivalentes | Transforman Entre recursos REST y objetos de dominio | toResourceFromEntity() , toCommandFromResource() | Usados por loscontroladores |
+| Controller | EmployeesController | Endpoints de gestión y consulta de colaboradores | POST /api/v1/employees, GET/api/v1/employees/{id}, GET/api/v1/employees/me, PUT/api/v1/employees/{id}/personal-data, PUT /api/v1/employees/{id}/job, PUT/api/v1/employees/{id}/direct-manager, POST/api/v1/employees/{id}/termination, POST/api/v1/employees/{id}/reinstatement, POST /api/v1/employees/{id}/documents | Restringido al rolHR_STAFF, salvo laconsulta de la propiaficha |
+| Controller | AreasController, PositionsController | Endpoints de administración del catálogo organizativo. | POST /api/v1/areas, GET /api/v1/areas, POST /api/v1/positions, PATCH/api/v1/positions/{id}/reference-salary | Restringidos al rolHR_STAFF |
+| Controller | OrganizationChartController | Expone el organigrama construido sobre las líneas de reporte | GET /api/v1/organization-chart | Disponible para ambosroles. |
+| Facade | WorkspaceContextFacade | Fachada que expone a los demás contextos las capacidades de estructura organizacional. | fetchDirectManagerIdByEmployeeId(), fetchEmployeeFullName(), isEmployeeActive(), fetchContractTypeByEmployeeId(), fetchHireDateByEmployeeId(), fetchPositionReferenceSalary() | Consumida porRequest, Benefits,Attendance y Payroll. |
+
+#### 2.6.2.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | EmployeeCommandServiceImpl | Implementa el alta, la actualización, la reasignación, el cese y la reincorporación. Verifica la unicidad del documento entre activos, impide la auto jefatura, detecta ciclos en la jerarquía, bloquea el cese de jefes y subordinados y cierra la asignación vigente en cada cambio. | Depende de EmployeeRepository , AreaRepository , PositionRepository y elpublicador de eventos | Implementa EmployeeCommandService . Publicalos cinco eventos del contexto |
+| CommandHandler | OrganizationCommandServiceImpl | Implementa la administración de áreas y puestos, validando nombres únicos y la desactivación solo de áreas sin colaboradores activos. | Depende de AreaRepository y PositionRepository | Implementa OrganizationCommandService |
+| QueryHandler | EmployeeQueryServiceImpl,OrganizationQueryServiceImpl | Implementan las consultas del contexto, incluida la construcción recursiva del organigrama. | Dependen de los repositorios del contexto | Implementan las interfaces del dominio. |
+
+#### 2.6.2.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaEmployeeRepository,JpaAreaRepository,JpaPositionRepository | Implementaciones con Spring Data JPA sobre las tablas employees , areas, positions, job_assignments y employee_documents. | Extienden JpaRepository y la interfazdel dominio | Persistencia del contexto |
+| ServiceImpl | ObjectStorageFileService | Almacena los documentos del expediente fuera de la base de datos y resuelve el FileReference del Share Kernel, emitiendo enlaces temporales de descarga. | store() , generateTemporaryDownloadUrl() , delete() | Compartido con Request y Payroll |
+| Publisher | SpringDomainEventPublisher | Publica los eventos de dominio mediante el mecanismo de eventos de Spring. | publish(event : DomainEvent) | Compartido por los siete contextos |
+| DAO(móvil) | EmployeeDao | Acceso a la copia local de la ficha propia y del directorio del área,para su consulta sin conectividad. | upsertEmployee() , getMyEmployee() , getEmployeesByArea() , clearAll() | Room en Kotlin, Drift enFlutter |
+| DataSource(móvil) | EmployeeRemoteDataSource | Cliente HTTP de los endpoints de colaboradores y organigrama. | fetchMyProfile() , fetchEmployeesByArea() , fetchOrganizationChart() | Consumido por EmployeeRepositoryImpl |
+| Repository(móvil) | EmployeeRepositoryImpl | Coordina la fuente remota y la copia local, devolviendo los datos almacenados cuando no hay conectividad e informando la fecha de última sincronización. | observeMyProfile() , refresh() , getLastSyncAt() | Consumido por losViewModels |
+| ViewModel(móvil) | MyProfileViewModel,EmployeeDirectoryViewModel,OrganizationChartViewModel | Gestionan el estado de la ficha personal, el directorio del área y el organigrama. | load() , refresh() , search(query) | Observados por sus pantallas |
+
+#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Workspace. El diagrama muestra los componentes de la aplicación móvil y del API Backend responsables de la gestión de colaboradores, áreas, puestos, documentos y estructura organizacional.
+
+![Figura 32. 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-32.png)
+Enlace de la figura: https://drive.google.com/file/d/1snu8Q_Bu7WsscwNjeOy5MF9ciJHw9bFP/view?usp=sharing
+
+En la Mobile App, **Profile & Directory UI** permite consultar la ficha personal, el directorio y la información organizacional. La lógica de presentación es gestionada por **MyProfileViewModel** y **OrganizationChartViewModel**, los cuales utilizan **EmployeeRepositoryImpl** para coordinar el acceso a información local y remota.
+
+**EmployeeRemoteDataSource** consume los endpoints REST de Workspace, mientras que **EmployeeDao** mantiene localmente una copia de la ficha del colaborador y de la información relevante del área y puesto. Esta separación permite consultar información previamente sincronizada incluso cuando la conexión no está disponible.
+
+En el API Backend, **EmployeesController**, **AreasController**, **PositionsController** y **OrganizationChartController** reciben las solicitudes relacionadas con colaboradores y estructura organizacional. Las operaciones de modificación se delegan a **EmployeeCommandServiceImpl** y **OrganizationCommandServiceImpl**, mientras que **EmployeeQueryServiceImpl** resuelve consultas de colaboradores, estructura y organigrama.
+
+El modelo de dominio está representado principalmente por **Employee**, y la persistencia se realiza mediante los repositorios JPA correspondientes. **WorkspaceContextFacade** expone las capacidades necesarias para que otros bounded contexts consulten información organizacional sin depender directamente del modelo interno de Workspace.
+
+Por último, **SpringDomainEventPublisher** publica eventos como **EmployeeRegistered**, **EmployeeTerminated**, **EmployeeReinstated** y **DirectManagerAssigned**, permitiendo que otros contextos reaccionen a cambios relevantes. En particular, IAM puede crear, deshabilitar o rehabilitar cuentas a partir de los eventos asociados al ciclo de vida del colaborador.
+
+#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Workspace.
+
+**![Figura 33. 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-33.png)**
+Enlace de la figura: https://drive.google.com/file/d/1u8sNJ3E3Mw8CjqBuFX0wjLQ5Fi-nZGcA/view?usp=sharing
+
+El elemento central del modelo es **Employee**, definido como **Aggregate Root**. Esta clase concentra la información personal y laboral del colaborador, incluyendo nombre, documento de identidad, fecha de nacimiento, datos de contacto, dirección, tipo y periodo contractual, estado laboral, área, puesto, jefe directo, historial de asignaciones y documentos asociados.
+
+La información personal se encapsula mediante Value Objects como **PersonName**, **ContactInfo**, **IdentityDocument**, **BirthDate**, **Address** y **EmploymentPeriod**. Estos objetos concentran reglas de validación específicas y evitan que datos relevantes del colaborador sean tratados únicamente como valores primitivos.
+
+**Area** y **Position** son entidades del contexto organizacional. **Area** representa una unidad organizativa de la empresa, mientras que **Position** representa un puesto perteneciente a un área y contiene la remuneración referencial mediante el Value Object **Money**.
+
+La entidad **JobAssignment** conserva el historial de movimientos del colaborador entre áreas y puestos, identificando el tipo de cambio mediante **AssignmentChangeType** y las fechas de inicio y término de cada asignación.
+
+**EmployeeDocument** representa los documentos asociados a un colaborador e incluye la referencia al archivo almacenado externamente mediante FileReference. El tipo de documento se restringe a través de **DocumentType**.
+
+El Aggregate Root mantiene además reglas como la unicidad del documento de identidad entre colaboradores activos, la imposibilidad de que un colaborador sea su propio jefe directo y la restricción de terminar el vínculo de un colaborador mientras mantenga subordinados asignados. Asimismo, cambios de área o puesto generan nuevas entradas en el historial de **JobAssignment**.
+
+##### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Workspace.
+
+![Figura 34. 2.6.2.6.2. Bounded Context Database Design Diagram](assets/figura-34.png)
+Enlace de la figura: https://drive.google.com/file/d/1yczRTCR5K1A8NS5KYfTFhkmCg0iTq5Ys/view?usp=sharing
+
+La tabla principal es **employees**, donde se persiste la información personal y laboral del colaborador. Incluye sus datos de identificación, contacto, dirección, fechas contractuales, estado laboral y las referencias al área, puesto y jefe directo.
+
+La relación jerárquica entre colaboradores se representa mediante **direct_manager_id**, una clave foránea autorreferenciada sobre **employees**. De esta manera, un colaborador puede estar asociado opcionalmente a otro colaborador que actúe como su jefe directo.
+
+La tabla **areas** almacena las unidades organizacionales de la empresa, mientras que **positions** registra los puestos disponibles dentro de cada área. Cada puesto referencia a su área mediante **area_id** e incluye la remuneración referencial y su moneda.
+
+**job_assignments** conserva el historial de cambios de área y puesto de cada colaborador. Cada registro hace referencia al empleado, área y posición correspondientes, e incluye el tipo de cambio y su periodo de vigencia.
+
+Finalmente, **employee_documents** almacena los metadatos de los documentos asociados al colaborador, como tipo, nombre, formato, tamaño, ubicación del archivo y fecha de carga. El archivo físico no se guarda directamente en la base de datos, sino en el servicio de almacenamiento externo representado en el Component Diagram.
+
+### 2.6.3. Bounded Context: Attendance
+
+Contexto de soporte operativo que recibe las marcaciones de entrada y salida del personal y las consolida, según la jornada del puesto, en un registro diario depurado con sus horas efectivas y su clasificación. Es de registro y consulta: no deriva descuentos ni pagos, y para el colaborador los registros son de solo lectura.
+
+#### 2.6.3.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | AttendanceRecord | Registro consolidado de la asistencia de un colaborador en una fecha. Se construye a partir de las marcaciones del día y de la jornada del puesto | Atributos: id, employeeId , workDate , checkInTime, checkOutTime , workedHours , status . Métodos de fábrica: fromPunches(), absence() . Métodos: justify(), isComplete() . Invariantes: un registro por colaborador y fecha,con entrada y salida se calculan las horas efectivas y el estado resulta ON_TIME o LATE según la jornada, con entrada sin salida el estado es INCOMPLETE y las horas quedan vacías, y un día laborable sin marcaciones de un colaborador activo genera ABSENT | Construido desde Punch y WorkSchedule .Referencia EmployeeId. |
+| Entity | Punch | Marcación individual de entrada o de salida. | Atributos: id, employeeId, punchedAt, type : PunchType .Método: occurredOn(date) | Insumo del método de fábrica del agregado. |
+| Entity | WorkSchedule | Jornada laboral esperada,asociada al puesto, con sus días, su horario y su tolerancia | Atributos: id, positionId, days, timeRange : TimeRange, tolerance : LateTolerance | Referenciada por el cálculo del estado.Tipada sobre PositionId del Shared Kernel. |
+| Value Object | TimeRange | Rango horario de la jornada | startTime, endTime, \+ contains(), \+durationInMinutes() | Componente de WorkSchedule |
+| Value Object | WorkedHours | Horas efectivamente registradas en la fecha | value : Duration, \+toDecimalHours(), \+ isEmpty() | Derivado por el método de fábrica |
+| Value Object | LateTolerance | Minutos de tolerancia antes de considerar tardanza | minutes, \+ allows(delayInMinutes) : boolean | Componente de WorkSchedule |
+| Enumerations | AttendanceStatus,PunchType | AttendanceStatus : ON_TIME,LATE, INCOMPLETE, ABSENT,JUSTIFIED. PunchType :CHECK_IN, CHECK_OUT | Valores enumerados | Tipan al agregado ya la entidad |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | RegisterPunchCommand | Registra una marcación de entrada o de salida enviada desde la aplicación móvil. | employeeId, punchedAt, type | Procesado por AttendanceCommandServiceImpl |
+| Command | BuildDailyAttendanceCommand | Consolida las marcaciones de una fecha en el registro diario | workDate, employeeId | Ejecutado también por la tarea programada de cierre diario |
+| Command | JustifyAttendanceCommand | Registra la justificación de una falta o una tardanza | attendanceRecordId, reason, evidenceUrl | Reservado al rol HR STAFF |
+| Command | CreateWorkScheduleCommand,AssignWorkScheduleToPositionCommand | Administran las jornadas laborales y su asignación a los puestos | Campos de cada operación | Restringidos al rol HR STAFF |
+| Query | GetAttendanceRecordsByEmployeeIdQuery | Historial de asistencia de un colaborador en un rango de fechas | employeeId, fromDate, toDate | Alimenta la pantalla Mi Asistencia |
+| Query | GetDailyAttendanceByAreaQuery | Asistencia de una fecha para los colaboradores de un área | areaId, workDate | Alimenta los indicadores operativos |
+| DomainEvent | AttendanceRecordBuilt | Notifica la consolidación del registro diario. Corresponde Al evento Marcación Registrada del canvas | employeeId, workDate, status, occurredOn | Consumido por los indicadoresoperativos |
+| DomainEvent | LateArrivalDetected | Notifica una tardanza.Corresponde al evento Tardanza Identificada | employeeId, workDate, delayInMinutes, occurredOn | Consumido por el handler denotificaciones |
+| DomainEvent | AbsenceDetected | Notifica una falta de un colaborador activo | employeeId, workDate, occurredOn | Consumido por el handler de notificaciones |
+| DomainEvent | OvertimeCalculated | Notifica el sobretiempo respecto de la jornada esperada. Corresponde al evento Sobretiempo Calculado | employeeId, workDate, minutes, occurredOn | Consumido por los indicadores operativos |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | AttendanceCommandService,AttendanceQueryService | Contratos de escritura y lectura del contexto | handle() sobrecargado | Implementados en Application |
+| Interface | AttendanceRecordRepository | Persistencia del agregado | findByEmployeeIdAndWorkDate(), findAllByEmployeeIdAndWorkDateBetween(), existsByEmployeeIdAndWorkDate() | Implementado en Infrastructure. |
+| Interface | PunchRepository,WorkScheduleRepository | Persistencia de las marcaciones crudas y de las jornadas | findAllByEmployeeIdAndPunchedAtBetween(), findByPositionId() | Implementado en Infrastructure. |
+
+#### 2.6.3.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | RegisterPunchResource, JustifyAttendanceResource,CreateWorkScheduleResource | Estructuras de entrada del contexto | Campos de cada comando | Recibidos por los controladores |
+| Resource | AttendanceRecordResource,WorkScheduleResource | Respuestas con el registro diario y la jornada del puesto | workDate, checkInTime, checkOutTime, workedHours , status | Producidos por sus assemblers |
+| Assembler | AttendanceRecordResourceFromEntityAssembler,RegisterPunchCommandFromResourceAssembler | Transforman entre recursos REST y objetos de dominio | toResourceFromEntity() , toCommandFromResource() | Usados por los controladores |
+| Controller | AttendanceController | Endpoints demarcación,consulta y justificación | POST /api/v1/attendance/punches, GET/api/v1/attendance/me, GET/api/v1/attendance/areas/{areaId}, POST/api/v1/attendance/{id}/justification | La consulta por área y la justificación quedan restringidas al rol HR STAFF. |
+| Controller | WorkSchedulesController | Endpoints de administración de jornadas | POST /api/v1/work-schedules, GET/api/v1/work-schedules, PUT/api/v1/positions/{id}/work-schedule | Restringido al rol HR STAFF. |
+
+#### 2.6.3.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | AttendanceCommandServiceImpl | Implementa el registro demarcaciones y la consolidación diaria.Recupera la jornada del puesto mediante WorkspaceContextFacade, aplica la tolerancia y clasifica el día. Genera Faltas para los colaboradores activos sin marcación. | Depende de AttendanceRecordRepository, PunchRepository, WorkScheduleRepository, WorkspaceContextFacade y el publicador de eventos | Implementa AttendanceCommandService |
+| QueryHandler | AttendanceQueryServiceImpl | Implementa las consultas de historial por colaborador y por área. | Depende de AttendanceRecordRepository | Implementa AttendanceQueryService |
+| EventHandler | EmployeeTerminatedEventHandler | Cierra el registro de asistencia a partir de la fecha de baja y deja de generar faltas. | on(event : EmployeeTerminated) | Escucha el evento de Workspace |
+
+#### 2.6.3.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaAttendanceRecordRepository,JpaPunchRepository,JpaWorkScheduleRepository | Implementaciones con SpringData JPA sobre las tablas attendance_records, punches, work_schedules y work_schedule_days. | Extienden JpaRepository y la interfaz del dominio | Persistencia del contexto |
+| Scheduler | DailyAttendanceClosingScheduler | Tarea programada que al finalde cada jornada consolida lasmarcaciones del día y genera lasfaltas correspondientes. | runDailyClosing() anotado con @Scheduled | Emite BuildDailyAttendanceCommand |
+| DAO(móvil) | AttendanceDao | Copia local del historial de asistencia y cola de marcaciones pendientes de sincronizar cuando el dispositivo está sin conexión. | upsertRecords(), getRecords(), enqueuePendingPunch(), getPendingPunches(), clearPendingPunch() | Room en Kotlin, Drift en Flutter |
+| DataSource(móvil) | AttendanceRemoteDataSource | Cliente HTTP de los endpointsde asistencia. | registerPunch(), fetchMyAttendance() | Consumido por AttendanceRepositoryImpl |
+| Worker(móvil) | PendingPunchSyncWorker | Trabajo en segundo plano que reenvía las marcaciones encoladas al restablecerse la conectividad. WorkManager enKotlin, workmanager en Flutter | doWork() | Consume el DAO y el data source del contexto. |
+| ViewModel(móvil) | CheckInViewModel,MyAttendanceViewModel | Gestionan la pantalla demarcación y el historial de asistencia, indicando cuándo una marcación quedó encolada por falta de conexión. | onPunchRequested(type), load(from, to) | Observados por sus pantallas. |
+
+#### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Attendance. El diagrama muestra los componentes que participan en el registro de marcaciones, consulta del historial de asistencia, administración de horarios y consolidación diaria de jornadas.
+
+![Figura 35. 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-35.png)
+Enlace de la figura: https://drive.google.com/file/d/1J4t1ce5stv-HXrLSA2HhZdxnXsmLmtKm/view?usp=sharing
+
+
+En la Mobile App, **Attendance UI** permite al colaborador registrar sus marcaciones y consultar su historial. **CheckInViewModel** y **MyAttendanceViewModel** gestionan el estado de estas operaciones y delegan el acceso a los datos en **AttendanceRepositoryImpl**.
+
+El repositorio coordina **AttendanceRemoteDataSource**, utilizado para comunicarse con el API Backend, y **AttendanceDao**, encargado de la persistencia local. Cuando una marcación no puede ser enviada inmediatamente, queda pendiente y **PendingPunchSyncWorker** intenta sincronizarla posteriormente cuando se restablece la conexión.
+
+En el **API Backend**, **AttendanceController** y **WorkSchedulesController** reciben las solicitudes relacionadas con asistencia y horarios. Las operaciones de modificación se delegan a **AttendanceCommandServiceImpl**, mientras que **AttendanceQueryServiceImpl** resuelve las consultas de historial de asistencia.
+
+**AttendanceCommandServiceImpl** utiliza **WorkspaceContextFacade** para obtener información necesaria del colaborador y de su jornada laboral sin acceder directamente al modelo interno de Workspace. Asimismo, construye y actualiza el agregado **AttendanceRecord** y utiliza los repositorios JPA para persistir los cambios.
+
+El contexto incorpora además **DailyAttendanceClosingScheduler**, encargado del cierre diario de jornadas, y **Attendance Event Handlers**, que reaccionan a eventos provenientes de otros contextos, como la baja de un colaborador.
+
+#### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Attendance.
+
+![Figura 36. 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-36.png)
+Enlace de la figura: https://drive.google.com/file/d/12dc4bxpE5hX4UZxYk3-CjdCB3XBWB8c2/view?usp=sharing
+
+El elemento central del dominio es **AttendanceRecord**, definido como **Aggregate Root**. Representa el registro de asistencia de un colaborador para una fecha determinada y contiene la hora de entrada, hora de salida, horas trabajadas y estado de asistencia.
+
+El agregado se construye a partir de las marcaciones **Punch** y del horario correspondiente mediante **fromPunches()**. También permite representar directamente una ausencia mediante **absence()** y registrar una justificación mediante **justify()**.
+
+**Punch** representa cada marcación individual realizada por un colaborador y distingue entre entradas y salidas mediante la enumeración **PunchType**, cuyos valores son **CHECK_IN** y **CHECK_OUT**.
+
+**WorkSchedule** representa el horario correspondiente a un puesto y contiene el rango horario de la jornada, la tolerancia permitida para tardanzas y los días de trabajo establecidos. Para ello utiliza los Value Objects **TimeRange** y **LateTolerance**.
+
+Las horas procesadas se encapsulan mediante **WorkedHours**, que diferencia las horas efectivas y las horas de sobretiempo. Finalmente, **AttendanceStatus** clasifica cada jornada como **ON_TIME**, **LATE**, **ABSENT**, **JUSTIFIED** o **INCOMPLETE**.
+
+##### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Attendance.
+
+![Figura 37. 2.6.3.6.2. Bounded Context Database Design Diagram](assets/figura-37.png)
+Enlace de la figura: https://drive.google.com/file/d/1e5BoZGv0-PWcaU-l0E1_U2KfwwL12Z8U/view?usp=sharing
+
+La tabla **attendance_records** almacena el registro diario consolidado de cada colaborador. Contiene la fecha de trabajo, las horas de entrada y salida, las horas efectivas, el sobretiempo y el estado final de la jornada. **employee_id** funciona como una referencia lógica al colaborador administrado por el bounded context Workspace.
+
+La tabla **punches** registra cada marcación individual realizada por el colaborador, almacenando el momento de la marcación, su tipo y, cuando corresponda, la referencia al **attendance_record** al que pertenece.
+
+Los horarios laborales se almacenan en **work_schedules**. Cada registro se encuentra relacionado lógicamente con un **position_id** perteneciente a Workspace y define la hora de inicio, hora de término y tolerancia para tardanzas.
+
+Finalmente, **work_schedule**_days complementa al horario almacenando los días de la semana en los que este resulta aplicable. Su clave compuesta por **work_schedule_id** y **day_of_week** permite asociar múltiples días laborales a un mismo horario.
+
+### 2.6.4. Bounded Context: Request
+
+Contexto principal que administra de punta a punta el ciclo de vida de los trámites del colaborador. Los tipos de solicitud son parametrizables: la organización define qué tipos existen, qué campos pide cada uno y si descuentan saldo, de modo que agregar un trámite nuevo no requiere modificar el código. Es el contexto que integra el servicio externo de notificaciones push.
+
+#### 2.6.4.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | Request | Petición formal de un colaborador. Encapsula su tipo, período, valores de campos, adjuntos,aprobador, estado e historial, y custodia las transiciones válidas del flujo. | Atributos: id, requesterId, requestType, period, fieldValues, attachments, approver, status, submittedAt, history. Métodos: approve(), reject(), returnForReview() , resubmit(), cancel(), isAssignedTo(), requestedDays(), isResolved(). Invariantes: todos los campos obligatorios del tipo deben tener valor, el adjunto es obligatorio cuando el tipo lo exige, si el tipo descuenta saldo el disponible en Benefits Debe cubrir los días solicitados, el aprobador es el jefe directo declarado en Workspace y a falta de este el rol HR STAFF, solo el aprobador asignado puede resolverla, el motivo de rechazo y el comentario de revisión son obligatorios, y cada transición agrega una entrada al historial | Compuesto por FieldValue, RequestHistory y FileReference. Referencia RequestType y EmployeeId. |
+| Entity | RequestType | Tipo de trámite parametrizable definido por la organización. Determina Los campos que solicita, y exige adjunto y si descuenta saldo. | Atributos: id, name, description, requiresAttachment, balanceDeduction: BalanceDeduction, fields :List<RequestField>, active. Métodos: addField(), deactivate(), deductsBalance() | Referenciada por Request .Compuesta por RequestField. |
+| Entity | RequestField | Definición de un campo del formulario de un tipo de solicitud. | Atributos: id, key : FieldKey, label, dataType :FieldDataType, required, displayOrder | Entidad interna de RequestType. |
+| Entity | RequestHistory | Anotación de cada transición de estado, con su autor, su comentario y su fecha. Es lo que da trazabilidad completa al flujo. | Atributos: id, actorId, previousStatus , newStatus, comment, occurredAt | Entidad interna de Request .Sostiene el criterio de éxito del100% de solicitudes trazables. |
+| Value Object | RequestPeriod | Período solicitado,construido sobre DateRange del SharedKernel. | Atributos de rango de fechas. Métodos: countCalendarDays(), countBusinessDays(holidays) | Componente de Request .Recibe los feriados del servicio externo de calendario. |
+| Value Object | Approver | Aprobador resuelto al momento de presentar la solicitud, con el criterio que lo determinó. | Atributos: employeeId , type : ApproverType | Componente de Request .Resuelto mediante WorkspaceContextFacade. |
+| Value Object | FieldKey, FieldValue | Clave y valor de cada campo del formulario dinámico. FieldValue valida el contenido contra el FieldDataType declarado. | FieldKey: value. FieldValue: key, value, \+matches(dataType) : boolean | Componentes de Request y RequestField. |
+| Enumerations | RequestStatus,ApproverType,BalanceDeduction,FieldDataType | Catálogos del contexto. RequestStatus :IN_PROGRESS,UNDER_REVIEW,APPROVED, REJECTED,CANCELLED. ApproverType :DIRECT_MANAGER,HR_STAFF. BalanceDeduction: NONE,VACATION_DAYS,BENEFIT_BALANCE | Valores enumerados | Tipan al agregado y a sus entidades. |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | CreateRequestTypeCommand,AddRequestFieldCommand,DeactivateRequestTypeCommand | Administran el catálogo de tipos de solicitud y sus campos. | Campos de cada operación | Restringidos al rol HR STAFF |
+| Command | SubmitRequestCommand | Presenta una solicitud con sus valores de campos y sus adjuntos | requesterId, requestTypeId, startDate, endDate, fieldValues, attachments | Valida campos obligatorios, adjuntos y saldo. Desencadena RequestSubmitted. |
+| Command | ApproveRequestCommand,RejectRequestCommand,ReturnRequestForReviewCommand,ResubmitRequestCommand,CancelRequestCommand | Ejecutan las transiciones del flujo. | requestId , actorId y el motivo o comentario según corresponda | Procesados por RequestCommandServiceImpl |
+| Query | GetRequestByIdQuery | Recupera el detalle de una solicitud con su historial. | requestId , requesterId | Verifica la titularidad o la condición de aprobador |
+| Query | GetRequestsByRequesterIdQuery | Historial de solicitudes de un colaborador | requesterId , status | Alimenta la bandeja Mis Solicitudes |
+| Query | GetPendingRequestsByApproverIdQuery | Solicitudes pendientesde resolución de unaprobador. | approverId | Alimenta la bandeja de aprobación |
+| Query | GetActiveRequestTypesQuery | Tipos de solicitud vigentes con sus campos, para construir el formulario en la aplicación | Sin parámetros | Permite que la app arme el formulario sin conocer los tipos de antemano |
+| Domain Event | RequestSubmitted | Notifica la presentación de una solicitud.Corresponde al eventoSolicitud Creada del canvas | requestId, requesterId, approverId, requestTypeName, occurredOn | Consumido por el handler de notificaciones, que avisa al aprobador |
+| Domain Event | RequestApproved | Notifica la aprobación.Corresponde al eventoSolicitud Aprobada | requestId, requesterId, requestedDays, balanceDeduction, occurredOn | Consumido por Benefits, que descuenta el saldo, y por el handler de notificaciones |
+| Domain Event | RequestRejected, RequestReturnedForReview,RequestCancelled | Notifican las demásresoluciones del flujo | requestId , actorId ,motivo o comentario, occurredOn | Consumidos por el handler de notificaciones y, en el caso de la cancelación de una solicitud ya aprobada, por Benefits. |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | RequestCommandService,RequestQueryService | Contratos de escritura y lectura sobre solicitudes | handle() sobrecargado | Implementados en Application. |
+| Interface | RequestTypeCommandService,RequestTypeQueryService | Contratos sobre el catálogo de tipos de solicitud | handle() sobrecargado | Implementados en Application. |
+| Interface | RequestRepository | Persistencia del agregado Request | findAllByRequesterId(), findAllByApproverEmployeeIdAndStatus(), existsOverlappingRequest() | Implementado en Infrastructure. |
+| Interface | RequestTypeRepository | Persistencia de los tipos de solicitud y sus campos | findAllByActiveTrue(), existsByName() | Implementado en Infrastructure. |
+
+#### 2.6.4.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | SubmitRequestResource, ResolveRequestResource,ResubmitRequestResource | Estructuras de entrada del flujo de solicitudes. | Campos de cada comando, incluidos los pares clave y valor del formulario dinámico | Recibidos por RequestsController |
+| Resource | RequestResource, RequestHistoryResource,RequestTypeResource, RequestFieldResource | Respuestas con el detalle de la solicitud, su historial y la definición de los tipos y sus campos | Campos de cada elemento | Producidos por sus assemblers |
+| Assembler | SubmitRequestCommandFromResourceAssembler,RequestResourceFromEntityAssembler,RequestTypeResourceFromEntityAssembler | Transforman entre recursos REST y objetos de dominio. | toCommandFromResource(), toResourceFromEntity() | Usados por los controladores. |
+| Controller | RequestsController | Endpoints representación,consulta y resolución de solicitudes. | POST /api/v1/requests, GET/api/v1/requests/me, GET/api/v1/requests/pending-approval, GET/api/v1/requests/{id}, POST/api/v1/requests/{id}/approve, POST/api/v1/requests/{id}/reject, POST/api/v1/requests/{id}/return-for-review, POST/api/v1/requests/{id}/resubmit, POST/api/v1/requests/{id}/cancel | Verifica mediante IamContextFacade que el actor sea el aprobado asignado. |
+| Controller | RequestTypesController | Endpoints de administración del catálogo de tipos | POST /api/v1/request-types, GET/api/v1/request-types, POST/api/v1/request-types/{id}/fields | Restringido al rol HR STAFF, salvo la consulta de tipos vigentes |
+| Controller | DeviceTokensController | Registra y da debaja el token de dispositivo del usuario para la entrega de notificaciones push | POST /api/v1/device-tokens, DELETE/api/v1/device-tokens/{token} | Consumido por la aplicación móvil al iniciar sesión y al cerrarla |
+
+#### 2.6.4.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | RequestCommandServiceImpl | Implementa el ciclo de vida de la solicitud. Al presentarla resuelve el aprobador con WorkspaceContextFacade , valida los campos obligatorios contra la definición del tipo, verifica de forma síncrona el saldo con BenefitsContextFacade Cuando el tipo descuenta días, calcula los días hábiles descontando feriados y comprueba que no exista un período superpuesto. Al resolverla exige motivo en el rechazo y comentario en la devolución. | Depende de RequestRepository, RequestTypeRepository, WorkspaceContextFacade, BenefitsContextFacade, HolidayCalendarService y el publicador de eventos | Implementa RequestCommandService |
+| CommandHandler | RequestTypeCommandServiceImpl | Implementa la administración de tipos de solicitud y sus campos. | Depende de RequestTypeRepository | Implementa RequestTypeCommandService |
+| QueryHandler | RequestQueryServiceImpl,RequestTypeQueryServiceImpl | Implementan las consultas del contexto aplicando la verificación de titularidad. | Dependen de los repositorios del contexto | Implementan las interfaces del dominio. |
+| EventHandler | RequestNotificationEventHandler | Reacciona a los cinco eventos del contexto enviando la notificación push correspondiente al aprobador o al solicitante. Es el punto donde se integra el servicio externo de tercero declarado en el Capítulo I. | on() sobrecargado para cada evento | Usa NotificationService |
+| EventHandler | EmployeeTerminatedEventHandler | Cancela las solicitudes pendientes de un colaborador cesado. | on(event :EmployeeTerminated) | Escucha el evento de Workspace |
+| EventHandler | DirectManagerAssignedEventHandler | Reasigna el aprobador de las solicitudes aún no resueltas cuando cambia la línea de reporte | on(event :DirectManagerAssigned) | Escucha el evento de Workspace |
+| Interface | NotificationService | Contrato para el envío de notificaciones a los dispositivos de los usuarios. | notifyApprover(), notifyRequester(), registerDeviceToken(), revokeDeviceToken() | Implementado en Infrastructure |
+| Interface | HolidayCalendarService | Contrato para obtener los feriados nacionales del cómputo de días hábiles. | getHolidaysForYear(year,countryCode) :List<LocalDate> | Implementado en Infrastructure |
+
+#### 2.6.4.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaRequestRepository,JpaRequestTypeRepository | Implementaciones con SpringData JPA sobre las tablas requests, request_field_values, request_attachments, request_history, request_types y request_fields | Extienden JpaRepository y la interfaz del dominio | Persistencia del contexto. |
+| RepositoryImpl | JpaDeviceTokenRepository | Persistencia de los tokens de dispositivo registrados por cada usuario, necesarios para dirigir las notificaciones push | findAllByUserAccountId() , upsert() , deleteByToken() | Requiere agregar la tabla device_tokens al esquema. |
+| ServiceImpl | FirebaseCloudMessagingNotificationService | Implementación de NotificationService sobre Firebase Cloud Messaging.Constituye la integración con un servicio externo de terceros exigida por el enunciado | notifyApprover(), notifyRequester(), sendToDevice(token,payload) | Consulta JpaDeviceTokenRepository |
+| ServiceImpl | PublicHolidayApiAdapter | Implementación de HolidayCalendarService que consume una API pública de feriados nacionales del Perú, con copia en caché para tolerar la indisponibilidad del proveedor | getHolidaysForYear() | Integración externa adicionaldeclarada en el Capítulo I. |
+| DAO(móvil) | RequestDao, RequestTypeDao | Copia local de las solicitudes propias, de la bandeja de aprobación y de la definición de los tipos vigentes, para consulta y armado del formulario sin conectividad | upsertAll(), getMyRequests(), getPendingApprovals(), getActiveTypes() | Room en Kotlin, Drift en Flutter. |
+| DataSource(móvil) | RequestRemoteDataSource | Cliente HTTP de los endpoints de solicitudes y tipos | submit(), fetchMyRequests(), fetchPendingApprovals(), approve(), reject(), fetchActiveTypes() | Consumido por RequestRepositoryImpl |
+| Adapter(móvil) | PushNotificationReceiver | Recibe los mensajes de Firebase Cloud Messaging, construye la notificación del sistema operativo y habilita resolver la solicitud desde la propia notificación. EnKotlin extiende FirebaseMessagingService ; en Flutter usa firebase_messaging .Constituye el acceso al sistema de notificaciones del dispositivo declarado en el Capítulo I. | onMessageReceived(), onNewToken(),buildApprovalAction() | Registra el token mediante DeviceTokensController |
+| ViewModel(móvil) | MyRequestsViewModel,ApprovalInboxViewModel,NewRequestViewModel | Gestionan la bandeja personal, la bandeja de aprobación y el formulario dinámico, que se construye a partir de la definición de campos del tipo seleccionado | load(), selectType(), submit(), approve(), reject() | Observados por sus pantallas |
+
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Request. El diagrama muestra los componentes responsables de la creación, seguimiento, aprobación y notificación de solicitudes.
+
+![Figura 38. 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-38.png)
+Enlace de la figura: https://drive.google.com/file/d/1N2LySDDv1rNeUwn2AUpTihYr5-i9wkFa/view?usp=sharing
+
+En la **Mobile App**, **Requests UI** permite al usuario crear solicitudes y consultar su estado. **MyRequestsViewModel**, **ApprovalInboxViewModel** y **NewRequestViewModel** administran los flujos de consulta, aprobación y registro respectivamente.
+
+**RequestRepositoryImpl** coordina el acceso local y remoto. Para ello utiliza **RequestDao**, encargado de la persistencia local, y **RequestRemoteDataSource**, que consume los endpoints expuestos por el API Backend.
+
+**PushNotificationReceiver** procesa las notificaciones recibidas mediante Firebase Cloud Messaging y permite actualizar el estado mostrado en la aplicación cuando una solicitud cambia.
+
+En el API Backend, **RequestsController**, **RequestTypesController** y **DeviceTokensController** reciben las peticiones relacionadas con solicitudes, tipos configurables y dispositivos registrados para notificaciones.
+
+Las operaciones de modificación son gestionadas por **RommandequestCServiceImpl** y **RequestTypeCommandServiceImpl**, mientras que **RequestQueryServiceImpl** resuelve las consultas del contexto.
+
+**WorkspaceContextFacade** permite obtener información del solicitante y del aprobador desde Workspace, mientras que **BenefitsContextFacade** se utiliza cuando una solicitud requiere validar o actualizar saldos de beneficios, como días de vacaciones.
+
+Los cambios relevantes del flujo generan eventos que son procesados por **Request Event Handlers** y **Benefits Event Handlers**. Asimismo, **FirebaseCloudMessagingNotificationService** se encarga de enviar notificaciones push a los dispositivos correspondientes.
+
+#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Request.
+
+![Figura 39. 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-39.png)
+Enlace de la figura: https://drive.google.com/file/d/1Lk0D9DUH0DdP33kduoc0NmlrtiwCWX8l/view?usp=sharing
+
+El elemento central del dominio es **Request**, definido como **Aggregate Root**. Representa una solicitud realizada por un colaborador y contiene el solicitante, tipo de solicitud, periodo solicitado, campos dinámicos, archivos adjuntos, aprobador, estado actual, fecha de envío e historial de cambios.
+
+El agregado administra operaciones como **approve()**, **reject()**, **returnForReview()**, **resubmit()** y **cancel()**, controlando las transiciones permitidas entre los diferentes estados del flujo.
+
+**RequestType** representa la configuración de cada tipo de solicitud y define propiedades como nombre, descripción, obligatoriedad de adjuntos, forma de afectación de saldos y los campos adicionales que deben ser completados.
+
+**RequestField** permite definir dinámicamente los datos requeridos para cada tipo de solicitud, mientras que **FieldValue** conserva los valores introducidos por el usuario. El tipo de dato permitido se restringe mediante **FieldDataType**.
+
+**RequestPeriod** encapsula el intervalo temporal de la solicitud, soportando fechas y, cuando corresponda, rangos de horas.
+
+**Approver** representa al responsable de resolver la solicitud y distingue mediante **ApproverType** entre **DIRECT_MANAGER** y **HR_STAFF**.
+
+Finalmente, **RequestStatus** controla el ciclo de vida de la solicitud mediante los estados **IN_PROGRESS**, **UNDER_REVIEW**, **APPROVED**, **REJECTED** y **CANCELLED**.
+
+##### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Request.
+
+![Figura 40. 2.6.4.6.2. Bounded Context Database Design Diagram](assets/figura-40.png)
+Enlace de la figura: https://drive.google.com/file/d/16NBJXgYZkB3oYzyT12GFBHEugMPOqqFa/view?usp=sharing
+
+La tabla principal es **requests**, donde se almacena cada solicitud junto con el colaborador solicitante, el tipo de solicitud, periodo, aprobador, estado y fechas de creación y envío. Tanto **requester_id** como **approver_employee_id** funcionan como referencias lógicas hacia el bounded context Workspace.
+
+La tabla **request_types** almacena la configuración de los tipos de solicitud disponibles, incluyendo si requieren adjuntos, si afectan algún saldo y si se encuentran activos.
+
+**request_fields** define los campos configurables pertenecientes a cada tipo de solicitud, especificando su clave, etiqueta, tipo de dato, obligatoriedad y orden de presentación.
+
+Los valores introducidos para esos campos se almacenan en **request_field_values**, utilizando una clave compuesta por **request_id** y **field_key**.
+
+**request_attachments** conserva los metadatos de los archivos adjuntos asociados a una solicitud, incluyendo nombre, tipo de contenido, tamaño, ubicación de almacenamiento y fecha de carga.
+
+Finalmente, **request_history** mantiene la trazabilidad de las transiciones de estado, registrando el estado anterior, el nuevo estado, el colaborador que realizó la acción, el comentario asociado y la fecha en que ocurrió.
+
+### 2.6.5. Bounded Context: Benefits
+
+Contexto de soporte que administra los incentivos corporativos y controla la acumulación, el uso y el saldo de los días de descanso vacacional. Modela el saldo como unagregado con historial de movimientos, de modo que toda variación quede explicada y sea reversible.
+
+#### 2.6.5.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | VacationBalance | Saldo de vacaciones de un colaborador, con el historial de movimientos que lo explica.Garantiza que el saldo nunca quede negativo y que toda variación quede registrada | Atributos: id, employeeId, accruedDays, usedDays, movements :List<VacationMovement>, lastAccrualDate. Métodos: accrue(), use() , reverse(), adjust(), availableDays(), has Available(days) : boolean . Invariantes: el saldo disponible nunca es negativo, cada operación agrega un movimiento tipificado, y la reversión solo procede sobre un uso previamente registrado | Compuesto por VacationMovement .Referencia EmployeeId y RequestId del SharedKernel. |
+| AggregateRoot | BenefitAssignment | Asignación de un beneficio a uncolaborador en un período, consus entregas. | Atributos: id, employeeId, benefitType , quantity, period : DateRange, status :AssignmentStatus, deliveries :List<BenefitDelivery>. Métodos: registerDelivery(), cancel() , isFullyDelivered(). Invariantes: no se duplica la asignación de un mismo tipo a un mismo colaborador en un mismo período, y una asignación cancelada no admite entregas | Compuesto por BenefitDelivery. Referencia BenefitType |
+| Entity | BenefitType | Tipo de beneficio del catálogo de la organización, con su unidad de medida. | Atributos: id, name, description, unit :BenefitUnit, recurring, active. Métodos: activate(), desactivate() | Referenciada por BenefitAssignment |
+| Entity | BenefitDelivery | Entrega concreta de un beneficio asignado, con su fecha y su constancia | Atributos: id, deliveredAt, quantity, remarks | Entidad interna de BenefitAssignment. Evita las omisiones de entrega declaradas como dolor en el Capítulo I. |
+| Entity | VacationMovement | Movimiento que afecta el saldo de vacaciones, con su tipo, su cantidad y su origen. | Atributos: id, type : VacationMovementType, days, requestId : RequestId, occurredAt, remarks | Entidad interna de VacationBalance. Es la trazabilidad del saldo |
+| Value Object | VacationDays | Cantidad de días de vacaciones,con su aritmética validada | value : int, \+ add(), \+ subtract(), \+isPositive() . Invariante: no admite valores negativos | Componente de VacationBalance y VacationMovement |
+| Value Object | BenefitQuantity | Cantidad asignada de un beneficio, interpretada según la unidad del tipo. | value : BigDecimal , unit : BenefitUnit, \+isCompatibleWith(type) | Componente de BenefitAssignment . |
+| Enumerations | BenefitUnit,AssignmentStatus,VacationMovementType | BenefitUnit : MONEY, DAYS,UNITS AssignmentStatus :ASSIGNED, DELIVERED,CANCELLED VacationMovementType :ACCRUAL, USAGE, REVERSAL,MANUAL_ADJUSTMENT | Valores enumerados | Tipan a los agregados y entidades del contexto. |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | CreateBenefitTypeCommand,DeactivateBenefitTypeCommand | Administran el catálogo de tipos de beneficio | Campos de cada operación | Restringidos al rol HR STAFF |
+| Command | AssignBenefitCommand,RegisterBenefitDeliveryCommand,CancelBenefitAssignmentCommand | Administran la asignación y la entrega de beneficios. | employeeId, benefitTypeId, quantity, period, deliveredAt | Procesados por BenefitCommandServiceImpl |
+| Command | AccrueVacationDaysCommand | Acredita los días generados en el período | employeeId, days, accrualDate | Emitido por la tarea programada de acumulación |
+| Command | UseVacationDaysCommand | Descuenta días del saldo al aprobarse una solicitud. | employeeId , days , requestId | Emitido por RequestApprovedEventHandler |
+| Command | ReverseVacationUsageCommand | Restituye días al cancelarse una solicitud ya aprobada. | employeeId , requestId | Emitido por RequestCancelledEventHandler |
+| Command | AdjustVacationBalanceCommand | Ajuste manual del saldo,con motivo obligatorio | employeeId, days, remarks | Restringido al rol HR STAFF. Queda Registrado como MANUAL ADJUSTMENT |
+| Query | GetVacationBalanceByEmployeeIdQuery | Saldo vigente de un colaborador. | employeeId | Alimenta la pantalla de saldo y la validación síncrona de Request |
+| Query | GetVacationMovementsByEmployeeIdQuery | Historial de movimientos del saldo. | employeeId, fromDate, toDate | Permite al colaborador entender por qué su saldo cambió. |
+| Query | GetBenefitAssignmentsByEmployeeIdQuery | Beneficios asignados a un colaborador | employeeId , year | Alimenta la pantalla Mis Beneficios |
+| DomainEvent | VacationBalanceUpdated | Notifica la actualización del saldo. Corresponde al evento Saldo Actualizado Del canvas. | employeeId, availableDays, movementType, occurredOn | Consumido por los indicadores operativos |
+| DomainEvent | BenefitAssigned | Notifica la asignación del beneficio.Corresponde al eventoBeneficio Asignado | assignmentId, employeeId, benefitTypeName, occurredOn | Consumido por el handler de notificaciones |
+| DomainEvent | BenefitDelivered | Notifica la entrega efectiva de un beneficio | assignmentId, deliveredAt, occurredOn | Consumido por los indicadores operativos |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | BenefitCommandService,VacationBalanceCommandService | Contratos de escritura sobre beneficios y saldos | handle() sobrecargado | Implementados en Application. |
+| Interface | BenefitQueryService | Contrato de lectura sobre beneficios, saldos y movimientos. | handle() sobrecargado | Implementados en Application. |
+| Interface | VacationBalanceRepository | Persistencia del agregado VacationBalance | findByEmployeeId() , existsByEmployeeId() | Implementado en Infrastructure. |
+| Interface | BenefitAssignmentRepository,BenefitTypeRepository | Persistencia de las asignaciones y del catálogo. | findAllByEmployeeIdAndPeriod(), existsByEmployeeIdAndTypeAndPeriod(), findAllByActiveTrue() | Implementado en Infrastructure. |
+
+#### 2.6.5.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | CreateBenefitTypeResource,AssignBenefitResource, RegisterDeliveryResource,AdjustBalanceResource | Estructuras de entrada del contexto. | Campos de cada comando | Recibidos por los controladores. |
+| Resource | VacationBalanceResource,VacationMovementResource,BenefitAssignmentResource,BenefitTypeResource | Respuestas con el saldo, sus movimientos, las asignaciones y el catálogo. | accruedDays , usedDays, availableDays, movements, benefitTypeName, status | Producidos por sus assemblers |
+| Resource | VacationBalanceResourceFromEntityAssembler,BenefitAssignmentResourceFromEntityAssembler,AssignBenefitCommandFromResourceAssembler | Transforman entre recursos REST y objetos de dominio. | toResourceFromEntity(), toCommandFromResource() | Usados por los controladores |
+| Controller | VacationBalancesController | Endpoints de consulta y ajuste del saldo de vacaciones. | GET /api/v1/vacation-balances/me, GET/api/v1/vacation-balances/me/movements, GET/api/v1/vacation-balances/{employeeId}, POST/api/v1/vacation-balances/{employeeId}/adjustments | Las rutas por identificador y elajuste quedan restringidos alrol HR STAFF |
+| Controller | BenefitsController, BenefitTypesController | Endpoints de asignación,entrega y administración del catálogo. | POST /api/v1/benefits, GET/api/v1/benefits/me, POST/api/v1/benefits/{id}/deliveries, POST /api/v1/benefit-types, GET/api/v1/benefit-types | Restringidos según rol |
+| Facade | BenefitsContextFacade | Fachada que expone a Request la verificación síncrona de saldo disponible. | hasAvailableVacationDays(employeeId,days) : boolean, fetchAvailableDays(employeeId) : int | Consumida por RequestCommandServiceImpl .Implementa la validación previa declarada en la invariante del agregado Request |
+
+#### 2.6.5.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | VacationBalanceCommandServiceImpl | Implementa laacumulación, el uso, lareversión y el ajuste manual, verificando que el saldo no quede negativo y registrando cada operación como movimiento tipificado | Depende de VacationBalanceRepository , WorkspaceContextFacade y el publicador de eventos | Implementa VacationBalanceCommandService |
+| CommandHandler | BenefitCommandServiceImpl | Implementa la administración del catálogo, la asignación y la entrega, impidiendo duplicar la asignación de un tipo a un colaborador en un mismo período. | Depende de BenefitAssignmentRepository y BenefitTypeRepository | Implementa BenefitCommandService. |
+| QueryHandler | BenefitQueryServiceImpl | Implementa las consultas de saldo, movimientos y beneficios asignados. | Depende de los repositorios del contexto | Implementa BenefitQueryService |
+| EventHandler | RequestApprovedEventHandler | Reacciona a la aprobación de una solicitud que descuenta saldo,registrando el uso de días de forma automática e inmediata. Implementa la regla de negocio declarada en el Bounded Context Canvas. | on(event : RequestApproved) | Emite ReverseVacationUsageCommand |
+| EventHandler | RequestCancelledEventHandler | Reacciona a la cancelación de una solicitud ya aprobada restituyendo los días. | on(event : RequestCancelled) | Emite ReverseVacationUsageCommand |
+| EventHandler | EmployeeRegisteredEventHandler,EmployeeReinstatedEventHandler | Inicializan o reabren el saldo del colaborador y programan su acumulación según el tipo de contrato y la fecha de ingreso. | on() para cada evento | Escuchan los eventos de Workspace. |
+
+#### 2.6.5.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaVacationBalanceRepository,JpaBenefitAssignmentRepository,JpaBenefitTypeRepository | Implementaciones con Spring DataJPA sobre las tablas vacation_balances, vacation_movements, benefit_assignments, benefit_deliveries y benefit_types. | Extienden JpaRepository y la interfaz del dominio | Persistencia del contexto. |
+| Scheduler | VacationAccrualScheduler | Tarea programada que acredita de forma periódica los días generados por cada colaborador activo, según su fecha de ingreso y su tipo de contrato. | runMonthlyAccrual() anotado con @Scheduled | Emite AccrueVacationDaysCommand .Consulta WorkspaceContextFacade |
+| DAO(móvil) | BenefitsDao | Copia local del saldo, sus movimientos recientes y los beneficios del colaborador. Es uno de los datos que la hipótesis del Capítulo I exige disponible sin conexión. | upsertBalance(), getBalance(), upsertBenefits(), getBenefits() | Room en Kotlin, Drift en Flutter |
+| DataSource(móvil) | BenefitsRemoteDataSource | Cliente HTTP de los endpoints de saldo y beneficios. | fetchMyBalance(), fetchMyMovements(), fetchMyBenefits() | Consumido por BenefitsRepositoryImpl |
+| Repository(móvil) | BenefitsRepositoryImpl | Coordina la fuente remota con la copia local y expone el saldo aunque el dispositivo esté sin conexión,indicando la fecha de la última sincronización. | observeBalance(), refresh(), getLastSyncAt() | Consumido por los ViewModels |
+| ViewModel(móvil) | VacationBalanceViewModel,MyBenefitsViewModel | Gestionan las pantallas de saldo y de beneficios, incluida la indicación de datos sincronizados previamente cuando no hay conectividad. | load(), refresh() | Observados por sus pantallas. |
+
+#### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Benefits. El diagrama muestra los componentes responsables de la consulta, asignación y administración de beneficios, así como de la gestión del saldo vacacional.
+
+![Figura 41. 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-41.png)
+Enlace de la figura: https://drive.google.com/file/d/1FqwhOyFuLW2HtsZg15rZIalOnShbMzrB/view?usp=sharing
+
+En la **Mobile App**, **Benefits UI** permite visualizar saldos de vacaciones, movimientos y beneficios asignados. **VacationBalanceViewModel** y **MyBenefitsViewModel** gestionan el estado mostrado al usuario y delegan el acceso a los datos en **BenefitsRepositoryImpl**.
+
+**BenefitsRepositoryImpl** coordina la información obtenida mediante **BenefitsRemoteDataSource** con la copia local gestionada por **BenefitsDao**, permitiendo mantener disponibles los datos previamente sincronizados.
+
+En el **API Backend**, **VacationBalancesController** y **BenefitsController** exponen los endpoints de consulta y gestión del contexto. Las consultas son procesadas por **BenefitQueryServiceImpl**, mientras que las operaciones que modifican saldos o asignaciones son gestionadas por **VacationBalanceCommandServiceImpl** y **BenefitCommandServiceImpl**.
+
+**BenefitsContextFacade** expone capacidades relacionadas con la consulta de saldos hacia otros bounded contexts. En particular, Request puede utilizar esta fachada para validar la disponibilidad de días de vacaciones antes de continuar con una solicitud.
+
+**VacationAccrualScheduler** ejecuta periódicamente el proceso de acumulación de vacaciones, mientras que **Benefits Event Handlers** reaccionan a eventos relevantes como solicitudes aprobadas o cambios en la situación laboral del colaborador.
+
+#### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Benefits.
+
+![Figura 42. 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-42.png)
+Enlace de la figura: https://drive.google.com/file/d/1FozKzdchcgiZcZdPwhldm1R0hLgv-YXg/view?usp=sharing
+
+El dominio contiene dos Aggregate Roots principales: **BenefitAssignment** y **VacationBalance**.
+
+**BenefitAssignment** representa la asignación de un beneficio a un colaborador o a un área determinada. Contiene el tipo de beneficio, el colaborador beneficiado, el área de origen, el periodo de validez, la cantidad asignada, su estado y, cuando corresponde, la información de entrega.
+
+**BenefitType** representa el tipo de beneficio y define propiedades como nombre, descripción, unidad y si posee o no un saldo asociado. **BenefitDelivery** registra la entrega efectiva de un beneficio previamente asignado.
+
+**VacationBalance** representa el saldo vacacional individual de un colaborador. Mantiene los días acumulados, usados y los movimientos que explican cada modificación del saldo.
+
+Cada variación del saldo se representa mediante **VacationMovement**, el cual identifica el tipo de movimiento, cantidad de días, motivo, autor y, cuando corresponda, la solicitud que originó el cambio.
+
+**VacationDays** encapsula la cantidad de días de vacaciones y permite operaciones de suma y resta controladas, mientras que **BenefitQuantity** representa la cantidad asignada de un beneficio.
+
+##### 2.6.5.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Benefits.
+
+![Figura 43. 2.6.5.6.2. Bounded Context Database Design Diagram](assets/figura-43.png)
+Enlace de la figura: https://drive.google.com/file/d/1ota4FWcYZmuB1wyYk0KBeMJAbUyxHYiB/view?usp=sharing
+
+La tabla **benefit_types** almacena la definición de los tipos de beneficio disponibles, incluyendo su nombre, descripción, unidad, estado y si manejan saldo.
+
+**benefit_assignments** registra la asignación concreta de un beneficio, relacionándolo con el tipo de beneficio, el colaborador y, cuando corresponde, el área de origen. También almacena el periodo de validez, la cantidad asignada y el estado de la asignación.
+
+**benefit_deliveries** registra la entrega efectiva de un beneficio asociado a una asignación determinada, incluyendo la fecha, el colaborador que registró la entrega y observaciones adicionales.
+
+La tabla **vacation_balances** mantiene un único saldo por colaborador y almacena los días acumulados y utilizados. **employee_id** funciona como referencia lógica hacia Workspace.
+
+Finalmente, **vacation_movements** registra cada modificación del saldo vacacional, identificando el tipo de movimiento, cantidad de días, motivo, autor y, cuando corresponde, la solicitud de Request que originó la operación.
+
+### 2.6.6. Bounded Context: Payroll
+
+Contexto de soporte que actúa como repositorio centralizado y seguro de las boletas de pago. Es de consulta y no de cálculo: la boleta la emite el sistema de planilla de la organización y Flowboard la pública y controla el estado de su depósito. El sueldo de referencia por puesto vive en Workspace, no aquí.
+
+#### 2.6.6.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | Payslip | Boleta de pago de un colaborador en un período,con su archivo, su estado de publicación y su estado de depósito. Custodiar la regla de seguridad a nivel de fila. | Atributos: id, employeeId , payrollPeriod ,file :FileReference , issueDate, netAmount : Money, publicationStatus, publishedAt, payment : PaymentDetails .Métodos: publish(), replaceFile(), markAsPaid(), markAsObserved(), isVisibleTo(employeeId) Invariantes:nada se calcula, la boleta la emite el sistema de planilla de la organización; una boleta por colaborador y período, con reemplazo explícito en lugar de duplicado; toda boleta nueva iniciaUNDER_REVIEW y PENDING; solo las boletas PUBLISHED son visibles y solo para su propio colaborador; y el archivo debe ser PDF dentro del tamaño configurado | Referencia PayrollPeriod, EmployeeId, Money y FileReference |
+| Entity | PayrollPeriod | Período de planilla al que corresponden las boletas, consu ventana de vigencia | Atributos: id, period : PayPeriod, openedAt, closedAt. Métodos: close(), isOpen() | Referenciada por Payslip |
+| Value Object | PayPeriod | Identificación del período, por año y mes | year, month, \+toDisplayString(),+ isBefore() | Componente de PayrollPeriod |
+| Value Object | PaymentDetails | Estado y datos del depósito de haberes. | status : PaymentStatus, paidOn, observationReason, \+isSettled() | Componente de Payslip. Permite al área identificar los pagos pendientes sin revisar el sistema contable |
+| Enumerations | PaymentStatus,PublicationStatus | PaymentStatus: PENDING,PAID, OBSERVED PublicationStatus :UNDER_REVIEW, PUBLISHED | Valores enumerados | Tipan al agregado |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | OpenPayrollPeriodCommand,ClosePayrollPeriodCommand | Abren y cierran el período de planilla | year, month | Restringidos al rol HR STAFF. |
+| Command | UploadPayslipCommand | Carga la boleta emitida por el sistema de planilla | employeeId, payrollPeriodId, file, issueDate, netAmount | Rechazado si ya existe una boleta para ese colaborador y período. |
+| Command | ReplacePayslipFileCommand | Reemplaza el archivo de una boleta ya cargada | payslipId, file, issueDate, netAmount | Deja constancia del reemplazo |
+| Command | PublishPayslipCommand | Publica la boleta y la hace visible para su colaborador | payslipId | Desencadena PayslipPublished. |
+| Command | MarkPaymentAsPaidCommand,MarkPaymentAsObservedCommand | Actualizan el estado del depósito | payslipId, paidOn o reason | Desencadenan los eventos de pago |
+| Query | GetPayslipsByEmployeeIdQuery | Boletas publicadas de un colaborador, por período | employeeId, year | Alimenta la pantalla Mis Boletas |
+| Query | GetPayslipDownloadUrlQuery | Resuelve el enlace temporal de descarga de una boleta | payslipId, requesterId | Verifica la titularidad antes de resolver |
+| Query | GetPendingPaymentsByPeriodQuery | Boletas con depósito pendiente observado de un período. | payrollPeriodId | Alimenta los indicadores del área |
+| DomainEvent | PayslipPublished | Notifica la publicación de una boleta. Corresponde al evento Boleta Cargada del canvas | payslipId, employeeId, period, occurredOn | Consumido por el handler de notificaciones |
+| DomainEvent | PaymentMarkedAsPaid, PaymentObserved | Notifican el cambio de estado del depósito. Corresponden al evento Estado Actualizado | payslipId, paidOn o reason, occurredOn | Consumidos por los indicadores operativos |
+| DomainEvent | PayslipDownloaded | Deja registro de auditoría del acceso a información remunerativa.Corresponde al evento Boleta Descargada. | payslipId, employeeId, occurredOn | Sostiene la trazabilidad que exige la Ley N.° 29733. |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | PayrollCommandService,PayrollQueryService | Contratos de escritura y lectura del contexto | handle() sobrecargado | Implementados en Application. |
+| Interface | PayslipRepository,PayrollPeriodRepository | Persistencia del agregado ydel período | findAllByEmployeeIdAndPublicationStatus() , existsByEmployeeIdAndPayrollPeriodId() , findAllByPaymentStatus() , findByPeriod() | Implementados en Infrastructure. |
+| Interface | PayslipFileStorageService | Contrato para almacenar el archivo y emitir enlaces temporales de descarga | store(), generateTemporaryDownloadUrl(ref, ttlMinutes), delete() | Implementados en Infrastructure. |
+
+#### 2.6.6.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | UploadPayslipResource, MarkPaymentResource,OpenPeriodResource | Estructuras de entrada del contexto. La carga de la boleta se recibe como multipart/form-data | Campos de cada comando | Recibidos por los controladores. |
+| Resource | PayslipResource, PayrollPeriodResource | Respuestas con los metadatos de la boleta del período. La Respuesta no incluye el archivo, sino un enlace temporal. | id, period, issueDate, netAmount, publicationStatus, paymentStatus, downloadUrl | Producidos por sus assemblers |
+| Assembler | PayslipResourceFromEntityAssembler,UploadPayslipCommandFromResourceAssembler | Transforman entre recursos REST y objetos de dominio. | toResourceFromEntity() , toCommandFromResource() | Usados por los controladores. |
+| Controller | PayslipsController | Endpoints de carga,publicación, consulta y descarga de boletas, y de actualización del estado de pago. | POST /api/v1/payslips, PUT/api/v1/payslips/{id}/file, POST/api/v1/payslips/{id}/publish, GET/api/v1/payslips/me, GET/api/v1/payslips/{id}/download-url, PATCH /api/v1/payslips/{id}/payment | Verifica en cada lectura que el solicitante sea el titular o tenga rol HR STAFF |
+| Controller | PayrollPeriodsController | Endpoints de apertura,cierre y consulta de períodos. | POST /api/v1/payroll-periods, POST/api/v1/payroll-periods/{id}/close, GET/api/v1/payroll-periods | Restringido al rol HR STAFF |
+
+#### 2.6.6.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | PayrollCommandServiceImpl | Implementa la apertura y cierre de períodos, la carga, el reemplazo y la publicación de boletas, y la actualización del estado de depósito. Valida el tipo y el tamaño del archivo e impide la duplicación por colaborador y período | Depende de PayslipRepository, PayrollPeriodRepository, PayslipFileStorageService y el publicador de eventos | Implementa PayrollCommandService |
+| QueryHandler | PayrollQueryServiceImpl | Implementa las consultas aplicando en cada resolución la verificación de titularidad y de estado de publicación.Pública PayslipDownloaded al emitir un enlace de descarga. | Depende de PayslipRepository y PayslipFileStorageService | Implementa PayrollQueryService |
+
+#### 2.6.6.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaPayslipRepository,JpaPayrollPeriodRepository | Implementaciones con Spring DataJPA sobre las tablas payslips y payroll_periods. | Extienden JpaRepository y la interfaz del dominio | Persistencia del contexto |
+| ServiceImpl | ObjectStoragePayslipFileService | Implementación de PayslipFileStorageService . Guarda el archivo fuera de la base de datos y emite enlaces firmados de vigencia limitada, de modo que la boleta no quede expuesta en una URL pública permanente. | store(), generateTemporaryDownloadUrl(), delete() | Implementa la interfaz del dominio. |
+| DAO(móvil) | PayslipDao | Copia local de los metadatos de las boletas, sin los archivos, para que el colaborador vea su listado y el estado de cada depósito sin conexión. | upsertAll() , getPayslips(year) | El archivo se descarga bajo demanda y solo con conectividad |
+| DataSource(móvil) | PayrollRemoteDataSource | Cliente HTTP de los endpoints de boletas. | fetchMyPayslips(), requestDownloadUrl() | Consumido por PayrollRepositoryImpl |
+| ViewModel(móvil) | MyPayslipsViewModel | Gestiona la pantalla de boletas. Antes De exponer el listado o de abrir un documento invoca BiometricAuthenticator del contexto IAM, conforme al control que exige una nueva autenticación antes de mostrar información altamente sensible. | Depende de BiometricAuthenticator. Métodos: requestAccess(), load(), openPayslip(id) | Observado por MyPayslipsScreen. Es donde el componente de aprendizaje autónomo cumple su función de negocio. |
+
+#### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Payroll.
+
+![Figura 44. 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-44.png)
+Enlace de la figura: https://drive.google.com/file/d/1bVXUmi_qM8hRHICWA4V5EpjW11_sGIr0/view?usp=sharing
+
+En la **Mobile App**, los componentes del contexto deben permitir al colaborador consultar sus boletas y visualizar la información asociada a cada periodo de pago. La capa de presentación delega la recuperación de datos en el repositorio correspondiente, que coordina el acceso remoto al API Backend y, cuando aplique, la copia local de información previamente sincronizada.
+
+En el **API Backend**, los controladores del contexto exponen las operaciones relacionadas con periodos y boletas. Las operaciones de consulta recuperan la información persistida, mientras que las operaciones de administración permiten registrar, reemplazar o publicar las boletas correspondientes.
+
+El contexto se integra con Workspace para identificar al colaborador propietario de cada boleta y con el almacenamiento de archivos para conservar el documento asociado. Esta separación mantiene a Payroll enfocado en la publicación y consulta de información, sin asumir responsabilidades de cálculo salarial.
+
+#### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Payroll.
+
+![Figura 45. 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-45.png)
+Enlace de la figura: https://drive.google.com/file/d/1q9KABHKNucaI5ybmjg2eHFTvobhnK1Rc/view?usp=sharing
+
+El elemento central del dominio es **Payslip**, definido como **Aggregate Root**. Representa una boleta de pago perteneciente a un colaborador para un periodo determinado e incluye la referencia al archivo, fecha de emisión, monto neto, estado de publicación y detalles del pago.
+
+El agregado permite operaciones como **publish()**, **replaceFile()**, **markAsPaid()** y **markAsObserved()**, que controlan los cambios permitidos sobre la boleta.
+
+**PayrollPeriod** representa el periodo de nómina al que pertenece una boleta y utiliza el Value Object **PayPeriod** para identificar el año y mes correspondiente. El modelo establece que debe existir un único **PayrollPeriod** por periodo.
+
+**PaymentDetails** encapsula el estado del pago, la fecha efectiva y, cuando corresponde, el motivo de observación. La enumeración **PaymentStatus** restringe los posibles estados a **PENDING**, **PAID** y **OBSERVED**.
+
+Por otro lado, **PublicationStatus** distingue entre boletas **UNDER_REVIEW** y **PUBLISHED**, permitiendo controlar qué documentos pueden ser visualizados por el colaborador.
+
+El agregado también utiliza objetos compartidos como **EmployeeId**, **Money** y **FileReference**. Entre sus principales reglas se establece que existe una sola boleta por colaborador y periodo, que únicamente las boletas publicadas pueden ser consultadas por el colaborador y que Payroll registra el monto y estado del pago sin realizar cálculos salariales.
+
+##### 2.6.6.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Payroll.
+
+![Figura 46. 2.6.6.6.2. Bounded Context Database Design Diagram](assets/figura-46.png)
+Enlace de la figura: https://drive.google.com/file/d/1gexNLUMXLYZlXSQ3wS2YsN5HE5MdtA_d/view?usp=sharing
+
+La tabla **payroll_periods** almacena los periodos de pago administrados por el contexto, identificados mediante el año, mes y fecha programada de pago.
+
+La tabla principal **payslips** almacena cada boleta asociada a un colaborador y a un periodo determinado. Incluye el nombre y ubicación del archivo, tipo de contenido, tamaño, fecha de emisión, monto neto, moneda y estado de publicación.
+
+**employee_id** funciona como una referencia lógica hacia el bounded context Workspace, mientras que **payroll_period_id** constituye la relación interna con **payroll_periods**.
+
+La tabla también conserva información relacionada con el pago mediante **payment_status**, **paid_on** y **observation_reason**. De esta forma, Payroll puede representar si una boleta se encuentra pendiente, pagada u observada sin asumir responsabilidades de cálculo de remuneraciones.
+
+El diseño mantiene separado el **periodo de nómina** de la **boleta individual**, permitiendo que múltiples colaboradores posean una boleta correspondiente al mismo periodo y conservando la independencia del contexto respecto de Workspace.
+
+### 2.6.7. Bounded Context: Wellbeing
+
+Contexto de soporte enfocado en el clima laboral físico. Registra las lecturas ambientales de los espacios de trabajo captadas por dispositivos y las traduce en un indicador de salud ocupacional según umbrales configurables. Flowboard no provee ni comercializa sensores: administra su inventario y consume las lecturas que estos reporten, y en esta versión dichas lecturas se generan como datos de prueba.
+
+#### 2.6.7.1. Domain Layer
+
+Sub-capa Model — Aggregates, Entities, Value Objects y Enumerations
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| AggregateRoot | Office | Espacio de trabajo de la organización. Agrupa sus dispositivos, sus lecturas y sus umbrales, y determina el indicador de habitabilidad vigente. | Atributos: id, name, location : OfficeLocation , areaId : AreaId, devices, thresholds, currentIndicator :  HealthIndicator . Métodos: linkDevice(), unlinkDevice(), configureThreshold(), registerReading(), evaluateIndicator(). Invariantes: nombre único, un dispositivo solo puede estar vinculado a una oficina a la vez, y no se aceptan lecturas de un tipo sin umbral configurado | Compuesto por Device , EnvironmentalReading y MetricThreshold . Referencia AreaId del Shared Kernel. |
+| Entity | Device | Dispositivo de captación instalado en una oficina, con su código, su estado y las métricas que soporta. | Atributos: id, code : DeviceCode , model , status :DeviceStatus, supportedMetrics : List<MetricType>, linkedAt . Métodos: link(), unlink(), deactivate(), supports(metric) | Entidad interna de Office.Tipada por DeviceStatus |
+| Entity | EnvironmentalReading | Lectura de una métrica física en un instante, con su clasificación frente al umbral vigente. | Atributos: id, deviceId, metricType, value :MetricValue, capturedAt, indicator :HealthIndicator. Método: classifyAgainst(threshold) | Entidad interna de Office |
+| Entity | MetricThreshold | Configuración de los rangos de una métrica para una oficina. | Atributos: id, metricType, ranges :List<ThresholdRange>. Método: classify(value): HealthIndicater | Entidad interna de Office |
+| Value Object | OfficeLocation | Ubicación del espacio de trabajo. | address, floor, reference | Componente de Office |
+| Value Object | DeviceCode | Código único del dispositivo dentro del inventario. | value, \+ isValid() | Componente de Device |
+| Value Object | MetricValue | Magnitud de la lectura con su unidad de medida. | magnitude: BigDecimal, unit, \+isWithin(range) | Componente de EnvironmentalReading |
+| Value Object | ThresholdRange | Rango de una métrica asociado a un nivel del indicador. | minValue, maxValue, indicator :HealthIndicator, \+contains(value) | Componente de MetricThreshold |
+| Enumerations | MetricType,HealthIndicator,DeviceStatus | MetricType : TEMPERATURE,ILLUMINATION,AIR_QUALITY. HealthIndicator :OPTIMAL, ACCEPTABLE,POOR, HAZARDOUS. DeviceStatus :IN_INVENTORY, LINKED,INACTIVE | Valores enumerados | Tipan al agregado y a sus entidades |
+
+Sub-capa Model — Commands, Queries y Events
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Command | RegisterOfficeCommand | Da de alta una oficina y la asocia a un área organizativa | name , location , areaId | Procesado por WellbeingCommandServiceImpl |
+| Command | RegisterDeviceCommand,LinkDeviceToOfficeCommand,UnlinkDeviceCommand | Administrar el inventario de dispositivos y su vinculación a oficinas. | code, model, supportedMetrics, officeId | Restringidos al rol HR_STAFF |
+| Command | ConfigureMetricThresholdCommand | Define los rangos de una métrica para una oficina.Corresponde al mensaje Configurar Umbrales de Alerta del canvas | officeId , metricType , ranges | Restringidos al rol HR_STAFF |
+| Command | CaptureEnvironmentalReadingCommand | Registra una lectura reportada por un dispositivo.Corresponde al mensaje Capturar Lectura Ambiental | deviceCode , metricType , magnitude , unit , capturedAt | Procesado por WellbeingCommandServiceImpl , que la clasifica y recalcula el indicador |
+| Query | GetOfficesQuery | Oficinas de la organización con su indicador vigente | areaId | Alimenta la vista general de sedes |
+| Query | GetReadingsByOfficeIdQuery | Lecturas de una oficina en un rango de tiempo. | officeId, metricType, from, to | Alimenta la vista de monitoreo |
+| Query | GetHealthIndicatorByOfficeIdQuery | Indicador vigente de una oficina. | officeId | Alimenta los indicadores operativos |
+| Query | GetDeviceInventoryQuery | Inventario de dispositivos consu estado y su oficina | status | Restringida al rol HR STAFF |
+| DomainEvent | ReadingCaptured | Notifica el registro de una lectura. Corresponde al evento Lectura Capturada del canvas. | officeId, deviceId, metricType, magnitude, occurredOn | Consumido por el proceso de clasificación. |
+| DomainEvent | IndicatorClassified | Notifica la actualización del indicador de una oficina.Corresponde al evento Indicador Clasificado. | officeId , indicator , occurredOn | Consumido por los indicadores operativos |
+| DomainEvent | HazardousConditionDetected | Notifica que una lectura alcanzó el nivel HAZARDOUS.Implementa la regla que exige emitir una alerta inmediata.Corresponde al evento Alerta Ambiental Emitida | officeId, readingId, metricType, magnitude, occurredOn | Consumido por EnvironmentalAlertEventHandler |
+
+Sub-capa Services y Repositories
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Interface | WellbeingCommandService,WellbeingQueryService | Contratos de escritura y lectura del contexto | handle() sobrecargado | Implementados en Application. |
+| Interface | OfficeRepository | Persistencia del agregado Office Persistencia de las lecturas | findByAreaId() , existsByName(), findByDeviceCode() | Implementado en Infrastructure |
+| Interface | EnvironmentalReadingRepository | Persistencia de las lecturas | findAllByOfficeIdAndCapturedAtBetween(), findLatestByOfficeIdAndMetricType() | Implementado en Infrastructure |
+
+#### 2.6.7.2. Interface Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| Resource | RegisterOfficeResource, RegisterDeviceResource,ConfigureThresholdResource, CaptureReadingResource | Estructuras de entrada del contexto. | Campos de cada comando | Recibidos por los controladores |
+| Resource | OfficeResource, DeviceResource,EnvironmentalReadingResource,HealthIndicatorResource | Respuestas con las oficinas, su inventario, sus lecturas y su indicador. | name, location , areaName, currentIndicator, metricType, magnitude, capturedAt | Producidos por sus assemblers |
+| Assembler | OfficeResourceFromEntityAssembler,EnvironmentalReadingResourceFromEntityAssembler,CaptureReadingCommandFromResourceAssembler | Transforman entre recursos REST y objetos de dominio. | toResourceFromEntity() , toCommandFromResource() | Usados por los controladores. |
+| Controller | OfficesController | Endpoints de alta de oficinas,configuración de umbrales y consulta de indicadores | POST /api/v1/offices, GET /api/v1/offices, PUT /api/v1/offices/{id}/thresholds, GET/api/v1/offices/{id}/indicator | Restringido al rol HR STAFF,salvo la consulta del indicador |
+| Controller | DevicesController | Endpoints de administración del inventario de dispositivos. | POST /api/v1/devices,GET /api/v1/devices ,POST /api/v1/offices/{id}/devices ,DELETE/api/v1/offices/{id}/devices/{deviceId} | Restringido al rol HR STAFF. |
+| Controller | EnvironmentalReadingsController | Punto de ingreso de las lecturas y su consulta histórica. | POST /api/v1/offices/{officeId}/readings, GET /api/v1/offices/{officeId}/readings | El endpoint de ingreso se protege con una credencial de servicio, no con el token de usuario. |
+
+#### 2.6.7.3. Application Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| CommandHandler | WellbeingCommandServiceImpl | Implementa el alta de oficinas, el inventario y vinculación de dispositivos, la configuración de umbrales y el registro de lecturas.Al registrar una lectura la clasifica contra el umbral vigente, recalcula el indicador de la oficina y, si alcanza el nivel HAZARDOUS,pública la alerta. | Depende de OfficeRepository , EnvironmentalReadingRepository y el publicador de eventos | Implementa WellbeingCommandService |
+| QueryHandler | WellbeingQueryServiceImpl | Implementa las consultas de oficinas, lecturas, indicadores e inventario. | Depende de los repositorios del contexto | Implementa WellbeingQueryService |
+| EventHandler | EnvironmentalAlertEventHandler | Reacciona a una condición peligrosa enviando una notificación inmediata a las cuentas con rol HR STAFF, que son quienes asumen la responsabilidad de seguridad y salud ocupacional en el alcance del proyecto. | on(event :HazardousConditionDetected) | Usa NotificationService del contexto Request |
+| EventHandler | AreaCreatedEventHandler | Habilita el registro de oficinas asociadas a un área recién creada | on(event : AreaCreated) | Escucha el evento de Workspace. |
+
+#### 2.6.7.4. Infrastructure Layer
+
+| Tipo | Nombre | Descripción y responsabilidad | Miembros principales | Relación con otros elementos |
+| :---- | :---- | :---- | :---- | :---- |
+| RepositoryImpl | JpaOfficeRepository,JpaEnvironmentalReadingRepository | Implementaciones con SpringData JPA sobre las tablas offices, devices, device_supported_metrics, metric_thresholds, threshold_ranges y environmental_readings. | Extienden JpaRepository y la interfaz del dominio | Persistencia del contexto |
+| Adapter | SensorReadingIngestionAdapter | Punto de entrada de las lecturas provenientes de los dispositivos. Traduce el formato del proveedor al comando de dominio y valida la credencial de servicio del emisor. | ingest(payload), validateServiceCredential() | Emite CaptureEnvironmentalReadingComman |
+| Seeder | EnvironmentalReadingSeeder | Generador de lecturas de prueba que alimenta el contexto mientras la organización no disponga de dispositivos instalados. Está declarado de forma explícita en el alcance del proyecto. | seedReadingsForOffice(officeId,days) | Activo solo en los perfiles de desarrollo y de demostración |
+| DAO(móvil) | WellbeingDao | Copia local del indicador vigente de cada oficina | upsertIndicators(), getIndicators() | Room en Kotlin, Drift en Flutter |
+| DataSource(móvil) | WellbeingRemoteDataSource | Cliente HTTP de los endpoints de oficinas e indicadores | fetchOffices(), fetchIndicator(), fetchReadings() | Consumido por WellbeingRepositoryImpl |
+| ViewModel(móvil) | WellbeingDashboardViewModel | Gestiona la vista de monitoreo ambiental. En la aplicación móvil este contexto es de solo lectura: el inventario de dispositivos y la configuración de umbrales se administran desde la experiencia de administración. | load() , selectOffice() , refresh() | Observado por WellbeingDashboardScreen |
+
+#### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
+
+En esta sección se presenta el Component Diagram correspondiente al bounded context Wellbeing. El diagrama muestra los componentes encargados de registrar oficinas y dispositivos, recibir lecturas ambientales, clasificarlas y exponer indicadores para su consulta desde la aplicación móvil.
+
+![Figura 47. 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-47.png)
+Enlace de la figura: https://drive.google.com/file/d/12vyMi-MQLcCmbG9bNR7d726iB0cFdjfL/view?usp=sharing
+
+En la **Mobile App**, **Wellbeing UI** muestra al usuario los indicadores ambientales correspondientes a las sedes registradas. **WellbeingDashboardViewModel** administra el estado de esta información y delega su recuperación en **WellbeingRepositoryImpl**.
+
+**WellbeingRepositoryImpl** coordina los datos obtenidos desde **WellbeingRemoteDataSource** con la copia local administrada por **WellbeingDao**, permitiendo mantener disponible la información ambiental recientemente sincronizada.
+
+En el API Backend, **OfficesController**, **DevicesController** y **EnvironmentalReadingsController** exponen los endpoints relacionados con oficinas, inventario de dispositivos, configuración de umbrales y lecturas ambientales.
+
+Las operaciones de consulta son procesadas por **WellbeingQueryServiceImpl**, mientras que **WellbeingCommandServiceImpl** administra el registro y configuración de oficinas y dispositivos, además de procesar las lecturas recibidas.
+
+**SensorReadingIngestionAdapter** recibe las lecturas provenientes del **Sistema de Sensores Ambientales** y las envía al servicio de aplicación para su registro y clasificación. El modelo de dominio **Office** concentra la configuración de la oficina, sus dispositivos y las lecturas ambientales asociadas.
+
+Finalmente, **Wellbeing Event Handlers** procesa eventos relevantes del contexto. Cuando se detecta una condición clasificada como peligrosa, **FirebaseCloudMessagingNotificationService** permite enviar una notificación al personal correspondiente.
+
+#### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
+
+En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Wellbeing.
+
+![Figura 48. 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-48.png)
+Enlace de la figura: https://drive.google.com/file/d/1kuUnHmtumps9wziuJqwDGgZSF1mPYcqF/view?usp=sharing
+
+El elemento central del dominio es **Office**, definido como **Aggregate Root**. Representa una sede física registrada en Flowboard y mantiene su nombre, ubicación, estado y los dispositivos asociados a ella.
+
+**Device** representa cada dispositivo capaz de generar lecturas ambientales. Cada dispositivo posee un código, un estado y un conjunto de métricas soportadas. La enumeración **DeviceStatus** permite clasificarlo como **IN_INVENTORY**, **LINKED** o **INACTIVE**.
+
+**EnvironmentalReading** representa una lectura obtenida desde un dispositivo y contiene la oficina, dispositivo, valor medido, fecha de captura y clasificación ambiental resultante.
+
+Las métricas ambientales se representan mediante **MetricValue**, que combina un **MetricType** con su correspondiente valor. **MetricType** restringe las métricas admitidas a **TEMPERATURE**, **ILLUMINATION** y **AIR_QUALITY**.
+
+**MetricThreshold** define los criterios utilizados para clasificar cada lectura. Para ello utiliza diferentes **ThresholdRange**, cada uno asociado a un **HealthIndicator**. Los indicadores posibles son **OPTIMAL**, **ACCEPTABLE**, **POOR** y **HAZARDOUS**.
+
+##### 2.6.7.6.2. Bounded Context Database Design Diagram
+
+En esta sección se presenta el Database Design Diagram correspondiente al bounded context Wellbeing.
+
+![Figura 49. 2.6.7.6.2. Bounded Context Database Design Diagram](assets/figura-49.png)
+Enlace de la figura: https://drive.google.com/file/d/1beMKRbzfaEdriqcP_b3e9esvD33PUfBY/view?usp=sharing
+
+La tabla **offices** almacena las sedes registradas en el sistema, incluyendo su nombre, edificio, piso, referencia de ubicación y estado.
+
+La tabla **devices** registra los dispositivos vinculados a cada oficina. Cada dispositivo posee un código único, una referencia hacia la oficina correspondiente y un estado operativo.
+
+**device_supported_metrics** permite registrar las métricas que cada dispositivo es capaz de medir. Su clave compuesta por **device_id** y **metric_type** evita duplicar una misma capacidad para un dispositivo.
+
+La tabla **environmental_readings** almacena las lecturas ambientales generadas por los dispositivos, incluyendo oficina, dispositivo, tipo de métrica, valor medido, clasificación ambiental y fecha de registro.
+
+Por otro lado, **metric_thresholds** define los umbrales configurados para cada tipo de métrica, mientras que **threshold_ranges** almacena los rangos específicos asociados a cada indicador de salud ambiental.
+
+El diseño permite separar claramente la configuración de oficinas y dispositivos, las reglas de clasificación ambiental y las lecturas registradas, manteniendo la trazabilidad de cada medición desde su dispositivo de origen hasta el indicador resultante.
+
+<div style="page-break-after: always;"></div>
