@@ -1019,6 +1019,29 @@ Para la construcción de los perfiles se priorizaron los hallazgos con mayor rec
 
 ![figura-54](assets/figura-55.png)
 
+### 2.3.2. User Task Matrix
+
+El User Task Matrix permite identificar y comparar las principales tareas que realizan los User Persona de los dos segmentos objetivo: Personal de Recursos Humanos y Colaboradores generales. Estas tareas son a partir de las entrevistas y del análisis de las necesidades y dificultades de ambos segmentos. Para cada tarea se establece su frecuencia e importancia, lo que se considera la recurrencia con la que forma parte de las actividades habituales del usuario y el impacto que tiene en el cumplimiento de sus objetivos.
+
+Las tareas que se consideran corresponden a actividades que los usuarios realizan independientemente de la existencia de Flowboard. De esta forma, esta matriz permite reconocer aquellas actividades que requieren mayor atención durante el diseño de la solución, como aquellas que combinan una alta frecuencia con una alta importancia.
+
+|  | Carlos (Personal de Recursos Humanos) |  | Maria  (Colaboradores generales) |  |
+| :---- | ----- | :---: | ----- | :---: |
+| Descripción | Importancia | Frecuencia | Importancia | Frecuencia |
+| Gestionar información de los colaboradores | Alta | Alta | Baja | Media |
+| Gestionar solicitudes de vacaciones y permisos | Alta | Alta | Media | Alta |
+| Verificar saldos de vacaciones | Alta | Alta | Media | Alta |
+| Revisar registros de asistencia, faltas y tardanzas | Alta | Alta | Media | Alta |
+| Gestionar información de remuneraciones y pagos | Alta | Alta | Media | Alta |
+| Gestionar y verificar beneficios laborales | Media | Alta | Media | Alta |
+| Atender consultas sobre información laboral | Alta | Alta | Alta | Alta |
+| Realizar seguimiento de solicitudes laborales | Alta | Alta | Media | Alta |
+
+La matriz muestra que las tareas de mayor frecuencia e importancia para el personal de Recursos Humanos están relacionadas con la gestión de información de los colaboradores, vacaciones y permisos, asistencia, remuneraciones, beneficios y atención de consultas. Esto coincide con las entrevistas, donde los procesos manuales y la atención constante de requerimientos representan una carga administrativa importante.
+
+Para los colaboradores generales, las tareas más importantes se concentran en consultar información laboral propia, solicitar vacaciones y permisos, revisar remuneraciones y beneficios, así como el seguimiento de solicitudes. Ambos segmentos coinciden en la necesidad de acceder a información laboral actualizada, aunque RR. HH. la gestiona y válida para múltiples trabajadores, mientras que el colaborador principalmente la consulta y realiza solicitudes sobre su propia información.
+
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
