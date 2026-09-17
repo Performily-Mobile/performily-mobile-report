@@ -884,6 +884,698 @@ Este lenguaje permite que los conceptos relacionados con la gestión de recursos
 | Approver (Aprobador) | Colaborador que, según la jerarquía organizacional, tiene la facultad de aprobar o rechazar una solicitud determinada. |
 | Approval Workflow (Flujo de aprobación) | Secuencia mediante la cual una solicitud es dirigida a su aprobador, revisada y resuelta, dejando registro de quién la resolvió y cuándo. |
 | Notification (Notificación) | Aviso que la organización dirige al colaborador o al aprobador para informar sobre el estado de una solicitud.
+
+## 2.4. Requirements specification
+
+### 2.4.1. User Stories
+
+En esta sección se presentan las user stories que definen lo que Flowboard debe permitir hacer a cada tipo de usuario. Están agrupadas en épicas según los procesos que identificamos en las entrevistas y en el Event Storming, incluyen la gestión de colaboradores, la asistencia, las solicitudes, los beneficios, las boletas y el bienestar. Cada user story sigue la estructura "Como, quiero, para" y tiene sus criterios de aceptación en formato Gherkin usando Given, When, Then, lo que permite saber de forma clara cuándo una funcionalidad está terminada. También se incluyen user stories con rol Developer para el RESTful API, que no tiene interacción directa con el usuario final, y technical stories para aspectos como el despliegue y la seguridad.
+
+| Epic ID | EP01 |
+| :---- | :---- |
+| **Title** | Identidad y control de acceso |
+| **User** | Organización |
+| **Priority** | Low |
+| **User Stories** | US01 – US07 |
+| **Description** | **Como** organización que expone información laboral sensible, **queremos** un mecanismo de identidad y control de acceso por rol, **para** garantizar que cada persona vea únicamente la información que le corresponde. |
+
+| Epic ID | EP02 |
+| :---- | :---- |
+| **Title** | Gestión del colaborador y estructura organizacional |
+| **User** | Área de Recursos Humanos |
+| **Priority** | High |
+| **User Stories** | US08 – US20 |
+| **Description** | **Como** área de Recursos Humanos, **queremos** administrar el ciclo de vida del colaborador y la estructura de la organización en un único registro, **para** eliminar los archivos paralelos y disponer de una fuente única de verdad. |
+
+| Epic ID | EP03 |
+| :---- | :---- |
+| **Title** | Control de asistencia |
+| **User** | Área de Recursos Humanos |
+| **Priority** | High |
+| **User Stories** | US21 – US25 |
+| **Description** | **Como** área de Recursos Humanos, **queremos** convertir las marcaciones en registros de asistencia interpretados, **para** disponer de información confiable sobre puntualidad, horas trabajadas y sobretiempo. |
+
+| Epic ID | EP04 |
+| :---- | :---- |
+| **Title** | Gestión de solicitudes |
+| **User** | Organización |
+| **Priority** | High |
+| **User Stories** | US26 – US36 |
+| **Description** | **Como** organización, **queremos** un flujo de solicitudes con estados visibles y ruteo automático al aprobador, **para** reducir el tiempo de resolución y dar trazabilidad completa a cada trámite. |
+
+| Epic ID | EP05 |
+| :---- | :---- |
+| **Title** | Beneficios y saldo de vacaciones |
+| **User** | Organización |
+| **Priority** | Medium |
+| **User Stories** | US37 – US42 |
+| **Description** | **Como** organización, **queremos** que cada colaborador vea los beneficios que le corresponden y su saldo de vacaciones actualizado, **para** eliminar las omisiones de entrega y las disputas por días. |
+
+| Epic ID | EP06 |
+| :---- | :---- |
+| **Title** | Boletas de pago y estado de pagos |
+| **User** | Organización |
+| **Priority** | Medium |
+| **User Stories** | US43 – US46 |
+| **Description** | **Como** organización, **queremos** centralizar las boletas de pago y el estado de los depósitos, **para** que el colaborador acceda a sus comprobantes y Recursos Humanos controle qué pagos siguen pendientes. |
+
+| Epic ID | EP07 |
+| :---- | :---- |
+| **Title** | Bienestar laboral |
+| **User** | Organización |
+| **Priority** | Low |
+| **User Stories** | US47 – US51 |
+| **Description** | **Como** organización, **queremos** interpretar las condiciones ambientales de nuestros espacios de trabajo, **para** identificar y corregir situaciones que afecten la salud ocupacional. |
+
+| Epic ID | EP08 |
+| :---- | :---- |
+| **Title** | Landing Page |
+| **User** | Startup |
+| **Priority** | Low |
+| **User Stories** | US52 – US57 |
+| **Description** | **Como** startup, **queremos** un sitio público que comunique la propuesta de valor por segmento, **para** convertir visitantes en usuarios de la plataforma. |
+
+| Epic ID | EP09 |
+| :---- | :---- |
+| **Title** | Servicios y despliegue |
+| **User** | Equipo de desarrollo |
+| **Priority** | Medium |
+| **User Stories** | TS01 – TS06 |
+| **Description** | **Como** equipo de desarrollo, **queremos** un RESTful API documentado, seguro y desplegado, **para** sostener la experiencia web sobre una arquitectura orientada a servicios. |
+
+| Story ID | US01 |
+| :---- | :---- |
+| **Title** | Generación automática de credenciales |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** personal de RRHH, **quiero** que el sistema genere las credenciales de acceso al registrar un colaborador, **para** que pueda ingresar sin un trámite adicional. |
+| **Acceptance Criteria** | **Escenario 1:** Generación exitosa<br>**Given** se registra con éxito a un colaborador con correo válido y sin cuenta asociada<br>**When** el sistema procesa la creación de la cuenta<br>**Then** se genera un nombre de usuario único<br>**And** se genera una contraseña temporal almacenada como hash<br>**And** la cuenta queda marcada con cambio de contraseña obligatorio.<br><br>**Escenario 2:** Nombre de usuario duplicado<br>**Given** ya existe una cuenta con el mismo nombre de usuario<br>**When** el sistema intenta crear la cuenta<br>**Then** la operación es rechazada<br>**And** se indica que el nombre de usuario ya está en uso.<br><br>**Escenario 3:** Colaborador con cuenta previa<br>**Given** el colaborador ya tiene una cuenta activa<br>**When** el sistema procesa nuevamente la creación<br>**Then** la operación no genera credenciales nuevas<br>**And** las credenciales existentes se conservan. |
+
+| Story ID | US02 |
+| :---- | :---- |
+| **Title** | Inicio de sesión |
+| **User** | Usuario (Personal de RRHH / Colaborador) |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** usuario del sistema, **quiero** autenticarme con mis credenciales, **para** acceder a los módulos que corresponden a mi rol. |
+| **Acceptance Criteria** | **Escenario 1:** Autenticación exitosa<br>**Given** existe un usuario con credenciales válidas y cuenta activa<br>**When** envía sus credenciales<br>**Then** el sistema lo autentica<br>**And** retorna un token de acceso con su rol.<br><br>**Escenario 2:** Credenciales inválidas<br>**Given** un usuario envía una contraseña incorrecta<br>**When** el sistema verifica las credenciales<br>**Then** el acceso es denegado<br>**And** el mensaje de error no revela si el error está en el usuario o en la contraseña.<br><br>**Escenario 3:** Cuenta de colaborador cesado<br>**Given** un usuario cuyo colaborador asociado tiene estado cesado<br>**When** envía credenciales correctas<br>**Then** el acceso es denegado<br>**And** se indica que la cuenta se encuentra inhabilitada. |
+
+| Story ID | US03 |
+| :---- | :---- |
+| **Title** | Cambio obligatorio de contraseña temporal |
+| **User** | Usuario (Personal de RRHH / Colaborador) |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** colaborador que ingresa por primera vez, **quiero** definir mi propia contraseña, **para** que nadie más conozca mi clave de acceso. |
+| **Acceptance Criteria** | **Escenario 1:** Redirección forzada<br>**Given** existe una cuenta marcada con cambio de contraseña obligatorio<br>**When** el usuario se autentica correctamente<br>**Then** el sistema restringe el acceso a cualquier recurso distinto del cambio de contraseña.<br><br>**Escenario 2:** Cambio exitoso de contraseña<br>**Given** un usuario està en el proceso de cambio obligatorio de contraseña<br>**When** define una contraseña que cumple con los requisitos mìnimos de seguridad<br>**Then** la contraseña se actualiza<br>**And** la marca de cambio obligatorio de contraseña se elimina.<br><br>**Escenario 3:** Contraseña que no cumple los requisitos mínimos de seguridad<br>**Given** un usuario está en el proceso de cambio obligatorio<br>**When** define una contraseña que no cumple la longitud o complejidad mínima<br>**Then** la operación es rechazada<br>**And** se indican los requisitos incumplidos. |
+
+| Story ID | US04 |
+| :---- | :---- |
+| **Title** | Cierre de sesión |
+| **User** | Usuario (Personal de RRHH / Colaborador) |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** usuario del sistema, **quiero** cerrar mi sesión, **para** evitar que otra persona acceda a mi información desde el mismo equipo. |
+| **Acceptance Criteria** | **Escenario 1:** Cierre exitoso<br>**Given** hay un usuario con sesión activa<br>**When** solicita cerrar la sesión<br>**Then** el token de acceso queda invalidado.<br><br>**Escenario 2:** Uso de token invalidado<br>**Given** existe un token que ya fue invalidado<br>**When** se utiliza para consultar un recurso protegido<br>**Then** el sistema deniega la petición debido a que el usuario no cuenta con la autorización requerida. |
+
+| Story ID | US05 |
+| :---- | :---- |
+| **Title** | Asignación y cambio de rol |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** personal de RRHH, **quiero** modificar el rol de una cuenta, **para** otorgar o retirar privilegios administrativos. |
+| **Acceptance Criteria** | **Escenario 1:** Cambio exitoso<br>**Given** existe una cuenta y un rol válido<br>**When** se procesa el cambio de rol<br>**Then** los permisos de la cuenta se actualizan.<br><br>**Escenario 2:** Rol inexistente<br>**Given** un rol no definido en el sistema<br>**When** se intenta asignarlo<br>**Then** la operación es rechazada<br>**And** se indica que el rol no es válido.<br><br>**Escenario 3:** Última cuenta administrativa<br>**Given** existe una única cuenta activa con rol de RRHH<br>**When** se intenta cambiar su rol a colaborador<br>**Then** la operación es rechazada<br>**And** se indica que debe existir al menos una cuenta con rol de RRHH. |
+
+| Story ID | US06 |
+| :---- | :---- |
+| **Title** | Restablecimiento de contraseña |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** personal de RRHH, **quiero** restablecer la contraseña de un colaborador, **para** devolverle el acceso cuando la ha olvidado. |
+| **Acceptance Criteria** | **Escenario 1:** Restablecimiento exitoso<br>**Given** existe una cuenta activa<br>**When** se solicita el restablecimiento de contraseña<br>**Then** se genera una contraseña temporal<br>**And** la cuenta queda marcada con cambio de contraseña obligatorio.<br><br>**Escenario 2:** Cuenta inhabilitada<br>**Given** existe una cuenta asociada a un colaborador cesado<br>**When** se solicita el restablecimiento de contraseña<br>**Then** la operación es rechazada.<br>**And** se indica que debe existir al menos una cuenta con rol de RRHH. |
+
+| Story ID | US07 |
+| :---- | :---- |
+| **Title** | Restricción de acceso por rol |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP01 |
+| **Description** | **Como** organización sujeta a la Ley de Protección de Datos Personales, **queremos** que cada consulta se restrinja según el rol del solicitante, **para** impedir que un colaborador acceda a información de terceros. |
+| **Acceptance Criteria** | **Escenario 1:** Acceso a información propia<br>**Given** un colaborador está autenticado<br>**When** consulta su propia información<br>**Then** el sistema retorna los datos solicitados.<br><br>**Escenario 2:** Acceso a información de terceros<br>**Given** un colaborador autenticado con rol estándar está usando la aplicación<br>**When** consulta información asociada a otro colaborador<br>**Then** el sistema deniega la petición debido a que el usuario no cuenta con la autorización requerida.<br><br>**Escenario 3:** Acceso administrativo<br>**Given** un usuario con rol de RRHH está usando la aplicación<br>**When** consulta información de cualquier colaborador<br>**Then** el sistema retorna los datos solicitados. |
+
+| Story ID | US08 |
+| :---- | :---- |
+| **Title** | Registro de un nuevo colaborador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar el perfil completo de un colaborador, **para** iniciar su ciclo de vida en la organización. |
+| **Acceptance Criteria** | **Escenario 1:** Registro exitoso<br>**Given** se tiene los datos personales válidos con documento de identidad único del colaborador<br>**When** se procesa el registro<br>**Then** el colaborador es creado con estado activo<br>**And** se emite el evento que da origen a sus credenciales de acceso.<br><br>**Escenario 2:** Campos obligatorios incompletos<br>**Given** se tiene un registro con campos obligatorios vacíos<br>**When** el sistema valida la solicitud<br>**Then** la operación es rechazada<br>**And** se detallan los campos faltantes.<br><br>**Escenario 3:** Documento de identidad duplicado<br>**Given** se ingresa al formulario un documento de identidad que ya pertenece a un colaborador activo<br>**When** se intenta registrar el nuevo perfil<br>**Then** la operación es rechazada<br>**And** se indica la duplicidad. |
+
+| Story ID | US09 |
+| :---- | :---- |
+| **Title** | Gestión del catálogo de áreas |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** crear y actualizar las áreas de la organización, **para** reflejar su estructura sin depender de cambios en el sistema. |
+| **Acceptance Criteria** | **Escenario 1:** Creación exitosa<br>**Given** un nombre de área que no existe<br>**When** se registra el área<br>**Then** el área creada queda disponible para asignación del personal.<br><br>**Escenario 2:** Nombre duplicado<br>**Given** se ingresa un nombre de área ya registrado<br>**When** se intenta crear el área<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Área con colaboradores asignados<br>**Given** existe un área con al menos un colaborador activo<br>**When** se intenta desactivarla<br>**Then** la operación es rechazada<br>**And** se indica que primero deben reasignarse los colaboradores que la integran. |
+
+| Story ID | US10 |
+| :---- | :---- |
+| **Title** | Asignación de área y posición |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** asignar o actualizar el área y la posición de un colaborador, **para** reflejar sus responsabilidades dentro de la organización. |
+| **Acceptance Criteria** | **Escenario 1:** Asignación exitosa<br>**Given** un colaborador existente ya posee una combinación válida de área y posición<br>**When** se ejecuta la nueva asignación<br>**Then** el perfil laboral queda actualizado.<br><br>**Escenario 2:** Área o posición inexistente<br>**Given** se proporciona un identificador de área o posición no registrado<br>**When** se intenta la asignación<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Trazabilidad del cambio<br>**Given** un colaborador ya tenía una posición asignada<br>**When** se le asigna una nueva<br>**Then** se registra el cambio con su fecha para conservar la trazabilidad. |
+
+| Story ID | US11 |
+| :---- | :---- |
+| **Title** | Asignación del jefe directo |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** asignar un jefe directo a cada colaborador, **para** definir las líneas de reporte y habilitar el ruteo de aprobaciones. |
+| **Acceptance Criteria** | **Escenario 1:** Asignación válida<br>**Given** dos colaboradores están activos en el sistema y son distintos<br>**When** se establece la línea de reporte<br>**Then** el perfil del colaborador queda referenciando a su jefe.<br><br>**Escenario 2:** Autojefatura<br>**Given** existe un colaborador con status activo en el sistema<br>**When** se intenta asignarlo como su propio jefe<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Ciclo en la jerarquía<br>**Given** un colaborador que ya figura como jefe directo o indirecto del designado<br>**When** se intenta establecer la relación inversa<br>**Then** la operación es rechazada<br>**And** se indica que generaría un ciclo. |
+
+| Story ID | US12 |
+| :---- | :---- |
+| **Title** | Consulta del organigrama general |
+| **User** | Personal de RRHH / Colaborador |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** usuario del sistema, **quiero** visualizar el organigrama completo de la organización, **para** entender su estructura jerárquica. |
+| **Acceptance Criteria** | **Escenario 1:** Construcción del árbol<br>**Given** existen colaboradores activos con sus líneas de reporte definidas<br>**When** se solicita el organigrama general<br>**Then** se retorna una estructura jerárquica que parte de los colaboradores sin jefe directo.<br><br>**Escenario 2:** Colaborador sin jefe asignado<br>**Given** un colaborador activo cuyo jefe fue cesado<br>**When** se construye el organigrama<br>**Then** el colaborador aparece bajo un nodo de pendiente de reasignación.<br><br>**Escenario 3:** Organización sin jerarquía definida<br>**Given** ningún colaborador tiene jefe directo asignado<br>**When** se solicita el organigrama<br>**Then** se retorna una estructura plana con todos los colaboradores en el primer nivel. |
+
+| Story ID | US13 |
+| :---- | :---- |
+| **Title** | Consulta del organigrama por área |
+| **User** | Personal de RRHH / Colaborador |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** usuario del sistema, **quiero** visualizar el organigrama de un área específica, **para** entender cómo se organiza esa unidad. |
+| **Acceptance Criteria** | **Escenario 1:** Rama del área<br>**Given** existe un área con colaboradores y jerarquía definida<br>**When** se solicita su organigrama<br>**Then** se retorna únicamente la rama correspondiente a esa área.<br><br>**Escenario 2:** Área sin colaboradores<br>**Given** existe un área sin colaboradores asignados<br>**When** se solicita su organigrama<br>**Then** se retorna una estructura vacía sin generar error. |
+
+| Story ID | US14 |
+| :---- | :---- |
+| **Title** | Actualización de datos del colaborador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** actualizar la información personal y de contacto de un colaborador, **para** mantener el registro al día. |
+| **Acceptance Criteria** | **Escenario 1:** Actualización exitosa<br>**Given** un colaborador existe y tiene todos sus datos válidos<br>**When** se procesa la actualización con la nueva información<br>**Then** los datos quedan modificados<br>**And** se registra la fecha de la modificación.<br><br>**Escenario 2:** Formato de dato inválido<br>**Given** se ingresa una fecha de nacimiento posterior a la fecha actual o un correo con formato incorrecto<br>**When** se validan los datos<br>**Then** la operación es rechazada<br>**And** se indican los errores de validación.<br><br>**Escenario 3:** Colaborador inexistente<br>**Given** se intenta registrar una actualización de datos con un identificador no registrado<br>**When** se intenta la actualización<br>**Then** la operación es rechazada. |
+
+| Story ID | US15 |
+| :---- | :---- |
+| **Title** | Cese de un colaborador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar el cese de un colaborador con su motivo, **para** que su estado refleje su situación real. |
+| **Acceptance Criteria** | **Escenario 1:** Cese exitoso<br>**Given** existe un colaborador activo sin subordinados asignados<br>**When** se registra el cese con motivo y fecha<br>**Then** el estado cambia a cesado<br>**And** se emite el evento que inhabilita su cuenta de acceso.<br><br>**Escenario 2:** Jefe con subordinados<br>**Given** un colaborador que figura como jefe directo de otros<br>**When** se intenta registrar su cese<br>**Then** la operación es rechazada<br>**And** se indica que debe reasignarse a sus subordinados.<br><br>**Escenario 3:** Colaborador ya cesado<br>**Given** un colaborador con estado cesado<br>**When** se intenta registrar nuevamente su cese<br>**Then** la operación es rechazada. |
+
+| Story ID | US16 |
+| :---- | :---- |
+| **Title** | Reincorporación de un colaborador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** reincorporar a un colaborador cesado, **para** gestionar su retorno a la organización. |
+| **Acceptance Criteria** | **Escenario 1:** Reincorporación exitosa<br>**Given** se tiene un colaborador con estado cesado<br>**When** se registra la reincorporación con su nueva asignación de área y posición<br>**Then** el estado cambia a activo<br>**And** se registra la fecha de reingreso.<br><br>**Escenario 2:** Estado no elegible<br>**Given** un colaborador tiene como estado activo o suspendido<br>**When** se intenta la reincorporación<br>**Then** la operación es rechazada. |
+
+| Story ID | US17 |
+| :---- | :---- |
+| **Title** | Carga de documentos del expediente |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** adjuntar documentos al expediente de un colaborador, **para** mantener su legajo digital completo. |
+| **Acceptance Criteria** | **Escenario 1:** Carga exitosa<br>**Given** un archivo válido con un tipo de documento del catálogo permitido<br>**When** se asocia al colaborador<br>**Then** el documento queda registrado y disponible para consulta.<br><br>**Escenario 2:** Tipo de documento no permitido<br>**Given** un tipo de documento fuera del catálogo<br>**When** se intenta la carga<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Archivo que excede el tamaño permitido<br>**Given** un archivo mayor al límite establecido<br>**When** se intenta la carga<br>**Then** la operación es rechazada<br>**And** se indica el límite vigente. |
+
+| Story ID | US18 |
+| :---- | :---- |
+| **Title** | Consulta del expediente documental |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** colaborador, **quiero** consultar y descargar los documentos de mi expediente, **para** disponer de mis contratos y constancias sin solicitarlos |
+| **Acceptance Criteria** | **Escenario 1:** Consulta propia<br>**Given** un colaborador autenticado con documentos registrados<br>**When** consulta su expediente<br>**Then** se retorna la lista de sus documentos con su tipo y fecha de carga.<br><br>**Escenario 2:** Expediente de terceros<br>**Given** un colaborador con rol estándar<br>**When** intenta consultar el expediente de otro colaborador<br>**Then** el sistema deniega la petición debido a que el usuario no cuenta con la autorización requerida. |
+
+| Story ID | US19 |
+| :---- | :---- |
+| **Title** | Consulta del perfil laboral propio |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** colaborador, **quiero** visualizar mi información personal, laboral y de jerarquía, **para** verificar que mis datos estén correctos. |
+| **Acceptance Criteria** | **Escenario 1:** Lectura exitosa<br>**Given** un colaborador autenticado<br>**When** solicita su perfil<br>**Then** se retornan sus datos personales, su área, su posición y el nombre de su jefe directo.<br><br>**Escenario 2:** Colaborador sin jefe asignado<br>**Given** un colaborador sin línea de reporte definida<br>**When** solicita su perfil<br>**Then** se retorna el perfil<br>**And** el campo de jefe directo se presenta como no asignado. |
+
+| Story ID | US20 |
+| :---- | :---- |
+| **Title** | Búsqueda y filtrado de colaboradores |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** personal de RRHH, **quiero** buscar colaboradores por distintos criterios, **para** localizar perfiles con rapidez. |
+| **Acceptance Criteria** | **Escenario 1:** Búsqueda por texto<br>**Given** un texto de búsqueda<br>**When** se aplica el filtro<br>**Then** se retornan los colaboradores cuyo nombre, apellido o documento coincidan con el filtro aplicado.<br><br>**Escenario 2:** Filtrado combinado<br>**Given** se selecciona un área y un estado laboral<br>**When** se aplica el filtro<br>**Then** se retornan únicamente los colaboradores que cumplen ambos criterios.<br><br>**Escenario 3:** Sin coincidencias<br>**Given** se ingresan criterios que ningún registro cumple<br>**When** se procesa la consulta<br>**Then** se retorna un conjunto vacío sin generar error. |
+
+| Story ID | US21 |
+| :---- | :---- |
+| **Title** | Procesamiento de marcaciones |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** personal de RRHH, **quiero** que el sistema convierta las marcaciones en registros de asistencia, **para** disponer de información interpretada sin cálculo manual. |
+| **Acceptance Criteria** | **Escenario 1:** Jornada completa<br>**Given** se registran una marcación de entrada y una de salida para un colaborador en una misma fecha<br>**When** el sistema procesa las marcaciones<br>**Then** se genera un registro con horas efectivas calculadas<br>**And** se clasifica como puntual o tardanza según el horario de la posición.<br><br>**Escenario 2:** Marcación de salida ausente<br>**Given** se registra una marcación de entrada sin su salida correspondiente<br>**When** el sistema procesa la fecha<br>**Then** el registro se clasifica como incompleto<br>**And** las horas efectivas quedan sin calcular.<br><br>**Escenario 3:** Ausencia total<br>**Given** es una fecha laborable sin marcaciones para un colaborador activo<br>**When** el sistema procesa la fecha<br>**Then** se genera un registro clasificado como inasistencia. |
+
+| Story ID | US22 |
+| :---- | :---- |
+| **Title** | Consulta del historial de asistencia propio |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** colaborador, **quiero** revisar mi historial de asistencia, **para** verificar mis marcaciones y detectar discrepancias |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con datos<br>**Given** un colaborador autenticado con registros en el período consultado<br>**When** solicita su historial<br>**Then** se retornan sus registros con fecha, hora de entrada, hora de salida y clasificación.<br><br>**Escenario 2:** Período sin registros<br>**Given** un período sin registros para el colaborador<br>**When** solicita su historial<br>**Then** se retorna un conjunto vacío.<br><br>**Escenario 3:** Historial de terceros<br>**Given** un colaborador con rol estándar<br>**When** intenta consultar el historial de otro colaborador<br>**Then** la petición es rechazada. |
+
+| Story ID | US23 |
+| :---- | :---- |
+| **Title** | Consulta de asistencia por colaborador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** personal de RRHH, **quiero** consultar la asistencia de un colaborador en un rango de fechas, **para** revisar casos específicos. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta exitosa<br>**Given** se ingresa al filtro un colaborador y un rango de fechas válido<br>**When** se procesa la consulta<br>**Then** se retornan sus registros del período con su clasificación.<br><br>**Escenario 2:** Rango de fechas inválido<br>**Given** se ingresa una fecha de inicio posterior a la fecha de fin<br>**When** se valida la consulta<br>**Then** la operación es rechazada. |
+
+| Story ID | US24 |
+| :---- | :---- |
+| **Title** | Reporte de asistencia por área |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** personal de RRHH, **quiero** consultar la asistencia agregada por área, **para** identificar dónde se concentran las tardanzas e inasistencias. |
+| **Acceptance Criteria** | **Escenario 1:** Reporte con datos<br>**Given** un área y un período con registros<br>**When** se genera el reporte<br>**Then** se retorna el total de puntualidad, tardanzas e inasistencias del área.<br><br>**Escenario 2:** Área sin registros<br>**Given** un área sin colaboradores con registros en el período<br>**When** se genera el reporte<br>**Then** se retornan totales en cero sin generar error. |
+
+| Story ID | US25 |
+| :---- | :---- |
+| **Title** | Reporte de horas trabajadas y sobretiempo |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** personal de RRHH, **quiero** consultar las horas trabajadas y el sobretiempo por colaborador y por área, **para** sustentar decisiones sobre carga de trabajo. |
+| **Acceptance Criteria** | **Escenario 1:** Cálculo por colaborador<br>**Given** un colaborador con registros completos en un período<br>**When** se genera el reporte<br>**Then** se retornan sus horas efectivas de trabajo y sus horas de sobretiempo acumuladas.<br><br>**Escenario 2:** Cálculo por área<br>**Given** un área con varios colaboradores<br>**When** se genera el reporte del período<br>**Then** se retorna el total de horas y de sobretiempo del área. |
+
+| Story ID | US26 |
+| :---- | :---- |
+| **Title** | Catálogo de tipos de solicitud |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** personal de RRHH, **quiero** definir los tipos de solicitud y los campos que cada uno exige, **para** adaptar el sistema a los trámites de la organización. |
+| **Acceptance Criteria** | **Escenario 1:** Creación exitosa<br>**Given** se tiene un nombre de tipo no registrado<br>**When** se crea el tipo con sus campos requeridos y su indicador de adjunto obligatorio<br>**Then** el tipo queda disponible para su uso.<br><br>**Escenario 2:** Tipo duplicado<br>**Given** un nombre de tipo ya registrado<br>**When** se intenta crearlo<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Tipo en uso<br>**Given** existe un tipo de solicitud con solicitudes asociadas<br>**When** se intenta eliminar<br>**Then** la operación es rechazada<br>**And** se ofrece desactivarlo en su lugar. |
+
+| Story ID | US27 |
+| :---- | :---- |
+| **Title** | Creación de una solicitud |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** colaborador, **quiero** enviar una solicitud seleccionando su tipo, **para** tramitar vacaciones, licencias o permisos sin recurrir a canales informales. |
+| **Acceptance Criteria** | **Escenario 1:** Creación exitosa<br>**Given** un tipo de solicitud es seleccionado y todos sus campos requeridos están completos<br>**When** se envía la solicitud<br>**Then** queda registrada en estado en proceso<br>**And** se asigna al aprobador correspondiente.<br><br>**Escenario 2:** Campos requeridos incompletos<br>**Given** un tipo de solicitud con campos obligatorios tiene algunos campos sin completar<br>**When** se intenta enviar<br>**Then** la operación es rechazada<br>**And** se detallan los campos faltantes.<br><br>**Escenario 3:** Adjunto obligatorio ausente<br>**Given** un tipo de solicitud exige documento de sustento<br>**When** se envía sin archivo adjunto<br>**Then** la operación es rechazada. |
+
+| Story ID | US28 |
+| :---- | :---- |
+| **Title** | Validación de saldo al solicitar vacaciones |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** personal de RRHH, **quiero** que las solicitudes que descuentan un saldo lo validen antes de registrarse, **para** impedir que se aprueben días que el colaborador no tiene. |
+| **Acceptance Criteria** | **Escenario 1:** Saldo suficiente<br>**Given** un colaborador tiene saldo de vacaciones disponible mayor o igual a los días solicitados<br>**When** se envía la solicitud<br>**Then** la solicitud queda registrada.<br><br>**Escenario 2:** Saldo insuficiente<br>**Given** un colaborador tiene saldo menor a los días solicitados<br>**When** se intenta enviar la solicitud<br>**Then** la operación es rechazada<br>**And** se informa el saldo disponible. |
+
+| Story ID | US29 |
+| :---- | :---- |
+| **Title** | Ruteo de la solicitud al aprobador |
+| **User** | Personal de RRHH |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** personal de RRHH, **quiero** que cada solicitud se dirija automáticamente a quien corresponda, **para** que ninguna quede sin responsable asignado. |
+| **Acceptance Criteria** | **Escenario 1:** Ruteo al jefe directo<br>**Given** un colaborador tiene un jefe directo asignado<br>**When** se crea su solicitud<br>**Then** la solicitud queda asignada a ese jefe.<br><br>**Escenario 2:** Colaborador sin jefe asignado<br>**Given** un colaborador no tiene línea de reporte definida<br>**When** se crea su solicitud<br>**Then** la solicitud queda asignada al área de Recursos Humanos. |
+
+| Story ID | US30 |
+| :---- | :---- |
+| **Title** | Seguimiento de solicitudes propias |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** colaborador, **quiero** consultar el estado de mis solicitudes, **para** saber en qué punto se encuentran sin preguntar a nadie. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con resultados<br>**Given** un colaborador tiene solicitudes registradas<br>**When** consulta su listado<br>**Then** se retornan sus solicitudes con tipo, fecha, estado y aprobador asignado.<br><br>**Escenario 2:** Filtrado por estado<br>**Given** se selecciona un estado de el filtro por estado<br>**When** se aplica el filtro<br>**Then** se retornan únicamente las solicitudes en ese estado.<br><br>**Escenario 3:** Sin solicitudes<br>**Given** un colaborador no tiene solicitudes registradas<br>**When** consulta su listado<br>**Then** se retorna un conjunto vacío. |
+
+| Story ID | US31 |
+| :---- | :---- |
+| **Title** | Cancelación de una solicitud propia |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** colaborador, **quiero** cancelar una solicitud que aún no ha sido resuelta, **para** corregir un envío equivocado. |
+| **Acceptance Criteria** | **Escenario 1:** Cancelación exitosa<br>**Given** el colaborador tiene una solicitud propia en estado en proceso<br>**When** se solicita su cancelación<br>**Then** la solicitud cambia su estado a cancelada<br>**And** el movimiento queda registrado en su historial.<br><br>**Escenario 2:** Solicitud ya resuelta<br>**Given** una solicitud es aprobada o rechazada<br>**When** se intenta cancelar<br>**Then** la operación es rechazada. |
+
+| Story ID | US32 |
+| :---- | :---- |
+| **Title** | Bandeja de solicitudes por atender |
+| **User** | Aprobador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** encargado de aprobar determinadas solicitudes, **quiero** consultar las solicitudes que me corresponde resolver, **para** priorizar mi atención. |
+| **Acceptance Criteria** | **Escenario 1:** Listado con filtros<br>**Given** un aprobador tiene solicitudes asignadas<br>**When** consulta su bandeja filtrando por tipo o por antigüedad<br>**Then** se retornan las solicitudes pendientes que cumplen los criterios.<br><br>**Escenario 2:** Bandeja vacía<br>**Given** un aprobador sin solicitudes pendientes<br>**When** consulta su bandeja<br>**Then** se retorna un conjunto vacío. |
+
+| Story ID | US33 |
+| :---- | :---- |
+| **Title** | Aprobación de una solicitud |
+| **User** | Aprobador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** encargado de aprobar determinadas solicitudes, **quiero** aprobar una solicitud, **para** autorizar el trámite del colaborador. |
+| **Acceptance Criteria** | **Escenario 1:** Aprobación exitosa<br>**Given** una solicitud asignada al aprobador en estado en proceso<br>**When** se registra la aprobación<br>**Then** el estado cambia a aprobado<br>**And** el movimiento queda registrado con su autor y su fecha.<br><br>**Escenario 2:** Solicitud ya resuelta<br>**Given** una solicitud ya está en estado aprobado o rechazado<br>**When** se intenta aprobar<br>**Then** la operación es rechazada.<br><br>**Escenario 3:** Aprobador no autorizado<br>**Given** una solicitud es asignada a otro aprobador<br>**When** se intenta resolver<br>**Then** la petición es rechazada por falta de autorización. |
+
+| Story ID | US34 |
+| :---- | :---- |
+| **Title** | Rechazo con motivo obligatorio |
+| **User** | Aprobador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** encargado de aprobar determinadas solicitudes, **quiero** rechazar una solicitud indicando el motivo, **para** que el colaborador entienda la decisión. |
+| **Acceptance Criteria** | **Escenario 1:** Rechazo exitoso<br>**Given** una solicitud tiene como estado en proceso y un motivo de rechazo<br>**When** se registra el rechazo<br>**Then** el estado cambia a rechazado<br>**And** el motivo queda almacenado y visible para el solicitante.<br><br>**Escenario 2:** Rechazo sin motivo<br>**Given** una solicitud en estado en proceso<br>**When** se intenta rechazar sin indicar motivo<br>**Then** la operación es rechazada<br>**And** se indica que el motivo es obligatorio. |
+
+| Story ID | US35 |
+| :---- | :---- |
+| **Title** | Devolución a revisión |
+| **User** | Aprobador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** aprobador, **quiero** devolver una solicitud al colaborador pidiéndole información adicional, **para** poder resolverla con sustento suficiente. |
+| **Acceptance Criteria** | **Escenario 1:** Devolución exitosa<br>**Given** una solicitud se encuentra en estado en proceso<br>**And** tiene un comentario del aprobador<br>**When** se registra la devolución<br>**Then** el estado cambia a en revisión<br>**And** el comentario queda visible para el solicitante.<br><br>**Escenario 2:** Reenvío por el colaborador<br>**Given** una solicitud tiene el estado en revisión<br>**When** el solicitante adjunta la información pedida y reenvía<br>**Then** el estado vuelve a en proceso<br>**And** la solicitud regresa a la bandeja del aprobador. |
+
+| Story ID | US36 |
+| :---- | :---- |
+| **Title** | Notificación de cambio de estado |
+| **User** | Colaborador |
+| **Priority** | High |
+| **Epic** | EP04 |
+| **Description** | **Como** colaborador, **quiero** recibir un aviso cuando cambia el estado de mi solicitud, **para** enterarme sin tener que revisar la plataforma. |
+| **Acceptance Criteria** | **Escenario 1:** Notificación al resolver<br>**Given** una solicitud que cambia su estado a aprobado, rechazado o en revisión<br>**When** se registra el cambio de estado<br>**Then** el sistema emite una notificación dirigida al solicitante con el nuevo estado.<br><br>**Escenario 2:** Notificación al aprobador<br>**Given** una solicitud es enviada por un colaborador<br>**When** se asigna a su aprobador<br>**Then** el sistema emite una notificación dirigida a ese aprobador. |
+
+| Story ID | US37 |
+| :---- | :---- |
+| **Title** | Catálogo de beneficios |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** personal de RRHH, **quiero** definir los tipos de beneficio que otorga la organización, **para** administrarlos de forma uniforme. |
+| **Acceptance Criteria** | **Escenario 1:** Creación exitosa<br>**Given** un nombre de beneficio no registrado<br>**When** se crea el tipo indicando si maneja saldo y en qué unidad se mide<br>**Then** el tipo queda disponible para asignación.<br><br>**Escenario 2:** Nombre duplicado<br>**Given** un nombre de beneficio ya registrado<br>**When** se intenta crear<br>**Then** la operación es rechazada. |
+
+| Story ID | US38 |
+| :---- | :---- |
+| **Title** | Asignación de beneficios |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** personal de RRHH, **quiero** asignar beneficios a un colaborador o a un área completa, **para** registrar a quién le corresponde cada incentivo. |
+| **Acceptance Criteria** | **Escenario 1:** Asignación individual<br>**Given** hay un colaborador activo y un tipo de beneficio vigente<br>**When** se registra la asignación con su período<br>**Then** el beneficio queda asociado al colaborador.<br><br>**Escenario 2:** Asignación por área<br>**Given** un área tiene colaboradores activos<br>**When** se registra la asignación del beneficio al área<br>**Then** el beneficio queda asociado a todos sus colaboradores activos.<br><br>**Escenario 3:** Asignación duplicada en el mismo período<br>**Given** un colaborador ya tiene ese beneficio asignado en el período<br>**When** se intenta asignar nuevamente<br>**Then** la operación es rechazada. |
+
+| Story ID | US39 |
+| :---- | :---- |
+| **Title** | Registro de entrega de beneficio |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar la entrega efectiva de un beneficio, **para** llevar control de lo que ya se otorgó. |
+| **Acceptance Criteria** | **Escenario 1:** Registro exitoso<br>**Given** hay un beneficio asignado y aún no entregado<br>**When** se registra la entrega con su fecha<br>**Then** el beneficio queda marcado como entregado.<br><br>**Escenario 2:** Beneficio ya entregado<br>**Given** un beneficio con entrega registrada<br>**When** se intenta registrar nuevamente<br>**Then** la operación es rechazada. |
+
+| Story ID | US40 |
+| :---- | :---- |
+| **Title** | Consulta de beneficios propios |
+| **User** | Colaborador |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** colaborador, **quiero** ver en un solo lugar los beneficios que me corresponden, **para** saber a qué tengo derecho sin preguntar. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con beneficios<br>**Given** un colaborador tiene beneficios asignados<br>**When** consulta su panel<br>**Then** se retornan sus beneficios vigentes y los ya entregados, con su período.<br><br>**Escenario 2:** Sin beneficios asignados<br>**Given** un colaborador aparece sin beneficios registrados<br>**When** consulta su panel<br>**Then** se retorna un conjunto vacío. |
+
+| Story ID | US41 |
+| :---- | :---- |
+| **Title** | Cálculo del saldo de vacaciones |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** personal de RRHH, **quiero** mantener actualizado el saldo de vacaciones de cada colaborador, **para** eliminar el cálculo manual y las discrepancias. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta del saldo<br>**Given** un colaborador activo tiene antigüedad registrada<br>**When** se consulta su saldo de vacaciones<br>**Then** se retornan sus días acumulados, sus días usados y sus días disponibles.<br><br>**Escenario 2:** Descuento por aprobación<br>**Given** una solicitud de vacaciones cambia a estado aprobado<br>**When** se procesa el cambio<br>**Then** los días de la solicitud se suman a los días usados del colaborador.<br><br>**Escenario 3:** Reversión por cancelación<br>**Given** una solicitud de vacaciones aprobada que posteriormente se anula<br>**When** se procesa la anulación<br>**Then** los días se descuentan de los días usados. |
+
+| Story ID | US42 |
+| :---- | :---- |
+| **Title** | Ajuste manual del saldo de vacaciones |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** personal de RRHH, **quiero** ajustar el saldo de vacaciones de un colaborador registrando el motivo, **para** corregir casos que el cálculo automático no contempla |
+| **Acceptance Criteria** | **Escenario 1:** Ajuste exitoso<br>**Given** un colaborador con saldo registrado de vacaciones y un motivo de ajuste<br>**When** se registra el ajuste<br>**Then** el saldo se modifica<br>**And** el movimiento queda en el historial con su autor y su motivo de cambio.<br><br>**Escenario 2:** Ajuste sin motivo<br>**Given** un ajuste sin motivo indicado<br>**When** se intenta registrar<br>**Then** la operación es rechazada. |
+
+| Story ID | US43 |
+| :---- | :---- |
+| **Title** | Carga de boletas de pago |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP06 |
+| **Description** | **Como** personal de RRHH, **quiero** cargar las boletas de pago de un período, **para** ponerlas a disposición de los colaboradores. |
+| **Acceptance Criteria** | **Escenario 1:** Carga y revisión exitosa<br>**Given** el área de planillas ha enviado un archivo válido de boletas para un período<br>**When** el personal de RRHH procesa la carga y validación<br>**Then** las boletas quedan registradas en estado "En revisión" y listas para ser publicadas.<br><br>**Escenario 2:** Publicación de boletas a los colaboradores<br>**Given** un lote de boletas previamente cargadas y en estado "En revisión"<br>**When** el personal de RRHH autoriza la publicación masiva o individual<br>**Then** la vista del sistema se actualiza y las boletas quedan disponibles para que los colaboradores puedan consultarlas y descargarlas.<br><br>**Escenario 3:** Formato de archivo no permitido<br>**Given** un archivo enviado por planillas con un formato distinto al permitido<br>**When** el personal de RRHH intenta procesarlo en el sistema<br>**Then** la operación es rechazada y se muestra un mensaje de error con el formato correcto.<br><br>**Escenario 4:** Boleta duplicada<br>**Given** ya existe una boleta registrada para un colaborador en el mismo período<br>**When** se intenta cargar una nueva versión para el mismo período<br>**Then** la operación advierte la duplicidad, es rechazada temporalmente<br>**And** el sistema ofrece la opción de reemplazar la existente o cancelar la acción. |
+
+| Story ID | US44 |
+| :---- | :---- |
+| **Title** | Consulta de boletas propias |
+| **User** | Colaborador |
+| **Priority** | Medium |
+| **Epic** | EP06 |
+| **Description** | **Como** colaborador, **quiero** consultar y descargar mis boletas de pago filtrando por período, **para** disponer de mis comprobantes cuando los necesito. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con resultados<br>**Given** un colaborador tiene boletas registradas<br>**When** consulta filtrando por período<br>**Then** se retornan sus boletas con su fecha de emisión.<br><br>**Escenario 2:** Descarga de boleta propia<br>**Given** una boleta perteneciente al colaborador autenticado<br>**When** solicita su descarga<br>**Then** el sistema entrega el archivo. |
+
+| Story ID | US45 |
+| :---- | :---- |
+| **Title** | Control del estado de pago |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP06 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar y actualizar el estado de pago de cada boleta, **para** saber qué depósitos siguen pendientes. |
+| **Acceptance Criteria** | **Escenario 1:** Actualización exitosa<br>**Given** una boleta tiene estado pendiente<br>**When** se registra el pago con su fecha<br>**Then** el estado cambia a pagado.<br><br>**Escenario 2:** Estado observado<br>**Given** una boleta tiene una incidencia en el depósito<br>**When** se registra el estado observado con su motivo<br>**Then** el motivo queda almacenado y visible para Recursos Humanos. |
+
+| Story ID | US46 |
+| :---- | :---- |
+| **Title** | Reporte de pagos por área y período |
+| **User** | Personal de RRHH |
+| **Priority** | Medium |
+| **Epic** | EP06 |
+| **Description** | **Como** personal de RRHH, **quiero** consultar el estado de los pagos filtrando por área y período, **para** identificar rápidamente los depósitos pendientes. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con filtros<br>**Given** un área y un período son seleccionados<br>**When** se genera el reporte<br>**Then** se retornan las boletas del período con su estado de pago.<br><br>**Escenario 2:** Filtrado por estado pendiente<br>**Given** el estado pendiente es seleccionado como filtro<br>**When** se genera el reporte<br>**Then** se retornan únicamente las boletas cuyo depósito no se ha registrado. |
+
+| Story ID | US47 |
+| :---- | :---- |
+| **Title** | Registro de espacios de trabajo |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar los espacios y oficinas de la organización, **para** asociar sus mediciones ambientales. |
+| **Acceptance Criteria** | **Escenario 1:** Registro exitoso<br>**Given** se ingresa un nombre de espacio no registrado y su ubicación<br>**When** se crea el espacio<br>**Then** queda disponible para registrar dispositivos para la medición de su ambiente.<br><br>**Escenario 2:** Nombre duplicado<br>**Given** un nombre de espacio ya está registrado<br>**When** se intenta crear<br>**Then** la operación es rechazada. |
+
+| Story ID | US48 |
+| :---- | :---- |
+| **Title** | Registro y asociación de dispositivos ambientales |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** personal de RRHH, **quiero** registrar y asociar dispositivos de medición a un espacio de trabajo, **para** comenzar a capturar los datos ambientales de la oficina. |
+| **Acceptance Criteria** | **Escenario 1:** Asociación exitosa de dispositivos<br>**Given** un espacio de trabajo previamente registrado y un dispositivo con código/identificador válido y sin asignar<br>**When** se vinculan ambos en el sistema<br>**Then** el dispositivo queda asociado al espacio y habilitado para enviar lecturas.<br><br>**Escenario 2:** Dispositivo ya registrado o en uso<br>**Given** un dispositivo que ya se encuentra vinculado a otro espacio de la organización<br>**When** se intenta registrar o asignar nuevamente<br>**Then** la operación es rechazada y se muestra un mensaje de advertencia.<br><br>**Escenario 3:** Dispositivo inexistente o inválido<br>**Given** un código de dispositivo que no existe en el inventario del sistema<br>**When** se intenta asociar al espacio<br>**Then** la operación es rechazada. |
+
+| Story ID | US49 |
+| :---- | :---- |
+| **Title** | Definición de umbrales por métrica |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** personal de RRHH, **quiero** definir los rangos de cada métrica ambiental, **para** que el sistema clasifique las lecturas según criterios propios de la organización. |
+| **Acceptance Criteria** | **Escenario 1:** Definición exitosa<br>**Given** que el usuario selecciona una métrica ambiental y define rangos numéricos continuos sin vacíos ni superposiciones para cada nivel de indicador (por ejemplo: óptimo, moderado, crítico)<br>**When** se confirma el registro de los umbrales<br>**Then** el sistema almacena la configuración y quedan vigentes de manera inmediata para clasificar las lecturas entrantes.<br><br>**Escenario 2:** Rangos solapados o superpuestos<br>**Given** que al definir los niveles de una métrica se ingresan valores numéricos que se superponen entre dos categorías (por ejemplo, Nivel A de 0 a 20 y Nivel B de 15 a 30\)<br>**When** el sistema ejecuta la validación de los rangos<br>**Then** la operación es rechazada y se muestra una alerta indicando el conflicto de solapamiento.<br><br>**Escenario 3:** Vacíos o discontinuidad entre rangos<br>**Given** que al establecer los umbrales de una métrica quedan espacios numéricos sin cubrir entre un nivel y otro<br>**When** se intenta guardar la configuración<br>**Then** la operación es rechazada y se solicita completar los intervalos faltantes. |
+
+| Story ID | US50 |
+| :---- | :---- |
+| **Title** | Consulta de indicadores ambientales |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** personal de RRHH, **quiero** consultar el estado ambiental de un espacio, **para** detectar condiciones que afecten a los colaboradores. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta con lecturas vigentes<br>**Given** un espacio con lecturas recientes de temperatura, iluminación y calidad del aire<br>**When** se consulta su estado<br>**Then** se retorna un indicador de salud por cada métrica según los umbrales definidos.<br><br>**Escenario 2:** Espacio sin lecturas recientes<br>**Given** un espacio cuya última lectura excede el período de vigencia<br>**When** se consulta su estado<br>**Then** se informa que la información no está actualizada<br>**And** no se emite un indicador.<br><br>**Escenario 3:** Condición crítica<br>**Given** una lectura que cae en el rango de peligro<br>**When** se consulta el estado del espacio<br>**Then** el indicador correspondiente se retorna en nivel de peligro. |
+
+| Story ID | US51 |
+| :---- | :---- |
+| **Title** | Histórico y tendencia por métrica |
+| **User** | Personal de RRHH |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** personal de RRHH, **quiero** revisar la evolución de una métrica ambiental en el tiempo, **para** distinguir un episodio puntual de un problema persistente. |
+| **Acceptance Criteria** | **Escenario 1:** Consulta exitosa de datos históricos<br>**Given** que se selecciona un espacio de trabajo específico, una métrica ambiental y un rango de fechas que contiene registros almacenados<br>**When** el usuario solicita el reporte histórico<br>**Then** el sistema procesa la consulta y retorna la serie cronológica completa de lecturas correspondientes a dicho período.<br><br>**Escenario 2:** Período sin lecturas registradas<br>**Given** un espacio y una métrica donde el rango de fechas consultado no posee datos guardados<br>**When** se solicita la consulta histórica<br>**Then** el sistema retorna una serie vacía acompañada de un aviso indicando la ausencia de registros en el intervalo seleccionado.<br><br>**Escenario 3:** Rango de fechas inválido o futuras<br>**Given** que se ingresa un rango de fechas con una fecha de inicio posterior a la fecha final o que abarca un período futuro<br>**When** se intenta consultar el histórico<br>**Then** la operación es rechazada y se muestra un mensaje de error solicitando corregir los límites del intervalo. |
+
+| Story ID | US52 |
+| :---- | :---- |
+| **Title** | Sección principal con propuesta de valor |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante, **quiero** entender en pocos segundos qué resuelve Flowboard, **para** decidir si me interesa seguir leyendo. |
+| **Acceptance Criteria** | **Escenario 1:** Carga de la sección principal<br>**Given** un visitante que accede al sitio<br>**When** se carga la página<br>**Then** se presenta el nombre del producto, su propuesta de valor y una acción principal visible sin desplazamiento.<br><br>**Escenario 2:** Visualización en dispositivo móvil<br>**Given** un visitante que accede desde un viewport menor a 600 píxeles<br>**When** se carga la página<br>**Then** el contenido se presenta en una sola columna sin desplazamiento horizontal. |
+
+| Story ID | US53 |
+| :---- | :---- |
+| **Title** | Llamados a la acción por segmento |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante, **quiero** acceder directamente a la vista que corresponde a mi perfil, **para** no perder tiempo navegando. |
+| **Acceptance Criteria** | **Escenario 1:** Acceso del segmento de Recursos Humanos<br>**Given** un visitante en la sección dirigida a Recursos Humanos<br>**When** activa su llamado a la acción<br>**Then** el sistema lo dirige a la vista de acceso del panel de administración.<br><br>**Escenario 2:** Acceso del segmento de colaboradores<br>**Given** un visitante en la sección dirigida a colaboradores<br>**When** activa su llamado a la acción<br>**Then** el sistema lo dirige a la vista de acceso del portal de autogestión. |
+
+| Story ID | US54 |
+| :---- | :---- |
+| **Title** | Presentación de funcionalidades |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante, **quiero** conocer qué hace la plataforma, **para** evaluar si cubre lo que mi organización necesita. |
+| **Acceptance Criteria** | **Escenario 1:** Listado de funcionalidades<br>**Given** un visitante que recorre el sitio<br>**When** llega a la sección de funcionalidades<br>**Then** se presentan los módulos de la plataforma con una descripción breve de cada uno.<br><br>**Escenario 2:** Coherencia con el alcance<br>**Given** la sección de funcionalidades<br>**When** se revisa su contenido<br>**Then** ninguna funcionalidad descrita excede el alcance declarado del producto. |
+
+| Story ID | US55 |
+| :---- | :---- |
+| **Title** | Cambio de idioma del sitio |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante, **quiero** leer el sitio en mi idioma, **para** comprender la propuesta sin barreras. |
+| **Acceptance Criteria** | **Escenario 1:** Cambio a español<br>**Given** el sitio presentado en inglés<br>**When** el visitante selecciona el español latinoamericano<br>**Then** todo el contenido textual se presenta en ese idioma.<br><br>**Escenario 2:** Persistencia de la preferencia<br>**Given** un visitante que seleccionó un idioma<br>**When** navega a otra página del sitio<br>**Then** el idioma seleccionado se conserva |
+
+| Story ID | US56 |
+| :---- | :---- |
+| **Title** | Acceso a términos y política de privacidad |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante, **quiero** consultar los términos del servicio y la política de privacidad, **para** conocer cómo se tratarán los datos de mi organización. |
+| **Acceptance Criteria** | **Escenario 1:** Acceso desde el pie de página<br>**Given** un visitante en cualquier página del sitio<br>**When** activa el enlace correspondiente en el pie de página<br>**Then** se presenta el documento solicitado.<br><br>**Escenario 2:** Contenido del tratamiento de datos<br>**Given** la política de privacidad<br>**When** se consulta su contenido<br>**Then** incluye la referencia al marco legal de protección de datos personales aplicable. |
+
+| Story ID | US57 |
+| :---- | :---- |
+| **Title** | Navegación accesible del sitio |
+| **User** | Visitante |
+| **Priority** | High |
+| **Epic** | EP08 |
+| **Description** | **Como** visitante que usa lector de pantalla o navega con teclado, **quiero** recorrer el sitio sin obstáculos, **para** acceder a la misma información que el resto. |
+| **Acceptance Criteria** | **Escenario 1:** Navegación por teclado<br>**Given** un visitante que navega usando el teclado<br>**When** recorre los elementos interactivos<br>**Then** cada uno recibe un foco visible en un orden lógico.<br><br>**Escenario 2:** Estructura semántica<br>**Given** el sitio cargado<br>**When** se inspecciona su estructura<br>**Then** las regiones principales están identificadas con atributos ARIA<br>**And** las imágenes informativas cuentan con texto alternativo. |
+
+| Story ID | TS01 |
+| :---- | :---- |
+| **Title** | Documentación del API con OpenAPI |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** que el API exponga su documentación bajo OpenAPI, **para** que el equipo de frontend conozca los contratos sin consultar el código. |
+| **Acceptance Criteria** | **Escenario 1:** Documentación disponible<br>**Given** el API está en ejecución<br>**When** se solicita el recurso de documentación<br>**Then** la respuesta retorna la especificación OpenAPI con todos los endpoints publicados.<br><br>**Escenario 2:** Contrato de un endpoint<br>**Given** la especificación publicada<br>**When** se consulta un endpoint específico<br>**Then** se describen sus parámetros, su cuerpo de petición, sus códigos de respuesta y sus esquemas. |
+
+| Story ID | TS02 |
+| :---- | :---- |
+| **Title** | Autenticación y autorización del API |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** proteger los endpoints mediante token, **para** impedir el acceso no autorizado a los recursos. |
+| **Acceptance Criteria** | **Escenario 1:** Petición autenticada<br>**Given** una petición con un token válido en la cabecera de autorización<br>**When** se invoca un endpoint protegido<br>**Then** la respuesta retorna el código 200 con el recurso solicitado.<br><br>**Escenario 2:** Petición sin token<br>**Given** una petición sin cabecera de autorización<br>**When** se invoca un endpoint protegido<br>**Then** la respuesta retorna el código 401.<br><br>**Escenario 3:** Rol sin privilegios<br>**Given** una petición con token de rol colaborador<br>**When** se invoca un endpoint restringido a Recursos Humanos<br>**Then** la respuesta retorna el código 403. |
+
+| Story ID | TS03 |
+| :---- | :---- |
+| **Title** | Respuesta de error estandarizada |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** que todos los errores del API tengan la misma estructura, **para** manejarlos de forma uniforme desde el frontend. |
+| **Acceptance Criteria** | **Escenario 1:** Error de validación<br>**Given** una petición con datos que no cumplen las reglas de validación<br>**When** el API la procesa<br>**Then** la respuesta retorna el código 400 con un cuerpo que incluye marca de tiempo, código, mensaje y la lista de campos con error.<br><br>**Escenario 2:** Recurso inexistente<br>**Given** una petición sobre un identificador no registrado<br>**When** el API la procesa<br>**Then** la respuesta retorna el código 404 con la misma estructura de error. |
+
+| Story ID | TS04 |
+| :---- | :---- |
+| **Title** | Paginación, filtrado y ordenamiento |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** que los endpoints de listado admitan paginación, filtros y ordenamiento, **para** evitar respuestas de gran volumen y sostener el rendimiento. |
+| **Acceptance Criteria** | **Escenario 1:** Paginación<br>**Given** una petición de listado con parámetros de página y tamaño<br>**When** el API la procesa<br>**Then** la respuesta retorna el subconjunto solicitado junto con el total de elementos y de páginas.<br><br>**Escenario 2:** Parámetro inválido<br>**Given** una petición con un tamaño de página negativo<br>**When** el API la valida<br>**Then** la respuesta retorna el código 400.<br><br>**Escenario 3:** Ordenamiento<br>**Given** una petición que indica un campo de ordenamiento y su dirección<br>**When** el API la procesa<br>**Then** los elementos se retornan en el orden solicitado. |
+
+| Story ID | TS05 |
+| :---- | :---- |
+| **Title** | Internacionalización de los mensajes del API |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** que los mensajes del API respeten el idioma solicitado, **para** que la interfaz los presente en el idioma del usuario. |
+| **Acceptance Criteria** | **Escenario 1:** Idioma inglés<br>**Given** una petición con la cabecera de idioma en en_US<br>**When** el API retorna un mensaje de error<br>**Then** el mensaje se entrega en inglés.<br><br>**Escenario 2:** Idioma español<br>**Given** una petición con la cabecera de idioma en es_419<br>**When** el API retorna un mensaje de error<br>**Then** el mensaje se entrega en español.<br><br>**Escenario 3:** Idioma no soportado<br>**Given** una petición con un idioma no contemplado<br>**When** el API retorna un mensaje<br>**Then** se entrega en el idioma por defecto del sistema. |
+
+| Story ID | TS06 |
+| :---- | :---- |
+| **Title** | Despliegue de los productos digitales |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** desplegar el Landing Page, la Web Application y el API en un entorno accesible, **para** que la solución pueda evaluarse en operación. |
+| **Acceptance Criteria** | **Escenario 1:** Landing Page accesible<br>**Given** el despliegue completado<br>**When** se accede a la dirección pública del sitio<br>**Then** el Landing Page se presenta correctamente.<br><br>**Escenario 2:** Comunicación entre la aplicación y el API<br>**Given** la Web Application desplegada<br>**When** ejecuta una petición al API<br>**Then** la respuesta se recibe sin errores de origen cruzado.<br><br>**Escenario 3:** Persistencia de datos<br>**Given** el API desplegado<br>**When** se registra información y se consulta posteriormente<br>**Then** los datos persisten entre reinicios del servicio. |
+
+| Story ID | SP01 |
+| :---- | :---- |
+| **Title** | Investigar el formato de las marcaciones de los relojes de asistencia |
+| **User** | Developer |
+| **Priority** | High |
+| **Epic** | EP03 |
+| **Description** | **Como** Developer, **quiero** investigar en qué formato llegan las marcaciones de los relojes de asistencia más usados, **para** definir cómo el sistema las convierte en registros de asistencia. |
+| **Acceptance Criteria** | **Escenario 1:** Formatos identificados<br>**Given** el equipo revisa la documentación de al menos dos marcas de relojes de asistencia<br>**When** se termina la investigación<br>**Then** queda documentado el formato de exportación de cada una<br>**And** se indica cuál se va a soportar primero.<br><br>**Escenario 2:** Prueba de lectura<br>**Given** se tiene un archivo de marcaciones de ejemplo<br>**When** se ejecuta un prototipo de lectura<br>**Then** el prototipo obtiene el colaborador, la fecha y la hora de cada marcación<br>**And** los resultados quedan registrados en el repositorio. |
+
+| Story ID | SP02 |
+| :---- | :---- |
+| **Title** | Investigar el envío de mediciones desde dispositivos ambientales |
+| **User** | Developer |
+| **Priority** | Low |
+| **Epic** | EP07 |
+| **Description** | **Como** Developer, **quiero** investigar cómo los dispositivos de medición ambiental envían sus datos al API, **para** elegir la forma de recibirlos antes de implementar los indicadores. |
+| **Acceptance Criteria** | **Escenario 1:** Comparación de opciones<br>**Given** el equipo evalua el envío por HTTP y por MQTT<br>**When** se termina la investigación<br>**Then** queda documentada una comparación de ambas opciones<br>**And** se indica cuál se va a usar y por qué.<br><br>**Escenario 2:** Prototipo de recepción<br>**Given** se tiene un dispositivo simulado que genera mediciones<br>**When** envía una medición al endpoint de prueba<br>**Then** el API la recibe y la almacena asociada a un espacio de trabajo. |
+
+| Story ID | SP03 |
+| :---- | :---- |
+| **Title** | Evaluar el almacenamiento de documentos y boletas de pago |
+| **User** | Developer |
+| **Priority** | High |
+| **Epic** | EP02 |
+| **Description** | **Como** Developer, **quiero** evaluar dónde guardar los documentos del expediente y las boletas de pago, **para** asegurar que los archivos se almacenan de forma segura y sin afectar el rendimiento del API. |
+| **Acceptance Criteria** | **Escenario 1:** Alternativas evaluadas<br>**Given** el equipo comparó el almacenamiento en base de datos, en el servidor y en un servicio en la nube<br>**When** se termina la investigación<br>**Then** queda documentada la alternativa elegida con sus ventajas y limitaciones.<br><br>**Escenario 2:** Prueba de carga y descarga<br>**Given** se tiene un prototipo con la alternativa elegida<br>**When** se sube y se descarga un archivo PDF<br>**Then** el archivo se recupera sin alteraciones<br>**And** solo un usuario autorizado puede descargarlo. |
+
+| Story ID | SP04 |
+| :---- | :---- |
+| **Title** | Analizar las reglas de cálculo del saldo de vacaciones |
+| **User** | Developer |
+| **Priority** | Medium |
+| **Epic** | EP05 |
+| **Description** | **Como** Developer, **quiero** analizar las reglas legales para calcular las vacaciones en Perú, **para** implementar el cálculo del saldo sin errores. |
+| **Acceptance Criteria** | **Escenario 1:** Reglas documentadas<br>**Given** el equipo revisó la normativa laboral peruana sobre vacaciones<br>**When** se termina el análisis<br>**Then** quedan documentadas las reglas de acumulación y descuento de días.<br><br>**Escenario 2:** Casos de prueba definidos<br>**Given** las reglas ya están documentadas<br>**When** se preparan los casos de prueba<br>**Then** existen al menos tres casos con su resultado esperado (ingreso reciente, año completo y vacaciones ya gozadas). |
+
+| Story ID | SP05 |
+| :---- | :---- |
+| **Title** | Evaluar plataformas para el despliegue de los productos digitales |
+| **User** | Developer |
+| **Priority** | High |
+| **Epic** | EP09 |
+| **Description** | **Como** Developer, **quiero** evaluar plataformas gratuitas o de bajo costo para desplegar el Landing Page, la Web Application y el API, **para** elegir la opción que se ajuste al proyecto. |
+| **Acceptance Criteria** | **Escenario 1:** Comparación de plataformas<br>**Given** el equipo revisó al menos tres plataformas de despliegue<br>**When** se termina la investigación<br>**Then** queda documentada una comparación de costo, límites y facilidad de uso<br>**And** se indica la plataforma elegida.<br><br>**Escenario 2:** Despliegue de prueba<br>**Given** se tiene una versión mínima del API<br>**When** se despliega en la plataforma elegida<br>**Then** el endpoint de prueba responde desde una URL pública. |
+
+
 ## 2.6. Tactical-Level Domain-Driven Design
 
 ### 2.6.1. Bounded Context: IAM
