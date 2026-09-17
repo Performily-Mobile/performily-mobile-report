@@ -157,7 +157,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     - [2.3.2. User Task Matrix](#232-user-task-matrix)
     - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
     - [2.3.4. Empathy Mapping](#234-empathy-mapping)
-  - [2.4. Big Picture Event Storming](#24-big-picture-event-storming)
+    - [2.3.5. Big Picture Event Storming](#235-big-picture-event-storming)
     - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
   - [2.4. Requirements specification](#24-requirements-specification)
     - [2.4.1. User Stories](#241-user-stories)
@@ -825,7 +825,18 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 - Si tuvieras que definir en una sola frase lo que más urge cambiar en la forma en que se gestiona la información laboral en tu empresa, ¿cuál sería?
 - ¿Hay algún punto relevante sobre tu experiencia en el trabajo que no hayamos tocado y te gustaría agregar?
 
+### 2.3.5. Big Picture Event Storming
 
+**![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
+
+**![Figura 10. 2.4. Big Picture Event Storming](assets/figura-10.png)**
+
+**![Figura 11. 2.4. Big Picture Event Storming](assets/figura-11.png)**
+
+**![Figura 12. 2.4. Big Picture Event Storming](assets/figura-12.png)**
+
+**![Figura 13. 2.4. Big Picture Event Storming](assets/figura-13.png)**
+Enlace de la figura: https://miro.com/app/board/uXjVHpKyn4g=/?share_link_id=676576188275
 
 ### 2.3.6. Ubiquitous Language
 
