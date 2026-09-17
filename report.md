@@ -894,6 +894,73 @@ Duración completa de la entrevista: 4 minutos 41 segundos
 Jimena Vasquez tiene 22 años, vive en el distrito de Chorrillos, es soltera, habita con su familia y no posee personas a su cargo. Es bachiller en Psicología con especialización en el área organizacional y de recursos humanos, y labora desde hace cuatro meses como asistente de RR. HH. en Manpower, una multinacional de gestión del talento y tercerización de servicios (RPO) con una amplia nómina de colaboradores distribuidos en sectores como retail y alimentos. Describe la relación con el personal como cercana y orientada al bienestar y la salud mental a través del área de People. En su rutina disfruta el contacto directo con postulantes durante las entrevistas y la exposición de ofertas de empleo, pero desearía automatizar el registro manual y repetitivo de información y la mensajería masiva por correo y WhatsApp. Ante imprevistos opera de forma autónoma buscando soluciones antes de escalar con su equipo o coordinadora, gestionando sus procesos con dinamismo bajo una estructura organizada en equipos como "multicuentas".
 En el ámbito tecnológico e infraestructura, Ximena trabaja exclusivamente desde una laptop corporativa con restricciones de seguridad que le impiden acceder a bases de datos desde su celular (Android), aunque desearía contar con mayor movilidad para consultas urgentes. Su entorno digital diario incluye Google Chrome, Microsoft Teams para reuniones internas, Google Meet para entrevistas, Pandap, Google Forms, correo institucional y WhatsApp, además de un intranet corporativo estructurado donde consulta asignaciones, capacitaciones y el organigrama. La gestión de legajos se apoya en bases de datos e intensivos archivos de Excel; las vacaciones se coordinan formalmente por correo, se agendan en el calendario y se notifican vía intranet; y el marcaje de asistencia se efectúa mediante huella digital o photocheck en accesos automatizados. El cálculo de planillas y la entrega de beneficios son derivados a áreas específicas mediante sistemas internos integrados.
 
+**Segmento 2: Colaboradores generales**
+
+**Entrevista 1:**
+
+Nombre: María Carmen Espichón Gaitán 
+
+Edad: 25 años
+
+Distrito: Lima
+
+Link de la entrevista: [Entrevista 1 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=2gzoo5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6ODY0LjM5fX0%3D)
+
+Timing donde inicia la entrevista: 14:24
+
+Duración completa de la entrevista: 5 minutos 43 segundos
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+María Carmen Espichón Gaitán tiene 25 años, reside en Lima y es bachiller en Derecho especializada en las áreas corporativa y laboral. Labora en Ranza Comercial, una empresa de logística integral, almacenamiento y transporte, desempeñándose en el área administrativa como personal de horario no fiscalizable. Define la relación con Recursos Humanos (Gestión de Personas) como distante e insuficiente hacia el personal operativo de campo debido al alto volumen de procesos y la constante rotación, percibiendo que el área no logra captar las necesidades reales de los trabajadores. En su día a día coordina con gestoras asignadas y se apoya en Teams y herramientas colaborativas; sin embargo, lamenta que para el personal operativo la atención continúe siendo mayoritariamente presencial y física, lo cual exige largos desplazamientos dentro de los predios logísticos. Su mayor molestia administrativa radica en el retraso de las aprobaciones, la falta de notificaciones integradas y la aplicación de descuentos o penalidades injustificadas en boleta sin previo aviso ni explicación del desglose.
+En el aspecto tecnológico, María Carmen trabaja principalmente desde una laptop y utiliza diariamente Hotmail, Microsoft Teams, SharePoint y OneDrive, manifestando un nivel de comodidad de 4/5 para aprender nuevas aplicaciones, siempre que se eviten inducciones burocráticas y se opte por interfaces intuitivas. Respecto a las herramientas de Gestión Humana, señala que la empresa emplea la plataforma web Tu Recibo para consultar boletas y tramitar vacaciones o permisos; no obstante, critica su falta de integración con el correo institucional y los canales de comunicación diaria. Esta desconexión provoca que los trámites se traspapelen a menos que se notifique verbalmente al jefe directo. Para solucionar esto, sugiere implementar una aplicación móvil centralizada e intuitiva que simplifique las consultas de saldos, mejore la automatización de asistencias —actualmente fragmentada entre marcación manual y lectores de huella— y reduzca significativamente los tiempos de respuesta.
+
+
+**Entrevista 2:**
+
+Nombre: Carolina Paz Reyes 
+
+Edad: 25 años 
+
+Distrito: Barranco 
+
+Link de la entrevista: [Entrevista 2 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=25BIVE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIwNy43NX19)
+
+Timing donde inicia la entrevista: 20:07
+
+Duración completa de la entrevista: 3 minutos 29 segundos
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+Carolina Paz Reyes tiene 25 años, reside en el distrito de Barranco, es soltera y vive con sus padres y su hermano mayor. Actualmente cursa el séptimo ciclo de la carrera de Química en la universidad y se desempeña desde hace cinco meses como cajera en Metro (cadena de supermercados e hipermercados del rubro de retail y comercio masivo). Describe la relación con el personal de Recursos Humanos como positiva y atenta a resolver dudas; sin embargo, en su trabajo operativo se limita a la atención en caja. Prefiere la autonomía en tareas sencillas para no saturar a los gerentes en horas de alta concurrencia. Ante la necesidad de consultar detalles específicos o entender desgloses de su boleta de pago, debe acudir presencialmente a RR. HH., ya que la plataforma solo le permite visualizar el documento final emitido.
+En el plano digital y operativo, Carolina utiliza el sistema informático de la tienda para cobrar e interactúa desde su celular (Android) con aplicaciones de uso cotidiano como WhatsApp. Para revisar sus boletas de pago accede a la aplicación web Tu Recibo, pero critica la falta de autonomía y la dependencia de intermediarios o acercamientos presenciales para hacer seguimiento a sus trámites laborales. En caso de requerir vacaciones o permisos médicos, debe coordinar de forma manual con su jefe directo y presentar comprobantes físicos. Carolina evalúa su adaptabilidad digital en un 4/5 y sugiere que la prioridad urgente de la empresa sea implementar una sola aplicación móvil centralizada y accesible, que envíe notificaciones push al celular y permita solicitar permisos, marcar asistencia fuera de tienda y consultar saldos e información laboral sin burocracia.
+
+
+**Entrevista 3:**
+
+Nombre: Jean Paul Vila Barja
+
+Edad: 19 años
+
+Distrito: Cercado de Lima 
+
+Link de la entrevista: [Entrevista 3 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=s6pG18&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTM1Ni4wMX19)
+
+Timing donde inicia la entrevista: 22:36
+
+Duración completa de la entrevista: 4 minutos 44 segundos
+
+![Entrevista](assets/imagen.png)
+
+**Resumen de la entrevista:**
+
+Jean Paul Vila Barja tiene 19 años, vive en el Cercado de Lima y es soltero. Habita junto a sus padres, su hermana, una tía y sus abuelos maternos. Se encuentra cursando estudios universitarios de pregrado en la carrera de Ingeniería Mecatrónica y realiza en paralelo una especialización con la empresa Fintech. Al recordar su experiencia laboral como colaborador general en su anterior empresa, describe que la relación con el área de Administración y Recursos Humanos se manejaba de forma indirecta y dependiente de sus superiores; solía consultarles de manera presencial o vía correo electrónico para enterarse sobre los beneficios de ley o aclarar conceptos específicos en sus boletas de pago de los cuales solo podía verificar el monto final depositado y la adición de bonos.
+En el aspecto operativo y de trámites internos, Jean Paul señala que el control de sus días de vacaciones disponibles no era transparente ni autogestionable, sino que dependía de los recordatorios verbales de su propio jefe inmediato según las horas trabajadas. Para solicitar vacaciones o permisos médicos debía seguir un flujo manual de varias etapas: primero avisar a su jefe, acudir a administración a generar la solicitud con justificación formal y adjuntar certificados médicos en caso de salud. Asimismo, experimentó la falta de seguimiento en las plataformas de la empresa al enviar una solicitud que no recibió respuesta oportuna de Recursos Humanos, viéndose obligado a recurrir directamente a su jefe directo para que intercediera ante el área administrativa y procediera con el trámite.
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
