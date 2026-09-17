@@ -961,6 +961,44 @@ Duración completa de la entrevista: 4 minutos 44 segundos
 Jean Paul Vila Barja tiene 19 años, vive en el Cercado de Lima y es soltero. Habita junto a sus padres, su hermana, una tía y sus abuelos maternos. Se encuentra cursando estudios universitarios de pregrado en la carrera de Ingeniería Mecatrónica y realiza en paralelo una especialización con la empresa Fintech. Al recordar su experiencia laboral como colaborador general en su anterior empresa, describe que la relación con el área de Administración y Recursos Humanos se manejaba de forma indirecta y dependiente de sus superiores; solía consultarles de manera presencial o vía correo electrónico para enterarse sobre los beneficios de ley o aclarar conceptos específicos en sus boletas de pago de los cuales solo podía verificar el monto final depositado y la adición de bonos.
 En el aspecto operativo y de trámites internos, Jean Paul señala que el control de sus días de vacaciones disponibles no era transparente ni autogestionable, sino que dependía de los recordatorios verbales de su propio jefe inmediato según las horas trabajadas. Para solicitar vacaciones o permisos médicos debía seguir un flujo manual de varias etapas: primero avisar a su jefe, acudir a administración a generar la solicitud con justificación formal y adjuntar certificados médicos en caso de salud. Asimismo, experimentó la falta de seguimiento en las plataformas de la empresa al enviar una solicitud que no recibió respuesta oportuna de Recursos Humanos, viéndose obligado a recurrir directamente a su jefe directo para que intercediera ante el área administrativa y procediera con el trámite.
 
+### 2.2.3. Análisis de entrevistas
+
+**Segmento 1:** **Personal de Recursos Humanos**
+
+* **Características objetivas**
+  * El 100% corresponde a adultos jóvenes de entre 22 y 25 años, un promedio exacto de 23 años. Todos son de estado civil soltero, conviven con algún familiar directo y el 100% carece de hijos o dependientes a su cargo.
+  * El 66.7% cuenta con grado universitario completo en Psicología , habiéndose especializado en el área Organizacional y de Recursos Humanos. El 33.3% restante se encuentra en etapa de formación universitaria de pregrado en Arquitectura y Urbanismo mientras ejerce labores administrativas de Gestión Humana.
+  * El 66.7% se desempeña en medianas a grandes corporaciones multinacionales (retail, masivo y servicios de RPO) gestionando nóminas de cientos a miles de trabajadores. El 33.3% restante labora en una PYME del sector comercio y distribución de productos comercializados por una estructura familiar de 25 colaboradores.
+  * El 100% utiliza la laptop como su herramienta principal de trabajo diario. Adicionalmente, el 66.7% complementa sus funciones operativas con smartphones corporativos o personales con sistema operativo Android para la gestión inmediata de mensajes.
+  * El 100% depende de manera crítica y continua de hojas de cálculo en Excel para llevar el control de legajos, datos de tallas, contrataciones y saldos vacacionales. Mientras el 66.7% cuenta con software o plataformas complementarias (Buk, Ecotech, intranets, Teams), el 33.3% opera sin software especializado, usando únicamente carpetas compartidas y archivos físicos en fólderes manila.
+  * El 100% gestiona y valida las vacaciones de los empleados de forma manual mediante fórmulas de Excel, correos o coordinaciones directas con los jefes de área. Por su parte, el 66.7% registra la asistencia en sedes usando biometría (huella digital) o marcación por photocheck, aunque esta información permanece centralizada sin acceso directo para el trabajador.
+  * El 100% emplea WhatsApp y el correo electrónico corporativo como los canales indispensables para la interacción diaria, el envío de documentación de ingreso y la difusión de novedades o beneficios.
+
+
+* **Características subjetivas**
+  * El 66.7% percibe la relación con el personal como altamente fluctuante, dinámica e impregnada de urgencias debido a la masividad en la rotación del sector comercial. El 33.3% restante la define como una relación cercana, informal e impregnada por la confianza de un entorno familiar.
+  * El 100% expresa insatisfacción y cansancio por la ejecución de tareas mecánicas y repetitivas, destacando la carga manual de bases de datos en Excel, el envío uno a uno de mensajes por WhatsApp para solicitar documentos de ingreso y la persecución individualizada para la firma de formatos notariales como Vida Ley.
+  * El 100% evidencia un estilo de trabajo proactivo y autónomo, abordando y resolviendo de manera independiente los imprevistos técnicos o administrativos del día a día antes de solicitar apoyo o escalar el inconveniente con los responsables de área.
+  * El 100% posee una actitud positiva frente al aprendizaje de herramientas digitales, evaluándose con calificaciones de 4 y 5 sobre 5, manifestando un deseo explícito por automatizar los flujos repetitivos para optimizar el tiempo de respuesta y erradicar los registros manuales.
+
+
+**Segmento 2: Colaboradores generales**
+
+* **Características objetivas**
+  * El 100% corresponde a jóvenes adultos de entre 19 y 25 años, un promedio exacto de 23 años. Todos son de estado civil soltero, conviven con algún familiar directo o de forma independiente y el 100% carece de hijos o dependientes a su cargo.
+  * El 66.7% cuenta con grado profesional superior universitario en Derecho y Comunicación Social, habiéndose especializado en sus respectivas áreas. El 33.3% restante se encuentra en etapa de formación universitaria de pregrado en Ingeniería Mecatrónica mientras realiza capacitaciones técnicas complementarias.
+  * El 100% labora o se ha desempeñado en empresas medianas y grandes de sectores diversos como logística integral y almacenamiento (Ranza Comercial), servicios financieros e industrias de consumo/servicios generales con nóminas que van desde los 100 hasta miles de colaboradores.
+  * El 100% utiliza la laptop o computadora de escritorio como su dispositivo de trabajo principal. Adicionalmente, el 100% utiliza smartphones con sistema operativo Android y navegadores web como Google Chrome para complementar consultas cotidianas.
+  * El 66.7% utiliza plataformas de gestión laboral de forma regular (Buk o Tu Recibo) para revisar boletas de pago o generar solicitudes, mientras que el 33.3% carece de herramientas de autogestión y depende del correo electrónico, hojas en Excel y archivos físicos administrados por jefaturas.
+  * El 66.7% realiza la solicitud de vacaciones o permisos mediante flujos que requieren aprobación manual previa o validación verbal de sus jefes inmediatos, requiriendo en algunos casos la entrega física de justificantes. En contraste, el 33.3% realiza todo el proceso de autogestión de permisos y marcas desde una sola plataforma digital (Buk).
+  * El 100% emplea el correo electrónico (Outlook/Hotmail) y WhatsApp como canales indispensables para coordinaciones diarias, seguimiento de solicitudes y consultas sobre pagos o beneficios con el área de Gestión Humana.
+
+* **Características subjetivas**
+  * El 66.7% percibe la relación con Recursos Humanos como distante, poco accesible o dependiente de la intermediación de sus jefes directos debido a la burocracia de los trámites. El 33.3% la define como una relación cercana, positiva y orientada a la integración y el bienestar del trabajador.
+  * El 66.7% manifiesta insatisfacción por la falta de transparencia en los saldos de vacaciones, la demora en las aprobaciones y la falta de explicaciones claras sobre los conceptos o descuentos aplicados en la boleta de pago. El 33.3% no reporta molestias gracias a la centralización de datos en una plataforma fluida.
+  * El 100% evidencia un estilo de trabajo autónomo, prefiriendo revisar y gestionar su propia información laboral por cuenta propia antes de requerir atención presencial o solicitar apoyo directo del personal administrativo.
+  * El 100% posee una actitud sumamente positiva frente al aprendizaje de herramientas digitales, evaluándose con calificaciones de 4 y 5 sobre 5, manifestando preferencia por aplicaciones móviles intuitivas que centralizan su información y evitan desplazamientos físicos innecesarios.
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
