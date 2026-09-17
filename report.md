@@ -1041,6 +1041,21 @@ La matriz muestra que las tareas de mayor frecuencia e importancia para el perso
 
 Para los colaboradores generales, las tareas más importantes se concentran en consultar información laboral propia, solicitar vacaciones y permisos, revisar remuneraciones y beneficios, así como el seguimiento de solicitudes. Ambos segmentos coinciden en la necesidad de acceder a información laboral actualizada, aunque RR. HH. la gestiona y válida para múltiples trabajadores, mientras que el colaborador principalmente la consulta y realiza solicitudes sobre su propia información.
 
+### 2.3.3. User Journey Mapping
+
+En esta sección se presentan los User Journey Maps correspondientes a los segmentos objetivo de Personal de Recursos Humanos y Colaboradores generales. Los mapas representan el recorrido end-to-end que realizan los usuarios para gestionar y consultar información relacionada con su experiencia laboral, considerando sus objetivos, procesos actuales, problemas y oportunidades de mejora. Para este análisis se elaboran las versiones As-Is, por lo que se describe la situación actual de los usuarios sin considerar la existencia de Flowboard como solución. Cada User Journey Map se encuentra vinculado con el User Persona correspondiente, permitiendo representar de manera contextualizada las actividades y dificultades que caracterizan a cada segmento.
+
+User Person: Carlos (Personal de Recursos Humanos)
+
+[https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link](https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link)
+
+![figura-50](assets/figura-50.png)
+
+User Person: Maria (Colaboradores generales)
+
+[https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing](https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing)
+
+![figura-51](assets/figura-51.png)
 
 ### 2.3.5. Big Picture Event Storming
 
