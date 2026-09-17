@@ -370,7 +370,7 @@ Con Flowboard, Performily lleva esa propuesta al dispositivo que el colaborador 
 | ----- | :---- |
 | ![Figura 1. 1.1.2. Perfiles de integrantes del equipo](assets/figura-01.png) | Mi nombre es Darío Ávila, soy estudiante universitario de la carrera de Ingeniería de Software, cursando el 6.º ciclo. Cuento con conocimientos en lenguajes de programación C++ y Python, lo que me permite desarrollar soluciones técnicas eficientes y adaptables. Practico la escucha activa para comprender a fondo las necesidades tanto del equipo como de los clientes, asegurando que los objetivos se alineen con las expectativas. Además, busco soluciones innovadoras que integren distintas perspectivas, fomentando la colaboración y la creatividad. Soy flexible ante cambios inesperados en los proyectos, adaptándome rápidamente a nuevas prioridades o requerimientos. |
 | Diego Alonso Diaz Villalba (u202412663): Ingeniería de software |  |
-| ![imagen] | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
+| ![imagen](assets/figura-59.png) | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
 | Salym Pool Galvez Meza (u202419655): Ingeniería de Software |  |
 | ![Figura 2. 1.1.2. Perfiles de integrantes del equipo](assets/figura-02.png) | Soy Salym Galvez, una persona con sólidas habilidades blandas como el pensamiento crítico y la escucha activa, lo que me permite analizar situaciones para encontrar soluciones efectivas y potenciar el trabajo en equipo. Me adapto con facilidad a distintos entornos, soy proactivo, responsable y orientado a resultados. En el aspecto técnico, cuento con conocimientos en C++ enfocados en la optimización de recursos, así como en el levantamiento de bases de datos y el desarrollo de sitios web utilizando JavaScript, HTML y CSS. Busco siempre aprender cosas nuevas para crecer profesionalmente y aportar valor práctico y técnico en cada proyecto en el que participo. |
 | Diego Alonso Esquicha Alcántara (u202411799): Ingeniería de Software |  |
@@ -759,6 +759,74 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 3. Revisar y cerrar los defectos críticos antes de liberar cada versión piloto.
 
 **Indicadores de validación:** cero defectos críticos abiertos al liberar la versión piloto; solicitudes aprobadas en menos de 24 horas; 100 % de solicitudes con estado y responsable registrados; retención superior al 90 % de las organizaciones del piloto después del primer periodo de evaluación.
+
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
+**Datos Demográficos Básicos**
+
+- ¿Cuál es tu nombre completo, edad y distrito de residencia?
+- ¿Cuál es tu estado civil y cómo está compuesta tu carga familiar (con quiénes vives, personas a cargo)?
+- ¿Cuál es tu nivel de estudios alcanzado y en qué especialidad o área te formaste?
+
+**Ocupación y Contexto Laboral**
+
+- ¿En qué empresa trabajas actualmente, a qué rubro se dedica y aproximadamente cuántas personas laboran en ella?
+- ¿Cuál es tu puesto de trabajo y cuánto tiempo llevas desempeñándolo?
+- ¿Cómo describirías la relación general entre los colaboradores y el área de Recursos Humanos?
+
+**Personalidad y Estilo de Trabajo**
+
+- ¿Qué parte de tu rutina diaria disfrutas más en tu trabajo y cuál evitarías o delegarías si pudieras?
+- Cuando surge un problema o imprevisto técnico/administrativo en tu día a día, ¿cómo sueles abordarlo?
+- En general, ¿prefieres resolver las tareas de forma autónoma o consultando y coordinando constantemente con otros?
+
+**Preguntas Principales**
+
+**Segmento 1: Personal de Recursos Humanos**
+
+- ¿Cómo está organizada la empresa a nivel de áreas? ¿El organigrama está documentado y actualizado en alguna plataforma?
+- ¿Con qué herramientas gestionan actualmente los legajos e información de los empleados (Excel, carpetas físicas, software especializado)? Si usan un sistema, ¿cuál es su nombre?
+- Cuando un colaborador solicita vacaciones o un permiso, ¿cuál es el flujo paso a paso para aprobarlo? ¿Cómo validan quién es el jefe directo autorizador?
+- ¿Cómo llevan el control de los días de vacaciones acumulados, gozados y pendientes de cada trabajador?
+- ¿Con qué frecuencia ocurren discrepancias con los empleados sobre sus días de vacaciones y cómo las resuelven?
+- ¿Cómo registran y validan diariamente la asistencia, tardanzas o sobretiempos?
+- ¿Cómo es el proceso actual para calcular la planilla y qué sistema utilizan para ello?
+- ¿Cómo registran y controlan la entrega de beneficios (canastas, vales, bonos, gratificaciones)? ¿Han ocurrido omisiones?
+- ¿Qué tipo de información suele pedirte el personal con más frecuencia de forma presencial o por mensajería?
+- ¿Qué tareas de tu rutina sientes que te generan mayor sobrecarga o son excesivamente repetitivas?
+
+**Segmento 2: Colaboradores Generales**
+
+- ¿Sabes exactamente cuántos días de vacaciones tienes disponibles en este momento? ¿Cómo lo averiguaste la última vez?
+- ¿Sabes qué beneficios te corresponden además de tu sueldo base?
+- ¿Qué información de tu remuneración o boleta de pago puedes revisar por ti mismo y cuál debes solicitar obligatoriamente a RRHH?
+- Si necesitaras solicitar vacaciones o un permiso médico ahora mismo, ¿cómo lo harías paso a paso?
+- ¿Alguna vez has enviado una solicitud y no supiste en qué estado quedó? ¿Qué hiciste al respecto?
+- ¿Tienes forma de revisar el historial de tus faltas, tardanzas o permisos registrados? ¿Has tenido alguna discrepancia con lo que RRHH tiene registrado?
+- ¿Alguna vez has tenido algún inconveniente o retraso con el área de Recursos Humanos respecto a tus pagos, vacaciones o documentos?
+- ¿Qué es lo que más te resulta molesto o lento del procedimiento actual para pedir cualquier trámite laboral?
+
+**Preguntas complementarias**
+
+- ¿Desde qué dispositivo trabajas la mayor parte del día (laptop, computadora de escritorio o celular)?
+- ¿Qué tareas del trabajo prefieres o necesitas hacer desde una computadora y cuáles te gustaría resolver directamente desde tu teléfono móvil?
+- ¿Con qué frecuencia necesitas realizar consultas laborales o marcar asistencia estando fuera de tu escritorio o en ruta?
+- ¿Qué sistema operativo utilizas en tu smartphone (Android / iOS) y qué navegador web usas en la computadora?
+- En una escala del 1 al 5, ¿qué tan cómodo te sientes aprendiendo a usar aplicaciones digitales nuevas? ¿Por qué esa nota?
+- ¿Qué programas o aplicaciones usas a diario para trabajar (Excel, WhatsApp, Slack, correo, etc.)?
+- ¿Por qué canal (correo electrónico, mensaje de WhatsApp, notificación push de app móvil) prefieres enterarte si te aprueban una solicitud o si se emite una boleta de pago?
+- Si pudieras marcar tu asistencia o pedir un permiso desde una app en tu celular, ¿en qué momentos o circunstancias te sería más útil?
+- ¿Qué aplicación o software (de uso personal o laboral) consideras un modelo de sencillez y facilidad de uso? ¿Por qué te gusta?
+- ¿Conoces o has usado alguna otra plataforma de gestión de RRHH? ¿Qué te pareció esa experiencia?
+- ¿Te sentirías cómodo consultando tus boletas de pago y datos personales desde una web o una app móvil de la empresa? ¿Existe algo que te genere dudas o desconfianza?
+- Describe cómo sería tu flujo ideal de trabajo si no tuvieras ninguna de las limitaciones administrativas actuales.
+- Si tuvieras que definir en una sola frase lo que más urge cambiar en la forma en que se gestiona la información laboral en tu empresa, ¿cuál sería?
+- ¿Hay algún punto relevante sobre tu experiencia en el trabajo que no hayamos tocado y te gustaría agregar?
+
+
+
 ### 2.3.6. Ubiquitous Language
 
 El Ubiquitous Language, o lenguaje ubicuo, tiene como objetivo establecer un vocabulario común, claro y consistente entre todas las personas involucradas en el proyecto, como los usuarios, responsables de recursos humanos, desarrolladores y contribuidores.
