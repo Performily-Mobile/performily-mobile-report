@@ -999,6 +999,26 @@ En el aspecto operativo y de trámites internos, Jean Paul señala que el contro
   * El 100% evidencia un estilo de trabajo autónomo, prefiriendo revisar y gestionar su propia información laboral por cuenta propia antes de requerir atención presencial o solicitar apoyo directo del personal administrativo.
   * El 100% posee una actitud sumamente positiva frente al aprendizaje de herramientas digitales, evaluándose con calificaciones de 4 y 5 sobre 5, manifestando preferencia por aplicaciones móviles intuitivas que centralizan su información y evitan desplazamientos físicos innecesarios.
 
+## 2.3. Needfinding
+
+### 2.3.1. User Personas
+
+A partir del análisis de las entrevistas realizadas a los segmentos objetivo y de las características identificadas en el análisis de la competencia, se elaboraron los User Persona que representan a los principales perfiles de usuarios de la solución propuesta. Estos arquetipos permiten sintetizar las características objetivas y subjetivas más representativas de cada segmento.
+
+Para la construcción de los perfiles se priorizaron los hallazgos con mayor recurrencia en las entrevistas. En el caso del personal de Recursos Humanos, se consideraron la responsabilidad sobre múltiples procesos de gestión, el uso diverso de herramientas digitales sin solución integrada, la carga asociada a procesos manuales, necesidad de contar con información actualizada y el interés por automatizar actividades repetitivas. Asimismo, se tomaron en cuenta los aspectos identificados en el análisis de la competencia para orientar las necesidades y expectativas que los usuarios podrían tener frente a una plataforma de gestión de recursos humanos.
+
+**Segmento 1: Personal de Recursos Humanos:**
+
+[https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing](https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing)
+
+![figura-54](assets/figura-54.png)
+
+**Segmento 2: Colaboradores generales:**
+
+[https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing](https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing)
+
+![figura-54](assets/figura-55.png)
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
