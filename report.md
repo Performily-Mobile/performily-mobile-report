@@ -1654,6 +1654,37 @@ En esta sección se presenta la lista priorizada de todo el trabajo necesario pa
 
 Enlace: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
 
+### 2.5.2. Context Mapping
+
+En esta sección se explica cómo definimos las relaciones entre los siete bounded contexts de Flowboard. Partimos de los candidate bounded contexts, los Domain Message Flows y los Bounded Context Canvases, y probamos varias alternativas con las preguntas que propone la técnica antes de quedarnos con el diseño final.
+
+La primera pregunta fue qué pasaría si movemos el saldo de vacaciones de Benefits a Request, ya que casi siempre se consulta al registrar una solicitud. Lo descartamos, porque el saldo también cambia por la acumulación mensual y por los ajustes manuales de RRHH, que no tienen nada que ver con una solicitud. Si lo colocamos en Request, ese contexto terminaba haciendo dos trabajos distintos.
+
+La segunda fue qué pasaría si partimos Workspace en dos contextos, uno para colaboradores y otro para áreas y puestos. También lo descartamos, porque reglas como "el puesto debe pertenecer al área asignada" o "la jerarquía no puede tener ciclos" necesitan las dos partes a la vez. Separarlas nos obligaba a consultar entre contextos en casi todas las operaciones.
+
+La tercera fue qué pasaría si duplicamos datos del colaborador en Request para romper la dependencia con Workspace. La aceptamos en parte. Request consulta a Workspace solo al registrar la solicitud para saber quién es el jefe directo, y luego guarda al aprobador dentro de la propia solicitud (value object Approver). Así, si después cambia la jerarquía, la solicitud sigue asignada a quien correspondía en ese momento.
+
+La cuarta fue qué pasaría si creamos un shared service de notificaciones, ya que IAM, Request y Wellbeing envían avisos. Decidimos no crear un bounded context para eso, porque las notificaciones no tienen reglas de negocio propias. Cada contexto usa un adaptador de infraestructura hacia Brevo o Firebase Cloud Messaging.
+
+Finalmente, nos preguntamos qué pasaría si aislamos las capacidades core y movemos las demás a contextos aparte. Esa es justamente la división final: Workspace y Request quedan como Core Domain, IAM como subdominio genérico, y Attendance, Benefits, Payroll y Wellbeing como subdominios de soporte. También descartamos juntar IAM con Workspace, porque la Ley N.° 29733 obliga a controlar el acceso por rol de forma estricta, y eso justifica que la seguridad tenga su propio modelo.
+
+Con esas decisiones, las relaciones del context map quedan así:
+
+* Workspace → IAM: Workspace publica los eventos EmployeeRegistered, EmployeeTerminated y EmployeeReinstated, e IAM crea, deshabilita o rehabilita la cuenta.
+* IAM → demás contexto: IAM expone la validación de tokens a todos por medio de su facade.
+* Workspace → Request, Attendance y Benefits: Workspace es upstream porque les da los colaboradores activos, el puesto y el jefe directo. Request y Attendance usan un Anti-corruption Layer para traducir esos datos a su propio modelo.
+* Request ↔ Benefits: Request consulta el saldo antes de registrar la solicitud y Benefits descuenta los días cuando la solicitud se aprueba, así que cualquier cambio en ese flujo se tiene que coordinar entre los dos.
+* Workspace → Payroll: Payroll solo necesita la identidad del colaborador y la toma tal como la define Workspace.
+* Workspace y Wellbeing: Wellbeing trabaja con oficinas y dispositivos, sin referencias a colaboradores.
+* Shared Kernel: todos los contextos, menos Wellbeing, comparten los identificadores y value objects básicos.
+* Sistemas externos: el sistema biométrico, el sistema de planilla, los sensores y la API de feriados entran con un ACL para que sus formatos no afecten el modelo.
+* Brevo y Firebase Cloud Messaging: nos adaptamos a sus APIs tal como vienen. Firebase solo aplica a la solución móvil.
+
+![Figura 28. 2.5.2. Context Mapping](assets/figura-28.png)
+Enlace de la figura: https://drive.google.com/file/d/1ktD7dv_auK9fwaGuWSyiViH8veNReKWw/view?usp=sharing 
+
+
+
 ## 2.6. Tactical-Level Domain-Driven Design
 
 ### 2.6.1. Bounded Context: IAM
