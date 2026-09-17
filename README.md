@@ -85,14 +85,13 @@ El feature de aprendizaje autónomo es la verificación biométrica local, con A
 ```
 .
 ├── README.md
-├── Reporte Móviles.md      Informe del trabajo final
-├── Conclusiones.md         Conclusiones en documento aparte
-└── assets/                 Figuras del informe y logotipo
+├── reporte.md      Informe del trabajo final
+└── assets/         Figuras del informe y logotipo
 ```
 
 ## Cómo leer el informe
 
-El informe se lee desde `Reporte Móviles.md`. Está escrito en Markdown y contiene una tabla de contenido con enlaces a sus secciones. La estructura sigue el enunciado del curso:
+El informe se lee desde `reporte.md`. Está escrito en Markdown y contiene una tabla de contenido con enlaces a sus secciones. La estructura sigue el enunciado del curso:
 
 Registro de versiones, Project Report Collaboration Insights, Student Outcome, Objetivos SMART, Capítulo I de presentación de la startup y del perfil de la solución, Capítulo II de desarrollo de requisitos y diseño de la solución de software, Conclusiones y recomendaciones, Bibliografía y Anexos.
 
@@ -117,17 +116,6 @@ Los diagramas C4 se construyen con Structurizr, los diagramas UML de clases y de
 | u202410478 | Vasquez Llave, Oscar Lizandro |
 
 Docente: Mayta Guillermo, Jorge Luis
-
-## Enlaces del proyecto
-
-| Recurso | Enlace |
-| :---- | :---- |
-| Landing Page | Pendiente de despliegue |
-| RESTful API | Pendiente de despliegue |
-| Repositorio de la aplicación nativa | Pendiente |
-| Repositorio de la aplicación cross-platform | Pendiente |
-| Repositorio del API | Pendiente |
-| Repositorio del Landing Page | Pendiente |
 
 ---
 
