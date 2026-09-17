@@ -1683,7 +1683,28 @@ Con esas decisiones, las relaciones del context map quedan así:
 ![Figura 28. 2.5.2. Context Mapping](assets/figura-28.png)
 Enlace de la figura: https://drive.google.com/file/d/1ktD7dv_auK9fwaGuWSyiViH8veNReKWw/view?usp=sharing 
 
+### 2.5.3. Software Architecture
 
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+El diagrama de contexto muestra a Flowboard como un solo sistema y su relación con los usuarios y los sistemas externos. Los usuarios son el colaborador y el personal de Recursos Humanos. Los sistemas externos son el sistema de asistencia biométrica, el sistema de planilla, los sensores ambientales, el servicio de correo Brevo y la API de feriados Nager.Date. Este nivel permite entender el alcance de la solución sin entrar en detalles técnicos.
+
+![imagen](assets/figura-57.png)
+Enlace de la figura: https://drive.google.com/file/d/1QT5xYU1oC38IbX-a20IhVlGOF0NnrZki/view?usp=sharing
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+
+El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, [la aplicación web en Angular / la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local], el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos.
+
+![imagen](assets/figura-58.png)
+Enlace de la figura: https://drive.google.com/file/d/1pGQclKd26a_jyMMc7pBYe4HJlgBSRqWp/view?usp=sharing
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
+
+El diagrama de componentes muestra cómo está organizado internamente el RESTful API. Cada componente corresponde a uno de los siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing. Además de lo que consume cada [aplicación web / aplicación móvil], el diagrama muestra las relaciones entre bounded contexts. Por ejemplo, Request consulta a Workspace para saber quién aprueba una solicitud y a Benefits para verificar el saldo de vacaciones.
+
+![imagen](assets/figura-56.png)
+Enlace de la figura: https://drive.google.com/file/d/15bMEiFodiW55TJcYOEIEAN_k1F9tzFDc/view?usp=sharing
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
