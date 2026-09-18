@@ -361,16 +361,24 @@ Con Flowboard, Performily lleva esa propuesta al dispositivo que el colaborador 
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-| Darío Ávila De La Cruz (u202412270): Ingeniería de software |  |
-| ----- | :---- |
+| Darío Ávila De La Cruz (u202412270) | Ingeniería de Software |
+| :---- | :---- |
 | ![Figura 1. 1.1.2. Perfiles de integrantes del equipo](assets/figura-01.png) | Mi nombre es Darío Ávila, soy estudiante universitario de la carrera de Ingeniería de Software, cursando el 6.º ciclo. Cuento con conocimientos en lenguajes de programación C++ y Python, lo que me permite desarrollar soluciones técnicas eficientes y adaptables. Practico la escucha activa para comprender a fondo las necesidades tanto del equipo como de los clientes, asegurando que los objetivos se alineen con las expectativas. Además, busco soluciones innovadoras que integren distintas perspectivas, fomentando la colaboración y la creatividad. Soy flexible ante cambios inesperados en los proyectos, adaptándome rápidamente a nuevas prioridades o requerimientos. |
-| Diego Alonso Diaz Villalba (u202412663): Ingeniería de software |  |
-| ![imagen](assets/figura-59.png) | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
-| Salym Pool Galvez Meza (u202419655): Ingeniería de Software |  |
+
+| Diego Alonso Diaz Villalba (u202412663) | Ingeniería de Software |
+| :---- | :---- |
+| ![Figura 5. 1.1.2. Perfiles de integrantes del equipo](assets/figura-59.png) | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
+
+| Salym Pool Galvez Meza (u202419655) | Ingeniería de Software |
+| :---- | :---- |
 | ![Figura 2. 1.1.2. Perfiles de integrantes del equipo](assets/figura-02.png) | Soy Salym Galvez, una persona con sólidas habilidades blandas como el pensamiento crítico y la escucha activa, lo que me permite analizar situaciones para encontrar soluciones efectivas y potenciar el trabajo en equipo. Me adapto con facilidad a distintos entornos, soy proactivo, responsable y orientado a resultados. En el aspecto técnico, cuento con conocimientos en C++ enfocados en la optimización de recursos, así como en el levantamiento de bases de datos y el desarrollo de sitios web utilizando JavaScript, HTML y CSS. Busco siempre aprender cosas nuevas para crecer profesionalmente y aportar valor práctico y técnico en cada proyecto en el que participo. |
-| Diego Alonso Esquicha Alcántara (u202411799): Ingeniería de Software |  |
+
+| Diego Alonso Esquicha Alcántara (u202411799) | Ingeniería de Software |
+| :---- | :---- |
 | ![Figura 3. 1.1.2. Perfiles de integrantes del equipo](assets/figura-03.png) | Soy Diego Esquicha, tengo 20 años, estudio Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Cuento con conocimientos en arquitectura de software y C++. Me considero una persona responsable, disciplinada y perseverante, con capacidad para afrontar retos y adaptarme a diferentes situaciones. Me caracterizo por mi compromiso, resiliencia y puntualidad, además de mi constante interés por seguir aprendiendo y mejorar mis habilidades. |
-| Oscar Lizandro Vasquez Llave (u202410478): Ingeniería de Software |  |
+
+| Oscar Lizandro Vasquez Llave (u202410478) | Ingeniería de Software |
+| :---- | :---- |
 | ![Figura 4. 1.1.2. Perfiles de integrantes del equipo](assets/figura-04.png) | Soy estudiante de Ingeniería de Software con formación en desarrollo de aplicaciones y gestión de proyectos tecnológicos. Cuento con conocimientos en C++, HTML, CSS, JavaScript, diseño de interfaces de usuario con Figma y uso de herramientas de control de versiones como Git. Me destaco por mi compromiso para aprender nuevas tecnologías, además de mis habilidades para trabajar en equipo y adaptarme a diferentes entornos. Tengo capacidad para analizar y resolver problemas técnicos de forma eficiente. Poseo iniciativa para proponer mejoras, disposición para colaborar en proyectos multidisciplinarios y motivación por adquirir nuevos conocimientos que fortalezcan mi desarrollo profesional. |
 
 ## 1.2. Solution Profile
