@@ -1906,6 +1906,110 @@ En esta sección se presenta la lista priorizada de todo el trabajo necesario pa
 
 Enlace: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
 
+## 2.5. Strategic-Level Domain-Driven Design
+
+### 2.5.1. EventStorming
+
+#### 2.5.1.1. Candidate Context Discovery
+
+Aplicando la técnica de Candidate Context Discovery y analizando los puntos de inflexión y flujos del negocio en la plataforma de gestión de recursos humanos y clima laboral, se identificaron y delimitaron los siguientes siete Bounded Contexts:
+
+| Bounded Context | Descripción | Eventos Clave |
+| :---- | :---- | :---- |
+| BC1. IAM (Identity and Access Management) | Subdominio genérico encargado de aislar la seguridad, el control de acceso basado en roles (Analista de RRHH y Colaborador) y la autenticación mediante tokens conforme a la normatividad vigente. | Usuario Registrado, Usuario Autenticado, Sesión Cerrada, Token Generado |
+| BC2. Workspace | Subdominio principal que centraliza el ciclo de vida completo del colaborador, la estructura organizacional de áreas, posiciones y líneas de reporte jerárquico. | Colaborador Registrado, Posición Creada, Área Creada, Cese de Colaborador Registrado |
+| BC3. Attendance | Subdominio de soporte dedicado a transformar las marcaciones crudas de entrada y salida en registros de asistencia interpretados (puntualidad, tardanzas, sobretiempo), sin realizar cálculos de nómina. | Marcación de Entrada Registrada, Marcación de Salida Registrada, Registro Diario de Asistencia Proceso |
+| BC4. Request | Subdominio principal que administra el ciclo de vida de los trámites y peticiones parametrizadas (vacaciones, permisos, licencias) y su respectivo workflow de aprobación jerárquica. | Solicitud Creada, Solicitud Ruteada Automáticamente, Solicitud Aprobada, Solicitud Rechazada |
+| BC5. Benefits | Subdominio de soporte que administra los incentivos y controla de forma automatizada la acumulación y el saldo de días de descanso vacacional por colaborador. | Tipo de Beneficio Creado, Beneficio Asignado, Saldo de Vacaciones Verificado, Saldo Actualizado |
+| BC6. Payroll | Subdominio de soporte que opera como repositorio centralizado para almacenar y consultar las boletas de pago cargadas desde sistemas externos, supervisando el estado de los depósitos. | Boleta de Pago Cargada, Estado de Pago Actualizado, Boleta Descargada |
+| BC7. Wellbeing | Subdominio de soporte enfocado en registrar condiciones ambientales físicas de los espacios corporativos (temperatura, iluminación, aire) para traducirlas en indicadores de salud ocupacional. | Espacio Físico Registrado, Lectura Ambiental Capturada, Alerta Ambiental Emitida |
+
+#### 2.5.1.2. Domain Message Flows Modeling
+
+El modelado de flujos de mensajes (Domain Message Flow Modeling) describe cómo interactúan los contextos acotados mediante el intercambio síncrono y asíncrono de comandos, consultas y eventos de dominio para mantener la consistencia operativa sin acoplamientos rígidos.
+
+**Escenario 01: Creación de Colaborador y Generación de Credenciales**
+
+Como flujo de incorporación de personal, este escenario gobierna el alta inicial del colaborador dentro del contexto **Workspace**, disparando de forma automatizada las solicitudes de integración hacia el contexto **IAM** para provisionar las credenciales de acceso institucional y asegurar la trazabilidad del alta operativa.
+
+![Figura 15. 2.5.1.2. Domain Message Flows Modeling](assets/figura-15.png)
+
+**Escenario 02: Solicitud y Aprobación de Vacaciones**
+
+Como proceso central de gestión de trámites, este escenario rige la creación de peticiones por parte del colaborador, coordinando validaciones síncronas de saldo con el contexto **Benefits** y consultando las líneas de reporte jerárquico en el contexto **Workspace** para asegurar el ruteo de aprobación correcto y el contexto **Request**.
+
+![Figura 16. 2.5.1.2. Domain Message Flows Modeling](assets/figura-16.png)
+
+**Escenario 03: Registro y Procesamiento de Asistencia**
+
+Como núcleo de soporte operativo de control de tiempo, este escenario gestiona la recepción de marcaciones crudas para transformarlas mediante reglas de negocio del contexto **Attendance** en registros diarios limpios, tardanzas calculadas y sobretiempos validados.
+
+![Figura 17. 2.5.1.2. Domain Message Flows Modeling](assets/figura-17.png)
+
+**Escenario 04: Carga y Consulta de Boletas de Pago**
+
+Como mecanismo de repositorio seguro, este escenario coordina la centralización de comprobantes de haberes subidos por el analista dentro del contexto **Payroll**, garantizando que cada colaborador consulte de forma exclusiva y protegida sus propias boletas de pago.
+
+![Figura 18. 2.5.1.2. Domain Message Flows Modeling](assets/figura-18.png)
+
+**Escenario 05: Monitoreo de Salud Ocupacional y Ambiental**
+
+Como proceso preventivo de soporte, este escenario abarca la captura continua de variables físicas e higiénicas desde sensores IoT hacia el contexto **Wellbeing**, clasificando los indicadores ambientales y emitiendo alertas automatizadas ante desvíos críticos.
+
+![Figura 19. 2.5.1.2. Domain Message Flows Modeling](assets/figura-19.png)
+
+**Escenario 06: Cese de Colaborador e Inhabilitación de Acceso**
+
+Como protocolo de seguridad ante la salida de un empleado, este escenario coordina el registro de la baja laboral en el contexto **Workspace** para emitir un evento de dominio asíncrono que ordena al contexto **IAM** revocar e inhabilitar de manera inmediata los accesos a la plataforma.
+
+![Figura 20. 2.5.1.2. Domain Message Flows Modeling](assets/figura-20.png)
+
+#### 2.5.1.3. Bounded Context Canvases
+
+En esta sección, el equipo diseña y refina los candidate bounded contexts identificados previamente, estableciendo de forma rigurosa los criterios de diseño estratégicos y tácticos. Para ello, se seleccionaron los contextos acotados en orden de criticidad e importancia para el negocio de **Flowboard** (IAM, Workspace, Request, Benefits, Attendance, Payroll y Wellbeing), elaborando para cada uno de ellos su respectivo Bounded Context Canvas.
+
+**Bounded Context Canvas: IAM**
+
+Como subdominio de soporte genérico, este contexto administra de manera centralizada la seguridad de la plataforma, el control de acceso basado en roles institucionales (*Analista de RRHH* y *Colaborador*) y la autenticación basada en tokens, asegurando que las operaciones del sistema cumplan con los estándares de privacidad y cifrado.
+
+![Figura 21. 2.5.1.3. Bounded Context Canvases](assets/figura-21.png)
+
+**Bounded Context Canvas: Workspace**
+
+Como núcleo principal (Core Domain) del ecosistema, este contexto gobierna el ciclo de vida completo del empleado dentro de la organización, administrando la estructura departamental de áreas, posiciones y las líneas de reporte jerárquico necesarias para la operatividad de la empresa.
+
+![Figura 22. 2.5.1.3. Bounded Context Canvases](assets/figura-22.png)
+
+**Bounded Context Canvas: Request**
+
+Como núcleo operativo de trámites (*Core Domain*), este contexto administra de punta a punta las peticiones parametrizadas de los colaboradores (como vacaciones, permisos y licencias), automatizando el flujo de aprobación jerárquica y validando de forma coordinada las reglas del negocio.
+
+![Figura 23. 2.5.1.3. Bounded Context Canvases](assets/figura-23.png)
+
+**Bounded Context Canvas: Benefits**
+
+Como subdominio de soporte especializado, este contexto controla de manera automatizada la acumulación, el uso y la actualización en tiempo real de los saldos de días de descanso vacacional e incentivos corporativos asignados a cada colaborador.
+
+![Figura 24. 2.5.1.3. Bounded Context Canvases](assets/figura-24.png)
+
+**Bounded Context Canvas: Attendance**
+
+Como subdominio de soporte operativo, este contexto se encarga de recibir las marcaciones de entrada y salida del personal para procesarlas bajo reglas de negocio claras, transformándolas en registros de asistencia limpios, tardanzas identificadas y sobretiempos calculados.
+
+![Figura 25. 2.5.1.3. Bounded Context Canvases](assets/figura-25.png)
+
+**Bounded Context Canvas: Payroll**
+
+Como repositorio seguro de soporte, este contexto actúa como un espacio centralizado para almacenar, indexar y consultar las boletas de pago cargadas desde sistemas externos, garantizando la confidencialidad y el acceso exclusivo del colaborador a sus comprobantes.
+
+![Figura 26. 2.5.1.3. Bounded Context Canvases](assets/figura-26.png)
+
+**Bounded Context Canvas: Wellbeing**
+
+Como subdominio de soporte enfocado en el clima laboral físico, este contexto recopila métricas ambientales de las instalaciones de trabajo a través de dispositivos o sensores, clasificando los indicadores para emitir alertas tempranas de salud y seguridad ocupacional.
+
+![Figura 27. 2.5.1.3. Bounded Context Canvases](assets/figura-27.png)
+
 ### 2.5.2. Context Mapping
 
 En esta sección se explica cómo definimos las relaciones entre los siete bounded contexts de Flowboard. Partimos de los candidate bounded contexts, los Domain Message Flows y los Bounded Context Canvases, y probamos varias alternativas con las preguntas que propone la técnica antes de quedarnos con el diseño final.
