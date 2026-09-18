@@ -2306,6 +2306,7 @@ Por último, **SpringDomainEventPublisher** publica eventos como **EmployeeRegis
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Workspace.
 
 **![Figura 33. 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-33.png)**
+
 Enlace de la figura: https://drive.google.com/file/d/1u8sNJ3E3Mw8CjqBuFX0wjLQ5Fi-nZGcA/view?usp=sharing
 
 El elemento central del modelo es **Employee**, definido como **Aggregate Root**. Esta clase concentra la información personal y laboral del colaborador, incluyendo nombre, documento de identidad, fecha de nacimiento, datos de contacto, dirección, tipo y periodo contractual, estado laboral, área, puesto, jefe directo, historial de asignaciones y documentos asociados.
@@ -2325,6 +2326,7 @@ El Aggregate Root mantiene además reglas como la unicidad del documento de iden
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Workspace.
 
 ![Figura 34. 2.6.2.6.2. Bounded Context Database Design Diagram](assets/figura-34.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1yczRTCR5K1A8NS5KYfTFhkmCg0iTq5Ys/view?usp=sharing
 
 La tabla principal es **employees**, donde se persiste la información personal y laboral del colaborador. Incluye sus datos de identificación, contacto, dirección, fechas contractuales, estado laboral y las referencias al área, puesto y jefe directo.
@@ -2412,6 +2414,7 @@ Sub-capa Services y Repositories
 En esta sección se presenta el Component Diagram correspondiente al bounded context Attendance. El diagrama muestra los componentes que participan en el registro de marcaciones, consulta del historial de asistencia, administración de horarios y consolidación diaria de jornadas.
 
 ![Figura 35. 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-35.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1J4t1ce5stv-HXrLSA2HhZdxnXsmLmtKm/view?usp=sharing
 
 
@@ -2432,6 +2435,7 @@ El contexto incorpora además **DailyAttendanceClosingScheduler**, encargado del
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Attendance.
 
 ![Figura 36. 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-36.png)
+
 Enlace de la figura: https://drive.google.com/file/d/12dc4bxpE5hX4UZxYk3-CjdCB3XBWB8c2/view?usp=sharing
 
 El elemento central del dominio es **AttendanceRecord**, definido como **Aggregate Root**. Representa el registro de asistencia de un colaborador para una fecha determinada y contiene la hora de entrada, hora de salida, horas trabajadas y estado de asistencia.
@@ -2449,6 +2453,7 @@ Las horas procesadas se encapsulan mediante **WorkedHours**, que diferencia las 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Attendance.
 
 ![Figura 37. 2.6.3.6.2. Bounded Context Database Design Diagram](assets/figura-37.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1e5BoZGv0-PWcaU-l0E1_U2KfwwL12Z8U/view?usp=sharing
 
 La tabla **attendance_records** almacena el registro diario consolidado de cada colaborador. Contiene la fecha de trabajo, las horas de entrada y salida, las horas efectivas, el sobretiempo y el estado final de la jornada. **employee_id** funciona como una referencia lógica al colaborador administrado por el bounded context Workspace.
@@ -2544,6 +2549,7 @@ Sub-capa Services y Repositories
 En esta sección se presenta el Component Diagram correspondiente al bounded context Request. El diagrama muestra los componentes responsables de la creación, seguimiento, aprobación y notificación de solicitudes.
 
 ![Figura 38. 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-38.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1N2LySDDv1rNeUwn2AUpTihYr5-i9wkFa/view?usp=sharing
 
 En la **Mobile App**, **Requests UI** permite al usuario crear solicitudes y consultar su estado. **MyRequestsViewModel**, **ApprovalInboxViewModel** y **NewRequestViewModel** administran los flujos de consulta, aprobación y registro respectivamente.
@@ -2567,6 +2573,7 @@ Los cambios relevantes del flujo generan eventos que son procesados por **Reques
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Request.
 
 ![Figura 39. 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-39.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1Lk0D9DUH0DdP33kduoc0NmlrtiwCWX8l/view?usp=sharing
 
 El elemento central del dominio es **Request**, definido como **Aggregate Root**. Representa una solicitud realizada por un colaborador y contiene el solicitante, tipo de solicitud, periodo solicitado, campos dinámicos, archivos adjuntos, aprobador, estado actual, fecha de envío e historial de cambios.
@@ -2588,6 +2595,7 @@ Finalmente, **RequestStatus** controla el ciclo de vida de la solicitud mediante
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Request.
 
 ![Figura 40. 2.6.4.6.2. Bounded Context Database Design Diagram](assets/figura-40.png)
+
 Enlace de la figura: https://drive.google.com/file/d/16NBJXgYZkB3oYzyT12GFBHEugMPOqqFa/view?usp=sharing
 
 La tabla principal es **requests**, donde se almacena cada solicitud junto con el colaborador solicitante, el tipo de solicitud, periodo, aprobador, estado y fechas de creación y envío. Tanto **requester_id** como **approver_employee_id** funcionan como referencias lógicas hacia el bounded context Workspace.
@@ -2685,6 +2693,7 @@ Sub-capa Services y Repositories
 En esta sección se presenta el Component Diagram correspondiente al bounded context Benefits. El diagrama muestra los componentes responsables de la consulta, asignación y administración de beneficios, así como de la gestión del saldo vacacional.
 
 ![Figura 41. 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-41.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1FqwhOyFuLW2HtsZg15rZIalOnShbMzrB/view?usp=sharing
 
 En la **Mobile App**, **Benefits UI** permite visualizar saldos de vacaciones, movimientos y beneficios asignados. **VacationBalanceViewModel** y **MyBenefitsViewModel** gestionan el estado mostrado al usuario y delegan el acceso a los datos en **BenefitsRepositoryImpl**.
@@ -2704,6 +2713,7 @@ En el **API Backend**, **VacationBalancesController** y **BenefitsController** e
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Benefits.
 
 ![Figura 42. 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-42.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1FozKzdchcgiZcZdPwhldm1R0hLgv-YXg/view?usp=sharing
 
 El dominio contiene dos Aggregate Roots principales: **BenefitAssignment** y **VacationBalance**.
@@ -2723,6 +2733,7 @@ Cada variación del saldo se representa mediante **VacationMovement**, el cual i
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Benefits.
 
 ![Figura 43. 2.6.5.6.2. Bounded Context Database Design Diagram](assets/figura-43.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1ota4FWcYZmuB1wyYk0KBeMJAbUyxHYiB/view?usp=sharing
 
 La tabla **benefit_types** almacena la definición de los tipos de beneficio disponibles, incluyendo su nombre, descripción, unidad, estado y si manejan saldo.
@@ -2807,6 +2818,7 @@ Sub-capa Services y Repositories
 En esta sección se presenta el Component Diagram correspondiente al bounded context Payroll.
 
 ![Figura 44. 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-44.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1bVXUmi_qM8hRHICWA4V5EpjW11_sGIr0/view?usp=sharing
 
 En la **Mobile App**, los componentes del contexto deben permitir al colaborador consultar sus boletas y visualizar la información asociada a cada periodo de pago. La capa de presentación delega la recuperación de datos en el repositorio correspondiente, que coordina el acceso remoto al API Backend y, cuando aplique, la copia local de información previamente sincronizada.
@@ -2822,6 +2834,7 @@ El contexto se integra con Workspace para identificar al colaborador propietario
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Payroll.
 
 ![Figura 45. 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-45.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1q9KABHKNucaI5ybmjg2eHFTvobhnK1Rc/view?usp=sharing
 
 El elemento central del dominio es **Payslip**, definido como **Aggregate Root**. Representa una boleta de pago perteneciente a un colaborador para un periodo determinado e incluye la referencia al archivo, fecha de emisión, monto neto, estado de publicación y detalles del pago.
@@ -2841,6 +2854,7 @@ El agregado también utiliza objetos compartidos como **EmployeeId**, **Money** 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Payroll.
 
 ![Figura 46. 2.6.6.6.2. Bounded Context Database Design Diagram](assets/figura-46.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1gexNLUMXLYZlXSQ3wS2YsN5HE5MdtA_d/view?usp=sharing
 
 La tabla **payroll_periods** almacena los periodos de pago administrados por el contexto, identificados mediante el año, mes y fecha programada de pago.
@@ -2933,6 +2947,7 @@ Sub-capa Services y Repositories
 En esta sección se presenta el Component Diagram correspondiente al bounded context Wellbeing. El diagrama muestra los componentes encargados de registrar oficinas y dispositivos, recibir lecturas ambientales, clasificarlas y exponer indicadores para su consulta desde la aplicación móvil.
 
 ![Figura 47. 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-47.png)
+
 Enlace de la figura: https://drive.google.com/file/d/12vyMi-MQLcCmbG9bNR7d726iB0cFdjfL/view?usp=sharing
 
 En la **Mobile App**, **Wellbeing UI** muestra al usuario los indicadores ambientales correspondientes a las sedes registradas. **WellbeingDashboardViewModel** administra el estado de esta información y delega su recuperación en **WellbeingRepositoryImpl**.
@@ -2954,6 +2969,7 @@ Finalmente, **Wellbeing Event Handlers** procesa eventos relevantes del contexto
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Wellbeing.
 
 ![Figura 48. 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-48.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1kuUnHmtumps9wziuJqwDGgZSF1mPYcqF/view?usp=sharing
 
 El elemento central del dominio es **Office**, definido como **Aggregate Root**. Representa una sede física registrada en Flowboard y mantiene su nombre, ubicación, estado y los dispositivos asociados a ella.
@@ -2971,6 +2987,7 @@ Las métricas ambientales se representan mediante **MetricValue**, que combina u
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Wellbeing.
 
 ![Figura 49. 2.6.7.6.2. Bounded Context Database Design Diagram](assets/figura-49.png)
+
 Enlace de la figura: https://drive.google.com/file/d/1beMKRbzfaEdriqcP_b3e9esvD33PUfBY/view?usp=sharing
 
 La tabla **offices** almacena las sedes registradas en el sistema, incluyendo su nombre, edificio, piso, referencia de ubicación y estado.
