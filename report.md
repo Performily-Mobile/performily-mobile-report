@@ -843,7 +843,7 @@ Timing donde inicia la entrevista: 00:00
 
 Duración completa de la entrevista: 4 minutos 54 segundos 
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-61.PNG)
 
 **Resumen de la entrevista:**
 
@@ -865,7 +865,7 @@ Timing donde inicia la entrevista: 04:54
 
 Duración completa de la entrevista: 4 minutos 49 segundos
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-62.PNG)
 
 **Resumen de la entrevista:**
 
@@ -887,7 +887,7 @@ Timing donde inicia la entrevista: 09:43
 
 Duración completa de la entrevista: 4 minutos 41 segundos
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-63.PNG)
 
 **Resumen de la entrevista:**
 
@@ -910,7 +910,7 @@ Timing donde inicia la entrevista: 14:24
 
 Duración completa de la entrevista: 5 minutos 43 segundos
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-64.PNG)
 
 **Resumen de la entrevista:**
 
@@ -932,7 +932,7 @@ Timing donde inicia la entrevista: 20:07
 
 Duración completa de la entrevista: 3 minutos 29 segundos
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-65.PNG)
 
 **Resumen de la entrevista:**
 
@@ -954,7 +954,7 @@ Timing donde inicia la entrevista: 22:36
 
 Duración completa de la entrevista: 4 minutos 44 segundos
 
-![Entrevista](assets/imagen.png)
+![Entrevista](assets\figura-66.PNG)
 
 **Resumen de la entrevista:**
 
