@@ -176,11 +176,6 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     - [2.6.6. Bounded Context: Payroll](#266-bounded-context-payroll)
     - [2.6.7. Bounded Context: Wellbeing](#267-bounded-context-wellbeing)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-  - [Conclusiones sobre el Problem Statement](#conclusiones-sobre-el-problem-statement)
-  - [Conclusiones sobre los assumptions frente al comportamiento observado](#conclusiones-sobre-los-assumptions-frente-al-comportamiento-observado)
-  - [Conclusiones sobre los Hypothesis Statements y los criterios de éxito](#conclusiones-sobre-los-hypothesis-statements-y-los-criterios-de-exito)
-  - [Conclusiones sobre el diseño de la solución de software](#conclusiones-sobre-el-diseno-de-la-solucion-de-software)
-  - [Recomendaciones sobre los siguientes pasos del roadmap](#recomendaciones-sobre-los-siguientes-pasos-del-roadmap)
 - [Bibliografía](#bibliografia)
 
 <div style="page-break-after: always;"></div>
@@ -411,7 +406,7 @@ Desarrollar, desplegar y validar Flowboard, una solución de software con aplica
 
 1. Implementar una aplicación móvil nativa para Android desarrollada en Kotlin, con dos experiencias diferenciadas por rol: administración para Recursos Humanos y autogestión para el colaborador.
 2. Implementar una aplicación móvil cross-platform en Flutter con Dart que ofrezca una experiencia consistente con la versión nativa, evidenciando la capacidad del equipo para construir bajo ambos enfoques de desarrollo móvil. La elección de Flutter sobre las demás alternativas cross-platform habilitadas por el curso se sustenta en el estudio comparativo de Jošt y Taneski (2025), que reporta para este framework la mayor satisfacción declarada por los desarrolladores frente a React Native, con diferencia estadísticamente significativa, y lo ubica dentro del grupo de soluciones que compilan a código nativo en lugar de apoyarse en un componente web embebido.
-3. Implementar un RESTful API de elaboración interna sobre ⟨Spring Boot / ASP.NET Core / Nest⟩, documentado bajo OpenAPI Specification vía Swagger, organizado en los siete bounded contexts identificados en el dominio: identidad y acceso, colaborador y estructura organizacional, asistencia, solicitudes, beneficios, pagos y bienestar.
+3. Implementar un RESTful API de elaboración interna sobre Spring Boot, documentado bajo OpenAPI Specification vía Swagger, organizado en los siete bounded contexts identificados en el dominio: identidad y acceso, colaborador y estructura organizacional, asistencia, solicitudes, beneficios, pagos y bienestar.
 4. Incorporar almacenamiento local en el dispositivo mediante una base de datos embebida, de modo que el colaborador pueda consultar su ficha, su saldo de vacaciones, sus últimas boletas y el estado de sus solicitudes aún sin conectividad, con sincronización al restablecerse la conexión.
 5. Integrar el acceso a recursos internos del dispositivo, específicamente el sensor biométrico y el sistema de notificaciones del sistema operativo, como parte de los flujos de autenticación y de aviso de solicitudes.
 6. Integrar al menos un servicio externo de terceros para la entrega de notificaciones push a solicitantes y aprobadores mediante Firebase Cloud Messaging. Como integración adicional se evalúa una API pública de feriados nacionales para el cómputo de días hábiles en las solicitudes de vacaciones, verificando previamente que el proveedor cubra Perú.
@@ -2050,14 +2045,15 @@ Enlace de la figura: https://drive.google.com/file/d/1QT5xYU1oC38IbX-a20IhVlGOF0
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, [la aplicación web en Angular / la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local], el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos.
+El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local, el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos.
 
 ![imagen](assets/figura-58.png)
 Enlace de la figura: https://drive.google.com/file/d/1pGQclKd26a_jyMMc7pBYe4HJlgBSRqWp/view?usp=sharing
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
-El diagrama de componentes muestra cómo está organizado internamente el RESTful API. Cada componente corresponde a uno de los siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing. Además de lo que consume cada [aplicación web / aplicación móvil], el diagrama muestra las relaciones entre bounded contexts. Por ejemplo, Request consulta a Workspace para saber quién aprueba una solicitud y a Benefits para verificar el saldo de vacaciones.
+En esta sección se presenta el Deployment Diagram para Flowboard. A diferencia del diagrama de contenedores, que muestra de qué partes está formada la solución, este muestra en qué infraestructura se ejecuta cada una de ellas en el ambiente de producción y por qué protocolo se comunican. El diagrama se elaboró con Structurizr DSL a partir del diagrama de contenedores.
+El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL.
 
 ![imagen](assets/figura-56.png)
 Enlace de la figura: https://drive.google.com/file/d/15bMEiFodiW55TJcYOEIEAN_k1F9tzFDc/view?usp=sharing
@@ -3003,3 +2999,40 @@ Por otro lado, **metric_thresholds** define los umbrales configurados para cada 
 El diseño permite separar claramente la configuración de oficinas y dispositivos, las reglas de clasificación ambiental y las lecturas registradas, manteniendo la trazabilidad de cada medición desde su dispositivo de origen hasta el indicador resultante.
 
 <div style="page-break-after: always;"></div>
+
+# Conclusiones y recomendaciones
+
+* Durante el desarrollo de esta primera etapa de Flowboard se logró definir con mayor claridad la problemática que afecta a los procesos de gestión de recursos humanos dentro de organizaciones en crecimiento. A partir del análisis realizado y de las entrevistas dirigidas a personal de Recursos Humanos y colaboradores generales, se identificaron necesidades concretas relacionadas con la centralización de la información, la reducción de procesos manuales y la mejora del acceso a datos laborales desde dispositivos móviles. Entre los principales problemas encontrados destacan la dependencia de hojas de cálculo, la falta de visibilidad sobre el estado de solicitudes, la dificultad para consultar saldos de vacaciones y la necesidad constante de recurrir al área administrativa para obtener información.
+
+* Estos hallazgos permitieron definir de forma más precisa los segmentos objetivo y orientar el diseño de la solución hacia dos experiencias principales: una enfocada en la administración por parte del personal de Recursos Humanos y otra orientada a la autogestión de los colaboradores. Con ello se desarrollaron artefactos como los User Personas, la User Task Matrix y los diferentes elementos del proceso Lean UX, que ayudaron a transformar los problemas identificados en necesidades y funcionalidades concretas para Flowboard.
+
+* A nivel de diseño de software, se logró establecer una arquitectura estructurada bajo los principios de Domain-Driven Design. El dominio fue dividido en siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing, cada uno con responsabilidades y reglas de negocio claramente delimitadas. Esta separación permitió organizar mejor las capacidades de la solución y definir las relaciones existentes entre los distintos procesos del sistema.
+
+* Además, se desarrollaron los principales artefactos de arquitectura y diseño necesarios para continuar con la implementación, incluyendo EventStorming, Context Mapping, diagramas de arquitectura, diagramas de componentes, modelos de clases de dominio y diseños de base de datos. De esta manera, Flowboard cuenta actualmente con una base funcional y técnica coherente con las necesidades identificadas, lo que permitirá afrontar las siguientes etapas de desarrollo de las aplicaciones móviles y del API REST con una estructura de dominio previamente definida y organizada.
+
+<div style="page-break-after: always;"></div>
+
+# Bibliografía
+Escudero, F. (2025, enero 7). Madurez digital: ¿cuál es el panorama de las empresas en el Perú? Www.ey.com. https://www.ey.com/es_pe/insights/revista-execution/disrupcion/madurez-digital 
+
+Gestión de recursos humanos en el sector público de América latina, 2017-2021: revisión sistemática. (2022). 2, 6(2), 3965–4000. https://doi.org/10.37811/cl_rcm.v6i2.2141 
+
+Pérez, E. (2024). Transformación digital en la gestión de recursos humanos. REVISTA CIENTIFICA GLOBAL NEGOTIUM, 7(1), 27–43. https://doi.org/10.53485/rgn.v7i1.423 
+
+Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. https://doi.org/10.5281/ZENODO.16933151 
+
+View of analysis of the role of human resource information system (HRIS) in improving work efficiency and effectiveness in modern organizations. (s/f). Mryformosapublisher.org. Recuperado el 26 de abril de 2026, de https://mryformosapublisher.org/index.php/ijabm/article/view/619/1107 
+
+(S/f). Dinastipub.org. Recuperado el 26 de abril de 2026, de https://dinastipub.org/DIJMS/article/view/6175/4115
+
+Instituto Nacional de Estadística e Informática. (2025a). Perú: Estructura empresarial 2024. INEI.
+
+Instituto Nacional de Estadística e Informática. (2025b). Estadísticas de las Tecnologías de Información y Comunicación en los Hogares (Informe Técnico N.° 03, II Trimestre 2025). INEI. https://www.inei.gob.pe/media/MenuRecursivo/boletines/informetecnico_tics_iit25.pdf
+
+Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review on secure authentication mechanisms for mobile security. Sensors, 25(3), 700. https://doi.org/10.3390/s25030700
+
+Jošt, G., & Taneski, V. (2025). State-of-the-art cross-platform mobile application development frameworks: A comparative study of market and developer trends. Informatics, 12(2), 45. https://doi.org/10.3390/informatics12020045
+
+OWASP Foundation. (s. f.). OWASP Mobile Application Security Verification Standard (MASVS). https://mas.owasp.org/MASVS/ 
+
+
