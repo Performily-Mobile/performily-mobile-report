@@ -1057,6 +1057,20 @@ User Person: Maria (Colaboradores generales)
 
 ![figura-51](assets/figura-51.png)
 
+### 2.3.4. Empathy Mapping
+
+Empathy Mapping: Carlos (Personal de Recursos Humanos)
+
+[https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing](https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing)
+
+![figura-52](assets/figura-52.png)
+
+Empathy Mapping: Maria (Colaboradores generales)
+
+[https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing](https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing)
+
+![figura-53](assets/figura-52.png)
+
 ### 2.3.5. Big Picture Event Storming
 
 **![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
