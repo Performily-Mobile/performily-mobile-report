@@ -364,7 +364,6 @@ Con Flowboard, Performily lleva esa propuesta al dispositivo que el colaborador 
 | Darío Ávila De La Cruz (u202412270) | Ingeniería de Software |
 | :---- | :---- |
 | ![Figura 1. 1.1.2. Perfiles de integrantes del equipo](assets/figura-01.png) | Mi nombre es Darío Ávila, soy estudiante universitario de la carrera de Ingeniería de Software, cursando el 6.º ciclo. Cuento con conocimientos en lenguajes de programación C++ y Python, lo que me permite desarrollar soluciones técnicas eficientes y adaptables. Practico la escucha activa para comprender a fondo las necesidades tanto del equipo como de los clientes, asegurando que los objetivos se alineen con las expectativas. Además, busco soluciones innovadoras que integren distintas perspectivas, fomentando la colaboración y la creatividad. Soy flexible ante cambios inesperados en los proyectos, adaptándome rápidamente a nuevas prioridades o requerimientos. |
-
 | Diego Alonso Diaz Villalba (u202412663) | Ingeniería de Software |
 | :---- | :---- |
 | ![Figura 5. 1.1.2. Perfiles de integrantes del equipo](assets/figura-59.png) | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
@@ -1020,7 +1019,7 @@ Para la construcción de los perfiles se priorizaron los hallazgos con mayor rec
 
 [https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing](https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing)
 
-![figura-54](assets/figura-55.png)
+![figura-55](assets/figura-55.png)
 
 ### 2.3.2. User Task Matrix
 
@@ -1072,7 +1071,7 @@ Empathy Mapping: Maria (Colaboradores generales)
 
 [https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing](https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing)
 
-![figura-53](assets/figura-52.png)
+![figura-53](assets/figura-53.png)
 
 ### 2.3.5. Big Picture Event Storming
 
