@@ -1821,6 +1821,12 @@ En esta sección se presentan las user stories que definen lo que Flowboard debe
 | **Description** | **Como** Developer, **quiero** evaluar plataformas gratuitas o de bajo costo para desplegar el Landing Page, la Web Application y el API, **para** elegir la opción que se ajuste al proyecto. |
 | **Acceptance Criteria** | **Escenario 1:** Comparación de plataformas<br>**Given** el equipo revisó al menos tres plataformas de despliegue<br>**When** se termina la investigación<br>**Then** queda documentada una comparación de costo, límites y facilidad de uso<br>**And** se indica la plataforma elegida.<br><br>**Escenario 2:** Despliegue de prueba<br>**Given** se tiene una versión mínima del API<br>**When** se despliega en la plataforma elegida<br>**Then** el endpoint de prueba responde desde una URL pública. |
 
+### 2.4.2. Impact Mapping
+
+[https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing](https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing)
+
+![imagen](assets\figura-60.png)
+
 ### 2.4.3. Product Backlog
 
 En esta sección se presenta la lista priorizada de todo el trabajo necesario para construir la solución. Para ordenar los ítems tomamos en cuenta el valor que aportan al usuario y las dependencias entre ellos. Por ejemplo, primero van las historias relacionadas al registro de colaboradores y el orden de la organización, porque casi todos los demás procesos dependen de ellos, también consideramos a las historias relacionadas al landing page ya que nos permite hacer conocer a nuestro público los beneficios de nuestra solución. A cada user story le asignamos Story Points según la serie de Fibonacci para estimar su complejidad y así poder planificar los sprints. El backlog se gestiona en Trello y se irá actualizando durante el proyecto.
