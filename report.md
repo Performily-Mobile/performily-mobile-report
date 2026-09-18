@@ -102,9 +102,9 @@ Para la entrega del AV1, el trabajo se distribuyó de modo que cada integrante a
 
 Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan a continuación.
 
-![imagen]
+![imagen](assets/figura-67.png)
 
-![imagen]
+![imagen](assets/figura-68.png)
 
 <div style="page-break-after: always;"></div>
 
