@@ -130,28 +130,33 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 - [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
 - [Project Report Collaboration Insights](#project-report-collaboration-insights)
 - [Student Outcome](#student-outcome)
+- [Contenido](#contenido)
 - [Objetivos SMART](#objetivos-smart)
-  - [1. Objetivos SMART: Darío Ávila De La Cruz (u202412270)](#1-objetivos-smart-dario-avila-de-la-cruz-u202412270)
-  - [2. Objetivos SMART: Diego Alonso Díaz Villalba (u202412663)](#2-objetivos-smart-diego-alonso-diaz-villalba-u202412663)
-  - [3. Objetivos SMART: Salym Pool Gálvez Meza (u202419655)](#3-objetivos-smart-salym-pool-galvez-meza-u202419655)
+  - [1. Objetivos SMART: Darío Ávila De La Cruz (u202412270)](#1-objetivos-smart-darío-ávila-de-la-cruz-u202412270)
+  - [2. Objetivos SMART: Diego Alonso Díaz Villalba (u202412663)](#2-objetivos-smart-diego-alonso-díaz-villalba-u202412663)
+  - [3. Objetivos SMART: Salym Pool Gálvez Meza (u202419655)](#3-objetivos-smart-salym-pool-gálvez-meza-u202419655)
   - [4. Objetivos SMART: Oscar Lizandro Vasquez Llave (u202410478)](#4-objetivos-smart-oscar-lizandro-vasquez-llave-u202410478)
-  - [5. Objetivos SMART: Diego Alonso Esquicha Alcántara (u202411799)](#5-objetivos-smart-diego-alonso-esquicha-alcantara-u202411799)
-- [Capítulo I: Presentación](#capitulo-i-presentacion)
+  - [5. Objetivos SMART: Diego Alonso Esquicha Alcántara (u202411799)](#5-objetivos-smart-diego-alonso-esquicha-alcántara-u202411799)
+- [Capítulo I: Presentación](#capítulo-i-presentación)
   - [1.1. Startup Profile](#11-startup-profile)
-    - [1.1.1. Descripción de la Startup](#111-descripcion-de-la-startup)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
     - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
   - [1.2. Solution Profile](#12-solution-profile)
-    - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problematica)
+    - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
     - [1.2.2. Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
   - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
-- [Capítulo II: Requirements Development and Software Solution Design](#capitulo-ii-requirements-development-and-software-solution-design)
+- [Capítulo II: Requirements Development and Software Solution Design](#capítulo-ii-requirements-development-and-software-solution-design)
   - [2.1. Competidores](#21-competidores)
-    - [2.1.1. Análisis competitivo](#211-analisis-competitivo)
-    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tacticas-frente-a-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
   - [2.2. Entrevistas](#22-entrevistas)
-    - [2.2.1. Diseño de entrevistas](#221-diseno-de-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
-    - [2.2.3. Análisis de entrevistas](#223-analisis-de-entrevistas)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
   - [2.3. Needfinding](#23-needfinding)
     - [2.3.1. User Personas](#231-user-personas)
     - [2.3.2. User Task Matrix](#232-user-task-matrix)
@@ -165,18 +170,99 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     - [2.4.3. Product Backlog](#243-product-backlog)
   - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
     - [2.5.1. EventStorming](#251-eventstorming)
+      - [2.5.1.1. Candidate Context Discovery](#2511-candidate-context-discovery)
+      - [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
+      - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
     - [2.5.2. Context Mapping](#252-context-mapping)
     - [2.5.3. Software Architecture](#253-software-architecture)
+      - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
+      - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
+      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
   - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
     - [2.6.1. Bounded Context: IAM](#261-bounded-context-iam)
+      - [2.6.1.1. Domain Layer](#2611-domain-layer)
+      - [2.6.1.2. Interface Layer](#2612-interface-layer)
+      - [2.6.1.3. Application Layer](#2613-application-layer)
+      - [2.6.1.4. Infrastructure Layer](#2614-infrastructure-layer)
+      - [2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](#2615-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.1.6. Bounded Context Software Architecture Code Level Diagrams](#2616-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](#26161-bounded-context-domain-layer-class-diagrams)
+        - [2.6.1.6.2. Bounded Context Database Design Diagram](#26162-bounded-context-database-design-diagram)
     - [2.6.2. Bounded Context: Workspace](#262-bounded-context-workspace)
+      - [2.6.2.1. Domain Layer](#2621-domain-layer)
+      - [2.6.2.2. Interface Layer](#2622-interface-layer)
+      - [2.6.2.3. Application Layer](#2623-application-layer)
+      - [2.6.2.4. Infrastructure Layer](#2624-infrastructure-layer)
+      - [2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](#2625-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.2.6. Bounded Context Software Architecture Code Level Diagrams](#2626-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](#26261-bounded-context-domain-layer-class-diagrams)
+        - [2.6.2.6.2. Bounded Context Database Design Diagram](#26262-bounded-context-database-design-diagram)
     - [2.6.3. Bounded Context: Attendance](#263-bounded-context-attendance)
+      - [2.6.3.1. Domain Layer](#2631-domain-layer)
+      - [2.6.3.2. Interface Layer](#2632-interface-layer)
+      - [2.6.3.3. Application Layer](#2633-application-layer)
+      - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
+      - [2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](#2635-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.3.6. Bounded Context Software Architecture Code Level Diagrams](#2636-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](#26361-bounded-context-domain-layer-class-diagrams)
+        - [2.6.3.6.2. Bounded Context Database Design Diagram](#26362-bounded-context-database-design-diagram)
     - [2.6.4. Bounded Context: Request](#264-bounded-context-request)
+      - [2.6.4.1. Domain Layer](#2641-domain-layer)
+      - [2.6.4.2. Interface Layer](#2642-interface-layer)
+      - [2.6.4.3. Application Layer](#2643-application-layer)
+      - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
+      - [2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](#2645-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.4.6. Bounded Context Software Architecture Code Level Diagrams](#2646-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](#26461-bounded-context-domain-layer-class-diagrams)
+        - [2.6.4.6.2. Bounded Context Database Design Diagram](#26462-bounded-context-database-design-diagram)
     - [2.6.5. Bounded Context: Benefits](#265-bounded-context-benefits)
+      - [2.6.5.1. Domain Layer](#2651-domain-layer)
+      - [2.6.5.2. Interface Layer](#2652-interface-layer)
+      - [2.6.5.3. Application Layer](#2653-application-layer)
+      - [2.6.5.4. Infrastructure Layer](#2654-infrastructure-layer)
+      - [2.6.5.5. Bounded Context Software Architecture Component Level Diagrams](#2655-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.5.6. Bounded Context Software Architecture Code Level Diagrams](#2656-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.5.6.1. Bounded Context Domain Layer Class Diagrams](#26561-bounded-context-domain-layer-class-diagrams)
+        - [2.6.5.6.2. Bounded Context Database Design Diagram](#26562-bounded-context-database-design-diagram)
     - [2.6.6. Bounded Context: Payroll](#266-bounded-context-payroll)
+      - [2.6.6.1. Domain Layer](#2661-domain-layer)
+      - [2.6.6.2. Interface Layer](#2662-interface-layer)
+      - [2.6.6.3. Application Layer](#2663-application-layer)
+      - [2.6.6.4. Infrastructure Layer](#2664-infrastructure-layer)
+      - [2.6.6.5. Bounded Context Software Architecture Component Level Diagrams](#2665-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.6.6. Bounded Context Software Architecture Code Level Diagrams](#2666-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](#26661-bounded-context-domain-layer-class-diagrams)
+        - [2.6.6.6.2. Bounded Context Database Design Diagram](#26662-bounded-context-database-design-diagram)
     - [2.6.7. Bounded Context: Wellbeing](#267-bounded-context-wellbeing)
+      - [2.6.7.1. Domain Layer](#2671-domain-layer)
+      - [2.6.7.2. Interface Layer](#2672-interface-layer)
+      - [2.6.7.3. Application Layer](#2673-application-layer)
+      - [2.6.7.4. Infrastructure Layer](#2674-infrastructure-layer)
+      - [2.6.7.5. Bounded Context Software Architecture Component Level Diagrams](#2675-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.7.6. Bounded Context Software Architecture Code Level Diagrams](#2676-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.7.6.1. Bounded Context Domain Layer Class Diagrams](#26761-bounded-context-domain-layer-class-diagrams)
+        - [2.6.7.6.2. Bounded Context Database Design Diagram](#26762-bounded-context-database-design-diagram)
+- [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
+  - [3.1. Product design](#31-product-design)
+    - [3.1.1. Style Guidelines](#311-style-guidelines)
+      - [3.1.1.1. General Style Guidelines](#3111-general-style-guidelines)
+    - [3.1.2. Information Architecture](#312-information-architecture)
+      - [3.1.2.1. Organization Systems](#3121-organization-systems)
+      - [3.1.2.2. Labelling Systems](#3122-labelling-systems)
+      - [3.1.2.3. SEO Tags and Meta Tags](#3123-seo-tags-and-meta-tags)
+      - [3.1.2.4. Searching Systems](#3124-searching-systems)
+      - [3.1.2.5. Navigation Systems](#3125-navigation-systems)
+    - [3.1.3. Landing Page UI Design](#313-landing-page-ui-design)
+      - [3.1.3.1. Landing Page Wireframe](#3131-landing-page-wireframe)
+      - [3.1.3.2. Landing Page Mock-up](#3132-landing-page-mock-up)
+    - [3.1.4. Mobile Applications UX/UI Design](#314-mobile-applications-uxui-design)
+      - [3.1.4.1. Mobile Applications Wireframes](#3141-mobile-applications-wireframes)
+      - [3.1.4.2. Mobile Applications Wireflow Diagrams](#3142-mobile-applications-wireflow-diagrams)
+      - [3.1.4.3. Mobile Applications Mock-ups](#3143-mobile-applications-mock-ups)
+      - [3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)
+      - [3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-- [Bibliografía](#bibliografia)
+- [Bibliografía](#bibliografía)
 
 <div style="page-break-after: always;"></div>
 
@@ -679,6 +765,7 @@ Los dos segmentos conviven en la misma organización y sus problemas se retroali
 Esta división en dos segmentos se corresponde con la arquitectura de la solución. El bounded context de IAM define dos roles, personal de Recursos Humanos y colaborador, y las aplicaciones móviles exponen dos experiencias diferenciadas: administración y autogestión. En consecuencia, el Landing Page presenta dos call to action, uno por segmento, que dirigen a la descarga de la aplicación y a la sección de ayuda correspondiente.
 
 <div style="page-break-after: always;"></div>
+
 # Capítulo II: Requirements Development and Software Solution Design
 
 ## 2.1. Competidores
@@ -3004,6 +3091,648 @@ La tabla **environmental_readings** almacena las lecturas ambientales generadas 
 Por otro lado, **metric_thresholds** define los umbrales configurados para cada tipo de métrica, mientras que **threshold_ranges** almacena los rangos específicos asociados a cada indicador de salud ambiental.
 
 El diseño permite separar claramente la configuración de oficinas y dispositivos, las reglas de clasificación ambiental y las lecturas registradas, manteniendo la trazabilidad de cada medición desde su dispositivo de origen hasta el indicador resultante.
+
+<div style="page-break-after: always;"></div>
+
+# Capítulo III: Solution UI/UX Design
+
+## 3.1. Product design
+
+En este capítulo se traducen las decisiones de dominio del Capítulo II en una propuesta concreta de interfaz e interacción para los tres productos que conforman el alcance: el Landing Page, la aplicación móvil nativa en Kotlin y la aplicación móvil cross-platform en Flutter. El orden de las secciones refleja el orden en que se tomaron las decisiones. Primero se fija el sistema de diseño, porque es lo que da coherencia visual a los tres productos. Después se define cómo se organiza y se etiqueta el contenido, porque esa estructura condiciona qué pantallas existen. Recién entonces se presentan los wireframes, los wireflows, los mock-ups, los user flows y el prototipo navegable.
+
+Dos restricciones del proyecto atraviesan todo el capítulo. La primera es que el segmento de colaboradores generales accede desde un teléfono Android de gama media o de entrada, con conectividad intermitente, lo que obliga a que cada pantalla resuelva una tarea completa sin depender de la red para mostrar lo que ya se sincronizó. La segunda es la Ley N.° 29733 de Protección de Datos Personales, que exige que cada colaborador acceda únicamente a su propia información laboral, y que en la interfaz se materializa en una separación estricta entre la experiencia de administración y la de autogestión.
+
+### 3.1.1. Style Guidelines
+
+El sistema de diseño de Flowboard se apoya en Material Design 3 y se implementa de forma nativa en cada producto: con los componentes de Material 3 de Jetpack Compose en la aplicación nativa, con los widgets de Material de Flutter en la aplicación cross-platform y con HTML y CSS propios en el Landing Page. La decisión de partir de un design system existente responde a una restricción del segmento objetivo: los usuarios ya conocen los patrones de Android, de modo que reutilizar sus componentes reduce el costo de aprendizaje y evita que el equipo invierta esfuerzo en reinventar comportamientos que el sistema operativo ya resuelve.
+
+#### 3.1.1.1. General Style Guidelines
+
+**Branding**
+
+La identidad visual de Flowboard se construye sobre el mismo principio que guía al producto: la información laboral debe ser clara y estar disponible sin intermediarios. La marca evita cualquier recurso decorativo que compita con los datos que la plataforma expone.
+
+- **Logotipo:** combina un isotipo y el nombre de la marca en tipografía Inter Bold. El isotipo representa un tablero de flujo formado por tres bloques desplazados que sugieren el paso de una solicitud entre estados, y funciona de forma autónoma cuando el espacio disponible es reducido, como en el icono de la aplicación o en la barra superior.
+
+- **Versiones:** se definen tres. La principal en Primary (#39608F) sobre fondo claro, la inversa en blanco (#FFFFFF) sobre fondo Primary o Dark Primary, y la monocromática en Primary Text (#191C20) para documentos impresos y exportaciones en escala de grises.
+
+- **Área de resguardo:** alrededor del logotipo se reserva un margen libre equivalente a la altura de la letra F del logotipo por cada lado. Ningún otro elemento gráfico o de texto invade esa zona.
+
+- **Tamaño mínimo:** el logotipo completo no se reproduce por debajo de 120dp de ancho en pantalla. Por debajo de ese umbral se utiliza únicamente el isotipo, con un mínimo de 24dp.
+
+- **Usos no permitidos:** no se deforma la proporción del logotipo, no se altera su paleta fuera de las tres versiones definidas, no se aplican sombras ni contornos, y no se coloca sobre fotografías o fondos de bajo contraste que comprometan su legibilidad.
+
+**Typography**
+
+Flowboard presenta fichas de personal, saldos, boletas y estados de solicitudes, es decir, contenido donde la lectura rápida y la precisión numérica son más importantes que la expresividad tipográfica. Por eso se adopta una sola familia, Inter, en las variantes Regular, Medium y Semi Bold.
+
+Inter fue diseñada para optimizar la legibilidad en pantallas de alta densidad de píxeles, lo que resulta determinante en un teléfono de gama de entrada, donde el texto se lee a menor tamaño físico que en un monitor. Al ser una fuente de código abierto y amplia adopción, garantiza un comportamiento visual consistente entre la aplicación nativa, la aplicación en Flutter y el Landing Page.
+
+La escala tipográfica se expresa en sp, de modo que respeta el tamaño de fuente que el usuario haya configurado en su dispositivo. Esta decisión es parte del diseño inclusivo: un colaborador con baja visión que haya ampliado la tipografía del sistema verá la aplicación ampliada sin que los textos se recorten, porque ningún contenedor fija una altura en píxeles absolutos.
+
+| Nivel | Tamaño | Variante | Color | Uso |
+| :---- | :----: | :---- | :---- | :---- |
+| Título de pantalla | 22sp | Inter Regular | Primary Text #191C20 | Título en la barra superior y encabezado de hojas inferiores |
+| Encabezado de sección | 16sp | Inter Medium | Primary Text #191C20 | Títulos de tarjetas y agrupadores dentro del contenido |
+| Cuerpo de texto | 14sp | Inter Regular | Primary Text #191C20 | Contenido principal, valores de los campos y filas de listado |
+| Texto secundario | 14sp | Inter Regular | Secondary Text #43474E | Descripciones de apoyo, ayudas de campo y metadatos |
+| Etiqueta | 12sp | Inter Medium | Secondary Text #43474E | Rótulos de la barra de navegación, chips y pies de campo |
+| Etiqueta activa | 12sp | Inter Semi Bold | Primary Text #191C20 | Destino seleccionado en la barra de navegación |
+
+**Figura 50:** *Tipografía y jerarquía visual de Flowboard*
+
+![Tipografía y jerarquía visual de Flowboard](assets/Chapter-3/tipografia-jerarquia.png)
+
+*Nota.* Escala tipográfica en sp aplicada a las pantallas de la aplicación móvil, con la variante de Inter y el color asignado a cada nivel. Elaboración propia.
+
+**Colors**
+
+La paleta se construye sobre un azul pizarra institucional que transmite sobriedad corporativa sin recurrir a saturaciones altas, que resultan fatigosas en jornadas de consulta repetida. Los colores se aplican mediante el esquema de color de Material 3, de modo que los componentes reciben el tono que les corresponde según su rol y no mediante valores escritos directamente en cada pantalla.
+
+| Rol | Hexadecimal | Aplicación |
+| :---- | :----: | :---- |
+| Primary | #39608F | Acciones principales, enlaces, botones de texto e iconos activos |
+| Dark Primary | #2A5079 | Estados presionados y encabezados de alto énfasis |
+| Light Primary | #D7E3F8 | Indicador del destino activo, contenedores de icono y avatares |
+| Primary Text | #191C20 | Títulos y valores críticos |
+| Secondary Text | #43474E | Descripciones, iconos inactivos y rótulos de apoyo |
+| Surface | #F8F9FF | Fondo general de las pantallas |
+| Surface Container | #F1F3FA | Hojas inferiores y superficies elevadas |
+| Navigation Surface | #ECEEF4 | Fondo de la barra de navegación inferior |
+| Card Surface | #FFFFFF | Tarjetas y listados sobre el fondo general |
+| Outline | #E5E7EE | Bordes de tarjeta y separadores de fila |
+| Accent | #D3C0D8 | Puntos de énfasis y marcadores de sección |
+| Text sobre Primary | #FFFFFF | Texto e iconos sobre fondos de color primario |
+
+**Figura 51:** *Paleta de colores de Flowboard*
+
+![Paleta de colores de Flowboard](assets/Chapter-3/paleta-colores.png)
+
+*Nota.* Códigos hexadecimales y rol asignado a cada color dentro del esquema de Material 3 compartido por el Landing Page y las dos aplicaciones móviles. Elaboración propia.
+
+**Verificación de contraste**
+
+Las combinaciones cromáticas se verificaron contra el criterio 1.4.3 de la WCAG 2.1, que exige una relación de contraste mínima de 4.5:1 para texto normal y 3:1 para texto de gran tamaño, y contra el criterio 1.4.11, que exige 3:1 para componentes de interfaz e indicadores gráficos portadores de información.
+
+| Combinación | Relación | Resultado |
+| :---- | :----: | :---- |
+| Primary Text #191C20 sobre Surface #F8F9FF | 16.27:1 | Cumple AAA |
+| Primary Text #191C20 sobre Card Surface #FFFFFF | 17.10:1 | Cumple AAA |
+| Secondary Text #43474E sobre Surface #F8F9FF | 8.88:1 | Cumple AAA |
+| Secondary Text #43474E sobre Navigation Surface #ECEEF4 | 8.05:1 | Cumple AAA |
+| Secondary Text #43474E sobre Surface Container #F1F3FA | 8.42:1 | Cumple AAA |
+| Blanco #FFFFFF sobre Primary #39608F | 6.47:1 | Cumple AA |
+| Blanco #FFFFFF sobre Dark Primary #2A5079 | 8.33:1 | Cumple AAA |
+| Primary #39608F sobre Surface #F8F9FF | 6.16:1 | Cumple AA |
+| Primary #39608F sobre Light Primary #D7E3F8 | 5.00:1 | Cumple AA |
+| Primary Text #191C20 sobre Light Primary #D7E3F8 | 13.22:1 | Cumple AAA |
+
+Dos precisiones sobre esta verificación. El color Outline #E5E7EE alcanza una relación de 1.24:1 sobre blanco, muy por debajo del umbral del criterio 1.4.11, por lo que se emplea exclusivamente como separador decorativo y nunca como único portador de información: toda agrupación delimitada por un borde cuenta además con un encabezado de texto que la identifica. Del mismo modo, ningún estado se comunica solo mediante color. Los chips de estado de las solicitudes, de la asistencia y de los pagos incorporan siempre la palabra que nombra el estado, de manera que un usuario con discromatopsia distingue Pendiente de Aprobado por el texto y no por el matiz.
+
+**Spacing**
+
+La arquitectura de espaciados adopta una unidad base de 8dp. Todos los márgenes, rellenos y dimensiones de los componentes se ajustan a múltiplos de ese valor, lo que facilita la implementación simultánea en Jetpack Compose y en Flutter y asegura un ritmo visual uniforme entre ambas aplicaciones.
+
+| Medida | Valor | Aplicación |
+| :---- | :----: | :---- |
+| Margen lateral de contenido | 16dp | Separación entre el borde de la pantalla y el contenido |
+| Separación entre tarjetas | 12dp | Espacio vertical entre elementos consecutivos de una lista |
+| Relleno interno de tarjeta | 16dp | Espacio entre el borde de la tarjeta y su contenido |
+| Radio de tarjeta | 12dp | Esquinas de tarjetas y campos de texto |
+| Radio de hoja inferior | 28dp | Esquinas superiores de las hojas desplegables |
+| Altura de la barra superior | 64dp | Barra con el título de pantalla y las acciones |
+| Altura de la barra de navegación | 80dp | Barra inferior con los cinco destinos |
+| Área táctil mínima | 48dp | Todo elemento accionable, incluidos los iconos de 24dp |
+
+El último valor merece una justificación propia. Material Design establece 48dp como área táctil mínima porque equivale aproximadamente a nueve milímetros físicos, que es la medida promedio de la yema de un dedo. En Flowboard esta regla se aplica sin excepción: los iconos se dibujan a 22dp o 24dp, pero su contenedor accionable mide 48dp, de modo que el usuario no necesita precisión para activarlos. Es una decisión de diseño inclusivo, porque beneficia en particular a usuarios con temblor o con movilidad reducida en las manos.
+
+**Figura 52:** *Componentes base de la interfaz móvil*
+
+![Componentes base de la interfaz móvil](assets/Chapter-3/componentes-base.png)
+
+*Nota.* Especificación de botones, campos de texto, chips de estado, tarjetas y listados, con sus medidas y sus estados. Elaboración propia.
+
+**Figura 53:** *Retícula de 8dp y áreas táctiles*
+
+![Retícula de 8dp y áreas táctiles](assets/Chapter-3/areas-tactiles.png)
+
+*Nota.* Aplicación de la unidad base de 8dp a los márgenes y rellenos de una pantalla tipo, con el área táctil de 48dp superpuesta sobre los elementos accionables. Elaboración propia.
+
+**Tone of communication**
+
+Las cuatro dimensiones del tono de voz se definen a partir de la naturaleza del contenido que la plataforma expone. Flowboard muestra remuneraciones, saldos de vacaciones y estados de solicitudes, es decir, información sobre la que el usuario toma decisiones y sobre la que puede haber desacuerdo con su empleador. Eso condiciona las cuatro decisiones.
+
+- **Serio antes que divertido:** no se emplean recursos humorísticos ni mensajes informales en confirmaciones, errores ni estados vacíos. El humor resta credibilidad en una pantalla que muestra cuánto gana una persona o cuántos días de descanso le quedan.
+
+- **Formal moderado antes que casual:** se usa un registro profesional, sin jerga pero también sin lenguaje burocrático ni tecnicismos legales innecesarios. La interfaz dice "Tu solicitud está pendiente de aprobación por Juan Pérez" y no "La petición se encuentra en estado de evaluación por la instancia autorizadora correspondiente".
+
+- **Respetuoso antes que irreverente:** los mensajes no interpelan ni culpan al usuario. Un error de validación indica qué falta y cómo corregirlo, sin señalarlo como responsable del fallo.
+
+- **Sereno antes que entusiasta:** las confirmaciones informan sin celebrar y sin signos de exclamación. Una solicitud aprobada se comunica como un hecho, porque el valor que la plataforma ofrece es la certeza y no la emoción.
+
+Estas cuatro decisiones se aplican de forma consistente en el Landing Page y en las dos aplicaciones móviles, y se mantienen en las dos versiones idiomáticas de la interfaz, en_US y es_419.
+
+**Web Style Guidelines**
+
+El Landing Page es el único producto del alcance que se consume desde un navegador, por lo que es el único que requiere un comportamiento adaptable por ancho de ventana. Se definen dos puntos de corte, en 600px y en 1024px, que separan la presentación en una columna para teléfono, dos columnas para tableta y tres columnas para escritorio. La decisión de trabajar primero la versión de teléfono y después ampliarla responde al mismo hallazgo que justifica todo el proyecto: el visitante del segmento de colaboradores llega mayoritariamente desde el navegador de su celular.
+
+El Landing Page reutiliza la paleta, la tipografía y la escala de espaciado definidas arriba, pero expresadas en píxeles y rem en lugar de dp y sp. Los llamados a la acción emplean Primary sobre fondo claro para la acción principal y un botón de contorno para la secundaria, de modo que en cada bloque existe una sola acción visualmente dominante.
+
+**Mobile Style Guidelines**
+
+Las dos aplicaciones móviles comparten el mismo lienzo de referencia de 360dp de ancho, que corresponde a la clase de ventana compacta de Android y cubre la mayor parte de los equipos de gama media y de entrada del segmento objetivo. Sobre ese lienzo se fijan cuatro reglas que ambas implementaciones deben respetar por igual.
+
+La primera es que la navegación principal vive en una barra inferior de cinco destinos y nunca en un menú lateral, porque el pulgar alcanza con comodidad la franja inferior de la pantalla y no el borde superior izquierdo. La segunda es que las acciones destructivas o irreversibles, como cancelar una solicitud o registrar un cese, se confirman en una hoja inferior y no en un cuadro de diálogo centrado, para mantener la confirmación dentro del área alcanzable. La tercera es que los formularios largos se dividen en pasos, de modo que ninguna pantalla exija desplazamiento vertical extenso con el teclado abierto. La cuarta es que todo contenido que ya fue sincronizado permanece visible sin conexión, acompañado de la marca temporal de su última actualización, en lugar de mostrarse vacío.
+
+La diferencia entre la implementación nativa y la cross-platform no debe producir diferencias visuales. Kotlin con Jetpack Compose y Flutter con sus widgets de Material parten del mismo Material Design 3, de modo que los mismos tokens de color, tipografía y espaciado se declaran una vez por producto y producen el mismo resultado. El único punto donde las dos implementaciones difieren de forma deliberada es el componente biométrico, por razones que se explican en la sección de prototipado.
+
+### 3.1.2. Information Architecture
+
+La arquitectura de información de Flowboard responde a una tensión propia del producto: la plataforma administra siete dominios de negocio, pero el colaborador general entra a resolver una sola duda puntual y rara vez vuelve el mismo día. Si la estructura reflejara los siete bounded contexts tal como están modelados, el usuario tendría que entender el modelo de dominio para encontrar su saldo de vacaciones. Por eso la organización del contenido no copia la arquitectura del software, sino que parte de las tareas que cada segmento declaró en las entrevistas.
+
+#### 3.1.2.1. Organization Systems
+
+La aplicación se divide en dos experiencias que se determinan por el rol de la cuenta autenticada. No existen dos aplicaciones ni dos accesos distintos: el usuario inicia sesión una sola vez y la plataforma reconoce si es personal de Recursos Humanos o colaborador, y construye la barra de navegación en consecuencia. El personal de Recursos Humanos dispone además de la vista de autogestión, porque también es colaborador de la organización y consulta sus propias boletas y su propio saldo.
+
+**Experiencia de autogestión del colaborador**
+
+Agrupa lo que una persona necesita sobre su propio vínculo laboral: su perfil y su expediente documental, su historial de asistencia y la justificación de inasistencias, sus solicitudes y el seguimiento de su estado, sus beneficios y su saldo de vacaciones, y sus boletas de pago con el estado del depósito.
+
+**Experiencia de administración de Recursos Humanos**
+
+Agrupa la operación sobre el resto de la organización: el ciclo de vida del colaborador con su ficha, su expediente y sus movimientos de puesto, el catálogo de áreas y posiciones, el organigrama, la asistencia por área y por persona, los tipos de solicitud y la bandeja de trámites, el catálogo y la asignación de beneficios, la carga de boletas y el control de pagos, y los indicadores ambientales de los espacios de trabajo.
+
+**Rol de aprobador**
+
+El colaborador que tiene personal a cargo recibe una bandeja de solicitudes por aprobar dentro de su propia experiencia de autogestión. No se trata de una tercera experiencia ni de un permiso otorgado manualmente: la condición de aprobador se deriva de tener subordinados asignados en Workspace, de modo que aparece y desaparece sola cuando cambia la estructura organizacional.
+
+**Sistemas de organización visual**
+
+- **Organización jerárquica:** se aplica a la estructura organizacional y al orden de lectura dentro de cada pantalla. En el organigrama la jerarquía visual reproduce la estructura real de la organización en el orden Organización, Área, Colaborador. En el panel de Recursos Humanos, los indicadores agregados ocupan el nivel superior y el detalle por colaborador queda subordinado a ellos mediante el tamaño tipográfico y el contraste definidos en la sección 3.1.1.1.
+
+- **Organización secuencial:** se aplica a los procesos que el usuario completa paso a paso, donde el orden es crítico porque cada paso condiciona al siguiente. En móvil esta organización cumple además una función práctica, que es evitar formularios extensos sobre una pantalla de 360dp con el teclado abierto. Se estructuran tres flujos por pasos: el registro de un nuevo colaborador, que avanza de datos personales a contrato y asignación de área, puesto y jefe directo; la creación de una solicitud, que avanza de la selección del tipo al detalle con validación de saldo y luego a la revisión y envío; y la resolución de una solicitud, que avanza de la revisión del detalle a la decisión y al registro obligatorio del motivo cuando se rechaza.
+
+- **Organización matricial:** se aplica a los conjuntos de datos bidimensionales, que son el control de asistencia de un período, con colaboradores en un eje y días en el otro, y el registro de beneficios entregados, con colaboradores en un eje y tipos de beneficio en el otro. Aquí se tomó una decisión de adaptación al medio: una matriz completa resulta ilegible en un ancho de 360dp, de modo que en la aplicación móvil la matriz se presenta colapsada en un listado filtrable por área y por período, donde cada fila resume el estado de un colaborador y abre el detalle día por día al tocarla. La estructura de los datos sigue siendo matricial, pero la navegación la recorre por una dimensión a la vez.
+
+**Esquemas de categorización del contenido**
+
+- **Según audiencia:** es el criterio primario de división del sistema. Tras la autenticación, la plataforma canaliza al usuario hacia la experiencia de administración o la de autogestión según el rol de su cuenta. Esta separación no responde solo a la usabilidad, sino a la restricción legal de la Ley N.° 29733, que obliga a que cada colaborador acceda exclusivamente a su información personal.
+
+- **Por tópicos:** es el criterio organizativo interno dentro de cada experiencia. El contenido se agrupa en los dominios que el usuario reconoce, que son colaboradores, asistencia, solicitudes, beneficios y vacaciones, boletas, y espacios de trabajo. La nomenclatura se mantiene alineada con el Ubiquitous Language definido en la sección 2.3.6 para evitar que una misma entidad reciba nombres distintos en pantallas distintas.
+
+- **Cronológico:** se aplica a todas las entidades que constituyen registros históricos, que son la asistencia, las solicitudes, la entrega de beneficios, los movimientos del saldo de vacaciones y las boletas. En todos los casos el ordenamiento por defecto es descendente, del más reciente al más antiguo, porque el patrón de consulta observado en las entrevistas se concentra en el período en curso.
+
+- **Alfabético:** se aplica como ordenamiento por defecto en los listados donde el usuario busca una persona o una unidad concreta y no existe una prioridad temporal, que son el directorio de colaboradores ordenado por apellido y el listado general de áreas y posiciones.
+
+**Figura 54:** *Sistemas de organización de la aplicación móvil*
+
+![Sistemas de organización de la aplicación móvil](assets/Chapter-3/sistemas-organizacion.png)
+
+*Nota.* Distribución de los contenidos entre la experiencia de autogestión y la de administración, con el esquema de categorización aplicado a cada grupo. Elaboración propia.
+
+#### 3.1.2.2. Labelling Systems
+
+El sistema de etiquetado se rige por cuatro criterios. El primero es la sintaxis concisa: ninguna etiqueta de navegación supera las dos palabras, porque los rótulos de la barra inferior disponen de alrededor de 64dp de ancho y un texto más largo se trunca. El segundo es la consistencia semántica: un mismo concepto recibe la misma etiqueta en todas las pantallas, en los mensajes del sistema y en las notificaciones push. El tercero es la orientación a la acción, de modo que los botones nombran lo que hacen y no el objeto sobre el que actúan. El cuarto es el uso de la primera persona en la experiencia de autogestión, que distingue de inmediato lo propio de lo ajeno: el colaborador ve "Mis solicitudes" y el personal de Recursos Humanos ve "Todas las solicitudes".
+
+**Etiquetas de navegación principal**
+
+| Experiencia | Destinos de la barra inferior |
+| :---- | :---- |
+| Autogestión del colaborador | Inicio, Solicitudes, Asistencia, Boletas, Perfil |
+| Administración de Recursos Humanos | Panel, Colaboradores, Solicitudes, Asistencia, Más |
+
+**Etiquetas de estado**
+
+Los estados son el conjunto de etiquetas más sensible del producto, porque son los que el usuario interpreta para saber si debe actuar. Todos se representan mediante un chip que combina color y texto, nunca color solo.
+
+| Conjunto | Etiquetas |
+| :---- | :---- |
+| Estado de una solicitud | Pendiente, En revisión, Aprobado, Rechazado, Cancelada |
+| Estado de asistencia del día | Puntual, Tardanza, Inasistencia, Incompleto, Justificado |
+| Estado del colaborador | Activo, Suspendido, Cesado |
+| Estado del depósito de una boleta | Pendiente, Pagado, Observado |
+| Indicador ambiental de un espacio | Óptimo, Aceptable, Deficiente, Peligroso |
+
+**Asociaciones de etiquetas**
+
+Algunas etiquetas funcionan como promesa de lo que el usuario encontrará en otro lugar y por eso se eligieron de forma deliberada. "Perfil" agrupa los datos personales, el expediente documental y el organigrama del área, de modo que el colaborador no busca sus contratos en una sección aparte. "Más" concentra en la experiencia de administración todo lo que no cabe en los cuatro primeros destinos, que son áreas y posiciones, tipos de solicitud, beneficios, boletas y espacios de trabajo, y evita que la barra inferior supere los cinco destinos que Material Design admite. "Cuenta y seguridad" reúne el cambio de contraseña, el desbloqueo biométrico, el idioma y los términos, porque las entrevistas mostraron que el usuario asocia esas cuatro cosas con la noción de configuración de su acceso.
+
+#### 3.1.2.3. SEO Tags and Meta Tags
+
+**Landing Page**
+
+El Landing Page se encuentra desplegado y sus etiquetas se encuentran ya implementadas. El idioma por defecto del sitio es el español latinoamericano, con alternancia a inglés mediante el selector del encabezado.
+
+| Etiqueta | Valor |
+| :---- | :---- |
+| Title | Flowboard, gestión de personas desde el celular de tu equipo |
+| Meta description | Flowboard reúne la ficha del colaborador, la asistencia, las solicitudes, los beneficios y las boletas en una sola app móvil |
+| Meta keywords | recursos humanos, gestión de colaboradores, control de asistencia, saldo de vacaciones, solicitudes laborales, autogestión del colaborador, Flowboard |
+| Meta author | Performily |
+| Meta robots | index, follow |
+| Meta viewport | width=device-width, initial-scale=1 |
+
+El Title combina el nombre de la marca con la propuesta de valor en una sola frase, lo que permite que el resultado de búsqueda se entienda sin necesidad de leer la descripción. La descripción enumera los cinco dominios que el producto cubre, porque las consultas del segmento objetivo no se formulan por el nombre del producto, que es desconocido, sino por la necesidad concreta. Las palabras clave se escogieron sobre esa misma base, priorizando expresiones que un analista de Recursos Humanos escribiría al buscar una herramienta.
+
+**ASO de las aplicaciones móviles**
+
+Las dos aplicaciones se distribuyen durante el ciclo mediante Firebase App Distribution y no mediante una tienda pública, pero los elementos de App Store Optimization se definen igual, porque condicionan el nombre que aparece bajo el icono en el lanzador de Android y porque constituyen el insumo de una eventual publicación en Google Play.
+
+| Elemento | Valor | Límite de Google Play |
+| :---- | :---- | :----: |
+| App Title | Flowboard: RR.HH. en tu móvil | 30 caracteres |
+| App subtitle | Vacaciones, boletas y solicitudes en tu celular | 80 caracteres |
+| App keywords | recursos humanos, boletas de pago, vacaciones, asistencia, solicitudes, permisos, beneficios, colaborador, RRHH, autogestión | No aplica como campo propio |
+| App description | Flowboard reúne en una sola aplicación todo lo que necesitas saber sobre tu vínculo laboral. Consulta tu ficha, tu puesto y tu jefe directo. Revisa tu asistencia del período y justifica una inasistencia. Envía solicitudes de vacaciones, licencias y permisos, y sigue su estado hasta la respuesta. Consulta tu saldo de vacaciones y los beneficios que te corresponden. Descarga tus boletas de pago y verifica el estado de cada depósito. Si tienes personal a cargo, resuelve las solicitudes de tu equipo desde la notificación, sin abrir la computadora. Tu información sensible queda protegida con la huella o el rostro de tu propio dispositivo, y lo que ya sincronizaste permanece disponible aunque te quedes sin señal. | 4000 caracteres |
+
+El App Title antepone el nombre de la marca al descriptor funcional porque Android trunca el texto bajo el icono alrededor de los doce caracteres, de modo que lo primero que el usuario lee debe ser el nombre del producto. En Google Play las palabras clave no constituyen un campo independiente como en App Store, sino que se indexan desde el título, la descripción breve y la descripción completa, razón por la cual los términos listados aparecen distribuidos de forma natural dentro del texto de la descripción y no como una enumeración aislada.
+
+#### 3.1.2.4. Searching Systems
+
+La búsqueda cumple funciones distintas en cada experiencia, y por eso se resolvió de dos maneras.
+
+En la experiencia de administración la búsqueda es el principal medio de acceso al contenido, porque el personal de Recursos Humanos trabaja sobre un universo de cientos de colaboradores. El listado de colaboradores incorpora un campo de búsqueda persistente en la barra superior que consulta por nombre, apellido y documento de identidad, y devuelve resultados conforme se escribe. Debajo del campo se disponen chips de filtro por área y por estado del colaborador, que se combinan entre sí y con el texto buscado. Los resultados conservan el formato de fila del listado original, con el nombre, el puesto, el área y el chip de estado, de modo que el usuario no necesita reinterpretar una presentación distinta. Cuando ninguna combinación arroja coincidencias, la pantalla muestra un estado vacío que indica qué criterios están aplicados y ofrece limpiarlos, en lugar de un listado en blanco sin explicación.
+
+En la experiencia de autogestión no se ofrece búsqueda por texto, y la decisión es deliberada. El colaborador consulta exclusivamente su propia información, cuyo volumen es reducido, de modo que un campo de búsqueda añadiría un paso sin resolver ninguna tarea. En su lugar se ofrece filtrado directo: los períodos en el historial de asistencia y en el listado de boletas, y los chips de estado en el listado de solicitudes. Este filtrado es también el mecanismo de recuperación cuando el usuario está sin conexión, porque opera sobre los datos ya almacenados en el dispositivo.
+
+La bandeja del aprobador incorpora un caso intermedio, con botones segmentados que separan las solicitudes pendientes de las ya resueltas y chips que filtran por tipo de trámite, porque el volumen que maneja un jefe de área es mayor que el de un colaborador pero mucho menor que el de Recursos Humanos.
+
+#### 3.1.2.5. Navigation Systems
+
+La navegación se apoya en cinco mecanismos, cada uno asignado a un tipo de recorrido.
+
+- **Barra de navegación inferior:** es el mecanismo principal y permanece visible en todas las pantallas de primer nivel. Contiene cinco destinos, que es el máximo que Material Design admite antes de que los rótulos se trunquen, y su composición depende del rol de la cuenta según la tabla de la sección 3.1.2.2. El destino activo se señala con el rótulo en Inter Semi Bold y con un contenedor en Light Primary detrás del icono, es decir, con dos señales simultáneas y no solo con color.
+
+- **Barra superior con retroceso:** gobierna la profundidad. Toda pantalla de segundo nivel o posterior presenta el título de la sección y un control de retroceso que devuelve al nivel anterior, de modo que el usuario siempre dispone de una salida sin recurrir al gesto del sistema.
+
+- **Hojas inferiores:** resuelven las decisiones puntuales que no justifican abandonar la pantalla actual, como elegir un idioma, confirmar una cancelación, registrar el motivo de un rechazo o autenticarse con biometría. Se eligieron por encima de los diálogos centrados porque aparecen en la franja inferior de la pantalla, que es la que el pulgar alcanza con comodidad.
+
+- **Pestañas:** segmentan un mismo contenido cuando existe más de una vista equivalente, como en áreas y posiciones o en el detalle del colaborador, y evitan multiplicar destinos en la barra inferior.
+
+- **Navegación desde la notificación:** la notificación push de un cambio de estado abre directamente el detalle de la solicitud que la originó, sin pasar por el listado. Este recorrido es el que sostiene la hipótesis HS-05, porque reduce a un toque la distancia entre el aviso y la acción del aprobador, que es un usuario de baja frecuencia.
+
+La retroalimentación del sistema se entrega mediante snackbars en la parte inferior para las confirmaciones de acciones completadas, mediante mensajes en línea bajo el campo correspondiente para los errores de validación, y mediante estados vacíos explicativos cuando un listado no tiene contenido. Ninguna de las tres interrumpe el flujo con un diálogo modal.
+
+**Figura 55:** *Mapa de navegación de la aplicación móvil*
+
+![Mapa de navegación de la aplicación móvil](assets/Chapter-3/mapa-navegacion.png)
+
+*Nota.* Destinos de primer nivel por rol y profundidad de navegación hacia las pantallas de detalle, con el recorrido que abre la notificación push. Elaboración propia.
+
+### 3.1.3. Landing Page UI Design
+
+El Landing Page es el primer punto de contacto público con Flowboard y su único objetivo es conseguir que el visitante descargue la aplicación o solicite una demostración. Traduce las decisiones de las dos secciones anteriores de tres maneras. De la guía de estilo toma la paleta, la tipografía Inter y la escala de espaciado, de modo que quien llega a la aplicación después de visitar el sitio reconoce el mismo producto. De la arquitectura de información toma la división por audiencia, que aquí se materializa en un bloque que presenta las dos experiencias por separado en lugar de describir una funcionalidad genérica. Y del tono de comunicación toma el registro sereno, visible en que ningún titular promete transformaciones ni emplea signos de exclamación.
+
+La estructura se resolvió en nueve secciones, codificadas de LP-01 a LP-09, que recorren la propuesta de valor, las funcionalidades, los beneficios medibles, las dos experiencias, el modo de uso sin computadora, la protección biométrica de la información sensible, los siete módulos del producto, las preguntas frecuentes y el cierre con los llamados a la acción. El pie de página agrupa los accesos en tres columnas, Producto, Para ti y Legal, esta última con los términos del servicio y la política de privacidad que exige la Ley N.° 29733.
+
+El sitio se encuentra desplegado y accesible en https://performily-mobile.github.io/flowboard-mobile-landing-page/
+
+#### 3.1.3.1. Landing Page Wireframe
+
+Los wireframes fijan la estructura y el orden de lectura de las nueve secciones sin comprometer color ni tipografía, y se elaboraron en las dos resoluciones de referencia. La versión de navegador de escritorio distribuye el contenido en dos y tres columnas según el bloque, mientras que la versión de navegador móvil colapsa todo a una sola columna, reordena los llamados a la acción para que queden dentro del primer desplazamiento y convierte el menú del encabezado en un control desplegable.
+
+El orden de las secciones responde a una decisión de arquitectura de información y no a una convención. El bloque de seguridad, que normalmente ocuparía un lugar secundario, se sitúa antes del detalle de módulos porque la objeción que el equipo anticipa en el segmento de colaboradores no es funcional sino de privacidad: la pregunta es si su remuneración queda expuesta al instalar una aplicación del empleador en un teléfono personal. Responderla antes de enumerar funcionalidades evita que el visitante abandone la página con esa duda sin resolver.
+
+En la propuesta se aplican los principios de diseño inclusivo definidos para el producto. El contenido conserva una jerarquía de encabezados correcta de H1 a H3 que permite recorrer la página con un lector de pantalla, cada bloque interactivo recibe foco visible en un orden lógico, las imágenes informativas cuentan con texto alternativo y ningún mensaje depende únicamente del color para ser comprendido.
+
+**Figura 56:** *Wireframe del Landing Page, versión de navegador de escritorio*
+
+![Wireframe del Landing Page en escritorio](assets/Chapter-3/landing-wireframe-desktop.png)
+
+*Nota.* Secciones LP-01 a LP-09 en su distribución de dos y tres columnas, con el encabezado fijo y el pie de página en tres bloques. Elaboración propia.
+
+**Figura 57:** *Wireframe del Landing Page, versión de navegador móvil*
+
+![Wireframe del Landing Page en móvil](assets/Chapter-3/landing-wireframe-mobile.png)
+
+*Nota.* Las mismas secciones colapsadas a una columna, con el menú desplegable y el llamado a la acción principal dentro del primer desplazamiento. Elaboración propia.
+
+#### 3.1.3.2. Landing Page Mock-up
+
+Los mock-ups aplican sobre esos wireframes el sistema de diseño de la sección 3.1.1.1. El azul pizarra Primary se reserva para la acción principal de cada bloque, de modo que en ninguna sección compiten dos botones por la misma atención, y el Light Primary se emplea como fondo de las secciones intercaladas para marcar el ritmo de lectura sin introducir un color nuevo. Los mock-ups se codifican de MK-01 a MK-09 y mantienen correspondencia uno a uno con los wireframes, de modo que cualquier cambio estructural se puede rastrear entre ambas versiones.
+
+El bloque de las dos experiencias es el que más trabajo de diseño concentró, porque debe comunicar en un solo golpe de vista que se trata de una aplicación y no de dos productos distintos. Se resolvió con dos columnas simétricas que comparten el mismo marco de dispositivo y se diferencian solo por el contenido de la pantalla y por el rótulo del segmento, apoyando visualmente la decisión de producto de mantener un único inicio de sesión que reconoce el rol.
+
+**Figura 58:** *Mock-up del Landing Page, versión de navegador de escritorio*
+
+![Mock-up del Landing Page en escritorio](assets/Chapter-3/landing-mockup-desktop.png)
+
+*Nota.* Aplicación de la paleta, la tipografía Inter y la escala de espaciado sobre las secciones LP-01 a LP-09. Elaboración propia.
+
+**Figura 59:** *Mock-up del Landing Page, versión de navegador móvil*
+
+![Mock-up del Landing Page en móvil](assets/Chapter-3/landing-mockup-mobile.png)
+
+*Nota.* Versión de una columna con los llamados a la acción diferenciados por segmento. Elaboración propia.
+
+### 3.1.4. Mobile Applications UX/UI Design
+
+El diseño de las aplicaciones móviles se construyó en cuatro pasos encadenados. Los wireframes fijan la estructura de cada pantalla, los wireflows muestran cómo se encadenan esas pantallas durante una tarea completa, los mock-ups aplican el sistema de diseño y los user flows describen la lógica de decisión de cada recorrido, incluidos los caminos alternos y los bloqueos por regla de negocio.
+
+Todas las pantallas se codifican con el prefijo MA y una numeración correlativa, de MA-01 a MA-83. Esa codificación es la misma en los wireframes, en los mock-ups, en los wireflows, en los user flows y en el prototipo, de modo que cualquier pantalla se puede rastrear a través de los cinco artefactos con un solo código. El nombre de cada pantalla incorpora además el segmento al que pertenece, Colaborador, RR.HH. o Aprobador, lo que permite verificar de un vistazo que ninguna vista administrativa quedó accesible desde la experiencia de autogestión.
+
+Las dos aplicaciones, la nativa en Kotlin y la cross-platform en Flutter, comparten el mismo conjunto de 83 pantallas. No se diseñaron dos propuestas visuales distintas, porque el objetivo del proyecto es demostrar que una misma experiencia puede implementarse con dos tecnologías y no que cada tecnología produce un producto diferente.
+
+#### 3.1.4.1. Mobile Applications Wireframes
+
+Se elaboraron 83 wireframes sobre un lienzo de 360 por 800dp, que corresponde a la clase de ventana compacta de Android. El conjunto no se limita a los caminos felices: incluye los estados vacíos, los formularios con errores de validación, los bloqueos por regla de negocio, la vista sin conexión y los mensajes del sistema, porque son esas pantallas las que determinan si el usuario entiende qué hacer cuando algo no sale como esperaba.
+
+Entre las pantallas que documentan situaciones excepcionales se encuentran la cuenta inhabilitada por cese del colaborador, el acceso restringido cuando se intenta alcanzar información de un tercero, la solicitud rechazada por saldo de vacaciones insuficiente, el cese bloqueado porque el colaborador tiene subordinados asignados, la boleta duplicada para un mismo período, la búsqueda sin resultados, la bandeja del aprobador sin pendientes, el espacio de trabajo sin lecturas recientes y el saldo de vacaciones consultado sin conexión.
+
+Los wireframes se distribuyen entre los bounded contexts del modelo de dominio de la siguiente manera.
+
+| Grupo | Bounded context | Pantallas |
+| :---- | :---- | :---- |
+| Acceso, cuenta y pantallas transversales | IAM | MA-01 a MA-13, MA-82 |
+| Autogestión del perfil | Workspace | MA-14 a MA-17 |
+| Administración de colaboradores y estructura | Workspace | MA-18 a MA-33, MA-83 |
+| Asistencia y control horario | Attendance | MA-34 a MA-36, MA-76 a MA-78 |
+| Solicitudes del colaborador | Request | MA-37 a MA-46 |
+| Bandeja del aprobador | Request | MA-47 a MA-51, MA-79 |
+| Administración de solicitudes | Request | MA-52 a MA-56 |
+| Beneficios y saldo de vacaciones | Benefits | MA-57 a MA-63, MA-80 |
+| Boletas y estado de pagos | Payroll | MA-64 a MA-69 |
+| Espacios de trabajo e indicadores ambientales | Wellbeing | MA-70 a MA-75, MA-81 |
+
+Elaborado en Figma: https://www.figma.com/design/WFdHq0SwabwQAXZEAVd9an/Flowboard-Mobile---Wireframes
+
+**Figura 60:** *Wireframes de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
+
+![Wireframes de acceso y cuenta](assets/Chapter-3/wireframes-iam.png)
+
+*Nota.* Inicio de sesión único con reconocimiento de rol, cambio obligatorio de contraseña temporal, desbloqueo biométrico y pantallas de cuenta y seguridad. Elaboración propia.
+
+**Figura 61:** *Wireframes de autogestión del perfil, MA-14 a MA-17*
+
+![Wireframes de autogestión del perfil](assets/Chapter-3/wireframes-workspace-colaborador.png)
+
+*Nota.* Inicio del colaborador, perfil laboral, expediente documental y organigrama del área. Elaboración propia.
+
+**Figura 62:** *Wireframes de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
+
+![Wireframes de administración de colaboradores](assets/Chapter-3/wireframes-workspace-rrhh.png)
+
+*Nota.* Panel de Recursos Humanos, directorio con búsqueda y filtros, alta por pasos, ficha, reasignación de puesto, cese, reincorporación, áreas, posiciones y organigrama general. Elaboración propia.
+
+**Figura 63:** *Wireframes de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
+
+![Wireframes de asistencia](assets/Chapter-3/wireframes-attendance.png)
+
+*Nota.* Historial propio del colaborador, justificación de inasistencia, asistencia por área, detalle por colaborador y reporte de horas y sobretiempo. Elaboración propia.
+
+**Figura 64:** *Wireframes de solicitudes del colaborador, MA-37 a MA-46*
+
+![Wireframes de solicitudes del colaborador](assets/Chapter-3/wireframes-request-colaborador.png)
+
+*Nota.* Listado propio, creación por pasos con validación de saldo, revisión y envío, detalle, cancelación, devolución a revisión y notificaciones. Elaboración propia.
+
+**Figura 65:** *Wireframes de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
+
+![Wireframes de la bandeja del aprobador](assets/Chapter-3/wireframes-request-aprobador.png)
+
+*Nota.* Bandeja por aprobar, revisión de la solicitud, rechazo con motivo obligatorio, devolución a revisión, notificación push y bandeja sin pendientes. Elaboración propia.
+
+**Figura 66:** *Wireframes de administración de solicitudes, MA-52 a MA-56*
+
+![Wireframes de administración de solicitudes](assets/Chapter-3/wireframes-request-rrhh.png)
+
+*Nota.* Solicitudes asignadas a Recursos Humanos, vista general con filtros, catálogo de tipos de solicitud y alta de un tipo nuevo. Elaboración propia.
+
+**Figura 67:** *Wireframes de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
+
+![Wireframes de beneficios](assets/Chapter-3/wireframes-benefits.png)
+
+*Nota.* Saldo sin conexión, beneficios del colaborador, catálogo, asignación, registro de entrega, ajuste manual del saldo y saldos por colaborador. Elaboración propia.
+
+**Figura 68:** *Wireframes de boletas y estado de pagos, MA-64 a MA-69*
+
+![Wireframes de boletas](assets/Chapter-3/wireframes-payroll.png)
+
+*Nota.* Acceso protegido con biometría, listado por período, visor de boleta, carga masiva, boleta duplicada y control del estado del depósito. Elaboración propia.
+
+**Figura 69:** *Wireframes de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
+
+![Wireframes de bienestar](assets/Chapter-3/wireframes-wellbeing.png)
+
+*Nota.* Espacios registrados, alta de espacio, vinculación de dispositivo, umbrales por métrica, indicadores, histórico y espacio sin lecturas recientes. Elaboración propia.
+
+#### 3.1.4.2. Mobile Applications Wireflow Diagrams
+
+Los wireflows muestran la secuencia de pantallas que recorre un usuario para completar una meta concreta, incorporando como un paso más cada cambio de estado de la interfaz. Se elaboró un wireflow por cada user goal, derivado previamente de un task flow que estableció con el equipo cuál es la ruta típica de pasos antes de dibujar pantalla alguna.
+
+Los seis user goals se definieron a partir de los User Personas de la sección 2.3.1 y cubren los dos segmentos objetivo junto con el subperfil de aprobador. El criterio de selección fue que cada meta correspondiera a una de las hipótesis del proceso Lean UX, de modo que el prototipo permita después contrastarlas.
+
+| Código | User Persona | User goal | Hipótesis asociada |
+| :----: | :---- | :---- | :----: |
+| UG-01 | Colaborador general | Conocer cuántos días de vacaciones me quedan y qué beneficios me corresponden, sin preguntar a nadie | HS-04 |
+| UG-02 | Colaborador general | Solicitar vacaciones y saber en todo momento en qué estado está mi solicitud | HS-05 |
+| UG-03 | Colaborador general | Consultar y descargar mi boleta de pago con la certeza de que nadie más puede verla | HS-06 y HS-08 |
+| UG-04 | Jefe de área con personal a cargo | Resolver una solicitud de mi equipo en el momento en que recibo el aviso | HS-05 |
+| UG-05 | Analista de Recursos Humanos | Dar de alta a un colaborador con su área, su puesto y su jefe directo en un solo registro | HS-01 |
+| UG-06 | Analista de Recursos Humanos | Revisar la asistencia de un área y entrar al detalle de un colaborador concreto | HS-03 |
+
+Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboard-Mobile---Wireflows-y-User-Flows
+
+**UG-01. Consultar el saldo de vacaciones y los beneficios vigentes**
+
+El recorrido parte del inicio de sesión (MA-01), continúa con el desbloqueo biométrico en los ingresos posteriores al primero (MA-06) y llega al inicio del colaborador (MA-14), donde el saldo de vacaciones se presenta como primer indicador sin necesidad de navegar. Desde allí el usuario entra al detalle de sus beneficios (MA-58) y al histórico de los ya entregados (MA-59). El wireflow incorpora la rama sin conexión (MA-57), en la que la pantalla muestra el último saldo sincronizado junto con la fecha de esa sincronización, en lugar de un error de red.
+
+**Figura 70:** *Wireflow UG-01, consulta del saldo de vacaciones y los beneficios*
+
+![Wireflow UG-01](assets/Chapter-3/wireflow-ug01.png)
+
+*Nota.* Secuencia MA-01, MA-06, MA-14, MA-58 y MA-59, con la rama sin conexión hacia MA-57. Elaboración propia.
+
+**UG-02. Solicitar vacaciones y seguir el estado de la solicitud**
+
+El usuario accede a su listado de solicitudes (MA-37) e inicia el trámite seleccionando el tipo (MA-38). En el detalle (MA-39) introduce las fechas y el sistema valida el saldo disponible en ese mismo paso, de modo que el bloqueo por saldo insuficiente (MA-40) ocurre antes de que el usuario invierta esfuerzo en completar el resto del formulario. Superada la validación, revisa y envía (MA-41) y pasa a seguir el estado desde el detalle (MA-42). El wireflow continúa más allá del envío, porque la meta no termina al enviar sino al obtener respuesta: incorpora la recepción de la notificación (MA-45), la rama de devolución a revisión con reenvío (MA-44) y la de cancelación mientras la solicitud sigue pendiente (MA-43).
+
+**Figura 71:** *Wireflow UG-02, solicitud de vacaciones y seguimiento*
+
+![Wireflow UG-02](assets/Chapter-3/wireflow-ug02.png)
+
+*Nota.* Secuencia MA-37, MA-38, MA-39, MA-41 y MA-42, con las ramas MA-40 por saldo insuficiente, MA-44 por devolución a revisión y MA-43 por cancelación. Elaboración propia.
+
+**UG-03. Consultar y descargar una boleta de pago**
+
+Al entrar a la sección de boletas el usuario encuentra primero una pantalla de acceso protegido (MA-64) que exige verificación biométrica antes de mostrar cualquier dato remunerativo. Resuelta la verificación (MA-06), accede al listado por período (MA-65) y al visor de la boleta con su estado de depósito (MA-66), desde donde la descarga. El wireflow incluye la rama de respaldo mediante contraseña, prevista para el caso en que el dispositivo no disponga de sensor biométrico o el usuario haya optado por no habilitarlo.
+
+**Figura 72:** *Wireflow UG-03, consulta y descarga de una boleta de pago*
+
+![Wireflow UG-03](assets/Chapter-3/wireflow-ug03.png)
+
+*Nota.* Secuencia MA-64, MA-06, MA-65 y MA-66, con la rama de respaldo por contraseña. Elaboración propia.
+
+**UG-04. Resolver una solicitud desde la notificación**
+
+Este es el recorrido más corto del producto y esa brevedad es intencional, porque el aprobador es un usuario de baja frecuencia que no tiene el hábito de abrir la aplicación. Se inicia fuera de ella, en la notificación push (MA-51), que abre directamente la bandeja (MA-47) y el detalle de la solicitud (MA-48). Desde ahí el aprobador resuelve por una de tres vías: aprobar, rechazar con motivo obligatorio (MA-49) o devolver a revisión pidiendo información adicional (MA-50). El wireflow contempla también el estado de bandeja vacía (MA-79).
+
+**Figura 73:** *Wireflow UG-04, resolución de una solicitud desde la notificación*
+
+![Wireflow UG-04](assets/Chapter-3/wireflow-ug04.png)
+
+*Nota.* Secuencia MA-51, MA-47 y MA-48, con las ramas de aprobación, rechazo mediante MA-49 y devolución mediante MA-50. Elaboración propia.
+
+**UG-05. Registrar un nuevo colaborador**
+
+El analista parte de su panel (MA-18), entra al directorio (MA-20) e inicia el alta, que se resolvió en dos pasos para no exigir un formulario extenso sobre una pantalla de 360dp: primero los datos personales (MA-22) y después el contrato junto con la asignación de área, puesto y jefe directo (MA-23). Al confirmar, el sistema genera la credencial temporal y la muestra una sola vez en pantalla, porque en este proyecto la entrega al colaborador la realiza el propio analista de forma directa y no existe un servicio de correo. El recorrido cierra en la ficha del colaborador creado (MA-24).
+
+**Figura 74:** *Wireflow UG-05, registro de un nuevo colaborador*
+
+![Wireflow UG-05](assets/Chapter-3/wireflow-ug05.png)
+
+*Nota.* Secuencia MA-18, MA-20, MA-22, MA-23 y MA-24, con la rama de validación por documento de identidad duplicado. Elaboración propia.
+
+**UG-06. Revisar la asistencia de un área**
+
+Desde el panel (MA-18) el analista entra a la asistencia por área (MA-35), donde aplica el filtro de período y recorre el listado de colaboradores con su resumen del mes. Al tocar una fila accede al detalle día por día de esa persona (MA-36) y, cuando necesita sustentar carga de trabajo, al reporte de horas y sobretiempo (MA-78). Este wireflow es el que materializa la adaptación de la organización matricial descrita en la sección 3.1.2.1, porque muestra cómo una matriz de colaboradores por días se recorre en móvil por una dimensión a la vez.
+
+**Figura 75:** *Wireflow UG-06, revisión de la asistencia de un área*
+
+![Wireflow UG-06](assets/Chapter-3/wireflow-ug06.png)
+
+*Nota.* Secuencia MA-18, MA-35, MA-36 y MA-78, con la rama de período sin registros. Elaboración propia.
+
+#### 3.1.4.3. Mobile Applications Mock-ups
+
+Los mock-ups aplican sobre los 83 wireframes el sistema de diseño definido en la sección 3.1.1.1 y mantienen la misma codificación MA, de modo que la correspondencia entre estructura y presentación es uno a uno y cualquier cambio se puede rastrear entre ambos artefactos.
+
+Tres decisiones de diseño se aprecian de forma transversal en el conjunto. La primera es el uso restringido del color primario: en cada pantalla existe a lo sumo una acción en Primary, de modo que la jerarquía de acciones se resuelve visualmente sin necesidad de leer. La segunda es que todo estado se comunica mediante un chip que contiene la palabra que lo nombra, lo que hace que la interfaz siga siendo comprensible para un usuario con discromatopsia y en pantallas con reproducción de color deficiente, habituales en la gama de entrada. La tercera es que los listados largos se presentan como tarjetas sobre fondo blanco separadas por 12dp, en lugar de filas con separadores finos, porque el borde de 1dp del color Outline no alcanza el contraste necesario para delimitar contenido por sí solo.
+
+Elaborado en Figma: https://www.figma.com/design/PbZic365b3k2R8h824XkKW/Flowboard-Mobile---Mockups
+
+**Figura 76:** *Mock-ups de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
+
+![Mock-ups de acceso y cuenta](assets/Chapter-3/mockups-iam.png)
+
+*Nota.* Aplicación de la paleta y la tipografía sobre el inicio de sesión único, el cambio obligatorio de contraseña y la hoja inferior de desbloqueo biométrico. Elaboración propia.
+
+**Figura 77:** *Mock-ups de autogestión del perfil, MA-14 a MA-17*
+
+![Mock-ups de autogestión del perfil](assets/Chapter-3/mockups-workspace-colaborador.png)
+
+*Nota.* Inicio del colaborador con los indicadores propios en el nivel superior, perfil, expediente y organigrama del área. Elaboración propia.
+
+**Figura 78:** *Mock-ups de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
+
+![Mock-ups de administración de colaboradores](assets/Chapter-3/mockups-workspace-rrhh.png)
+
+*Nota.* Panel de Recursos Humanos, directorio con búsqueda y chips de filtro, alta por pasos, ficha y gestión de áreas y posiciones. Elaboración propia.
+
+**Figura 79:** *Mock-ups de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
+
+![Mock-ups de asistencia](assets/Chapter-3/mockups-attendance.png)
+
+*Nota.* Chips de estado de asistencia, historial propio, justificación de inasistencia y reportes por área y por colaborador. Elaboración propia.
+
+**Figura 80:** *Mock-ups de solicitudes del colaborador, MA-37 a MA-46*
+
+![Mock-ups de solicitudes del colaborador](assets/Chapter-3/mockups-request-colaborador.png)
+
+*Nota.* Listado con chips de estado, creación por pasos, bloqueo por saldo insuficiente y detalle con la trazabilidad del trámite. Elaboración propia.
+
+**Figura 81:** *Mock-ups de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
+
+![Mock-ups de la bandeja del aprobador](assets/Chapter-3/mockups-request-aprobador.png)
+
+*Nota.* Notificación push, bandeja por aprobar, revisión de la solicitud y hojas inferiores de rechazo y devolución. Elaboración propia.
+
+**Figura 82:** *Mock-ups de administración de solicitudes, MA-52 a MA-56*
+
+![Mock-ups de administración de solicitudes](assets/Chapter-3/mockups-request-rrhh.png)
+
+*Nota.* Vista general con botones segmentados y chips de filtro, catálogo de tipos de solicitud y alta de un tipo con campos configurables. Elaboración propia.
+
+**Figura 83:** *Mock-ups de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
+
+![Mock-ups de beneficios](assets/Chapter-3/mockups-benefits.png)
+
+*Nota.* Saldo sin conexión con su marca temporal, beneficios del colaborador, catálogo, asignación y ajuste manual con motivo obligatorio. Elaboración propia.
+
+**Figura 84:** *Mock-ups de boletas y estado de pagos, MA-64 a MA-69*
+
+![Mock-ups de boletas](assets/Chapter-3/mockups-payroll.png)
+
+*Nota.* Pantalla de acceso protegido, listado por período, visor con el chip de estado del depósito y carga masiva desde Recursos Humanos. Elaboración propia.
+
+**Figura 85:** *Mock-ups de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
+
+![Mock-ups de bienestar](assets/Chapter-3/mockups-wellbeing.png)
+
+*Nota.* Indicadores ambientales con chip y texto, configuración de umbrales, vinculación de dispositivo e histórico por métrica. Elaboración propia.
+
+#### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+Los user flows se derivan de los wireflows de la sección 3.1.4.2 y conservan su numeración, de modo que cada UG tiene ambos artefactos. La diferencia entre uno y otro es el nivel de abstracción: el wireflow muestra qué ve el usuario en cada paso, mientras que el user flow muestra qué decide el sistema. Por eso los user flows incorporan los nodos de decisión con sus condiciones, el camino esperado y las rutas alternativas que se activan cuando una regla de negocio bloquea el avance.
+
+Las condiciones representadas en los diagramas no son supuestos de diseño, sino las invariantes declaradas en el modelo de dominio del Capítulo II. La validación de saldo de UG-02 corresponde a la regla del agregado VacationBalance, el bloqueo de cese de UG-05 corresponde a la invariante que impide cesar a un colaborador con subordinados asignados, y el ruteo de UG-04 corresponde a la derivación del aprobador a partir de la relación de jefatura en Workspace. Mantener esa correspondencia es lo que permite que el diseño de interacción y la implementación no se contradigan.
+
+| Código | User goal | Caminos alternativos representados |
+| :----: | :---- | :---- |
+| UF-01 | Consultar saldo de vacaciones y beneficios | Sin conexión, con datos de la última sincronización |
+| UF-02 | Solicitar vacaciones y seguir el estado | Saldo insuficiente, adjunto obligatorio ausente, devolución a revisión, cancelación |
+| UF-03 | Consultar y descargar una boleta | Verificación biométrica fallida, dispositivo sin sensor, período sin boletas |
+| UF-04 | Resolver una solicitud desde la notificación | Rechazo sin motivo, solicitud ya resuelta por otro, bandeja vacía |
+| UF-05 | Registrar un nuevo colaborador | Documento de identidad duplicado, campos obligatorios incompletos, área o posición inexistente |
+| UF-06 | Revisar la asistencia de un área | Período sin registros, rango de fechas inválido, área sin colaboradores |
+
+Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboard-Mobile---Wireflows-y-User-Flows
+
+**Figura 86:** *User flow UF-01, consulta del saldo de vacaciones y los beneficios*
+
+![User flow UF-01](assets/Chapter-3/userflow-uf01.png)
+
+*Nota.* Nodo de decisión sobre la disponibilidad de conexión y ruta alternativa hacia los datos sincronizados localmente. Elaboración propia.
+
+**Figura 87:** *User flow UF-02, solicitud de vacaciones y seguimiento*
+
+![User flow UF-02](assets/Chapter-3/userflow-uf02.png)
+
+*Nota.* Nodos de validación de saldo y de adjunto obligatorio, con las rutas de devolución a revisión y de cancelación. Elaboración propia.
+
+**Figura 88:** *User flow UF-03, consulta y descarga de una boleta de pago*
+
+![User flow UF-03](assets/Chapter-3/userflow-uf03.png)
+
+*Nota.* Nodo de verificación biométrica con la ruta de respaldo por contraseña y la ruta de período sin boletas. Elaboración propia.
+
+**Figura 89:** *User flow UF-04, resolución de una solicitud desde la notificación*
+
+![User flow UF-04](assets/Chapter-3/userflow-uf04.png)
+
+*Nota.* Nodos de decisión del aprobador y validación del motivo obligatorio en el rechazo. Elaboración propia.
+
+**Figura 90:** *User flow UF-05, registro de un nuevo colaborador*
+
+![User flow UF-05](assets/Chapter-3/userflow-uf05.png)
+
+*Nota.* Validaciones de documento duplicado y de campos obligatorios, con la emisión de la credencial temporal mostrada una sola vez. Elaboración propia.
+
+**Figura 91:** *User flow UF-06, revisión de la asistencia de un área*
+
+![User flow UF-06](assets/Chapter-3/userflow-uf06.png)
+
+*Nota.* Validación del rango de fechas y ruta alternativa hacia el estado vacío cuando el período no tiene registros. Elaboración propia.
+
+#### 3.1.4.5. Mobile Applications Prototyping
+
+El prototipo navegable reproduce los seis user flows de la sección anterior con simulación de interacción y navegación. Los criterios que guiaron las decisiones de interacción son cuatro, y los tres primeros se desprenden directamente del sistema de navegación definido en la sección 3.1.2.5.
+
+El primero es que la transición entre destinos de la barra inferior es inmediata y sin animación de desplazamiento lateral, porque esos cinco destinos son hermanos y no guardan relación de profundidad entre sí. El segundo es que la entrada a una pantalla de detalle sí se anima como avance y el retroceso como retirada, de modo que la animación comunica la profundidad en la que el usuario se encuentra. El tercero es que toda decisión puntual se resuelve en una hoja inferior que se desliza desde el borde inferior, manteniendo la pantalla previa visible y atenuada detrás, lo que permite al usuario cancelar sin perder el contexto. El cuarto es que los tiempos de espera se representan con contenido esqueleto en lugar de un indicador de carga centrado, porque sobre conexiones intermitentes el esqueleto comunica qué va a aparecer y reduce la percepción de demora.
+
+El prototipo se construyó en Figma sobre los mock-ups, conectando las 83 pantallas según las rutas de los user flows, e incluye tanto los caminos esperados como las rutas alternativas por regla de negocio.
+
+Elaborado en Figma: https://www.figma.com/design/RBVdavhWuchp0u7GVx6m7I/Flowboard-Mobile---Prototipo
+
+**Prototipo de la aplicación**
+
+**Figura 92:** *Captura del video de demostración del prototipo de la aplicación nativa*
+
+![Captura del video del prototipo de la aplicación nativa](assets/Chapter-3/prototipo-nativa-video.png)
+
+*Nota.* Demostración de los recorridos UG-01 a UG-06 sobre el prototipo de la aplicación nativa. Elaboración propia.
+
+Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 
 <div style="page-break-after: always;"></div>
 
