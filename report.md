@@ -100,11 +100,19 @@ Repositorio del informe: `https://github.com/Performily-Mobile/performily-mobile
 
 Para la entrega del AV1, el trabajo se distribuyó de modo que cada integrante asumiera secciones completas y respondiera por su contenido. Vasquez Llave, Oscar Lizandro creó el repositorio, definió la estructura de secciones y desarrolló el Capítulo I en su totalidad. Esquicha Alcántara, Diego Alonso elaboró los Objetivos SMART y la perspectiva estratégica y táctica del Domain-Driven Design. Galvez Meza, Salym Pool desarrolló el análisis competitivo, el Ubiquitous Language, el Product Backlog y las capas de infraestructura y los diagramas de código de cada bounded context. Diaz Villalba, Diego Alonso se encargó del diseño de entrevistas, el EventStorming, las User Stories, el Context Mapping y los diagramas de arquitectura de software. Ávila De La Cruz, Darío Fabián condujo el registro y el análisis de entrevistas, todo el Needfinding y el Impact Mapping.
 
-Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan a continuación.
+Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan en las Figuras 67 y 68.
 
-![imagen](assets/figura-67.png)
+**Figura 67:** *Analíticos de colaboración y commits del repositorio del informe*
 
-![imagen](assets/figura-68.png)
+![Analíticos de colaboración del repositorio del informe](assets/figura-67.png)
+
+*Nota.* Actividad de colaboración y registro de commits del repositorio del informe. Elaboración propia.
+
+**Figura 68:** *Analíticos de colaboración y commits del repositorio del equipo*
+
+![Analíticos de colaboración del repositorio del equipo](assets/figura-68.png)
+
+*Nota.* Distribución de contribuciones y commits realizados por los integrantes. Elaboración propia.
 
 <div style="page-break-after: always;"></div>
 
@@ -262,6 +270,27 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       - [3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)
       - [3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)
+  - [4.1. Software Configuration Management](#41-software-configuration-management)
+    - [4.1.1. Software Development Environment Configuration](#411-software-development-environment-configuration)
+    - [4.1.2. Source Code Management](#412-source-code-management)
+    - [4.1.3. Source Code Style Guide & Conventions](#413-source-code-style-guide--conventions)
+    - [4.1.4. Software Deployment Configuration](#414-software-deployment-configuration)
+  - [4.2. Landing Page & Mobile Application Implementation](#42-landing-page--mobile-application-implementation)
+    - [4.2.1. Sprint 1](#421-sprint-1)
+      - [4.2.1.1. Sprint Planning 1](#4211-sprint-planning-1)
+      - [4.2.1.2. Aspect Leaders and Collaborators](#4212-aspect-leaders-and-collaborators)
+      - [4.2.1.3. Sprint Backlog 1](#4213-sprint-backlog-1)
+      - [4.2.1.4. Development Evidence for Sprint Review](#4214-development-evidence-for-sprint-review)
+      - [4.2.1.5. Testing Suite Evidence for Sprint Review](#4215-testing-suite-evidence-for-sprint-review)
+      - [4.2.1.6. Execution Evidence for Sprint Review](#4216-execution-evidence-for-sprint-review)
+      - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
+      - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
+      - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+  - [4.3. Validation Interviews](#43-validation-interviews)
+    - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
+    - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
+    - [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
 - [Bibliografía](#bibliografía)
 
 <div style="page-break-after: always;"></div>
@@ -447,24 +476,45 @@ Con Flowboard, Performily lleva esa propuesta al dispositivo que el colaborador 
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-| Darío Ávila De La Cruz (u202412270) | Ingeniería de Software |
-| :---- | :---- |
-| ![Figura 1. 1.1.2. Perfiles de integrantes del equipo](assets/figura-01.png) | Mi nombre es Darío Ávila, soy estudiante universitario de la carrera de Ingeniería de Software, cursando el 6.º ciclo. Cuento con conocimientos en lenguajes de programación C++ y Python, lo que me permite desarrollar soluciones técnicas eficientes y adaptables. Practico la escucha activa para comprender a fondo las necesidades tanto del equipo como de los clientes, asegurando que los objetivos se alineen con las expectativas. Además, busco soluciones innovadoras que integren distintas perspectivas, fomentando la colaboración y la creatividad. Soy flexible ante cambios inesperados en los proyectos, adaptándome rápidamente a nuevas prioridades o requerimientos. |
-| Diego Alonso Diaz Villalba (u202412663) | Ingeniería de Software |
-| :---- | :---- |
-| ![Figura 5. 1.1.2. Perfiles de integrantes del equipo](assets/figura-59.png) | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
+Los perfiles profesionales de los cinco integrantes se presentan mediante las Figuras 1 a 5, junto con la información académica y la descripción de sus competencias.
 
-| Salym Pool Galvez Meza (u202419655) | Ingeniería de Software |
-| :---- | :---- |
-| ![Figura 2. 1.1.2. Perfiles de integrantes del equipo](assets/figura-02.png) | Soy Salym Galvez, una persona con sólidas habilidades blandas como el pensamiento crítico y la escucha activa, lo que me permite analizar situaciones para encontrar soluciones efectivas y potenciar el trabajo en equipo. Me adapto con facilidad a distintos entornos, soy proactivo, responsable y orientado a resultados. En el aspecto técnico, cuento con conocimientos en C++ enfocados en la optimización de recursos, así como en el levantamiento de bases de datos y el desarrollo de sitios web utilizando JavaScript, HTML y CSS. Busco siempre aprender cosas nuevas para crecer profesionalmente y aportar valor práctico y técnico en cada proyecto en el que participo. |
+**Figura 1:** *Perfil de Darío Ávila De La Cruz*
 
-| Diego Alonso Esquicha Alcántara (u202411799) | Ingeniería de Software |
-| :---- | :---- |
-| ![Figura 3. 1.1.2. Perfiles de integrantes del equipo](assets/figura-03.png) | Soy Diego Esquicha, tengo 20 años, estudio Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Cuento con conocimientos en arquitectura de software y C++. Me considero una persona responsable, disciplinada y perseverante, con capacidad para afrontar retos y adaptarme a diferentes situaciones. Me caracterizo por mi compromiso, resiliencia y puntualidad, además de mi constante interés por seguir aprendiendo y mejorar mis habilidades. |
+![Perfil de Darío Ávila De La Cruz](assets/figura-01.png)
 
-| Oscar Lizandro Vasquez Llave (u202410478) | Ingeniería de Software |
-| :---- | :---- |
-| ![Figura 4. 1.1.2. Perfiles de integrantes del equipo](assets/figura-04.png) | Soy estudiante de Ingeniería de Software con formación en desarrollo de aplicaciones y gestión de proyectos tecnológicos. Cuento con conocimientos en C++, HTML, CSS, JavaScript, diseño de interfaces de usuario con Figma y uso de herramientas de control de versiones como Git. Me destaco por mi compromiso para aprender nuevas tecnologías, además de mis habilidades para trabajar en equipo y adaptarme a diferentes entornos. Tengo capacidad para analizar y resolver problemas técnicos de forma eficiente. Poseo iniciativa para proponer mejoras, disposición para colaborar en proyectos multidisciplinarios y motivación por adquirir nuevos conocimientos que fortalezcan mi desarrollo profesional. |
+*Nota.* Fotografía de perfil del integrante Darío Ávila De La Cruz. Elaboración propia.
+
+**Figura 2:** *Perfil de Salym Galvez Meza*
+
+![Perfil de Salym Galvez Meza](assets/figura-02.png)
+
+*Nota.* Fotografía de perfil del integrante Salym Galvez Meza. Elaboración propia.
+
+**Figura 3:** *Perfil de Diego Alonso Esquicha Alcántara*
+
+![Perfil de Diego Alonso Esquicha Alcántara](assets/figura-03.png)
+
+*Nota.* Fotografía de perfil del integrante Diego Alonso Esquicha Alcántara. Elaboración propia.
+
+**Figura 4:** *Perfil de Oscar Lizandro Vasquez Llave*
+
+![Perfil de Oscar Lizandro Vasquez Llave](assets/figura-04.png)
+
+*Nota.* Fotografía de perfil del integrante Oscar Lizandro Vasquez Llave. Elaboración propia.
+
+**Figura 5:** *Perfil de Diego Alonso Diaz Villalba*
+
+![Perfil de Diego Alonso Diaz Villalba](assets/figura-59.png)
+
+*Nota.* Fotografía de perfil del integrante Diego Alonso Diaz Villalba. Elaboración propia.
+
+| Integrante | Carrera | Perfil |
+| :---- | :---- | :---- |
+| Darío Ávila De La Cruz (u202412270) | Ingeniería de Software | Mi nombre es Darío Ávila, soy estudiante universitario de la carrera de Ingeniería de Software, cursando el 6.º ciclo. Cuento con conocimientos en lenguajes de programación C++ y Python, lo que me permite desarrollar soluciones técnicas eficientes y adaptables. Practico la escucha activa para comprender a fondo las necesidades tanto del equipo como de los clientes, asegurando que los objetivos se alineen con las expectativas. Además, busco soluciones innovadoras que integren distintas perspectivas, fomentando la colaboración y la creatividad. Soy flexible ante cambios inesperados en los proyectos, adaptándome rápidamente a nuevas prioridades o requerimientos. |
+| Diego Alonso Diaz Villalba (u202412663) | Ingeniería de Software | Cuento con formación en Psicología y actualmente curso la carrera de Ingeniería de Software, lo que me permite integrar habilidades humanas con conocimientos técnicos. Tengo experiencia en la conducción de entrevistas, la identificación de necesidades mediante observación y escucha activa, así como en la toma de decisiones fundamentadas. Me interesa especialmente el diseño de software, con énfasis en el análisis de requerimientos, la experiencia de usuario (UX), la interfaz de usuario (UI) y la usabilidad de las aplicaciones. Me motiva crear soluciones tecnológicas que no solo sean funcionales, sino también intuitivas y accesibles para los usuarios. |
+| Salym Pool Galvez Meza (u202419655) | Ingeniería de Software | Soy Salym Galvez, una persona con sólidas habilidades blandas como el pensamiento crítico y la escucha activa, lo que me permite analizar situaciones para encontrar soluciones efectivas y potenciar el trabajo en equipo. Me adapto con facilidad a distintos entornos, soy proactivo, responsable y orientado a resultados. En el aspecto técnico, cuento con conocimientos en C++ enfocados en la optimización de recursos, así como en el levantamiento de bases de datos y el desarrollo de sitios web utilizando JavaScript, HTML y CSS. Busco siempre aprender cosas nuevas para crecer profesionalmente y aportar valor práctico y técnico en cada proyecto en el que participo. |
+| Diego Alonso Esquicha Alcántara (u202411799) | Ingeniería de Software | Soy Diego Esquicha, tengo 20 años, estudio Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Cuento con conocimientos en arquitectura de software y C++. Me considero una persona responsable, disciplinada y perseverante, con capacidad para afrontar retos y adaptarme a diferentes situaciones. Me caracterizo por mi compromiso, resiliencia y puntualidad, además de mi constante interés por seguir aprendiendo y mejorar mis habilidades. |
+| Oscar Lizandro Vasquez Llave (u202410478) | Ingeniería de Software | Soy estudiante de Ingeniería de Software con formación en desarrollo de aplicaciones y gestión de proyectos tecnológicos. Cuento con conocimientos en C++, HTML, CSS, JavaScript, diseño de interfaces de usuario con Figma y uso de herramientas de control de versiones como Git. Me destaco por mi compromiso para aprender nuevas tecnologías, además de mis habilidades para trabajar en equipo y adaptarme a diferentes entornos. Tengo capacidad para analizar y resolver problemas técnicos de forma eficiente. Poseo iniciativa para proponer mejoras, disposición para colaborar en proyectos multidisciplinarios y motivación por adquirir nuevos conocimientos que fortalezcan mi desarrollo profesional. |
 
 ## 1.2. Solution Profile
 
@@ -772,10 +822,12 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 
 ### 2.1.1. Análisis competitivo
 
+La identidad visual de Flowboard y las referencias visuales de los competidores se presentan dentro de la matriz de análisis competitivo. Las imágenes, sus rótulos y sus notas se mantienen en la fila de nombres de los competidores para facilitar la comparación directa.
+
 | Competitive Analysis Landscape |  |  |  |  |  |
 | :---- | :---- | ----- | ----- | ----- | ----- |
 | ¿Por qué llevar a cabo este análisis? | El presente Competitive Analysis Landscape tiene como finalidad conocer las principales soluciones móviles que compiten en el mercado de gestión de recursos humanos. El análisis permite comparar sus propuestas de valor, funcionalidades, segmentos, modelos comerciales y canales de distribución para identificar oportunidades de diferenciación para Flowboard. |  |  |  |  |
-| Nombres de los competidores |  | ![Figura 5. 2.1.1. Análisis competitivo](assets/figura-05.png) Flowboard | ![Figura 6. 2.1.1. Análisis competitivo](assets/figura-06.png) Buk | ![Figura 7. 2.1.1. Análisis competitivo](assets/figura-07.png) Factorial | ![Figura 8. 2.1.1. Análisis competitivo](assets/figura-08.png) Sesame HR |
+| Nombres de los competidores |  | **Figura 5:** *Identidad visual de Flowboard*<br><br>![Identidad visual de Flowboard](assets/figura-05.png)<br><br>*Nota.* Referencia visual de la propuesta de Flowboard utilizada en el análisis competitivo. Elaboración propia. | **Figura 6:** *Identidad visual de Buk*<br><br>![Identidad visual de Buk](assets/figura-06.png)<br><br>*Nota.* Referencia visual de la plataforma Buk utilizada para la comparación competitiva. Fuente: Buk. | **Figura 7:** *Identidad visual de Factorial*<br><br>![Identidad visual de Factorial](assets/figura-07.png)<br><br>*Nota.* Referencia visual de la plataforma Factorial utilizada para la comparación competitiva. Fuente: Factorial. | **Figura 8:** *Identidad visual de Sesame HR*<br><br>![Identidad visual de Sesame HR](assets/figura-08.png)<br><br>*Nota.* Referencia visual de la plataforma Sesame HR utilizada para la comparación competitiva. Fuente: Sesame HR. |
 | Perfil | Overview | Solución móvil para gestionar el vínculo laboral en organizaciones en crecimiento. Centraliza la información del colaborador, asistencia, beneficios, remuneración referencial y solicitudes. Está compuesta por una aplicación Android nativa, una aplicación cross-platform y un RESTful API. | Plataforma integral de gestión de personas disponible mediante web y aplicación móvil. Centraliza planillas, asistencia, documentos, beneficios, vacaciones, selección y desarrollo organizacional. | Plataforma de recursos humanos y gestión empresarial disponible mediante web y aplicación móvil. Integra información del personal, control horario, ausencias, documentos, turnos, gastos y procesos de talento. | Plataforma multidispositivo de recursos humanos orientada a la gestión del tiempo y la experiencia del empleado. Permite gestionar asistencia, vacaciones, turnos, documentos y comunicación interna. |
 |  | Ventaja competitiva ¿Qué valor ofrece a los clientes? | Prioriza la experiencia móvil de colaboradores que no disponen de una computadora corporativa. Permite consultar información laboral y seguir solicitudes desde Android, contempla conectividad intermitente y protege información sensible mediante autenticación biométrica. | Ofrece una solución integral adaptada a la legislación peruana. Incluye planillas, asistencia y desarrollo organizacional dentro de un ecosistema consolidado, con soporte e implementación local. | Reúne procesos de recursos humanos, tiempo, talento y gastos en una plataforma modular. Su aplicación móvil incluye control horario, turnos, notificaciones y autenticación biométrica. | Destaca por una experiencia móvil intuitiva y por sus diferentes métodos de registro de asistencia. Facilita el autoservicio, la comunicación y la aprobación rápida de vacaciones y ausencias. |
 | Perfil de Marketing | Mercado objetivo | Organizaciones formales de Lima Metropolitana y Callao con entre 50 y 500 colaboradores, especialmente aquellas con personal operativo o sin acceso permanente a una computadora corporativa. | Empresas peruanas y latinoamericanas de diferentes tamaños que buscan centralizar y automatizar integralmente sus procesos de recursos humanos y planillas. | Pequeñas y medianas empresas que requieren digitalizar y ampliar progresivamente la gestión de recursos humanos, tiempo, talento y gastos. | Pequeñas, medianas y grandes empresas con equipos presenciales, híbridos o móviles que necesitan administrar horarios, asistencia y comunicación desde diferentes dispositivos. |
@@ -789,6 +841,8 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 |  | Amenazas | Competidores con mayor capital, reconocimiento y número de funcionalidades; resistencia organizacional al cambio; preocupación por la privacidad; cambios normativos y dependencia de plataformas móviles. | Entrada de soluciones internacionales con precios más bajos y aparición de productos especializados con experiencias móviles más simples. | Competidores regionales con mayor adaptación a las normas laborales y tributarias peruanas. | Competidores locales con planillas y cumplimiento laboral peruano integrado, además de plataformas internacionales con mayores recursos comerciales. |
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
+
+En esta sección se proponen las estrategias y tácticas preliminares de Flowboard para aprovechar sus fortalezas, corregir sus debilidades y responder a las oportunidades y amenazas identificadas en el análisis competitivo. Cada estrategia se vincula con acciones concretas e indicadores de validación.
 
 **Fortalezas y Oportunidades**
 
@@ -852,6 +906,8 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 ## 2.2. Entrevistas
 
 ### 2.2.1. Diseño de entrevistas
+
+En esta sección se presenta el diseño de las entrevistas dirigidas a los dos segmentos objetivo: personal de Recursos Humanos y colaboradores generales. Las preguntas se organizan para recoger características demográficas, contexto laboral, tecnología utilizada, canales de interacción, objetivos, frustraciones y expectativas, información que posteriormente sustenta los User Persona y los demás artefactos de Needfinding.
 
 **Datos Demográficos Básicos**
 
@@ -918,6 +974,8 @@ Esta división en dos segmentos se corresponde con la arquitectura de la soluci�
 
 **Segmento 1:** **Personal de Recursos Humanos**
 
+Las capturas de las seis entrevistas realizadas a ambos segmentos se presentan en las Figuras 61 a 66, cada una acompañada de su identificación y nota correspondiente.
+
 **Entrevista 1:**
 
 Nombre: Carmen Julia Elena Kichi Zavala 
@@ -932,7 +990,11 @@ Timing donde inicia la entrevista: 00:00
 
 Duración completa de la entrevista: 4 minutos 54 segundos 
 
-![Entrevista](assets\figura-61.PNG)
+**Figura 61:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 1*
+
+![Entrevista de Recursos Humanos, entrevista 1](assets/figura-61.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -954,7 +1016,11 @@ Timing donde inicia la entrevista: 04:54
 
 Duración completa de la entrevista: 4 minutos 49 segundos
 
-![Entrevista](assets\figura-62.PNG)
+**Figura 62:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 2*
+
+![Entrevista de Recursos Humanos, entrevista 2](assets/figura-62.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -976,7 +1042,11 @@ Timing donde inicia la entrevista: 09:43
 
 Duración completa de la entrevista: 4 minutos 41 segundos
 
-![Entrevista](assets\figura-63.PNG)
+**Figura 63:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 3*
+
+![Entrevista de Recursos Humanos, entrevista 3](assets/figura-63.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -999,7 +1069,11 @@ Timing donde inicia la entrevista: 14:24
 
 Duración completa de la entrevista: 5 minutos 43 segundos
 
-![Entrevista](assets\figura-64.PNG)
+**Figura 64:** *Captura de la entrevista del segmento de colaboradores, entrevista 1*
+
+![Entrevista de colaboradores, entrevista 1](assets/figura-64.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -1021,7 +1095,11 @@ Timing donde inicia la entrevista: 20:07
 
 Duración completa de la entrevista: 3 minutos 29 segundos
 
-![Entrevista](assets\figura-65.PNG)
+**Figura 65:** *Captura de la entrevista del segmento de colaboradores, entrevista 2*
+
+![Entrevista de colaboradores, entrevista 2](assets/figura-65.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -1043,7 +1121,11 @@ Timing donde inicia la entrevista: 22:36
 
 Duración completa de la entrevista: 4 minutos 44 segundos
 
-![Entrevista](assets\figura-66.PNG)
+**Figura 66:** *Captura de la entrevista del segmento de colaboradores, entrevista 3*
+
+![Entrevista de colaboradores, entrevista 3](assets/figura-66.PNG)
+
+*Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
@@ -1051,6 +1133,8 @@ Jean Paul Vila Barja tiene 19 años, vive en el Cercado de Lima y es soltero. Ha
 En el aspecto operativo y de trámites internos, Jean Paul señala que el control de sus días de vacaciones disponibles no era transparente ni autogestionable, sino que dependía de los recordatorios verbales de su propio jefe inmediato según las horas trabajadas. Para solicitar vacaciones o permisos médicos debía seguir un flujo manual de varias etapas: primero avisar a su jefe, acudir a administración a generar la solicitud con justificación formal y adjuntar certificados médicos en caso de salud. Asimismo, experimentó la falta de seguimiento en las plataformas de la empresa al enviar una solicitud que no recibió respuesta oportuna de Recursos Humanos, viéndose obligado a recurrir directamente a su jefe directo para que intercediera ante el área administrativa y procediera con el trámite.
 
 ### 2.2.3. Análisis de entrevistas
+
+En esta sección se analizan las entrevistas por segmento mediante características objetivas y subjetivas sustentadas en frecuencias y porcentajes. Los hallazgos permiten reconocer los patrones comunes de los entrevistados y sirven como evidencia para la construcción de los User Persona y la definición de las necesidades de la solución.
 
 **Segmento 1:** **Personal de Recursos Humanos**
 
@@ -1092,7 +1176,7 @@ En el aspecto operativo y de trámites internos, Jean Paul señala que el contro
 
 ### 2.3.1. User Personas
 
-A partir del análisis de las entrevistas realizadas a los segmentos objetivo y de las características identificadas en el análisis de la competencia, se elaboraron los User Persona que representan a los principales perfiles de usuarios de la solución propuesta. Estos arquetipos permiten sintetizar las características objetivas y subjetivas más representativas de cada segmento.
+A partir del análisis de las entrevistas realizadas a los segmentos objetivo y de las características identificadas en el análisis de la competencia, se elaboraron los User Persona que representan a los principales perfiles de usuarios de la solución propuesta. Estos arquetipos permiten sintetizar las características objetivas y subjetivas más representativas de cada segmento. Los resultados se muestran en las Figuras 54 y 55.
 
 Para la construcción de los perfiles se priorizaron los hallazgos con mayor recurrencia en las entrevistas. En el caso del personal de Recursos Humanos, se consideraron la responsabilidad sobre múltiples procesos de gestión, el uso diverso de herramientas digitales sin solución integrada, la carga asociada a procesos manuales, necesidad de contar con información actualizada y el interés por automatizar actividades repetitivas. Asimismo, se tomaron en cuenta los aspectos identificados en el análisis de la competencia para orientar las necesidades y expectativas que los usuarios podrían tener frente a una plataforma de gestión de recursos humanos.
 
@@ -1100,13 +1184,21 @@ Para la construcción de los perfiles se priorizaron los hallazgos con mayor rec
 
 [https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing](https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing)
 
-![figura-54](assets/figura-54.png)
+**Figura 54:** *User Persona del personal de Recursos Humanos*
+
+![User Persona del personal de Recursos Humanos](assets/figura-54.png)
+
+*Nota.* Arquetipo construido a partir de los hallazgos del segmento de Recursos Humanos. Elaboración propia.
 
 **Segmento 2: Colaboradores generales:**
 
 [https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing](https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing)
 
-![figura-55](assets/figura-55.png)
+**Figura 55:** *User Persona de los colaboradores generales*
+
+![User Persona de los colaboradores generales](assets/figura-55.png)
+
+*Nota.* Arquetipo construido a partir de los hallazgos del segmento de colaboradores generales. Elaboración propia.
 
 ### 2.3.2. User Task Matrix
 
@@ -1132,45 +1224,86 @@ Para los colaboradores generales, las tareas más importantes se concentran en c
 
 ### 2.3.3. User Journey Mapping
 
-En esta sección se presentan los User Journey Maps correspondientes a los segmentos objetivo de Personal de Recursos Humanos y Colaboradores generales. Los mapas representan el recorrido end-to-end que realizan los usuarios para gestionar y consultar información relacionada con su experiencia laboral, considerando sus objetivos, procesos actuales, problemas y oportunidades de mejora. Para este análisis se elaboran las versiones As-Is, por lo que se describe la situación actual de los usuarios sin considerar la existencia de Flowboard como solución. Cada User Journey Map se encuentra vinculado con el User Persona correspondiente, permitiendo representar de manera contextualizada las actividades y dificultades que caracterizan a cada segmento.
+En esta sección se presentan los User Journey Maps correspondientes a los segmentos objetivo de Personal de Recursos Humanos y Colaboradores generales. Los mapas representan el recorrido end-to-end que realizan los usuarios para gestionar y consultar información relacionada con su experiencia laboral, considerando sus objetivos, procesos actuales, problemas y oportunidades de mejora. Para este análisis se elaboran las versiones As-Is, por lo que se describe la situación actual de los usuarios sin considerar la existencia de Flowboard como solución. Cada User Journey Map se encuentra vinculado con el User Persona correspondiente, permitiendo representar de manera contextualizada las actividades y dificultades que caracterizan a cada segmento. Las Figuras 50 y 51 presentan los recorridos de ambos segmentos.
 
 User Person: Carlos (Personal de Recursos Humanos)
 
 [https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link](https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link)
 
-![figura-50](assets/figura-50.png)
+**Figura 50:** *User Journey Map de Carlos, personal de Recursos Humanos*
+
+![User Journey Map de Carlos](assets/figura-50.png)
+
+*Nota.* Recorrido actual del personal de Recursos Humanos para gestionar información laboral. Elaboración propia.
 
 User Person: Maria (Colaboradores generales)
 
 [https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing](https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing)
 
-![figura-51](assets/figura-51.png)
+**Figura 51:** *User Journey Map de María, colaboradora general*
+
+![User Journey Map de María](assets/figura-51.png)
+
+*Nota.* Recorrido actual de una colaboradora general para consultar y gestionar su información laboral. Elaboración propia.
 
 ### 2.3.4. Empathy Mapping
+
+En esta sección se sintetizan las percepciones, necesidades, comportamientos, frustraciones y expectativas de cada User Persona mediante dos Empathy Maps. Las Figuras 52 y 53 presentan los resultados correspondientes al personal de Recursos Humanos y a los colaboradores generales, respectivamente.
 
 Empathy Mapping: Carlos (Personal de Recursos Humanos)
 
 [https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing](https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing)
 
-![figura-52](assets/figura-52.png)
+**Figura 52:** *Empathy Map de Carlos, personal de Recursos Humanos*
+
+![Empathy Map de Carlos](assets/figura-52.png)
+
+*Nota.* Pensamientos, necesidades y comportamientos identificados para el segmento de Recursos Humanos. Elaboración propia.
 
 Empathy Mapping: Maria (Colaboradores generales)
 
 [https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing](https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing)
 
-![figura-53](assets/figura-53.png)
+**Figura 53:** *Empathy Map de María, colaboradora general*
+
+![Empathy Map de María](assets/figura-53.png)
+
+*Nota.* Pensamientos, necesidades y comportamientos identificados para el segmento de colaboradores generales. Elaboración propia.
 
 ### 2.3.5. Big Picture Event Storming
 
-**![Figura 9. 2.4. Big Picture Event Storming](assets/figura-09.png)**
+En esta sección se presenta el proceso de Big Picture Event Storming realizado por el equipo para explorar el dominio de la gestión de personas y clima laboral. La actividad permitió identificar eventos relevantes, actores, comandos, políticas y relaciones entre los principales procesos del negocio. Las Figuras 9 a 13 muestran las capturas progresivas de la sesión colaborativa y sirven como evidencia de la evolución del modelado.
 
-**![Figura 10. 2.4. Big Picture Event Storming](assets/figura-10.png)**
+**Figura 9:** *Big Picture Event Storming, identificación inicial de eventos*
 
-**![Figura 11. 2.4. Big Picture Event Storming](assets/figura-11.png)**
+![Big Picture Event Storming, identificación inicial de eventos](assets/figura-09.png)
 
-**![Figura 12. 2.4. Big Picture Event Storming](assets/figura-12.png)**
+*Nota.* Primera captura de la sesión de identificación de eventos significativos del dominio. Elaboración propia.
 
-**![Figura 13. 2.4. Big Picture Event Storming](assets/figura-13.png)**
+**Figura 10:** *Big Picture Event Storming, organización de eventos*
+
+![Big Picture Event Storming, organización de eventos](assets/figura-10.png)
+
+*Nota.* Organización temporal de los eventos y procesos principales del negocio. Elaboración propia.
+
+**Figura 11:** *Big Picture Event Storming, incorporación de actores y comandos*
+
+![Big Picture Event Storming, incorporación de actores y comandos](assets/figura-11.png)
+
+*Nota.* Incorporación de actores, comandos y elementos que participan en cada flujo. Elaboración propia.
+
+**Figura 12:** *Big Picture Event Storming, identificación de reglas y problemas*
+
+![Big Picture Event Storming, identificación de reglas y problemas](assets/figura-12.png)
+
+*Nota.* Identificación de políticas, reglas de negocio y puntos de atención del dominio. Elaboración propia.
+
+**Figura 13:** *Big Picture Event Storming, modelo consolidado*
+
+![Big Picture Event Storming, modelo consolidado](assets/figura-13.png)
+
+*Nota.* Versión consolidada del Big Picture Event Storming elaborado por el equipo. Elaboración propia.
+
 Enlace de la figura: https://miro.com/app/board/uXjVHpKyn4g=/?share_link_id=676576188275
 
 ### 2.3.6. Ubiquitous Language
@@ -1912,11 +2045,19 @@ En esta sección se presentan las user stories que definen lo que Flowboard debe
 
 ### 2.4.2. Impact Mapping
 
+En esta sección se presenta el Impact Mapping de Flowboard, utilizado para relacionar los objetivos del producto con los actores, los impactos esperados y las funcionalidades o entregables que los hacen posibles. La Figura 60 resume esta trazabilidad.
+
 [https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing](https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing)
 
-![imagen](assets\figura-60.png)
+**Figura 60:** *Impact Mapping de Flowboard*
+
+![Impact Mapping de Flowboard](assets/figura-60.png)
+
+*Nota.* Relación entre objetivos, actores, impactos y entregables del producto. Elaboración propia.
 
 ### 2.4.3. Product Backlog
+
+La Figura 14 presenta el Product Backlog de Flowboard, donde se organizan y priorizan las User Stories y Technical Stories que guían el desarrollo de la solución.
 
 En esta sección se presenta la lista priorizada de todo el trabajo necesario para construir la solución. Para ordenar los ítems tomamos en cuenta el valor que aportan al usuario y las dependencias entre ellos. Por ejemplo, primero van las historias relacionadas al registro de colaboradores y el orden de la organización, porque casi todos los demás procesos dependen de ellos, también consideramos a las historias relacionadas al landing page ya que nos permite hacer conocer a nuestro público los beneficios de nuestra solución. A cada user story le asignamos Story Points según la serie de Fibonacci para estimar su complejidad y así poder planificar los sprints. El backlog se gestiona en Trello y se irá actualizando durante el proyecto.
 
@@ -1991,13 +2132,21 @@ En esta sección se presenta la lista priorizada de todo el trabajo necesario pa
 | 67 | US51 | Histórico y tendencia por métrica | **Como** personal de RRHH, **quiero** revisar la evolución de una métrica ambiental en el tiempo, **para** distinguir un episodio puntual de un problema persistente. | 3 |
 | 68 | TS05 | Internacionalización de los mensajes del API | **Como** Developer, **quiero** que los mensajes del API respeten el idioma solicitado, **para** que la interfaz los presente en el idioma del usuario. | 3 |
 
-![Figura 14. 2.4.3. Product Backlog](assets/figura-14.png)
+**Figura 14:** *Product Backlog de Flowboard*
+
+![Product Backlog de Flowboard](assets/figura-14.png)
+
+*Nota.* User Stories priorizadas para el desarrollo de Flowboard. Elaboración propia.
 
 Enlace: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
+En esta sección se presenta la perspectiva estratégica del diseño de la solución. A partir del dominio explorado en el Big Picture Event Storming, se identifican los bounded contexts, se describen sus interacciones y se establecen los criterios para delimitar sus responsabilidades. Los resultados se documentan mediante el Candidate Context Discovery, los Domain Message Flows Modeling, los Bounded Context Canvases y el Context Mapping que se muestran en las Figuras 15 a 28.
+
 ### 2.5.1. EventStorming
+
+El equipo utilizó EventStorming para explorar los eventos relevantes del dominio y transformarlos progresivamente en límites y relaciones entre contextos. La Figura 13 recoge el modelo general de partida; las Figuras 15 a 20 muestran los flujos de mensajes derivados y las Figuras 21 a 27 presentan los Bounded Context Canvases resultantes.
 
 #### 2.5.1.1. Candidate Context Discovery
 
@@ -2015,45 +2164,73 @@ Aplicando la técnica de Candidate Context Discovery y analizando los puntos de 
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
+Las Figuras 15 a 20 presentan los Domain Message Flows Modeling de los bounded contexts identificados y muestran la secuencia de mensajes y responsabilidades de sus procesos principales.
+
 El modelado de flujos de mensajes (Domain Message Flow Modeling) describe cómo interactúan los contextos acotados mediante el intercambio síncrono y asíncrono de comandos, consultas y eventos de dominio para mantener la consistencia operativa sin acoplamientos rígidos.
 
 **Escenario 01: Creación de Colaborador y Generación de Credenciales**
 
 Como flujo de incorporación de personal, este escenario gobierna el alta inicial del colaborador dentro del contexto **Workspace**, disparando de forma automatizada las solicitudes de integración hacia el contexto **IAM** para provisionar las credenciales de acceso institucional y asegurar la trazabilidad del alta operativa.
 
-![Figura 15. 2.5.1.2. Domain Message Flows Modeling](assets/figura-15.png)
+**Figura 15:** *Domain Message Flow Modeling: creación de colaborador y credenciales*
+
+![Domain Message Flow Modeling: creación de colaborador y credenciales](assets/figura-15.png)
+
+*Nota.* Flujo de mensajes entre Workspace e IAM durante el alta de un colaborador. Elaboración propia.
 
 **Escenario 02: Solicitud y Aprobación de Vacaciones**
 
 Como proceso central de gestión de trámites, este escenario rige la creación de peticiones por parte del colaborador, coordinando validaciones síncronas de saldo con el contexto **Benefits** y consultando las líneas de reporte jerárquico en el contexto **Workspace** para asegurar el ruteo de aprobación correcto y el contexto **Request**.
 
-![Figura 16. 2.5.1.2. Domain Message Flows Modeling](assets/figura-16.png)
+**Figura 16:** *Domain Message Flow Modeling: solicitud y aprobación de vacaciones*
+
+![Domain Message Flow Modeling: solicitud y aprobación de vacaciones](assets/figura-16.png)
+
+*Nota.* Coordinación entre Request, Benefits y Workspace para resolver una solicitud. Elaboración propia.
 
 **Escenario 03: Registro y Procesamiento de Asistencia**
 
 Como núcleo de soporte operativo de control de tiempo, este escenario gestiona la recepción de marcaciones crudas para transformarlas mediante reglas de negocio del contexto **Attendance** en registros diarios limpios, tardanzas calculadas y sobretiempos validados.
 
-![Figura 17. 2.5.1.2. Domain Message Flows Modeling](assets/figura-17.png)
+**Figura 17:** *Domain Message Flow Modeling: registro y procesamiento de asistencia*
+
+![Domain Message Flow Modeling: registro y procesamiento de asistencia](assets/figura-17.png)
+
+*Nota.* Transformación de marcaciones en registros diarios de asistencia. Elaboración propia.
 
 **Escenario 04: Carga y Consulta de Boletas de Pago**
 
 Como mecanismo de repositorio seguro, este escenario coordina la centralización de comprobantes de haberes subidos por el analista dentro del contexto **Payroll**, garantizando que cada colaborador consulte de forma exclusiva y protegida sus propias boletas de pago.
 
-![Figura 18. 2.5.1.2. Domain Message Flows Modeling](assets/figura-18.png)
+**Figura 18:** *Domain Message Flow Modeling: carga y consulta de boletas*
+
+![Domain Message Flow Modeling: carga y consulta de boletas](assets/figura-18.png)
+
+*Nota.* Flujo de almacenamiento y consulta protegida de boletas de pago. Elaboración propia.
 
 **Escenario 05: Monitoreo de Salud Ocupacional y Ambiental**
 
 Como proceso preventivo de soporte, este escenario abarca la captura continua de variables físicas e higiénicas desde sensores IoT hacia el contexto **Wellbeing**, clasificando los indicadores ambientales y emitiendo alertas automatizadas ante desvíos críticos.
 
-![Figura 19. 2.5.1.2. Domain Message Flows Modeling](assets/figura-19.png)
+**Figura 19:** *Domain Message Flow Modeling: monitoreo ambiental*
+
+![Domain Message Flow Modeling: monitoreo ambiental](assets/figura-19.png)
+
+*Nota.* Captura de variables ambientales y emisión de alertas del contexto Wellbeing. Elaboración propia.
 
 **Escenario 06: Cese de Colaborador e Inhabilitación de Acceso**
 
 Como protocolo de seguridad ante la salida de un empleado, este escenario coordina el registro de la baja laboral en el contexto **Workspace** para emitir un evento de dominio asíncrono que ordena al contexto **IAM** revocar e inhabilitar de manera inmediata los accesos a la plataforma.
 
-![Figura 20. 2.5.1.2. Domain Message Flows Modeling](assets/figura-20.png)
+**Figura 20:** *Domain Message Flow Modeling: cese e inhabilitación de acceso*
+
+![Domain Message Flow Modeling: cese e inhabilitación de acceso](assets/figura-20.png)
+
+*Nota.* Evento de cese y revocación de acceso entre Workspace e IAM. Elaboración propia.
 
 #### 2.5.1.3. Bounded Context Canvases
+
+Las Figuras 21 a 27 presentan los Bounded Context Canvases, utilizados para resumir el propósito, las responsabilidades, las entradas y las salidas de cada bounded context.
 
 En esta sección, el equipo diseña y refina los candidate bounded contexts identificados previamente, estableciendo de forma rigurosa los criterios de diseño estratégicos y tácticos. Para ello, se seleccionaron los contextos acotados en orden de criticidad e importancia para el negocio de **Flowboard** (IAM, Workspace, Request, Benefits, Attendance, Payroll y Wellbeing), elaborando para cada uno de ellos su respectivo Bounded Context Canvas.
 
@@ -2061,45 +2238,75 @@ En esta sección, el equipo diseña y refina los candidate bounded contexts iden
 
 Como subdominio de soporte genérico, este contexto administra de manera centralizada la seguridad de la plataforma, el control de acceso basado en roles institucionales (*Analista de RRHH* y *Colaborador*) y la autenticación basada en tokens, asegurando que las operaciones del sistema cumplan con los estándares de privacidad y cifrado.
 
-![Figura 21. 2.5.1.3. Bounded Context Canvases](assets/figura-21.png)
+**Figura 21:** *Bounded Context Canvas: IAM*
+
+![Bounded Context Canvas: IAM](assets/figura-21.png)
+
+*Nota.* Canvas estratégico del bounded context IAM. Elaboración propia.
 
 **Bounded Context Canvas: Workspace**
 
 Como núcleo principal (Core Domain) del ecosistema, este contexto gobierna el ciclo de vida completo del empleado dentro de la organización, administrando la estructura departamental de áreas, posiciones y las líneas de reporte jerárquico necesarias para la operatividad de la empresa.
 
-![Figura 22. 2.5.1.3. Bounded Context Canvases](assets/figura-22.png)
+**Figura 22:** *Bounded Context Canvas: Workspace*
+
+![Bounded Context Canvas: Workspace](assets/figura-22.png)
+
+*Nota.* Canvas estratégico del bounded context Workspace. Elaboración propia.
 
 **Bounded Context Canvas: Request**
 
 Como núcleo operativo de trámites (*Core Domain*), este contexto administra de punta a punta las peticiones parametrizadas de los colaboradores (como vacaciones, permisos y licencias), automatizando el flujo de aprobación jerárquica y validando de forma coordinada las reglas del negocio.
 
-![Figura 23. 2.5.1.3. Bounded Context Canvases](assets/figura-23.png)
+**Figura 23:** *Bounded Context Canvas: Attendance*
+
+![Bounded Context Canvas: Attendance](assets/figura-23.png)
+
+*Nota.* Canvas estratégico del bounded context Attendance. Elaboración propia.
 
 **Bounded Context Canvas: Benefits**
 
 Como subdominio de soporte especializado, este contexto controla de manera automatizada la acumulación, el uso y la actualización en tiempo real de los saldos de días de descanso vacacional e incentivos corporativos asignados a cada colaborador.
 
-![Figura 24. 2.5.1.3. Bounded Context Canvases](assets/figura-24.png)
+**Figura 24:** *Bounded Context Canvas: Request*
+
+![Bounded Context Canvas: Request](assets/figura-24.png)
+
+*Nota.* Canvas estratégico del bounded context Request. Elaboración propia.
 
 **Bounded Context Canvas: Attendance**
 
 Como subdominio de soporte operativo, este contexto se encarga de recibir las marcaciones de entrada y salida del personal para procesarlas bajo reglas de negocio claras, transformándolas en registros de asistencia limpios, tardanzas identificadas y sobretiempos calculados.
 
-![Figura 25. 2.5.1.3. Bounded Context Canvases](assets/figura-25.png)
+**Figura 25:** *Bounded Context Canvas: Benefits*
+
+![Bounded Context Canvas: Benefits](assets/figura-25.png)
+
+*Nota.* Canvas estratégico del bounded context Benefits. Elaboración propia.
 
 **Bounded Context Canvas: Payroll**
 
 Como repositorio seguro de soporte, este contexto actúa como un espacio centralizado para almacenar, indexar y consultar las boletas de pago cargadas desde sistemas externos, garantizando la confidencialidad y el acceso exclusivo del colaborador a sus comprobantes.
 
-![Figura 26. 2.5.1.3. Bounded Context Canvases](assets/figura-26.png)
+**Figura 26:** *Bounded Context Canvas: Payroll*
+
+![Bounded Context Canvas: Payroll](assets/figura-26.png)
+
+*Nota.* Canvas estratégico del bounded context Payroll. Elaboración propia.
 
 **Bounded Context Canvas: Wellbeing**
 
 Como subdominio de soporte enfocado en el clima laboral físico, este contexto recopila métricas ambientales de las instalaciones de trabajo a través de dispositivos o sensores, clasificando los indicadores para emitir alertas tempranas de salud y seguridad ocupacional.
 
-![Figura 27. 2.5.1.3. Bounded Context Canvases](assets/figura-27.png)
+**Figura 27:** *Bounded Context Canvas: Wellbeing*
+
+![Bounded Context Canvas: Wellbeing](assets/figura-27.png)
+
+*Nota.* Canvas estratégico del bounded context Wellbeing. Elaboración propia.
 
 ### 2.5.2. Context Mapping
+
+En esta sección se define la relación estructural entre los bounded contexts identificados, considerando sus dependencias, responsabilidades y patrones de integración. La propuesta final se presenta en la Figura 28.
 
 En esta sección se explica cómo definimos las relaciones entre los siete bounded contexts de Flowboard. Partimos de los candidate bounded contexts, los Domain Message Flows y los Bounded Context Canvases, y probamos varias alternativas con las preguntas que propone la técnica antes de quedarnos con el diseño final.
 
@@ -2125,31 +2332,52 @@ Con esas decisiones, las relaciones del context map quedan así:
 * Sistemas externos: el sistema biométrico, el sistema de planilla, los sensores y la API de feriados entran con un ACL para que sus formatos no afecten el modelo.
 * Brevo y Firebase Cloud Messaging: nos adaptamos a sus APIs tal como vienen. Firebase solo aplica a la solución móvil.
 
-![Figura 28. 2.5.2. Context Mapping](assets/figura-28.png)
+**Figura 28:** *Context Mapping de Flowboard*
+
+![Context Mapping de Flowboard](assets/figura-28.png)
+
+*Nota.* Relaciones, integraciones y límites entre los bounded contexts de Flowboard. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1ktD7dv_auK9fwaGuWSyiViH8veNReKWw/view?usp=sharing 
 
 ### 2.5.3. Software Architecture
 
+En esta sección se presenta la arquitectura de software de Flowboard mediante el C4 Model. La propuesta incluye el nivel de contexto, el nivel de contenedores y el despliegue de los productos y servicios que conforman la solución. Las Figuras 56 a 58 resumen estas tres vistas arquitectónicas.
+
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-El diagrama de contexto muestra a Flowboard como un solo sistema y su relación con los usuarios y los sistemas externos. Los usuarios son el colaborador y el personal de Recursos Humanos. Los sistemas externos son el sistema de asistencia biométrica, el sistema de planilla, los sensores ambientales, el servicio de correo Brevo y la API de feriados Nager.Date. Este nivel permite entender el alcance de la solución sin entrar en detalles técnicos.
+El diagrama de contexto muestra a Flowboard como un solo sistema y su relación con los usuarios y los sistemas externos. Los usuarios son el colaborador y el personal de Recursos Humanos. Los sistemas externos son el sistema de asistencia biométrica, el sistema de planilla, los sensores ambientales, el servicio de correo Brevo y la API de feriados Nager.Date. Este nivel permite entender el alcance de la solución sin entrar en detalles técnicos. La relación se representa en la Figura 57.
 
-![imagen](assets/figura-57.png)
+**Figura 57:** *Diagrama de contexto de Flowboard*
+
+![Diagrama de contexto de Flowboard](assets/figura-57.png)
+
+*Nota.* Actores, sistema principal y sistemas externos que interactúan con Flowboard. Elaboración propia.
+
 Enlace de la figura: https://drive.google.com/file/d/1QT5xYU1oC38IbX-a20IhVlGOF0NnrZki/view?usp=sharing
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local, el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos.
+El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local, el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos, como se observa en la Figura 58.
 
-![imagen](assets/figura-58.png)
+**Figura 58:** *Diagrama de contenedores de Flowboard*
+
+![Diagrama de contenedores de Flowboard](assets/figura-58.png)
+
+*Nota.* Contenedores de software, tecnologías utilizadas y relaciones de comunicación de Flowboard. Elaboración propia.
+
 Enlace de la figura: https://drive.google.com/file/d/1pGQclKd26a_jyMMc7pBYe4HJlgBSRqWp/view?usp=sharing
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 En esta sección se presenta el Deployment Diagram para Flowboard. A diferencia del diagrama de contenedores, que muestra de qué partes está formada la solución, este muestra en qué infraestructura se ejecuta cada una de ellas en el ambiente de producción y por qué protocolo se comunican. El diagrama se elaboró con Structurizr DSL a partir del diagrama de contenedores.
-El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL.
+El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL. La infraestructura resultante se muestra en la Figura 56.
 
-![imagen](assets/figura-56.png)
+**Figura 56:** *Deployment Diagram de Flowboard*
+
+![Deployment Diagram de Flowboard](assets/figura-56.png)
+
+*Nota.* Infraestructura de producción, componentes desplegados y protocolos de comunicación de Flowboard. Elaboración propia.
+
 Enlace de la figura: https://drive.google.com/file/d/15bMEiFodiW55TJcYOEIEAN_k1F9tzFDc/view?usp=sharing
 
 ## 2.6. Tactical-Level Domain-Driven Design
@@ -2246,9 +2474,15 @@ Esta capa gestiona la interacción con los clientes externos (frontend o cliente
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 29 presenta el Component Diagram del bounded context IAM y muestra la colaboración entre sus componentes principales.
+
 En esta sección se presenta el Component Diagram del bounded context IAM, mostrando cómo sus componentes se distribuyen entre la aplicación móvil y el API Backend de Flowboard.
 
-![Figura 29. 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-29.png)
+**Figura 29:** *Component Diagram del bounded context IAM*
+
+![Component Diagram del bounded context IAM](assets/figura-29.png)
+
+*Nota.* Componentes de la aplicación y del API que implementan IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1gcdgO-cC5cpBQgW-5ptXY4vbpGzktU2E/view?usp=sharing
 
 En la Mobile App, el flujo de autenticación comienza en **Login UI**, cuya lógica de presentación es gestionada por **LoginViewModel**. Este delega las operaciones de inicio de sesión y desbloqueo en SignInUseCase / UnlockSessionUseCase, que coordina el acceso remoto mediante AuthRemoteDataSource, el almacenamiento seguro del token mediante **SecureTokenStorage** y la autenticación local mediante **BiometricAuthenticator**.
@@ -2261,11 +2495,17 @@ El acceso a la persistencia se realiza mediante los repositorios JPA del context
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 30 presenta el Code Diagram del bounded context IAM y detalla sus clases, interfaces y relaciones de implementación.
+
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer de IAM.
 
-![Figura 30. 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-30.png)
+**Figura 30:** *Domain Layer Class Diagram del bounded context IAM*
+
+![Domain Layer Class Diagram del bounded context IAM](assets/figura-30.png)
+
+*Nota.* Agregados, entidades y objetos de valor del dominio IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1J62k1rAa5mILgF6E-m6QOc13bLvpoAYJ/view?usp=sharing
 
 **UserAccount** constituye el Aggregate Root del contexto y concentra el estado y comportamiento de una cuenta de acceso. Mantiene la referencia al colaborador mediante **EmployeeId**, sus **Credentials**, el Role, el **AccountStatus** y las propiedades necesarias para controlar el acceso y cambio de contraseña.
@@ -2280,7 +2520,11 @@ El agregado también concentra reglas como la existencia de una única cuenta po
 
 En esta sección se presenta el diagrama de base de datos para la persistencia correspondiente al bounded context IAM.
 
-![Figura 31. 2.6.1.6.2. Bounded Context Database Design Diagram](assets/figura-31.png)
+**Figura 31:** *Database Design Diagram del bounded context IAM*
+
+![Database Design Diagram del bounded context IAM](assets/figura-31.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1Pa3Ak4XGjTBNyrgEEYFkQsJQbhgfV5oD/view?usp=sharing
 
 La tabla principal es **user_accounts**, donde se almacena la información persistente del Aggregate Root **UserAccount**, incluyendo el identificador del colaborador, nombre de usuario, hash de contraseña, rol, estado de la cuenta y datos relacionados con el último acceso.
@@ -2374,9 +2618,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 31 presenta el Component Diagram del bounded context Workspace y muestra la organización de sus componentes.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Workspace. El diagrama muestra los componentes de la aplicación móvil y del API Backend responsables de la gestión de colaboradores, áreas, puestos, documentos y estructura organizacional.
 
-![Figura 32. 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-32.png)
+**Figura 32:** *Component Diagram del bounded context Workspace*
+
+![Component Diagram del bounded context Workspace](assets/figura-32.png)
+
+*Nota.* Componentes responsables de la gestión de colaboradores y estructura organizacional. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1snu8Q_Bu7WsscwNjeOy5MF9ciJHw9bFP/view?usp=sharing
 
 En la Mobile App, **Profile & Directory UI** permite consultar la ficha personal, el directorio y la información organizacional. La lógica de presentación es gestionada por **MyProfileViewModel** y **OrganizationChartViewModel**, los cuales utilizan **EmployeeRepositoryImpl** para coordinar el acceso a información local y remota.
@@ -2391,11 +2641,17 @@ Por último, **SpringDomainEventPublisher** publica eventos como **EmployeeRegis
 
 #### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 32 presenta el Code Diagram del bounded context Workspace y detalla las clases e interfaces que implementan sus responsabilidades.
+
 ##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Workspace.
 
-**![Figura 33. 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-33.png)**
+**Figura 33:** *Domain Layer Class Diagram del bounded context Workspace*
+
+![Domain Layer Class Diagram del bounded context Workspace](assets/figura-33.png)
+
+*Nota.* Modelo de dominio para colaboradores, áreas, puestos y documentos. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1u8sNJ3E3Mw8CjqBuFX0wjLQ5Fi-nZGcA/view?usp=sharing
 
@@ -2415,7 +2671,11 @@ El Aggregate Root mantiene además reglas como la unicidad del documento de iden
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Workspace.
 
-![Figura 34. 2.6.2.6.2. Bounded Context Database Design Diagram](assets/figura-34.png)
+**Figura 34:** *Database Design Diagram del bounded context Workspace*
+
+![Database Design Diagram del bounded context Workspace](assets/figura-34.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Workspace. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1yczRTCR5K1A8NS5KYfTFhkmCg0iTq5Ys/view?usp=sharing
 
@@ -2501,9 +2761,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 33 presenta el Component Diagram del bounded context Attendance y muestra la relación entre sus componentes.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Attendance. El diagrama muestra los componentes que participan en el registro de marcaciones, consulta del historial de asistencia, administración de horarios y consolidación diaria de jornadas.
 
-![Figura 35. 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-35.png)
+**Figura 35:** *Component Diagram del bounded context Attendance*
+
+![Component Diagram del bounded context Attendance](assets/figura-35.png)
+
+*Nota.* Componentes responsables del registro y procesamiento de asistencia. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1J4t1ce5stv-HXrLSA2HhZdxnXsmLmtKm/view?usp=sharing
 
@@ -2520,11 +2786,17 @@ El contexto incorpora además **DailyAttendanceClosingScheduler**, encargado del
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 34 presenta el Code Diagram del bounded context Attendance y detalla las clases e interfaces que conforman el contexto.
+
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Attendance.
 
-![Figura 36. 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-36.png)
+**Figura 36:** *Domain Layer Class Diagram del bounded context Attendance*
+
+![Domain Layer Class Diagram del bounded context Attendance](assets/figura-36.png)
+
+*Nota.* Modelo de dominio para marcaciones, registros diarios y justificaciones. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/12dc4bxpE5hX4UZxYk3-CjdCB3XBWB8c2/view?usp=sharing
 
@@ -2542,7 +2814,11 @@ Las horas procesadas se encapsulan mediante **WorkedHours**, que diferencia las 
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Attendance.
 
-![Figura 37. 2.6.3.6.2. Bounded Context Database Design Diagram](assets/figura-37.png)
+**Figura 37:** *Database Design Diagram del bounded context Attendance*
+
+![Database Design Diagram del bounded context Attendance](assets/figura-37.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Attendance. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1e5BoZGv0-PWcaU-l0E1_U2KfwwL12Z8U/view?usp=sharing
 
@@ -2636,9 +2912,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 38 presenta el Component Diagram del bounded context Request y muestra los componentes responsables del ciclo de vida de las solicitudes.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Request. El diagrama muestra los componentes responsables de la creación, seguimiento, aprobación y notificación de solicitudes.
 
-![Figura 38. 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-38.png)
+**Figura 38:** *Component Diagram del bounded context Request*
+
+![Component Diagram del bounded context Request](assets/figura-38.png)
+
+*Nota.* Componentes responsables del ciclo de vida y aprobación de solicitudes. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1N2LySDDv1rNeUwn2AUpTihYr5-i9wkFa/view?usp=sharing
 
@@ -2658,11 +2940,17 @@ Los cambios relevantes del flujo generan eventos que son procesados por **Reques
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 39 presenta el Code Diagram del bounded context Request y detalla las clases, interfaces y relaciones utilizadas para implementar sus procesos.
+
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Request.
 
-![Figura 39. 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-39.png)
+**Figura 39:** *Domain Layer Class Diagram del bounded context Request*
+
+![Domain Layer Class Diagram del bounded context Request](assets/figura-39.png)
+
+*Nota.* Modelo de dominio para solicitudes y reglas de aprobación. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1Lk0D9DUH0DdP33kduoc0NmlrtiwCWX8l/view?usp=sharing
 
@@ -2684,7 +2972,11 @@ Finalmente, **RequestStatus** controla el ciclo de vida de la solicitud mediante
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Request.
 
-![Figura 40. 2.6.4.6.2. Bounded Context Database Design Diagram](assets/figura-40.png)
+**Figura 40:** *Database Design Diagram del bounded context Request*
+
+![Database Design Diagram del bounded context Request](assets/figura-40.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Request. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/16NBJXgYZkB3oYzyT12GFBHEugMPOqqFa/view?usp=sharing
 
@@ -2780,9 +3072,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 41 presenta el Component Diagram del bounded context Benefits y muestra la organización de sus componentes principales.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Benefits. El diagrama muestra los componentes responsables de la consulta, asignación y administración de beneficios, así como de la gestión del saldo vacacional.
 
-![Figura 41. 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-41.png)
+**Figura 41:** *Component Diagram del bounded context Benefits*
+
+![Component Diagram del bounded context Benefits](assets/figura-41.png)
+
+*Nota.* Componentes responsables de beneficios y saldos de vacaciones. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1FqwhOyFuLW2HtsZg15rZIalOnShbMzrB/view?usp=sharing
 
@@ -2798,11 +3096,17 @@ En el **API Backend**, **VacationBalancesController** y **BenefitsController** e
 
 #### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 42 presenta el Code Diagram del bounded context Benefits y detalla sus clases e interfaces de implementación.
+
 ##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Benefits.
 
-![Figura 42. 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-42.png)
+**Figura 42:** *Domain Layer Class Diagram del bounded context Benefits*
+
+![Domain Layer Class Diagram del bounded context Benefits](assets/figura-42.png)
+
+*Nota.* Modelo de dominio para beneficios y saldos vacacionales. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1FozKzdchcgiZcZdPwhldm1R0hLgv-YXg/view?usp=sharing
 
@@ -2822,7 +3126,11 @@ Cada variación del saldo se representa mediante **VacationMovement**, el cual i
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Benefits.
 
-![Figura 43. 2.6.5.6.2. Bounded Context Database Design Diagram](assets/figura-43.png)
+**Figura 43:** *Database Design Diagram del bounded context Benefits*
+
+![Database Design Diagram del bounded context Benefits](assets/figura-43.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Benefits. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1ota4FWcYZmuB1wyYk0KBeMJAbUyxHYiB/view?usp=sharing
 
@@ -2905,9 +3213,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 44 presenta el Component Diagram del bounded context Payroll y muestra la interacción entre sus componentes.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Payroll.
 
-![Figura 44. 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-44.png)
+**Figura 44:** *Component Diagram del bounded context Payroll*
+
+![Component Diagram del bounded context Payroll](assets/figura-44.png)
+
+*Nota.* Componentes responsables de boletas y estados de pago. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1bVXUmi_qM8hRHICWA4V5EpjW11_sGIr0/view?usp=sharing
 
@@ -2919,11 +3233,17 @@ El contexto se integra con Workspace para identificar al colaborador propietario
 
 #### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 45 presenta el Code Diagram del bounded context Payroll y detalla las clases e interfaces que soportan sus operaciones.
+
 ##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Payroll.
 
-![Figura 45. 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-45.png)
+**Figura 45:** *Domain Layer Class Diagram del bounded context Payroll*
+
+![Domain Layer Class Diagram del bounded context Payroll](assets/figura-45.png)
+
+*Nota.* Modelo de dominio para periodos, boletas y pagos. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1q9KABHKNucaI5ybmjg2eHFTvobhnK1Rc/view?usp=sharing
 
@@ -2943,7 +3263,11 @@ El agregado también utiliza objetos compartidos como **EmployeeId**, **Money** 
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Payroll.
 
-![Figura 46. 2.6.6.6.2. Bounded Context Database Design Diagram](assets/figura-46.png)
+**Figura 46:** *Database Design Diagram del bounded context Payroll*
+
+![Database Design Diagram del bounded context Payroll](assets/figura-46.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Payroll. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1gexNLUMXLYZlXSQ3wS2YsN5HE5MdtA_d/view?usp=sharing
 
@@ -3034,9 +3358,15 @@ Sub-capa Services y Repositories
 
 #### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
 
+La Figura 47 presenta el Component Diagram del bounded context Wellbeing y muestra la organización de sus componentes principales.
+
 En esta sección se presenta el Component Diagram correspondiente al bounded context Wellbeing. El diagrama muestra los componentes encargados de registrar oficinas y dispositivos, recibir lecturas ambientales, clasificarlas y exponer indicadores para su consulta desde la aplicación móvil.
 
-![Figura 47. 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams](assets/figura-47.png)
+**Figura 47:** *Component Diagram del bounded context Wellbeing*
+
+![Component Diagram del bounded context Wellbeing](assets/figura-47.png)
+
+*Nota.* Componentes responsables del monitoreo ambiental y sus indicadores. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/12vyMi-MQLcCmbG9bNR7d726iB0cFdjfL/view?usp=sharing
 
@@ -3054,11 +3384,17 @@ Finalmente, **Wellbeing Event Handlers** procesa eventos relevantes del contexto
 
 #### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
 
+La Figura 48 presenta el Code Diagram del bounded context Wellbeing y detalla sus clases e interfaces de implementación.
+
 ##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Wellbeing.
 
-![Figura 48. 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams](assets/figura-48.png)
+**Figura 48:** *Domain Layer Class Diagram del bounded context Wellbeing*
+
+![Domain Layer Class Diagram del bounded context Wellbeing](assets/figura-48.png)
+
+*Nota.* Modelo de dominio para espacios, métricas y umbrales ambientales. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1kuUnHmtumps9wziuJqwDGgZSF1mPYcqF/view?usp=sharing
 
@@ -3076,7 +3412,11 @@ Las métricas ambientales se representan mediante **MetricValue**, que combina u
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Wellbeing.
 
-![Figura 49. 2.6.7.6.2. Bounded Context Database Design Diagram](assets/figura-49.png)
+**Figura 49:** *Database Design Diagram del bounded context Wellbeing*
+
+![Database Design Diagram del bounded context Wellbeing](assets/figura-49.png)
+
+*Nota.* Tablas y relaciones de persistencia del bounded context Wellbeing. Elaboración propia.
 
 Enlace de la figura: https://drive.google.com/file/d/1beMKRbzfaEdriqcP_b3e9esvD33PUfBY/view?usp=sharing
 
@@ -3252,6 +3592,8 @@ La arquitectura de información de Flowboard responde a una tensión propia del 
 
 #### 3.1.2.1. Organization Systems
 
+La Figura 54 presenta los sistemas de organización de la información utilizados para estructurar el contenido y las funcionalidades de Flowboard.
+
 La aplicación se divide en dos experiencias que se determinan por el rol de la cuenta autenticada. No existen dos aplicaciones ni dos accesos distintos: el usuario inicia sesión una sola vez y la plataforma reconoce si es personal de Recursos Humanos o colaborador, y construye la barra de navegación en consecuencia. El personal de Recursos Humanos dispone además de la vista de autogestión, porque también es colaborador de la organización y consulta sus propias boletas y su propio saldo.
 
 **Experiencia de autogestión del colaborador**
@@ -3359,6 +3701,8 @@ La bandeja del aprobador incorpora un caso intermedio, con botones segmentados q
 
 #### 3.1.2.5. Navigation Systems
 
+La Figura 55 presenta el mapa de navegación de la aplicación móvil y muestra las rutas principales entre sus pantallas.
+
 La navegación se apoya en cinco mecanismos, cada uno asignado a un tipo de recorrido.
 
 - **Barra de navegación inferior:** es el mecanismo principal y permanece visible en todas las pantallas de primer nivel. Contiene cinco destinos, que es el máximo que Material Design admite antes de que los rótulos se trunquen, y su composición depende del rol de la cuenta según la tabla de la sección 3.1.2.2. El destino activo se señala con el rótulo en Inter Semi Bold y con un contenedor en Light Primary detrás del icono, es decir, con dos señales simultáneas y no solo con color.
@@ -3389,6 +3733,8 @@ El sitio se encuentra desplegado y accesible en https://performily-mobile.github
 
 #### 3.1.3.1. Landing Page Wireframe
 
+La Figura 56 presenta el wireframe del Landing Page para la versión de navegador de escritorio.
+
 Los wireframes fijan la estructura y el orden de lectura de las nueve secciones sin comprometer color ni tipografía, y se elaboraron en las dos resoluciones de referencia. La versión de navegador de escritorio distribuye el contenido en dos y tres columnas según el bloque, mientras que la versión de navegador móvil colapsa todo a una sola columna, reordena los llamados a la acción para que queden dentro del primer desplazamiento y convierte el menú del encabezado en un control desplegable.
 
 El orden de las secciones responde a una decisión de arquitectura de información y no a una convención. El bloque de seguridad, que normalmente ocuparía un lugar secundario, se sitúa antes del detalle de módulos porque la objeción que el equipo anticipa en el segmento de colaboradores no es funcional sino de privacidad: la pregunta es si su remuneración queda expuesta al instalar una aplicación del empleador en un teléfono personal. Responderla antes de enumerar funcionalidades evita que el visitante abandone la página con esa duda sin resolver.
@@ -3408,6 +3754,8 @@ En la propuesta se aplican los principios de diseño inclusivo definidos para el
 *Nota.* Las mismas secciones colapsadas a una columna, con el menú desplegable y el llamado a la acción principal dentro del primer desplazamiento. Elaboración propia.
 
 #### 3.1.3.2. Landing Page Mock-up
+
+Las Figuras 58 y 59 presentan los mock-ups del Landing Page en sus versiones de navegador de escritorio y navegador móvil.
 
 Los mock-ups aplican sobre esos wireframes el sistema de diseño de la sección 3.1.1.1. El azul pizarra Primary se reserva para la acción principal de cada bloque, de modo que en ninguna sección compiten dos botones por la misma atención, y el Light Primary se emplea como fondo de las secciones intercaladas para marcar el ritmo de lectura sin introducir un color nuevo. Los mock-ups se codifican de MK-01 a MK-09 y mantienen correspondencia uno a uno con los wireframes, de modo que cualquier cambio estructural se puede rastrear entre ambas versiones.
 
@@ -3434,6 +3782,8 @@ Todas las pantallas se codifican con el prefijo MA y una numeración correlativa
 Las dos aplicaciones, la nativa en Kotlin y la cross-platform en Flutter, comparten el mismo conjunto de 83 pantallas. No se diseñaron dos propuestas visuales distintas, porque el objetivo del proyecto es demostrar que una misma experiencia puede implementarse con dos tecnologías y no que cada tecnología produce un producto diferente.
 
 #### 3.1.4.1. Mobile Applications Wireframes
+
+Las Figuras 60 a 75 presentan los wireframes de las aplicaciones móviles, organizados según los módulos funcionales y los perfiles de usuario.
 
 Se elaboraron 83 wireframes sobre un lienzo de 360 por 800dp, que corresponde a la clase de ventana compacta de Android. El conjunto no se limita a los caminos felices: incluye los estados vacíos, los formularios con errores de validación, los bloqueos por regla de negocio, la vista sin conexión y los mensajes del sistema, porque son esas pantallas las que determinan si el usuario entiende qué hacer cuando algo no sale como esperaba.
 
@@ -3518,6 +3868,8 @@ Elaborado en Figma: https://www.figma.com/design/WFdHq0SwabwQAXZEAVd9an/Flowboar
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
+Las Figuras 76 y 77 presentan los wireflow diagrams de las aplicaciones móviles y muestran la secuencia de pantallas de los flujos principales.
+
 Los wireflows muestran la secuencia de pantallas que recorre un usuario para completar una meta concreta, incorporando como un paso más cada cambio de estado de la interfaz. Se elaboró un wireflow por cada user goal, derivado previamente de un task flow que estableció con el equipo cuál es la ruta típica de pasos antes de dibujar pantalla alguna.
 
 Los seis user goals se definieron a partir de los User Personas de la sección 2.3.1 y cubren los dos segmentos objetivo junto con el subperfil de aprobador. El criterio de selección fue que cada meta correspondiera a una de las hipótesis del proceso Lean UX, de modo que el prototipo permita después contrastarlas.
@@ -3595,6 +3947,8 @@ Desde el panel (MA-18) el analista entra a la asistencia por área (MA-35), dond
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
+Las Figuras 80 a 85 presentan los mock-ups de las aplicaciones móviles y muestran la propuesta visual de los principales módulos funcionales.
+
 Los mock-ups aplican sobre los 83 wireframes el sistema de diseño definido en la sección 3.1.1.1 y mantienen la misma codificación MA, de modo que la correspondencia entre estructura y presentación es uno a uno y cualquier cambio se puede rastrear entre ambos artefactos.
 
 Tres decisiones de diseño se aprecian de forma transversal en el conjunto. La primera es el uso restringido del color primario: en cada pantalla existe a lo sumo una acción en Primary, de modo que la jerarquía de acciones se resuelve visualmente sin necesidad de leer. La segunda es que todo estado se comunica mediante un chip que contiene la palabra que lo nombra, lo que hace que la interfaz siga siendo comprensible para un usuario con discromatopsia y en pantallas con reproducción de color deficiente, habituales en la gama de entrada. La tercera es que los listados largos se presentan como tarjetas sobre fondo blanco separadas por 12dp, en lugar de filas con separadores finos, porque el borde de 1dp del color Outline no alcanza el contraste necesario para delimitar contenido por sí solo.
@@ -3663,6 +4017,8 @@ Elaborado en Figma: https://www.figma.com/design/PbZic365b3k2R8h824XkKW/Flowboar
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
+Las Figuras 86 a 89 presentan los user flow diagrams y describen los recorridos principales que puede realizar cada tipo de usuario.
+
 Los user flows se derivan de los wireflows de la sección 3.1.4.2 y conservan su numeración, de modo que cada UG tiene ambos artefactos. La diferencia entre uno y otro es el nivel de abstracción: el wireflow muestra qué ve el usuario en cada paso, mientras que el user flow muestra qué decide el sistema. Por eso los user flows incorporan los nodos de decisión con sus condiciones, el camino esperado y las rutas alternativas que se activan cuando una regla de negocio bloquea el avance.
 
 Las condiciones representadas en los diagramas no son supuestos de diseño, sino las invariantes declaradas en el modelo de dominio del Capítulo II. La validación de saldo de UG-02 corresponde a la regla del agregado VacationBalance, el bloqueo de cese de UG-05 corresponde a la invariante que impide cesar a un colaborador con subordinados asignados, y el ruteo de UG-04 corresponde a la derivación del aprobador a partir de la relación de jefatura en Workspace. Mantener esa correspondencia es lo que permite que el diseño de interacción y la implementación no se contradigan.
@@ -3715,6 +4071,8 @@ Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboar
 *Nota.* Validación del rango de fechas y ruta alternativa hacia el estado vacío cuando el período no tiene registros. Elaboración propia.
 
 #### 3.1.4.5. Mobile Applications Prototyping
+
+La Figura 90 presenta el prototipo navegable de las aplicaciones móviles y permite observar la interacción entre las pantallas diseñadas.
 
 El prototipo navegable reproduce los seis user flows de la sección anterior con simulación de interacción y navegación. Los criterios que guiaron las decisiones de interacción son cuatro, y los tres primeros se desprenden directamente del sistema de navegación definido en la sección 3.1.2.5.
 
@@ -3966,6 +4324,8 @@ Los aspectos del Sprint 1 corresponden a los productos y bounded contexts que en
 *Nota.* L = Leader, C = Collaborator. Elaboración propia.
 
 #### 4.2.1.3. Sprint Backlog 1
+
+La Figura 92 presenta el Sprint Backlog 1, donde se visualizan las historias y tareas seleccionadas para el incremento desarrollado durante el sprint.
 
 El objetivo del Sprint 1 fue publicar el Landing Page y construir la primera versión de la aplicación nativa sobre el RESTful API, cubriendo los Epics EP02 a EP08 y las Technical Stories y Spikes que sostienen el despliegue. Las User Stories se descompusieron en tasks por capa (API y aplicación) y se asignaron según la matriz de líderes. El tablero del Sprint se gestionó en Trello.
 
@@ -4447,6 +4807,8 @@ Feature: Environmental thresholds and indicators
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
+Las figuras de esta sección documentan la ejecución funcional de los módulos implementados durante el Sprint 1 y sirven como evidencia del comportamiento observado en las aplicaciones.
+
 Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versión ejecutable de la aplicación nativa conectada al RESTful API. La aplicación muestra una barra inferior distinta según el rol: Recursos Humanos accede a Panel, Personal, Solicitudes, Asistencia y Más, y el colaborador a Inicio, Solicitudes, Asistencia, Boletas y Perfil. Las capturas siguientes muestran las vistas principales con datos de muestra registrados en el API.
 
 **Landing Page**
@@ -4925,6 +5287,8 @@ Las sesiones de validación se realizan con la aplicación instalada en el celul
 
 ### 4.3.2. Registro de Entrevistas
 
+Las Figuras 126 a 131 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
+
 Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre las tareas.
 
 **Segmento 1: Personal de Recursos Humanos**
@@ -5078,6 +5442,8 @@ PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada 
 
 
 ### 4.3.3. Evaluaciones según heurísticas
+
+Las Figuras 132 a 137 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
 
 **UX Heuristics & Principles Evaluation**
 **Usability - Inclusive Design - Information Architecture**
@@ -5268,5 +5634,3 @@ Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review 
 Jošt, G., & Taneski, V. (2025). State-of-the-art cross-platform mobile application development frameworks: A comparative study of market and developer trends. Informatics, 12(2), 45. https://doi.org/10.3390/informatics12020045
 
 OWASP Foundation. (s. f.). OWASP Mobile Application Security Verification Standard (MASVS). https://mas.owasp.org/MASVS/ 
-
-
