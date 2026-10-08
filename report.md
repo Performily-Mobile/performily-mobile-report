@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-upc.png" alt="Universidad Peruana de Ciencias Aplicadas" width="80">
+  <img src="assets\Chapter-1\logo-upc.png" alt="Universidad Peruana de Ciencias Aplicadas" width="80">
 </p>
 
 <h3 align="center">Universidad Peruana de Ciencias Aplicadas</h3>
@@ -66,7 +66,7 @@
 
 <p align="center">
   Período 202620<br>
-  Septiembre 2026
+  Octubre 2026
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -100,17 +100,17 @@ Repositorio del informe: `https://github.com/Performily-Mobile/performily-mobile
 
 Para la entrega del AV1, el trabajo se distribuyó de modo que cada integrante asumiera secciones completas y respondiera por su contenido. Vasquez Llave, Oscar Lizandro creó el repositorio, definió la estructura de secciones y desarrolló el Capítulo I en su totalidad. Esquicha Alcántara, Diego Alonso elaboró los Objetivos SMART y la perspectiva estratégica y táctica del Domain-Driven Design. Galvez Meza, Salym Pool desarrolló el análisis competitivo, el Ubiquitous Language, el Product Backlog y las capas de infraestructura y los diagramas de código de cada bounded context. Diaz Villalba, Diego Alonso se encargó del diseño de entrevistas, el EventStorming, las User Stories, el Context Mapping y los diagramas de arquitectura de software. Ávila De La Cruz, Darío Fabián condujo el registro y el análisis de entrevistas, todo el Needfinding y el Impact Mapping.
 
-Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan en las Figuras 67 y 68.
+Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan en las Figuras 1 y 2.
 
-**Figura 67:** *Analíticos de colaboración y commits del repositorio del informe*
+**Figura 1:** *Analíticos de colaboración y commits del repositorio del informe*
 
-![Analíticos de colaboración del repositorio del informe](assets/figura-67.png)
+![Analíticos de colaboración del repositorio del informe](assets\Chapter-1\commit-informe.png)
 
 *Nota.* Actividad de colaboración y registro de commits del repositorio del informe. Elaboración propia.
 
-**Figura 68:** *Analíticos de colaboración y commits del repositorio del equipo*
+**Figura 2:** *Analíticos de colaboración y commits del repositorio del equipo*
 
-![Analíticos de colaboración del repositorio del equipo](assets/figura-68.png)
+![Analíticos de colaboración del repositorio del equipo](assets\Chapter-1\commit-equipo.png)
 
 *Nota.* Distribución de contribuciones y commits realizados por los integrantes. Elaboración propia.
 
@@ -476,35 +476,35 @@ Con Flowboard, Performily lleva esa propuesta al dispositivo que el colaborador 
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-Los perfiles profesionales de los cinco integrantes se presentan mediante las Figuras 1 a 5, junto con la información académica y la descripción de sus competencias.
+Los perfiles profesionales de los cinco integrantes se presentan mediante las Figuras 3 a 7, junto con la información académica y la descripción de sus competencias.
 
-**Figura 1:** *Perfil de Darío Ávila De La Cruz*
+**Figura 3:** *Perfil de Darío Ávila De La Cruz*
 
-![Perfil de Darío Ávila De La Cruz](assets/figura-01.png)
+![Perfil de Darío Ávila De La Cruz](assets\Chapter-1\perfil-dario.png)
 
 *Nota.* Fotografía de perfil del integrante Darío Ávila De La Cruz. Elaboración propia.
 
-**Figura 2:** *Perfil de Salym Galvez Meza*
+**Figura 4:** *Perfil de Salym Galvez Meza*
 
-![Perfil de Salym Galvez Meza](assets/figura-02.png)
+![Perfil de Salym Galvez Meza](assets\Chapter-1\perfil-salym.png)
 
 *Nota.* Fotografía de perfil del integrante Salym Galvez Meza. Elaboración propia.
 
-**Figura 3:** *Perfil de Diego Alonso Esquicha Alcántara*
+**Figura 5:** *Perfil de Diego Alonso Esquicha Alcántara*
 
-![Perfil de Diego Alonso Esquicha Alcántara](assets/figura-03.png)
+![Perfil de Diego Alonso Esquicha Alcántara](assets\Chapter-1\perfil-esquicha.png)
 
 *Nota.* Fotografía de perfil del integrante Diego Alonso Esquicha Alcántara. Elaboración propia.
 
-**Figura 4:** *Perfil de Oscar Lizandro Vasquez Llave*
+**Figura 6:** *Perfil de Oscar Lizandro Vasquez Llave*
 
-![Perfil de Oscar Lizandro Vasquez Llave](assets/figura-04.png)
+![Perfil de Oscar Lizandro Vasquez Llave](assets\Chapter-1\perfil-oscar.png)
 
 *Nota.* Fotografía de perfil del integrante Oscar Lizandro Vasquez Llave. Elaboración propia.
 
-**Figura 5:** *Perfil de Diego Alonso Diaz Villalba*
+**Figura 7:** *Perfil de Diego Alonso Diaz Villalba*
 
-![Perfil de Diego Alonso Diaz Villalba](assets/figura-59.png)
+![Perfil de Diego Alonso Diaz Villalba](assets\Chapter-1\perfil-diego.png)
 
 *Nota.* Fotografía de perfil del integrante Diego Alonso Diaz Villalba. Elaboración propia.
 
@@ -827,7 +827,7 @@ La identidad visual de Flowboard y las referencias visuales de los competidores 
 | Competitive Analysis Landscape |  |  |  |  |  |
 | :---- | :---- | ----- | ----- | ----- | ----- |
 | ¿Por qué llevar a cabo este análisis? | El presente Competitive Analysis Landscape tiene como finalidad conocer las principales soluciones móviles que compiten en el mercado de gestión de recursos humanos. El análisis permite comparar sus propuestas de valor, funcionalidades, segmentos, modelos comerciales y canales de distribución para identificar oportunidades de diferenciación para Flowboard. |  |  |  |  |
-| Nombres de los competidores |  | **Figura 5:** *Identidad visual de Flowboard*<br><br>![Identidad visual de Flowboard](assets/figura-05.png)<br><br>*Nota.* Referencia visual de la propuesta de Flowboard utilizada en el análisis competitivo. Elaboración propia. | **Figura 6:** *Identidad visual de Buk*<br><br>![Identidad visual de Buk](assets/figura-06.png)<br><br>*Nota.* Referencia visual de la plataforma Buk utilizada para la comparación competitiva. Fuente: Buk. | **Figura 7:** *Identidad visual de Factorial*<br><br>![Identidad visual de Factorial](assets/figura-07.png)<br><br>*Nota.* Referencia visual de la plataforma Factorial utilizada para la comparación competitiva. Fuente: Factorial. | **Figura 8:** *Identidad visual de Sesame HR*<br><br>![Identidad visual de Sesame HR](assets/figura-08.png)<br><br>*Nota.* Referencia visual de la plataforma Sesame HR utilizada para la comparación competitiva. Fuente: Sesame HR. |
+| Nombres de los competidores |  | **Figura 8:** *Identidad visual de Flowboard*<br><br>![Identidad visual de Flowboard](assets\Chapter-2\logo-flowboard.png)<br><br>*Nota.* Referencia visual de la propuesta de Flowboard utilizada en el análisis competitivo. Elaboración propia. | **Figura 9:** *Identidad visual de Buk*<br><br>![Identidad visual de Buk](assets\Chapter-2\logo-buk.png)<br><br>*Nota.* Referencia visual de la plataforma Buk utilizada para la comparación competitiva. Fuente: Buk. | **Figura 10:** *Identidad visual de Factorial*<br><br>![Identidad visual de Factorial](assets\Chapter-2\logo-factorial.png)<br><br>*Nota.* Referencia visual de la plataforma Factorial utilizada para la comparación competitiva. Fuente: Factorial. | **Figura 11:** *Identidad visual de Sesame HR*<br><br>![Identidad visual de Sesame HR](assets\Chapter-2\logo-sesamehr.png)<br><br>*Nota.* Referencia visual de la plataforma Sesame HR utilizada para la comparación competitiva. Fuente: Sesame HR. |
 | Perfil | Overview | Solución móvil para gestionar el vínculo laboral en organizaciones en crecimiento. Centraliza la información del colaborador, asistencia, beneficios, remuneración referencial y solicitudes. Está compuesta por una aplicación Android nativa, una aplicación cross-platform y un RESTful API. | Plataforma integral de gestión de personas disponible mediante web y aplicación móvil. Centraliza planillas, asistencia, documentos, beneficios, vacaciones, selección y desarrollo organizacional. | Plataforma de recursos humanos y gestión empresarial disponible mediante web y aplicación móvil. Integra información del personal, control horario, ausencias, documentos, turnos, gastos y procesos de talento. | Plataforma multidispositivo de recursos humanos orientada a la gestión del tiempo y la experiencia del empleado. Permite gestionar asistencia, vacaciones, turnos, documentos y comunicación interna. |
 |  | Ventaja competitiva ¿Qué valor ofrece a los clientes? | Prioriza la experiencia móvil de colaboradores que no disponen de una computadora corporativa. Permite consultar información laboral y seguir solicitudes desde Android, contempla conectividad intermitente y protege información sensible mediante autenticación biométrica. | Ofrece una solución integral adaptada a la legislación peruana. Incluye planillas, asistencia y desarrollo organizacional dentro de un ecosistema consolidado, con soporte e implementación local. | Reúne procesos de recursos humanos, tiempo, talento y gastos en una plataforma modular. Su aplicación móvil incluye control horario, turnos, notificaciones y autenticación biométrica. | Destaca por una experiencia móvil intuitiva y por sus diferentes métodos de registro de asistencia. Facilita el autoservicio, la comunicación y la aprobación rápida de vacaciones y ausencias. |
 | Perfil de Marketing | Mercado objetivo | Organizaciones formales de Lima Metropolitana y Callao con entre 50 y 500 colaboradores, especialmente aquellas con personal operativo o sin acceso permanente a una computadora corporativa. | Empresas peruanas y latinoamericanas de diferentes tamaños que buscan centralizar y automatizar integralmente sus procesos de recursos humanos y planillas. | Pequeñas y medianas empresas que requieren digitalizar y ampliar progresivamente la gestión de recursos humanos, tiempo, talento y gastos. | Pequeñas, medianas y grandes empresas con equipos presenciales, híbridos o móviles que necesitan administrar horarios, asistencia y comunicación desde diferentes dispositivos. |
@@ -974,7 +974,7 @@ En esta sección se presenta el diseño de las entrevistas dirigidas a los dos s
 
 **Segmento 1:** **Personal de Recursos Humanos**
 
-Las capturas de las seis entrevistas realizadas a ambos segmentos se presentan en las Figuras 61 a 66, cada una acompañada de su identificación y nota correspondiente.
+Las capturas de las seis entrevistas realizadas a ambos segmentos se presentan en las Figuras 12 a 17, cada una acompañada de su identificación y nota correspondiente.
 
 **Entrevista 1:**
 
@@ -990,9 +990,9 @@ Timing donde inicia la entrevista: 00:00
 
 Duración completa de la entrevista: 4 minutos 54 segundos 
 
-**Figura 61:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 1*
+**Figura 12:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 1*
 
-![Entrevista de Recursos Humanos, entrevista 1](assets/figura-61.PNG)
+![Entrevista de Recursos Humanos, entrevista 1](assets\Chapter-2\entrevista-1.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1016,9 +1016,9 @@ Timing donde inicia la entrevista: 04:54
 
 Duración completa de la entrevista: 4 minutos 49 segundos
 
-**Figura 62:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 2*
+**Figura 13:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 2*
 
-![Entrevista de Recursos Humanos, entrevista 2](assets/figura-62.PNG)
+![Entrevista de Recursos Humanos, entrevista 2](assets\Chapter-2\entrevista-2.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1042,9 +1042,9 @@ Timing donde inicia la entrevista: 09:43
 
 Duración completa de la entrevista: 4 minutos 41 segundos
 
-**Figura 63:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 3*
+**Figura 14:** *Captura de la entrevista del segmento de Recursos Humanos, entrevista 3*
 
-![Entrevista de Recursos Humanos, entrevista 3](assets/figura-63.PNG)
+![Entrevista de Recursos Humanos, entrevista 3](assets\Chapter-2\entrevista-3.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1069,9 +1069,9 @@ Timing donde inicia la entrevista: 14:24
 
 Duración completa de la entrevista: 5 minutos 43 segundos
 
-**Figura 64:** *Captura de la entrevista del segmento de colaboradores, entrevista 1*
+**Figura 15:** *Captura de la entrevista del segmento de colaboradores, entrevista 1*
 
-![Entrevista de colaboradores, entrevista 1](assets/figura-64.PNG)
+![Entrevista de colaboradores, entrevista 1](assets\Chapter-2\entrevista-4.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1095,9 +1095,9 @@ Timing donde inicia la entrevista: 20:07
 
 Duración completa de la entrevista: 3 minutos 29 segundos
 
-**Figura 65:** *Captura de la entrevista del segmento de colaboradores, entrevista 2*
+**Figura 16:** *Captura de la entrevista del segmento de colaboradores, entrevista 2*
 
-![Entrevista de colaboradores, entrevista 2](assets/figura-65.PNG)
+![Entrevista de colaboradores, entrevista 2](assets\Chapter-2\entrevista-5.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1121,9 +1121,9 @@ Timing donde inicia la entrevista: 22:36
 
 Duración completa de la entrevista: 4 minutos 44 segundos
 
-**Figura 66:** *Captura de la entrevista del segmento de colaboradores, entrevista 3*
+**Figura 17:** *Captura de la entrevista del segmento de colaboradores, entrevista 3*
 
-![Entrevista de colaboradores, entrevista 3](assets/figura-66.PNG)
+![Entrevista de colaboradores, entrevista 3](assets\Chapter-2\entrevista-6.PNG)
 
 *Nota.* Captura del video de la entrevista de validación. Elaboración propia.
 
@@ -1184,9 +1184,9 @@ Para la construcción de los perfiles se priorizaron los hallazgos con mayor rec
 
 [https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing](https://drive.google.com/file/d/1AZk-z3Rep5obGpThNj6-C-Yr0lF1zQRa/view?usp=sharing)
 
-**Figura 54:** *User Persona del personal de Recursos Humanos*
+**Figura 18:** *User Persona del personal de Recursos Humanos*
 
-![User Persona del personal de Recursos Humanos](assets/figura-54.png)
+![User Persona del personal de Recursos Humanos](assets\Chapter-2\userpersona-rrhh.png)
 
 *Nota.* Arquetipo construido a partir de los hallazgos del segmento de Recursos Humanos. Elaboración propia.
 
@@ -1194,9 +1194,9 @@ Para la construcción de los perfiles se priorizaron los hallazgos con mayor rec
 
 [https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing](https://drive.google.com/file/d/1H24zhUS9lUOTpHQOfmZr5WsJ-GQakHfv/view?usp=sharing)
 
-**Figura 55:** *User Persona de los colaboradores generales*
+**Figura 19:** *User Persona de los colaboradores generales*
 
-![User Persona de los colaboradores generales](assets/figura-55.png)
+![User Persona de los colaboradores generales](assets\Chapter-2\userpersona-colaborador.png)
 
 *Nota.* Arquetipo construido a partir de los hallazgos del segmento de colaboradores generales. Elaboración propia.
 
@@ -1230,9 +1230,9 @@ User Person: Carlos (Personal de Recursos Humanos)
 
 [https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link](https://drive.google.com/file/d/1JgFk_QPVh6p1qQPIUVuZJsgqWHTbM8a3/view?usp=drive_link)
 
-**Figura 50:** *User Journey Map de Carlos, personal de Recursos Humanos*
+**Figura 20:** *User Journey Map de Carlos, personal de Recursos Humanos*
 
-![User Journey Map de Carlos](assets/figura-50.png)
+![User Journey Map de Carlos](assets\Chapter-2\journeymap-rrhh.png)
 
 *Nota.* Recorrido actual del personal de Recursos Humanos para gestionar información laboral. Elaboración propia.
 
@@ -1240,9 +1240,9 @@ User Person: Maria (Colaboradores generales)
 
 [https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing](https://drive.google.com/file/d/1VpsNEBJ86U4SX1-fq1JKZ4VM0u86ITS1/view?usp=sharing)
 
-**Figura 51:** *User Journey Map de María, colaboradora general*
+**Figura 21:** *User Journey Map de María, colaboradora general*
 
-![User Journey Map de María](assets/figura-51.png)
+![User Journey Map de María](assets\Chapter-2\journeymap-colaborador.png)
 
 *Nota.* Recorrido actual de una colaboradora general para consultar y gestionar su información laboral. Elaboración propia.
 
@@ -1254,9 +1254,9 @@ Empathy Mapping: Carlos (Personal de Recursos Humanos)
 
 [https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing](https://drive.google.com/file/d/1OZfx7c3dSI2i6q8S7OBEE9TNnxt2ZZy1/view?usp=sharing)
 
-**Figura 52:** *Empathy Map de Carlos, personal de Recursos Humanos*
+**Figura 22:** *Empathy Map de Carlos, personal de Recursos Humanos*
 
-![Empathy Map de Carlos](assets/figura-52.png)
+![Empathy Map de Carlos](assets\Chapter-2\empathymap-rrhh.png)
 
 *Nota.* Pensamientos, necesidades y comportamientos identificados para el segmento de Recursos Humanos. Elaboración propia.
 
@@ -1264,43 +1264,43 @@ Empathy Mapping: Maria (Colaboradores generales)
 
 [https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing](https://drive.google.com/file/d/1skXF0GSe6V8XzgoDBz6cGJOsX_2forBP/view?usp=sharing)
 
-**Figura 53:** *Empathy Map de María, colaboradora general*
+**Figura 23:** *Empathy Map de María, colaboradora general*
 
-![Empathy Map de María](assets/figura-53.png)
+![Empathy Map de María](assets\Chapter-2\empathymap-colaborador.png)
 
 *Nota.* Pensamientos, necesidades y comportamientos identificados para el segmento de colaboradores generales. Elaboración propia.
 
 ### 2.3.5. Big Picture Event Storming
 
-En esta sección se presenta el proceso de Big Picture Event Storming realizado por el equipo para explorar el dominio de la gestión de personas y clima laboral. La actividad permitió identificar eventos relevantes, actores, comandos, políticas y relaciones entre los principales procesos del negocio. Las Figuras 9 a 13 muestran las capturas progresivas de la sesión colaborativa y sirven como evidencia de la evolución del modelado.
+En esta sección se presenta el proceso de Big Picture Event Storming realizado por el equipo para explorar el dominio de la gestión de personas y clima laboral. La actividad permitió identificar eventos relevantes, actores, comandos, políticas y relaciones entre los principales procesos del negocio. Las Figuras 24 a 28 muestran las capturas progresivas de la sesión colaborativa y sirven como evidencia de la evolución del modelado.
 
-**Figura 9:** *Big Picture Event Storming, identificación inicial de eventos*
+**Figura 24:** *Big Picture Event Storming, identificación inicial de eventos*
 
-![Big Picture Event Storming, identificación inicial de eventos](assets/figura-09.png)
+![Big Picture Event Storming, identificación inicial de eventos](assets\Chapter-2\bigpicture-1.png)
 
 *Nota.* Primera captura de la sesión de identificación de eventos significativos del dominio. Elaboración propia.
 
-**Figura 10:** *Big Picture Event Storming, organización de eventos*
+**Figura 25:** *Big Picture Event Storming, organización de eventos*
 
-![Big Picture Event Storming, organización de eventos](assets/figura-10.png)
+![Big Picture Event Storming, organización de eventos](assets\Chapter-2\bigpicture-2.png)
 
 *Nota.* Organización temporal de los eventos y procesos principales del negocio. Elaboración propia.
 
-**Figura 11:** *Big Picture Event Storming, incorporación de actores y comandos*
+**Figura 26:** *Big Picture Event Storming, incorporación de actores y comandos*
 
-![Big Picture Event Storming, incorporación de actores y comandos](assets/figura-11.png)
+![Big Picture Event Storming, incorporación de actores y comandos](assets\Chapter-2\bigpicture-3.png)
 
 *Nota.* Incorporación de actores, comandos y elementos que participan en cada flujo. Elaboración propia.
 
-**Figura 12:** *Big Picture Event Storming, identificación de reglas y problemas*
+**Figura 27:** *Big Picture Event Storming, identificación de reglas y problemas*
 
-![Big Picture Event Storming, identificación de reglas y problemas](assets/figura-12.png)
+![Big Picture Event Storming, identificación de reglas y problemas](assets\Chapter-2\bigpicture-4.png)
 
 *Nota.* Identificación de políticas, reglas de negocio y puntos de atención del dominio. Elaboración propia.
 
-**Figura 13:** *Big Picture Event Storming, modelo consolidado*
+**Figura 28:** *Big Picture Event Storming, modelo consolidado*
 
-![Big Picture Event Storming, modelo consolidado](assets/figura-13.png)
+![Big Picture Event Storming, modelo consolidado](assets\Chapter-2\bigpicture-5.png)
 
 *Nota.* Versión consolidada del Big Picture Event Storming elaborado por el equipo. Elaboración propia.
 
@@ -2049,9 +2049,9 @@ En esta sección se presenta el Impact Mapping de Flowboard, utilizado para rela
 
 [https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing](https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing)
 
-**Figura 60:** *Impact Mapping de Flowboard*
+**Figura 29:** *Impact Mapping de Flowboard*
 
-![Impact Mapping de Flowboard](assets/figura-60.png)
+![Impact Mapping de Flowboard](assets\Chapter-2\impactmapping.png)
 
 *Nota.* Relación entre objetivos, actores, impactos y entregables del producto. Elaboración propia.
 
@@ -2132,9 +2132,9 @@ En esta sección se presenta la lista priorizada de todo el trabajo necesario pa
 | 67 | US51 | Histórico y tendencia por métrica | **Como** personal de RRHH, **quiero** revisar la evolución de una métrica ambiental en el tiempo, **para** distinguir un episodio puntual de un problema persistente. | 3 |
 | 68 | TS05 | Internacionalización de los mensajes del API | **Como** Developer, **quiero** que los mensajes del API respeten el idioma solicitado, **para** que la interfaz los presente en el idioma del usuario. | 3 |
 
-**Figura 14:** *Product Backlog de Flowboard*
+**Figura 30:** *Product Backlog de Flowboard*
 
-![Product Backlog de Flowboard](assets/figura-14.png)
+![Product Backlog de Flowboard](assets\Chapter-2\trello-productbacklog.png)
 
 *Nota.* User Stories priorizadas para el desarrollo de Flowboard. Elaboración propia.
 
@@ -2164,7 +2164,7 @@ Aplicando la técnica de Candidate Context Discovery y analizando los puntos de 
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
-Las Figuras 15 a 20 presentan los Domain Message Flows Modeling de los bounded contexts identificados y muestran la secuencia de mensajes y responsabilidades de sus procesos principales.
+Las Figuras 31 a 36 presentan los Domain Message Flows Modeling de los bounded contexts identificados y muestran la secuencia de mensajes y responsabilidades de sus procesos principales.
 
 El modelado de flujos de mensajes (Domain Message Flow Modeling) describe cómo interactúan los contextos acotados mediante el intercambio síncrono y asíncrono de comandos, consultas y eventos de dominio para mantener la consistencia operativa sin acoplamientos rígidos.
 
@@ -2172,9 +2172,9 @@ El modelado de flujos de mensajes (Domain Message Flow Modeling) describe cómo 
 
 Como flujo de incorporación de personal, este escenario gobierna el alta inicial del colaborador dentro del contexto **Workspace**, disparando de forma automatizada las solicitudes de integración hacia el contexto **IAM** para provisionar las credenciales de acceso institucional y asegurar la trazabilidad del alta operativa.
 
-**Figura 15:** *Domain Message Flow Modeling: creación de colaborador y credenciales*
+**Figura 31:** *Domain Message Flow Modeling: creación de colaborador y credenciales*
 
-![Domain Message Flow Modeling: creación de colaborador y credenciales](assets/figura-15.png)
+![Domain Message Flow Modeling: creación de colaborador y credenciales](assets\Chapter-2\creacion-generacion-credenciales.png)
 
 *Nota.* Flujo de mensajes entre Workspace e IAM durante el alta de un colaborador. Elaboración propia.
 
@@ -2182,9 +2182,9 @@ Como flujo de incorporación de personal, este escenario gobierna el alta inicia
 
 Como proceso central de gestión de trámites, este escenario rige la creación de peticiones por parte del colaborador, coordinando validaciones síncronas de saldo con el contexto **Benefits** y consultando las líneas de reporte jerárquico en el contexto **Workspace** para asegurar el ruteo de aprobación correcto y el contexto **Request**.
 
-**Figura 16:** *Domain Message Flow Modeling: solicitud y aprobación de vacaciones*
+**Figura 32:** *Domain Message Flow Modeling: solicitud y aprobación de vacaciones*
 
-![Domain Message Flow Modeling: solicitud y aprobación de vacaciones](assets/figura-16.png)
+![Domain Message Flow Modeling: solicitud y aprobación de vacaciones](assets\Chapter-2\solicitud-aprobacion-vacaciones.png)
 
 *Nota.* Coordinación entre Request, Benefits y Workspace para resolver una solicitud. Elaboración propia.
 
@@ -2192,9 +2192,9 @@ Como proceso central de gestión de trámites, este escenario rige la creación 
 
 Como núcleo de soporte operativo de control de tiempo, este escenario gestiona la recepción de marcaciones crudas para transformarlas mediante reglas de negocio del contexto **Attendance** en registros diarios limpios, tardanzas calculadas y sobretiempos validados.
 
-**Figura 17:** *Domain Message Flow Modeling: registro y procesamiento de asistencia*
+**Figura 33:** *Domain Message Flow Modeling: registro y procesamiento de asistencia*
 
-![Domain Message Flow Modeling: registro y procesamiento de asistencia](assets/figura-17.png)
+![Domain Message Flow Modeling: registro y procesamiento de asistencia](assets\Chapter-2\registro-procesamiento-asistencia.png)
 
 *Nota.* Transformación de marcaciones en registros diarios de asistencia. Elaboración propia.
 
@@ -2202,9 +2202,9 @@ Como núcleo de soporte operativo de control de tiempo, este escenario gestiona 
 
 Como mecanismo de repositorio seguro, este escenario coordina la centralización de comprobantes de haberes subidos por el analista dentro del contexto **Payroll**, garantizando que cada colaborador consulte de forma exclusiva y protegida sus propias boletas de pago.
 
-**Figura 18:** *Domain Message Flow Modeling: carga y consulta de boletas*
+**Figura 34:** *Domain Message Flow Modeling: carga y consulta de boletas*
 
-![Domain Message Flow Modeling: carga y consulta de boletas](assets/figura-18.png)
+![Domain Message Flow Modeling: carga y consulta de boletas](assets\Chapter-2\carga-consultas-pago.png)
 
 *Nota.* Flujo de almacenamiento y consulta protegida de boletas de pago. Elaboración propia.
 
@@ -2212,9 +2212,9 @@ Como mecanismo de repositorio seguro, este escenario coordina la centralización
 
 Como proceso preventivo de soporte, este escenario abarca la captura continua de variables físicas e higiénicas desde sensores IoT hacia el contexto **Wellbeing**, clasificando los indicadores ambientales y emitiendo alertas automatizadas ante desvíos críticos.
 
-**Figura 19:** *Domain Message Flow Modeling: monitoreo ambiental*
+**Figura 35:** *Domain Message Flow Modeling: monitoreo ambiental*
 
-![Domain Message Flow Modeling: monitoreo ambiental](assets/figura-19.png)
+![Domain Message Flow Modeling: monitoreo ambiental](assets\Chapter-2\monitoreo-salud.png)
 
 *Nota.* Captura de variables ambientales y emisión de alertas del contexto Wellbeing. Elaboración propia.
 
@@ -2222,15 +2222,15 @@ Como proceso preventivo de soporte, este escenario abarca la captura continua de
 
 Como protocolo de seguridad ante la salida de un empleado, este escenario coordina el registro de la baja laboral en el contexto **Workspace** para emitir un evento de dominio asíncrono que ordena al contexto **IAM** revocar e inhabilitar de manera inmediata los accesos a la plataforma.
 
-**Figura 20:** *Domain Message Flow Modeling: cese e inhabilitación de acceso*
+**Figura 36:** *Domain Message Flow Modeling: cese e inhabilitación de acceso*
 
-![Domain Message Flow Modeling: cese e inhabilitación de acceso](assets/figura-20.png)
+![Domain Message Flow Modeling: cese e inhabilitación de acceso](assets\Chapter-2\cese-colaborador-inhabilitacion.png)
 
 *Nota.* Evento de cese y revocación de acceso entre Workspace e IAM. Elaboración propia.
 
 #### 2.5.1.3. Bounded Context Canvases
 
-Las Figuras 21 a 27 presentan los Bounded Context Canvases, utilizados para resumir el propósito, las responsabilidades, las entradas y las salidas de cada bounded context.
+Las Figuras 37 a 43 presentan los Bounded Context Canvases, utilizados para resumir el propósito, las responsabilidades, las entradas y las salidas de cada bounded context.
 
 En esta sección, el equipo diseña y refina los candidate bounded contexts identificados previamente, estableciendo de forma rigurosa los criterios de diseño estratégicos y tácticos. Para ello, se seleccionaron los contextos acotados en orden de criticidad e importancia para el negocio de **Flowboard** (IAM, Workspace, Request, Benefits, Attendance, Payroll y Wellbeing), elaborando para cada uno de ellos su respectivo Bounded Context Canvas.
 
@@ -2238,9 +2238,9 @@ En esta sección, el equipo diseña y refina los candidate bounded contexts iden
 
 Como subdominio de soporte genérico, este contexto administra de manera centralizada la seguridad de la plataforma, el control de acceso basado en roles institucionales (*Analista de RRHH* y *Colaborador*) y la autenticación basada en tokens, asegurando que las operaciones del sistema cumplan con los estándares de privacidad y cifrado.
 
-**Figura 21:** *Bounded Context Canvas: IAM*
+**Figura 37:** *Bounded Context Canvas: IAM*
 
-![Bounded Context Canvas: IAM](assets/figura-21.png)
+![Bounded Context Canvas: IAM](assets\Chapter-2\boundedcontext-iam.png)
 
 *Nota.* Canvas estratégico del bounded context IAM. Elaboración propia.
 
@@ -2248,9 +2248,9 @@ Como subdominio de soporte genérico, este contexto administra de manera central
 
 Como núcleo principal (Core Domain) del ecosistema, este contexto gobierna el ciclo de vida completo del empleado dentro de la organización, administrando la estructura departamental de áreas, posiciones y las líneas de reporte jerárquico necesarias para la operatividad de la empresa.
 
-**Figura 22:** *Bounded Context Canvas: Workspace*
+**Figura 38:** *Bounded Context Canvas: Workspace*
 
-![Bounded Context Canvas: Workspace](assets/figura-22.png)
+![Bounded Context Canvas: Workspace](assets\Chapter-2\boundedcontext-workspace.png)
 
 *Nota.* Canvas estratégico del bounded context Workspace. Elaboración propia.
 
@@ -2258,39 +2258,39 @@ Como núcleo principal (Core Domain) del ecosistema, este contexto gobierna el c
 
 Como núcleo operativo de trámites (*Core Domain*), este contexto administra de punta a punta las peticiones parametrizadas de los colaboradores (como vacaciones, permisos y licencias), automatizando el flujo de aprobación jerárquica y validando de forma coordinada las reglas del negocio.
 
-**Figura 23:** *Bounded Context Canvas: Attendance*
+**Figura 39:** *Bounded Context Canvas: Request*
 
-![Bounded Context Canvas: Attendance](assets/figura-23.png)
+![Bounded Context Canvas: Request](assets\Chapter-2\boundedcontext-request.png)
 
-*Nota.* Canvas estratégico del bounded context Attendance. Elaboración propia.
+*Nota.* Canvas estratégico del bounded context Request. Elaboración propia.
 
 **Bounded Context Canvas: Benefits**
 
 Como subdominio de soporte especializado, este contexto controla de manera automatizada la acumulación, el uso y la actualización en tiempo real de los saldos de días de descanso vacacional e incentivos corporativos asignados a cada colaborador.
 
-**Figura 24:** *Bounded Context Canvas: Request*
+**Figura 40:** *Bounded Context Canvas: Benefits*
 
-![Bounded Context Canvas: Request](assets/figura-24.png)
+![Bounded Context Canvas: Benefits](assets\Chapter-2\boundedcontext-benefits.png)
 
-*Nota.* Canvas estratégico del bounded context Request. Elaboración propia.
+*Nota.* Canvas estratégico del bounded context Benefits. Elaboración propia.
 
 **Bounded Context Canvas: Attendance**
 
 Como subdominio de soporte operativo, este contexto se encarga de recibir las marcaciones de entrada y salida del personal para procesarlas bajo reglas de negocio claras, transformándolas en registros de asistencia limpios, tardanzas identificadas y sobretiempos calculados.
 
-**Figura 25:** *Bounded Context Canvas: Benefits*
+**Figura 41:** *Bounded Context Canvas: Attendance*
 
-![Bounded Context Canvas: Benefits](assets/figura-25.png)
+![Bounded Context Canvas: Attendance](assets\Chapter-2\boundedcontext-attendance.png)
 
-*Nota.* Canvas estratégico del bounded context Benefits. Elaboración propia.
+*Nota.* Canvas estratégico del bounded context Attendance. Elaboración propia.
 
 **Bounded Context Canvas: Payroll**
 
 Como repositorio seguro de soporte, este contexto actúa como un espacio centralizado para almacenar, indexar y consultar las boletas de pago cargadas desde sistemas externos, garantizando la confidencialidad y el acceso exclusivo del colaborador a sus comprobantes.
 
-**Figura 26:** *Bounded Context Canvas: Payroll*
+**Figura 42:** *Bounded Context Canvas: Payroll*
 
-![Bounded Context Canvas: Payroll](assets/figura-26.png)
+![Bounded Context Canvas: Payroll](assets\Chapter-2\boundedcontext-payroll.png)
 
 *Nota.* Canvas estratégico del bounded context Payroll. Elaboración propia.
 
@@ -2298,9 +2298,9 @@ Como repositorio seguro de soporte, este contexto actúa como un espacio central
 
 Como subdominio de soporte enfocado en el clima laboral físico, este contexto recopila métricas ambientales de las instalaciones de trabajo a través de dispositivos o sensores, clasificando los indicadores para emitir alertas tempranas de salud y seguridad ocupacional.
 
-**Figura 27:** *Bounded Context Canvas: Wellbeing*
+**Figura 43:** *Bounded Context Canvas: Wellbeing*
 
-![Bounded Context Canvas: Wellbeing](assets/figura-27.png)
+![Bounded Context Canvas: Wellbeing](assets\Chapter-2\boundedcontext-wellbeing.png)
 
 *Nota.* Canvas estratégico del bounded context Wellbeing. Elaboración propia.
 
@@ -2332,9 +2332,9 @@ Con esas decisiones, las relaciones del context map quedan así:
 * Sistemas externos: el sistema biométrico, el sistema de planilla, los sensores y la API de feriados entran con un ACL para que sus formatos no afecten el modelo.
 * Brevo y Firebase Cloud Messaging: nos adaptamos a sus APIs tal como vienen. Firebase solo aplica a la solución móvil.
 
-**Figura 28:** *Context Mapping de Flowboard*
+**Figura 44:** *Context Mapping de Flowboard*
 
-![Context Mapping de Flowboard](assets/figura-28.png)
+![Context Mapping de Flowboard](assets\Chapter-2\contextmapping.png)
 
 *Nota.* Relaciones, integraciones y límites entre los bounded contexts de Flowboard. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1ktD7dv_auK9fwaGuWSyiViH8veNReKWw/view?usp=sharing 
@@ -2345,11 +2345,11 @@ En esta sección se presenta la arquitectura de software de Flowboard mediante e
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-El diagrama de contexto muestra a Flowboard como un solo sistema y su relación con los usuarios y los sistemas externos. Los usuarios son el colaborador y el personal de Recursos Humanos. Los sistemas externos son el sistema de asistencia biométrica, el sistema de planilla, los sensores ambientales, el servicio de correo Brevo y la API de feriados Nager.Date. Este nivel permite entender el alcance de la solución sin entrar en detalles técnicos. La relación se representa en la Figura 57.
+El diagrama de contexto muestra a Flowboard como un solo sistema y su relación con los usuarios y los sistemas externos. Los usuarios son el colaborador y el personal de Recursos Humanos. Los sistemas externos son el sistema de asistencia biométrica, el sistema de planilla, los sensores ambientales, el servicio de correo Brevo y la API de feriados Nager.Date. Este nivel permite entender el alcance de la solución sin entrar en detalles técnicos. La relación se representa en la Figura 45.
 
-**Figura 57:** *Diagrama de contexto de Flowboard*
+**Figura 45:** *Diagrama de contexto de Flowboard*
 
-![Diagrama de contexto de Flowboard](assets/figura-57.png)
+![Diagrama de contexto de Flowboard](assets\Chapter-2\contextmapping.png)
 
 *Nota.* Actores, sistema principal y sistemas externos que interactúan con Flowboard. Elaboración propia.
 
@@ -2357,11 +2357,11 @@ Enlace de la figura: https://drive.google.com/file/d/1QT5xYU1oC38IbX-a20IhVlGOF0
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local, el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos, como se observa en la Figura 58.
+El diagrama de contenedores muestra las partes que conforman Flowboard y las tecnologías con las que se construye cada una. La solución está formada por el Landing Page, la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos local, el RESTful API desarrollado en Spring Boot y la base de datos MySQL. En el diagrama también se ve cómo se comunican los contenedores entre sí y con los sistemas externos, como se observa en la Figura 46.
 
-**Figura 58:** *Diagrama de contenedores de Flowboard*
+**Figura 46:** *Diagrama de contenedores de Flowboard*
 
-![Diagrama de contenedores de Flowboard](assets/figura-58.png)
+![Diagrama de contenedores de Flowboard](assets\Chapter-2\container-level-diagrams.png)
 
 *Nota.* Contenedores de software, tecnologías utilizadas y relaciones de comunicación de Flowboard. Elaboración propia.
 
@@ -2372,9 +2372,9 @@ Enlace de la figura: https://drive.google.com/file/d/1pGQclKd26a_jyMMc7pBYe4HJlg
 En esta sección se presenta el Deployment Diagram para Flowboard. A diferencia del diagrama de contenedores, que muestra de qué partes está formada la solución, este muestra en qué infraestructura se ejecuta cada una de ellas en el ambiente de producción y por qué protocolo se comunican. El diagrama se elaboró con Structurizr DSL a partir del diagrama de contenedores.
 El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL. La infraestructura resultante se muestra en la Figura 56.
 
-**Figura 56:** *Deployment Diagram de Flowboard*
+**Figura 47:** *Deployment Diagram de Flowboard*
 
-![Deployment Diagram de Flowboard](assets/figura-56.png)
+![Deployment Diagram de Flowboard](assets\Chapter-2\deploymentdiagram.png)
 
 *Nota.* Infraestructura de producción, componentes desplegados y protocolos de comunicación de Flowboard. Elaboración propia.
 
@@ -2478,9 +2478,9 @@ La Figura 29 presenta el Component Diagram del bounded context IAM y muestra la 
 
 En esta sección se presenta el Component Diagram del bounded context IAM, mostrando cómo sus componentes se distribuyen entre la aplicación móvil y el API Backend de Flowboard.
 
-**Figura 29:** *Component Diagram del bounded context IAM*
+**Figura 48:** *Component Diagram del bounded context IAM*
 
-![Component Diagram del bounded context IAM](assets/figura-29.png)
+![Component Diagram del bounded context IAM](assets/Chapter-2/context-diagram.png)
 
 *Nota.* Componentes de la aplicación y del API que implementan IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1gcdgO-cC5cpBQgW-5ptXY4vbpGzktU2E/view?usp=sharing
@@ -2495,15 +2495,15 @@ El acceso a la persistencia se realiza mediante los repositorios JPA del context
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 30 presenta el Code Diagram del bounded context IAM y detalla sus clases, interfaces y relaciones de implementación.
+La Figura 49 presenta el Code Diagram del bounded context IAM y detalla sus clases, interfaces y relaciones de implementación.
 
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer de IAM.
 
-**Figura 30:** *Domain Layer Class Diagram del bounded context IAM*
+**Figura 49:** *Domain Layer Class Diagram del bounded context IAM*
 
-![Domain Layer Class Diagram del bounded context IAM](assets/figura-30.png)
+![Domain Layer Class Diagram del bounded context IAM](assets\Chapter-2\domainlayerdiagram-iam.png)
 
 *Nota.* Agregados, entidades y objetos de valor del dominio IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1J62k1rAa5mILgF6E-m6QOc13bLvpoAYJ/view?usp=sharing
@@ -2520,9 +2520,9 @@ El agregado también concentra reglas como la existencia de una única cuenta po
 
 En esta sección se presenta el diagrama de base de datos para la persistencia correspondiente al bounded context IAM.
 
-**Figura 31:** *Database Design Diagram del bounded context IAM*
+**Figura 50:** *Database Design Diagram del bounded context IAM*
 
-![Database Design Diagram del bounded context IAM](assets/figura-31.png)
+![Database Design Diagram del bounded context IAM](assets\Chapter-2\domaindatabase-iam.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context IAM. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1Pa3Ak4XGjTBNyrgEEYFkQsJQbhgfV5oD/view?usp=sharing
@@ -2618,13 +2618,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 31 presenta el Component Diagram del bounded context Workspace y muestra la organización de sus componentes.
+La Figura 51 presenta el Component Diagram del bounded context Workspace y muestra la organización de sus componentes.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Workspace. El diagrama muestra los componentes de la aplicación móvil y del API Backend responsables de la gestión de colaboradores, áreas, puestos, documentos y estructura organizacional.
 
-**Figura 32:** *Component Diagram del bounded context Workspace*
+**Figura 51:** *Component Diagram del bounded context Workspace*
 
-![Component Diagram del bounded context Workspace](assets/figura-32.png)
+![Component Diagram del bounded context Workspace](assets\Chapter-2\ComponentDiagram-workspace.png)
 
 *Nota.* Componentes responsables de la gestión de colaboradores y estructura organizacional. Elaboración propia.
 Enlace de la figura: https://drive.google.com/file/d/1snu8Q_Bu7WsscwNjeOy5MF9ciJHw9bFP/view?usp=sharing
@@ -2641,15 +2641,15 @@ Por último, **SpringDomainEventPublisher** publica eventos como **EmployeeRegis
 
 #### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 32 presenta el Code Diagram del bounded context Workspace y detalla las clases e interfaces que implementan sus responsabilidades.
+La Figura 52 presenta el Code Diagram del bounded context Workspace y detalla las clases e interfaces que implementan sus responsabilidades.
 
 ##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Workspace.
 
-**Figura 33:** *Domain Layer Class Diagram del bounded context Workspace*
+**Figura 52:** *Domain Layer Class Diagram del bounded context Workspace*
 
-![Domain Layer Class Diagram del bounded context Workspace](assets/figura-33.png)
+![Domain Layer Class Diagram del bounded context Workspace](assets\Chapter-2\domainlayerdiagram-workspace.png)
 
 *Nota.* Modelo de dominio para colaboradores, áreas, puestos y documentos. Elaboración propia.
 
@@ -2671,9 +2671,9 @@ El Aggregate Root mantiene además reglas como la unicidad del documento de iden
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Workspace.
 
-**Figura 34:** *Database Design Diagram del bounded context Workspace*
+**Figura 53:** *Database Design Diagram del bounded context Workspace*
 
-![Database Design Diagram del bounded context Workspace](assets/figura-34.png)
+![Database Design Diagram del bounded context Workspace](assets\Chapter-2\databasedesigndiagram.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Workspace. Elaboración propia.
 
@@ -2761,13 +2761,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 33 presenta el Component Diagram del bounded context Attendance y muestra la relación entre sus componentes.
+La Figura 54 presenta el Component Diagram del bounded context Attendance y muestra la relación entre sus componentes.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Attendance. El diagrama muestra los componentes que participan en el registro de marcaciones, consulta del historial de asistencia, administración de horarios y consolidación diaria de jornadas.
 
-**Figura 35:** *Component Diagram del bounded context Attendance*
+**Figura 54:** *Component Diagram del bounded context Attendance*
 
-![Component Diagram del bounded context Attendance](assets/figura-35.png)
+![Component Diagram del bounded context Attendance](assets\Chapter-2\componentdiagram-attendance.png)
 
 *Nota.* Componentes responsables del registro y procesamiento de asistencia. Elaboración propia.
 
@@ -2786,15 +2786,15 @@ El contexto incorpora además **DailyAttendanceClosingScheduler**, encargado del
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 34 presenta el Code Diagram del bounded context Attendance y detalla las clases e interfaces que conforman el contexto.
+La Figura 55 presenta el Code Diagram del bounded context Attendance y detalla las clases e interfaces que conforman el contexto.
 
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Attendance.
 
-**Figura 36:** *Domain Layer Class Diagram del bounded context Attendance*
+**Figura 55:** *Domain Layer Class Diagram del bounded context Attendance*
 
-![Domain Layer Class Diagram del bounded context Attendance](assets/figura-36.png)
+![Domain Layer Class Diagram del bounded context Attendance](assets\Chapter-2\domainlayerdiagram-attendance.png)
 
 *Nota.* Modelo de dominio para marcaciones, registros diarios y justificaciones. Elaboración propia.
 
@@ -2814,9 +2814,9 @@ Las horas procesadas se encapsulan mediante **WorkedHours**, que diferencia las 
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Attendance.
 
-**Figura 37:** *Database Design Diagram del bounded context Attendance*
+**Figura 56:** *Database Design Diagram del bounded context Attendance*
 
-![Database Design Diagram del bounded context Attendance](assets/figura-37.png)
+![Database Design Diagram del bounded context Attendance](assets\Chapter-2\databasedesogm-attendance.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Attendance. Elaboración propia.
 
@@ -2912,13 +2912,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 38 presenta el Component Diagram del bounded context Request y muestra los componentes responsables del ciclo de vida de las solicitudes.
+La Figura 57 presenta el Component Diagram del bounded context Request y muestra los componentes responsables del ciclo de vida de las solicitudes.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Request. El diagrama muestra los componentes responsables de la creación, seguimiento, aprobación y notificación de solicitudes.
 
-**Figura 38:** *Component Diagram del bounded context Request*
+**Figura 57:** *Component Diagram del bounded context Request*
 
-![Component Diagram del bounded context Request](assets/figura-38.png)
+![Component Diagram del bounded context Request](assets\Chapter-2\componentdiagram-request.png)
 
 *Nota.* Componentes responsables del ciclo de vida y aprobación de solicitudes. Elaboración propia.
 
@@ -2940,15 +2940,15 @@ Los cambios relevantes del flujo generan eventos que son procesados por **Reques
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 39 presenta el Code Diagram del bounded context Request y detalla las clases, interfaces y relaciones utilizadas para implementar sus procesos.
+La Figura 58 presenta el Code Diagram del bounded context Request y detalla las clases, interfaces y relaciones utilizadas para implementar sus procesos.
 
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Request.
 
-**Figura 39:** *Domain Layer Class Diagram del bounded context Request*
+**Figura 58:** *Domain Layer Class Diagram del bounded context Request*
 
-![Domain Layer Class Diagram del bounded context Request](assets/figura-39.png)
+![Domain Layer Class Diagram del bounded context Request](assets\Chapter-2\domainlayerdiagram-request.png)
 
 *Nota.* Modelo de dominio para solicitudes y reglas de aprobación. Elaboración propia.
 
@@ -2972,9 +2972,9 @@ Finalmente, **RequestStatus** controla el ciclo de vida de la solicitud mediante
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Request.
 
-**Figura 40:** *Database Design Diagram del bounded context Request*
+**Figura 59:** *Database Design Diagram del bounded context Request*
 
-![Database Design Diagram del bounded context Request](assets/figura-40.png)
+![Database Design Diagram del bounded context Request](assets\Chapter-2\domainlayerdiagram-request.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Request. Elaboración propia.
 
@@ -3072,13 +3072,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 41 presenta el Component Diagram del bounded context Benefits y muestra la organización de sus componentes principales.
+La Figura 60 presenta el Component Diagram del bounded context Benefits y muestra la organización de sus componentes principales.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Benefits. El diagrama muestra los componentes responsables de la consulta, asignación y administración de beneficios, así como de la gestión del saldo vacacional.
 
-**Figura 41:** *Component Diagram del bounded context Benefits*
+**Figura 60:** *Component Diagram del bounded context Benefits*
 
-![Component Diagram del bounded context Benefits](assets/figura-41.png)
+![Component Diagram del bounded context Benefits](assets\Chapter-2\componentdiagram-benefits.png)
 
 *Nota.* Componentes responsables de beneficios y saldos de vacaciones. Elaboración propia.
 
@@ -3096,15 +3096,15 @@ En el **API Backend**, **VacationBalancesController** y **BenefitsController** e
 
 #### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 42 presenta el Code Diagram del bounded context Benefits y detalla sus clases e interfaces de implementación.
+La Figura 61 presenta el Code Diagram del bounded context Benefits y detalla sus clases e interfaces de implementación.
 
 ##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Benefits.
 
-**Figura 42:** *Domain Layer Class Diagram del bounded context Benefits*
+**Figura 61:** *Domain Layer Class Diagram del bounded context Benefits*
 
-![Domain Layer Class Diagram del bounded context Benefits](assets/figura-42.png)
+![Domain Layer Class Diagram del bounded context Benefits](assets\Chapter-2\domainlayerdiagram-benefits.png)
 
 *Nota.* Modelo de dominio para beneficios y saldos vacacionales. Elaboración propia.
 
@@ -3126,9 +3126,9 @@ Cada variación del saldo se representa mediante **VacationMovement**, el cual i
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Benefits.
 
-**Figura 43:** *Database Design Diagram del bounded context Benefits*
+**Figura 62:** *Database Design Diagram del bounded context Benefits*
 
-![Database Design Diagram del bounded context Benefits](assets/figura-43.png)
+![Database Design Diagram del bounded context Benefits](assets\Chapter-2\databasedesigndiagram-benefits.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Benefits. Elaboración propia.
 
@@ -3213,13 +3213,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 44 presenta el Component Diagram del bounded context Payroll y muestra la interacción entre sus componentes.
+La Figura 63 presenta el Component Diagram del bounded context Payroll y muestra la interacción entre sus componentes.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Payroll.
 
-**Figura 44:** *Component Diagram del bounded context Payroll*
+**Figura 63:** *Component Diagram del bounded context Payroll*
 
-![Component Diagram del bounded context Payroll](assets/figura-44.png)
+![Component Diagram del bounded context Payroll](assets\Chapter-2\componentdiagram-payroll.png)
 
 *Nota.* Componentes responsables de boletas y estados de pago. Elaboración propia.
 
@@ -3233,15 +3233,15 @@ El contexto se integra con Workspace para identificar al colaborador propietario
 
 #### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 45 presenta el Code Diagram del bounded context Payroll y detalla las clases e interfaces que soportan sus operaciones.
+La Figura 64 presenta el Code Diagram del bounded context Payroll y detalla las clases e interfaces que soportan sus operaciones.
 
 ##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Payroll.
 
-**Figura 45:** *Domain Layer Class Diagram del bounded context Payroll*
+**Figura 64:** *Domain Layer Class Diagram del bounded context Payroll*
 
-![Domain Layer Class Diagram del bounded context Payroll](assets/figura-45.png)
+![Domain Layer Class Diagram del bounded context Payroll](assets\Chapter-2\domainlayerdiagram-payroll.png)
 
 *Nota.* Modelo de dominio para periodos, boletas y pagos. Elaboración propia.
 
@@ -3263,9 +3263,9 @@ El agregado también utiliza objetos compartidos como **EmployeeId**, **Money** 
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Payroll.
 
-**Figura 46:** *Database Design Diagram del bounded context Payroll*
+**Figura 65:** *Database Design Diagram del bounded context Payroll*
 
-![Database Design Diagram del bounded context Payroll](assets/figura-46.png)
+![Database Design Diagram del bounded context Payroll](assets\Chapter-2\databasedesigndiagram-payroll.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Payroll. Elaboración propia.
 
@@ -3358,13 +3358,13 @@ Sub-capa Services y Repositories
 
 #### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 47 presenta el Component Diagram del bounded context Wellbeing y muestra la organización de sus componentes principales.
+La Figura 66 presenta el Component Diagram del bounded context Wellbeing y muestra la organización de sus componentes principales.
 
 En esta sección se presenta el Component Diagram correspondiente al bounded context Wellbeing. El diagrama muestra los componentes encargados de registrar oficinas y dispositivos, recibir lecturas ambientales, clasificarlas y exponer indicadores para su consulta desde la aplicación móvil.
 
-**Figura 47:** *Component Diagram del bounded context Wellbeing*
+**Figura 66:** *Component Diagram del bounded context Wellbeing*
 
-![Component Diagram del bounded context Wellbeing](assets/figura-47.png)
+![Component Diagram del bounded context Wellbeing](assets\Chapter-2\componentdiagram-wellbeing.png)
 
 *Nota.* Componentes responsables del monitoreo ambiental y sus indicadores. Elaboración propia.
 
@@ -3384,15 +3384,15 @@ Finalmente, **Wellbeing Event Handlers** procesa eventos relevantes del contexto
 
 #### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
 
-La Figura 48 presenta el Code Diagram del bounded context Wellbeing y detalla sus clases e interfaces de implementación.
+La Figura 67 presenta el Code Diagram del bounded context Wellbeing y detalla sus clases e interfaces de implementación.
 
 ##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
 
 En esta sección se presenta el diagrama de clases UML correspondiente al Domain Layer del bounded context Wellbeing.
 
-**Figura 48:** *Domain Layer Class Diagram del bounded context Wellbeing*
+**Figura 67:** *Domain Layer Class Diagram del bounded context Wellbeing*
 
-![Domain Layer Class Diagram del bounded context Wellbeing](assets/figura-48.png)
+![Domain Layer Class Diagram del bounded context Wellbeing](assets\Chapter-2\domainlayerdiagram-wellbeing.png)
 
 *Nota.* Modelo de dominio para espacios, métricas y umbrales ambientales. Elaboración propia.
 
@@ -3412,9 +3412,9 @@ Las métricas ambientales se representan mediante **MetricValue**, que combina u
 
 En esta sección se presenta el Database Design Diagram correspondiente al bounded context Wellbeing.
 
-**Figura 49:** *Database Design Diagram del bounded context Wellbeing*
+**Figura 68:** *Database Design Diagram del bounded context Wellbeing*
 
-![Database Design Diagram del bounded context Wellbeing](assets/figura-49.png)
+![Database Design Diagram del bounded context Wellbeing](assets\Chapter-2\databasedesingdiagram-wellbeing.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Wellbeing. Elaboración propia.
 
