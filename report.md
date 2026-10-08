@@ -3748,6 +3748,1504 @@ Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 
 <div style="page-break-after: always;"></div>
 
+# Capítulo IV: Product Implementation & Validation
+
+## 4.1. Software Configuration Management
+
+En esta sección se establecen las decisiones y convenciones que el equipo aplica para mantener la consistencia de Flowboard durante todo su ciclo de vida. La solución está formada por tres productos que se versionan, construyen y despliegan de forma independiente: el Landing Page, el RESTful API y la aplicación móvil nativa para Android. Las secciones siguientes describen las herramientas que usa cada integrante, la organización de los repositorios, las convenciones de código y la configuración de despliegue de cada producto.
+
+### 4.1.1. Software Development Environment Configuration
+
+Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las actividades de gestión del proyecto, diseño de la experiencia, desarrollo, pruebas, despliegue y documentación. Las herramientas se eligieron respetando las restricciones tecnológicas del curso declaradas en el Capítulo I.
+
+**Project Management y Requirements Management.** El Product Backlog y el tablero del Sprint se gestionan en Trello, donde cada User Story tiene su tarjeta con los criterios de aceptación y los tasks derivados. La coordinación diaria del equipo se realiza por Discord, que también se utiliza para las reuniones de Sprint Planning, Sprint Review y Sprint Retrospective.
+
+**Product UX/UI Design.** Los User Personas, Empathy Maps y Journey Maps se elaboraron en UXPressia. Los wireframes, mock-ups y el prototipo navegable de la aplicación y del Landing Page se construyeron en Figma, y los wireflows y user flows en FigJam. Los diagramas de arquitectura de C4 Model se elaboraron con Structurizr DSL y los diagramas de clases y de base de datos con PlantUML.
+
+**Software Development.** Cada producto tiene su propio entorno:
+
+- *Landing Page:* se desarrolla en Visual Studio Code con HTML5, CSS3 y JavaScript sin frameworks, con un motor de internacionalización propio para inglés y español.
+- *RESTful API:* se desarrolla en IntelliJ IDEA o Visual Studio Code con Java 25 (Eclipse Temurin), Spring Boot 4.0.8, Spring Data JPA, Bean Validation y springdoc-openapi 3.0.3. El proyecto se construye con el Maven Wrapper incluido en el repositorio, por lo que no requiere instalar Maven. En desarrollo se usa MySQL 8 local, administrado desde MySQL Workbench.
+- *Aplicación móvil nativa:* se desarrolla en Android Studio con Kotlin 2.4.20 y Jetpack Compose (Compose BOM 2026.09.00, Material 3 1.4.0). La arquitectura usa Hilt para inyección de dependencias, Retrofit 3 con Gson y OkHttp para consumir el API, Navigation Compose con rutas tipadas, Room y DataStore para el almacenamiento local, y Android Gradle Plugin 9.4.1 con Kotlin integrado. Las pruebas se ejecutan sobre el emulador de Android Studio (Pixel 10, API 37) y sobre dispositivos físicos.
+
+**Software Testing.** Las pruebas unitarias del API se escriben con JUnit 5 y las de la aplicación con JUnit 4, ambas incluidas en las dependencias de cada proyecto. Los endpoints se prueban de forma manual desde Swagger UI con datos de muestra.
+
+**Software Deployment.** El Landing Page se publica en GitHub Pages. El API se empaqueta en una imagen Docker y se despliega como Web Service en Render, conectado a una instancia gestionada de MySQL en Aiven. La aplicación se distribuye a los usuarios de prueba mediante Firebase App Distribution.
+
+**Software Documentation.** El informe del proyecto se redacta en Markdown dentro de su propio repositorio de GitHub. El API se documenta con OpenAPI Specification a través de Swagger UI, y cada repositorio de código incluye un README.
+
+**Tabla 1:** *Productos y herramientas del entorno de desarrollo*
+
+| Actividad | Producto | Propósito en el proyecto | Tipo | Ruta de referencia / descarga |
+| :---- | :---- | :---- | :----: | :---- |
+| Project Management | Trello | Product Backlog y tablero del Sprint | SaaS | https://trello.com |
+| Project Management | Discord | Reuniones del equipo y coordinación diaria | SaaS / Local | https://discord.com/download |
+| Requirements Management | Trello | User Stories con criterios de aceptación | SaaS | https://trello.com |
+| Product UX/UI Design | Figma | Wireframes, mock-ups y prototipo navegable | SaaS | https://www.figma.com |
+| Product UX/UI Design | FigJam | Wireflows y user flows | SaaS | https://www.figma.com/figjam |
+| Product UX/UI Design | UXPressia | User Personas, Empathy Maps y Journey Maps | SaaS | https://uxpressia.com |
+| Software Development | Structurizr | Diagramas de C4 Model con Structurizr DSL | SaaS | https://structurizr.com |
+| Software Development | PlantUML | Diagramas de clases y de base de datos | Local | https://plantuml.com/download |
+| Software Development | Visual Studio Code | Desarrollo del Landing Page y edición del informe | Local | https://code.visualstudio.com/download |
+| Software Development | IntelliJ IDEA Community | Desarrollo del RESTful API | Local | https://www.jetbrains.com/idea/download |
+| Software Development | Eclipse Temurin JDK 25 | Compilación y ejecución del API | Local | https://adoptium.net |
+| Software Development | Android Studio | Desarrollo de la aplicación nativa en Kotlin | Local | https://developer.android.com/studio |
+| Software Development | MySQL Community Server 8 | Base de datos local de desarrollo | Local | https://dev.mysql.com/downloads/mysql |
+| Software Development | MySQL Workbench | Administración de la base de datos local y en la nube | Local | https://dev.mysql.com/downloads/workbench |
+| Source Code Management | Git | Control de versiones | Local | https://git-scm.com/downloads |
+| Source Code Management | GitHub | Repositorios de la organización Performily-Mobile | SaaS | https://github.com/Performily-Mobile |
+| Source Code Management | GitHub Desktop | Cliente gráfico de Git | Local | https://desktop.github.com |
+| Software Testing | JUnit 5 / JUnit 4 | Pruebas unitarias del API y de la aplicación | Local (dependencia) | https://junit.org |
+| Software Testing | Swagger UI | Prueba manual de los endpoints | SaaS (embebido en el API) | https://swagger.io/tools/swagger-ui |
+| Software Deployment | GitHub Pages | Publicación del Landing Page | SaaS | https://pages.github.com |
+| Software Deployment | Docker | Imagen del API para su despliegue | Local | https://www.docker.com/products/docker-desktop |
+| Software Deployment | Render | Hosting del API como Web Service | SaaS | https://render.com |
+| Software Deployment | Aiven for MySQL | Base de datos MySQL gestionada | SaaS | https://aiven.io/mysql |
+| Software Deployment | Firebase App Distribution | Distribución del APK a usuarios de prueba | SaaS | https://firebase.google.com/products/app-distribution |
+| Software Documentation | OpenAPI / springdoc | Documentación del API | Local (dependencia) | https://springdoc.org |
+| Software Documentation | Markdown en GitHub | Informe del proyecto y README de cada repositorio | SaaS | https://github.com/Performily-Mobile/performily-mobile-report |
+
+*Nota.* Elaboración propia.
+
+### 4.1.2. Source Code Management
+
+El equipo utiliza GitHub como plataforma y Git como sistema de control de versiones. Todos los repositorios pertenecen a la organización **Performily-Mobile**, de modo que cada integrante trabaja con permisos de escritura sobre los mismos proyectos y los aportes quedan registrados a nombre de su autor.
+
+**Tabla 2:** *Repositorios de los productos de Flowboard*
+
+| Producto | Repositorio | Contenido |
+| :---- | :---- | :---- |
+| Landing Page | https://github.com/Performily-Mobile/flowboard-mobile-landing-page | Sitio público en HTML5, CSS3 y JavaScript |
+| RESTful API (Web Services) | https://github.com/Performily-Mobile/flowboard-mobile-service | Proyecto Spring Boot con sus pruebas en `src/test` |
+| Aplicación móvil nativa | https://github.com/Performily-Mobile/flowboard-mobile-native-application | Proyecto Android en Kotlin y Jetpack Compose con sus pruebas en `app/src/test` |
+| Informe | https://github.com/Performily-Mobile/performily-mobile-report | Informe del Trabajo Final en Markdown |
+
+*Nota.* Elaboración propia.
+
+**Workflow de control de versiones: GitFlow**
+
+El equipo aplica GitFlow (Driessen, 2010) en los tres repositorios de código, con las siguientes ramas:
+
+- **`main`:** contiene únicamente versiones estables y listas para producción. Cada merge a `main` corresponde a una versión publicada y se etiqueta con su número de versión. GitHub Pages y Render toman el código desde esta rama.
+- **`develop`:** es la rama de integración. Todas las funcionalidades terminadas se integran aquí antes de pasar a una versión.
+- **Feature branches:** cada funcionalidad se desarrolla en su propia rama, creada desde `develop` e integrada de vuelta mediante pull request revisado por al menos otro integrante. Como el código está organizado por bounded context, en el API y en la aplicación cada bounded context tiene su rama de funcionalidad con el nombre del contexto en minúsculas: `workspace`, `attendance`, `request`, `benefits`, `payroll` y `wellbeing`. En el Landing Page las ramas llevan el prefijo `landing-` seguido de la sección en kebab-case, por ejemplo `landing-hero` o `landing-footer-legal`. A partir del Sprint 2 las nuevas ramas usan el prefijo `feature/`, por ejemplo `feature/iam` o `feature/landing-video`, para distinguirlas de las ramas de release y hotfix.
+- **Release branches:** se crean desde `develop` con el nombre `release/<versión>`, por ejemplo `release/1.0.0`. En ellas solo se corrigen errores y se actualiza la versión; al terminar se integran en `main`, donde se crea el tag, y también en `develop`.
+- **Hotfix branches:** se crean desde `main` con el nombre `hotfix/<descripción-corta>`, por ejemplo `hotfix/payslips-tab-crash`. Al terminar la corrección se integran en `main` y en `develop` para que el arreglo no se pierda.
+
+**Semantic Versioning**
+
+Las versiones siguen Semantic Versioning 2.0.0 con el formato `MAJOR.MINOR.PATCH`. `MAJOR` aumenta cuando un cambio rompe la compatibilidad, por ejemplo un cambio en el contrato de un endpoint que la aplicación ya consume; `MINOR` aumenta cuando se agregan funcionalidades compatibles, como un nuevo bounded context; y `PATCH` aumenta con correcciones que no cambian el comportamiento esperado. Durante el desarrollo inicial las versiones empiezan en `0.y.z`; la primera versión completa que se entregue a los usuarios de prueba será la `1.0.0`. En la aplicación Android el número se registra en `versionName` y cada compilación distribuida incrementa `versionCode`.
+
+**Conventional Commits**
+
+Los mensajes de commit siguen la especificación Conventional Commits 1.0.0 con el formato:
+
+```
+<tipo>(<alcance>): <descripción en imperativo, en inglés y en minúsculas>
+```
+
+- **Tipos:** `feat` (nueva funcionalidad), `fix` (corrección), `refactor` (cambio de código sin cambiar el comportamiento), `test` (pruebas), `docs` (documentación), `style` (formato), `build` (dependencias o compilación), `chore` (mantenimiento) y `ci` (integración continua).
+- **Alcance:** el bounded context o la sección afectada, por ejemplo `workspace`, `benefits`, `navigation`, `core` o `hero`.
+- **Ejemplos reales del Sprint 1:** `feat(benefits): add domain model with benefit assignment and vacation balance aggregates`, `fix(workspace): validate partial addresses and block termination when subordinates check fails`, `build: add springdoc openapi and pluralize dependencies`.
+
+### 4.1.3. Source Code Style Guide & Conventions
+
+**Convenciones generales**
+
+- Todo el código se escribe en inglés: nombres de clases, funciones, variables, archivos, endpoints, tablas y comentarios técnicos. Los textos que ve el usuario están en español y se separan del código mediante archivos de recursos o constantes de presentación.
+- Los nombres revelan la intención y se evitan las abreviaturas ambiguas (`registerEmployee` y no `regEmp`).
+- Se respeta el Ubiquitous Language definido en el Capítulo II: las clases del dominio usan los mismos términos del negocio, por ejemplo `Employee`, `VacationBalance`, `BenefitAssignment`, `Office` o `MetricThreshold`.
+- La sangría es de cuatro espacios en Java y Kotlin y de dos espacios en HTML, CSS y JavaScript. Los archivos terminan con una línea vacía.
+
+**Landing Page: HTML5, CSS3 y JavaScript**
+
+- *HTML:* se sigue la Google HTML/CSS Style Guide y las recomendaciones de W3Schools “HTML Style Guide and Coding Conventions”: etiquetas y atributos en minúsculas, valores entre comillas dobles, estructura semántica (`header`, `nav`, `main`, `section`, `footer`), jerarquía de encabezados H1 a H3 y atributo `alt` en todas las imágenes informativas.
+- *CSS:* clases en kebab-case, variables CSS para los tokens del sistema de diseño (colores, tipografía Inter y escala de espaciado) y diseño mobile-first con media queries.
+- *JavaScript:* se sigue la Google JavaScript Style Guide: `camelCase` para variables y funciones, `PascalCase` para clases, `const` y `let` en lugar de `var`, y punto y coma al final de cada sentencia.
+
+**RESTful API: Java y Spring Boot**
+
+- Se sigue la Google Java Style Guide: `PascalCase` para clases, `camelCase` para métodos y atributos y `UPPER_SNAKE_CASE` para constantes.
+- La estructura de paquetes respeta las capas del Domain-Driven Design en cada bounded context: `domain` (model, aggregates, entities, valueobjects, commands, queries, events, services, repositories), `application` (command y query services, ACL, event handlers), `infrastructure` (persistencia JPA) e `interfaces` (REST controllers, resources y assemblers).
+- Los value objects y los resources se implementan como `record` de Java. Los commands se nombran con verbo en infinitivo (`AssignBenefitCommand`), las queries con `Get…Query` y los eventos en pasado (`BenefitDeliveredEvent`).
+- Los endpoints siguen las convenciones de RESTful API: recursos en plural y kebab-case bajo `/api/v1` (`/benefit-types`, `/vacation-balances`), verbos HTTP según la operación y acciones de cambio de estado como subrecursos con `PATCH` o `POST` (`/requests/{id}/approve`).
+- Las tablas se nombran en snake_case y plural mediante la estrategia `SnakeCaseWithPluralizedTablePhysicalNamingStrategy`.
+- Los errores se devuelven con una estructura única (`code`, `message`, `details`) y los mensajes se internacionalizan con `messages.properties` y `messages_es.properties`.
+- Se toman como referencia las guías “Spring Boot Features” para la configuración por perfiles (`dev` y `prod`).
+
+**Aplicación móvil nativa: Kotlin y Jetpack Compose**
+
+- Se siguen las Kotlin Coding Conventions oficiales y la Android Kotlin Style Guide: `PascalCase` para clases y funciones `@Composable`, `camelCase` para funciones y propiedades, y `UPPER_SNAKE_CASE` para constantes.
+- Cada bounded context es un paquete dentro de `features` con las capas `domain` (entity, valueobject, repository), `application` (usecase), `infrastructure` (remote, mapper, repository, di) y `presentation` (state, viewmodel, ui/components, ui/screens, ui/navigation). Lo común vive en `core` (designsystem, network, navigation, session).
+- Sufijos por responsabilidad: `…Screen`, `…ViewModel`, `…UiState`, `…UseCase`, `…Repository` / `…RepositoryImpl`, `…Service` (Retrofit), `…Dto` y `…Mapper`.
+- Los casos de uso exponen `suspend operator fun invoke` y devuelven `Result<T>`. Los ViewModels publican un único `StateFlow<…UiState>` inmutable.
+- Las rutas de navegación son objetos o data classes `@Serializable` con sufijo `Route`, y cada bounded context registra su propio `NavGraph`.
+- Los colores, la tipografía y los íconos se toman del sistema de diseño de `core/designsystem`, que replica los tokens de Figma; no se escriben colores sueltos dentro de las pantallas.
+
+**Gherkin**
+
+Los archivos `.feature` siguen “Gherkin Conventions for Readable Specifications”: un `Feature` por User Story, escenarios con nombre descriptivo, pasos `Given-When-Then` en tercera persona y tablas `Examples` para los casos con datos variables.
+
+### 4.1.4. Software Deployment Configuration
+
+En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El Deployment Diagram de C4 Model presentado en la sección 2.5.3.3 resume la configuración resultante: el dispositivo Android del usuario, Firebase App Distribution, GitHub Pages, Render y Aiven.
+
+**Figura 93:** *Deployment Diagram de Flowboard*
+
+![Deployment Diagram de Flowboard](assets/figura-56.png)
+
+*Nota.* Nodos de ejecución de cada producto en el ambiente de producción. Elaboración propia en Structurizr DSL.
+
+**Landing Page en GitHub Pages**
+
+1. En el repositorio `flowboard-mobile-landing-page`, ir a *Settings › Pages*.
+2. En *Build and deployment* seleccionar *Deploy from a branch*, la rama `main` y la carpeta raíz (`/`).
+3. Cada vez que se integra un cambio en `main`, GitHub Pages vuelve a publicar el sitio de forma automática.
+4. El sitio queda disponible en https://performily-mobile.github.io/flowboard-mobile-landing-page/.
+
+**RESTful API en Render con base de datos en Aiven**
+
+1. *Base de datos:* crear un servicio *Aiven for MySQL* y una base de datos `flowboard`. Aiven entrega el host, el puerto, el usuario y la contraseña, y exige conexión SSL. Como Aiven activa `sql_require_primary_key`, todas las tablas deben tener llave primaria.
+2. *Imagen:* el repositorio incluye un `Dockerfile` de dos etapas. La primera usa `eclipse-temurin:25-jdk` para compilar el proyecto con `./mvnw clean package -DskipTests`; la segunda copia el `.jar` sobre `eclipse-temurin:25-jre` y lo ejecuta con `java -XX:MaxRAMPercentage=75 -jar app.jar`.
+3. *Servicio:* en Render crear un *Web Service* conectado al repositorio `flowboard-mobile-service`, con runtime *Docker* y rama `main`.
+4. *Variables de entorno:* configurar `SPRING_PROFILES_ACTIVE=prod` y las credenciales de la base de datos: `DATABASE_URL` (URL JDBC completa de Aiven con `sslMode=REQUIRED`), `DATABASE_USER` y `DATABASE_PASSWORD`, que `application-prod.properties` lee con la sintaxis `${...}`. Las credenciales nunca se escriben en los archivos de propiedades del repositorio. Render asigna la variable `PORT`, que el API usa con `server.port=${PORT:8080}`.
+5. *Esquema:* el perfil `prod` usa `spring.jpa.hibernate.ddl-auto=validate`, por lo que el esquema debe existir antes del primer despliegue. Se crea ejecutando una vez el API con el perfil `dev` contra la base de Aiven, o con el script SQL del proyecto.
+6. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
+
+**Aplicación móvil en Firebase App Distribution**
+
+1. Cambiar la constante `BASE_URL` de `core/di/NetworkModule.kt` por la URL pública del API en Render (en desarrollo apunta a `http://localhost:8080/api/v1/` y se usa `adb reverse tcp:8080 tcp:8080` con el emulador).
+2. Actualizar `versionCode` y `versionName` en `app/build.gradle.kts`.
+3. Generar el APK con *Build › Generate Signed App Bundle or APK* (o `./gradlew assembleRelease`), firmado con el keystore del equipo, que no se sube al repositorio.
+4. En la consola de Firebase, dentro del proyecto Flowboard, abrir *App Distribution*, subir el APK, asignar el grupo de testers y agregar las notas de la versión.
+5. Los testers reciben la invitación por correo e instalan la aplicación desde el enlace de Firebase.
+
+## 4.2. Landing Page & Mobile Application Implementation
+
+En esta sección se presenta el avance de la implementación, las pruebas, la documentación y el despliegue de los productos de Flowboard, organizado por Sprint.
+
+### 4.2.1. Sprint 1
+
+#### 4.2.1.1. Sprint Planning 1
+
+El Sprint 1 tuvo como propósito pasar del diseño elaborado en los Capítulos II y III a una primera versión funcional de los tres productos. En la reunión de planificación el equipo acordó priorizar el Landing Page, que debía estar desplegado para el TB1, y los seis bounded contexts del núcleo del negocio tanto en el RESTful API como en la aplicación nativa, dejando para el Sprint 2 el bounded context IAM, la aplicación cross-platform en Flutter y la distribución de la aplicación por Firebase.
+
+**Tabla 3:** *Sprint Planning 1*
+
+| Sprint # | Sprint 1 |
+| :---- | :---- |
+| **Sprint Planning Background** | |
+| Date | 2026-09-26 |
+| Time | 09:00 PM |
+| Location | Discord (virtual) |
+| Prepared By | Vasquez Llave, Oscar Lizandro |
+| Attendees (to planning meeting) | Ávila De La Cruz, Darío Fabián / Diaz Villalba, Diego Alonso / Esquicha Alcántara, Diego Alonso / Galvez Meza, Salym Pool / Vasquez Llave, Oscar Lizandro |
+| Sprint 0 Review Summary | Al ser el primer Sprint de implementación, no hay un incremento de software previo. El insumo es el AV1, que dejó listos el Product Backlog priorizado (68 ítems y 198 Story Points), los siete bounded contexts modelados con sus diagramas de clases y de base de datos, el diagrama de despliegue y el prototipo navegable de 83 pantallas en Figma. El feedback del docente sobre el AV1 se centró en mantener la trazabilidad entre User Stories, bounded contexts y pantallas. |
+| Sprint 0 Retrospective Summary | Durante el AV1 cada integrante asumió secciones completas del informe, lo que dio claridad sobre las responsabilidades, pero algunas secciones se integraron tarde y requirieron revisión de último momento. Para la implementación se acordó que cada integrante lidere uno o dos bounded contexts de punta a punta (API y aplicación), que cada bounded context tenga su propia rama y que la integración en `develop` se haga mediante pull requests revisados. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | *Our focus is on* publicar el Landing Page de Flowboard y entregar una primera versión de la aplicación nativa conectada a un RESTful API desplegado, con la gestión de colaboradores, asistencia, solicitudes, beneficios y vacaciones, boletas de pago y bienestar laboral. *We believe it delivers* al personal de Recursos Humanos y a los colaboradores un único lugar en su celular para registrar y consultar su información laboral y sus trámites, sin depender de archivos de Excel ni de canales paralelos. *This will be confirmed when* un visitante del Landing Page identifique la propuesta de valor de su segmento y llegue al llamado a la acción en menos de un minuto, y un usuario de Recursos Humanos complete desde la aplicación el registro de un colaborador, la asignación de un beneficio y la revisión de los indicadores de un espacio contra el API desplegado. |
+| Sprint 1 Velocity | 168 Story Points |
+| Sum of Story Points | 168 Story Points (58 ítems: US08-US35, US37-US57, TS01, TS03, TS05, TS06 y SP01-SP05) |
+
+*Nota.* Elaboración propia.
+
+#### 4.2.1.2. Aspect Leaders and Collaborators
+
+Los aspectos del Sprint 1 corresponden a los productos y bounded contexts que entraron en el alcance: el Landing Page, los seis bounded contexts implementados en el API y en la aplicación, y el despliegue. Cada bounded context tiene un líder que lo implementa de punta a punta, desde el modelo de dominio del API hasta las pantallas de la aplicación, y el resto del equipo colabora con la revisión de los pull requests y la integración en `develop`. Esta distribución es la misma que se refleja en las tareas del Sprint Backlog 1.
+
+**Tabla 4:** *Leadership-and-Collaboration Matrix del Sprint 1*
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | Workspace | Attendance | Request | Benefits | Payroll | Wellbeing | Deployment |
+| :---- | :---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | C | C | L | C | C | C | C | C |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | C | C | C | L | C | C | C | L |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | C | C | C | C | C | L | C | C |
+| Galvez Meza, Salym Pool | SalymGalvez21 | C | C | C | C | L | C | L | C |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro | L | L | C | C | C | C | C | C |
+
+*Nota.* L = Leader, C = Collaborator. Elaboración propia.
+
+#### 4.2.1.3. Sprint Backlog 1
+
+El objetivo del Sprint 1 fue publicar el Landing Page y construir la primera versión de la aplicación nativa sobre el RESTful API, cubriendo los Epics EP02 a EP08 y las Technical Stories y Spikes que sostienen el despliegue. Las User Stories se descompusieron en tasks por capa (API y aplicación) y se asignaron según la matriz de líderes. El tablero del Sprint se gestionó en Trello.
+
+**Figura 94:** *Tablero del Sprint 1 en Trello*
+
+![Tablero del Sprint 1 en Trello](assets/Chapter-4/sprint1-backlog-trello.png)
+
+*Nota.* Columnas To-do, In Process, To-Review y Done con las tarjetas del Sprint 1. Elaboración propia.
+
+Enlace del tablero: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
+
+**Tabla 5:** *Sprint Backlog 1*
+
+| User Story Id | User Story Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :----: | :---- | :----: | :---- | :---- | :----: | :---- | :----: |
+| US52 | Sección principal con propuesta de valor | T01 | Estructura base, tokens de diseño e i18n | Crear index.html, variables CSS del sistema de diseño y el motor de traducciones. | 3 | Oscar | Done |
+| US52 | Sección principal con propuesta de valor | T02 | Hero con mockup del dispositivo | Implementar la sección principal con la propuesta de valor, el mockup y los sectores objetivo. | 3 | Oscar | Done |
+| US53 | Llamados a la acción por segmento | T03 | Sección de segmentos por rol | Implementar las dos experiencias (RR.HH. y colaborador) con su llamado a la acción y el acceso único. | 3 | Oscar | Done |
+| US54 | Presentación de funcionalidades | T04 | Comparativa antes/después y métricas | Implementar el bloque de beneficios medibles con la comparación antes y después. | 2 | Oscar | Done |
+| US54 | Presentación de funcionalidades | T05 | Funcionalidades, módulos e integraciones | Presentar los siete módulos del producto y sus integraciones. | 3 | Oscar | Done |
+| US55 | Cambio de idioma del sitio | T06 | Selector de idioma en el header | Agregar el selector inglés/español en el header y el menú móvil, conservando la preferencia elegida. | 3 | Oscar | Done |
+| US56 | Acceso a términos y política de privacidad | T07 | Footer y páginas legales | Crear terms.html y privacy.html y enlazarlas desde el footer. | 3 | Oscar | Done |
+| US57 | Navegación accesible del sitio | T08 | Navegación por teclado y semántica | Asegurar la jerarquía H1-H3, el foco visible y el texto alternativo; corregir el salto de línea del menú. | 2 | Oscar | Done |
+| US57 | Navegación accesible del sitio | T09 | Testimonios, FAQ y cierre | Implementar testimonios, preguntas frecuentes y el llamado a la acción final. | 2 | Oscar | Done |
+| US08 | Registro de un nuevo colaborador | T10 | Modelo de dominio y capa de aplicación (API) | Agregado Employee, value objects del shared kernel, commands, queries y servicios de aplicación. | 6 | Oscar | Done |
+| US08 | Registro de un nuevo colaborador | T11 | Persistencia y endpoints REST (API) | Entidades JPA, adaptadores de repositorio, resources, assemblers y EmployeesController. | 5 | Oscar | Done |
+| US08 | Registro de un nuevo colaborador | T12 | Pantalla de registro en dos pasos (app) | RegisterEmployeeScreen con datos personales y contrato/asignación, conectada al API. | 5 | Oscar | Done |
+| US09 | Gestión del catálogo de áreas | T13 | Endpoints de áreas (API) | Crear, listar, actualizar, activar y desactivar áreas. | 3 | Oscar | Done |
+| US09 | Gestión del catálogo de áreas | T14 | Pantalla de áreas y posiciones (app) | OrganizationScreen con pestañas, hojas de creación y desactivación de área. | 4 | Oscar | Done |
+| US10 | Asignación de área y posición | T15 | Job assignments (API y app) | Endpoint de asignaciones de puesto y hoja de reasignación en la ficha del colaborador. | 4 | Oscar | Done |
+| US11 | Asignación del jefe directo | T16 | Jefe directo (API y app) | Endpoints PUT/DELETE direct-manager y selección del jefe al registrar o reasignar. | 3 | Oscar | Done |
+| US12 | Consulta del organigrama general | T17 | Organigrama (API y app) | Endpoint organization-chart y OrganizationChartScreen. | 5 | Oscar | Done |
+| US13 | Consulta del organigrama por área | T18 | Filtro por área del organigrama (app) | Navegación al organigrama de un área y resaltado del colaborador. | 2 | Oscar | Done |
+| US14 | Actualización de datos del colaborador | T19 | Edición de datos personales (API y app) | PUT /employees/{id} y EditPersonalDataScreen con validación de dirección parcial. | 4 | Oscar | Done |
+| US15 | Cese de un colaborador | T20 | Registro de cese (API y app) | PATCH terminate, hoja de cese y bloqueo cuando tiene subordinados. | 4 | Oscar | Done |
+| US16 | Reincorporación de un colaborador | T21 | Reincorporación (API y app) | PATCH reinstate y hoja de reincorporación. | 2 | Oscar | Done |
+| US17 | Carga de documentos del expediente | T22 | Documentos del expediente (API y app) | Endpoints de documentos y hoja de carga con almacenamiento local del archivo. | 4 | Oscar | Done |
+| US18 | Consulta del expediente documental | T23 | Mi expediente (app) | MyRecordScreen con la lista de documentos del colaborador. | 2 | Oscar | Done |
+| US19 | Consulta del perfil laboral propio | T24 | Mi perfil (app) | MyProfileScreen con datos personales, laborales y jerarquía. | 2 | Oscar | Done |
+| US20 | Búsqueda y filtrado de colaboradores | T25 | Búsqueda y filtros (API y app) | Búsqueda por nombre/DNI y filtros por área, estado y posición en EmployeesScreen. | 4 | Oscar | Done |
+| US21 | Procesamiento de marcaciones | T26 | Modelo de dominio de asistencia (API) | Value objects, entidades, agregados, commands, queries y eventos de Attendance. | 6 | Darío | Done |
+| US21 | Procesamiento de marcaciones | T27 | Servicios, infraestructura y conexión con Workspace (API) | Servicios de aplicación, persistencia JPA, ACL a Workspace y tarea programada. | 5 | Darío | Done |
+| US21 | Procesamiento de marcaciones | T28 | Registro de marcaciones (app) | Envío de la marcación desde la app y consumo del endpoint /attendance/punches. | 3 | Darío | Done |
+| US22 | Consulta del historial de asistencia propio | T29 | Mi asistencia (app) | MyAttendanceScreen y AttendanceRecordsScreen con el historial del colaborador. | 3 | Darío | Done |
+| US23 | Consulta de asistencia por colaborador | T30 | Asistencia de un colaborador (app) | AttendanceEmployeeScreen con rango de fechas y justificación. | 3 | Darío | Done |
+| US24 | Reporte de asistencia por área | T31 | Asistencia por área (app) | AttendanceAreaScreen con filtro por estado. | 3 | Darío | Done |
+| US25 | Reporte de horas trabajadas y sobretiempo | T32 | Horas trabajadas (API y app) | Endpoint de reporte de horas y AttendanceHoursScreen. | 4 | Darío | Done |
+| US26 | Catálogo de tipos de solicitud | T33 | Tipos de solicitud (API) | Agregado RequestType con campos configurables y RequestTypesController. | 4 | Diego D. | Done |
+| US26 | Catálogo de tipos de solicitud | T34 | Catálogo y nuevo tipo (app) | RequestTypesScreen y NewRequestTypeScreen para RR.HH. | 4 | Diego D. | Done |
+| US27 | Creación de una solicitud | T35 | Agregado Request (API) | Value objects, entidades, eventos, agregado, commands y queries de Request. | 6 | Diego D. | Done |
+| US27 | Creación de una solicitud | T36 | Asistente de nueva solicitud (app) | NewRequestScreen por pasos con adjuntos y almacenamiento local. | 5 | Diego D. | Done |
+| US28 | Validación de saldo al solicitar vacaciones | T37 | Consulta de saldo desde Request (app) | ACL hacia Benefits para validar el saldo antes de enviar. | 2 | Diego D. | Done |
+| US29 | Ruteo de la solicitud al aprobador | T38 | Ruteo al aprobador (API) | Servicios de aplicación con ACL a Workspace para obtener el jefe directo. | 3 | Diego D. | Done |
+| US30 | Seguimiento de solicitudes propias | T39 | Mis solicitudes y detalle (app) | RequestsScreen y RequestDetailScreen con historial de estados. | 4 | Diego D. | Done |
+| US31 | Cancelación de una solicitud propia | T40 | Cancelar solicitud (API y app) | POST /requests/{id}/cancel y acción en el detalle. | 2 | Diego D. | Done |
+| US32 | Bandeja de solicitudes por atender | T41 | Bandeja del aprobador (API y app) | Endpoints pending-approval y vista de bandeja para aprobador y RR.HH. | 3 | Diego D. | Done |
+| US33 | Aprobación de una solicitud | T42 | Aprobar (API y app) | POST approve y ReviewRequestScreen. | 2 | Diego D. | Done |
+| US34 | Rechazo con motivo obligatorio | T43 | Rechazar con motivo (API y app) | POST reject con validación del motivo y diálogo en la app. | 2 | Diego D. | Done |
+| US35 | Devolución a revisión | T44 | Devolver y reenviar (API y app) | POST return-for-review y resubmit, con la acción de reenvío en la app. | 3 | Diego D. | Done |
+| US37 | Catálogo de beneficios | T45 | Modelo de dominio de Benefits (API) | Agregados BenefitAssignment y VacationBalance, value objects y BenefitType. | 5 | Salym | Done |
+| US37 | Catálogo de beneficios | T46 | Catálogo de beneficios (app) | Pestaña Catálogo con creación, activación y desactivación de tipos. | 3 | Salym | Done |
+| US38 | Asignación de beneficios | T47 | Asignación a colaborador o área (API) | Commands, servicios de aplicación, ACL a Workspace y vista previa por área. | 4 | Salym | Done |
+| US38 | Asignación de beneficios | T48 | Pantalla Asignar beneficio (app) | AssignBenefitScreen con vista previa de colaboradores a recibir y omitidos. | 4 | Salym | Done |
+| US39 | Registro de entrega de beneficio | T49 | Registro de entrega (API y app) | POST deliveries y diálogo Registrar entrega en la pestaña Asignaciones. | 3 | Salym | Done |
+| US40 | Consulta de beneficios propios | T50 | Mis beneficios (app) | MyBenefitsScreen con pestañas Vigentes y Entregados. | 3 | Salym | Done |
+| US41 | Cálculo del saldo de vacaciones | T51 | Política de acumulación y scheduler (API) | VacationAccrualPolicy, acumulación mensual programada y saldos iniciales. | 4 | Salym | Done |
+| US41 | Cálculo del saldo de vacaciones | T52 | Saldo de vacaciones sin conexión (app) | MyVacationBalanceScreen con caché local y aviso de datos sincronizados. | 4 | Salym | Done |
+| US42 | Ajuste manual del saldo de vacaciones | T53 | Ajuste manual (API y app) | POST adjustments y hoja Ajustar saldo con motivo obligatorio. | 3 | Salym | Done |
+| US43 | Carga de boletas de pago | T54 | Modelo y servicios de Payroll (API) | Dominio de boletas y períodos, servicios, adaptadores JPA y ACL a Workspace. | 5 | Diego E. | Done |
+| US43 | Carga de boletas de pago | T55 | Cargar boletas (app) | UploadPayslipsScreen conectada a su ViewModel. | 4 | Diego E. | Done |
+| US44 | Consulta de boletas propias | T56 | Endpoints de boletas del colaborador (API) | GET /payslips/me, detalle y URL de descarga. | 3 | Diego E. | Done |
+| US44 | Consulta de boletas propias | T57 | Mis boletas (app) | Vista del colaborador (MA-64, MA-65) e integración en la pestaña Boletas. | 4 | Diego E. | In Process |
+| US45 | Control del estado de pago | T58 | Estado de pago (API y app) | PATCH mark-as-paid / mark-as-observed y PaymentStatusScreen. | 4 | Diego E. | Done |
+| US46 | Reporte de pagos por área y período | T59 | Filtros por área y período (app) | Filtros del estado de pagos por área y período. | 2 | Diego E. | Done |
+| US47 | Registro de espacios de trabajo | T60 | Agregado Office (API) | Value objects, agregado Office, entidades y repositorios. | 4 | Salym | Done |
+| US47 | Registro de espacios de trabajo | T61 | Espacios y nuevo espacio (app) | OfficesScreen y NewOfficeScreen. | 3 | Salym | Done |
+| US48 | Registro y asociación de dispositivos ambientales | T62 | Inventario y vinculación (API y app) | Seeder de inventario, endpoints de devices y hoja Vincular dispositivo. | 4 | Salym | Done |
+| US49 | Definición de umbrales por métrica | T63 | Umbrales (API y app) | PUT thresholds y ThresholdsScreen con validación de rangos en vivo. | 4 | Salym | Done |
+| US50 | Consulta de indicadores ambientales | T64 | Indicadores del espacio (API y app) | GET status y OfficeDetailScreen con avisos de peligro y de datos desactualizados. | 4 | Salym | Done |
+| US51 | Histórico y tendencia por métrica | T65 | Histórico (API y app) | GET readings con promedios diarios y ReadingHistoryScreen con gráfico. | 4 | Salym | Done |
+| TS01 | Documentación del API con OpenAPI | T66 | Configurar springdoc-openapi | Dependencia springdoc, metadatos del API y anotaciones @Operation en los controllers. | 2 | Oscar | Done |
+| TS01 | Documentación del API con OpenAPI | T67 | Redirección raíz a Swagger y health | RootController con redirección a Swagger UI y endpoint /health. | 1 | Diego D. | Done |
+| TS03 | Respuesta de error estandarizada | T68 | Infraestructura base de errores | Result, ApplicationError y ResponseEntityAssembler compartidos por todos los contexts. | 3 | Oscar | Done |
+| TS05 | Internacionalización de los mensajes del API | T69 | Mensajes i18n | messages.properties y messages_es.properties por bounded context. | 2 | Oscar | Done |
+| TS06 | Despliegue de los productos digitales | T70 | Despliegue del Landing Page | Publicación en GitHub Pages desde main. | 1 | Oscar | Done |
+| TS06 | Despliegue de los productos digitales | T71 | Dockerfile y perfil prod del API | Dockerfile multi-stage y application-prod.properties para Render y Aiven. | 3 | Diego D. | Done |
+| TS06 | Despliegue de los productos digitales | T72 | Distribución de la app | Configurar Firebase App Distribution y apuntar la app a la URL pública del API. | 3 | Diego D. | In Process |
+| SP01 | Investigar el formato de las marcaciones | T73 | Spike de marcaciones | Revisar el formato de exportación de relojes de asistencia. | 2 | Darío | Done |
+| SP02 | Investigar el envío de mediciones ambientales | T74 | Spike de lecturas ambientales | Definir el endpoint de lecturas y el simulador de datos de prueba. | 2 | Salym | Done |
+| SP03 | Evaluar el almacenamiento de documentos y boletas | T75 | Spike de almacenamiento | Comparar almacenamiento local y en la nube para documentos y boletas. | 2 | Diego E. | Done |
+| SP04 | Analizar las reglas del saldo de vacaciones | T76 | Spike de vacaciones | Revisar el D. Leg. 713 y definir la política de acumulación. | 2 | Salym | Done |
+| SP05 | Evaluar plataformas para el despliegue | T77 | Spike de despliegue | Comparar Render, Railway y Aiven para el API y la base de datos. | 2 | Diego D. | Done |
+
+*Nota.* Elaboración propia.
+
+Al cierre del Sprint quedaron en estado *In Process* la vista de boletas del colaborador en la aplicación (US44), cuyo API ya está disponible, y la distribución de la aplicación por Firebase App Distribution (TS06). Ambos pasan al Sprint 2 junto con el bounded context IAM (US01-US07 y TS02), la notificación de cambio de estado (US36), la paginación de listados (TS04) y la aplicación cross-platform en Flutter.
+
+#### 4.2.1.4. Development Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo implementó los tres productos de la solución.
+
+En el **Landing Page** se desarrollaron las nueve secciones diseñadas en el Capítulo III: el header con selector de idioma y menú móvil, la sección principal con el mockup del dispositivo, la comparación antes y después con métricas, los segmentos por rol con acceso único, las funcionalidades y los módulos, los testimonios, las preguntas frecuentes, el llamado a la acción final, y el footer con los términos del servicio y la política de privacidad.
+
+En el **RESTful API** se implementaron seis de los siete bounded contexts con sus cuatro capas: Workspace, Attendance, Request, Benefits, Payroll y Wellbeing. Se configuraron además la infraestructura compartida (respuesta de error estandarizada, auditoría JPA, perfiles `dev` y `prod`, mensajes internacionalizados), la documentación con springdoc-openapi, el Dockerfile y el redireccionamiento de la raíz a Swagger UI.
+
+En la **aplicación nativa** se construyó la base del proyecto (sistema de diseño tomado de Figma, Hilt, módulo de red, manejo de errores del API y navegación con barra inferior por rol) y los mismos seis bounded contexts, cada uno con sus capas domain, application, infrastructure y presentation, conectados al API. Al cierre del Sprint se integró una rama de correcciones con validaciones, mensajes de error y avisos de datos desactualizados en Workspace, Benefits, Payroll y Wellbeing.
+
+A continuación se presentan los commits de cada repositorio. El cuerpo de los mensajes se omite cuando el commit no lo tiene.
+
+**Tabla 6:** *Commits del repositorio del Landing Page en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-base-setup | 53fd697 | Initial commit | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-base-setup | 020902a | feat: add base structure, design tokens and i18n engine | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-header-navbar | 8feed20 | feat: add header with navigation, language selector and mobile menu | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-hero | 636a548 | feat: add hero section with device mockup and target sectors | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-value-metrics | 44c5f0b | feat: add before/after comparison and metrics | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-segments | f44682b | feat: add role-based segments and single sign-in access | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-features | eda311a | feat: add key features, modules and integrations | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-footer-legal | 29bc605 | feat: add testimonials, faq and final call to action | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-footer-legal | d5da99e | feat: add footer, animations, terms of service and privacy policy | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-footer-legal | 2dc7606 | fix(header): prevent nav links from wrapping | — | 27/09/2026 |
+| Performily-Mobile/flowboard-mobile-landing-page | landing-testimonials-faq-cta | 2d37cba | fix(testimonials): align featured quote with interview record | — | 27/09/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 7:** *Commits del repositorio del RESTful API en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | workspace | cb64407 | feat: add java structure | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 29fbd16 | build: add springdoc openapi and pluralize dependencies | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 5351d1c | chore: configure profiles, i18n messages and jpa auditing | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 15c71a6 | feat: reuse base infrastructure | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | bef05be | feat: add shared kernel value objects | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 6d4baf1 | feat: add domain model | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | de5012e | feat: add commands, queries and repository ports | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 923e72d | feat: add application services | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 98afdf7 | feat: add jpa persistence layer | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 0c1a236 | feat: add rest resources and assemblers | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 736eb5a | feat: expose rest controllers | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 42d76cd | feat: make address optional and add updatedAt to employees | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 7b6b6f1 | feat: allow assigning the direct manager when registering an employee | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 73bed4a | feat: add employee search, area headcount and pending reassignment chart | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | d70b28d | feat(attendance): add valueobjects | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | d4bd6f2 | feat(attendance): add entities | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 132fb8a | feat(attendance): add commands | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | c8f3aff | feat(attendance): add events | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 543b9dc | feat(attendance): add queries | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | d5516d9 | feat(attendance): add domain-repositories | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 5fb9b8b | feat(attendance): add aggregates | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | d5ab5ab | refactor(attendance) reorden domain model and repositories | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | aca2e5b | feat(attendance): add infrastructure | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 0ebe000 | feat(attendance): add application files | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 9075caa | feat(attendance): add interfaces files | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 005b632 | feat(attendance): add conection with Workspace | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 8659b30 | feat(attendance): Enable scheduling for app tasks | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 1de5f13 | fix(attendance): correct letter | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 5a6e46c | fix(attendance): add import missing | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | ee4688b | fix(attendance): correct letter | — | 01/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 000c942 | feat(request): add value objects | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 8c0daff | feat(request): add entities | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 0929c67 | feat(request): add events | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e6389ff | feat(request): add request aggregate | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 91ef9e5 | feat(request): add commands | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 317a2ed | feat(request): add queries | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | f49986f | feat(request): add domain repositories | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 16b7e05 | feat(request): add application services and workspace acl | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 6d701c4 | feat(request): add jpa persistence layer | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 43a45a5 | feat(request): add rest resources and assemblers | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 369b149 | chore(request): add i18n error messages | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | d1da440 | feat(wellbeing): add domain value objects and enumerations | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | 04ac84c | feat(wellbeing): add office aggregate and device, threshold and reading entities | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | 4501386 | feat(wellbeing): add commands, queries and repository interfaces | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | eb8305b | feat(wellbeing): add jpa persistence entities and repository adapters | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | cb43c5a | feat(wellbeing): add command and query services for offices, devices, thresholds and readings | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | d1b322b | feat(wellbeing): add device inventory seeder and test reading simulator | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | b348764 | feat(wellbeing): add rest controllers, resources and assemblers | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | 90e9758 | feat: add payroll payslip query APIs and models | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | 58dd14a | feat(shared): add AreaId, RequestId and DateRange to the shared kernel | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | 42045cf | feat(benefits): add domain model with benefit assignment and vacation balance aggregates | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | 8c1fa0a | feat(benefits): add commands, queries, repositories and vacation accrual policy | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | ee02e57 | feat(benefits): add application services, workspace acl and benefits context facade | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | 0443627 | feat(benefits): add monthly vacation accrual scheduler and initial data | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | c659c29 | feat(benefits): add rest controllers, resources and assemblers | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | 42a9c65 | delete: version beta payroll structurev1 | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | 75540d4 | delete: version beta payroll structurev2 | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | 5e87d29 | refactor(payroll): align domain model with class diagram | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | ed55a50 | feat(payroll): add command/query services, JPA adapters and workspace ACL | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | d672d84 | feat(payroll): expose payslip and payroll period endpoints for employees and HR | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 6ace074 | fix(workspace): read incomplete stored address as absent and keep startup alive if vacation seeding fails | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 110812e | fix(benefits): never stop startup when vacation balance seeding fails | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | main | 76e972f | feat(): add deployment configuration | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | main | 4a6ec68 | feat: add root redirect to swagger and health endpoint | — | 07/10/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 8:** *Commits del repositorio de la aplicación nativa en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 916b867 | chore: initialize flowboard android project | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 4a5170f | chore: initialize flowboard android project | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | cf59331 | chore: add retrofit, hilt, room, datastore and navigation dependencies | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 53c79d9 | refactor: move theme package to core designsystem | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 79f3d80 | chore(core): scaffold application class, network module and shared kernel | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 56bca67 | chore(Workspace): scaffold domain layer | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 475df2c | chore(Workspace): scaffold DTOs and retrofit services | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 6a6a4c9 | chore(Workspace): scaffold repository implementations and hilt modules | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 029041a | chore(Workspace): scaffold use cases | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 9163ec0 | chore(Workspace): scaffold presentation layer | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | f0bc10e | chore(Navigation): scaffold AppNavHost | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 275eb1d | refactor(Workspace): restructure bounded context into DDD four-layer architecture | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 5d51d2d | chore: enable core library desugaring for java.time support | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | f572c30 | feat(core): add Flowboard theme colors, typography and icons from Figma | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 679062f | feat(core): add Hilt application, network module, API call handler and shared kernel | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 6203997 | feat(Workspace): implement domain entities, value objects and repository contracts | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | b7be5da | feat(Workspace): implement use cases for employees, areas, positions and organization chart | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 94bc7b0 | feat(Workspace): implement Retrofit services, DTOs, mappers and repositories | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 6a2bd89 | feat(Workspace): add employees screen with search and filters | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 820e04a | feat(Workspace): add two-step register employee screen | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | f13b118 | feat(Workspace): add employee detail screen with data, job and record tabs | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | c8c03aa | feat(Workspace): add areas and positions management screen | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 3efc193 | feat(Workspace): add organization chart screen | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | f6a2ee3 | feat(Navigation): add WorkspaceNavGraph and register it in AppNavHost | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 3f6ebbd | chore: update project files | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 54623ad | feat(Workspace): implement employees, register, detail, organization and organization chart views connected to backend | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | f1716c6 | feat: add payslips viewer collaborator | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | 99328c3 | feat: add payslips config collaborator | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | 6c08bc3 | feat: add period payroll collaborator | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | ba07c84 | feat: add section payroll collaborator | — | 05/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | c19e66d | feat(workspace): add domain contracts for employee lifecycle, documents and area deactivation | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 0e1ccd0 | feat(workspace): connect lifecycle, document and area endpoints in infrastructure | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | d838a0c | feat(workspace): add use cases for reassignment, termination, reinstatement and documents | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | workspace | 9b03214 | feat(workspace): add employee actions, edit personal data, area deactivation and my profile screens | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | navigation | 927a386 | feat(core): add role-based bottom navigation bar and more options screen | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 19d30e5 | feat(attendance): add attendance domain value objects | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 04de8a5 | feat(attendance): add attendance domain entities | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | ba2a863 | feat(attendance): add AttendanceRepository interface | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | cd4af49 | feat(attendance): add remote DTOs and Retrofit services for attendance management | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 156ac2e | feat(attendance): add attendance mapper | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | db5c4f5 | feat(attendance): add API and repository modules | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 2aa935e | feat(attendance): add attendance repository | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | 7be230a | feat(wellbeing): add domain model for offices, devices, thresholds and readings | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | be47b35 | feat(attendance): add attendance application | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | 23f5255 | feat(wellbeing): add use cases for offices, devices, thresholds and history | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | 1118945 | feat(wellbeing): add retrofit services, dtos and mappers, repositories and hilt modules | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 594755d | feat(attendance): add UI states for attendance screens | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 7c13634 | feat(attendance): add view models for attendance | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 25c4f6f | feat(attendance): add reusable UI components | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 41a1202 | feat(Attendance): add attendances screens | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | d8771da | feat(Attendance): add navigation graph and routes | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | f156f37 | feat(wellbeing): add wellbeing navigation graph | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 29d34ab | feat(benefits): add domain model for benefit types, assignments and vacation balances | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 4b8d65e | feat(benefits): add vacation balance adjustment screens | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 3139ff5 | feat(benefits): add benefits navigation graph | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 003d526 | feat(navigation): open benefits from the more menu | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 408b823 | feat: add attendance navigation graph | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | 81d0b94 | feat(Payroll): implement domain entities, value objects and repository contracts | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | ec7f855 | feat(Payroll): implement use cases for payslip upload, publication and payment status | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | 3452734 | feat(Payroll): implement Retrofit services, DTOs, mappers, repositories and Workspace ACL | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | 06458f3 | feat(core): add payroll color tokens and forward arrow icon | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | dc24a75 | feat(Payroll): add HR upload payslips and payment status screens connected to ViewModels | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | payroll | fa26995 | feat(Navigation): register PayrollNavGraph in AppNavHost and link Boletas y pagos from More | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 3dd7d1a | refactor(navigation): remove attendance route from AppNavHost | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | eb64325 | feat(Request): add domain model with entities, value objects and repository ports | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 2f2c447 | feat(Request): add remote DTOs and Retrofit services for requests and request types | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 19f3b1b | feat(Request): add mappers, repository implementations and local attachment storage | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 307b56d | feat(Request): add ACL adapters to Workspace and Benefits and Hilt modules | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 6efec87 | feat(Request): add query use cases for my requests, approval inbox and HR view | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 5386b01 | feat(Request): add use cases to submit, cancel, resubmit, approve, reject and return requests | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | a0ba7bf | feat(Request): add request type catalog use cases | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 2f75d1f | feat(Request): add shared UI components, formatters and error messages | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 49ccea1 | feat(Request): add requests tab with my requests, approval inbox and HR views | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 994d2a9 | feat(Request): add new request wizard with vacation balance check | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 49b669b | feat(attendance): add status filter to AttendanceAreaViewModel | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | c8baa0f | feat(Attendance): add status filter to attendance area UI state | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 5fc4af5 | feat(Attendance): add attendance header and section tabs components | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | e70f9b3 | refactor(attendance): update screens of attendance | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 9c96c1c | refactor(attendance): update navigation of attendance | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 6e330d5 | feat(Request): add request detail with history, cancel and resubmit | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | edf6f89 | feat(Request): add approver review screen and resolved team requests | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 860a147 | feat(Request): add request types catalog and new request type form for HR | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 8a4fbf2 | feat(Request): add RequestNavGraph with request routes | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | ee2484e | feat(Navigation): register RequestNavGraph in AppNavHost and link request types from More | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 77449d6 | fix(): add imports on FlowboardApp.kt | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | fixes | 5429569 | feat(core): expose ApiException.details from backend errors | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | fixes | 3896044 | fix(workspace): validate partial addresses and block termination when subordinates check fails | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | fixes | 8bb4680 | fix(benefits): harden validation, error messages and stale data handling | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | fixes | 75fa331 | fix(payroll): handle cancellation, duplicates and orphan files; add file validation use case | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | fixes | 032520f | fix(wellbeing): separate save errors, add retry, cancelable polling and stale data banners | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | d31fb5e | refactor(attendance): update registerPunch return type to Result<Long> | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 16d98c3 | feat(attendance): update API endpoints and enrich repository records with workspace metadata | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | a44bb6a | feat(attendance): update employee service endpoints and punch registration return type | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 41cc464 | feat(attendance): reformat attendance presentation components | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 959871a | feat(attendance): update AreaDto and EmployeeSummaryDto with additional fields | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | ba078ee | refactor(navigation): disable attendance, requests, and payslips routes | — | 07/10/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+En el Sprint 1 las pruebas se concentraron en las reglas de negocio de mayor riesgo: el cálculo del saldo de vacaciones, la asignación y entrega de beneficios, y la validación de umbrales ambientales, porque un error en ellas afecta directamente lo que el colaborador ve en su celular. Se elaboraron pruebas unitarias del API con JUnit 5 y de la aplicación con JUnit 4, y las pruebas de aceptación de los Web Services bajo el enfoque BDD, escritas en Gherkin a partir de los criterios de aceptación de las User Stories del Capítulo II.
+
+**Unit Tests del RESTful API**
+
+Las pruebas del API se ubican en `src/test/java` del repositorio `flowboard-mobile-service`. Usan repositorios en memoria y un servicio externo de Workspace simulado, de modo que verifican el dominio y los servicios de aplicación sin levantar Spring ni la base de datos.
+
+**Tabla 9:** *Unit Tests del RESTful API*
+
+| Clase de prueba | Clase probada | Comportamientos verificados | User Story | N.° de tests |
+| :---- | :---- | :---- | :----: | :----: |
+| `DateRangeTest` | `DateRange` (shared kernel) | Ambos extremos se incluyen; rangos que comparten un día se superponen y los consecutivos no; se rechaza un fin anterior al inicio. | US38 | 3 |
+| `BenefitAssignmentTest` | `BenefitAssignment` | Una asignación nueva inicia como ASSIGNED; no se asignan tipos inactivos; las unidades son enteras; la asignación por área crea una por colaborador; la entrega pasa a DELIVERED y no se registra dos veces. | US38, US39 | 8 |
+| `VacationBalanceTest` | `VacationBalance` | Disponibles = acumulados − usados; una solicitud aprobada suma a usados; no se descuenta más de lo disponible ni la misma solicitud dos veces; la reversión devuelve los días una sola vez; el ajuste exige motivo y no deja el saldo negativo. | US41, US42 | 11 |
+| `VacationDaysTest` | `VacationDays` | Acepta medios días con dos decimales; rechaza negativos y más de dos decimales. | US41 | 2 |
+| `VacationAccrualPolicyTest` | `VacationAccrualPolicy` | Ingreso reciente (2 meses = 5 días); año completo con tope de 30 días; vacaciones ya tomadas; solo acumula quien ingresó antes del mes. | SP04, US41 | 4 |
+| `BenefitCommandServiceImplTest` | `BenefitCommandServiceImpl` | Nombre de tipo duplicado sin importar mayúsculas; asignación a colaborador activo; rechazo de inactivos, de períodos superpuestos y de tipos desactivados; asignación por área que omite a quien ya lo tiene. | US37, US38 | 9 |
+| `VacationBalanceCommandServiceImplTest` | `VacationBalanceCommandServiceImpl` | Apertura con antigüedad; un saldo por colaborador; descuento idempotente ante eventos repetidos; rechazo sin días suficientes; ajuste con autor existente y motivo. | US41, US42 | 7 |
+| `BenefitsContextFacadeImplTest` | `BenefitsContextFacadeImpl` | Request consulta de forma síncrona si el colaborador tiene días suficientes. | US28 | 1 |
+| **Total** | | | | **45** |
+
+*Nota.* Elaboración propia.
+
+**Unit Tests de la aplicación nativa**
+
+Las pruebas de la aplicación se ubican en `app/src/test/java` y verifican los casos de uso, los validadores del dominio y los formateadores de la capa de presentación, que son los que deciden qué mensaje y qué valor ve el usuario.
+
+**Tabla 10:** *Unit Tests de la aplicación nativa*
+
+| Clase de prueba | Clases probadas | Comportamientos verificados | User Story | N.° de tests |
+| :---- | :---- | :---- | :----: | :----: |
+| `ThresholdRangesValidatorTest` | `ThresholdRangesValidator` | Rangos contiguos válidos; los valores sugeridos de las tres métricas son válidos; superposición, vacío, máximo menor que el mínimo, fuera del rango físico y menos de dos niveles. | US49 | 7 |
+| `WellbeingUseCasesTest` | `LinkDeviceUseCase`, `CreateOfficeUseCase`, `DefineThresholdUseCase`, `GetReadingHistoryUseCase` | El código del dispositivo se normaliza; sin código no se llama al API; campos opcionales vacíos se envían nulos; umbrales superpuestos no se envían; el histórico rechaza fechas futuras y rangos invertidos. | US47-US51 | 7 |
+| `WellbeingPresentationTest` | `WellbeingFormatters`, `ReadingHistory.summary()` | Problema persistente con 3 días o más; episodio puntual con 1 o 2; aviso para configurar umbrales; formatos de valores y tiempo transcurrido. | US50, US51 | 5 |
+| `BenefitsUseCasesTest` | `AssignBenefitUseCase`, `RegisterDeliveryUseCase`, `CreateBenefitTypeUseCase`, `AdjustVacationBalanceUseCase` | Validación de cantidad, unidades enteras, tipo inactivo y fechas; la entrega no es futura ni anterior a la vigencia, no se repite y la registra el usuario actual; el ajuste exige motivo y no deja el saldo negativo. | US37-US42 | 11 |
+| `BenefitsPresentationTest` | `BenefitsFormatters`, `VacationBalanceMapper`, `BenefitsMapper`, `benefitsMessage` | Cantidades en soles, días y unidades; días con signo y periodos; títulos de movimientos; orden de movimientos; envío de `employeeId` o `areaId`; traducción de los errores del API. | US38-US42 | 6 |
+| **Total** | | | | **36** |
+
+*Nota.* Elaboración propia.
+
+**Figura 95:** *Ejecución de los Unit Tests del RESTful API*
+
+![Ejecución de los Unit Tests del API](assets/Chapter-4/tests-api.png)
+
+*Nota.* Resultado de `./mvnw test` en el repositorio del API. Elaboración propia.
+
+**Figura 96:** *Ejecución de los Unit Tests de la aplicación nativa*
+
+![Ejecución de los Unit Tests de la aplicación](assets/Chapter-4/tests-app.png)
+
+*Nota.* Resultado de *Run Tests* sobre `app/src/test` en Android Studio. Elaboración propia.
+
+**Acceptance Tests de los Web Services (BDD)**
+
+Los escenarios de aceptación se escriben en Gherkin a partir de los criterios de aceptación de las User Stories y se ubican en `src/test/resources/features` del repositorio del API. Cada escenario se ejecuta contra el API con datos de muestra. A continuación se presentan los archivos `.feature` del Sprint 1.
+
+**US38: Asignación de beneficios** (`benefit-assignment.feature`)
+
+```gherkin
+Feature: Benefit assignment
+  As HR staff
+  I want to assign benefits to an employee or to a whole area
+  So that I keep a record of who is entitled to each incentive
+
+  Background:
+    Given the benefit type "Vales de consumo" measured in "MONEY" is active
+
+  Scenario: Assign a benefit to an active employee
+    Given the employee 7 is active
+    When HR assigns "Vales de consumo" for 150.00 to the employee 7 from "2026-10-01" to "2026-10-31"
+    Then the response status is 201
+    And the assignment status is "ASSIGNED"
+
+  Scenario: Assign a benefit to a whole area skipping who already has it
+    Given the area 1 has 48 active employees
+    And 2 of them already have "Vales de consumo" between "2026-10-01" and "2026-10-31"
+    When HR assigns "Vales de consumo" for 150.00 to the area 1 from "2026-10-01" to "2026-10-31"
+    Then the response status is 201
+    And the assigned count is 46
+    And the skipped count is 2
+
+  Scenario: Reject an overlapping assignment
+    Given the employee 7 already has "Vales de consumo" between "2026-10-01" and "2026-10-31"
+    When HR assigns "Vales de consumo" for 150.00 to the employee 7 from "2026-10-15" to "2026-11-15"
+    Then the response status is 409
+```
+
+**US39: Registro de entrega de beneficio** (`benefit-delivery.feature`)
+
+```gherkin
+Feature: Benefit delivery
+  As HR staff
+  I want to register the actual delivery of a benefit
+  So that I keep control of what has already been granted
+
+  Scenario: Register the delivery of an assigned benefit
+    Given the assignment 12 is "ASSIGNED"
+    When HR registers its delivery on "2026-10-04" with notes "Entregado en recepción"
+    Then the response status is 201
+    And the assignment status is "DELIVERED"
+
+  Scenario: A delivery cannot be registered twice
+    Given the assignment 12 is "DELIVERED"
+    When HR registers its delivery on "2026-10-05"
+    Then the response status is 422
+```
+
+**US41 y US42: Saldo de vacaciones y ajuste manual** (`vacation-balance.feature`)
+
+```gherkin
+Feature: Vacation balance
+  As HR staff
+  I want each employee's vacation balance to stay up to date and to adjust it with a reason
+  So that manual calculations and disputes over days disappear
+
+  Scenario: Query the balance of an employee
+    Given the employee 7 has 22 accrued days and 8 used days
+    When the employee 7 queries the vacation balance
+    Then the response status is 200
+    And the available days are 14
+
+  Scenario Outline: Manual adjustment
+    Given the employee 7 has 14 available days
+    When HR adjusts the balance with operation "<operation>", <days> days and reason "<reason>"
+    Then the response status is <status>
+
+    Examples:
+      | operation | days | reason                   | status |
+      | ADD       | 1    | Corrección de saldo 2025 | 201    |
+      | DEDUCT    | 15   | Corrección de saldo 2025 | 422    |
+      | ADD       | 1    |                          | 400    |
+```
+
+**US49 y US50: Umbrales e indicadores ambientales** (`office-thresholds.feature`)
+
+```gherkin
+Feature: Environmental thresholds and indicators
+  As HR staff
+  I want to define the ranges of each environmental metric and see the state of a workspace
+  So that I can detect conditions that affect the employees
+
+  Scenario: Define contiguous ranges for CO2
+    Given the office 1 exists
+    When HR defines the "AIR_QUALITY" ranges:
+      | indicator  | minValue | maxValue |
+      | OPTIMAL    | 0        | 600      |
+      | ACCEPTABLE | 600      | 1000     |
+      | POOR       | 1000     | 1500     |
+      | HAZARDOUS  | 1500     | 5000     |
+    Then the response status is 200
+
+  Scenario: Reject overlapping ranges
+    Given the office 1 exists
+    When HR defines the "AIR_QUALITY" ranges:
+      | indicator  | minValue | maxValue |
+      | OPTIMAL    | 0        | 700      |
+      | ACCEPTABLE | 600      | 1000     |
+    Then the response status is 400
+
+  Scenario: A hazardous reading is shown in the office status
+    Given the office 1 has the "AIR_QUALITY" ranges above
+    And the device "SNS-0042" linked to the office 1 sends 1650 for "AIR_QUALITY"
+    When HR queries the status of the office 1
+    Then the "AIR_QUALITY" indicator is "HAZARDOUS"
+```
+
+**Tabla 11:** *Commits relacionados con Testing en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | benefits | PENDIENTE | test(benefits): add unit tests for vacation balance and benefit assignment | — | PENDIENTE |
+| Performily-Mobile/flowboard-mobile-service | develop | PENDIENTE | test: add acceptance feature files for benefits and wellbeing | — | PENDIENTE |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | PENDIENTE | test(wellbeing): add unit tests for validator, use cases and formatters | — | PENDIENTE |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | PENDIENTE | test(benefits): add unit tests for use cases, formatters and mappers | — | PENDIENTE |
+
+*Nota.* Elaboración propia.
+
+#### 4.2.1.6. Execution Evidence for Sprint Review
+
+Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versión ejecutable de la aplicación nativa conectada al RESTful API. La aplicación muestra una barra inferior distinta según el rol: Recursos Humanos accede a Panel, Personal, Solicitudes, Asistencia y Más, y el colaborador a Inicio, Solicitudes, Asistencia, Boletas y Perfil. Las capturas siguientes muestran las vistas principales con datos de muestra registrados en el API.
+
+**Landing Page**
+
+**Figura 97:** *Landing Page, sección principal*
+
+![Landing Page, sección principal](assets/Chapter-4/landing-hero.png)
+
+*Nota.* Propuesta de valor, mockup del dispositivo y selector de idioma. Elaboración propia.
+
+**Figura 98:** *Landing Page, segmentos por rol*
+
+![Landing Page, segmentos por rol](assets/Chapter-4/landing-segmentos.png)
+
+*Nota.* Experiencias de Recursos Humanos y del colaborador con su llamado a la acción. Elaboración propia.
+
+**Figura 99:** *Landing Page, funcionalidades y módulos*
+
+![Landing Page, funcionalidades y módulos](assets/Chapter-4/landing-funcionalidades.png)
+
+*Nota.* Los siete módulos del producto y sus integraciones. Elaboración propia.
+
+**Figura 100:** *Landing Page, términos del servicio y política de privacidad*
+
+![Landing Page, términos y privacidad](assets/Chapter-4/landing-legal.png)
+
+*Nota.* Páginas legales enlazadas desde el footer. Elaboración propia.
+
+**Figura 101:** *Landing Page, vista en navegador móvil*
+
+![Landing Page en móvil](assets/Chapter-4/landing-responsive.png)
+
+*Nota.* Versión de una columna con el menú desplegable. Elaboración propia.
+
+**Aplicación nativa: vista de Recursos Humanos**
+
+**Figura 102:** *Aplicación, lista de colaboradores con búsqueda y filtros*
+
+![Colaboradores](assets/Chapter-4/app-workspace-colaboradores.png)
+
+*Nota.* Workspace, US20. Elaboración propia.
+
+**Figura 103:** *Aplicación, ficha del colaborador*
+
+![Ficha del colaborador](assets/Chapter-4/app-workspace-ficha.png)
+
+*Nota.* Workspace, pestañas de datos, puesto y expediente (US10, US14, US17). Elaboración propia.
+
+**Figura 104:** *Aplicación, organigrama*
+
+![Organigrama](assets/Chapter-4/app-workspace-organigrama.png)
+
+*Nota.* Workspace, US12 y US13. Elaboración propia.
+
+**Figura 105:** *Aplicación, asistencia por área*
+
+![Asistencia por área](assets/Chapter-4/app-attendance-area.png)
+
+*Nota.* Attendance, US24. Elaboración propia.
+
+**Figura 106:** *Aplicación, bandeja de solicitudes y revisión*
+
+![Bandeja de solicitudes](assets/Chapter-4/app-request-bandeja.png)
+
+*Nota.* Request, US32 a US35. Elaboración propia.
+
+**Figura 107:** *Aplicación, catálogo y asignaciones de beneficios*
+
+![Beneficios](assets/Chapter-4/app-benefits-rrhh.png)
+
+*Nota.* Benefits, US37 a US39. Elaboración propia.
+
+**Figura 108:** *Aplicación, carga de boletas y estado de pagos*
+
+![Boletas y pagos](assets/Chapter-4/app-payroll-rrhh.png)
+
+*Nota.* Payroll, US43, US45 y US46. Elaboración propia.
+
+**Figura 109:** *Aplicación, indicadores de un espacio de trabajo*
+
+![Indicadores del espacio](assets/Chapter-4/app-wellbeing-indicadores.png)
+
+*Nota.* Wellbeing, US48 y US50, con el aviso de nivel peligroso. Elaboración propia.
+
+**Figura 110:** *Aplicación, umbrales e histórico por métrica*
+
+![Umbrales e histórico](assets/Chapter-4/app-wellbeing-historico.png)
+
+*Nota.* Wellbeing, US49 y US51. Elaboración propia.
+
+**Aplicación nativa: vista del colaborador**
+
+**Figura 111:** *Aplicación, mi perfil y mi expediente*
+
+![Mi perfil](assets/Chapter-4/app-colaborador-perfil.png)
+
+*Nota.* Workspace, US18 y US19. Elaboración propia.
+
+**Figura 112:** *Aplicación, mi asistencia*
+
+![Mi asistencia](assets/Chapter-4/app-colaborador-asistencia.png)
+
+*Nota.* Attendance, US22. Elaboración propia.
+
+**Figura 113:** *Aplicación, nueva solicitud con validación de saldo*
+
+![Nueva solicitud](assets/Chapter-4/app-colaborador-solicitud.png)
+
+*Nota.* Request, US27, US28 y US30. Elaboración propia.
+
+**Figura 114:** *Aplicación, mis beneficios y saldo de vacaciones*
+
+![Mis beneficios y saldo](assets/Chapter-4/app-colaborador-beneficios.png)
+
+*Nota.* Benefits, US40 y US41, incluido el aviso de datos sincronizados sin conexión. Elaboración propia.
+
+Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
+
+#### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones `@Operation`, `@Parameter`, `@Schema` y `@ApiResponses` de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única `{ "code", "message", "details" }`, por ejemplo `{"code": "OFFICE_CONFLICT", "message": "..."}` con estado 409.
+
+- Swagger UI local: http://localhost:8080/swagger-ui/index.html
+- Swagger UI desplegado: PENDIENTE (URL pública del servicio en Render)/swagger-ui/index.html
+- Especificación OpenAPI: `/v3/api-docs`
+- Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
+
+**Tabla 12:** *Endpoints documentados con OpenAPI en el Sprint 1*
+
+| Bounded Context | Verbo HTTP | Endpoint | Acción | Parámetros | Respuesta |
+| :---- | :----: | :---- | :---- | :---- | :----: |
+| Attendance | POST | `/attendance/punches` | Registra una marcación de entrada o salida | Body: employeeId, punchedAt, type | 201 |
+| Attendance | GET | `/attendance/employees/{employeeId}` | Historial de asistencia de un colaborador | Path: employeeId<br>Query: from, to | 200 |
+| Attendance | GET | `/attendance/me` | Historial de asistencia del colaborador autenticado | Query: employeeId, from, to | 200 |
+| Attendance | GET | `/attendance/areas/{areaId}` | Asistencia de un área en un día | Path: areaId<br>Query: workDate | 200 |
+| Attendance | POST | `/attendance/{attendanceRecordId}/justification` | Registra la justificación de una incidencia | Path: attendanceRecordId<br>Body: reason, evidenceUrl | 200 |
+| Attendance | POST | `/attendance/{employeeId}/build/{workDate}` | Consolida el registro diario a partir de las marcaciones | Path: employeeId, workDate | 201 |
+| Attendance | GET | `/attendance/reports/employees/{employeeId}/hours` | Horas trabajadas de un colaborador | Path: employeeId<br>Query: from, to | 200 |
+| Attendance | GET | `/attendance/reports/areas/{areaId}` | Reporte de asistencia por área | Path: areaId<br>Query: from, to | 200 |
+| Attendance | POST | `/work-schedules` | Crea un horario laboral | Body: positionId, startTime, endTime, toleranceMinutes, days | 201 |
+| Attendance | GET | `/work-schedules` | Lista los horarios laborales | — | 200 |
+| Attendance | GET | `/work-schedules/{id}` | Obtiene un horario laboral | Path: id | 200 |
+| Attendance | PUT | `/work-schedules/positions/{positionId}/work-schedule/{workScheduleId}` | Asigna un horario a una posición | Path: positionId, workScheduleId | 200 |
+| Benefits | POST | `/benefit-types` | Crea un tipo de beneficio | Body: name, description, hasBalance, unit | 201 |
+| Benefits | GET | `/benefit-types` | Lista el catálogo de beneficios | Query: activeOnly | 200 |
+| Benefits | GET | `/benefit-types/{benefitTypeId}` | Obtiene un tipo de beneficio | Path: benefitTypeId | 200 |
+| Benefits | PATCH | `/benefit-types/{benefitTypeId}/activate` | Activa un tipo de beneficio | Path: benefitTypeId | 200 |
+| Benefits | PATCH | `/benefit-types/{benefitTypeId}/deactivate` | Desactiva un tipo de beneficio | Path: benefitTypeId | 200 |
+| Benefits | POST | `/benefits` | Asigna un beneficio a un colaborador o a un área | Body: benefitTypeId, employeeId, areaId, quantity, startDate, endDate | 201 |
+| Benefits | GET | `/benefits` | Lista las asignaciones de beneficios | Query: status, benefitTypeId | 200 |
+| Benefits | GET | `/benefits/area-preview` | Previsualiza la asignación masiva a un área | Query: benefitTypeId, areaId, startDate, endDate | 200 |
+| Benefits | GET | `/benefits/me` | Beneficios del colaborador autenticado | Query: employeeId | 200 |
+| Benefits | POST | `/benefits/{assignmentId}/deliveries` | Registra la entrega de un beneficio | Path: assignmentId<br>Body: deliveredOn, registeredById, notes | 201 |
+| Benefits | PATCH | `/benefits/{assignmentId}/cancel` | Cancela una asignación | Path: assignmentId | 200 |
+| Benefits | GET | `/vacation-balances` | Lista los saldos de vacaciones | Query: areaId | 200 |
+| Benefits | GET | `/vacation-balances/me` | Saldo de vacaciones del colaborador autenticado | Query: employeeId | 200 |
+| Benefits | GET | `/vacation-balances/me/movements` | Movimientos del saldo propio | Query: employeeId, fromDate, toDate | 200 |
+| Benefits | GET | `/vacation-balances/{employeeId}` | Saldo de vacaciones de un colaborador | Path: employeeId | 200 |
+| Benefits | GET | `/vacation-balances/{employeeId}/movements` | Movimientos del saldo de un colaborador | Path: employeeId<br>Query: fromDate, toDate | 200 |
+| Benefits | POST | `/vacation-balances/{employeeId}/adjustments` | Ajusta manualmente el saldo de vacaciones | Path: employeeId<br>Body: operation, days, reason, authorId | 201 |
+| Payroll | POST | `/payroll-periods` | Crea un periodo de pago | Body: year, month, scheduledPaymentDate | 201 |
+| Payroll | GET | `/payroll-periods` | Lista los periodos de pago | — | 200 |
+| Payroll | GET | `/payroll-periods/{payrollPeriodId}` | Obtiene un periodo de pago | Path: payrollPeriodId | 200 |
+| Payroll | PATCH | `/payroll-periods/{payrollPeriodId}/publish-payslips` | Publica las boletas de un periodo | Path: payrollPeriodId | 200 |
+| Payroll | GET | `/payslips/me` | Boletas del colaborador autenticado | Query: year | 200 |
+| Payroll | GET | `/payslips/me/{payslipId}` | Detalle de una boleta propia | Path: payslipId | 200 |
+| Payroll | GET | `/payslips/me/{payslipId}/download-url` | URL de descarga de una boleta propia | Path: payslipId | 200 |
+| Payroll | GET | `/payslips` | Lista las boletas de un periodo | Query: payrollPeriodId | 200 |
+| Payroll | GET | `/payslips/{payslipId}` | Obtiene una boleta | Path: payslipId | 200 |
+| Payroll | POST | `/payslips` | Registra una boleta | Body: employeeId, payrollPeriodId, fileName, contentType, sizeInBytes, storageUrl, issueDate, netAmount, currency | 201 |
+| Payroll | PUT | `/payslips/{payslipId}/file` | Adjunta el archivo de una boleta | Path: payslipId<br>Body: fileName, contentType, sizeInBytes, storageUrl, issueDate, netAmount, currency | 200 |
+| Payroll | PATCH | `/payslips/{payslipId}/publish` | Publica una boleta | Path: payslipId | 200 |
+| Payroll | PATCH | `/payslips/{payslipId}/mark-as-paid` | Marca una boleta como pagada | Path: payslipId<br>Body: paidOn | 200 |
+| Payroll | PATCH | `/payslips/{payslipId}/mark-as-observed` | Marca una boleta como observada | Path: payslipId<br>Body: reason | 200 |
+| Request | POST | `/request-types` | Crea un tipo de solicitud | Body: name, description, requiresAttachment, balanceDeduction, fields | 201 |
+| Request | GET | `/request-types` | Lista los tipos de solicitud | Query: activeOnly | 200 |
+| Request | GET | `/request-types/{requestTypeId}` | Obtiene un tipo de solicitud | Path: requestTypeId | 200 |
+| Request | PUT | `/request-types/{requestTypeId}` | Actualiza un tipo de solicitud | Path: requestTypeId<br>Body: name, description, requiresAttachment, balanceDeduction | 200 |
+| Request | DELETE | `/request-types/{requestTypeId}` | Elimina un tipo de solicitud | Path: requestTypeId | 200 |
+| Request | POST | `/request-types/{requestTypeId}/fields` | Agrega un campo al formulario del tipo | Path: requestTypeId<br>Body: key, label, dataType, required, displayOrder | 201 |
+| Request | DELETE | `/request-types/{requestTypeId}/fields/{fieldId}` | Quita un campo del formulario | Path: requestTypeId, fieldId | 200 |
+| Request | PATCH | `/request-types/{requestTypeId}/activate` | Activa un tipo de solicitud | Path: requestTypeId | 200 |
+| Request | PATCH | `/request-types/{requestTypeId}/deactivate` | Desactiva un tipo de solicitud | Path: requestTypeId | 200 |
+| Request | POST | `/requests` | Envía una solicitud | Body: requesterId, requestTypeId, startDate, endDate, startTime, endTime, fieldValues, attachments | 201 |
+| Request | GET | `/requests/me` | Solicitudes del colaborador | Query: requesterId, status | 200 |
+| Request | GET | `/requests/pending-approval` | Solicitudes pendientes del aprobador | Query: approverId, requestTypeId | 200 |
+| Request | GET | `/requests/pending-approval/hr-staff` | Solicitudes pendientes para Recursos Humanos | Query: requestTypeId | 200 |
+| Request | GET | `/requests/{requestId}` | Detalle de una solicitud | Path: requestId | 200 |
+| Request | POST | `/requests/{requestId}/approve` | Aprueba una solicitud | Path: requestId<br>Body: actorId, comment | 200 |
+| Request | POST | `/requests/{requestId}/reject` | Rechaza una solicitud con motivo | Path: requestId<br>Body: actorId, comment | 200 |
+| Request | POST | `/requests/{requestId}/return-for-review` | Devuelve una solicitud para corrección | Path: requestId<br>Body: actorId, comment | 200 |
+| Request | POST | `/requests/{requestId}/resubmit` | Reenvía una solicitud corregida | Path: requestId<br>Body: actorId, fieldValues, attachments, comment | 200 |
+| Request | POST | `/requests/{requestId}/cancel` | Cancela una solicitud | Path: requestId<br>Body: actorId, comment | 200 |
+| Wellbeing | GET | `/devices` | Lista los dispositivos IoT | Query: status | 200 |
+| Wellbeing | POST | `/devices` | Registra un dispositivo IoT | Body: code, supportedMetrics | 201 |
+| Wellbeing | POST | `/offices` | Registra un espacio de trabajo | Body: name, area, address, floor, reference | 201 |
+| Wellbeing | GET | `/offices` | Lista los espacios de trabajo | — | 200 |
+| Wellbeing | GET | `/offices/{officeId}/status` | Estado ambiental actual del espacio | Path: officeId | 200 |
+| Wellbeing | POST | `/offices/{officeId}/devices` | Vincula un dispositivo al espacio | Path: officeId<br>Body: deviceCode | 200 |
+| Wellbeing | DELETE | `/offices/{officeId}/devices/{deviceCode}` | Desvincula un dispositivo | Path: officeId, deviceCode | 200 |
+| Wellbeing | GET | `/offices/{officeId}/thresholds` | Umbrales configurados del espacio | Path: officeId | 200 |
+| Wellbeing | PUT | `/offices/{officeId}/thresholds/{metricType}` | Configura los umbrales de una métrica | Path: officeId, metricType<br>Body: ranges | 200 |
+| Wellbeing | GET | `/offices/{officeId}/readings` | Histórico de lecturas de una métrica | Path: officeId<br>Query: metricType, from, to | 200 |
+| Wellbeing | POST | `/readings` | Recibe una lectura enviada por un dispositivo | Body: deviceCode, metricType, value, recordedAt | 201 |
+| Workspace | POST | `/areas` | Crea un área | Body: name, description | 201 |
+| Workspace | GET | `/areas` | Lista las áreas | — | 200 |
+| Workspace | GET | `/areas/{areaId}` | Obtiene un área | Path: areaId | 200 |
+| Workspace | PUT | `/areas/{areaId}` | Actualiza un área | Path: areaId<br>Body: name | 200 |
+| Workspace | PATCH | `/areas/{areaId}/activate` | Activa un área | Path: areaId | 200 |
+| Workspace | PATCH | `/areas/{areaId}/deactivate` | Desactiva un área | Path: areaId | 200 |
+| Workspace | POST | `/positions` | Crea una posición | Body: title, areaId, referenceSalaryAmount, referenceSalaryCurrency | 201 |
+| Workspace | GET | `/positions` | Lista las posiciones | Query: areaId | 200 |
+| Workspace | GET | `/positions/{positionId}` | Obtiene una posición | Path: positionId | 200 |
+| Workspace | PATCH | `/positions/{positionId}/reference-salary` | Actualiza el sueldo referencial | Path: positionId<br>Body: referenceSalaryAmount, referenceSalaryCurrency | 200 |
+| Workspace | PATCH | `/positions/{positionId}/deactivate` | Desactiva una posición | Path: positionId | 200 |
+| Workspace | POST | `/employees` | Registra un colaborador | Body: firstName, lastName, identityDocumentType, identityDocumentNumber, birthDate, email, phoneNumber, street, district, province, department, contractType, hireDate, contractEndDate, areaId, positionId, directManagerId | 201 |
+| Workspace | GET | `/employees` | Lista y busca colaboradores | Query: search, areaId, status, positionId | 200 |
+| Workspace | GET | `/employees/organization-chart` | Organigrama de la organización | Query: areaId | 200 |
+| Workspace | GET | `/employees/{employeeId}` | Ficha de un colaborador | Path: employeeId | 200 |
+| Workspace | PUT | `/employees/{employeeId}` | Actualiza los datos de un colaborador | Path: employeeId<br>Body: firstName, lastName, birthDate, email, phoneNumber, street, district, province, department | 200 |
+| Workspace | PUT | `/employees/{employeeId}/direct-manager` | Asigna el jefe directo | Path: employeeId<br>Body: managerId | 200 |
+| Workspace | DELETE | `/employees/{employeeId}/direct-manager` | Quita el jefe directo | Path: employeeId | 200 |
+| Workspace | GET | `/employees/{employeeId}/subordinates` | Subordinados directos | Path: employeeId | 200 |
+| Workspace | PATCH | `/employees/{employeeId}/suspend` | Suspende a un colaborador | Path: employeeId | 200 |
+| Workspace | PATCH | `/employees/{employeeId}/terminate` | Da de baja a un colaborador | Path: employeeId<br>Body: reason, terminationDate | 200 |
+| Workspace | PATCH | `/employees/{employeeId}/reinstate` | Reincorpora a un colaborador | Path: employeeId<br>Body: areaId, positionId, reinstatementDate | 200 |
+| Workspace | GET | `/employees/{employeeId}/job-assignments` | Historial de asignaciones de puesto | Path: employeeId | 200 |
+| Workspace | POST | `/employees/{employeeId}/job-assignments` | Reasigna área y posición | Path: employeeId<br>Body: areaId, positionId, effectiveDate | 201 |
+| Workspace | GET | `/employees/{employeeId}/documents` | Expediente del colaborador | Path: employeeId | 200 |
+| Workspace | POST | `/employees/{employeeId}/documents` | Agrega un documento al expediente | Path: employeeId<br>Body: documentType, fileName, contentType, sizeInBytes, storageUrl | 201 |
+| Shared | GET | `/` | Redirige a Swagger UI | — | 302 |
+| Shared | GET | `/health` | Verificación de estado del servicio | — | 200 |
+
+*Nota.* Elaboración propia. Todas las rutas parten de `/api/v1` salvo `/` y `/health`.
+
+**Ejemplo de interacción: registrar un espacio de trabajo (US47)**
+
+Llamada:
+
+```http
+POST /api/v1/offices
+Content-Type: application/json
+
+{
+  "name": "Oficina Lima Centro",
+  "area": "Oficina",
+  "address": "Av. Arequipa 123",
+  "floor": "3",
+  "reference": null
+}
+```
+
+Respuesta `201 Created`:
+
+```json
+{
+  "id": 1,
+  "name": "Oficina Lima Centro",
+  "area": "Oficina",
+  "address": "Av. Arequipa 123",
+  "floor": "3",
+  "reference": null,
+  "active": true
+}
+```
+
+Si ya existe un espacio con el mismo nombre, el API responde `409 Conflict` con el código `OFFICE_CONFLICT`.
+
+**Ejemplo de interacción: saldo de vacaciones del colaborador (US41)**
+
+Llamada: `GET /api/v1/vacation-balances/me?employeeId=7`
+
+Respuesta `200 OK`:
+
+```json
+{
+  "employeeId": 7,
+  "employeeName": "Rosa Espinoza Gil",
+  "areaName": "Operaciones",
+  "accruedDays": 22.00,
+  "usedDays": 8.00,
+  "availableDays": 14.00,
+  "lastAccrualDate": "2026-10-01",
+  "movements": [
+    {
+      "id": 8,
+      "type": "USAGE",
+      "days": -3.00,
+      "reason": null,
+      "authorId": null,
+      "authorName": null,
+      "requestId": 142,
+      "occurredAt": "2026-08-12T09:30:00"
+    }
+  ]
+}
+```
+
+**Figura 115:** *Swagger UI del RESTful API de Flowboard*
+
+![Swagger UI](assets/Chapter-4/swagger-general.png)
+
+*Nota.* Grupos de endpoints por bounded context. Elaboración propia.
+
+**Figura 116:** *Interacción con POST /api/v1/offices en Swagger UI*
+
+![POST offices en Swagger](assets/Chapter-4/swagger-post-offices.png)
+
+*Nota.* Request con datos de muestra y respuesta 201. Elaboración propia.
+
+**Figura 117:** *Interacción con GET /api/v1/vacation-balances/me en Swagger UI*
+
+![GET vacation balance en Swagger](assets/Chapter-4/swagger-get-vacation-balance.png)
+
+*Nota.* Saldo y movimientos de un colaborador con datos de muestra. Elaboración propia.
+
+**Tabla 13:** *Commits relacionados con la documentación de los servicios en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | workspace | 29fbd16 | build: add springdoc openapi and pluralize dependencies | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 0c1a236 | feat: add rest resources and assemblers | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | workspace | 736eb5a | feat: expose rest controllers | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 43a45a5 | feat(request): add rest resources and assemblers | — | 02/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | wellbeing | b348764 | feat(wellbeing): add rest controllers, resources and assemblers | — | 03/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | benefits | c659c29 | feat(benefits): add rest controllers, resources and assemblers | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | payroll | d672d84 | feat(payroll): expose payslip and payroll period endpoints for employees and HR | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | main | 4a6ec68 | feat: add root redirect to swagger and health endpoint | — | 07/10/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+En el Sprint 1 el despliegue abarcó el Landing Page, el RESTful API y la base de datos. El Landing Page se publicó en GitHub Pages desde la rama `main` del repositorio `flowboard-mobile-landing-page`. Para el API se creó la instancia de MySQL en Aiven, que es la base de datos compartida por todo el equipo durante el desarrollo, se agregó al repositorio un Dockerfile de dos etapas con Eclipse Temurin 25 y se configuró el perfil `prod` con la validación del esquema y el puerto asignado por la plataforma; luego se creó el Web Service en Render a partir de la rama `main`. Durante la configuración de Aiven el equipo encontró que la plataforma exige llave primaria en todas las tablas (`sql_require_primary_key`), por lo que la tabla de rangos de umbrales, que Hibernate no podía crear, se creó con una llave primaria compuesta. La distribución de la aplicación por Firebase App Distribution queda para el Sprint 2, después de apuntar la aplicación a la URL pública del API.
+
+**Figura 118:** *Configuración de GitHub Pages del Landing Page*
+
+![GitHub Pages](assets/Chapter-4/deploy-github-pages.png)
+
+*Nota.* Publicación desde la rama `main` y URL del sitio. Elaboración propia.
+
+**Figura 119:** *Servicio MySQL en Aiven*
+
+![Aiven](assets/Chapter-4/deploy-aiven.png)
+
+*Nota.* Instancia gestionada y base de datos `flowboard`. Elaboración propia.
+
+**Figura 120:** *Web Service del API en Render*
+
+![Render](assets/Chapter-4/deploy-render.png)
+
+*Nota.* Runtime Docker, rama `main` y variables de entorno del perfil `prod`. Elaboración propia.
+
+**Figura 121:** *API desplegado respondiendo en Swagger UI*
+
+![API desplegado](assets/Chapter-4/deploy-api-swagger.png)
+
+*Nota.* La raíz del servicio redirige a la documentación. Elaboración propia.
+
+Landing Page desplegado: https://performily-mobile.github.io/flowboard-mobile-landing-page/
+
+RESTful API desplegado: PENDIENTE (URL pública del servicio en Render)
+
+**Tabla 14:** *Commits relacionados con el despliegue en el Sprint 1*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | attendance | 5351d1c | chore: configure profiles, i18n messages and jpa auditing | — | 30/09/2026 |
+| Performily-Mobile/flowboard-mobile-service | main | 76e972f | feat(): add deployment configuration | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | main | 4a6ec68 | feat: add root redirect to swagger and health endpoint | — | 07/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 110812e | fix(benefits): never stop startup when vacation balance seeding fails | — | 07/10/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.1.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1 el trabajo se organizó por bounded context: cada integrante lideró uno o dos contextos de punta a punta, desde el modelo de dominio del API hasta las pantallas de la aplicación, en su propia rama. Esta forma de trabajo permitió avanzar en paralelo sin bloquearse, porque los contratos entre contextos ya estaban definidos en el Context Mapping del Capítulo II y cada uno consumía los demás a través de una capa anticorrupción.
+
+- **Distribución del trabajo:** Vasquez Llave, Oscar Lizandro construyó el Landing Page, la base del API y de la aplicación (sistema de diseño, red, navegación por rol) y el bounded context Workspace, del que dependen los demás. Ávila De La Cruz, Darío Fabián implementó Attendance; Diaz Villalba, Diego Alonso implementó Request y la configuración de despliegue; Esquicha Alcántara, Diego Alonso implementó Payroll; y Galvez Meza, Salym Pool implementó Benefits y Wellbeing.
+- **Integración:** los bounded contexts se integraron en `develop` mediante merges desde sus ramas. Al final del Sprint se abrió una rama `fixes` para corregir en conjunto las validaciones y los mensajes de error detectados al probar los flujos completos.
+- **Lecciones:** la base de datos compartida en Aiven obligó a coordinar los cambios de esquema entre integrantes, y la exigencia de llave primaria de Aiven se descubrió tarde. Para el Sprint 2 el equipo acordó crear el esquema con un script versionado, usar el prefijo `feature/` en las ramas y abrir pull requests en lugar de merges directos para que la revisión quede registrada.
+
+En total, el Sprint 1 registró 11 commits en el Landing Page, 64 en el API y 96 en la aplicación nativa, sin contar los merges.
+
+**Tabla 15:** *Commits por integrante en el Sprint 1*
+
+| Integrante | GitHub Username | Landing Page | RESTful API | Aplicación nativa | Total |
+| :---- | :---- | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | 0 | 16 | 26 | 42 |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | 0 | 13 | 16 | 29 |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | 0 | 3 | 10 | 13 |
+| Galvez Meza, Salym Pool | SalymGalvez21 | 0 | 13 | 8 | 21 |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro | 11 | 19 | 36 | 66 |
+| **Total** | | **11** | **64** | **96** | **171** |
+
+*Nota.* Elaboración propia a partir del historial de GitHub, sin contar merges.
+
+**Figura 122:** *Analíticos de colaboración del repositorio del Landing Page*
+
+![Insights del Landing Page](assets/Chapter-4/insights-landing.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 123:** *Analíticos de colaboración del repositorio del RESTful API*
+
+![Insights del API](assets/Chapter-4/insights-service.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 124:** *Analíticos de colaboración del repositorio de la aplicación nativa*
+
+![Insights de la aplicación](assets/Chapter-4/insights-app.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+Los analíticos muestran que la mayor actividad se concentró entre el 30 de septiembre y el 7 de octubre, cuando se trabajó en paralelo sobre los seis bounded contexts. El Landing Page tiene un único autor porque se asignó completo a un integrante para liberar al resto hacia el API y la aplicación. La diferencia en número de commits entre integrantes responde también al tamaño de los commits: algunos integrantes agruparon una capa completa por commit, mientras que otros hicieron un commit por clase.
+
+## 4.3. Validation Interviews
+
+En esta sección se registran las entrevistas de validación, en las que usuarios de los dos segmentos objetivo interactúan con el Landing Page y con la aplicación nativa, y la evaluación de la experiencia según heurísticas.
+
+### 4.3.1. Diseño de Entrevistas
+
+Las sesiones de validación se realizan con la aplicación instalada en el celular del participante o en un dispositivo del equipo, con datos de muestra cargados en el API, y con el Landing Page abierto en el navegador del celular. Cada sesión dura entre 15 y 20 minutos y se graba en video con el consentimiento del participante. Un integrante conduce la sesión y otro toma notas.
+
+**Estructura de la sesión**
+
+1. *Introducción (2 min):* presentación del equipo, propósito de la sesión y consentimiento de grabación. Se aclara que se evalúa el producto y no al participante.
+2. *Datos del participante (1 min):* nombre, edad, distrito, cargo y tiempo en la organización.
+3. *Landing Page (3 min):* tareas sobre el sitio.
+4. *Aplicación (8 a 12 min):* tareas sobre los user flows del segmento, pidiendo al participante que piense en voz alta.
+5. *Preguntas de cierre (3 min):* percepción general.
+
+**Segmento 1: Personal de Recursos Humanos**
+
+*Landing Page*
+
+1. ¿Qué entiende que hace Flowboard después de leer la primera sección?
+2. Encuentre la información pensada para Recursos Humanos y el llamado a la acción correspondiente.
+3. Cambie el idioma del sitio y vuelva al español.
+
+*Aplicación (user flows del Capítulo III)*
+
+| Tarea | User flow / User Story | Criterio de éxito |
+| :---- | :---- | :---- |
+| Registrar a un nuevo colaborador con su área, posición y jefe directo | UF-05 / US08, US10, US11 | El colaborador aparece en la lista sin ayuda del moderador |
+| Revisar la asistencia de un área en un rango de fechas | UF-06 / US24 | Identifica a quién tiene más tardanzas |
+| Revisar y aprobar o rechazar una solicitud pendiente | UF-04 / US32-US34 | Resuelve la solicitud y, si rechaza, escribe el motivo |
+| Asignar un beneficio a toda un área | US38 | Entiende cuántos colaboradores lo recibirán y cuántos se omiten |
+| Revisar el estado ambiental de un espacio y su histórico | US50, US51 | Identifica la métrica en nivel peligroso y si es un problema persistente |
+
+**Segmento 2: Colaboradores**
+
+*Landing Page*
+
+1. ¿Qué podría hacer usted como colaborador con esta aplicación?
+2. Encuentre la sección que explica cómo se protege su información.
+3. Ubique los términos del servicio y la política de privacidad.
+
+*Aplicación (user flows del Capítulo III)*
+
+| Tarea | User flow / User Story | Criterio de éxito |
+| :---- | :---- | :---- |
+| Consultar su saldo de vacaciones y sus beneficios, incluso sin conexión | UF-01 / US40, US41 | Indica cuántos días tiene disponibles y entiende el aviso de datos sincronizados |
+| Solicitar vacaciones y revisar el estado de la solicitud | UF-02 / US27, US28, US30 | Envía la solicitud y encuentra su estado |
+| Consultar su historial de asistencia | US22 | Encuentra un día con tardanza |
+| Revisar su perfil laboral y su expediente | US18, US19 | Encuentra su jefe directo y un documento |
+
+**Preguntas de cierre (ambos segmentos)**
+
+1. ¿Qué fue lo más fácil y lo más difícil de lo que hizo hoy?
+2. ¿Hubo algún momento en el que no supo qué hacer?
+3. ¿Usaría esta aplicación en su trabajo? ¿Por qué?
+4. Del 1 al 5, ¿qué tan fácil le resultó usarla?
+5. ¿Qué cambiaría o agregaría?
+
+### 4.3.2. Registro de Entrevistas
+
+Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre las tareas.
+
+**Segmento 1: Personal de Recursos Humanos**
+
+**Entrevista 1:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 1 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 125:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
+
+![Entrevista de validación 1 - de Recursos Humanos](assets/Chapter-4/validacion-s1-01.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+**Entrevista 2:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 2 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 126:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
+
+![Entrevista de validación 2 - de Recursos Humanos](assets/Chapter-4/validacion-s1-02.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+**Entrevista 3:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 3 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 127:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 3*
+
+![Entrevista de validación 3 - de Recursos Humanos](assets/Chapter-4/validacion-s1-03.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+
+**Segmento 2: Colaboradores**
+
+**Entrevista 1:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 1 - de colaboradores](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 128:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
+
+![Entrevista de validación 1 - de colaboradores](assets/Chapter-4/validacion-s2-01.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+**Entrevista 2:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 2 - de colaboradores](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 129:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
+
+![Entrevista de validación 2 - de colaboradores](assets/Chapter-4/validacion-s2-02.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+**Entrevista 3:**
+
+Nombre: PENDIENTE (nombres y apellidos)
+
+Edad: PENDIENTE
+
+Distrito: PENDIENTE
+
+Link de la entrevista: [Validación 3 - de colaboradores](PENDIENTE: URL del video en OneDrive)
+
+Timing donde inicia la entrevista: PENDIENTE
+
+Duración completa de la entrevista: PENDIENTE
+
+**Figura 130:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 3*
+
+![Entrevista de validación 3 - de colaboradores](assets/Chapter-4/validacion-s2-03.png)
+
+*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
+
+**Resumen de la entrevista:**
+
+PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+
+
+### 4.3.3. Evaluaciones según heurísticas
+
+**UX Heuristics & Principles Evaluation**
+**Usability - Inclusive Design - Information Architecture**
+
+| | |
+| :---- | :---- |
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | 1ACC0238 Aplicaciones para Dispositivos Móviles |
+| **NRC** | 4951 |
+| **PROFESORES** | Mayta Guillermo, Jorge Luis |
+| **AUDITOR** | Performily |
+| **CLIENTE(S)** | PENDIENTE: nombres de los participantes de las sesiones de validación |
+
+**SITE o APP A EVALUAR:** Flowboard (Landing Page y aplicación nativa para Android, versión del Sprint 1)
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Comprender la propuesta de valor y llegar al llamado a la acción en el Landing Page.
+2. Registrar a un nuevo colaborador.
+3. Revisar la asistencia de un área.
+4. Revisar y resolver una solicitud.
+5. Asignar un beneficio a un área y registrar su entrega.
+6. Revisar los indicadores y el histórico de un espacio de trabajo.
+7. Consultar el saldo de vacaciones y los beneficios propios.
+8. Solicitar vacaciones y seguir su estado.
+9. Consultar la asistencia y el perfil propios.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Iniciar sesión, cerrar sesión y cambiar la contraseña temporal (IAM, Sprint 2).
+2. Consultar y descargar boletas como colaborador con verificación biométrica (UF-03, Sprint 2).
+3. Recibir la notificación de cambio de estado de una solicitud (US36, Sprint 2).
+4. Usar la aplicación cross-platform en Flutter (Sprint 2).
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+| :----: | :---- |
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+| :----: | :---- | :----: | :---- |
+| 1 | La pestaña Boletas del colaborador no tiene una pantalla asociada y cierra la aplicación | 4 | Usability: Prevención de errores |
+| 2 | Inicio (colaborador) y Panel (Recursos Humanos) muestran una pantalla “pendiente” como primera vista | 3 | Usability: Visibilidad del estado del sistema |
+| 3 | No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario | 3 | Usability: Libertad y control del usuario |
+| 4 | Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos | 2 | Information Architecture: Is it findable? |
+| 5 | El error de conexión dice “No se pudo conectar con el servidor” sin indicar qué hacer, salvo en el saldo de vacaciones, que sí muestra datos guardados | 2 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores |
+| 6 | Las confirmaciones de acciones (asignar, registrar entrega, ajustar saldo) solo se muestran en un snackbar que desaparece | 1 | Usability: Visibilidad del estado del sistema |
+| 7 | En el gráfico del histórico ambiental los niveles se distinguen por color; las barras no tienen etiqueta propia | 1 | Inclusive Design: Proporciona experiencias comparables |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1:** La pestaña Boletas del colaborador no tiene una pantalla asociada y cierra la aplicación
+
+**Severidad:** 4
+**Heurística violada:** Usability - Prevención de errores
+
+**Problema:** En la barra inferior del colaborador, la pestaña Boletas navega a la ruta `PayslipsRoute`, pero en la versión del Sprint 1 esa ruta no tiene una pantalla registrada en el `AppNavHost`, porque la pantalla temporal se retiró al integrar Payroll y la vista del colaborador (MA-64 y MA-65) aún no está lista. Al tocar la pestaña, la aplicación se cierra y el colaborador pierde lo que estaba haciendo.
+
+**Figura 131:** *Pestaña Boletas en la vista del colaborador*
+
+![Problema 1](assets/Chapter-4/heuristica-p1.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Mientras la vista de boletas del colaborador no esté terminada, registrar de nuevo la pantalla temporal para `PayslipsRoute` en `AppNavHost`, de modo que la pestaña muestre un mensaje en lugar de cerrar la aplicación. En el Sprint 2, reemplazarla por las pantallas MA-64 y MA-65.
+
+**PROBLEMA #2:** Inicio (colaborador) y Panel (Recursos Humanos) muestran una pantalla “pendiente” como primera vista
+
+**Severidad:** 3
+**Heurística violada:** Usability - Visibilidad del estado del sistema
+
+**Problema:** La primera pestaña de la barra inferior de cada rol (Inicio para el colaborador, Panel para Recursos Humanos) todavía muestra la pantalla temporal. Es lo primero que ve el usuario al abrir la aplicación, por lo que da la impresión de un producto incompleto y no lo orienta hacia sus tareas frecuentes, como el saldo de vacaciones o las solicitudes pendientes.
+
+**Figura 132:** *Pantalla temporal en Inicio*
+
+![Problema 2](assets/Chapter-4/heuristica-p2.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Implementar en el Sprint 2 el Inicio del colaborador (MA-14), con el saldo de vacaciones, la asistencia de la semana y las solicitudes recientes, y el Panel de Recursos Humanos (MA-18) con los pendientes del día. Mientras tanto, usar como destino inicial una pantalla ya funcional.
+
+**PROBLEMA #3:** No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario
+
+**Severidad:** 3
+**Heurística violada:** Usability - Libertad y control del usuario
+
+**Problema:** La aplicación toma el colaborador y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. Un mismo dispositivo no permite pasar de la vista de Recursos Humanos a la del colaborador sin modificar el código, y ninguna información está protegida por credenciales.
+
+**Figura 133:** *Aplicación abierta directamente en la vista de un rol*
+
+![Problema 3](assets/Chapter-4/heuristica-p3.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Priorizar en el Sprint 2 las User Stories US02 a US04 y TS02 (inicio de sesión, cambio de contraseña temporal, cierre de sesión y autorización por token), para que el rol se obtenga de la sesión.
+
+**PROBLEMA #4:** Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos
+
+**Severidad:** 2
+**Heurística violada:** Information Architecture - Is it findable?
+
+**Problema:** Para asignar un beneficio o revisar un espacio de trabajo, el usuario de Recursos Humanos debe abrir “Más” y luego la opción correspondiente. Es una tarea recurrente que queda a dos niveles de profundidad y que el usuario no descubre si no explora el menú.
+
+**Figura 134:** *Menú Más de Recursos Humanos*
+
+![Problema 4](assets/Chapter-4/heuristica-p4.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Incluir en el Panel de Recursos Humanos accesos directos a los pendientes de Beneficios (por entregar) y de Bienestar (espacios en nivel peligroso).
+
+**PROBLEMA #5:** El error de conexión no indica qué hacer
+
+**Severidad:** 2
+**Heurística violada:** Usability - Ayudar a reconocer, diagnosticar y recuperarse de errores
+
+**Problema:** Cuando el API no responde, la mayoría de pantallas muestra “No se pudo conectar con el servidor” con un botón Reintentar, sin explicar si el problema es la conexión del celular o el servicio. Solo el saldo de vacaciones conserva los últimos datos sincronizados; el resto de pantallas queda vacío.
+
+**Figura 135:** *Mensaje de error de conexión*
+
+![Problema 5](assets/Chapter-4/heuristica-p5.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Distinguir la falta de conexión del dispositivo de un error del servicio, sugerir revisar la conexión en el primer caso y extender la caché local de Room a las consultas más frecuentes del colaborador (asistencia, solicitudes y beneficios).
+
+**PROBLEMA #6:** Las confirmaciones solo se muestran en un snackbar que desaparece
+
+**Severidad:** 1
+**Heurística violada:** Usability - Visibilidad del estado del sistema
+
+**Problema:** Al asignar un beneficio, registrar una entrega o ajustar un saldo, la confirmación aparece unos segundos en un snackbar. Si el usuario no lo lee, solo puede comprobar el resultado volviendo a buscar el registro.
+
+**Figura 136:** *Confirmación en snackbar*
+
+![Problema 6](assets/Chapter-4/heuristica-p6.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Además del snackbar, resaltar por unos segundos el registro creado o actualizado en la lista, o mantener el resumen de la acción en la parte superior de la pantalla.
+
+**PROBLEMA #7:** Los niveles del histórico ambiental se distinguen por color
+
+**Severidad:** 1
+**Heurística violada:** Inclusive Design - Proporciona experiencias comparables
+
+**Problema:** En el gráfico del histórico, los días con nivel deficiente o peligroso se pintan de otro color. La leyenda indica el significado, pero una persona con dificultad para distinguir colores no puede saber qué barra corresponde a cada nivel.
+
+**Figura 137:** *Gráfico del histórico ambiental*
+
+![Problema 7](assets/Chapter-4/heuristica-p7.png)
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Agregar una marca adicional a las barras fuera de rango (por ejemplo un patrón o un ícono de advertencia sobre la barra) y una descripción accesible del gráfico para lectores de pantalla.
+
+<div style="page-break-after: always;"></div>
+
 # Bibliografía
 Escudero, F. (2025, enero 7). Madurez digital: ¿cuál es el panorama de las empresas en el Perú? Www.ey.com. https://www.ey.com/es_pe/insights/revista-execution/disrupcion/madurez-digital 
 
