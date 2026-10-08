@@ -89,6 +89,8 @@
 | v1.11 | 16/09/2026 | Esquicha Alcántara, Diego Alonso | Strategic-Level Domain-Driven Design. Candidate Context Discovery, Domain Message Flows Modeling y los siete Bounded Context Canvases. |
 | v1.12 | 17/09/2026 | Diaz Villalba, Diego Alonso | Context Mapping y Software Architecture con los diagramas de contexto, contenedores y despliegue de C4 Model elaborados en Structurizr. |
 | v1.13 | 17/09/2026 | Esquicha Alcántara, Diego Alonso, Galvez Meza, Salym Pool y Oscar Vasquez | Tactical-Level Domain-Driven Design de los siete bounded contexts con sus cuatro capas, diagramas de componentes, diagramas de clases del Domain Layer y diagramas de base de datos. |
+| v1.14 | 07/10/2026 | Vasquez Llave, Oscar Lizandro | Solution UI/UX Design. Desarrollo del Product Design, Style Guidelines, General Style Guidelines, Information Architecture, Organization Systems, Labelling Systems, SEO Tags and Meta Tags, Searching Systems, Navigation Systems, Landing Page UI Design, Landing Page Wireframe, Landing Page Mock-up, Mobile Applications UX/UI Design, Mobile Applications Wireframes, Mobile Applications Wireflow Diagrams, Mobile Applications Mock-ups, Mobile Applications User Flow Diagrams y Mobile Applications Prototyping. |
+| v1.15 | 08/10/2026 | Galvez Meza, Salym Pool | Product Implementation & Validation. Desarrollo del Software Configuration Management, Software Development Environment Configuration, Source Code Management, Source Code Style Guide & Conventions, Software Deployment Configuration, Landing Page & Mobile Application Implementation, Sprint 1, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1, Development Evidence for Sprint Review, Testing Suite Evidence for Sprint Review, Execution Evidence for Sprint Review, Services Documentation Evidence for Sprint Review, Software Deployment Evidence for Sprint Review, Team Collaboration Insights during Sprint, Validation Interviews, Diseño de Entrevistas, Registro de Entrevistas y Evaluaciones según heurísticas. |
 
 <div style="page-break-after: always;"></div>
 
@@ -128,8 +130,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :---- | :---- | :---- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Estudió las buenas prácticas de conducción de entrevistas de investigación y las aplicó en el registro de entrevistas a los dos segmentos objetivo. Aprendió a construir User Personas, User Task Matrix, User Journey Maps y Empathy Maps en UXPressia, herramienta que no había utilizado antes, y derivó cada característica de los arquetipos del análisis estadístico de las entrevistas registradas. Incorporó además la técnica de Impact Mapping para vincular los objetivos de negocio con las historias de usuario.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Adquirió el manejo de la técnica de Big Picture EventStorming y la aplicó para modelar el dominio del problema junto con el equipo. Estudió la redacción de criterios de aceptación bajo la estructura Gherkin y la aplicó en las User Stories, incluidas las Technical Stories del RESTful API. Aprendió a modelar arquitectura de software con C4 Model en Structurizr, elaborando los diagramas de contexto, contenedores y despliegue de la solución.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Estudió el enfoque estratégico de Domain-Driven Design y aplicó las técnicas de Candidate Context Discovery y Domain Message Flows Modeling para identificar y delimitar los siete bounded contexts del dominio. Aprendió a elaborar Bounded Context Canvases siguiendo el proceso iterativo de definición, destilación de reglas de negocio, análisis de capacidades, captura de dependencias y crítica de diseño. Incorporó además los patrones tácticos de agregados, entidades y objetos de valor en las capas de dominio, interfaz y aplicación.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Aprendió a construir un Competitive Analysis Landscape y un análisis FODA orientado a la competencia para sustentar la propuesta de valor del producto. Estudió la definición de un Ubiquitous Language y lo consolidó con los términos del negocio en inglés y su glosa en español. Adquirió el manejo de la notación de diagramas de clases UML con especificación de scope y multiplicidad, y de diagramas de diseño de base de datos con constraints, aplicándolos a los siete bounded contexts.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Estudió y aplicó la técnica de las 5W y 2H para delimitar el problema, y el Lean UX Process de la tercera edición para elaborar el Problem Statement bajo la plantilla de brand new initiative, los cinco tipos de Assumptions, los Hypothesis Statements y el Lean UX Canvas. Investigó de forma autónoma las alternativas de desarrollo móvil nativo y cross-platform, y sustentó con literatura académica la elección del stack declarado en las restricciones tecnológicas del proyecto. | **AV1:** El equipo verificó que el desarrollo de una solución móvil bajo Domain-Driven Design exige incorporar conocimientos que no formaban parte de su formación previa, y que ese aprendizaje debe ocurrir antes de escribir la primera línea de código. Las técnicas de Lean UX, EventStorming, C4 Model y el modelado táctico se estudiaron de forma autónoma a partir de fuentes especializadas y se aplicaron de inmediato sobre el dominio del proyecto, lo que permitió validar la comprensión en un contexto real en lugar de quedarse en la teoría. El equipo concluye que la actualización de conocimientos resulta más efectiva cuando se organiza alrededor de un artefacto concreto que debe producirse, porque obliga a resolver las ambigüedades que una lectura superficial deja pasar. |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Reconoció que los arquetipos construidos por inferencia carecen de sustento, lo que lo llevó a rehacer el análisis de entrevistas con porcentajes y a trazar cada característica de los User Personas hasta su origen en las respuestas registradas. Identificó la necesidad de mantenerse actualizado en métodos de investigación de usuarios para que los hallazgos sostengan las decisiones de producto.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Al modelar la arquitectura reconoció que su conocimiento previo de diagramas se limitaba a UML, y asumió el estudio de C4 Model como un nivel de abstracción distinto y complementario. Identificó que la evolución de las herramientas de modelado exige una actualización continua para poder comunicar decisiones de arquitectura a audiencias técnicas y no técnicas.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Reconoció que la seguridad de la información que expone la solución no se resuelve con conocimientos generales, y asumió el estudio de los controles del OWASP Mobile Application Security Verification Standard para sustentar las decisiones de almacenamiento cifrado y autenticación del contexto de identidad. Identificó que el desarrollo seguro demanda una actualización permanente frente a la aparición de nuevas vulnerabilidades.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Reconoció que el diseño de la persistencia no puede derivarse de forma mecánica del modelo de dominio, y estudió cómo un agregado se traduce en tablas, constraints y relaciones sin perder sus invariantes. Identificó que la separación entre el esquema del servidor y el esquema local del dispositivo es una decisión de diseño propia del desarrollo móvil que debe seguir estudiando.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Reconoció que el requisito de incorporar un feature de aprendizaje autónomo exige evaluar tecnologías no abordadas en clase con criterio propio, y no adoptar la primera alternativa disponible. Investigó las opciones de autenticación biométrica en Android y en Flutter, contrastó sus diferencias técnicas y documentó la justificación de la elección, asumiendo que esa capacidad de evaluar e integrar tecnología nueva será permanente en su ejercicio profesional. | **AV1:** El equipo constató que el alcance del proyecto obligó a cada integrante a identificar por sí mismo qué le faltaba saber antes de poder avanzar, y que ese diagnóstico fue tan determinante como el estudio posterior. Las decisiones que se tomaron sin conocimiento suficiente, como la primera versión del análisis de entrevistas o la delimitación inicial del dominio, tuvieron que rehacerse, lo que evidenció el costo de suponer en lugar de aprender. El equipo concluye que el aprendizaje permanente no es una recomendación general sino una condición operativa del desarrollo de software, porque el stack, las técnicas de modelado y los estándares de seguridad cambian a un ritmo que ninguna formación inicial puede cubrir por completo. |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Estudió las buenas prácticas de conducción de entrevistas de investigación y las aplicó en el registro de entrevistas a los dos segmentos objetivo. Aprendió a construir User Personas, User Task Matrix, User Journey Maps y Empathy Maps en UXPressia, herramienta que no había utilizado antes, y derivó cada característica de los arquetipos del análisis estadístico de las entrevistas registradas. Incorporó además la técnica de Impact Mapping para vincular los objetivos de negocio con las historias de usuario.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Attendance, comprendiendo la integración de sus reglas de negocio, servicios, persistencia y pantallas de consulta de asistencia.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Adquirió el manejo de la técnica de Big Picture EventStorming y la aplicó para modelar el dominio del problema junto con el equipo. Estudió la redacción de criterios de aceptación bajo la estructura Gherkin y la aplicó en las User Stories, incluidas las Technical Stories del RESTful API. Aprendió a modelar arquitectura de software con C4 Model en Structurizr, elaborando los diagramas de contexto, contenedores y despliegue de la solución.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Request, aplicando sus reglas de negocio en el API y construyendo las interfaces para la creación, seguimiento y aprobación de solicitudes.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Estudió el enfoque estratégico de Domain-Driven Design y aplicó las técnicas de Candidate Context Discovery y Domain Message Flows Modeling para identificar y delimitar los siete bounded contexts del dominio. Aprendió a elaborar Bounded Context Canvases siguiendo el proceso iterativo de definición, destilación de reglas de negocio, análisis de capacidades, captura de dependencias y crítica de diseño. Incorporó además los patrones tácticos de agregados, entidades y objetos de valor en las capas de dominio, interfaz y aplicación.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Payroll, implementando la gestión de boletas de pago y sus vistas de consulta y descarga para los usuarios.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Aprendió a construir un Competitive Analysis Landscape y un análisis FODA orientado a la competencia para sustentar la propuesta de valor del producto. Estudió la definición de un Ubiquitous Language y lo consolidó con los términos del negocio en inglés y su glosa en español. Adquirió el manejo de la notación de diagramas de clases UML con especificación de scope y multiplicidad, y de diagramas de diseño de base de datos con constraints, aplicándolos a los siete bounded contexts.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló los bounded contexts Wellbeing y Benefits, implementando la gestión de indicadores ambientales, beneficios y saldo de vacaciones, junto con sus respectivas interfaces.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Estudió y aplicó la técnica de las 5W y 2H para delimitar el problema, y el Lean UX Process de la tercera edición para elaborar el Problem Statement bajo la plantilla de brand new initiative, los cinco tipos de Assumptions, los Hypothesis Statements y el Lean UX Canvas. Investigó de forma autónoma las alternativas de desarrollo móvil nativo y cross-platform, y sustentó con literatura académica la elección del stack declarado en las restricciones tecnológicas del proyecto.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Workspace, implementando la gestión de colaboradores, áreas, posiciones, documentos y organigrama, así como sus pantallas de administración y autogestión.<br><br> | **AV1:** El equipo verificó que el desarrollo de una solución móvil bajo Domain-Driven Design exige incorporar conocimientos que no formaban parte de su formación previa, y que ese aprendizaje debe ocurrir antes de escribir la primera línea de código. Las técnicas de Lean UX, EventStorming, C4 Model y el modelado táctico se estudiaron de forma autónoma a partir de fuentes especializadas y se aplicaron de inmediato sobre el dominio del proyecto, lo que permitió validar la comprensión en un contexto real en lugar de quedarse en la teoría. El equipo concluye que la actualización de conocimientos resulta más efectiva cuando se organiza alrededor de un artefacto concreto que debe producirse, porque obliga a resolver las ambigüedades que una lectura superficial deja pasar.<br><br>**TB1:** El desarrollo de los bounded contexts permitió aplicar los conocimientos de arquitectura, programación backend, persistencia y diseño frontend en funcionalidades completas. El equipo concluye que dividir el trabajo por contextos facilita la especialización y, al mismo tiempo, exige mantener contratos, reglas de negocio y criterios de interfaz coherentes para integrar el producto.<br> |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Reconoció que los arquetipos construidos por inferencia carecen de sustento, lo que lo llevó a rehacer el análisis de entrevistas con porcentajes y a trazar cada característica de los User Personas hasta su origen en las respuestas registradas. Identificó la necesidad de mantenerse actualizado en métodos de investigación de usuarios para que los hallazgos sostengan las decisiones de producto.<br>**TB1:** Reconoció que implementar Attendance exige seguir aprendiendo sobre sincronización de marcaciones, cálculo de estados y presentación de información laboral de forma consistente entre backend y frontend.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Al modelar la arquitectura reconoció que su conocimiento previo de diagramas se limitaba a UML, y asumió el estudio de C4 Model como un nivel de abstracción distinto y complementario. Identificó que la evolución de las herramientas de modelado exige una actualización continua para poder comunicar decisiones de arquitectura a audiencias técnicas y no técnicas.<br>**TB1:** Reconoció que Request requiere aprender continuamente sobre workflows, validaciones, notificaciones y coordinación entre los roles solicitante y aprobador para mantener una experiencia coherente.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Reconoció que la seguridad de la información que expone la solución no se resuelve con conocimientos generales, y asumió el estudio de los controles del OWASP Mobile Application Security Verification Standard para sustentar las decisiones de almacenamiento cifrado y autenticación del contexto de identidad. Identificó que el desarrollo seguro demanda una actualización permanente frente a la aparición de nuevas vulnerabilidades.<br>**TB1:** Reconoció que Payroll requiere mantenerse actualizado en protección de documentos, control de acceso y manejo de información sensible durante todo el ciclo de desarrollo.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Reconoció que el diseño de la persistencia no puede derivarse de forma mecánica del modelo de dominio, y estudió cómo un agregado se traduce en tablas, constraints y relaciones sin perder sus invariantes. Identificó que la separación entre el esquema del servidor y el esquema local del dispositivo es una decisión de diseño propia del desarrollo móvil que debe seguir estudiando.<br>**TB1:** Reconoció que Wellbeing y Benefits requieren aprender de manera continua sobre integración de mediciones, clasificación de indicadores, reglas de saldo y visualización accesible de datos para los usuarios.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Reconoció que el requisito de incorporar un feature de aprendizaje autónomo exige evaluar tecnologías no abordadas en clase con criterio propio, y no adoptar la primera alternativa disponible. Investigó las opciones de autenticación biométrica en Android y en Flutter, contrastó sus diferencias técnicas y documentó la justificación de la elección, asumiendo que esa capacidad de evaluar e integrar tecnología nueva será permanente en su ejercicio profesional.<br>**TB1:** Reconoció que Workspace exige actualizarse continuamente en gestión de perfiles, jerarquías, documentos y sincronización de datos para sostener una experiencia consistente entre la administración y la autogestión.<br><br> | **AV1:** El equipo constató que el alcance del proyecto obligó a cada integrante a identificar por sí mismo qué le faltaba saber antes de poder avanzar, y que ese diagnóstico fue tan determinante como el estudio posterior. Las decisiones que se tomaron sin conocimiento suficiente, como la primera versión del análisis de entrevistas o la delimitación inicial del dominio, tuvieron que rehacerse, lo que evidenció el costo de suponer en lugar de aprender. El equipo concluye que el aprendizaje permanente no es una recomendación general sino una condición operativa del desarrollo de software, porque el stack, las técnicas de modelado y los estándares de seguridad cambian a un ritmo que ninguna formación inicial puede cubrir por completo.<br><br>**TB1:** La implementación confirmó que el aprendizaje continúa durante la construcción y no termina con el diseño. El equipo concluye que cada bounded context presenta retos propios de dominio, integración y experiencia de usuario, por lo que la actualización permanente y la revisión entre integrantes son necesarias para entregar funcionalidades backend y frontend confiables.<br> |
 
 <div style="page-break-after: always;"></div>
 
@@ -269,14 +271,13 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       - [3.1.4.3. Mobile Applications Mock-ups](#3143-mobile-applications-mock-ups)
       - [3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)
       - [3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)
-- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
-- [Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)
+- [Capítulo IV: Product Implementation \& Validation](#capítulo-iv-product-implementation--validation)
   - [4.1. Software Configuration Management](#41-software-configuration-management)
     - [4.1.1. Software Development Environment Configuration](#411-software-development-environment-configuration)
     - [4.1.2. Source Code Management](#412-source-code-management)
-    - [4.1.3. Source Code Style Guide & Conventions](#413-source-code-style-guide--conventions)
+    - [4.1.3. Source Code Style Guide \& Conventions](#413-source-code-style-guide--conventions)
     - [4.1.4. Software Deployment Configuration](#414-software-deployment-configuration)
-  - [4.2. Landing Page & Mobile Application Implementation](#42-landing-page--mobile-application-implementation)
+  - [4.2. Landing Page \& Mobile Application Implementation](#42-landing-page--mobile-application-implementation)
     - [4.2.1. Sprint 1](#421-sprint-1)
       - [4.2.1.1. Sprint Planning 1](#4211-sprint-planning-1)
       - [4.2.1.2. Aspect Leaders and Collaborators](#4212-aspect-leaders-and-collaborators)
@@ -291,6 +292,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
     - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
     - [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
 - [Bibliografía](#bibliografía)
 
 <div style="page-break-after: always;"></div>
@@ -4094,18 +4096,6 @@ Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 
 <div style="page-break-after: always;"></div>
 
-# Conclusiones y recomendaciones
-
-* Durante el desarrollo de esta primera etapa de Flowboard se logró definir con mayor claridad la problemática que afecta a los procesos de gestión de recursos humanos dentro de organizaciones en crecimiento. A partir del análisis realizado y de las entrevistas dirigidas a personal de Recursos Humanos y colaboradores generales, se identificaron necesidades concretas relacionadas con la centralización de la información, la reducción de procesos manuales y la mejora del acceso a datos laborales desde dispositivos móviles. Entre los principales problemas encontrados destacan la dependencia de hojas de cálculo, la falta de visibilidad sobre el estado de solicitudes, la dificultad para consultar saldos de vacaciones y la necesidad constante de recurrir al área administrativa para obtener información.
-
-* Estos hallazgos permitieron definir de forma más precisa los segmentos objetivo y orientar el diseño de la solución hacia dos experiencias principales: una enfocada en la administración por parte del personal de Recursos Humanos y otra orientada a la autogestión de los colaboradores. Con ello se desarrollaron artefactos como los User Personas, la User Task Matrix y los diferentes elementos del proceso Lean UX, que ayudaron a transformar los problemas identificados en necesidades y funcionalidades concretas para Flowboard.
-
-* A nivel de diseño de software, se logró establecer una arquitectura estructurada bajo los principios de Domain-Driven Design. El dominio fue dividido en siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing, cada uno con responsabilidades y reglas de negocio claramente delimitadas. Esta separación permitió organizar mejor las capacidades de la solución y definir las relaciones existentes entre los distintos procesos del sistema.
-
-* Además, se desarrollaron los principales artefactos de arquitectura y diseño necesarios para continuar con la implementación, incluyendo EventStorming, Context Mapping, diagramas de arquitectura, diagramas de componentes, modelos de clases de dominio y diseños de base de datos. De esta manera, Flowboard cuenta actualmente con una base funcional y técnica coherente con las necesidades identificadas, lo que permitirá afrontar las siguientes etapas de desarrollo de las aplicaciones móviles y del API REST con una estructura de dominio previamente definida y organizada.
-
-<div style="page-break-after: always;"></div>
-
 # Capítulo IV: Product Implementation & Validation
 
 ## 4.1. Software Configuration Management
@@ -4246,13 +4236,13 @@ Los archivos `.feature` siguen “Gherkin Conventions for Readable Specification
 
 ### 4.1.4. Software Deployment Configuration
 
-En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El Deployment Diagram de C4 Model presentado en la sección 2.5.3.3 resume la configuración resultante: el dispositivo Android del usuario, Firebase App Distribution, GitHub Pages, Render y Aiven.
+En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El diagrama siguiente resume el recorrido de cada uno en cuatro etapas: el repositorio en GitHub, la construcción, el alojamiento o la distribución, y la ejecución en producción. El Landing Page se publica en GitHub Pages, el RESTful API se construye como imagen Docker y se ejecuta en Render conectado a MySQL en Aiven, y la aplicación nativa se firma, se sube a Firebase App Distribution y se instala en el dispositivo Android del tester. El diagrama complementa el Deployment Diagram de C4 Model de la sección 2.5.3.3, que muestra la misma infraestructura sin el recorrido desde el código.
 
 **Figura 93:** *Deployment Diagram de Flowboard*
 
-![Deployment Diagram de Flowboard](assets/figura-56.png)
+![Deployment Diagram de Flowboard](assets/Chapter-4/deployment-pipeline.png)
 
-*Nota.* Nodos de ejecución de cada producto en el ambiente de producción. Elaboración propia en Structurizr DSL.
+*Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. Elaboración propia.
 
 **Landing Page en GitHub Pages**
 
@@ -4809,7 +4799,7 @@ Feature: Environmental thresholds and indicators
 
 Las figuras de esta sección documentan la ejecución funcional de los módulos implementados durante el Sprint 1 y sirven como evidencia del comportamiento observado en las aplicaciones.
 
-Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versión ejecutable de la aplicación nativa conectada al RESTful API. La aplicación muestra una barra inferior distinta según el rol: Recursos Humanos accede a Panel, Personal, Solicitudes, Asistencia y Más, y el colaborador a Inicio, Solicitudes, Asistencia, Boletas y Perfil. Las capturas siguientes muestran las vistas principales con datos de muestra registrados en el API.
+Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versión ejecutable de la aplicación nativa conectada al RESTful API. La aplicación muestra una barra inferior según el rol: en el Sprint 1 se entrega la vista de Recursos Humanos, con Panel, Personal, Solicitudes, Asistencia y Más, y la vista del colaborador se completa en el Sprint 2. Las capturas siguientes muestran las vistas de Recursos Humanos con datos de muestra registrados en el API.
 
 **Landing Page**
 
@@ -4899,32 +4889,6 @@ Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versi�
 
 *Nota.* Wellbeing, US49 y US51. Elaboración propia.
 
-**Aplicación nativa: vista del colaborador**
-
-**Figura 111:** *Aplicación, mi perfil y mi expediente*
-
-![Mi perfil](assets/Chapter-4/app-colaborador-perfil.png)
-
-*Nota.* Workspace, US18 y US19. Elaboración propia.
-
-**Figura 112:** *Aplicación, mi asistencia*
-
-![Mi asistencia](assets/Chapter-4/app-colaborador-asistencia.png)
-
-*Nota.* Attendance, US22. Elaboración propia.
-
-**Figura 113:** *Aplicación, nueva solicitud con validación de saldo*
-
-![Nueva solicitud](assets/Chapter-4/app-colaborador-solicitud.png)
-
-*Nota.* Request, US27, US28 y US30. Elaboración propia.
-
-**Figura 114:** *Aplicación, mis beneficios y saldo de vacaciones*
-
-![Mis beneficios y saldo](assets/Chapter-4/app-colaborador-beneficios.png)
-
-*Nota.* Benefits, US40 y US41, incluido el aviso de datos sincronizados sin conexión. Elaboración propia.
-
 Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
@@ -4932,7 +4896,7 @@ Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones `@Operation`, `@Parameter`, `@Schema` y `@ApiResponses` de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única `{ "code", "message", "details" }`, por ejemplo `{"code": "OFFICE_CONFLICT", "message": "..."}` con estado 409.
 
 - Swagger UI local: http://localhost:8080/swagger-ui/index.html
-- Swagger UI desplegado: PENDIENTE (URL pública del servicio en Render)/swagger-ui/index.html
+- Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
 - Especificación OpenAPI: `/v3/api-docs`
 - Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
 
@@ -5107,23 +5071,23 @@ Respuesta `200 OK`:
 }
 ```
 
-**Figura 115:** *Swagger UI del RESTful API de Flowboard*
+**Figura 111:** *Swagger UI del RESTful API de Flowboard*
 
 ![Swagger UI](assets/Chapter-4/swagger-general.png)
 
 *Nota.* Grupos de endpoints por bounded context. Elaboración propia.
 
-**Figura 116:** *Interacción con POST /api/v1/offices en Swagger UI*
+**Figura 112:** *Definición de POST /api/v1/offices en Swagger UI*
 
 ![POST offices en Swagger](assets/Chapter-4/swagger-post-offices.png)
 
-*Nota.* Request con datos de muestra y respuesta 201. Elaboración propia.
+*Nota.* Endpoint del grupo Wellbeing - Offices con el cuerpo de la solicitud (nombre, área, dirección, piso y referencia). Elaboración propia.
 
-**Figura 117:** *Interacción con GET /api/v1/vacation-balances/me en Swagger UI*
+**Figura 113:** *Definición de GET /api/v1/vacation-balances en Swagger UI*
 
 ![GET vacation balance en Swagger](assets/Chapter-4/swagger-get-vacation-balance.png)
 
-*Nota.* Saldo y movimientos de un colaborador con datos de muestra. Elaboración propia.
+*Nota.* Parámetro opcional `areaId` y respuesta 200 del listado de saldos de vacaciones. Elaboración propia.
 
 **Tabla 13:** *Commits relacionados con la documentación de los servicios en el Sprint 1*
 
@@ -5144,25 +5108,25 @@ Respuesta `200 OK`:
 
 En el Sprint 1 el despliegue abarcó el Landing Page, el RESTful API y la base de datos. El Landing Page se publicó en GitHub Pages desde la rama `main` del repositorio `flowboard-mobile-landing-page`. Para el API se creó la instancia de MySQL en Aiven, que es la base de datos compartida por todo el equipo durante el desarrollo, se agregó al repositorio un Dockerfile de dos etapas con Eclipse Temurin 25 y se configuró el perfil `prod` con la validación del esquema y el puerto asignado por la plataforma; luego se creó el Web Service en Render a partir de la rama `main`. Durante la configuración de Aiven el equipo encontró que la plataforma exige llave primaria en todas las tablas (`sql_require_primary_key`), por lo que la tabla de rangos de umbrales, que Hibernate no podía crear, se creó con una llave primaria compuesta. La distribución de la aplicación por Firebase App Distribution queda para el Sprint 2, después de apuntar la aplicación a la URL pública del API.
 
-**Figura 118:** *Configuración de GitHub Pages del Landing Page*
+**Figura 114:** *Configuración de GitHub Pages del Landing Page*
 
 ![GitHub Pages](assets/Chapter-4/deploy-github-pages.png)
 
 *Nota.* Publicación desde la rama `main` y URL del sitio. Elaboración propia.
 
-**Figura 119:** *Servicio MySQL en Aiven*
+**Figura 115:** *Servicio MySQL en Aiven*
 
 ![Aiven](assets/Chapter-4/deploy-aiven.png)
 
-*Nota.* Instancia gestionada y base de datos `flowboard`. Elaboración propia.
+*Nota.* Instancia MySQL 8.4 gestionada, en estado Running, con los datos de conexión (la contraseña permanece oculta). Elaboración propia.
 
-**Figura 120:** *Web Service del API en Render*
+**Figura 116:** *Web Service del API en Render*
 
 ![Render](assets/Chapter-4/deploy-render.png)
 
-*Nota.* Runtime Docker, rama `main` y variables de entorno del perfil `prod`. Elaboración propia.
+*Nota.* Web Service con runtime Docker, rama `main`, plan gratuito, último despliegue en estado Live y URL pública. Elaboración propia.
 
-**Figura 121:** *API desplegado respondiendo en Swagger UI*
+**Figura 117:** *API desplegado respondiendo en Swagger UI*
 
 ![API desplegado](assets/Chapter-4/deploy-api-swagger.png)
 
@@ -5170,7 +5134,7 @@ En el Sprint 1 el despliegue abarcó el Landing Page, el RESTful API y la base d
 
 Landing Page desplegado: https://performily-mobile.github.io/flowboard-mobile-landing-page/
 
-RESTful API desplegado: PENDIENTE (URL pública del servicio en Render)
+RESTful API desplegado: https://flowboard-mobile-service.onrender.com
 
 **Tabla 14:** *Commits relacionados con el despliegue en el Sprint 1*
 
@@ -5206,19 +5170,19 @@ En total, el Sprint 1 registró 11 commits en el Landing Page, 64 en el API y 96
 
 *Nota.* Elaboración propia a partir del historial de GitHub, sin contar merges.
 
-**Figura 122:** *Analíticos de colaboración del repositorio del Landing Page*
+**Figura 118:** *Analíticos de colaboración del repositorio del Landing Page*
 
 ![Insights del Landing Page](assets/Chapter-4/insights-landing.png)
 
 *Nota.* GitHub Insights › Contributors. Elaboración propia.
 
-**Figura 123:** *Analíticos de colaboración del repositorio del RESTful API*
+**Figura 119:** *Analíticos de colaboración del repositorio del RESTful API*
 
 ![Insights del API](assets/Chapter-4/insights-service.png)
 
 *Nota.* GitHub Insights › Contributors. Elaboración propia.
 
-**Figura 124:** *Analíticos de colaboración del repositorio de la aplicación nativa*
+**Figura 120:** *Analíticos de colaboración del repositorio de la aplicación nativa*
 
 ![Insights de la aplicación](assets/Chapter-4/insights-app.png)
 
@@ -5287,7 +5251,7 @@ Las sesiones de validación se realizan con la aplicación instalada en el celul
 
 ### 4.3.2. Registro de Entrevistas
 
-Las Figuras 126 a 131 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
+Las Figuras 121 a 124 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
 
 Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre las tareas.
 
@@ -5307,7 +5271,7 @@ Timing donde inicia la entrevista: 0:00
 
 Duración completa de la entrevista: 4 minutos 45 segundos
 
-**Figura 125:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
+**Figura 121:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
 
 ![Entrevista de validación 1 - de Recursos Humanos](assets\validacion-s1-01.png)
 
@@ -5331,7 +5295,7 @@ Timing donde inicia la entrevista: 4:45
 
 Duración completa de la entrevista: 4 minutos 29 segundos
 
-**Figura 126:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
+**Figura 122:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
 
 ![Entrevista de validación 2 - de Recursos Humanos](assets\validacion-s1-02.png)
 
@@ -5358,7 +5322,7 @@ Timing donde inicia la entrevista: 9:15
 
 Duración completa de la entrevista: 5 minutos 53 segundos
 
-**Figura 128:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
+**Figura 123:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
 
 ![Entrevista de validación 1 - de colaboradores](assets\validacion-s1-03.png)
 
@@ -5382,7 +5346,7 @@ Timing donde inicia la entrevista: 15:08
 
 Duración completa de la entrevista: 4 minutos 51 segundos
 
-**Figura 129:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
+**Figura 124:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
 
 ![Entrevista de validación 2 - de colaboradores](assets\validacion-s1-04.png)
 
@@ -5394,7 +5358,7 @@ La entrevistada, Andrea, tiene 26 años y trabaja como asistente de Recursos Hum
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-Las Figuras 132 a 137 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
+Las Figuras 125 a 128 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
 
 **UX Heuristics & Principles Evaluation**
 **Usability - Inclusive Design - Information Architecture**
@@ -5420,16 +5384,15 @@ El alcance de esta evaluación incluye la revisión de la usabilidad de las sigu
 4. Revisar y resolver una solicitud.
 5. Asignar un beneficio a un área y registrar su entrega.
 6. Revisar los indicadores y el histórico de un espacio de trabajo.
-7. Consultar el saldo de vacaciones y los beneficios propios.
-8. Solicitar vacaciones y seguir su estado.
-9. Consultar la asistencia y el perfil propios.
+7. Ajustar el saldo de vacaciones de un colaborador.
 
 No están incluidas en esta versión de la evaluación las siguientes tareas:
 
 1. Iniciar sesión, cerrar sesión y cambiar la contraseña temporal (IAM, Sprint 2).
 2. Consultar y descargar boletas como colaborador con verificación biométrica (UF-03, Sprint 2).
 3. Recibir la notificación de cambio de estado de una solicitud (US36, Sprint 2).
-4. Usar la aplicación cross-platform en Flutter (Sprint 2).
+4. Usar la vista del colaborador (perfil, solicitudes, asistencia, beneficios y saldo propios), que se entrega en el Sprint 2.
+5. Usar la aplicación cross-platform en Flutter (Sprint 2).
 
 **ESCALA DE SEVERIDAD:**
 
@@ -5446,120 +5409,88 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
 | :----: | :---- | :----: | :---- |
-| 1 | La pestaña Boletas del colaborador no tiene una pantalla asociada y cierra la aplicación | 4 | Usability: Prevención de errores |
-| 2 | Inicio (colaborador) y Panel (Recursos Humanos) muestran una pantalla “pendiente” como primera vista | 3 | Usability: Visibilidad del estado del sistema |
-| 3 | No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario | 3 | Usability: Libertad y control del usuario |
-| 4 | Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos | 2 | Information Architecture: Is it findable? |
-| 5 | El error de conexión dice “No se pudo conectar con el servidor” sin indicar qué hacer, salvo en el saldo de vacaciones, que sí muestra datos guardados | 2 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores |
-| 6 | Las confirmaciones de acciones (asignar, registrar entrega, ajustar saldo) solo se muestran en un snackbar que desaparece | 1 | Usability: Visibilidad del estado del sistema |
-| 7 | En el gráfico del histórico ambiental los niveles se distinguen por color; las barras no tienen etiqueta propia | 1 | Inclusive Design: Proporciona experiencias comparables |
+| 1 | No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario | 3 | Usability: Libertad y control del usuario |
+| 2 | Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos | 2 | Information Architecture: Is it findable? |
+| 3 | El error de conexión dice “No se pudo conectar con el servidor” sin indicar qué hacer, salvo en el saldo de vacaciones, que sí muestra datos guardados | 2 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores |
+| 4 | En el gráfico del histórico ambiental los niveles se distinguen por color; las barras no tienen etiqueta propia | 1 | Inclusive Design: Proporciona experiencias comparables |
 
 **DESCRIPCIÓN DE PROBLEMAS:**
 
-**PROBLEMA #1:** La pestaña Boletas del colaborador no tiene una pantalla asociada y cierra la aplicación
-
-**Severidad:** 4
-**Heurística violada:** Usability - Prevención de errores
-
-**Problema:** En la barra inferior del colaborador, la pestaña Boletas navega a la ruta `PayslipsRoute`, pero en la versión del Sprint 1 esa ruta no tiene una pantalla registrada en el `AppNavHost`, porque la pantalla temporal se retiró al integrar Payroll y la vista del colaborador (MA-64 y MA-65) aún no está lista. Al tocar la pestaña, la aplicación se cierra y el colaborador pierde lo que estaba haciendo.
-
-**Figura 131:** *Pestaña Boletas en la vista del colaborador*
-
-![Problema 1](assets/Chapter-4/heuristica-p1.png)
-
-*Nota.* Elaboración propia.
-
-**Recomendación:** Mientras la vista de boletas del colaborador no esté terminada, registrar de nuevo la pantalla temporal para `PayslipsRoute` en `AppNavHost`, de modo que la pestaña muestre un mensaje en lugar de cerrar la aplicación. En el Sprint 2, reemplazarla por las pantallas MA-64 y MA-65.
-
-**PROBLEMA #2:** Inicio (colaborador) y Panel (Recursos Humanos) muestran una pantalla “pendiente” como primera vista
-
-**Severidad:** 3
-**Heurística violada:** Usability - Visibilidad del estado del sistema
-
-**Problema:** La primera pestaña de la barra inferior de cada rol (Inicio para el colaborador, Panel para Recursos Humanos) todavía muestra la pantalla temporal. Es lo primero que ve el usuario al abrir la aplicación, por lo que da la impresión de un producto incompleto y no lo orienta hacia sus tareas frecuentes, como el saldo de vacaciones o las solicitudes pendientes.
-
-**Figura 132:** *Pantalla temporal en Inicio*
-
-![Problema 2](assets/Chapter-4/heuristica-p2.png)
-
-*Nota.* Elaboración propia.
-
-**Recomendación:** Implementar en el Sprint 2 el Inicio del colaborador (MA-14), con el saldo de vacaciones, la asistencia de la semana y las solicitudes recientes, y el Panel de Recursos Humanos (MA-18) con los pendientes del día. Mientras tanto, usar como destino inicial una pantalla ya funcional.
-
-**PROBLEMA #3:** No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario
+**PROBLEMA #1:** No existe inicio de sesión: el rol se fija en la aplicación y no se puede cambiar de usuario
 
 **Severidad:** 3
 **Heurística violada:** Usability - Libertad y control del usuario
 
-**Problema:** La aplicación toma el colaborador y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. Un mismo dispositivo no permite pasar de la vista de Recursos Humanos a la del colaborador sin modificar el código, y ninguna información está protegida por credenciales.
+**Problema:** La aplicación toma el usuario y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. El dispositivo siempre abre con el mismo usuario de Recursos Humanos, no es posible cambiar de usuario y ninguna información está protegida por credenciales.
 
-**Figura 133:** *Aplicación abierta directamente en la vista de un rol*
+**Figura 125:** *Aplicación abierta directamente en la vista de Recursos Humanos*
 
-![Problema 3](assets/Chapter-4/heuristica-p3.png)
+![Problema 1](assets/Chapter-4/heuristica-p3.png)
 
 *Nota.* Elaboración propia.
 
 **Recomendación:** Priorizar en el Sprint 2 las User Stories US02 a US04 y TS02 (inicio de sesión, cambio de contraseña temporal, cierre de sesión y autorización por token), para que el rol se obtenga de la sesión.
 
-**PROBLEMA #4:** Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos
+**PROBLEMA #2:** Beneficios y Bienestar solo se encuentran dentro de “Más”, sin acceso desde la vista principal de Recursos Humanos
 
 **Severidad:** 2
 **Heurística violada:** Information Architecture - Is it findable?
 
 **Problema:** Para asignar un beneficio o revisar un espacio de trabajo, el usuario de Recursos Humanos debe abrir “Más” y luego la opción correspondiente. Es una tarea recurrente que queda a dos niveles de profundidad y que el usuario no descubre si no explora el menú.
 
-**Figura 134:** *Menú Más de Recursos Humanos*
+**Figura 126:** *Menú Más de Recursos Humanos*
 
-![Problema 4](assets/Chapter-4/heuristica-p4.png)
+![Problema 2](assets/Chapter-4/heuristica-p4.png)
 
 *Nota.* Elaboración propia.
 
 **Recomendación:** Incluir en el Panel de Recursos Humanos accesos directos a los pendientes de Beneficios (por entregar) y de Bienestar (espacios en nivel peligroso).
 
-**PROBLEMA #5:** El error de conexión no indica qué hacer
+**PROBLEMA #3:** El error de conexión no indica qué hacer
 
 **Severidad:** 2
 **Heurística violada:** Usability - Ayudar a reconocer, diagnosticar y recuperarse de errores
 
 **Problema:** Cuando el API no responde, la mayoría de pantallas muestra “No se pudo conectar con el servidor” con un botón Reintentar, sin explicar si el problema es la conexión del celular o el servicio. Solo el saldo de vacaciones conserva los últimos datos sincronizados; el resto de pantallas queda vacío.
 
-**Figura 135:** *Mensaje de error de conexión*
+**Figura 127:** *Mensaje de error de conexión*
 
-![Problema 5](assets/Chapter-4/heuristica-p5.png)
-
-*Nota.* Elaboración propia.
-
-**Recomendación:** Distinguir la falta de conexión del dispositivo de un error del servicio, sugerir revisar la conexión en el primer caso y extender la caché local de Room a las consultas más frecuentes del colaborador (asistencia, solicitudes y beneficios).
-
-**PROBLEMA #6:** Las confirmaciones solo se muestran en un snackbar que desaparece
-
-**Severidad:** 1
-**Heurística violada:** Usability - Visibilidad del estado del sistema
-
-**Problema:** Al asignar un beneficio, registrar una entrega o ajustar un saldo, la confirmación aparece unos segundos en un snackbar. Si el usuario no lo lee, solo puede comprobar el resultado volviendo a buscar el registro.
-
-**Figura 136:** *Confirmación en snackbar*
-
-![Problema 6](assets/Chapter-4/heuristica-p6.png)
+![Problema 3](assets/Chapter-4/heuristica-p5.png)
 
 *Nota.* Elaboración propia.
 
-**Recomendación:** Además del snackbar, resaltar por unos segundos el registro creado o actualizado en la lista, o mantener el resumen de la acción en la parte superior de la pantalla.
+**Recomendación:** Distinguir la falta de conexión del dispositivo de un error del servicio, sugerir revisar la conexión en el primer caso y extender la caché local de Room a las consultas más frecuentes de Recursos Humanos (asistencia, solicitudes y beneficios).
 
-**PROBLEMA #7:** Los niveles del histórico ambiental se distinguen por color
+**PROBLEMA #4:** Los niveles del histórico ambiental se distinguen por color
 
 **Severidad:** 1
 **Heurística violada:** Inclusive Design - Proporciona experiencias comparables
 
 **Problema:** En el gráfico del histórico, los días con nivel deficiente o peligroso se pintan de otro color. La leyenda indica el significado, pero una persona con dificultad para distinguir colores no puede saber qué barra corresponde a cada nivel.
 
-**Figura 137:** *Gráfico del histórico ambiental*
+**Figura 128:** *Gráfico del histórico ambiental*
 
-![Problema 7](assets/Chapter-4/heuristica-p7.png)
+![Problema 4](assets/Chapter-4/heuristica-p7.png)
 
 *Nota.* Elaboración propia.
 
 **Recomendación:** Agregar una marca adicional a las barras fuera de rango (por ejemplo un patrón o un ícono de advertencia sobre la barra) y una descripción accesible del gráfico para lectores de pantalla.
+
+<div style="page-break-after: always;"></div>
+
+# Conclusiones y recomendaciones
+
+* Durante el desarrollo de esta primera etapa de Flowboard se logró definir con mayor claridad la problemática que afecta a los procesos de gestión de recursos humanos dentro de organizaciones en crecimiento. A partir del análisis realizado y de las entrevistas dirigidas a personal de Recursos Humanos y colaboradores generales, se identificaron necesidades concretas relacionadas con la centralización de la información, la reducción de procesos manuales y la mejora del acceso a datos laborales desde dispositivos móviles. Entre los principales problemas encontrados destacan la dependencia de hojas de cálculo, la falta de visibilidad sobre el estado de solicitudes, la dificultad para consultar saldos de vacaciones y la necesidad constante de recurrir al área administrativa para obtener información.
+
+* Estos hallazgos permitieron definir de forma más precisa los segmentos objetivo y orientar el diseño de la solución hacia dos experiencias principales: una enfocada en la administración por parte del personal de Recursos Humanos y otra orientada a la autogestión de los colaboradores. Con ello se desarrollaron artefactos como los User Personas, la User Task Matrix y los diferentes elementos del proceso Lean UX, que ayudaron a transformar los problemas identificados en necesidades y funcionalidades concretas para Flowboard.
+
+* A nivel de diseño de software, se logró establecer una arquitectura estructurada bajo los principios de Domain-Driven Design. El dominio fue dividido en siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing, cada uno con responsabilidades y reglas de negocio claramente delimitadas. Esta separación permitió organizar mejor las capacidades de la solución y definir las relaciones existentes entre los distintos procesos del sistema.
+
+* Además, se desarrollaron los principales artefactos de arquitectura y diseño necesarios para continuar con la implementación, incluyendo EventStorming, Context Mapping, diagramas de arquitectura, diagramas de componentes, modelos de clases de dominio y diseños de base de datos. De esta manera, Flowboard cuenta actualmente con una base funcional y técnica coherente con las necesidades identificadas, lo que permitirá afrontar las siguientes etapas de desarrollo de las aplicaciones móviles y del API REST con una estructura de dominio previamente definida y organizada.
+
+* En el Sprint 1 el diseño dejó de ser solo documentación y pasó a una implementación funcional y desplegada: el API REST se ejecuta en Render con una base de datos MySQL gestionada en Aiven, su contrato puede probarse desde Swagger UI, la Landing Page se publica en GitHub Pages y la aplicación nativa Android consume el API desplegado. Esto confirma que la organización por bounded contexts y la arquitectura por capas pueden llevarse al código sin perder la separación de responsabilidades, y deja una base de entrega continua sobre la que el equipo puede seguir iterando.
+
+* La evaluación heurística y la revisión de la versión del Sprint 1 mostraron los puntos de mejora más relevantes: la ausencia de inicio de sesión, la baja visibilidad de Beneficios y Bienestar dentro del menú “Más”, los mensajes de error de conexión poco orientadores y el uso exclusivo del color en el gráfico del histórico ambiental. Se recomienda priorizar en el Sprint 2 el bounded context IAM, la vista del colaborador y la mejora del manejo de errores, además de incorporar accesos directos en el Panel de Recursos Humanos y ayudas visuales adicionales al color, de modo que la solución sea más segura, descubrible e inclusiva.
 
 <div style="page-break-after: always;"></div>
 
