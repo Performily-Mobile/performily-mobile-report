@@ -1178,7 +1178,7 @@ En esta sección se analizan las entrevistas por segmento mediante característi
 
 ### 2.3.1. User Personas
 
-A partir del análisis de las entrevistas realizadas a los segmentos objetivo y de las características identificadas en el análisis de la competencia, se elaboraron los User Persona que representan a los principales perfiles de usuarios de la solución propuesta. Estos arquetipos permiten sintetizar las características objetivas y subjetivas más representativas de cada segmento. Los resultados se muestran en las Figuras 54 y 55.
+A partir del análisis de las entrevistas realizadas a los segmentos objetivo y de las características identificadas en el análisis de la competencia, se elaboraron los User Persona que representan a los principales perfiles de usuarios de la solución propuesta. Estos arquetipos permiten sintetizar las características objetivas y subjetivas más representativas de cada segmento. Los resultados se muestran en las Figuras 18 y 19.
 
 Para la construcción de los perfiles se priorizaron los hallazgos con mayor recurrencia en las entrevistas. En el caso del personal de Recursos Humanos, se consideraron la responsabilidad sobre múltiples procesos de gestión, el uso diverso de herramientas digitales sin solución integrada, la carga asociada a procesos manuales, necesidad de contar con información actualizada y el interés por automatizar actividades repetitivas. Asimismo, se tomaron en cuenta los aspectos identificados en el análisis de la competencia para orientar las necesidades y expectativas que los usuarios podrían tener frente a una plataforma de gestión de recursos humanos.
 
@@ -1226,7 +1226,7 @@ Para los colaboradores generales, las tareas más importantes se concentran en c
 
 ### 2.3.3. User Journey Mapping
 
-En esta sección se presentan los User Journey Maps correspondientes a los segmentos objetivo de Personal de Recursos Humanos y Colaboradores generales. Los mapas representan el recorrido end-to-end que realizan los usuarios para gestionar y consultar información relacionada con su experiencia laboral, considerando sus objetivos, procesos actuales, problemas y oportunidades de mejora. Para este análisis se elaboran las versiones As-Is, por lo que se describe la situación actual de los usuarios sin considerar la existencia de Flowboard como solución. Cada User Journey Map se encuentra vinculado con el User Persona correspondiente, permitiendo representar de manera contextualizada las actividades y dificultades que caracterizan a cada segmento. Las Figuras 50 y 51 presentan los recorridos de ambos segmentos.
+En esta sección se presentan los User Journey Maps correspondientes a los segmentos objetivo de Personal de Recursos Humanos y Colaboradores generales. Los mapas representan el recorrido end-to-end que realizan los usuarios para gestionar y consultar información relacionada con su experiencia laboral, considerando sus objetivos, procesos actuales, problemas y oportunidades de mejora. Para este análisis se elaboran las versiones As-Is, por lo que se describe la situación actual de los usuarios sin considerar la existencia de Flowboard como solución. Cada User Journey Map se encuentra vinculado con el User Persona correspondiente, permitiendo representar de manera contextualizada las actividades y dificultades que caracterizan a cada segmento. Las Figuras 20 y 21 presentan los recorridos de ambos segmentos.
 
 User Person: Carlos (Personal de Recursos Humanos)
 
@@ -1250,7 +1250,7 @@ User Person: Maria (Colaboradores generales)
 
 ### 2.3.4. Empathy Mapping
 
-En esta sección se sintetizan las percepciones, necesidades, comportamientos, frustraciones y expectativas de cada User Persona mediante dos Empathy Maps. Las Figuras 52 y 53 presentan los resultados correspondientes al personal de Recursos Humanos y a los colaboradores generales, respectivamente.
+En esta sección se sintetizan las percepciones, necesidades, comportamientos, frustraciones y expectativas de cada User Persona mediante dos Empathy Maps. Las Figuras 22 y 23 presentan los resultados correspondientes al personal de Recursos Humanos y a los colaboradores generales, respectivamente.
 
 Empathy Mapping: Carlos (Personal de Recursos Humanos)
 
@@ -2047,7 +2047,7 @@ En esta sección se presentan las user stories que definen lo que Flowboard debe
 
 ### 2.4.2. Impact Mapping
 
-En esta sección se presenta el Impact Mapping de Flowboard, utilizado para relacionar los objetivos del producto con los actores, los impactos esperados y las funcionalidades o entregables que los hacen posibles. La Figura 60 resume esta trazabilidad.
+En esta sección se presenta el Impact Mapping de Flowboard, utilizado para relacionar los objetivos del producto con los actores, los impactos esperados y las funcionalidades o entregables que los hacen posibles. La Figura 29 resume esta trazabilidad.
 
 [https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing](https://drive.google.com/file/d/1h08zEKklqnNqMzO0p9CkQ8eHK_XB_sHA/view?usp=sharing)
 
@@ -2059,7 +2059,7 @@ En esta sección se presenta el Impact Mapping de Flowboard, utilizado para rela
 
 ### 2.4.3. Product Backlog
 
-La Figura 14 presenta el Product Backlog de Flowboard, donde se organizan y priorizan las User Stories y Technical Stories que guían el desarrollo de la solución.
+La Figura 30 presenta el Product Backlog de Flowboard, donde se organizan y priorizan las User Stories y Technical Stories que guían el desarrollo de la solución.
 
 En esta sección se presenta la lista priorizada de todo el trabajo necesario para construir la solución. Para ordenar los ítems tomamos en cuenta el valor que aportan al usuario y las dependencias entre ellos. Por ejemplo, primero van las historias relacionadas al registro de colaboradores y el orden de la organización, porque casi todos los demás procesos dependen de ellos, también consideramos a las historias relacionadas al landing page ya que nos permite hacer conocer a nuestro público los beneficios de nuestra solución. A cada user story le asignamos Story Points según la serie de Fibonacci para estimar su complejidad y así poder planificar los sprints. El backlog se gestiona en Trello y se irá actualizando durante el proyecto.
 
@@ -2144,11 +2144,11 @@ Enlace: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
-En esta sección se presenta la perspectiva estratégica del diseño de la solución. A partir del dominio explorado en el Big Picture Event Storming, se identifican los bounded contexts, se describen sus interacciones y se establecen los criterios para delimitar sus responsabilidades. Los resultados se documentan mediante el Candidate Context Discovery, los Domain Message Flows Modeling, los Bounded Context Canvases y el Context Mapping que se muestran en las Figuras 15 a 28.
+En esta sección se presenta la perspectiva estratégica del diseño de la solución. A partir del dominio explorado en el Big Picture Event Storming, se identifican los bounded contexts, se describen sus interacciones y se establecen los criterios para delimitar sus responsabilidades. Los resultados se documentan mediante el Candidate Context Discovery, los Domain Message Flows Modeling, los Bounded Context Canvases y el Context Mapping que se muestran en las Figuras 31 a 44.
 
 ### 2.5.1. EventStorming
 
-El equipo utilizó EventStorming para explorar los eventos relevantes del dominio y transformarlos progresivamente en límites y relaciones entre contextos. La Figura 13 recoge el modelo general de partida; las Figuras 15 a 20 muestran los flujos de mensajes derivados y las Figuras 21 a 27 presentan los Bounded Context Canvases resultantes.
+El equipo utilizó EventStorming para explorar los eventos relevantes del dominio y transformarlos progresivamente en límites y relaciones entre contextos. La Figura 28 recoge el modelo general de partida; las Figuras 31 a 36 muestran los flujos de mensajes derivados y las Figuras 37 a 43 presentan los Bounded Context Canvases resultantes.
 
 #### 2.5.1.1. Candidate Context Discovery
 
@@ -2308,7 +2308,7 @@ Como subdominio de soporte enfocado en el clima laboral físico, este contexto r
 
 ### 2.5.2. Context Mapping
 
-En esta sección se define la relación estructural entre los bounded contexts identificados, considerando sus dependencias, responsabilidades y patrones de integración. La propuesta final se presenta en la Figura 28.
+En esta sección se define la relación estructural entre los bounded contexts identificados, considerando sus dependencias, responsabilidades y patrones de integración. La propuesta final se presenta en la Figura 44.
 
 En esta sección se explica cómo definimos las relaciones entre los siete bounded contexts de Flowboard. Partimos de los candidate bounded contexts, los Domain Message Flows y los Bounded Context Canvases, y probamos varias alternativas con las preguntas que propone la técnica antes de quedarnos con el diseño final.
 
@@ -2343,7 +2343,7 @@ Enlace de la figura: https://drive.google.com/file/d/1ktD7dv_auK9fwaGuWSyiViH8ve
 
 ### 2.5.3. Software Architecture
 
-En esta sección se presenta la arquitectura de software de Flowboard mediante el C4 Model. La propuesta incluye el nivel de contexto, el nivel de contenedores y el despliegue de los productos y servicios que conforman la solución. Las Figuras 56 a 58 resumen estas tres vistas arquitectónicas.
+En esta sección se presenta la arquitectura de software de Flowboard mediante el C4 Model. La propuesta incluye el nivel de contexto, el nivel de contenedores y el despliegue de los productos y servicios que conforman la solución. Las Figuras 45 a 47 resumen estas tres vistas arquitectónicas.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
@@ -2372,7 +2372,7 @@ Enlace de la figura: https://drive.google.com/file/d/1pGQclKd26a_jyMMc7pBYe4HJlg
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 En esta sección se presenta el Deployment Diagram para Flowboard. A diferencia del diagrama de contenedores, que muestra de qué partes está formada la solución, este muestra en qué infraestructura se ejecuta cada una de ellas en el ambiente de producción y por qué protocolo se comunican. El diagrama se elaboró con Structurizr DSL a partir del diagrama de contenedores.
-El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL. La infraestructura resultante se muestra en la Figura 56.
+El diagrama tiene cinco nodos. El primero es el dispositivo Android del colaborador o del personal de Recursos Humanos, en cuyo sistema operativo se instalan la aplicación nativa en Kotlin y la aplicación multiplataforma en Flutter, cada una con su base de datos embebida, Room en la nativa y Drift en la de Flutter, que guardan la sesión y los últimos datos sincronizados. El segundo es Firebase App Distribution, desde donde se entregan e instalan los APK de prueba de ambas aplicaciones. El tercero es GitHub Pages, donde se publica el Landing Page que dirige al usuario a la descarga de la aplicación. El cuarto es Render, donde el RESTful API se despliega como Web Service dentro de un contenedor Docker con el jar de Spring Boot. El quinto es Aiven, que aloja la instancia gestionada de MySQL. La infraestructura resultante se muestra en la Figura 47.
 
 **Figura 47:** *Deployment Diagram de Flowboard*
 
@@ -2476,7 +2476,7 @@ Esta capa gestiona la interacción con los clientes externos (frontend o cliente
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-La Figura 29 presenta el Component Diagram del bounded context IAM y muestra la colaboración entre sus componentes principales.
+La Figura 48 presenta el Component Diagram del bounded context IAM y muestra la colaboración entre sus componentes principales.
 
 En esta sección se presenta el Component Diagram del bounded context IAM, mostrando cómo sus componentes se distribuyen entre la aplicación móvil y el API Backend de Flowboard.
 
@@ -3481,7 +3481,7 @@ La escala tipográfica se expresa en sp, de modo que respeta el tamaño de fuent
 | Etiqueta | 12sp | Inter Medium | Secondary Text #43474E | Rótulos de la barra de navegación, chips y pies de campo |
 | Etiqueta activa | 12sp | Inter Semi Bold | Primary Text #191C20 | Destino seleccionado en la barra de navegación |
 
-**Figura 50:** *Tipografía y jerarquía visual de Flowboard*
+**Figura 69:** *Tipografía y jerarquía visual de Flowboard*
 
 ![Tipografía y jerarquía visual de Flowboard](assets/Chapter-3/tipografia-jerarquia.png)
 
@@ -3506,7 +3506,7 @@ La paleta se construye sobre un azul pizarra institucional que transmite sobried
 | Accent | #D3C0D8 | Puntos de énfasis y marcadores de sección |
 | Text sobre Primary | #FFFFFF | Texto e iconos sobre fondos de color primario |
 
-**Figura 51:** *Paleta de colores de Flowboard*
+**Figura 70:** *Paleta de colores de Flowboard*
 
 ![Paleta de colores de Flowboard](assets/Chapter-3/paleta-colores.png)
 
@@ -3548,13 +3548,13 @@ La arquitectura de espaciados adopta una unidad base de 8dp. Todos los márgenes
 
 El último valor merece una justificación propia. Material Design establece 48dp como área táctil mínima porque equivale aproximadamente a nueve milímetros físicos, que es la medida promedio de la yema de un dedo. En Flowboard esta regla se aplica sin excepción: los iconos se dibujan a 22dp o 24dp, pero su contenedor accionable mide 48dp, de modo que el usuario no necesita precisión para activarlos. Es una decisión de diseño inclusivo, porque beneficia en particular a usuarios con temblor o con movilidad reducida en las manos.
 
-**Figura 52:** *Componentes base de la interfaz móvil*
+**Figura 71:** *Componentes base de la interfaz móvil*
 
 ![Componentes base de la interfaz móvil](assets/Chapter-3/componentes-base.png)
 
 *Nota.* Especificación de botones, campos de texto, chips de estado, tarjetas y listados, con sus medidas y sus estados. Elaboración propia.
 
-**Figura 53:** *Retícula de 8dp y áreas táctiles*
+**Figura 72:** *Retícula de 8dp y áreas táctiles*
 
 ![Retícula de 8dp y áreas táctiles](assets/Chapter-3/areas-tactiles.png)
 
@@ -3594,7 +3594,7 @@ La arquitectura de información de Flowboard responde a una tensión propia del 
 
 #### 3.1.2.1. Organization Systems
 
-La Figura 54 presenta los sistemas de organización de la información utilizados para estructurar el contenido y las funcionalidades de Flowboard.
+La Figura 73 presenta los sistemas de organización de la información utilizados para estructurar el contenido y las funcionalidades de Flowboard.
 
 La aplicación se divide en dos experiencias que se determinan por el rol de la cuenta autenticada. No existen dos aplicaciones ni dos accesos distintos: el usuario inicia sesión una sola vez y la plataforma reconoce si es personal de Recursos Humanos o colaborador, y construye la barra de navegación en consecuencia. El personal de Recursos Humanos dispone además de la vista de autogestión, porque también es colaborador de la organización y consulta sus propias boletas y su propio saldo.
 
@@ -3628,7 +3628,7 @@ El colaborador que tiene personal a cargo recibe una bandeja de solicitudes por 
 
 - **Alfabético:** se aplica como ordenamiento por defecto en los listados donde el usuario busca una persona o una unidad concreta y no existe una prioridad temporal, que son el directorio de colaboradores ordenado por apellido y el listado general de áreas y posiciones.
 
-**Figura 54:** *Sistemas de organización de la aplicación móvil*
+**Figura 73:** *Sistemas de organización de la aplicación móvil*
 
 ![Sistemas de organización de la aplicación móvil](assets/Chapter-3/sistemas-organizacion.png)
 
@@ -3703,7 +3703,7 @@ La bandeja del aprobador incorpora un caso intermedio, con botones segmentados q
 
 #### 3.1.2.5. Navigation Systems
 
-La Figura 55 presenta el mapa de navegación de la aplicación móvil y muestra las rutas principales entre sus pantallas.
+La Figura 74 presenta el mapa de navegación de la aplicación móvil y muestra las rutas principales entre sus pantallas.
 
 La navegación se apoya en cinco mecanismos, cada uno asignado a un tipo de recorrido.
 
@@ -3719,7 +3719,7 @@ La navegación se apoya en cinco mecanismos, cada uno asignado a un tipo de reco
 
 La retroalimentación del sistema se entrega mediante snackbars en la parte inferior para las confirmaciones de acciones completadas, mediante mensajes en línea bajo el campo correspondiente para los errores de validación, y mediante estados vacíos explicativos cuando un listado no tiene contenido. Ninguna de las tres interrumpe el flujo con un diálogo modal.
 
-**Figura 55:** *Mapa de navegación de la aplicación móvil*
+**Figura 74:** *Mapa de navegación de la aplicación móvil*
 
 ![Mapa de navegación de la aplicación móvil](assets/Chapter-3/mapa-navegacion.png)
 
@@ -3735,7 +3735,7 @@ El sitio se encuentra desplegado y accesible en https://performily-mobile.github
 
 #### 3.1.3.1. Landing Page Wireframe
 
-La Figura 56 presenta el wireframe del Landing Page para la versión de navegador de escritorio.
+La Figura 75 presenta el wireframe del Landing Page para la versión de navegador de escritorio.
 
 Los wireframes fijan la estructura y el orden de lectura de las nueve secciones sin comprometer color ni tipografía, y se elaboraron en las dos resoluciones de referencia. La versión de navegador de escritorio distribuye el contenido en dos y tres columnas según el bloque, mientras que la versión de navegador móvil colapsa todo a una sola columna, reordena los llamados a la acción para que queden dentro del primer desplazamiento y convierte el menú del encabezado en un control desplegable.
 
@@ -3743,13 +3743,13 @@ El orden de las secciones responde a una decisión de arquitectura de informaci�
 
 En la propuesta se aplican los principios de diseño inclusivo definidos para el producto. El contenido conserva una jerarquía de encabezados correcta de H1 a H3 que permite recorrer la página con un lector de pantalla, cada bloque interactivo recibe foco visible en un orden lógico, las imágenes informativas cuentan con texto alternativo y ningún mensaje depende únicamente del color para ser comprendido.
 
-**Figura 56:** *Wireframe del Landing Page, versión de navegador de escritorio*
+**Figura 75:** *Wireframe del Landing Page, versión de navegador de escritorio*
 
 ![Wireframe del Landing Page en escritorio](assets/Chapter-3/landing-wireframe-desktop.png)
 
 *Nota.* Secciones LP-01 a LP-09 en su distribución de dos y tres columnas, con el encabezado fijo y el pie de página en tres bloques. Elaboración propia.
 
-**Figura 57:** *Wireframe del Landing Page, versión de navegador móvil*
+**Figura 76:** *Wireframe del Landing Page, versión de navegador móvil*
 
 ![Wireframe del Landing Page en móvil](assets/Chapter-3/landing-wireframe-mobile.png)
 
@@ -3757,19 +3757,19 @@ En la propuesta se aplican los principios de diseño inclusivo definidos para el
 
 #### 3.1.3.2. Landing Page Mock-up
 
-Las Figuras 58 y 59 presentan los mock-ups del Landing Page en sus versiones de navegador de escritorio y navegador móvil.
+Las Figuras 77 y 78 presentan los mock-ups del Landing Page en sus versiones de navegador de escritorio y navegador móvil.
 
 Los mock-ups aplican sobre esos wireframes el sistema de diseño de la sección 3.1.1.1. El azul pizarra Primary se reserva para la acción principal de cada bloque, de modo que en ninguna sección compiten dos botones por la misma atención, y el Light Primary se emplea como fondo de las secciones intercaladas para marcar el ritmo de lectura sin introducir un color nuevo. Los mock-ups se codifican de MK-01 a MK-09 y mantienen correspondencia uno a uno con los wireframes, de modo que cualquier cambio estructural se puede rastrear entre ambas versiones.
 
 El bloque de las dos experiencias es el que más trabajo de diseño concentró, porque debe comunicar en un solo golpe de vista que se trata de una aplicación y no de dos productos distintos. Se resolvió con dos columnas simétricas que comparten el mismo marco de dispositivo y se diferencian solo por el contenido de la pantalla y por el rótulo del segmento, apoyando visualmente la decisión de producto de mantener un único inicio de sesión que reconoce el rol.
 
-**Figura 58:** *Mock-up del Landing Page, versión de navegador de escritorio*
+**Figura 77:** *Mock-up del Landing Page, versión de navegador de escritorio*
 
 ![Mock-up del Landing Page en escritorio](assets/Chapter-3/landing-mockup-desktop.png)
 
 *Nota.* Aplicación de la paleta, la tipografía Inter y la escala de espaciado sobre las secciones LP-01 a LP-09. Elaboración propia.
 
-**Figura 59:** *Mock-up del Landing Page, versión de navegador móvil*
+**Figura 78:** *Mock-up del Landing Page, versión de navegador móvil*
 
 ![Mock-up del Landing Page en móvil](assets/Chapter-3/landing-mockup-mobile.png)
 
@@ -3785,7 +3785,7 @@ Las dos aplicaciones, la nativa en Kotlin y la cross-platform en Flutter, compar
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
-Las Figuras 60 a 75 presentan los wireframes de las aplicaciones móviles, organizados según los módulos funcionales y los perfiles de usuario.
+Las Figuras 79 a 88 presentan los wireframes de las aplicaciones móviles, organizados según los módulos funcionales y los perfiles de usuario.
 
 Se elaboraron 83 wireframes sobre un lienzo de 360 por 800dp, que corresponde a la clase de ventana compacta de Android. El conjunto no se limita a los caminos felices: incluye los estados vacíos, los formularios con errores de validación, los bloqueos por regla de negocio, la vista sin conexión y los mensajes del sistema, porque son esas pantallas las que determinan si el usuario entiende qué hacer cuando algo no sale como esperaba.
 
@@ -3808,61 +3808,61 @@ Los wireframes se distribuyen entre los bounded contexts del modelo de dominio d
 
 Elaborado en Figma: https://www.figma.com/design/WFdHq0SwabwQAXZEAVd9an/Flowboard-Mobile---Wireframes
 
-**Figura 60:** *Wireframes de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
+**Figura 79:** *Wireframes de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
 
 ![Wireframes de acceso y cuenta](assets/Chapter-3/wireframes-iam.png)
 
 *Nota.* Inicio de sesión único con reconocimiento de rol, cambio obligatorio de contraseña temporal, desbloqueo biométrico y pantallas de cuenta y seguridad. Elaboración propia.
 
-**Figura 61:** *Wireframes de autogestión del perfil, MA-14 a MA-17*
+**Figura 80:** *Wireframes de autogestión del perfil, MA-14 a MA-17*
 
 ![Wireframes de autogestión del perfil](assets/Chapter-3/wireframes-workspace-colaborador.png)
 
 *Nota.* Inicio del colaborador, perfil laboral, expediente documental y organigrama del área. Elaboración propia.
 
-**Figura 62:** *Wireframes de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
+**Figura 81:** *Wireframes de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
 
 ![Wireframes de administración de colaboradores](assets/Chapter-3/wireframes-workspace-rrhh.png)
 
 *Nota.* Panel de Recursos Humanos, directorio con búsqueda y filtros, alta por pasos, ficha, reasignación de puesto, cese, reincorporación, áreas, posiciones y organigrama general. Elaboración propia.
 
-**Figura 63:** *Wireframes de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
+**Figura 82:** *Wireframes de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
 
 ![Wireframes de asistencia](assets/Chapter-3/wireframes-attendance.png)
 
 *Nota.* Historial propio del colaborador, justificación de inasistencia, asistencia por área, detalle por colaborador y reporte de horas y sobretiempo. Elaboración propia.
 
-**Figura 64:** *Wireframes de solicitudes del colaborador, MA-37 a MA-46*
+**Figura 83:** *Wireframes de solicitudes del colaborador, MA-37 a MA-46*
 
 ![Wireframes de solicitudes del colaborador](assets/Chapter-3/wireframes-request-colaborador.png)
 
 *Nota.* Listado propio, creación por pasos con validación de saldo, revisión y envío, detalle, cancelación, devolución a revisión y notificaciones. Elaboración propia.
 
-**Figura 65:** *Wireframes de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
+**Figura 84:** *Wireframes de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
 
 ![Wireframes de la bandeja del aprobador](assets/Chapter-3/wireframes-request-aprobador.png)
 
 *Nota.* Bandeja por aprobar, revisión de la solicitud, rechazo con motivo obligatorio, devolución a revisión, notificación push y bandeja sin pendientes. Elaboración propia.
 
-**Figura 66:** *Wireframes de administración de solicitudes, MA-52 a MA-56*
+**Figura 85:** *Wireframes de administración de solicitudes, MA-52 a MA-56*
 
 ![Wireframes de administración de solicitudes](assets/Chapter-3/wireframes-request-rrhh.png)
 
 *Nota.* Solicitudes asignadas a Recursos Humanos, vista general con filtros, catálogo de tipos de solicitud y alta de un tipo nuevo. Elaboración propia.
 
-**Figura 67:** *Wireframes de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
+**Figura 86:** *Wireframes de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
 
 ![Wireframes de beneficios](assets/Chapter-3/wireframes-benefits.png)
 
 *Nota.* Saldo sin conexión, beneficios del colaborador, catálogo, asignación, registro de entrega, ajuste manual del saldo y saldos por colaborador. Elaboración propia.
 
-**Figura 68:** *Wireframes de boletas y estado de pagos, MA-64 a MA-69*
+**Figura 87:** *Wireframes de boletas y estado de pagos, MA-64 a MA-69*
 
 ![Wireframes de boletas](assets/Chapter-3/wireframes-payroll.png)
 
 *Nota.* Acceso protegido con biometría, listado por período, visor de boleta, carga masiva, boleta duplicada y control del estado del depósito. Elaboración propia.
 
-**Figura 69:** *Wireframes de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
+**Figura 88:** *Wireframes de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
 
 ![Wireframes de bienestar](assets/Chapter-3/wireframes-wellbeing.png)
 
@@ -3870,7 +3870,7 @@ Elaborado en Figma: https://www.figma.com/design/WFdHq0SwabwQAXZEAVd9an/Flowboar
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
-Las Figuras 76 y 77 presentan los wireflow diagrams de las aplicaciones móviles y muestran la secuencia de pantallas de los flujos principales.
+Las Figuras 89 a 94 presentan los wireflow diagrams de las aplicaciones móviles y muestran la secuencia de pantallas de los flujos principales.
 
 Los wireflows muestran la secuencia de pantallas que recorre un usuario para completar una meta concreta, incorporando como un paso más cada cambio de estado de la interfaz. Se elaboró un wireflow por cada user goal, derivado previamente de un task flow que estableció con el equipo cuál es la ruta típica de pasos antes de dibujar pantalla alguna.
 
@@ -3891,7 +3891,7 @@ Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboar
 
 El recorrido parte del inicio de sesión (MA-01), continúa con el desbloqueo biométrico en los ingresos posteriores al primero (MA-06) y llega al inicio del colaborador (MA-14), donde el saldo de vacaciones se presenta como primer indicador sin necesidad de navegar. Desde allí el usuario entra al detalle de sus beneficios (MA-58) y al histórico de los ya entregados (MA-59). El wireflow incorpora la rama sin conexión (MA-57), en la que la pantalla muestra el último saldo sincronizado junto con la fecha de esa sincronización, en lugar de un error de red.
 
-**Figura 70:** *Wireflow UG-01, consulta del saldo de vacaciones y los beneficios*
+**Figura 89:** *Wireflow UG-01, consulta del saldo de vacaciones y los beneficios*
 
 ![Wireflow UG-01](assets/Chapter-3/wireflow-ug01.png)
 
@@ -3901,7 +3901,7 @@ El recorrido parte del inicio de sesión (MA-01), continúa con el desbloqueo bi
 
 El usuario accede a su listado de solicitudes (MA-37) e inicia el trámite seleccionando el tipo (MA-38). En el detalle (MA-39) introduce las fechas y el sistema valida el saldo disponible en ese mismo paso, de modo que el bloqueo por saldo insuficiente (MA-40) ocurre antes de que el usuario invierta esfuerzo en completar el resto del formulario. Superada la validación, revisa y envía (MA-41) y pasa a seguir el estado desde el detalle (MA-42). El wireflow continúa más allá del envío, porque la meta no termina al enviar sino al obtener respuesta: incorpora la recepción de la notificación (MA-45), la rama de devolución a revisión con reenvío (MA-44) y la de cancelación mientras la solicitud sigue pendiente (MA-43).
 
-**Figura 71:** *Wireflow UG-02, solicitud de vacaciones y seguimiento*
+**Figura 90:** *Wireflow UG-02, solicitud de vacaciones y seguimiento*
 
 ![Wireflow UG-02](assets/Chapter-3/wireflow-ug02.png)
 
@@ -3911,7 +3911,7 @@ El usuario accede a su listado de solicitudes (MA-37) e inicia el trámite selec
 
 Al entrar a la sección de boletas el usuario encuentra primero una pantalla de acceso protegido (MA-64) que exige verificación biométrica antes de mostrar cualquier dato remunerativo. Resuelta la verificación (MA-06), accede al listado por período (MA-65) y al visor de la boleta con su estado de depósito (MA-66), desde donde la descarga. El wireflow incluye la rama de respaldo mediante contraseña, prevista para el caso en que el dispositivo no disponga de sensor biométrico o el usuario haya optado por no habilitarlo.
 
-**Figura 72:** *Wireflow UG-03, consulta y descarga de una boleta de pago*
+**Figura 91:** *Wireflow UG-03, consulta y descarga de una boleta de pago*
 
 ![Wireflow UG-03](assets/Chapter-3/wireflow-ug03.png)
 
@@ -3921,7 +3921,7 @@ Al entrar a la sección de boletas el usuario encuentra primero una pantalla de 
 
 Este es el recorrido más corto del producto y esa brevedad es intencional, porque el aprobador es un usuario de baja frecuencia que no tiene el hábito de abrir la aplicación. Se inicia fuera de ella, en la notificación push (MA-51), que abre directamente la bandeja (MA-47) y el detalle de la solicitud (MA-48). Desde ahí el aprobador resuelve por una de tres vías: aprobar, rechazar con motivo obligatorio (MA-49) o devolver a revisión pidiendo información adicional (MA-50). El wireflow contempla también el estado de bandeja vacía (MA-79).
 
-**Figura 73:** *Wireflow UG-04, resolución de una solicitud desde la notificación*
+**Figura 92:** *Wireflow UG-04, resolución de una solicitud desde la notificación*
 
 ![Wireflow UG-04](assets/Chapter-3/wireflow-ug04.png)
 
@@ -3931,7 +3931,7 @@ Este es el recorrido más corto del producto y esa brevedad es intencional, porq
 
 El analista parte de su panel (MA-18), entra al directorio (MA-20) e inicia el alta, que se resolvió en dos pasos para no exigir un formulario extenso sobre una pantalla de 360dp: primero los datos personales (MA-22) y después el contrato junto con la asignación de área, puesto y jefe directo (MA-23). Al confirmar, el sistema genera la credencial temporal y la muestra una sola vez en pantalla, porque en este proyecto la entrega al colaborador la realiza el propio analista de forma directa y no existe un servicio de correo. El recorrido cierra en la ficha del colaborador creado (MA-24).
 
-**Figura 74:** *Wireflow UG-05, registro de un nuevo colaborador*
+**Figura 93:** *Wireflow UG-05, registro de un nuevo colaborador*
 
 ![Wireflow UG-05](assets/Chapter-3/wireflow-ug05.png)
 
@@ -3941,7 +3941,7 @@ El analista parte de su panel (MA-18), entra al directorio (MA-20) e inicia el a
 
 Desde el panel (MA-18) el analista entra a la asistencia por área (MA-35), donde aplica el filtro de período y recorre el listado de colaboradores con su resumen del mes. Al tocar una fila accede al detalle día por día de esa persona (MA-36) y, cuando necesita sustentar carga de trabajo, al reporte de horas y sobretiempo (MA-78). Este wireflow es el que materializa la adaptación de la organización matricial descrita en la sección 3.1.2.1, porque muestra cómo una matriz de colaboradores por días se recorre en móvil por una dimensión a la vez.
 
-**Figura 75:** *Wireflow UG-06, revisión de la asistencia de un área*
+**Figura 94:** *Wireflow UG-06, revisión de la asistencia de un área*
 
 ![Wireflow UG-06](assets/Chapter-3/wireflow-ug06.png)
 
@@ -3949,7 +3949,7 @@ Desde el panel (MA-18) el analista entra a la asistencia por área (MA-35), dond
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
-Las Figuras 80 a 85 presentan los mock-ups de las aplicaciones móviles y muestran la propuesta visual de los principales módulos funcionales.
+Las Figuras 95 a 104 presentan los mock-ups de las aplicaciones móviles y muestran la propuesta visual de los principales módulos funcionales.
 
 Los mock-ups aplican sobre los 83 wireframes el sistema de diseño definido en la sección 3.1.1.1 y mantienen la misma codificación MA, de modo que la correspondencia entre estructura y presentación es uno a uno y cualquier cambio se puede rastrear entre ambos artefactos.
 
@@ -3957,61 +3957,61 @@ Tres decisiones de diseño se aprecian de forma transversal en el conjunto. La p
 
 Elaborado en Figma: https://www.figma.com/design/PbZic365b3k2R8h824XkKW/Flowboard-Mobile---Mockups
 
-**Figura 76:** *Mock-ups de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
+**Figura 95:** *Mock-ups de acceso, cuenta y pantallas transversales, MA-01 a MA-13 y MA-82*
 
 ![Mock-ups de acceso y cuenta](assets/Chapter-3/mockups-iam.png)
 
 *Nota.* Aplicación de la paleta y la tipografía sobre el inicio de sesión único, el cambio obligatorio de contraseña y la hoja inferior de desbloqueo biométrico. Elaboración propia.
 
-**Figura 77:** *Mock-ups de autogestión del perfil, MA-14 a MA-17*
+**Figura 96:** *Mock-ups de autogestión del perfil, MA-14 a MA-17*
 
 ![Mock-ups de autogestión del perfil](assets/Chapter-3/mockups-workspace-colaborador.png)
 
 *Nota.* Inicio del colaborador con los indicadores propios en el nivel superior, perfil, expediente y organigrama del área. Elaboración propia.
 
-**Figura 78:** *Mock-ups de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
+**Figura 97:** *Mock-ups de administración de colaboradores y estructura, MA-18 a MA-33 y MA-83*
 
 ![Mock-ups de administración de colaboradores](assets/Chapter-3/mockups-workspace-rrhh.png)
 
 *Nota.* Panel de Recursos Humanos, directorio con búsqueda y chips de filtro, alta por pasos, ficha y gestión de áreas y posiciones. Elaboración propia.
 
-**Figura 79:** *Mock-ups de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
+**Figura 98:** *Mock-ups de asistencia y control horario, MA-34 a MA-36 y MA-76 a MA-78*
 
 ![Mock-ups de asistencia](assets/Chapter-3/mockups-attendance.png)
 
 *Nota.* Chips de estado de asistencia, historial propio, justificación de inasistencia y reportes por área y por colaborador. Elaboración propia.
 
-**Figura 80:** *Mock-ups de solicitudes del colaborador, MA-37 a MA-46*
+**Figura 99:** *Mock-ups de solicitudes del colaborador, MA-37 a MA-46*
 
 ![Mock-ups de solicitudes del colaborador](assets/Chapter-3/mockups-request-colaborador.png)
 
 *Nota.* Listado con chips de estado, creación por pasos, bloqueo por saldo insuficiente y detalle con la trazabilidad del trámite. Elaboración propia.
 
-**Figura 81:** *Mock-ups de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
+**Figura 100:** *Mock-ups de la bandeja del aprobador, MA-47 a MA-51 y MA-79*
 
 ![Mock-ups de la bandeja del aprobador](assets/Chapter-3/mockups-request-aprobador.png)
 
 *Nota.* Notificación push, bandeja por aprobar, revisión de la solicitud y hojas inferiores de rechazo y devolución. Elaboración propia.
 
-**Figura 82:** *Mock-ups de administración de solicitudes, MA-52 a MA-56*
+**Figura 101:** *Mock-ups de administración de solicitudes, MA-52 a MA-56*
 
 ![Mock-ups de administración de solicitudes](assets/Chapter-3/mockups-request-rrhh.png)
 
 *Nota.* Vista general con botones segmentados y chips de filtro, catálogo de tipos de solicitud y alta de un tipo con campos configurables. Elaboración propia.
 
-**Figura 83:** *Mock-ups de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
+**Figura 102:** *Mock-ups de beneficios y saldo de vacaciones, MA-57 a MA-63 y MA-80*
 
 ![Mock-ups de beneficios](assets/Chapter-3/mockups-benefits.png)
 
 *Nota.* Saldo sin conexión con su marca temporal, beneficios del colaborador, catálogo, asignación y ajuste manual con motivo obligatorio. Elaboración propia.
 
-**Figura 84:** *Mock-ups de boletas y estado de pagos, MA-64 a MA-69*
+**Figura 103:** *Mock-ups de boletas y estado de pagos, MA-64 a MA-69*
 
 ![Mock-ups de boletas](assets/Chapter-3/mockups-payroll.png)
 
 *Nota.* Pantalla de acceso protegido, listado por período, visor con el chip de estado del depósito y carga masiva desde Recursos Humanos. Elaboración propia.
 
-**Figura 85:** *Mock-ups de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
+**Figura 104:** *Mock-ups de espacios de trabajo e indicadores ambientales, MA-70 a MA-75 y MA-81*
 
 ![Mock-ups de bienestar](assets/Chapter-3/mockups-wellbeing.png)
 
@@ -4019,7 +4019,7 @@ Elaborado en Figma: https://www.figma.com/design/PbZic365b3k2R8h824XkKW/Flowboar
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
-Las Figuras 86 a 89 presentan los user flow diagrams y describen los recorridos principales que puede realizar cada tipo de usuario.
+Las Figuras 105 a 110 presentan los user flow diagrams y describen los recorridos principales que puede realizar cada tipo de usuario.
 
 Los user flows se derivan de los wireflows de la sección 3.1.4.2 y conservan su numeración, de modo que cada UG tiene ambos artefactos. La diferencia entre uno y otro es el nivel de abstracción: el wireflow muestra qué ve el usuario en cada paso, mientras que el user flow muestra qué decide el sistema. Por eso los user flows incorporan los nodos de decisión con sus condiciones, el camino esperado y las rutas alternativas que se activan cuando una regla de negocio bloquea el avance.
 
@@ -4036,37 +4036,37 @@ Las condiciones representadas en los diagramas no son supuestos de diseño, sino
 
 Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboard-Mobile---Wireflows-y-User-Flows
 
-**Figura 86:** *User flow UF-01, consulta del saldo de vacaciones y los beneficios*
+**Figura 105:** *User flow UF-01, consulta del saldo de vacaciones y los beneficios*
 
 ![User flow UF-01](assets/Chapter-3/userflow-uf01.png)
 
 *Nota.* Nodo de decisión sobre la disponibilidad de conexión y ruta alternativa hacia los datos sincronizados localmente. Elaboración propia.
 
-**Figura 87:** *User flow UF-02, solicitud de vacaciones y seguimiento*
+**Figura 106:** *User flow UF-02, solicitud de vacaciones y seguimiento*
 
 ![User flow UF-02](assets/Chapter-3/userflow-uf02.png)
 
 *Nota.* Nodos de validación de saldo y de adjunto obligatorio, con las rutas de devolución a revisión y de cancelación. Elaboración propia.
 
-**Figura 88:** *User flow UF-03, consulta y descarga de una boleta de pago*
+**Figura 107:** *User flow UF-03, consulta y descarga de una boleta de pago*
 
 ![User flow UF-03](assets/Chapter-3/userflow-uf03.png)
 
 *Nota.* Nodo de verificación biométrica con la ruta de respaldo por contraseña y la ruta de período sin boletas. Elaboración propia.
 
-**Figura 89:** *User flow UF-04, resolución de una solicitud desde la notificación*
+**Figura 108:** *User flow UF-04, resolución de una solicitud desde la notificación*
 
 ![User flow UF-04](assets/Chapter-3/userflow-uf04.png)
 
 *Nota.* Nodos de decisión del aprobador y validación del motivo obligatorio en el rechazo. Elaboración propia.
 
-**Figura 90:** *User flow UF-05, registro de un nuevo colaborador*
+**Figura 109:** *User flow UF-05, registro de un nuevo colaborador*
 
 ![User flow UF-05](assets/Chapter-3/userflow-uf05.png)
 
 *Nota.* Validaciones de documento duplicado y de campos obligatorios, con la emisión de la credencial temporal mostrada una sola vez. Elaboración propia.
 
-**Figura 91:** *User flow UF-06, revisión de la asistencia de un área*
+**Figura 110:** *User flow UF-06, revisión de la asistencia de un área*
 
 ![User flow UF-06](assets/Chapter-3/userflow-uf06.png)
 
@@ -4074,7 +4074,7 @@ Elaborado en FigJam: https://www.figma.com/board/PL1IkZqE27ejQfWD2XIFny/Flowboar
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
-La Figura 90 presenta el prototipo navegable de las aplicaciones móviles y permite observar la interacción entre las pantallas diseñadas.
+La Figura 111 presenta el prototipo navegable de las aplicaciones móviles y permite observar la interacción entre las pantallas diseñadas.
 
 El prototipo navegable reproduce los seis user flows de la sección anterior con simulación de interacción y navegación. Los criterios que guiaron las decisiones de interacción son cuatro, y los tres primeros se desprenden directamente del sistema de navegación definido en la sección 3.1.2.5.
 
@@ -4084,9 +4084,15 @@ El prototipo se construyó en Figma sobre los mock-ups, conectando las 83 pantal
 
 Elaborado en Figma: https://www.figma.com/design/RBVdavhWuchp0u7GVx6m7I/Flowboard-Mobile---Prototipo
 
+**Figura 111:** *Conexiones del prototipo navegable de la aplicación móvil en Figma*
+
+![Conexiones del prototipo navegable](assets/Chapter-3/prototipo-conexiones.png)
+
+*Nota.* Pantallas del prototipo conectadas según las rutas de los user flows. Elaboración propia.
+
 **Prototipo de la aplicación**
 
-**Figura 92:** *Captura del video de demostración del prototipo de la aplicación nativa*
+**Figura 112:** *Captura del video de demostración del prototipo de la aplicación nativa*
 
 ![Captura del video del prototipo de la aplicación nativa](assets/Chapter-3/prototipo-nativa-video.png)
 
@@ -4238,7 +4244,7 @@ Los archivos `.feature` siguen “Gherkin Conventions for Readable Specification
 
 En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El diagrama siguiente resume el recorrido de cada uno en cuatro etapas: el repositorio en GitHub, la construcción, el alojamiento o la distribución, y la ejecución en producción. El Landing Page se publica en GitHub Pages, el RESTful API se construye como imagen Docker y se ejecuta en Render conectado a MySQL en Aiven, y la aplicación nativa se firma, se sube a Firebase App Distribution y se instala en el dispositivo Android del tester. El diagrama complementa el Deployment Diagram de C4 Model de la sección 2.5.3.3, que muestra la misma infraestructura sin el recorrido desde el código.
 
-**Figura 93:** *Deployment Diagram de Flowboard*
+**Figura 113:** *Deployment Diagram de Flowboard*
 
 ![Deployment Diagram de Flowboard](assets/Chapter-4/deployment-pipeline.png)
 
@@ -4315,17 +4321,17 @@ Los aspectos del Sprint 1 corresponden a los productos y bounded contexts que en
 
 #### 4.2.1.3. Sprint Backlog 1
 
-La Figura 92 presenta el Sprint Backlog 1, donde se visualizan las historias y tareas seleccionadas para el incremento desarrollado durante el sprint.
+La Figura 114 presenta el Sprint Backlog 1, donde se visualizan las historias y tareas seleccionadas para el incremento desarrollado durante el sprint.
 
 El objetivo del Sprint 1 fue publicar el Landing Page y construir la primera versión de la aplicación nativa sobre el RESTful API, cubriendo los Epics EP02 a EP08 y las Technical Stories y Spikes que sostienen el despliegue. Las User Stories se descompusieron en tasks por capa (API y aplicación) y se asignaron según la matriz de líderes. El tablero del Sprint se gestionó en Trello.
 
-**Figura 94:** *Tablero del Sprint 1 en Trello*
+**Figura 114:** *Tablero del Sprint 1 en Trello*
 
 ![Tablero del Sprint 1 en Trello](assets/Chapter-4/sprint1-backlog-trello.png)
 
-*Nota.* Columnas To-do, In Process, To-Review y Done con las tarjetas del Sprint 1. Elaboración propia.
+*Nota.* Tablero Sprint Backlog 1 - Moviles en Trello con las columnas To Do, In Process y Done. Elaboración propia.
 
-Enlace del tablero: https://trello.com/b/KZiuVfYX/flowboard-product-backlog
+Enlace del tablero: https://trello.com/b/7W5MS9x6/sprint-backlog-1-moviles
 
 **Tabla 5:** *Sprint Backlog 1*
 
@@ -4658,13 +4664,13 @@ Las pruebas de la aplicación se ubican en `app/src/test/java` y verifican los c
 
 *Nota.* Elaboración propia.
 
-**Figura 95:** *Ejecución de los Unit Tests del RESTful API*
+**Figura 115:** *Ejecución de los Unit Tests del RESTful API*
 
 ![Ejecución de los Unit Tests del API](assets/Chapter-4/tests-api.png)
 
 *Nota.* Resultado de `./mvnw test` en el repositorio del API. Elaboración propia.
 
-**Figura 96:** *Ejecución de los Unit Tests de la aplicación nativa*
+**Figura 116:** *Ejecución de los Unit Tests de la aplicación nativa*
 
 ![Ejecución de los Unit Tests de la aplicación](assets/Chapter-4/tests-app.png)
 
@@ -4803,31 +4809,31 @@ Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versi�
 
 **Landing Page**
 
-**Figura 97:** *Landing Page, sección principal*
+**Figura 117:** *Landing Page, sección principal*
 
 ![Landing Page, sección principal](assets/Chapter-4/landing-hero.png)
 
 *Nota.* Propuesta de valor, mockup del dispositivo y selector de idioma. Elaboración propia.
 
-**Figura 98:** *Landing Page, segmentos por rol*
+**Figura 118:** *Landing Page, segmentos por rol*
 
 ![Landing Page, segmentos por rol](assets/Chapter-4/landing-segmentos.png)
 
 *Nota.* Experiencias de Recursos Humanos y del colaborador con su llamado a la acción. Elaboración propia.
 
-**Figura 99:** *Landing Page, funcionalidades y módulos*
+**Figura 119:** *Landing Page, funcionalidades y módulos*
 
 ![Landing Page, funcionalidades y módulos](assets/Chapter-4/landing-funcionalidades.png)
 
 *Nota.* Los siete módulos del producto y sus integraciones. Elaboración propia.
 
-**Figura 100:** *Landing Page, términos del servicio y política de privacidad*
+**Figura 120:** *Landing Page, términos del servicio y política de privacidad*
 
 ![Landing Page, términos y privacidad](assets/Chapter-4/landing-legal.png)
 
 *Nota.* Páginas legales enlazadas desde el footer. Elaboración propia.
 
-**Figura 101:** *Landing Page, vista en navegador móvil*
+**Figura 121:** *Landing Page, vista en navegador móvil*
 
 ![Landing Page en móvil](assets/Chapter-4/landing-responsive.png)
 
@@ -4835,55 +4841,55 @@ Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versi�
 
 **Aplicación nativa: vista de Recursos Humanos**
 
-**Figura 102:** *Aplicación, lista de colaboradores con búsqueda y filtros*
+**Figura 122:** *Aplicación, lista de colaboradores con búsqueda y filtros*
 
 ![Colaboradores](assets/Chapter-4/app-workspace-colaboradores.png)
 
 *Nota.* Workspace, US20. Elaboración propia.
 
-**Figura 103:** *Aplicación, ficha del colaborador*
+**Figura 123:** *Aplicación, ficha del colaborador*
 
 ![Ficha del colaborador](assets/Chapter-4/app-workspace-ficha.png)
 
 *Nota.* Workspace, pestañas de datos, puesto y expediente (US10, US14, US17). Elaboración propia.
 
-**Figura 104:** *Aplicación, organigrama*
+**Figura 124:** *Aplicación, organigrama*
 
 ![Organigrama](assets/Chapter-4/app-workspace-organigrama.png)
 
 *Nota.* Workspace, US12 y US13. Elaboración propia.
 
-**Figura 105:** *Aplicación, asistencia por área*
+**Figura 125:** *Aplicación, asistencia por área*
 
 ![Asistencia por área](assets/Chapter-4/app-attendance-area.png)
 
 *Nota.* Attendance, US24. Elaboración propia.
 
-**Figura 106:** *Aplicación, bandeja de solicitudes y revisión*
+**Figura 126:** *Aplicación, bandeja de solicitudes y revisión*
 
 ![Bandeja de solicitudes](assets/Chapter-4/app-request-bandeja.png)
 
 *Nota.* Request, US32 a US35. Elaboración propia.
 
-**Figura 107:** *Aplicación, catálogo y asignaciones de beneficios*
+**Figura 127:** *Aplicación, catálogo y asignaciones de beneficios*
 
 ![Beneficios](assets/Chapter-4/app-benefits-rrhh.png)
 
 *Nota.* Benefits, US37 a US39. Elaboración propia.
 
-**Figura 108:** *Aplicación, carga de boletas y estado de pagos*
+**Figura 128:** *Aplicación, carga de boletas y estado de pagos*
 
 ![Boletas y pagos](assets/Chapter-4/app-payroll-rrhh.png)
 
 *Nota.* Payroll, US43, US45 y US46. Elaboración propia.
 
-**Figura 109:** *Aplicación, indicadores de un espacio de trabajo*
+**Figura 129:** *Aplicación, indicadores de un espacio de trabajo*
 
 ![Indicadores del espacio](assets/Chapter-4/app-wellbeing-indicadores.png)
 
 *Nota.* Wellbeing, US48 y US50, con el aviso de nivel peligroso. Elaboración propia.
 
-**Figura 110:** *Aplicación, umbrales e histórico por métrica*
+**Figura 130:** *Aplicación, umbrales e histórico por métrica*
 
 ![Umbrales e histórico](assets/Chapter-4/app-wellbeing-historico.png)
 
@@ -5071,19 +5077,19 @@ Respuesta `200 OK`:
 }
 ```
 
-**Figura 111:** *Swagger UI del RESTful API de Flowboard*
+**Figura 131:** *Swagger UI del RESTful API de Flowboard*
 
 ![Swagger UI](assets/Chapter-4/swagger-general.png)
 
 *Nota.* Grupos de endpoints por bounded context. Elaboración propia.
 
-**Figura 112:** *Definición de POST /api/v1/offices en Swagger UI*
+**Figura 132:** *Definición de POST /api/v1/offices en Swagger UI*
 
 ![POST offices en Swagger](assets/Chapter-4/swagger-post-offices.png)
 
 *Nota.* Endpoint del grupo Wellbeing - Offices con el cuerpo de la solicitud (nombre, área, dirección, piso y referencia). Elaboración propia.
 
-**Figura 113:** *Definición de GET /api/v1/vacation-balances en Swagger UI*
+**Figura 133:** *Definición de GET /api/v1/vacation-balances en Swagger UI*
 
 ![GET vacation balance en Swagger](assets/Chapter-4/swagger-get-vacation-balance.png)
 
@@ -5108,25 +5114,25 @@ Respuesta `200 OK`:
 
 En el Sprint 1 el despliegue abarcó el Landing Page, el RESTful API y la base de datos. El Landing Page se publicó en GitHub Pages desde la rama `main` del repositorio `flowboard-mobile-landing-page`. Para el API se creó la instancia de MySQL en Aiven, que es la base de datos compartida por todo el equipo durante el desarrollo, se agregó al repositorio un Dockerfile de dos etapas con Eclipse Temurin 25 y se configuró el perfil `prod` con la validación del esquema y el puerto asignado por la plataforma; luego se creó el Web Service en Render a partir de la rama `main`. Durante la configuración de Aiven el equipo encontró que la plataforma exige llave primaria en todas las tablas (`sql_require_primary_key`), por lo que la tabla de rangos de umbrales, que Hibernate no podía crear, se creó con una llave primaria compuesta. La distribución de la aplicación por Firebase App Distribution queda para el Sprint 2, después de apuntar la aplicación a la URL pública del API.
 
-**Figura 114:** *Configuración de GitHub Pages del Landing Page*
+**Figura 134:** *Configuración de GitHub Pages del Landing Page*
 
 ![GitHub Pages](assets/Chapter-4/deploy-github-pages.png)
 
 *Nota.* Publicación desde la rama `main` y URL del sitio. Elaboración propia.
 
-**Figura 115:** *Servicio MySQL en Aiven*
+**Figura 135:** *Servicio MySQL en Aiven*
 
 ![Aiven](assets/Chapter-4/deploy-aiven.png)
 
 *Nota.* Instancia MySQL 8.4 gestionada, en estado Running, con los datos de conexión (la contraseña permanece oculta). Elaboración propia.
 
-**Figura 116:** *Web Service del API en Render*
+**Figura 136:** *Web Service del API en Render*
 
 ![Render](assets/Chapter-4/deploy-render.png)
 
 *Nota.* Web Service con runtime Docker, rama `main`, plan gratuito, último despliegue en estado Live y URL pública. Elaboración propia.
 
-**Figura 117:** *API desplegado respondiendo en Swagger UI*
+**Figura 137:** *API desplegado respondiendo en Swagger UI*
 
 ![API desplegado](assets/Chapter-4/deploy-api-swagger.png)
 
@@ -5170,19 +5176,19 @@ En total, el Sprint 1 registró 11 commits en el Landing Page, 64 en el API y 96
 
 *Nota.* Elaboración propia a partir del historial de GitHub, sin contar merges.
 
-**Figura 118:** *Analíticos de colaboración del repositorio del Landing Page*
+**Figura 138:** *Analíticos de colaboración del repositorio del Landing Page*
 
 ![Insights del Landing Page](assets/Chapter-4/insights-landing.png)
 
 *Nota.* GitHub Insights › Contributors. Elaboración propia.
 
-**Figura 119:** *Analíticos de colaboración del repositorio del RESTful API*
+**Figura 139:** *Analíticos de colaboración del repositorio del RESTful API*
 
 ![Insights del API](assets/Chapter-4/insights-service.png)
 
 *Nota.* GitHub Insights › Contributors. Elaboración propia.
 
-**Figura 120:** *Analíticos de colaboración del repositorio de la aplicación nativa*
+**Figura 140:** *Analíticos de colaboración del repositorio de la aplicación nativa*
 
 ![Insights de la aplicación](assets/Chapter-4/insights-app.png)
 
@@ -5251,7 +5257,7 @@ Las sesiones de validación se realizan con la aplicación instalada en el celul
 
 ### 4.3.2. Registro de Entrevistas
 
-Las Figuras 121 a 124 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
+Las Figuras 141 a 144 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
 
 Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre las tareas.
 
@@ -5271,9 +5277,9 @@ Timing donde inicia la entrevista: 0:00
 
 Duración completa de la entrevista: 4 minutos 45 segundos
 
-**Figura 121:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
+**Figura 141:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
 
-![Entrevista de validación 1 - de Recursos Humanos](assets\validacion-s1-01.png)
+![Entrevista de validación 1 - de Recursos Humanos](assets/Chapter-4/validacion-s1-01.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
@@ -5295,9 +5301,9 @@ Timing donde inicia la entrevista: 4:45
 
 Duración completa de la entrevista: 4 minutos 29 segundos
 
-**Figura 122:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
+**Figura 142:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
 
-![Entrevista de validación 2 - de Recursos Humanos](assets\validacion-s1-02.png)
+![Entrevista de validación 2 - de Recursos Humanos](assets/Chapter-4/validacion-s1-02.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
@@ -5322,9 +5328,9 @@ Timing donde inicia la entrevista: 9:15
 
 Duración completa de la entrevista: 5 minutos 53 segundos
 
-**Figura 123:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
+**Figura 143:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
 
-![Entrevista de validación 1 - de colaboradores](assets\validacion-s1-03.png)
+![Entrevista de validación 1 - de colaboradores](assets/Chapter-4/validacion-s1-03.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
@@ -5346,9 +5352,9 @@ Timing donde inicia la entrevista: 15:08
 
 Duración completa de la entrevista: 4 minutos 51 segundos
 
-**Figura 124:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
+**Figura 144:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
 
-![Entrevista de validación 2 - de colaboradores](assets\validacion-s1-04.png)
+![Entrevista de validación 2 - de colaboradores](assets/Chapter-4/validacion-s1-04.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
@@ -5358,7 +5364,7 @@ La entrevistada, Andrea, tiene 26 años y trabaja como asistente de Recursos Hum
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-Las Figuras 125 a 128 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
+Las Figuras 145 a 148 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
 
 **UX Heuristics & Principles Evaluation**
 **Usability - Inclusive Design - Information Architecture**
@@ -5423,7 +5429,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** La aplicación toma el usuario y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. El dispositivo siempre abre con el mismo usuario de Recursos Humanos, no es posible cambiar de usuario y ninguna información está protegida por credenciales.
 
-**Figura 125:** *Aplicación abierta directamente en la vista de Recursos Humanos*
+**Figura 145:** *Aplicación abierta directamente en la vista de Recursos Humanos*
 
 ![Problema 1](assets/Chapter-4/heuristica-p3.png)
 
@@ -5438,7 +5444,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Para asignar un beneficio o revisar un espacio de trabajo, el usuario de Recursos Humanos debe abrir “Más” y luego la opción correspondiente. Es una tarea recurrente que queda a dos niveles de profundidad y que el usuario no descubre si no explora el menú.
 
-**Figura 126:** *Menú Más de Recursos Humanos*
+**Figura 146:** *Menú Más de Recursos Humanos*
 
 ![Problema 2](assets/Chapter-4/heuristica-p4.png)
 
@@ -5453,7 +5459,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Cuando el API no responde, la mayoría de pantallas muestra “No se pudo conectar con el servidor” con un botón Reintentar, sin explicar si el problema es la conexión del celular o el servicio. Solo el saldo de vacaciones conserva los últimos datos sincronizados; el resto de pantallas queda vacío.
 
-**Figura 127:** *Mensaje de error de conexión*
+**Figura 147:** *Mensaje de error de conexión*
 
 ![Problema 3](assets/Chapter-4/heuristica-p5.png)
 
@@ -5468,7 +5474,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** En el gráfico del histórico, los días con nivel deficiente o peligroso se pintan de otro color. La leyenda indica el significado, pero una persona con dificultad para distinguir colores no puede saber qué barra corresponde a cada nivel.
 
-**Figura 128:** *Gráfico del histórico ambiental*
+**Figura 148:** *Gráfico del histórico ambiental*
 
 ![Problema 4](assets/Chapter-4/heuristica-p7.png)
 
