@@ -5295,151 +5295,102 @@ Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra
 
 **Entrevista 1:**
 
-Nombre: PENDIENTE (nombres y apellidos)
+Nombre: Jimena Vázquez
 
-Edad: PENDIENTE
+Edad: 22 años 
 
-Distrito: PENDIENTE
+Distrito: Chorrillos
 
-Link de la entrevista: [Validación 1 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
+Link de la entrevista: [Validación 1 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tj9fNO)
 
-Timing donde inicia la entrevista: PENDIENTE
+Timing donde inicia la entrevista: 0:00
 
-Duración completa de la entrevista: PENDIENTE
+Duración completa de la entrevista: 4 minutos 45 segundos
 
 **Figura 125:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
 
-![Entrevista de validación 1 - de Recursos Humanos](assets/Chapter-4/validacion-s1-01.png)
+![Entrevista de validación 1 - de Recursos Humanos](assets\validacion-s1-01.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+La entrevistada, Jimena Vázquez, trabaja en el área de Recursos Humanos de Manpower y utiliza diariamente plataformas digitales para sus actividades laborales. Durante la evaluación del Landing Page, comprendió rápidamente que Flowboard permite centralizar la información laboral y facilitar las solicitudes de los colaboradores. Identificó como elementos destacados el título principal, la imagen del celular y los botones de acceso, y consideró que el orden de las secciones era claro y lógico. Como principal dificultad, señaló que la expresión “una sola fuente de verdad” podía resultar técnica y propuso reemplazarla por una frase más familiar. También sugirió simplificar algunos elementos alrededor del celular para resaltar mejor el mensaje principal. Respecto al diseño y accesibilidad, consideró que la página es moderna, corporativa, minimalista y coherente en colores, tipografías y botones. Indicó que los textos secundarios podrían tener mayor tamaño y contraste, y recomendó adaptar la versión móvil utilizando una sola columna y botones fáciles de tocar. Para generar mayor confianza, sugirió incluir empresas que ya utilizan Flowboard, testimonios y mayor información sobre la protección de datos. Finalmente, manifestó que antes de utilizar el producto buscaría información sobre costos, implementación e integración con otras herramientas empresariales, y destacó como mejora la inclusión de un botón claro para solicitar una demo y un ejemplo completo de procesos como la solicitud y aprobación de vacaciones.
 
 **Entrevista 2:**
 
-Nombre: PENDIENTE (nombres y apellidos)
+Nombre: Sebastián
 
-Edad: PENDIENTE
+Edad: 20 años
 
-Distrito: PENDIENTE
+Distrito: Lima
 
-Link de la entrevista: [Validación 2 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
+Link de la entrevista: [Validación 2 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=17HvWM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjg1Ljg1fX0%3D)
 
-Timing donde inicia la entrevista: PENDIENTE
+Timing donde inicia la entrevista: 4:45
 
-Duración completa de la entrevista: PENDIENTE
+Duración completa de la entrevista: 4 minutos 29 segundos
 
 **Figura 126:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
 
-![Entrevista de validación 2 - de Recursos Humanos](assets/Chapter-4/validacion-s1-02.png)
+![Entrevista de validación 2 - de Recursos Humanos](assets\validacion-s1-02.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
-
-**Entrevista 3:**
-
-Nombre: PENDIENTE (nombres y apellidos)
-
-Edad: PENDIENTE
-
-Distrito: PENDIENTE
-
-Link de la entrevista: [Validación 3 - de Recursos Humanos](PENDIENTE: URL del video en OneDrive)
-
-Timing donde inicia la entrevista: PENDIENTE
-
-Duración completa de la entrevista: PENDIENTE
-
-**Figura 127:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 3*
-
-![Entrevista de validación 3 - de Recursos Humanos](assets/Chapter-4/validacion-s1-03.png)
-
-*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
-
-**Resumen de la entrevista:**
-
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+El entrevistado, Sebastián, tiene 20 años, vive en Pueblo Libre y estudia Derecho, por lo que utiliza frecuentemente páginas web de escuelas jurídicas y plataformas educativas. Durante la evaluación del Landing Page, comprendió que Flowboard está orientado principalmente a profesionales y áreas de Recursos Humanos, y que permite gestionar diferentes procesos laborales desde una aplicación móvil. Destacó que la propuesta resulta práctica porque permite acceder a información y realizar gestiones desde el celular sin depender de una computadora. Su primera impresión fue positiva, resaltando la colorimetría, el orden de la información y la cantidad adecuada de texto, ya que consideró que la página explica las funciones sin saturar visualmente al usuario. Respecto a la organización y diseño, consideró que las secciones se encuentran correctamente ordenadas y valoró que las opciones de iniciar sesión y descargar la aplicación aparezcan tanto al inicio como al final de la página. También indicó que existe coherencia entre los colores, tipografías y elementos visuales, transmitiendo una sensación de profesionalidad y tranquilidad visual. Como aspecto destacado, mencionó la combinación de información con recursos visuales que muestran cómo podría verse la aplicación en el celular. Finalmente, no identificó cambios importantes que realizaría al Landing Page y consideró que la presentación general facilita comprender la utilidad y funcionamiento de Flowboard.
 
 
 **Segmento 2: Colaboradores**
 
 **Entrevista 1:**
 
-Nombre: PENDIENTE (nombres y apellidos)
+Nombre: María del Carmen Espichán
 
-Edad: PENDIENTE
+Edad: 25
 
-Distrito: PENDIENTE
+Distrito: Lima
 
-Link de la entrevista: [Validación 1 - de colaboradores](PENDIENTE: URL del video en OneDrive)
+Link de la entrevista: [Validación 1 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=N5E8CD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTU1LjAzfX0%3D)
 
-Timing donde inicia la entrevista: PENDIENTE
+Timing donde inicia la entrevista: 9:15
 
-Duración completa de la entrevista: PENDIENTE
+Duración completa de la entrevista: 5 minutos 53 segundos
 
 **Figura 128:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
 
-![Entrevista de validación 1 - de colaboradores](assets/Chapter-4/validacion-s2-01.png)
+![Entrevista de validación 1 - de colaboradores](assets\validacion-s1-03.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
+La entrevistada, María del Carmen Espichán Gaitán, tiene 25 años, vive en Atenas y trabaja como asistente legal, utilizando diariamente páginas web y plataformas de trabajo. Durante la evaluación del Landing Page, identificó principalmente los módulos y funcionalidades relacionadas con vacaciones, registros y solicitudes de los colaboradores, entendiendo que Flowboard está dirigido especialmente a trabajadores que no siempre tienen acceso a una computadora o laptop. Consideró que la página presenta información clara y un diseño corporativo, aunque señaló que podría ser más concreta y priorizar los módulos y beneficios para el colaborador desde las primeras secciones. También indicó que buscaría una sección de contacto para ventas, soporte o sugerencias. En cuanto al diseño y accesibilidad, valoró los colores neutros y corporativos, pero percibió que la página contiene demasiada información y recomendó reducir los textos secundarios para comunicar rápidamente los principales beneficios. Consideró claros los contenidos principales, aunque algunos números, íconos y elementos pequeños dificultan una lectura rápida. Para generar mayor confianza, sugirió mostrar resultados obtenidos por otras empresas o, si aún no existen, comunicar claramente los objetivos y beneficios que ofrece Flowboard. Finalmente, destacó los módulos como uno de los mejores elementos de la página y propuso reorganizar el contenido para presentar primero los objetivos y beneficios para el colaborador, luego explicar cómo se brindan mediante el celular y dejar información complementaria como seguridad y otros aspectos hacia el final.
 
 **Entrevista 2:**
 
-Nombre: PENDIENTE (nombres y apellidos)
+Nombre: Andrea
 
-Edad: PENDIENTE
+Edad: 26 años
 
-Distrito: PENDIENTE
+Distrito: Barranco
 
-Link de la entrevista: [Validación 2 - de colaboradores](PENDIENTE: URL del video en OneDrive)
+Link de la entrevista: [Validación 2 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=lqH0st&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTA5LjJ9fQ%3D%3D)
 
-Timing donde inicia la entrevista: PENDIENTE
+Timing donde inicia la entrevista: 15:08
 
-Duración completa de la entrevista: PENDIENTE
+Duración completa de la entrevista: 4 minutos 51 segundos
 
 **Figura 129:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
 
-![Entrevista de validación 2 - de colaboradores](assets/Chapter-4/validacion-s2-02.png)
+![Entrevista de validación 2 - de colaboradores](assets\validacion-s1-04.png)
 
 *Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
 
 **Resumen de la entrevista:**
 
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
-
-**Entrevista 3:**
-
-Nombre: PENDIENTE (nombres y apellidos)
-
-Edad: PENDIENTE
-
-Distrito: PENDIENTE
-
-Link de la entrevista: [Validación 3 - de colaboradores](PENDIENTE: URL del video en OneDrive)
-
-Timing donde inicia la entrevista: PENDIENTE
-
-Duración completa de la entrevista: PENDIENTE
-
-**Figura 130:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 3*
-
-![Entrevista de validación 3 - de colaboradores](assets/Chapter-4/validacion-s2-03.png)
-
-*Nota.* Cuadro del video de la sesión de validación. Elaboración propia.
-
-**Resumen de la entrevista:**
-
-PENDIENTE: resumen descriptivo de las apreciaciones del entrevistado sobre cada tarea del Landing Page y de la aplicación (qué completó sin ayuda, dónde dudó, qué comentó) y sus respuestas a las preguntas de cierre.
-
+La entrevistada, Andrea, tiene 26 años y trabaja como asistente de Recursos Humanos en una empresa de retail, utilizando diariamente herramientas como correo, Excel y WhatsApp para gestionar vacaciones y coordinar con el personal. Durante la evaluación del Landing Page, identificó rápidamente que Flowboard permite gestionar vacaciones, asistencia, permisos y boletas, y que está dirigido tanto a Recursos Humanos como a colaboradores operativos que no trabajan constantemente frente a una computadora. Destacó la maqueta del celular con los días de vacaciones y las notificaciones como elementos que permiten comprender rápidamente la propuesta. Consideró que el orden general tiene lógica, pero recomendó subir la sección de los siete módulos y reducir la sección de integraciones. También identificó términos técnicos como “una sola fuente de verdad”, “ruteo automático”, Firebase Cloud. Messaging y Flutter como poco comprensibles para un usuario de Recursos Humanos Respecto al diseño, consideró que la página es moderna y confiable, destacando las maquetas, la sección de seguridad y la referencia a la protección de datos personales. Señaló que la página mantiene coherencia visual, aunque resulta algo cargada por la cantidad de maquetas, listas y cifras, y que algunos textos pequeños presentan dificultades de lectura. También observó que algunos elementos dentro de las maquetas parecen botones interactivos aunque no lo sean. Para la versión móvil, recomendó reducir las maquetas y mantener visible el botón de descarga. Finalmente, indicó que confiaría más en el producto si se mostraran empresas reales y casos de éxito, y que antes de solicitar una demo necesitaría conocer los precios, la existencia de una prueba gratuita, compatibilidad con iPhone y opciones para migrar el historial de vacaciones desde Excel. Como mejoras adicionales, propuso acortar la página, reducir términos técnicos, incluir un video corto de la aplicación y una sección clara de precios y contacto.
 
 ### 4.3.3. Evaluaciones según heurísticas
 
