@@ -4110,7 +4110,7 @@ Elaborado en Figma: https://www.figma.com/design/RBVdavhWuchp0u7GVx6m7I/Flowboar
 
 *Nota.* Demostración de los recorridos UG-01 a UG-06 sobre el prototipo de la aplicación nativa. Elaboración propia.
 
-Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQBgfOGMxH1wSr0UULfjUJYbAT5UvLRQwVWrbpoBJTIHLhI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=GKF2Uk
 
 <div style="page-break-after: always;"></div>
 
@@ -4278,13 +4278,6 @@ En esta sección se describen los pasos para desplegar cada producto a partir de
 5. *Esquema:* el perfil `prod` usa `spring.jpa.hibernate.ddl-auto=validate`, por lo que el esquema debe existir antes del primer despliegue. Se crea ejecutando una vez el API con el perfil `dev` contra la base de Aiven, o con el script SQL del proyecto.
 6. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
 
-**Aplicación móvil en Firebase App Distribution**
-
-1. Cambiar la constante `BASE_URL` de `core/di/NetworkModule.kt` por la URL pública del API en Render (en desarrollo apunta a `http://localhost:8080/api/v1/` y se usa `adb reverse tcp:8080 tcp:8080` con el emulador).
-2. Actualizar `versionCode` y `versionName` en `app/build.gradle.kts`.
-3. Generar el APK con *Build › Generate Signed App Bundle or APK* (o `./gradlew assembleRelease`), firmado con el keystore del equipo, que no se sube al repositorio.
-4. En la consola de Firebase, dentro del proyecto Flowboard, abrir *App Distribution*, subir el APK, asignar el grupo de testers y agregar las notas de la versión.
-5. Los testers reciben la invitación por correo e instalan la aplicación desde el enlace de Firebase.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
@@ -4911,11 +4904,11 @@ Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
-En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones `@Operation`, `@Parameter`, `@Schema` y `@ApiResponses` de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única `{ "code", "message", "details" }`, por ejemplo `{"code": "OFFICE_CONFLICT", "message": "..."}` con estado 409.
+En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones @Operation, @Parameter, @Schema y @ApiResponses de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única { "code", "message", "details" }, por ejemplo {"code": "OFFICE_CONFLICT", "message": "..."} con estado 409.
 
 - Swagger UI local: http://localhost:8080/swagger-ui/index.html
 - Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
-- Especificación OpenAPI: `/v3/api-docs`
+- Especificación OpenAPI: /v3/api-docs
 - Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
 
 **Tabla 12:** *Endpoints documentados con OpenAPI en el Sprint 1*
@@ -5283,7 +5276,7 @@ Edad: 22 años
 
 Distrito: Chorrillos
 
-Link de la entrevista: [Validación 1 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tj9fNO)
+Link de la entrevista:https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tj9fNO
 
 Timing donde inicia la entrevista: 0:00
 
@@ -5307,7 +5300,7 @@ Edad: 20 años
 
 Distrito: Lima
 
-Link de la entrevista: [Validación 2 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=17HvWM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjg1Ljg1fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=17HvWM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjg1Ljg1fX0%3D
 
 Timing donde inicia la entrevista: 4:45
 
@@ -5334,7 +5327,7 @@ Edad: 25
 
 Distrito: Lima
 
-Link de la entrevista: [Validación 1 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=N5E8CD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTU1LjAzfX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=N5E8CD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTU1LjAzfX0%3D
 
 Timing donde inicia la entrevista: 9:15
 
@@ -5358,7 +5351,7 @@ Edad: 26 años
 
 Distrito: Barranco
 
-Link de la entrevista: [Validación 2 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=lqH0st&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTA5LjJ9fQ%3D%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=lqH0st&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTA5LjJ9fQ%3D%3D
 
 Timing donde inicia la entrevista: 15:08
 
