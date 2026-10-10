@@ -4801,10 +4801,10 @@ Feature: Environmental thresholds and indicators
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :---- | :---- | :----: | :---- | :---- | :----: |
-| Performily-Mobile/flowboard-mobile-service | benefits | PENDIENTE | test(benefits): add unit tests for vacation balance and benefit assignment | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-service | develop | PENDIENTE | test: add acceptance feature files for benefits and wellbeing | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-native-application | wellbeing | PENDIENTE | test(wellbeing): add unit tests for validator, use cases and formatters | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-native-application | benefits | PENDIENTE | test(benefits): add unit tests for use cases, formatters and mappers | — | PENDIENTE |
+| Performily-Mobile/flowboard-mobile-service | benefits | 42045cf | feat(benefits): add domain model with benefit assignment and vacation balance aggregates | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c659c29 | feat(benefits): add rest controllers, resources and assemblers | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | 23f5255 | feat(wellbeing): add use cases for offices, devices, thresholds and history | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 29d34ab | feat(benefits): add domain model for benefit types, assignments and vacation balances | — | 06/10/2026 |
 
 *Nota.* Elaboración propia.
 
