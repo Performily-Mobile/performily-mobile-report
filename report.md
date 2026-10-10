@@ -100,7 +100,7 @@
 | v1.19 | 08/10/2026 | Vasquez Llave, Oscar Lizandro | Landing Page & Mobile Application Implementation. Sprint 1, Sprint Planning 1, Aspect Leaders and Collaborators, Execution Evidence for Sprint Review del Landing Page y de la aplicación nativa, y Team Collaboration Insights during Sprint. |
 | v1.20 | 08/10/2026 | Esquicha Alcántara, Diego Alonso | Development Evidence for Sprint Review con los commits del Sprint 1 de los repositorios del Landing Page, el RESTful API y la aplicación nativa.|
 | v1.21 | 08/10/2026 | Diaz Villalba, Diego Alonso | Services Documentation Evidence for Sprint Review con los endpoints documentados con OpenAPI y Swagger UI, y Software Deployment Evidence for Sprint Review en GitHub Pages, Render y Aiven. |
-| v1.22 | 09/10/2026 | Galvez Meza, Salym Pool | Validation Interviews. Diseño de Entrevistas con la estructura de la sesión y las tareas por segmento. Actualización del Project Report Collaboration Insights con el reparto de esta entrega. |
+| v1.22 | 09/10/2026 | Galvez Meza, Salym Pool | Validation Interviews. Diseño de Entrevistas con la guía de preguntas por tema para el Landing Page. Actualización del Project Report Collaboration Insights con el reparto de esta entrega. |
 | v1.23 | 09/10/2026 | Ávila De La Cruz, Darío Fabián | Registro de Entrevistas de validación con sus capturas y resúmenes, y Evaluaciones según heurísticas de Usability, Inclusive Design e Information Architecture con la escala de severidad y las recomendaciones. |
 | v1.24 | 09/10/2026 | Diaz Villalba, Diego Alonso | Conclusiones y recomendaciones del Sprint 1 y del Capítulo III, y revisión final del informe. |
 
@@ -1000,7 +1000,7 @@ Edad:  22 años
 
 Distrito: Surco 
 
-Link de la entrevista: [Entrevista 1 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6USPJ4)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6USPJ4
 
 Timing donde inicia la entrevista: 00:00
 
@@ -1026,7 +1026,7 @@ Edad: 25 años
 
 Distrito: Pueblo Libre
 
-Link de la entrevista: [Entrevista 2 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=LU4tZ1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjk0LjY4fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=LU4tZ1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjk0LjY4fX0%3D
 
 Timing donde inicia la entrevista: 04:54
 
@@ -1052,7 +1052,7 @@ Edad: 22 años
 
 Distrito: Chorrillos
 
-Link de la entrevista: [Entrevista 3 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=Zg0vWd&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTgzLjgxfX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=Zg0vWd&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTgzLjgxfX0%3D
 
 Timing donde inicia la entrevista: 09:43
 
@@ -1079,7 +1079,7 @@ Edad: 25 años
 
 Distrito: Lima
 
-Link de la entrevista: [Entrevista 1 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=2gzoo5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6ODY0LjM5fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=2gzoo5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6ODY0LjM5fX0%3D
 
 Timing donde inicia la entrevista: 14:24
 
@@ -1105,7 +1105,7 @@ Edad: 25 años
 
 Distrito: Barranco 
 
-Link de la entrevista: [Entrevista 2 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=25BIVE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIwNy43NX19)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=25BIVE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIwNy43NX19
 
 Timing donde inicia la entrevista: 20:07
 
@@ -1131,7 +1131,7 @@ Edad: 19 años
 
 Distrito: Cercado de Lima 
 
-Link de la entrevista: [Entrevista 3 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=s6pG18&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTM1Ni4wMX19)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=s6pG18&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTM1Ni4wMX19
 
 Timing donde inicia la entrevista: 22:36
 
@@ -2365,7 +2365,7 @@ El diagrama de contexto muestra a Flowboard como un solo sistema y su relación 
 
 **Figura 45:** *Diagrama de contexto de Flowboard*
 
-![Diagrama de contexto de Flowboard](assets\Chapter-2\contextmapping.png)
+![Diagrama de contexto de Flowboard](assets\Chapter-2\context-diagram.png)
 
 *Nota.* Actores, sistema principal y sistemas externos que interactúan con Flowboard. Elaboración propia.
 
@@ -2990,7 +2990,7 @@ En esta sección se presenta el Database Design Diagram correspondiente al bound
 
 **Figura 59:** *Database Design Diagram del bounded context Request*
 
-![Database Design Diagram del bounded context Request](assets\Chapter-2\domainlayerdiagram-request.png)
+![Database Design Diagram del bounded context Request](assets\Chapter-2\databasedesigndiagram-request.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Request. Elaboración propia.
 
@@ -4138,7 +4138,7 @@ Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las
 
 **Software Testing.** Las pruebas unitarias del API se escriben con JUnit 5 y las de la aplicación con JUnit 4, ambas incluidas en las dependencias de cada proyecto. Los endpoints se prueban de forma manual desde Swagger UI con datos de muestra.
 
-**Software Deployment.** El Landing Page se publica en GitHub Pages. El API se empaqueta en una imagen Docker y se despliega como Web Service en Render, conectado a una instancia gestionada de MySQL en Aiven. La aplicación se distribuye a los usuarios de prueba mediante Firebase App Distribution.
+**Software Deployment.** El Landing Page se publica en GitHub Pages. El API se empaqueta en una imagen Docker y se despliega como Web Service en Render, conectado a una instancia gestionada de MySQL en Aiven. La distribución de la aplicación a los usuarios de prueba mediante Firebase App Distribution queda prevista para el Sprint 2.
 
 **Software Documentation.** El informe del proyecto se redacta en Markdown dentro de su propio repositorio de GitHub. El API se documenta con OpenAPI Specification a través de Swagger UI, y cada repositorio de código incluye un README.
 
@@ -4262,7 +4262,7 @@ En esta sección se describen los pasos para desplegar cada producto a partir de
 
 ![Deployment Diagram de Flowboard](assets/Chapter-4/deployment-pipeline.png)
 
-*Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción, el despliegue de la aplicación se realizará en el sprint 2. Elaboración propia.
+ *Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. La distribución de la aplicación mediante Firebase App Distribution se realizará en el Sprint 2. Elaboración propia.
 
 **Landing Page en GitHub Pages**
 
@@ -4902,7 +4902,7 @@ Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versi�
 
 *Nota.* Wellbeing, US49 y US51. Elaboración propia.
 
-Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412663_upc_edu_pe/IQBbq2q7T9zbSqz_xRKaZkarAT-D3ADs4kU4wRpbRbo-15c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yYhCCv
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -5209,25 +5209,25 @@ En esta sección se registran las entrevistas de validación del Landing Page co
 
 ### 4.3.1. Diseño de Entrevistas
 
-Las sesiones de validación se realizan con el Landing Page abierto en el navegador del celular del participante o en un dispositivo del equipo. Se programan dos entrevistas por segmento, cuatro en total, y cada sesión dura unos 5 minutos y se graba en video con el consentimiento del participante. Un integrante conduce la sesión y otro toma notas. Las tareas sobre la aplicación nativa se evalúan en la sección 4.3.3 mediante heurísticas.
+Las sesiones de validación se realizan con el Landing Page abierto en el navegador del celular del participante o en un dispositivo del equipo. Se programan dos entrevistas por segmento, cuatro en total, y cada sesión dura unos 13 minutos y se graba en video con el consentimiento del participante. Las preguntas se organizan por tema y el moderador formula las que el tiempo permite.
 
 **Preguntas de introducción**
 ¿Cómo te llamas, cuántos años tienes y en qué distrito vives? ¿Cuál es tu ocupación actual? ¿Con qué frecuencia usas páginas web o plataformas de trabajo en tu día a día?
 
 **Primera impresión**
-Se le pide al entrevistado que explore la página unos 20 segundos y luego la cierre o la tape ¿Qué recuerdas de la página? ¿Para qué crees que sirve este producto y a quién va dirigido? ¿Qué fue lo primero que llamó tu atención?
+Se le pide al entrevistado que explore la página unos 20 segundos y luego la cierre o la tape. Después se le pregunta: ¿Qué recuerdas de la página? ¿Para qué crees que sirve este producto y a quién va dirigido? ¿Qué fue lo primero que llamó tu atención?
 
 **Organización y navegación**
 ¿Cómo describirías el orden de las secciones? ¿Moverías o quitarías alguna? ¿Hubo algún término o sección que no entendiste? Si quisieras contactar a ventas o iniciar sesión, ¿dónde harías clic? ¿Qué opinas del menú de navegación?
 
 **Diseño visual y principios de diseño**
-¿Qué impresión te da el diseño crees que es moderno, corporativo o confiable o algo diferente? ¿Por qué? ¿Se distinguen bien los títulos, subtítulos, botones más importante de los secundarios? Explica por qué y un ejemplo ¿Sientes que los colores, tipos de letra y botones son coherentes en toda la página? ¿Sientes que la página está muy cargada o con mucho espacio vacío?
+ ¿Qué impresión te da el diseño? ¿Lo sientes moderno, corporativo, confiable o algo diferente? ¿Por qué? ¿Se distinguen bien los títulos y subtítulos, y los botones principales de los secundarios? Explica por qué con un ejemplo. ¿Sientes que los colores, los tipos de letra y los botones son coherentes en toda la página? ¿La página te parece muy cargada o con mucho espacio vacío?
 
 **Accesibilidad**
 ¿Pudiste leer todos los textos sin esforzarte? ¿Algún texto se te hizo difícil de ver por el color de fondo o el tamaño? ¿Se diferencian bien los botones del resto del contenido? ¿Probaste o te imaginas usando la página desde el celular? ¿Qué cambiarías?
 
 **Confianza y llamado a la acción**
-¿Qué te haría confiar más en este producto al verlo en la página? ¿Qué harías después de ver esta página? ¿pedir una demo, registrarte, buscar más información? ¿Qué te falta para dar ese paso?
+¿Qué te haría confiar más en este producto al verlo en la página? ¿Qué harías después de ver esta página: pedir una demo, registrarte o buscar más información? ¿Qué te falta para dar ese paso?
 
 **Cierre**
 ¿Qué es lo mejor de la página y qué es lo que más cambiarías? ¿Algo más que quieras comentar?
@@ -5353,7 +5353,7 @@ Las Figuras 145 a 148 presentan las evidencias visuales utilizadas para evaluar 
 | **NRC** | 4951 |
 | **PROFESORES** | Mayta Guillermo, Jorge Luis |
 | **AUDITOR** | Performily |
-| **CLIENTE(S)** | PENDIENTE: nombres de los participantes de las sesiones de validación |
+| **CLIENTE(S)** | Performily |
 
 **SITE o APP A EVALUAR:** Flowboard (Landing Page y aplicación nativa para Android, versión del Sprint 1)
 
@@ -5482,11 +5482,24 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
+
+Anggoro, Y., Aminullah, A., Lazuardi, B., Setyorini, E. E. D., & Chin, J. (2026). The role of HRIS (human resource information system) in improving HR management efficiency. Dinasti International Journal of Management Science, 7(3), 609–622. https://doi.org/10.38035/dijms.v7i3.6175
+
+Conventional Commits. (s. f.). Conventional Commits 1.0.0. https://www.conventionalcommits.org/es/v1.0.0/
+
 Escudero, F. (2025, enero 7). Madurez digital: ¿cuál es el panorama de las empresas en el Perú? Www.ey.com. https://www.ey.com/es_pe/insights/revista-execution/disrupcion/madurez-digital 
+
+Driessen, V. (2010, 5 de enero). A successful Git branching model. nvie.com. https://nvie.com/posts/a-successful-git-branching-model/
+
+Feriandy. (2025). Analysis of the role of human resource information system (HRIS) in improving work efficiency and effectiveness in modern organizations. International Journal of Asian Business and Management, 4(5), 1211–1222. https://doi.org/10.55927/ijabm.v4i5.619
 
 Gestión de recursos humanos en el sector público de América latina, 2017-2021: revisión sistemática. (2022). 2, 6(2), 3965–4000. https://doi.org/10.37811/cl_rcm.v6i2.2141 
 
+Google. (s. f.). Material Design 3. https://m3.material.io/
+
 Pérez, E. (2024). Transformación digital en la gestión de recursos humanos. REVISTA CIENTIFICA GLOBAL NEGOTIUM, 7(1), 27–43. https://doi.org/10.53485/rgn.v7i1.423 
+
+Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. https://semver.org/lang/es/
 
 Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. https://doi.org/10.5281/ZENODO.16933151 
 
@@ -5503,3 +5516,9 @@ Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review 
 Jošt, G., & Taneski, V. (2025). State-of-the-art cross-platform mobile application development frameworks: A comparative study of market and developer trends. Informatics, 12(2), 45. https://doi.org/10.3390/informatics12020045
 
 OWASP Foundation. (s. f.). OWASP Mobile Application Security Verification Standard (MASVS). https://mas.owasp.org/MASVS/ 
+
+Pérez Panduro, S., & Flores, E. (2022). Gestión de recursos humanos en el sector público de América Latina, 2017-2021: revisión sistemática. Ciencia Latina Revista Científica Multidisciplinar, 6(2), 3965–4000. https://doi.org/10.37811/cl_rcm.v6i2.2141
+
+Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. Aula Virtual, 6(13), 1027–1066. https://doi.org/10.5281/zenodo.16933151
+
+World Wide Web Consortium. (2018, 5 de junio). Web Content Accessibility Guidelines (WCAG) 2.1. https://www.w3.org/TR/WCAG21/
