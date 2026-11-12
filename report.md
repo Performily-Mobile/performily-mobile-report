@@ -5300,6 +5300,250 @@ Enlace del tablero: https://trello.com/b/ANDhShAa/sprint-backlog-2-moviles
 
 *Nota.* Elaboración propia.
 
+#### 4.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo trabajó sobre los tres repositorios de software. El Landing Page no tuvo cambios en este Sprint y se mantiene publicado en GitHub Pages con la versión del Sprint 1.
+
+En el **RESTful API** se implementó el bounded context IAM: las cuentas de usuario y los tokens revocados, la seguridad con JWT sobre Spring Security, el servicio de cuentas y sesiones, la fachada para consultar colaboradores de Workspace, la creación de cuentas a partir de los eventos del ciclo de vida del colaborador y un seeder opcional de cuentas. Se configuró Flyway para versionar el esquema. En Request se paginaron todos los listados con filtros y orden, se agregaron índices y se incorporaron nuevas reglas de aprobación. En Attendance se protegieron los endpoints según el rol y se agregaron consultas paginadas. En la infraestructura compartida se expuso un endpoint público de salud con verificación de la base de datos.
+
+En la **aplicación nativa** se integró IAM con la sesión cifrada, el interceptor que envía el token, el cierre de sesión ante un 401 y las pantallas de login, cambio de contraseña, seguridad de la cuenta y administración de cuentas. Se completó la vista del colaborador con su panel de inicio y la pestaña de boletas, se unificaron los componentes del sistema de diseño y se adaptaron las listas de solicitudes y asistencia a las respuestas paginadas del API.
+
+En la **aplicación Flutter** se construyó la base del proyecto (inyección de dependencias, sesión, barra inferior por rol, navegación por pestaña y sistema de diseño) y se implementaron los bounded contexts IAM, Workspace, Attendance, Request, Benefits y Payroll, además del panel de Recursos Humanos. Cada bounded context conserva las capas domain, application, infrastructure y presentation de la aplicación nativa y consume el mismo API desplegado.
+
+A continuación se presentan los commits de cada repositorio, sin contar los merges. El cuerpo de los mensajes se omite cuando el commit no lo tiene.
+
+**Tabla 19:** *Commits del repositorio del RESTful API en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | attendance | e3a1ce4 | feat(attendance): add recalculation and queries | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 7b487e2 | feat(attendance): optimize attendance lookups and closing | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | f978ce6 | feat(attendance): add reads and protect writes | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4fbaadb | perf(request): fetch request type in list queries and load collections in batches | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 69e8bbf | perf(request): add indexes for requester and approver queries | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e3b3e7c | perf(request): update the stored request instead of rebuilding it on save | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1e5b8f9 | feat(shared): add pagination value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 8e59c91 | feat(request): add paged request queries to the repository | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a27c961 | feat(request): add paginated endpoint to get all requests | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4da9270 | fix(request): move pending requests of a terminated approver to HR staff | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | efc6855 | feat(request): allow correcting the period when resubmitting | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | afdd303 | feat(request): add an optional comment when approving | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a85af39 | feat(request): replace the fields of a request type on update | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a05cbf2 | feat(request): replace the fields of a request type on update | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 5006586 | fix(request): prevent an employee from resolving their own request | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4b57979 | feat(request): filter all requests by approver and several statuses and sort pending requests | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 3981ab5 | feat(iam): add revoked token entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 71d031b | feat(iam): add user account entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | cedf40f | feat(iam): add IAM JPA repositories | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | ad4e0ff | feat(iam): add optional IAM account seeder | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | bf72d08 | feat(iam): add JWT-based IAM security configuration | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9d9c8bd | feat(iam): add IAM account and session service | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 41d3300 | feat(iam): handle employee lifecycle events | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9b82faf | feat(iam): add IAM employee lookup facade | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 282c83c | feat(iam): add IAM REST controller | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 2da8ab7 | feat(iam): configure IAM JWT and seed settings | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 6eacc28 | feat(iam): add Spring Security dependency | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | e6fc324 | fix(iam): default credential version to 1 | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 554fbb1 | feat(iam): configure Flyway database migrations | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 3cd0d65 | feat(iam): verify credential version default | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1be8544 | fix(shared): point swagger requests to the server that serves it | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 1438eda | fix(attendance): remove unused event imports | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | b27745c | refactor(attendance): secure attendance APIs, add record queries | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 3002ac7 | feat(attendance): document APIs | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | fac34f7 | feat(shared): expose public /health endpoint with database check | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c2f0f14 | fix(iam): allow HEAD requests on /health for uptime monitoring | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 20:** *Commits del repositorio de la aplicación nativa en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 8788f3b | feat(designsystem): add shared tabs, search, collapsing header and bottom action bar | — | 18/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 8821104 | style(ui): unify tabs, spacing and bottom actions; fix tab navigation restoring inner screens | — | 18/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | ed8688a | feat(designsystem): add shared top bar and sheet header and apply them to every screen | — | 22/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 665a4c1 | feat(request): read paginated responses from the request list endpoints | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 7c33a20 | perf(request): load all and resolved requests with a single call | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 3e6d1cd | feat(request): filter, sort and count requests on the server | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 3f16f2c | feat(request): load more requests while scrolling | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 9c01838 | feat(request): add my requests for HR staff and hide decisions on own requests | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | b8e1e48 | feat(iam): add AuthSession entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | e5df304 | feat(iam): add IamRepository interface and Account domain model | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a307a0c | feat(iam): add IamModule for dependency injection | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | f548a91 | feat(iam): implement IamRepositoryImpl for authentication and account management | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 32e4247 | feat(iam): implement IamRepositoryImpl for authentication and account management | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 7dc7410 | feat(iam): add SecureSessionStore for encrypted session storage | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 36086c4 | feat(iam): add login, password change, account security, and admin account screens with ViewModel and NavGraph | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a4507d8 | feat(iam): add sign in, change password and sign out use cases | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 10e954d | refactor(iam): add compose material icons extended dependency and disable cleartext traffic | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | aff6dcc | feat(navigation): integrate iamNavGraph and authentication state in app shell | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | aad278b | fix(backup): exclude flowboard_iam_secure shared preferences from backup and data extraction | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | e51707f | feat(core): integrate IAM session into CurrentEmployeeProvider and add Auth interceptor | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 22dd446 | feat: enable buildConfig and add BASE_URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 0d926a9 | feat(core): dynamically set Retrofit base URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 7c7b547 | refactor(di): simplify Retrofit base URL configuration in NetworkModule | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 5292890 | refactor(Network): use BuildConfig.BASE_URL for Retrofit configuration | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 623884b | feat(iam): add Account domain entity | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 6736793 | refactor(iam): update resetPassword return type to String and extract Account entity | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 87c9315 | refactor(IAM): extract remote DTOs into separate files and update reset password response | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a88b773 | fix(iam): handle temporary password return in password reset and fix Account import | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | d1c9230 | refactor(iam): split IamUseCases into individual use case files | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 5a1107e | refactor(iam): handle temporary password in IamViewModel and update package imports | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | c8b28e0 | refactor(IAM): split IamScreens into separate composable screen files | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 68e2f17 | fix(iam): remove unused imports in AccountSecurityScreen | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 144e7ba | fix(designsystem): move the collapsing header only when the list really scrolls | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 15e263f | feat(Auth): handle 401 session expiration and configure dynamic API base URL | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | bd1c9cb | fix(build): point debug builds to Render and allow a local backend | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 2ccfd29 | fix(iam): sign out when the server rejects the token | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 4cf1656 | refactor(IAM): update login screen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | dad40f8 | feat(iam): redesign LegalScreen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | b62206f | feat(iam): redesign AccountSecurityScreen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | af51f1d | refactor(IAM): update UI for admin accounts and password change screens | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | e9ccfdd | feat(attendance): add UI state, ViewModel for attendance records | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 9c63c7d | feat(Attendance): add employee counts, handle empty employee records, and implement pagination in records screen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 63e6d18 | feat(attendance): add paginated getRecords support to AttendanceRepository and update summary model | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 2a7fb81 | feat(attendance): implement paginated records and optimize area attendance fetching | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 3dc83b2 | refactor(attendance): replace FlowboardTabs with FilterChip in AttendanceSectionTabs | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | dashboard | edb5b96 | feat(dashboard): add employee home dashboard with own attendance, vacation, requests and benefits | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 33dbc18 | feat(Attendance): add navigation to personal attendance | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | ba0d464 | feat(payroll): add employee payslips tab with year selector and payslip viewer | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | e93bf12 | style(ui): fill tab track, standardize account screens, button heights and text styles | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 21:** *Commits del repositorio de la aplicación Flutter en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 21c36b2 | Initial commit | — | 28/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | ece1dad | chore(features): add DDD folder structure for the seven bounded contexts | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 62b9bcb | feat(core): add design system theme with colors, typography, shapes and spacing | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | d61b438 | feat(core): add design system icons and shared components | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 3f7c925 | feat(core): add shared kernel value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 00063ec | feat(core): add api client and api exception | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | c8ebceb | chore(features): add dependency registration stubs for each bounded context | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 58088d4 | feat(core): add session provider and dependency injection | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 8a3f4ec | feat(core): add app shell with role based bottom bar and per tab navigation | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 752c31e | docs: describe architecture and branching | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 8cb87c1 | chore(deps): add intl, flutter_localizations, file_picker, url_launcher and path_provider | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 5b66531 | feat(core): add liquid glass tokens and glass-aware theme | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 3987999 | feat(core): add glass surface, card, sheet and dialog components | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | d6d2b6c | feat(core): add pulsing skeleton placeholders | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | a491057 | style(core): restyle shared components with flat surfaces and glass navigation | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 93dd8d7 | feat(core): add base change notifier view model | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 13346a7 | feat(core): add feature route registry, modal sync and per-tab navigators | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 5b07438 | feat(core): add glass app shell with floating bottom bar | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | be8748b | feat(workspace): add domain entities, value objects and repository contracts | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 6040097 | feat(workspace): add application use cases | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 39fe24f | feat(workspace): add remote services and DTOs | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | e5e22fb | feat(workspace): add DTO to domain mappers | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | f181112 | feat(workspace): add repository implementations and local document storage | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 66c96fa | feat(workspace): register dependencies and routes | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 1016d36 | feat(workspace): add ui states and view models | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 05e8131 | feat(workspace): add ui components | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | acb9491 | feat(workspace): add screens with skeleton loading and navigation | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | fcad97e | fix(designsystem): add AppScrollBehavior with damped android stretch | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 4c2a2a3 | feat(navigation): add tab switcher to change bottom bar tabs from screens | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 35be8f5 | feat(navigation): add dashboard routes and notifications icon | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | dashboard | 0998490 | feat(dashboard): port HR dashboard with greeting header and glass design | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 52fca33 | feat(attendance): add attendance domain entities | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1f8fc72 | feat(attendance): add attendance domain valueobjects | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 75894fa | feat(attendance): add attendance domain repository | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | d4449fd | feat(attendance): add attendance JSON mapper | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 17ecd11 | feat(attendance): add attendance feature dependencies | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 230b054 | feat(attendance): add attendance remote DTOs | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1c76e10 | feat(attendance): add remote attendance service | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 44204a2 | feat(attendance): implement attendance repository | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 283711e | feat(attendance): add attendance use case exports | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 333d66d | feat(attendance): add attendance query use cases | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 9c179b9 | feat(attendance): add attendance justification use case | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | b4744db | feat(attendance): add punch registration use case | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1821d00 | feat(attendance): add attendance view model | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 538bfc4 | feat(attendance): add attendance view models | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 8c430e3 | feat(attendance): add attendance view models | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 6bff19c | feat(attendance): add attendance UI state classes | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | b549cc8 | feat(attendance): add presentation components | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 5b1163e | feat(attendance): add management screen | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 4694027 | feat(attendance): add screen entry points | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | bbbedfc | feat(attendance): add route mapping | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 03a5e93 | fix(attendance): fix use case typing | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | f82d566 | fix(attendance): fix method return types | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | ff2f295 | fix(attendance): update attendance area dropdown value | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 947a2df | fix(attendance): change lookup declarations | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 3726eda | fix(attendance): type attendance repository results | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | d6787f1 | fix(attendance): fix API return types | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 29eca4d | fix(attendance): fix screen compilation | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | ac2d720 | fix(attendance): fix hours return type | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 2cfa8a1 | feat(benefits): add domain value objects | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7e2c5cb | feat(benefits): add domain entities | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 1984d9b | feat(benefits): add repository contracts | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7ea6cd2 | feat(benefits): add catalog and assignment use cases | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | d6659b9 | feat(benefits): add vacation balance use cases | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | efc1af6 | feat(benefits): add remote DTOs and services | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | d9d7f06 | feat(benefits): add API mappers | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 8914a92 | feat(benefits): add offline vacation balance cache | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 884560b | feat(benefits): add workspace directory adapter | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 3f5207a | feat(benefits): implement benefits repositories | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7725cac | feat(benefits): add UI state classes | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 3513971 | feat(benefits): add presentation components | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 286611f | feat(benefits): add view models | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | a23cba7 | feat(benefits): add route names | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 77b4f18 | feat(benefits): add HR benefits screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 843ba1c | feat(benefits): add vacation balance screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | c9d589e | feat(benefits): add employee benefits screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 1c59ebd | feat(benefits): add route mapping | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | ca23db5 | feat(benefits): register benefits dependencies | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 29e11eb | feat(payroll): add get payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | ee53139 | feat(payroll): add viewer ui state | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 95cc1a8 | feat(payroll): add error messages | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 5c982ce | feat(payroll): add payslips view model dart | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 33a52f0 | feat(payroll): add payroll period and colors | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 86f0a67 | feat(payroll): add screen payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 6104194 | feat(payroll): add payslips period v2 | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | facdb30 | feat(payroll): add payment and areas | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 6285f7e | feat(payroll): add validate payslips detail | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | a083efc | feat(payroll): add unlock payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 5915880 | feat(payroll): add payroll mapper | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | d7d06ea | feat(payroll): add payment period | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 7c1643e | feat(payroll): add payroll period service and glass | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 676052d | feat(payroll): add payslips upload storage | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 32f3cea | feat(payroll): add payroll fields and opener | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 16cb9d6 | feat(payroll): add payroll routes employee | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 8486c94 | feat(payroll): add payslips file storage v2 | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | a75f43a | feat(payroll): add payslips download link use case | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 4baa53a | feat(payroll): add publication status | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 70ac643 | feat(payroll): add multiple choice in flutter | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 4a42be9 | feat(request): add domain entities, value objects and repository contracts | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6cd6cda | feat(request): add application use cases | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | abf738e | feat(request): add remote services and DTOs | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | da261b3 | feat(request): add DTO to domain mappers | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 982fcc1 | feat(request): add repository implementations, ACL adapters and local attachment storage | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | faca7eb | feat(request): add ui states and view models | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | e4737c2 | feat(request): add ui components | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 9a65c70 | feat(request): add requests screen with my requests, approval inbox and HR views | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6a645f8 | feat(request): add new request wizard with vacation balance check | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6dd7bb3 | feat(request): add request detail with history, cancel and resubmit, and approver review | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | addb8a6 | feat(request): add resolved requests and request type catalog with new type form | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 3acb74a | feat(request): add my requests for HR staff and link it from More | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 51331e5 | refactor(dashboard): read pending requests from the request context | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 9254320 | feat(iam): add domain entities, value objects and repository contracts | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | c32774b | feat(iam): add application use cases and session manager | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 283c6df | feat(iam): add remote service, DTOs and mappers | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 899ddab | chore(deps): add flutter_secure_storage | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | cf8eece | fix(request): type the approver preview as nullable and use a null-aware element | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 9c9982f | refactor(dashboard): remove unused request service and dto | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 15a8f68 | feat(core): send the session token and report expired sessions in the api client | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | b283c6e | feat(iam): add secure session store, repository implementation and dependencies | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 61172e2 | feat(iam): add ui states and view models | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 676ce2b | feat(iam): add ui components | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | f1b4df9 | feat(iam): add login screen with access recovery and legal terms | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 86506d1 | feat(iam): add password change screen | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 8f70ea0 | feat(iam): add account and security screen and employee accounts for HR | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 8f0e799 | feat(iam): require sign in before the app and use the session identity | — | 11/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
