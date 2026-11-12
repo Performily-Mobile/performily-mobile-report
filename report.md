@@ -5203,6 +5203,31 @@ En total, el Sprint 1 registró 11 commits en el Landing Page, 64 en el API y 96
 
 Los analíticos muestran que la mayor actividad se concentró entre el 30 de septiembre y el 7 de octubre, cuando se trabajó en paralelo sobre los seis bounded contexts. El Landing Page tiene un único autor porque se asignó completo a un integrante para liberar al resto hacia el API y la aplicación. La diferencia en número de commits entre integrantes responde también al tamaño de los commits: algunos integrantes agruparon una capa completa por commit, mientras que otros hicieron un commit por clase.
 
+### 4.2.2. Sprint 2
+
+#### 4.2.2.1. Sprint Planning 2
+
+El Sprint 2 tuvo como propósito cerrar el alcance funcional del RESTful API con el bounded context IAM, que había quedado fuera del Sprint 1, y llevar la solución a la segunda plataforma del curso con la aplicación cross-platform en Flutter. En la reunión de planificación el equipo acordó tres frentes: implementar la autenticación y la autorización por token de punta a punta (API, aplicación nativa y aplicación Flutter), portar a Flutter los bounded contexts ya entregados en la aplicación nativa respetando la misma arquitectura por capas, y completar en la aplicación nativa la vista del colaborador, que en el Sprint 1 solo se había entregado para Recursos Humanos. Se dejaron para el Sprint 3 la notificación de cambio de estado de las solicitudes (US36), el bounded context Wellbeing en Flutter, la integración con Firebase Cloud Messaging y la distribución de la aplicación por Firebase App Distribution.
+
+**Tabla 16:** *Sprint Planning 2*
+
+| Sprint # | Sprint 2 |
+| :---- | :---- |
+| **Sprint Planning Background** | |
+| Date | 2026-11-11 |
+| Time | 07:00 PM |
+| Location | Discord (virtual) |
+| Prepared By | Esquicha Alcántara, Diego Alonso |
+| Attendees (to planning meeting) | Ávila De La Cruz, Darío Fabián / Diaz Villalba, Diego Alonso / Esquicha Alcántara, Diego Alonso / Galvez Meza, Salym Pool / Vasquez Llave, Oscar Lizandro |
+| Sprint 1 Review Summary | El Sprint 1 cerró con 168 Story Points entregados. Quedaron desplegados el Landing Page en GitHub Pages y el RESTful API en Render con MySQL en Aiven, con seis de los siete bounded contexts (Workspace, Attendance, Request, Benefits, Payroll y Wellbeing) documentados en Swagger UI. La aplicación nativa se entregó con la vista de Recursos Humanos conectada al API. Las entrevistas de validación y la evaluación heurística identificaron cuatro problemas de usabilidad, de severidad 1 a 3. [COMPLETAR: feedback del docente sobre el TB1] |
+| Sprint 1 Retrospective Summary | Trabajar por bounded context en ramas propias permitió avanzar en paralelo, pero la base de datos compartida en Aiven obligó a coordinar los cambios de esquema entre integrantes y la exigencia de llave primaria se descubrió tarde. Para el Sprint 2 se acordó versionar los cambios de esquema con una herramienta de migraciones, mantener una rama por bounded context en cada repositorio e integrar en `develop` antes de publicar en `main`. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | *Our focus is on* proteger el RESTful API con autenticación por token y control de acceso por rol, y entregar la aplicación en Flutter con los mismos bounded contexts de la aplicación nativa. *We believe it delivers* a los colaboradores y al personal de Recursos Humanos un acceso propio y seguro a su información laboral, en el que cada persona ve solo lo que le corresponde, desde la plataforma móvil que use. *This will be confirmed when* un colaborador inicie sesión con su contraseña temporal, la cambie y consulte sus solicitudes, su asistencia y sus boletas sin ver datos de otros colaboradores, y un usuario de Recursos Humanos restablezca la contraseña de una cuenta y cambie su rol, tanto en la aplicación nativa como en la aplicación Flutter contra el API desplegado. |
+| Sprint 2 Velocity | 27 Story Points |
+| Sum of Story Points | 27 Story Points de ítems nuevos del Product Backlog (10 ítems: US01-US07, TS02 y TS04), más la implementación en Flutter de los Epics ya entregados en la aplicación nativa, estimada en horas en el Sprint Backlog 2. |
+
+*Nota.* Elaboración propia.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
