@@ -326,7 +326,12 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
     - [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-the-Product](#video-about-the-product)
+- [Video App Validation](#video-app-validation)
+- [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+  - [Anexo A. Videos de Exposiciones](#anexo-a-videos-de-exposiciones)
 
 <div style="page-break-after: always;"></div>
 
@@ -4154,6 +4159,9 @@ Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las
 - *Landing Page:* se desarrolla en Visual Studio Code con HTML5, CSS3 y JavaScript sin frameworks, con un motor de internacionalización propio para inglés y español.
 - *RESTful API:* se desarrolla en IntelliJ IDEA o Visual Studio Code con Java 25 (Eclipse Temurin), Spring Boot 4.0.8, Spring Data JPA, Bean Validation y springdoc-openapi 3.0.3. El proyecto se construye con el Maven Wrapper incluido en el repositorio, por lo que no requiere instalar Maven. En desarrollo se usa MySQL 8 local, administrado desde MySQL Workbench.
 - *Aplicación móvil nativa:* se desarrolla en Android Studio con Kotlin 2.4.20 y Jetpack Compose (Compose BOM 2026.09.00, Material 3 1.4.0). La arquitectura usa Hilt para inyección de dependencias, Retrofit 3 con Gson y OkHttp para consumir el API, Navigation Compose con rutas tipadas, Room y DataStore para el almacenamiento local, y Android Gradle Plugin 9.4.1 con Kotlin integrado. Las pruebas se ejecutan sobre el emulador de Android Studio (Pixel 10, API 37) y sobre dispositivos físicos.
+- *Aplicación móvil multiplataforma (desde el Sprint 2):* se desarrolla en Visual Studio Code o Android Studio con Flutter 3.44 (canal stable) y Dart 3.13. Sigue la misma arquitectura por bounded context de la aplicación nativa, con view models basados en `ChangeNotifier`, `get_it` para inyección de dependencias y `http` para consumir el API. Los paquetes principales son `flutter_secure_storage` para guardar la sesión, `local_auth` para la verificación biométrica, `file_picker` y `path_provider` para los archivos, `url_launcher` para abrir enlaces e `intl` para formatos de fecha y moneda.
+
+En el Sprint 2 el RESTful API incorporó Spring Security con autenticación por tokens JWT para el bounded context IAM y Flyway para versionar los cambios del esquema de la base de datos.
 
 **Software Testing.** Las pruebas unitarias del API se escriben con JUnit 5 y las de la aplicación con JUnit 4, ambas incluidas en las dependencias de cada proyecto. Los endpoints se prueban de forma manual desde Swagger UI con datos de muestra.
 
@@ -4177,18 +4185,21 @@ Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las
 | Software Development | IntelliJ IDEA Community | Desarrollo del RESTful API | Local | https://www.jetbrains.com/idea/download |
 | Software Development | Eclipse Temurin JDK 25 | Compilación y ejecución del API | Local | https://adoptium.net |
 | Software Development | Android Studio | Desarrollo de la aplicación nativa en Kotlin | Local | https://developer.android.com/studio |
+| Software Development | Flutter SDK 3.44 (Dart 3.13) | Desarrollo de la aplicación multiplataforma (Sprint 2) | Local | https://docs.flutter.dev/get-started/install |
+| Software Development | Flyway | Migraciones versionadas del esquema de la base de datos (Sprint 2) | Local (dependencia) | https://documentation.red-gate.com/flyway |
 | Software Development | MySQL Community Server 8 | Base de datos local de desarrollo | Local | https://dev.mysql.com/downloads/mysql |
 | Software Development | MySQL Workbench | Administración de la base de datos local y en la nube | Local | https://dev.mysql.com/downloads/workbench |
 | Source Code Management | Git | Control de versiones | Local | https://git-scm.com/downloads |
 | Source Code Management | GitHub | Repositorios de la organización Performily-Mobile | SaaS | https://github.com/Performily-Mobile |
 | Source Code Management | GitHub Desktop | Cliente gráfico de Git | Local | https://desktop.github.com |
 | Software Testing | JUnit 5 / JUnit 4 | Pruebas unitarias del API y de la aplicación | Local (dependencia) | https://junit.org |
+| Software Testing | flutter_test | Pruebas de la aplicación multiplataforma | Local (dependencia) | https://api.flutter.dev/flutter/flutter_test/ |
 | Software Testing | Swagger UI | Prueba manual de los endpoints | SaaS (embebido en el API) | https://swagger.io/tools/swagger-ui |
 | Software Deployment | GitHub Pages | Publicación del Landing Page | SaaS | https://pages.github.com |
 | Software Deployment | Docker | Imagen del API para su despliegue | Local | https://www.docker.com/products/docker-desktop |
 | Software Deployment | Render | Hosting del API como Web Service | SaaS | https://render.com |
 | Software Deployment | Aiven for MySQL | Base de datos MySQL gestionada | SaaS | https://aiven.io/mysql |
-| Software Deployment | Firebase App Distribution | Distribución del APK a usuarios de prueba (prevista para el Sprint 2) | SaaS | https://firebase.google.com/products/app-distribution |
+| Software Deployment | Firebase App Distribution | Distribución del APK a usuarios de prueba (prevista para el Sprint 3) | SaaS | https://firebase.google.com/products/app-distribution |
 | Software Documentation | OpenAPI / springdoc | Documentación del API | Local (dependencia) | https://springdoc.org |
 | Software Documentation | Markdown en GitHub | Informe del proyecto y README de cada repositorio | SaaS | https://github.com/Performily-Mobile/performily-mobile-report |
 
@@ -4205,6 +4216,7 @@ El equipo utiliza GitHub como plataforma y Git como sistema de control de versio
 | Landing Page | https://github.com/Performily-Mobile/flowboard-mobile-landing-page | Sitio público en HTML5, CSS3 y JavaScript |
 | RESTful API (Web Services) | https://github.com/Performily-Mobile/flowboard-mobile-service | Proyecto Spring Boot con sus pruebas en `src/test` |
 | Aplicación móvil nativa | https://github.com/Performily-Mobile/flowboard-mobile-native-application | Proyecto Android en Kotlin y Jetpack Compose con sus pruebas en `app/src/test` |
+| Aplicación móvil multiplataforma | https://github.com/Performily-Mobile/flowboard-mobile-multiplatform-application | Proyecto Flutter en Dart, iniciado en el Sprint 2 |
 | Informe | https://github.com/Performily-Mobile/performily-mobile-report | Informe del Trabajo Final en Markdown |
 
 *Nota.* Elaboración propia.
@@ -4242,7 +4254,7 @@ Los mensajes de commit siguen la especificación Conventional Commits 1.0.0 con 
 - Todo el código se escribe en inglés: nombres de clases, funciones, variables, archivos, endpoints, tablas y comentarios técnicos. Los textos que ve el usuario están en español y se separan del código mediante archivos de recursos o constantes de presentación.
 - Los nombres revelan la intención y se evitan las abreviaturas ambiguas (`registerEmployee` y no `regEmp`).
 - Se respeta el Ubiquitous Language definido en el Capítulo II: las clases del dominio usan los mismos términos del negocio, por ejemplo `Employee`, `VacationBalance`, `BenefitAssignment`, `Office` o `MetricThreshold`.
-- La sangría es de cuatro espacios en Java y Kotlin y de dos espacios en HTML, CSS y JavaScript. Los archivos terminan con una línea vacía.
+- La sangría es de cuatro espacios en Java y Kotlin y de dos espacios en HTML, CSS, JavaScript y Dart. Los archivos terminan con una línea vacía.
 
 **Landing Page: HTML5, CSS3 y JavaScript**
 
@@ -4269,6 +4281,13 @@ Los mensajes de commit siguen la especificación Conventional Commits 1.0.0 con 
 - Las rutas de navegación son objetos o data classes `@Serializable` con sufijo `Route`, y cada bounded context registra su propio `NavGraph`.
 - Los colores, la tipografía y los íconos se toman del sistema de diseño de `core/designsystem`, que replica los tokens de Figma; no se escriben colores sueltos dentro de las pantallas.
 
+**Aplicación móvil multiplataforma: Dart y Flutter**
+
+- Se siguen las guías Effective Dart y las reglas de `flutter_lints`, configuradas en `analysis_options.yaml`: `UpperCamelCase` para clases y widgets, `lowerCamelCase` para variables, funciones y constantes, y `snake_case` para los nombres de archivo. La sangría es de dos espacios.
+- Cada bounded context es una carpeta dentro de `lib/features` con las mismas capas de la aplicación nativa: `domain` (entity, valueobject, repository), `application` (usecase), `infrastructure` (remote, mapper, repository, local, acl, di) y `presentation` (state, viewmodel, ui/screens, ui/components, ui/navigation). El código compartido vive en `lib/core` (designsystem, di, domain, navigation, network, session y viewmodel).
+- Sufijos por responsabilidad, equivalentes a los de la aplicación nativa: `…Screen`, `…ViewModel`, `…UiState`, `…UseCase`, `…Repository` / `…RepositoryImpl`, `…Service`, `…Dto` y `…Mapper`, con archivos como `my_payslips_screen.dart` o `get_my_payslips_use_case.dart`.
+- Los colores, la tipografía, los espaciados y los componentes se toman de `lib/core/designsystem`; las pantallas no definen estilos sueltos.
+
 **Gherkin**
 
 Los archivos `.feature` siguen “Gherkin Conventions for Readable Specifications”: un `Feature` por User Story, escenarios con nombre descriptivo, pasos `Given-When-Then` en tercera persona y tablas `Examples` para los casos con datos variables.
@@ -4281,7 +4300,7 @@ En esta sección se describen los pasos para desplegar cada producto a partir de
 
 ![Deployment Diagram de Flowboard](assets/Chapter-4/deployment-pipeline.png)
 
- *Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. La distribución de la aplicación mediante Firebase App Distribution se realizará en el Sprint 2. Elaboración propia.
+ *Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. La distribución de las aplicaciones mediante Firebase App Distribution se realizará en el Sprint 3. Elaboración propia.
 
 **Landing Page en GitHub Pages**
 
@@ -4297,7 +4316,16 @@ En esta sección se describen los pasos para desplegar cada producto a partir de
 3. *Servicio:* en Render crear un *Web Service* conectado al repositorio `flowboard-mobile-service`, con runtime *Docker* y rama `main`.
 4. *Variables de entorno:* configurar `SPRING_PROFILES_ACTIVE=prod` y las credenciales de la base de datos: `DATABASE_URL` (URL JDBC completa de Aiven con `sslMode=REQUIRED`), `DATABASE_USER` y `DATABASE_PASSWORD`, que `application-prod.properties` lee con la sintaxis `${...}`. Las credenciales nunca se escriben en los archivos de propiedades del repositorio. Render asigna la variable `PORT`, que el API usa con `server.port=${PORT:8080}`.
 5. *Esquema:* el perfil `prod` usa `spring.jpa.hibernate.ddl-auto=validate`, por lo que el esquema debe existir antes del primer despliegue. Se crea ejecutando una vez el API con el perfil `dev` contra la base de Aiven, o con el script SQL del proyecto.
-6. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
+6. *Seguridad (desde el Sprint 2):* configurar además `IAM_JWT_SECRET`, el secreto con el que se firman los tokens JWT, e `IAM_JWT_TTL_SECONDS`, su tiempo de vida en segundos (8 horas si no se define). El secreto no se guarda en el repositorio.
+7. *Migraciones (desde el Sprint 2):* al iniciar, Flyway aplica las migraciones pendientes con `baseline-on-migrate`, de modo que el esquema que ya existía en Aiven se toma como versión base y los cambios nuevos quedan versionados antes de que Hibernate valide el esquema.
+8. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
+
+**Aplicación móvil multiplataforma**
+
+1. Instalar el Flutter SDK 3.44 o superior y ejecutar `flutter pub get` en la raíz del repositorio `flowboard-mobile-multiplatform-application`.
+2. El cliente HTTP (`lib/core/network/api_client.dart`) apunta por defecto al API desplegado en `https://flowboard-mobile-service.onrender.com/api/v1/`.
+3. Generar el instalable de Android con `flutter build apk --release`; el archivo queda en `build/app/outputs/flutter-apk/`.
+4. En el Sprint 3 el instalable se distribuirá a los usuarios de prueba mediante Firebase App Distribution.
 
 
 ## 4.2. Landing Page & Mobile Application Implementation
@@ -5238,10 +5266,10 @@ El Sprint 2 tuvo como propósito cerrar el alcance funcional del RESTful API con
 | Location | Discord (virtual) |
 | Prepared By | Esquicha Alcántara, Diego Alonso |
 | Attendees (to planning meeting) | Ávila De La Cruz, Darío Fabián / Diaz Villalba, Diego Alonso / Esquicha Alcántara, Diego Alonso / Galvez Meza, Salym Pool / Vasquez Llave, Oscar Lizandro |
-| Sprint 1 Review Summary | El Sprint 1 cerró con 168 Story Points entregados. Quedaron desplegados el Landing Page en GitHub Pages y el RESTful API en Render con MySQL en Aiven, con seis de los siete bounded contexts (Workspace, Attendance, Request, Benefits, Payroll y Wellbeing) documentados en Swagger UI. La aplicación nativa se entregó con la vista de Recursos Humanos conectada al API. Las entrevistas de validación y la evaluación heurística identificaron cuatro problemas de usabilidad, de severidad 1 a 3. [COMPLETAR: feedback del docente sobre el TB1] |
+| Sprint 1 Review Summary | El Sprint 1 cerró con 168 Story Points entregados. Quedaron desplegados el Landing Page en GitHub Pages y el RESTful API en Render con MySQL en Aiven, con seis de los siete bounded contexts (Workspace, Attendance, Request, Benefits, Payroll y Wellbeing) documentados en Swagger UI. La aplicación nativa se entregó con la vista de Recursos Humanos conectada al API. Las entrevistas de validación y la evaluación heurística identificaron cuatro problemas de usabilidad, de severidad 1 a 3. El TB1 obtuvo 19 de 20 puntos y la única observación de la rúbrica fue el criterio Device-tested Native Mobile Application(s), con 2.5 de 3.5 puntos. Al revisar la entrega contra ese criterio, el equipo identificó que la aplicación solo implementaba los User Flows de Recursos Humanos (UF-05 y UF-06), que el Sprint Backlog 1 marcaba como terminadas tareas de la vista del colaborador que se entregaban recién en el Sprint 2, y que el informe no mostraba la aplicación ejecutándose en un dispositivo físico. Por ello, el Sprint 2 prioriza la vista del colaborador, que habilita los User Flows UF-01 a UF-03, y la evidencia de ejecución en dispositivo físico. |
 | Sprint 1 Retrospective Summary | Trabajar por bounded context en ramas propias permitió avanzar en paralelo, pero la base de datos compartida en Aiven obligó a coordinar los cambios de esquema entre integrantes y la exigencia de llave primaria se descubrió tarde. Para el Sprint 2 se acordó versionar los cambios de esquema con una herramienta de migraciones, mantener una rama por bounded context en cada repositorio e integrar en `develop` antes de publicar en `main`. |
 | **Sprint Goal & User Stories** | |
-| Sprint 2 Goal | *Our focus is on* proteger el RESTful API con autenticación por token y control de acceso por rol, y entregar la aplicación en Flutter con los mismos bounded contexts de la aplicación nativa. *We believe it delivers* a los colaboradores y al personal de Recursos Humanos un acceso propio y seguro a su información laboral, en el que cada persona ve solo lo que le corresponde, desde la plataforma móvil que use. *This will be confirmed when* un colaborador inicie sesión con su contraseña temporal, la cambie y consulte sus solicitudes, su asistencia y sus boletas sin ver datos de otros colaboradores, y un usuario de Recursos Humanos restablezca la contraseña de una cuenta y cambie su rol, tanto en la aplicación nativa como en la aplicación Flutter contra el API desplegado. |
+| Sprint 2 Goal | *Our focus is on* proteger el RESTful API con autenticación por token y control de acceso por rol, y entregar la aplicación en Flutter con los bounded contexts de la aplicación nativa, salvo Wellbeing, que se implementará en Flutter en el Sprint 3. *We believe it delivers* a los colaboradores y al personal de Recursos Humanos un acceso propio y seguro a su información laboral, en el que cada persona ve solo lo que le corresponde, desde la plataforma móvil que use. *This will be confirmed when* un colaborador inicie sesión con su contraseña temporal, la cambie y consulte sus solicitudes, su asistencia y sus boletas sin ver datos de otros colaboradores, y un usuario de Recursos Humanos restablezca la contraseña de una cuenta y cambie su rol, tanto en la aplicación nativa como en la aplicación Flutter contra el API desplegado. |
 | Sprint 2 Velocity | 27 Story Points |
 | Sum of Story Points | 27 Story Points de ítems nuevos del Product Backlog (10 ítems: US01-US07, TS02 y TS04), más la implementación en Flutter de los Epics ya entregados en la aplicación nativa, estimada en horas en el Sprint Backlog 2. |
 
@@ -5782,6 +5810,25 @@ Como resultado del Sprint 2 ambas aplicaciones exigen iniciar sesión antes de m
 
 *Nota.* Carga de boletas del periodo y control del estado de pago por área. Elaboración propia.
 
+**Concordancia con los User Flows**
+
+La Tabla 23 relaciona los User Flows definidos en el Capítulo III con las pantallas que los implementan al cierre del Sprint 2. En el Sprint 1 solo estaban implementados los flujos de Recursos Humanos (UF-05 y UF-06); con la vista del colaborador y la aplicación Flutter, el Sprint 2 implementa también los flujos del colaborador.
+
+**Tabla 23:** *Concordancia de los User Flows con la implementación del Sprint 2*
+
+| User Flow | Aplicación nativa | Aplicación Flutter | Evidencia | Estado |
+| :---- | :---- | :---- | :---- | :----: |
+| UF-01 Consultar saldo de vacaciones y beneficios | Panel del colaborador, Mi saldo de vacaciones y Mis beneficios | Mi saldo de vacaciones (con caché local para consultarlo sin conexión) y Mis beneficios | Figuras 145 y 151 | Implementado |
+| UF-02 Solicitar vacaciones y seguir el estado | Nueva solicitud, Mis solicitudes y detalle de la solicitud | Asistente de nueva solicitud con validación de saldo, Mis solicitudes y detalle con historial | Figura 152 | Implementado |
+| UF-03 Consultar y descargar una boleta | Pestaña de boletas con selector de año y visor | Mis boletas con verificación de identidad (`local_auth`), visor y descarga | Figuras 146 y 153 | Implementado (verificación biométrica solo en Flutter) |
+| UF-04 Resolver una solicitud desde la notificación | Bandeja de solicitudes pendientes y revisión de la solicitud | Bandeja de solicitudes pendientes y revisión de la solicitud | Figura 152 | Parcial: la resolución se hace desde la bandeja; la notificación (US36) pasa al Sprint 3 |
+| UF-05 Registrar un nuevo colaborador | Registro de colaborador (Sprint 1) | Registro de colaborador | Figura 149 | Implementado |
+| UF-06 Revisar la asistencia de un área | Asistencia por área (Sprint 1) | Reporte de asistencia por área | Figura 150 | Implementado |
+
+*Nota.* Elaboración propia.
+
+Enlace del video: [COMPLETAR: enlace de OneDrive del video de ejecución del Sprint 2, que muestre el inicio de sesión, la vista del colaborador y la aplicación Flutter]
+
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
 En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y los que cambiaron de contrato. La documentación se sigue generando con springdoc-openapi y se publica con Swagger UI en el mismo servicio; además, se corrigió la configuración para que Swagger UI envíe las peticiones al mismo servidor que la sirve, lo que permite probar los endpoints directamente desde la versión desplegada. Desde este Sprint todos los endpoints, salvo el inicio de sesión, la documentación y `/health`, exigen el encabezado `Authorization: Bearer <token>`, que Swagger UI permite registrar con su botón *Authorize*. Los endpoints usan el prefijo `/api/v1`, salvo `/health`.
@@ -5790,7 +5837,7 @@ En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y 
 - Especificación OpenAPI: /v3/api-docs
 - Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
 
-**Tabla 23:** *Endpoints documentados con OpenAPI en el Sprint 2*
+**Tabla 24:** *Endpoints documentados con OpenAPI en el Sprint 2*
 
 | Bounded Context | Verbo HTTP | Endpoint | Acción | Parámetros | Respuesta |
 | :---- | :----: | :---- | :---- | :---- | :----: |
@@ -5822,7 +5869,7 @@ En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y 
 
 *Nota.* Parámetros de filtro y paginación de `GET /requests` y respuesta 200 con la página. Elaboración propia.
 
-**Tabla 24:** *Commits relacionados con la documentación de los servicios en el Sprint 2*
+**Tabla 25:** *Commits relacionados con la documentación de los servicios en el Sprint 2*
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :---- | :---- | :----: | :---- | :---- | :----: |
@@ -5856,7 +5903,7 @@ Landing Page desplegado: https://performily-mobile.github.io/flowboard-mobile-la
 
 RESTful API desplegado: https://flowboard-mobile-service.onrender.com
 
-**Tabla 25:** *Commits relacionados con el despliegue en el Sprint 2*
+**Tabla 26:** *Commits relacionados con el despliegue en el Sprint 2*
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :---- | :---- | :----: | :---- | :---- | :----: |
@@ -5879,7 +5926,7 @@ Durante el Sprint 2 se mantuvo la organización por bounded context, pero el tra
 
 En total, el Sprint 2 registró 37 commits en el API, 49 en la aplicación nativa y 125 en la aplicación Flutter, sin contar los merges. El Landing Page no registró commits en este Sprint.
 
-**Tabla 26:** *Commits por integrante en el Sprint 2*
+**Tabla 27:** *Commits por integrante en el Sprint 2*
 
 | Integrante | GitHub Username | RESTful API | Aplicación nativa | Aplicación Flutter | Total |
 | :---- | :---- | :---: | :---: | :---: | :---: |
@@ -5943,7 +5990,7 @@ Se le pide al entrevistado que explore la página unos 20 segundos y luego la ci
 
 ### 4.3.2. Registro de Entrevistas
 
-Las Figuras 141 a 144 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
+Las Figuras 162 a 165 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
 
 Para cada segmento se realizaron dos entrevistas, cuatro en total. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre el Landing Page.
 
@@ -5963,7 +6010,7 @@ Timing donde inicia la entrevista: 0:00
 
 Duración completa de la entrevista: 4 minutos 45 segundos
 
-**Figura 141:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
+**Figura 162:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
 
 ![Entrevista de validación 1 - de Recursos Humanos](assets/Chapter-4/validacion-s1-01.png)
 
@@ -5987,7 +6034,7 @@ Timing donde inicia la entrevista: 4:45
 
 Duración completa de la entrevista: 4 minutos 29 segundos
 
-**Figura 142:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
+**Figura 163:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
 
 ![Entrevista de validación 2 - de Recursos Humanos](assets/Chapter-4/validacion-s1-02.png)
 
@@ -6014,7 +6061,7 @@ Timing donde inicia la entrevista: 9:15
 
 Duración completa de la entrevista: 5 minutos 53 segundos
 
-**Figura 143:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
+**Figura 164:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
 
 ![Entrevista de validación 1 - de colaboradores](assets/Chapter-4/validacion-s1-03.png)
 
@@ -6038,7 +6085,7 @@ Timing donde inicia la entrevista: 15:08
 
 Duración completa de la entrevista: 4 minutos 51 segundos
 
-**Figura 144:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
+**Figura 165:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
 
 ![Entrevista de validación 2 - de colaboradores](assets/Chapter-4/validacion-s1-04.png)
 
@@ -6050,7 +6097,7 @@ La entrevistada, Andrea, tiene 26 años y trabaja como asistente de Recursos Hum
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-Las Figuras 145 a 148 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
+Las Figuras 166 a 169 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
 
 **UX Heuristics & Principles Evaluation**
 **Usability - Inclusive Design - Information Architecture**
@@ -6115,7 +6162,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** La aplicación toma el usuario y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. El dispositivo siempre abre con el mismo usuario de Recursos Humanos, no es posible cambiar de usuario y ninguna información está protegida por credenciales.
 
-**Figura 145:** *Aplicación abierta directamente en la vista de Recursos Humanos*
+**Figura 166:** *Aplicación abierta directamente en la vista de Recursos Humanos*
 
 ![Problema 1](assets/Chapter-4/heuristica-p3.png)
 
@@ -6130,7 +6177,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Para asignar un beneficio o revisar un espacio de trabajo, el usuario de Recursos Humanos debe abrir “Más” y luego la opción correspondiente. Es una tarea recurrente que queda a dos niveles de profundidad y que el usuario no descubre si no explora el menú.
 
-**Figura 146:** *Menú Más de Recursos Humanos*
+**Figura 167:** *Menú Más de Recursos Humanos*
 
 ![Problema 2](assets/Chapter-4/heuristica-p4.png)
 
@@ -6145,7 +6192,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Cuando el API no responde, la mayoría de pantallas muestra “No se pudo conectar con el servidor” con un botón Reintentar, sin explicar si el problema es la conexión del celular o el servicio. Solo el saldo de vacaciones conserva los últimos datos sincronizados; el resto de pantallas queda vacío.
 
-**Figura 147:** *Mensaje de error de conexión*
+**Figura 168:** *Mensaje de error de conexión*
 
 ![Problema 3](assets/Chapter-4/heuristica-p5.png)
 
@@ -6160,13 +6207,221 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** En el gráfico del histórico, los días con nivel deficiente o peligroso se pintan de otro color. La leyenda indica el significado, pero una persona con dificultad para distinguir colores no puede saber qué barra corresponde a cada nivel.
 
-**Figura 148:** *Gráfico del histórico ambiental*
+**Figura 169:** *Gráfico del histórico ambiental*
 
 ![Problema 4](assets/Chapter-4/heuristica-p7.png)
 
 *Nota.* Elaboración propia.
 
 **Recomendación:** Agregar una marca adicional a las barras fuera de rango (por ejemplo un patrón o un ícono de advertencia sobre la barra) y una descripción accesible del gráfico para lectores de pantalla.
+
+**Evaluación de la versión del Sprint 2**
+
+La evaluación anterior se realizó sobre la versión del Sprint 1. Con la entrega del Sprint 2, que incorporó el inicio de sesión, la vista del colaborador y la aplicación Flutter, el equipo repitió la evaluación según heurísticas sobre ambas aplicaciones. Las Figuras 170 a 177 presentan las evidencias visuales de esta segunda evaluación.
+
+**UX Heuristics & Principles Evaluation**
+**Usability - Inclusive Design - Information Architecture**
+
+| | |
+| :---- | :---- |
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | 1ACC0238 Aplicaciones para Dispositivos Móviles |
+| **NRC** | 4951 |
+| **PROFESORES** | Mayta Guillermo, Jorge Luis |
+| **AUDITOR** | Diaz Villalba, Diego Alonso |
+| **CLIENTE(S)** | Performily |
+
+**SITE o APP A EVALUAR:** Flowboard (versión del Sprint 2), en sus dos aplicaciones: la aplicación nativa para Android (Kotlin con Jetpack Compose) y la aplicación multiplataforma (Flutter). Ambas atienden a los dos roles de la plataforma, personal de Recursos Humanos y colaborador. Cuando un problema solo ocurre en una versión, se indica en el título.
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio de sesión con correo corporativo y contraseña.
+2. Recuperación de acceso desde la opción "Olvidé mi contraseña".
+3. Cambio de idioma de la aplicación.
+4. Uso del acceso con huella digital.
+5. Navegación por la barra inferior y por la pestaña "Más", con el rol de Recursos Humanos y con el rol de colaborador.
+6. Acceso a la asistencia propia del personal de Recursos Humanos (marcar entrada y salida).
+7. Consulta de las notificaciones y de la pantalla de inicio del colaborador.
+8. Lectura de los términos y la política de privacidad desde el inicio de sesión.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Creación, revisión y resolución de solicitudes.
+2. Registro y edición de colaboradores.
+3. Carga y descarga de boletas de pago.
+4. Gestión de beneficios y saldo de vacaciones.
+5. Monitoreo de bienestar laboral.
+6. Evaluación de la seguridad del proceso de autenticación.
+7. Pruebas de rendimiento, tiempos de respuesta y uso sin conexión.
+8. Evaluación de las reglas de negocio y del funcionamiento del backend.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlo. Es importante que sea corregido y se le debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|---|---|---|
+| 1 | Secciones de la app Flutter (Inicio del colaborador, Bienestar y Notificaciones) que muestran una pantalla de "todavía no integrada" | 4 | Information Architecture: Is it Usable? / Information Architecture: Is it Valuable? |
+| 2 | La pantalla "Recuperar acceso" no da ningún contacto ni acción para recuperar la contraseña | 3 | Usability: Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores / Information Architecture: Is it Usable? |
+| 3 | El selector "ES / EN" no cambia el idioma de la aplicación | 2 | Usability: Visibilidad del estado del sistema / Information Architecture: Is it Credible? |
+| 4 | La opción de huella digital aparece siempre deshabilitada | 2 | Usability: Diseño estético y minimalista / Inclusive Design: Agrega valor |
+| 5 | La barra inferior del colaborador no es igual en la app nativa y en la app Flutter | 2 | Usability: Consistencia y estándares / Information Architecture: Is it Findable? |
+| 6 | El personal de RR. HH. marca su propia asistencia desde "Más", escondida en un segundo nivel | 2 | Usability: Flexibilidad y eficiencia de uso / Information Architecture: Is it Findable? |
+| 7 | El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña | 2 | Inclusive Design: Considera la situación / Information Architecture: Is it Accessible? |
+| 8 | El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas | 1 | Usability: Consistencia y estándares / Inclusive Design: Es consistente |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Secciones de la app Flutter que muestran una pantalla de "todavía no integrada"**
+
+**Severidad:** 4
+**Heurística violada:** Information Architecture – Is it Usable? / Information Architecture – Is it Valuable?
+
+**Problema:**
+En la app Flutter, tres opciones que aparecen en la navegación llevan a una pantalla que solo dice "Esta sección todavía no está integrada en la app". Estas opciones son la pestaña "Inicio" del colaborador, la opción "Bienestar" del menú "Más" de Recursos Humanos y el botón de notificaciones del panel de Recursos Humanos. En la app nativa estas mismas secciones sí funcionan. El usuario ve la opción y la toca, pero no puede hacer nada con ella, y en el caso del colaborador "Inicio" es la primera pestaña que ve al ingresar.
+
+**Figura 170:** *Pantalla "todavía no integrada" en la app Flutter*
+
+![Pantalla "todavía no integrada" en la app Flutter](assets/Chapter-4/heuristica-s2-p1.png)
+
+*Nota.* Captura de pantalla de la pestaña "Inicio" del colaborador, de "Más › Bienestar" y del botón de notificaciones del panel de RR. HH. en la app Flutter. Elaboración propia.
+
+**Recomendación:**
+Terminar estas tres pantallas en Flutter siguiendo lo que ya existe en la app nativa. Si no alcanza el tiempo, ocultar esas opciones hasta que estén listas, para que el usuario no entre a una pantalla vacía.
+
+**PROBLEMA #2: La pantalla "Recuperar acceso" no da ningún contacto ni acción**
+
+**Severidad:** 3
+**Heurística violada:** Usabilidad – Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores / Information Architecture – Is it Usable?
+
+**Problema:**
+Al tocar "Olvidé mi contraseña", las dos apps explican que Recursos Humanos genera una contraseña temporal y que llega al correo corporativo. Pero el recuadro "Contacto de Recursos Humanos" solo dice "Solicita el contacto oficial a tu organización", sin correo, teléfono ni botón para escribir. Un colaborador que no puede ingresar no sabe a quién pedir la contraseña temporal, así que no puede resolver el problema por sí solo.
+
+**Figura 171:** *Pantalla Recuperar acceso*
+
+![Pantalla Recuperar acceso](assets/Chapter-4/heuristica-s2-p2.png)
+
+*Nota.* Captura de la pantalla "Recuperar acceso" de ambas apps. Elaboración propia.
+
+**Recomendación:**
+Mostrar un contacto real configurable por organización, por ejemplo un correo de Recursos Humanos con un botón "Escribir a Recursos Humanos" que abra la aplicación de correo.
+
+**PROBLEMA #3: El selector "ES / EN" no cambia el idioma de la aplicación**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Visibilidad del estado del sistema / Information Architecture – Is it Credible?
+
+**Problema:**
+En el pie del inicio de sesión aparece "ES / EN", que se ve como un selector de idioma. En la app nativa es solo un texto con un ícono: no se puede tocar y no pasa nada. En la app Flutter sí se puede tocar, pero abre un aviso que dice que la traducción al inglés todavía no está disponible. Algo que parece una función y no lo es hace dudar al usuario de si la app funciona bien.
+
+**Figura 172:** *Selector ES / EN del inicio de sesión*
+
+![Selector ES / EN del inicio de sesión](assets/Chapter-4/heuristica-s2-p3.png)
+
+*Nota.* Captura del pie del login en ambas apps y del aviso de la app Flutter. Elaboración propia.
+
+**Recomendación:**
+Mientras no exista la traducción, quitar el selector del login y dejar el idioma como información en "Cuenta y seguridad". Si se mantiene, que en ambas apps responda igual, con el mismo aviso.
+
+**PROBLEMA #4: La opción de huella digital aparece siempre deshabilitada**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Diseño estético y minimalista / Inclusive Design – Agrega valor
+
+**Problema:**
+En el inicio de sesión de las dos apps hay un botón "Ingresar con huella digital" que está deshabilitado, y en "Cuenta y seguridad" hay un interruptor "Desbloqueo con huella" también deshabilitado (con el texto "Disponible cuando se integre la autenticación biométrica"). En la app Flutter el botón del login explica esto en un tooltip, pero en la nativa no hay ninguna explicación. Son controles que ocupan espacio y no se pueden usar. La verificación biométrica sí funciona en la app Flutter, pero solo para abrir las boletas propias, por lo que el usuario encuentra la huella habilitada en una pantalla y deshabilitada en otras.
+
+**Figura 173:** *Opción de huella digital deshabilitada*
+
+![Opción de huella digital deshabilitada](assets/Chapter-4/heuristica-s2-p4.png)
+
+*Nota.* Captura del login y de "Cuenta y seguridad" en ambas apps. Elaboración propia.
+
+**Recomendación:**
+Ocultar el botón del login y el interruptor de "Cuenta y seguridad" hasta implementar el ingreso con huella, o reutilizar en ellos la verificación con `local_auth` que ya usa la consulta de boletas en la app Flutter.
+
+**PROBLEMA #5: La barra inferior del colaborador no es igual en las dos apps**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Consistencia y estándares / Information Architecture – Is it Findable?
+
+**Problema:**
+La app nativa le da al colaborador las pestañas Inicio, Solicitudes, Asistencia, Boletas y Más. La app Flutter le da Inicio, Solicitudes, Asistencia, Boletas y Perfil. El README de la app Flutter dice que tiene las mismas funciones y el mismo diseño que la nativa, pero la última pestaña es distinta. En la nativa, el perfil, los beneficios, el saldo de vacaciones, el organigrama y las notificaciones están dentro de "Más", y en Flutter no queda claro dónde encontrarlos. Un usuario que cambia de una app a la otra tiene que volver a aprender dónde está cada cosa.
+
+**Figura 174:** *Barra inferior del colaborador en ambas aplicaciones*
+
+![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5.png)
+
+*Nota.* Captura de la barra inferior del colaborador en ambas apps. Elaboración propia.
+
+**Recomendación:**
+Dejar la misma barra en las dos apps. Lo más simple es que Flutter use "Más" como la nativa, con las mismas secciones del colaborador adentro.
+
+**PROBLEMA #6: El personal de RR. HH. marca su propia asistencia desde "Más"**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Flexibilidad y eficiencia de uso / Information Architecture – Is it Findable?
+
+**Problema:**
+El personal de Recursos Humanos también es colaborador y debe marcar su entrada y salida. Pero la pestaña "Asistencia" de su barra inferior es la del equipo, y su asistencia personal está en "Más › Mi asistencia" (sección "Mi cuenta"). Es una acción que se hace todos los días y necesita entrar a un segundo nivel para hacerla. Además, el nombre "Asistencia" en la barra no deja claro que no es la propia.
+
+**Figura 175:** *Opción Mi asistencia dentro de Más*
+
+![Opción Mi asistencia dentro de Más](assets/Chapter-4/heuristica-s2-p6.png)
+
+*Nota.* Captura de "Más" con la opción "Mi asistencia" en la app nativa o en Flutter. Elaboración propia.
+
+**Recomendación:**
+Agregar un acceso directo para marcar entrada y salida en el panel de Recursos Humanos, o separar claramente en la pestaña "Asistencia" las dos vistas ("Mi asistencia" y "Equipo").
+
+**PROBLEMA #7: El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña**
+
+**Severidad:** 2
+**Heurística violada:** Inclusive Design – Considera la situación / Information Architecture – Is it Accessible?
+
+**Problema:**
+En el pie del inicio de sesión de la app nativa, "Términos y privacidad" es un texto con clic, sin relleno ni tamaño mínimo, por lo que su área táctil es solo la altura del texto. Material Design recomienda al menos 48 dp. Para alguien que usa el celular con una mano o en movimiento, es fácil fallar al tocarlo. En Flutter este enlace es un botón y ya cumple con el tamaño mínimo.
+
+**Figura 176:** *Enlace Términos y privacidad de la app nativa*
+
+![Enlace Términos y privacidad de la app nativa](assets/Chapter-4/heuristica-s2-p7.png)
+
+*Nota.* Captura del pie del login en la app nativa. Elaboración propia.
+
+**Recomendación:**
+Usar un botón de texto (TextButton) en lugar de un texto con clic, o darle al menos 48 dp de alto.
+
+**PROBLEMA #8: El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas**
+
+**Severidad:** 1
+**Heurística violada:** Usabilidad – Consistencia y estándares / Inclusive Design – Es consistente
+
+**Problema:**
+En la pantalla "Recuperar acceso" de la app nativa, el botón para volver es un texto "‹  Recuperar acceso". En el resto de la app, y en la misma pantalla de la app Flutter, se usa la barra superior con la flecha de regreso. Es un problema pequeño porque el usuario igual entiende que puede volver, y además existe el botón "Volver a iniciar sesión" al final, pero rompe el patrón.
+
+**Figura 177:** *Botón de volver de Recuperar acceso en la app nativa*
+
+![Botón de volver de Recuperar acceso en la app nativa](assets/Chapter-4/heuristica-s2-p8.png)
+
+*Nota.* Captura de "Recuperar acceso" en la app nativa y en la Flutter. Elaboración propia.
+
+**Recomendación:**
+Usar la misma barra superior con flecha de regreso (FlowboardTopBar) que usan las demás pantallas.
+
+---
+
+*Nota de la evaluación.* Los hallazgos se basan en la revisión de las dos aplicaciones y de su código fuente (versión local de la rama `develop` de la app Flutter y de la app nativa). La app Flutter sigue en desarrollo, por lo que el problema #1 puede dejar de aplicar cuando se terminen esas pantallas.
 
 <div style="page-break-after: always;"></div>
 
@@ -6184,9 +6439,81 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 * Las cuatro entrevistas de validación, dos por segmento, mostraron que los usuarios entienden que Flowboard centraliza la información laboral y permite gestionar trámites desde el celular. También dejaron mejoras para el Landing Page: reducir los textos secundarios y los términos técnicos, subir la sección de módulos y agregar un botón para solicitar una demo (sección 4.3.2). La evaluación heurística de la versión del Sprint 1 encontró cuatro problemas de severidad 1 a 3: la ausencia de inicio de sesión, la baja visibilidad de Beneficios y Bienestar dentro del menú "Más", los mensajes de error de conexión poco orientadores y el uso exclusivo del color en el gráfico del histórico ambiental (sección 4.3.3).
 
-* Como lección del trabajo en equipo, cada integrante lideró uno o dos bounded contexts en su propia rama, lo que permitió avanzar en paralelo. Aun así, la base de datos compartida en Aiven obligó a coordinar los cambios de esquema y la exigencia de llave primaria se descubrió tarde (sección 4.2.1.9). Para el Sprint 2 se recomienda crear el esquema con un script versionado, usar el prefijo feature/ en las ramas y abrir pull requests para que la revisión quede registrada.
+* Como lección del trabajo en equipo del Sprint 1, cada integrante lideró uno o dos bounded contexts en su propia rama, lo que permitió avanzar en paralelo. Aun así, la base de datos compartida en Aiven obligó a coordinar los cambios de esquema y la exigencia de llave primaria se descubrió tarde (sección 4.2.1.9). En el Sprint 2 el equipo atendió esta lección versionando el esquema con Flyway (sección 4.2.2.8).
 
-* Para el Sprint 2 se recomienda priorizar el bounded context IAM con el inicio de sesión y la vista del colaborador, incluida la consulta de boletas (US44) y la notificación de cambio de estado (US36). También se recomienda mejorar el manejo de errores de conexión, incorporar accesos directos en el Panel de Recursos Humanos, agregar ayudas visuales adicionales al color en el histórico ambiental, desarrollar la aplicación cross-platform en Flutter y distribuir la aplicación a los testers mediante Firebase App Distribution. Conviene además repetir la validación con usuarios incluyendo tareas sobre la aplicación nativa.
+* En el Sprint 2 se completó el alcance funcional del RESTful API con el bounded context IAM: inicio y cierre de sesión con tokens JWT, cambio obligatorio de la contraseña temporal, restablecimiento de contraseña, cambio de rol y restricción de acceso por rol, además de la paginación, el filtrado y el ordenamiento de los listados de solicitudes y asistencia (secciones 4.2.2.3 y 4.2.2.7). Ambas aplicaciones exigen ahora iniciar sesión y muestran a cada persona solo la información que le corresponde.
+
+* El Sprint 2 llevó la solución a una segunda plataforma con la aplicación cross-platform en Flutter, que implementa IAM, Workspace, Attendance, Request, Benefits y Payroll, además del panel de Recursos Humanos, sobre la misma arquitectura por capas de la aplicación nativa y consumiendo el mismo API desplegado. En la aplicación nativa se completó la vista del colaborador, y la consulta de boletas en Flutter incorporó la verificación de identidad con huella, rostro o el bloqueo del dispositivo. El equipo registró 211 commits en los tres repositorios de software (Tabla 27).
+
+* La revisión de la calificación del TB1 mostró que la evidencia en dispositivo físico y la concordancia con los User Flows son tan importantes como el código. El Sprint 2 atendió las recomendaciones del Sprint 1 de priorizar IAM, la vista del colaborador con la consulta de boletas (US44) y la aplicación en Flutter. La evaluación heurística de la versión del Sprint 2 encontró ocho problemas de severidad 1 a 4, entre ellos secciones de la aplicación Flutter que todavía no están integradas, una pantalla de recuperación de acceso sin un contacto real y diferencias de navegación entre ambas aplicaciones (sección 4.3.3).
+
+* Para el Sprint 3 se recomienda implementar Wellbeing y las secciones pendientes de la aplicación Flutter, la notificación de cambio de estado de las solicitudes (US36) y la distribución de ambas aplicaciones a los testers mediante Firebase App Distribution. También se recomienda corregir los problemas de la evaluación heurística del Sprint 2, unificar la barra inferior del colaborador en ambas aplicaciones, agregar Unit Tests para IAM y para la aplicación Flutter, y repetir la validación con usuarios sobre la versión del Sprint 2 en dispositivos físicos.
+
+<div style="page-break-after: always;"></div>
+
+# Video About-the-Product
+
+El Video About-the-Product está dirigido a los visitantes del Landing Page que quieren conocer el modelo de negocio y las características principales de Flowboard, y a los usuarios de las aplicaciones que quieren saber qué tareas pueden resolver con ellas. Presenta el problema de la gestión de recursos humanos en organizaciones en crecimiento, la propuesta de valor para el personal de Recursos Humanos y para los colaboradores, y un recorrido por las funcionalidades principales de la aplicación. Incluye el testimonio de [COMPLETAR: nombre del usuario entrevistado en la validación, por cada User Persona].
+
+**Figura 178:** *Cuadro representativo del Video About-the-Product*
+
+![Video About-the-Product](assets/Chapter-5/about-the-product-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-product-av2.mp4`
+- URL de OneDrive: [COMPLETAR]
+- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
+- Duración: [COMPLETAR: mm:ss]
+
+<div style="page-break-after: always;"></div>
+
+# Video App Validation
+
+El Video App Validation documenta las sesiones de prueba de las aplicaciones con usuarios de los dos segmentos objetivo, personal de Recursos Humanos y colaboradores. En cada sesión el usuario realiza las tareas definidas en la sección 4.3.1 sobre la versión del Sprint 2 y comenta su experiencia; los hallazgos se evalúan con el formato de evaluación según heurísticas de la sección 4.3.3.
+
+**Figura 179:** *Cuadro representativo del Video App Validation*
+
+![Video App Validation](assets/Chapter-5/app-validation-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-validation-av2.mp4`
+- URL de OneDrive: [COMPLETAR]
+- Participantes: [COMPLETAR: nombre, segmento y fecha de cada sesión]
+- Duración: [COMPLETAR: mm:ss]
+
+<div style="page-break-after: always;"></div>
+
+# Video About-the-Team
+
+El Video About-the-Team resume el proceso de trabajo del equipo Performily durante el proyecto. Muestra sesiones de trabajo reales del equipo, con narración del proceso, y el testimonio ante cámara de cada integrante sobre las actividades que realizó, los outcomes que alcanzó y las competencias que desarrolló.
+
+**Tabla 28:** *Pauta de secuencias del Video About-the-Team*
+
+| Inicio (hh:mm:ss) | Sección |
+| :----: | :---- |
+| [COMPLETAR] | Presentación del equipo y de Flowboard |
+| [COMPLETAR] | Sesiones de trabajo del equipo |
+| [COMPLETAR] | Testimonio de Ávila De La Cruz, Darío Fabián |
+| [COMPLETAR] | Testimonio de Diaz Villalba, Diego Alonso |
+| [COMPLETAR] | Testimonio de Esquicha Alcántara, Diego Alonso |
+| [COMPLETAR] | Testimonio de Galvez Meza, Salym Pool |
+| [COMPLETAR] | Testimonio de Vasquez Llave, Oscar Lizandro |
+| [COMPLETAR] | Cierre |
+
+*Nota.* Elaboración propia.
+
+**Figura 180:** *Cuadro representativo del Video About-the-Team*
+
+![Video About-the-Team](assets/Chapter-5/about-the-team-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-team-av2.mp4`
+- URL de Microsoft Stream: [COMPLETAR]
+- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
+- Duración: [COMPLETAR: mm:ss]
 
 <div style="page-break-after: always;"></div>
 
@@ -6231,3 +6558,17 @@ Pérez Panduro, S., & Flores, E. (2022). Gestión de recursos humanos en el sect
 Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. Aula Virtual, 6(13), 1027–1066. https://doi.org/10.5281/zenodo.16933151
 
 World Wide Web Consortium. (2018, 5 de junio). Web Content Accessibility Guidelines (WCAG) 2.1. https://www.w3.org/TR/WCAG21/
+
+<div style="page-break-after: always;"></div>
+
+# Anexos
+
+## Anexo A. Videos de Exposiciones
+
+**Tabla 29:** *Videos de exposición por entrega*
+
+| Entrega | Enlace del video de exposición |
+| :---- | :---- |
+| AV2 | [COMPLETAR: enlace privado de OneDrive del video de exposición del AV2] |
+
+*Nota.* Elaboración propia.
