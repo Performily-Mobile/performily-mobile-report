@@ -5544,6 +5544,225 @@ A continuación se presentan los commits de cada repositorio, sin contar los mer
 
 *Nota.* Elaboración propia a partir del historial de GitHub.
 
+#### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+En el Sprint 2 las pruebas se concentraron en el bounded context IAM, porque de él depende que cada colaborador acceda únicamente a su propia información, como exige la Ley N.° 29733, y en la paginación de los listados, que cambió el contrato de los endpoints que ya consumían ambas aplicaciones. Las pruebas de aceptación de los Web Services se escriben en Gherkin bajo el enfoque BDD, a partir de los criterios de aceptación de las User Stories del Capítulo II, y los códigos de respuesta esperados corresponden a los que devuelve el API desplegado.
+
+**Acceptance Tests de los Web Services (BDD)**
+
+**US02 y US03: Inicio de sesión y cambio de la contraseña temporal** (`sign-in.feature`)
+
+```gherkin
+Feature: Sign in and temporary password change
+  As an employee who signs in for the first time
+  I want to authenticate and define my own password
+  So that only I know my access key
+
+  Background:
+    Given an active account "ana.torres@acme.pe" with a temporary password
+
+  Scenario: Sign in with a temporary password
+    When the user signs in with "ana.torres@acme.pe" and the temporary password
+    Then the response status is 200
+    And the response contains a token, the role and the employee id
+    And "mustChangePassword" is true
+
+  Scenario Outline: Reject invalid sign in attempts
+    When the user signs in with "<username>" and "<password>"
+    Then the response status is <status>
+
+    Examples:
+      | username           | password      | status |
+      | ana.torres@acme.pe | WrongPass1!   | 401    |
+      |                    |               | 400    |
+
+  Scenario Outline: Change the temporary password
+    Given the user is signed in with the temporary password
+    When the user changes the password to "<newPassword>"
+    Then the response status is <status>
+
+    Examples:
+      | newPassword | status |
+      | Flowboard#2026 | 200 |
+      | flowboard      | 400 |
+      | Short1!        | 400 |
+
+  Scenario: The previous token stops working after the change
+    Given the user changed the temporary password
+    When the user calls a protected endpoint with the previous token
+    Then the response status is 401
+```
+
+**US04: Cierre de sesión** (`sign-out.feature`)
+
+```gherkin
+Feature: Sign out
+  As a user of the system
+  I want to close my session
+  So that nobody else can access my information from the same device
+
+  Scenario: The token is revoked on sign out
+    Given the user is signed in
+    When the user signs out
+    Then the response status is 204
+    And a request with the same token returns 401
+```
+
+**US05, US06 y US07: Administración de cuentas y restricción por rol** (`account-management.feature`)
+
+```gherkin
+Feature: Account management restricted by role
+  As HR staff
+  I want to change roles and reset passwords
+  So that I grant or remove privileges and give access back to employees
+
+  Scenario: An employee cannot list the accounts
+    Given the user is signed in with the role "EMPLOYEE"
+    When the user requests the list of accounts
+    Then the response status is 403
+
+  Scenario: Reset the password of an employee
+    Given the user is signed in with the role "HR_STAFF"
+    And the account 8 is active
+    When HR resets the password of the account 8
+    Then the response status is 200
+    And the response contains a temporary password
+    And the next sign in of the account 8 has "mustChangePassword" true
+
+  Scenario: Keep at least one active HR account
+    Given the user is signed in with the role "HR_STAFF"
+    And the account 1 is the only active HR account
+    When HR changes the role of the account 1 to "EMPLOYEE"
+    Then the response status is 422
+```
+
+**TS04: Paginación de las solicitudes** (`request-pagination.feature`)
+
+```gherkin
+Feature: Paginated request lists
+  As a Developer
+  I want list endpoints to support pagination, filters and sorting
+  So that responses stay small and the apps load more items on demand
+
+  Scenario: Get the first page of the requests of an employee
+    Given the employee 3 has 25 requests
+    When the client requests "/requests/me?requesterId=3&page=0&size=20"
+    Then the response status is 200
+    And the page contains 20 requests ordered from newest to oldest
+    And the total of elements is 25
+
+  Scenario: Filter all requests by several statuses
+    When HR requests "/requests?status=APPROVED&status=REJECTED"
+    Then the response status is 200
+    And every request in the page is "APPROVED" or "REJECTED"
+
+  Scenario: Reject an invalid page size
+    When the client requests "/requests/me?requesterId=3&page=0&size=101"
+    Then the response status is 400
+```
+
+**Tabla 22:** *Commits relacionados con Testing en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 3981ab5 | feat(iam): add revoked token entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | bf72d08 | feat(iam): add JWT-based IAM security configuration | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9d9c8bd | feat(iam): add IAM account and session service | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 41d3300 | feat(iam): handle employee lifecycle events | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1e5b8f9 | feat(shared): add pagination value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 5006586 | fix(request): prevent an employee from resolving their own request | — | 02/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.2.6. Execution Evidence for Sprint Review
+
+Las figuras de esta sección documentan la ejecución funcional de los módulos implementados durante el Sprint 2 y sirven como evidencia del comportamiento observado en las aplicaciones.
+
+Como resultado del Sprint 2 ambas aplicaciones exigen iniciar sesión antes de mostrar cualquier información, y la barra inferior se arma con el rol que devuelve el token. La aplicación nativa ya ofrece la vista del colaborador además de la de Recursos Humanos, y la aplicación Flutter reproduce los bounded contexts de la aplicación nativa conectada al mismo API desplegado.
+
+**Aplicación nativa**
+
+**Figura 142:** *Inicio de sesión en la aplicación nativa*
+
+![Inicio de sesión en la aplicación nativa](assets/Chapter-4/sprint2-native-login.png)
+
+*Nota.* Ingreso con usuario y contraseña y acceso a los términos legales. Elaboración propia.
+
+**Figura 143:** *Cambio obligatorio de la contraseña temporal en la aplicación nativa*
+
+![Cambio de contraseña en la aplicación nativa](assets/Chapter-4/sprint2-native-change-password.png)
+
+*Nota.* Pantalla mostrada en el primer ingreso, con la política de contraseña. Elaboración propia.
+
+**Figura 144:** *Administración de cuentas para Recursos Humanos en la aplicación nativa*
+
+![Cuentas en la aplicación nativa](assets/Chapter-4/sprint2-native-accounts.png)
+
+*Nota.* Listado de cuentas con cambio de rol y restablecimiento de contraseña. Elaboración propia.
+
+**Figura 145:** *Panel de inicio del colaborador en la aplicación nativa*
+
+![Panel del colaborador](assets/Chapter-4/sprint2-native-employee-dashboard.png)
+
+*Nota.* Asistencia propia, saldo de vacaciones, solicitudes y beneficios del colaborador autenticado. Elaboración propia.
+
+**Figura 146:** *Boletas del colaborador en la aplicación nativa*
+
+![Boletas del colaborador](assets/Chapter-4/sprint2-native-payslips.png)
+
+*Nota.* Pestaña de boletas con selector de año y visor. Elaboración propia.
+
+**Aplicación Flutter**
+
+**Figura 147:** *Inicio de sesión en la aplicación Flutter*
+
+![Inicio de sesión en Flutter](assets/Chapter-4/sprint2-flutter-login.png)
+
+*Nota.* Pantalla de ingreso con recuperación de acceso y términos legales. Elaboración propia.
+
+**Figura 148:** *Panel de Recursos Humanos en la aplicación Flutter*
+
+![Panel de Recursos Humanos en Flutter](assets/Chapter-4/sprint2-flutter-hr-dashboard.png)
+
+*Nota.* Saludo, indicadores y barra inferior por rol. Elaboración propia.
+
+**Figura 149:** *Personal y organigrama en la aplicación Flutter*
+
+![Workspace en Flutter](assets/Chapter-4/sprint2-flutter-workspace.png)
+
+*Nota.* Listado de colaboradores del bounded context Workspace. Elaboración propia.
+
+**Figura 150:** *Gestión de asistencia en la aplicación Flutter*
+
+![Attendance en Flutter](assets/Chapter-4/sprint2-flutter-attendance.png)
+
+*Nota.* Registros de asistencia por área y por colaborador. Elaboración propia.
+
+**Figura 151:** *Beneficios y saldo de vacaciones en la aplicación Flutter*
+
+![Benefits en Flutter](assets/Chapter-4/sprint2-flutter-benefits.png)
+
+*Nota.* Saldo de vacaciones con su fecha de sincronización y beneficios asignados. Elaboración propia.
+
+**Figura 152:** *Solicitudes y bandeja de aprobación en la aplicación Flutter*
+
+![Request en Flutter](assets/Chapter-4/sprint2-flutter-requests.png)
+
+*Nota.* Mis solicitudes, bandeja del aprobador y vistas de Recursos Humanos. Elaboración propia.
+
+**Figura 153:** *Verificación de identidad para ver las boletas en la aplicación Flutter*
+
+![Verificación biométrica en Flutter](assets/Chapter-4/sprint2-flutter-payroll-biometric.png)
+
+*Nota.* Solicitud de huella, rostro o bloqueo del dispositivo antes de mostrar la remuneración. Elaboración propia.
+
+**Figura 154:** *Carga de boletas y estado de pagos en la aplicación Flutter*
+
+![Payroll de Recursos Humanos en Flutter](assets/Chapter-4/sprint2-flutter-payroll-hr.png)
+
+*Nota.* Carga de boletas del periodo y control del estado de pago por área. Elaboración propia.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
