@@ -5850,6 +5850,49 @@ RESTful API desplegado: https://flowboard-mobile-service.onrender.com
 
 *Nota.* Elaboración propia a partir del historial de GitHub.
 
+#### 4.2.2.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2 se mantuvo la organización por bounded context, pero el trabajo se repartió entre dos frentes que avanzaron en paralelo: IAM, que atravesaba los tres productos de software, y la aplicación Flutter, en la que cada integrante portó el bounded context que había liderado en la aplicación nativa durante el Sprint 1.
+
+- **Distribución del trabajo:** Ávila De La Cruz, Darío Fabián implementó IAM en el API y en la aplicación nativa, protegió y paginó Attendance y portó Attendance a Flutter. Diaz Villalba, Diego Alonso paginó Request en el API y en la aplicación nativa, incorporó las nuevas reglas de aprobación y portó Request e IAM a Flutter. Vasquez Llave, Oscar Lizandro construyó la base y el sistema de diseño de la aplicación Flutter, portó Workspace y el panel de Recursos Humanos, y completó en la aplicación nativa la vista del colaborador. Galvez Meza, Salym Pool portó Benefits a Flutter y expuso el endpoint de salud del API. Esquicha Alcántara, Diego Alonso portó Payroll a Flutter e incorporó la verificación de identidad con `local_auth` antes de mostrar las boletas.
+- **Integración:** la base de la aplicación Flutter se construyó primero para que los demás integrantes partieran de la misma estructura de capas, el mismo cliente HTTP y el mismo registro de dependencias por bounded context. Cada bounded context se trabajó en su propia rama y se integró en `develop`. IAM se construyó sobre la rama de Request en Flutter porque ambos necesitan la identidad del colaborador autenticado.
+- **Lecciones:** la incorporación de IAM cambió el contrato de todos los endpoints, porque ahora exigen el token, y obligó a ajustar ambas aplicaciones para enviar la sesión y reaccionar ante una sesión expirada. La paginación tuvo el mismo efecto sobre los listados de solicitudes y asistencia. El equipo concluye que los cambios transversales del API deben planificarse al inicio del Sprint, antes de que las aplicaciones consuman los endpoints.
+
+En total, el Sprint 2 registró 37 commits en el API, 49 en la aplicación nativa y 125 en la aplicación Flutter, sin contar los merges. El Landing Page no registró commits en este Sprint.
+
+**Tabla 26:** *Commits por integrante en el Sprint 2*
+
+| Integrante | GitHub Username | RESTful API | Aplicación nativa | Aplicación Flutter | Total |
+| :---- | :---- | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | 20 | 37 | 28 | 85 |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | 15 | 6 | 27 | 48 |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | 0 | 0 | 20 | 20 |
+| Galvez Meza, Salym Pool | SalymGalvez21 | 2 | 0 | 19 | 21 |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro / Ixooc | 0 | 6 | 31 | 37 |
+| **Total** | | **37** | **49** | **125** | **211** |
+
+*Nota.* Elaboración propia a partir del historial de GitHub, sin contar merges. Los commits de las cuentas oscarlizandro e Ixooc se suman para Vasquez Llave, Oscar Lizandro.
+
+**Figura 159:** *Analíticos de colaboración del repositorio del RESTful API en el Sprint 2*
+
+![Insights del API Sprint 2](assets/Chapter-4/sprint2-insights-service.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 160:** *Analíticos de colaboración del repositorio de la aplicación nativa en el Sprint 2*
+
+![Insights de la aplicación nativa Sprint 2](assets/Chapter-4/sprint2-insights-native.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 161:** *Analíticos de colaboración del repositorio de la aplicación Flutter*
+
+![Insights de la aplicación Flutter](assets/Chapter-4/sprint2-insights-flutter.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+Los analíticos muestran que la actividad del API se concentró en tres momentos: la optimización de Attendance (23 de octubre), la paginación de Request (29 de octubre y 2 de noviembre) y la implementación de IAM (4 y 5 de noviembre). En la aplicación nativa la mayor actividad ocurrió entre el 3 y el 9 de noviembre, cuando se integró IAM y se completó la vista del colaborador. La aplicación Flutter registra actividad de los cinco integrantes desde el 29 de octubre, cuando se publicó su base, y cada bounded context se concentra en pocos días porque partió de la implementación ya validada en la aplicación nativa. La diferencia en el número de commits responde también al tamaño de cada commit: algunos integrantes registraron una capa completa por commit y otros un archivo por commit.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
