@@ -5815,6 +5815,41 @@ En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y 
 
 *Nota.* Elaboración propia a partir del historial de GitHub.
 
+#### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+En el Sprint 2 se mantuvo la arquitectura de despliegue del Sprint 1: el Landing Page en GitHub Pages, el RESTful API como Web Service de Render con runtime Docker desde la rama `main`, y la base de datos MySQL en Aiven. Los cambios de este Sprint fueron cuatro. Primero, el secreto y el tiempo de vida de los tokens JWT se configuran con las variables de entorno `IAM_JWT_SECRET` e `IAM_JWT_TTL_SECONDS` del servicio en Render, de modo que no quedan en el repositorio. Segundo, Flyway se ejecuta al iniciar el servicio con `baseline-on-migrate`, lo que permite versionar el esquema sobre la base que ya existía en Aiven. Tercero, el endpoint público `/health` responde a `GET` y `HEAD` con el estado de la conexión a la base de datos, lo que permite monitorear la disponibilidad del servicio. Cuarto, las compilaciones de la aplicación nativa apuntan al API en Render mediante `BuildConfig`, con la opción de usar un backend local durante el desarrollo, y el cliente HTTP de la aplicación Flutter usa por defecto la misma URL (`https://flowboard-mobile-service.onrender.com/api/v1/`).
+
+La distribución de las aplicaciones por Firebase App Distribution se realizará en el Sprint 3.
+
+**Figura 157:** *API del Sprint 2 desplegado en Render*
+
+![Render Sprint 2](assets/Chapter-4/sprint2-deploy-render.png)
+
+*Nota.* Documentación Swagger UI del API RESTful desplegado en Render, accesible desde su URL pública. Elaboración propia.
+
+**Figura 158:** *Respuesta del endpoint de salud del API desplegado*
+
+![Endpoint /health](assets/Chapter-4/sprint2-deploy-health.png)
+
+*Nota.* `GET /health` del API desplegado en Render, que responde con el estado UP del servicio. Elaboración propia.
+
+Landing Page desplegado: https://performily-mobile.github.io/flowboard-mobile-landing-page/
+
+RESTful API desplegado: https://flowboard-mobile-service.onrender.com
+
+**Tabla 25:** *Commits relacionados con el despliegue en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 2da8ab7 | feat(iam): configure IAM JWT and seed settings | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 554fbb1 | feat(iam): configure Flyway database migrations | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 22dd446 | feat: enable buildConfig and add BASE_URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | bd1c9cb | fix(build): point debug builds to Render and allow a local backend | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | fac34f7 | feat(shared): expose public /health endpoint with database check | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c2f0f14 | fix(iam): allow HEAD requests on /health for uptime monitoring | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
