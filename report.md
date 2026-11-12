@@ -5763,6 +5763,58 @@ Como resultado del Sprint 2 ambas aplicaciones exigen iniciar sesión antes de m
 
 *Nota.* Carga de boletas del periodo y control del estado de pago por área. Elaboración propia.
 
+#### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y los que cambiaron de contrato. La documentación se sigue generando con springdoc-openapi y se publica con Swagger UI en el mismo servicio; además, se corrigió la configuración para que Swagger UI envíe las peticiones al mismo servidor que la sirve, lo que permite probar los endpoints directamente desde la versión desplegada. Desde este Sprint todos los endpoints, salvo el inicio de sesión, la documentación y `/health`, exigen el encabezado `Authorization: Bearer <token>`, que Swagger UI permite registrar con su botón *Authorize*. Los endpoints usan el prefijo `/api/v1`, salvo `/health`.
+
+- Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
+- Especificación OpenAPI: /v3/api-docs
+- Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
+
+**Tabla 23:** *Endpoints documentados con OpenAPI en el Sprint 2*
+
+| Bounded Context | Verbo HTTP | Endpoint | Acción | Parámetros | Respuesta |
+| :---- | :----: | :---- | :---- | :---- | :----: |
+| IAM | POST | `/auth/login` | Inicia sesión y devuelve el token, el rol, el colaborador y si debe cambiar la contraseña | Body: username, password | 200 |
+| IAM | POST | `/auth/change-password` | Cambia la contraseña, emite un token nuevo y revoca el anterior | Header: Authorization<br>Body: currentPassword, newPassword | 200 |
+| IAM | POST | `/auth/logout` | Cierra la sesión revocando el token | Header: Authorization | 204 |
+| IAM | GET | `/accounts` | Lista las cuentas de usuario (solo Recursos Humanos) | Header: Authorization | 200 |
+| IAM | PATCH | `/accounts/{id}/role` | Cambia el rol de una cuenta (solo Recursos Humanos) | Path: id<br>Body: role | 200 |
+| IAM | POST | `/accounts/{id}/reset-password` | Restablece la contraseña y devuelve una temporal (solo Recursos Humanos) | Path: id | 200 |
+| Request | GET | `/requests` | Página de solicitudes de todos los colaboradores, de la más reciente a la más antigua | Query: requesterId, status (repetible), requestTypeId, approverId, page, size | 200 |
+| Request | GET | `/requests/me` | Página de solicitudes de un colaborador | Query: requesterId, status, page, size | 200 |
+| Request | GET | `/requests/pending-approval` | Página de solicitudes pendientes de un aprobador | Query: approverId, requestTypeId, sort, page, size | 200 |
+| Request | GET | `/requests/pending-approval/hr-staff` | Página de solicitudes pendientes de Recursos Humanos | Query: requestTypeId, sort, page, size | 200 |
+| Attendance | GET | `/attendance/records` | Página de registros de asistencia (solo Recursos Humanos) | Query: from, to, status, page, size | 200 |
+| Attendance | GET | `/attendance/areas/{areaId}/records` | Registros de asistencia de un área en un periodo (solo Recursos Humanos) | Path: areaId<br>Query: from, to | 200 |
+| Shared | GET / HEAD | `/health` | Estado del servicio y de la conexión a la base de datos | — | 200 |
+
+*Nota.* Elaboración propia.
+
+**Figura 155:** *Endpoints de IAM en Swagger UI*
+
+![Endpoints de IAM en Swagger](assets/Chapter-4/sprint2-swagger-iam.png)
+
+*Nota.* Endpoints de autenticación y de cuentas, con el botón *Authorize* para registrar el token. Elaboración propia.
+
+**Figura 156:** *Listado paginado de solicitudes en Swagger UI*
+
+![GET requests paginado en Swagger](assets/Chapter-4/sprint2-swagger-requests-paged.png)
+
+*Nota.* Parámetros de filtro y paginación de `GET /requests` y respuesta 200 con la página. Elaboración propia.
+
+**Tabla 24:** *Commits relacionados con la documentación de los servicios en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 282c83c | feat(iam): add IAM REST controller | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a27c961 | feat(request): add paginated endpoint to get all requests | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1be8544 | fix(shared): point swagger requests to the server that serves it | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 3002ac7 | feat(attendance): document APIs | — | 08/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
