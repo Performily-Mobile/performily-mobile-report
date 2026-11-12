@@ -5228,6 +5228,78 @@ El Sprint 2 tuvo como propósito cerrar el alcance funcional del RESTful API con
 
 *Nota.* Elaboración propia.
 
+#### 4.2.2.2. Aspect Leaders and Collaborators
+
+Los aspectos del Sprint 2 corresponden al nuevo bounded context IAM, a los bounded contexts que se portaron a Flutter o se completaron en la aplicación nativa, a la base de la aplicación Flutter y al despliegue. Igual que en el Sprint 1, cada aspecto tiene un líder que lo implementa de punta a punta y el resto del equipo colabora con la revisión y la integración en `develop`. En IAM, Ávila De La Cruz, Darío Fabián implementó el API y la aplicación nativa, y Diaz Villalba, Diego Alonso implementó la versión en Flutter.
+
+**Tabla 17:** *Leadership-and-Collaboration Matrix del Sprint 2*
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM | Workspace | Attendance | Request | Benefits | Payroll | Dashboard | Flutter Base | Deployment |
+| :---- | :---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | L | C | L | C | C | C | C | C | C |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | C | C | C | L | C | C | C | C | L |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | C | C | C | C | C | L | C | C | C |
+| Galvez Meza, Salym Pool | SalymGalvez21 | C | C | C | C | L | C | C | C | C |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro / Ixooc | C | L | C | C | C | C | L | L | C |
+
+*Nota.* L = Leader, C = Collaborator. Vasquez Llave, Oscar Lizandro registra commits con dos cuentas de GitHub (oscarlizandro e Ixooc). Elaboración propia.
+
+#### 4.2.2.3. Sprint Backlog 2
+
+El objetivo del Sprint 2 fue completar el Epic de identidad y acceso (EP01) en los tres productos de software y construir la aplicación cross-platform en Flutter. Las User Stories se descompusieron en Engineering Tasks por producto (API, aplicación nativa y aplicación Flutter), estimadas entre 4 y 8 horas cada una, y se asignaron según la matriz de líderes. Las tasks de la aplicación Flutter se vinculan a las User Stories que ya se habían implementado en la aplicación nativa durante el Sprint 1, porque implementan el mismo comportamiento sobre la segunda plataforma. El tablero del Sprint se gestionó en Trello.
+
+**Figura 141:** *Tablero del Sprint 2 en Trello*
+
+![Tablero del Sprint 2 en Trello](assets/Chapter-4/sprint2-backlog-trello.png)
+
+*Nota.* Tablero Sprint Backlog 2 - Moviles en Trello con las columnas To Do, In Process, To Review y Done. Elaboración propia.
+
+Enlace del tablero: https://trello.com/b/ANDhShAa/sprint-backlog-2-moviles
+
+**Tabla 18:** *Sprint Backlog 2*
+
+| User Story Id | User Story Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :----: | :---- | :----: | :---- | :---- | :----: | :---- | :----: |
+| TS02 | Autenticación y autorización del API | T01 | Modelo de cuentas y migraciones | Crear las entidades `UserAccount` y `RevokedToken` con sus repositorios JPA y configurar Flyway sobre la base existente en Aiven. | 4 | Darío | Done |
+| TS02 | Autenticación y autorización del API | T02 | Seguridad con JWT | Configurar Spring Security con filtro JWT, secreto y tiempo de vida por variables de entorno, y rutas públicas para login, Swagger y `/health`. | 5 | Darío | Done |
+| US01 | Generación automática de credenciales | T03 | Cuentas a partir del ciclo de vida del colaborador | Escuchar los eventos de Workspace para crear la cuenta con contraseña temporal al registrar un colaborador y deshabilitarla al cesarlo, con un seeder opcional de cuentas. | 4 | Darío | Done |
+| US02, US04 | Inicio y cierre de sesión | T04 | Endpoints de inicio y cierre de sesión | Implementar `POST /auth/login`, que devuelve el token, el rol, el colaborador y si debe cambiar la contraseña, y `POST /auth/logout`, que revoca el token. | 4 | Darío | Done |
+| US03 | Cambio obligatorio de contraseña temporal | T05 | Endpoint de cambio de contraseña | Validar la contraseña actual y la política (8 caracteres, mayúscula, minúscula, dígito y símbolo), emitir un token nuevo y revocar el anterior. | 4 | Darío | Done |
+| US05, US06 | Cambio de rol / Restablecimiento de contraseña | T06 | Endpoints de administración de cuentas | Implementar el cambio de rol, que impide dejar a la organización sin una cuenta de Recursos Humanos activa, y el restablecimiento con contraseña temporal que invalida las sesiones abiertas. | 4 | Darío | Done |
+| US07 | Restricción de acceso por rol | T07 | Protección de los endpoints de Attendance | Exigir el rol de Recursos Humanos en las consultas generales y tomar la identidad del token en las marcaciones propias. | 4 | Darío | Done |
+| US02, US03 | Inicio de sesión / Cambio de contraseña | T08 | Dominio y casos de uso de IAM en la aplicación nativa | Implementar las entidades, el repositorio, los DTOs remotos y los casos de uso de inicio de sesión, cambio de contraseña y cierre de sesión. | 6 | Darío | Done |
+| US02, US03 | Inicio de sesión / Cambio de contraseña | T09 | Pantallas de IAM en la aplicación nativa | Pantallas de login, cambio de contraseña, seguridad de la cuenta y términos legales con su ViewModel y NavGraph. | 6 | Darío | Done |
+| US04, TS02 | Cierre de sesión / Autenticación | T10 | Sesión cifrada y red en la aplicación nativa | Guardar la sesión en almacenamiento cifrado, enviar el token con un interceptor, cerrar la sesión ante un 401 y configurar la URL base del API con `BuildConfig`. | 5 | Darío | Done |
+| US05, US06 | Cambio de rol / Restablecimiento de contraseña | T11 | Administración de cuentas en la aplicación nativa | Pantalla de cuentas para Recursos Humanos con cambio de rol y restablecimiento de contraseña. | 4 | Darío | Done |
+| US02-US06 | IAM en Flutter | T12 | Dominio y casos de uso de IAM en Flutter | Implementar las entidades, los value objects, los casos de uso, el gestor de sesión, el servicio remoto, los DTOs y los mappers. | 6 | Diego Díaz | Done |
+| US02-US06 | IAM en Flutter | T13 | Pantallas de IAM en Flutter | Pantallas de login con recuperación de acceso y términos legales, cambio de contraseña, cuenta y seguridad, y cuentas de colaboradores para Recursos Humanos. | 6 | Diego Díaz | Done |
+| TS02 | Autenticación y autorización del API | T14 | Sesión segura en Flutter | Guardar la sesión con `flutter_secure_storage`, exigir el inicio de sesión antes de la aplicación, enviar el token desde el cliente HTTP y reportar las sesiones expiradas. | 4 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T15 | Paginación de solicitudes en el API | Agregar los value objects de paginación, las consultas paginadas con filtros y orden, e índices por solicitante y aprobador. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T16 | Paginación de asistencia en el API | Exponer `GET /attendance/records` paginado, optimizar las consultas por área y documentar los endpoints de Attendance. | 4 | Darío | Done |
+| US29, US33 | Ruteo / Aprobación de solicitudes | T17 | Reglas de aprobación | Impedir que un colaborador resuelva su propia solicitud, admitir un comentario al aprobar, permitir corregir el periodo al reenviar y trasladar a Recursos Humanos las pendientes de un aprobador cesado. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T18 | Solicitudes paginadas en la aplicación nativa | Leer las respuestas paginadas, filtrar y contar en el servidor, cargar más al desplazarse y agregar Mis solicitudes para Recursos Humanos. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T19 | Asistencia paginada en la aplicación nativa | Agregar la paginación al repositorio de asistencia, el ViewModel de registros y la navegación a la asistencia personal. | 5 | Darío | Done |
+| US19, US22, US30, US40 | Vista del colaborador | T20 | Panel del colaborador en la aplicación nativa | Panel de inicio con asistencia propia, saldo de vacaciones, solicitudes y beneficios. | 5 | Oscar | Done |
+| US44 | Consulta de boletas propias | T21 | Boletas del colaborador en la aplicación nativa | Pestaña de boletas con selector de año y visor de la boleta. | 4 | Oscar | Done |
+| — | Sistema de diseño | T22 | Componentes compartidos en la aplicación nativa | Pestañas, buscador, encabezado colapsable, barra de acciones y barra superior comunes a todas las pantallas. | 6 | Oscar | Done |
+| — | Base de la aplicación Flutter | T23 | Shell y navegación por rol en Flutter | Cliente HTTP, inyección de dependencias, proveedor de sesión, barra inferior por rol y navegación independiente por pestaña. | 6 | Oscar | Done |
+| — | Base de la aplicación Flutter | T24 | Sistema de diseño en Flutter | Tokens, tema, superficies, tarjetas, hojas, diálogos y placeholders de carga. | 6 | Oscar | Done |
+| US08-US20 | Workspace en Flutter | T25 | Dominio e infraestructura de Workspace en Flutter | Entidades, value objects, casos de uso, servicios remotos, mappers y almacenamiento local de documentos. | 6 | Oscar | Done |
+| US08-US20 | Workspace en Flutter | T26 | Pantallas de Workspace en Flutter | Pantallas de colaboradores, detalle, perfil propio y organigrama con estados de carga. | 6 | Oscar | Done |
+| — | Dashboard en Flutter | T27 | Panel de Recursos Humanos en Flutter | Panel con saludo e indicadores, rutas del dashboard, acceso a notificaciones y cambio de pestaña desde las pantallas. | 4 | Oscar | Done |
+| US21-US25 | Attendance en Flutter | T28 | Dominio e infraestructura de Attendance en Flutter | Entidades, value objects, casos de uso de marcación, justificación y consultas, servicio remoto y repositorio. | 6 | Darío | Done |
+| US21-US25 | Attendance en Flutter | T29 | Pantallas de Attendance en Flutter | Pantallas de gestión de asistencia por área y por colaborador, horas trabajadas, justificación y asistencia propia. | 6 | Darío | Done |
+| US26-US35 | Request en Flutter | T30 | Dominio e infraestructura de Request en Flutter | Entidades, casos de uso, servicios remotos, mappers, adaptadores anticorrupción y almacenamiento local de adjuntos. | 7 | Diego Díaz | Done |
+| US26-US35 | Request en Flutter | T31 | Pantallas de Request en Flutter | Asistente de nueva solicitud con validación de saldo, detalle con historial, cancelación y reenvío, bandeja del aprobador y catálogo de tipos. | 8 | Diego Díaz | Done |
+| US37-US42 | Benefits en Flutter | T32 | Dominio e infraestructura de Benefits en Flutter | Entidades, value objects, casos de uso de catálogo, asignaciones y saldo, servicios remotos, mappers y caché local del saldo de vacaciones. | 6 | Salym | Done |
+| US37-US42 | Benefits en Flutter | T33 | Pantallas de Benefits en Flutter | Pantallas de Recursos Humanos, beneficios del colaborador y saldo de vacaciones. | 6 | Salym | Done |
+| US43-US46 | Payroll en Flutter | T34 | Dominio e infraestructura de Payroll en Flutter | Entidades, value objects, casos de uso de periodos y boletas, servicios remotos, mapper y almacenamiento local de archivos. | 6 | Diego Esquicha | Done |
+| US43, US45, US46 | Payroll en Flutter | T35 | Pantallas de Payroll para Recursos Humanos en Flutter | Carga y validación de boletas, publicación del periodo y control del estado de pago por área. | 6 | Diego Esquicha | Done |
+| US44 | Consulta de boletas propias | T36 | Boletas propias con verificación de identidad en Flutter | Pantallas de boletas propias y visor, desbloqueadas con huella, rostro o el bloqueo del dispositivo mediante `local_auth`. | 5 | Diego Esquicha | Done |
+| TS06 | Despliegue de los productos digitales | T37 | Endpoint de salud del servicio | Exponer `GET` y `HEAD /health` con verificación de la base de datos para monitorear la disponibilidad del API desplegado. | 4 | Salym | Done |
+
+*Nota.* Elaboración propia.
+
 ## 4.3. Validation Interviews
 
 En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
