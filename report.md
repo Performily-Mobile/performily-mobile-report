@@ -5832,7 +5832,7 @@ La Tabla 23 relaciona los User Flows definidos en el Capítulo III con las panta
 
 *Nota.* Elaboración propia.
 
-Enlace del video: [COMPLETAR: enlace de OneDrive del video de ejecución del Sprint 2, que muestre el inicio de sesión, la vista del colaborador y la aplicación Flutter]
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410478_upc_edu_pe/IQDItdpqES2xQa4Stw2TN8AHAe9j-pTWPL_j3oDnILj7Jvs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=L9ceKA
 
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
@@ -6441,7 +6441,7 @@ La app nativa le da al colaborador las pestañas Inicio, Solicitudes, Asistencia
 
 **Figura 174:** *Barra inferior del colaborador en ambas aplicaciones*
 
-![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5.png)
+![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5-1.png)
 
 *Nota.* Captura de la barra inferior del colaborador en ambas apps. Elaboración propia.
 
@@ -6537,14 +6537,14 @@ El Video About-the-Product está dirigido a los visitantes del Landing Page que 
 
 **Figura 178:** *Cuadro representativo del Video About-the-Product*
 
-![Video About-the-Product](assets/Chapter-5/about-the-product-av2.png)
+![Video About-the-Product](assets/Chapter-4/about-the-product-av2.png)
 
 *Nota.* Elaboración propia.
 
 - Archivo: upc-pre-202620-1acc0238-4951-performily-about-the-product-av2.mp4
-- URL de OneDrive: [COMPLETAR]
-- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
-- Duración: [COMPLETAR: mm:ss]
+- URL de OneDrive: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410478_upc_edu_pe/IQAsWAx918PmTL4_6A_n8vvTAWKdSNqABnK9DZqNoMhsGL4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=mmZUG4
+- URL de YouTube: https://youtu.be/ahgtxH866cE
+- Duración: 02:19 min
 
 <div style="page-break-after: always;"></div>
 
@@ -6554,14 +6554,13 @@ El Video App Validation documenta las sesiones de prueba de las aplicaciones con
 
 **Figura 179:** *Cuadro representativo del Video App Validation*
 
-![Video App Validation](assets/Chapter-5/app-validation-av2.png)
+![Video App Validation](assets/Chapter-4/app-validation-av2.png)
 
 *Nota.* Elaboración propia.
 
 - Archivo: upc-pre-202620-1acc0238-4951-performily-validation-av2.mp4
-- URL de OneDrive: [COMPLETAR]
-- Participantes: [COMPLETAR: nombre, segmento y fecha de cada sesión]
-- Duración: [COMPLETAR: mm:ss]
+- URL de OneDrive: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDPcnM8nRyoRoK1Wm8upqf-AWqoJEBb4hrBLkkAjoxgOSI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wFLg8d
+- Duración: 24:35 min
 
 <div style="page-break-after: always;"></div>
 
@@ -6569,31 +6568,18 @@ El Video App Validation documenta las sesiones de prueba de las aplicaciones con
 
 El Video About-the-Team resume el proceso de trabajo del equipo Performily durante el proyecto. Muestra sesiones de trabajo reales del equipo, con narración del proceso, y el testimonio ante cámara de cada integrante sobre las actividades que realizó, los outcomes que alcanzó y las competencias que desarrolló.
 
-**Tabla 28:** *Pauta de secuencias del Video About-the-Team*
 
-| Inicio (hh:mm:ss) | Sección |
-| :----: | :---- |
-| [COMPLETAR] | Presentación del equipo y de Flowboard |
-| [COMPLETAR] | Sesiones de trabajo del equipo |
-| [COMPLETAR] | Testimonio de Ávila De La Cruz, Darío Fabián |
-| [COMPLETAR] | Testimonio de Diaz Villalba, Diego Alonso |
-| [COMPLETAR] | Testimonio de Esquicha Alcántara, Diego Alonso |
-| [COMPLETAR] | Testimonio de Galvez Meza, Salym Pool |
-| [COMPLETAR] | Testimonio de Vasquez Llave, Oscar Lizandro |
-| [COMPLETAR] | Cierre |
-
-*Nota.* Elaboración propia.
 
 **Figura 180:** *Cuadro representativo del Video About-the-Team*
 
-![Video About-the-Team](assets/Chapter-5/about-the-team-av2.png)
+![Video About-the-Team](assets/Chapter-4/about-the-team-av2.png)
 
 *Nota.* Elaboración propia.
 
 - Archivo: upc-pre-202620-1acc0238-4951-performily-about-the-team-av2.mp4
-- URL de Microsoft Stream: [COMPLETAR]
-- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
-- Duración: [COMPLETAR: mm:ss]
+- URL de Microsoft Stream: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410478_upc_edu_pe/IQDpWmzRoQCVQpoRD7IY4l4_AYqNNqpdQj9mzMJMGf0PNBU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YBFRma
+- URL de YouTube: https://youtu.be/xWKk9SYIjGg
+- Duración: 04:53 min
 
 <div style="page-break-after: always;"></div>
 
@@ -6649,6 +6635,7 @@ World Wide Web Consortium. (2018, 5 de junio). Web Content Accessibility Guideli
 
 | Entrega | Enlace del video de exposición |
 | :---- | :---- |
-| AV2 | [COMPLETAR: enlace privado de OneDrive del video de exposición del AV2] |
+| About The Team | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410478_upc_edu_pe/IQDpWmzRoQCVQpoRD7IY4l4_AYqNNqpdQj9mzMJMGf0PNBU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YBFRma |
+
 
 *Nota.* Elaboración propia.
