@@ -91,6 +91,18 @@
 | v1.13 | 17/09/2026 | Esquicha Alcántara, Diego Alonso, Galvez Meza, Salym Pool y Oscar Vasquez | Tactical-Level Domain-Driven Design de los siete bounded contexts con sus cuatro capas, diagramas de componentes, diagramas de clases del Domain Layer y diagramas de base de datos. |
 | v1.14 | 07/10/2026 | Vasquez Llave, Oscar Lizandro | Solution UI/UX Design. Desarrollo del Product Design, Style Guidelines, General Style Guidelines, Information Architecture, Organization Systems, Labelling Systems, SEO Tags and Meta Tags, Searching Systems, Navigation Systems, Landing Page UI Design, Landing Page Wireframe, Landing Page Mock-up, Mobile Applications UX/UI Design, Mobile Applications Wireframes, Mobile Applications Wireflow Diagrams, Mobile Applications Mock-ups, Mobile Applications User Flow Diagrams y Mobile Applications Prototyping. |
 | v1.15 | 08/10/2026 | Galvez Meza, Salym Pool | Product Implementation & Validation. Desarrollo del Software Configuration Management, Software Development Environment Configuration, Source Code Management, Source Code Style Guide & Conventions, Software Deployment Configuration, Landing Page & Mobile Application Implementation, Sprint 1, Sprint Planning 1, Aspect Leaders and Collaborators, Sprint Backlog 1, Development Evidence for Sprint Review, Testing Suite Evidence for Sprint Review, Execution Evidence for Sprint Review, Services Documentation Evidence for Sprint Review, Software Deployment Evidence for Sprint Review, Team Collaboration Insights during Sprint, Validation Interviews, Diseño de Entrevistas, Registro de Entrevistas y Evaluaciones según heurísticas. |
+| v1.13 | 17/09/2026 | Esquicha Alcántara, Diego Alonso, Galvez Meza, Salym Pool y Vasquez Llave, Oscar Lizandro | Tactical-Level Domain-Driven Design de los siete bounded contexts con sus cuatro capas, diagramas de componentes, diagramas de clases del Domain Layer y diagramas de base de datos. |
+| v1.14 | 07/10/2026 | Vasquez Llave, Oscar Lizandro | Solution UI/UX Design. Product Design, Style Guidelines y General Style Guidelines (Typography, Colors, Spacing, componentes base, tone of communication y guidelines web y móvil). Landing Page UI Design con el Landing Page Wireframe y el Landing Page Mock-up en versión de escritorio y móvil. |
+| v1.15 | 07/10/2026 | Ávila De La Cruz, Darío Fabián | Information Architecture. Organization Systems, Labelling Systems, SEO Tags and Meta Tags, Searching Systems y Navigation Systems con el mapa de navegación de la aplicación móvil. Mobile Applications Wireflow Diagrams de los seis user goals (UG-01 a UG-06). |
+| v1.16 | 07/10/2026 | Esquicha Alcántara, Diego Alonso | Mobile Applications UX/UI Design. Mobile Applications Wireframes de las 83 pantallas por bounded context y Mobile Applications Mock-ups sobre el sistema de diseño, ambos elaborados en Figma. |
+| v1.17 | 08/10/2026 | Galvez Meza, Salym Pool | Mobile Applications User Flow Diagrams (UF-01 a UF-06) y Mobile Applications Prototyping con el prototipo navegable en Figma. Sprint Backlog 1 y Testing Suite Evidence for Sprint Review (Unit Tests y Acceptance Tests en Gherkin). |
+| v1.18 | 08/10/2026 | Diaz Villalba, Diego Alonso | Product Implementation & Validation. Software Configuration Management: Software Development Environment Configuration, Source Code Management, Source Code Style Guide & Conventions y Software Deployment Configuration. |
+| v1.19 | 08/10/2026 | Vasquez Llave, Oscar Lizandro | Landing Page & Mobile Application Implementation. Sprint 1, Sprint Planning 1, Aspect Leaders and Collaborators, Execution Evidence for Sprint Review del Landing Page y de la aplicación nativa, y Team Collaboration Insights during Sprint. |
+| v1.20 | 08/10/2026 | Esquicha Alcántara, Diego Alonso | Development Evidence for Sprint Review con los commits del Sprint 1 de los repositorios del Landing Page, el RESTful API y la aplicación nativa. Actualización de la Bibliografía con las referencias de los Capítulos III y IV. |
+| v1.21 | 08/10/2026 | Diaz Villalba, Diego Alonso | Services Documentation Evidence for Sprint Review con los endpoints documentados con OpenAPI y Swagger UI, y Software Deployment Evidence for Sprint Review en GitHub Pages, Render y Aiven. |
+| v1.22 | 09/10/2026 | Galvez Meza, Salym Pool | Validation Interviews. Diseño de Entrevistas con la estructura de la sesión y las tareas por segmento. Actualización del Project Report Collaboration Insights con el reparto de esta entrega. |
+| v1.23 | 09/10/2026 | Ávila De La Cruz, Darío Fabián | Registro de Entrevistas de validación con sus capturas y resúmenes, y Evaluaciones según heurísticas de Usability, Inclusive Design e Information Architecture con la escala de severidad y las recomendaciones. |
+| v1.24 | 09/10/2026 | Diaz Villalba, Diego Alonso | Conclusiones y recomendaciones del Sprint 1 y del Capítulo III, y revisión final del informe. |
 
 <div style="page-break-after: always;"></div>
 
@@ -98,11 +110,17 @@
 
 El informe del proyecto se elabora de forma colaborativa en un repositorio de la organización pública de GitHub del equipo, aplicando GitFlow y Conventional Commits para su creación y evolución. La URL del repositorio del informe es la siguiente:
 
-Repositorio del informe: `https://github.com/Performily-Mobile/performily-mobile-report`
+Repositorio del informe: https://github.com/Performily-Mobile/performily-mobile-report
 
-Para la entrega del AV1, el trabajo se distribuyó de modo que cada integrante asumiera secciones completas y respondiera por su contenido. Vasquez Llave, Oscar Lizandro creó el repositorio, definió la estructura de secciones y desarrolló el Capítulo I en su totalidad. Esquicha Alcántara, Diego Alonso elaboró los Objetivos SMART y la perspectiva estratégica y táctica del Domain-Driven Design. Galvez Meza, Salym Pool desarrolló el análisis competitivo, el Ubiquitous Language, el Product Backlog y las capas de infraestructura y los diagramas de código de cada bounded context. Diaz Villalba, Diego Alonso se encargó del diseño de entrevistas, el EventStorming, las User Stories, el Context Mapping y los diagramas de arquitectura de software. Ávila De La Cruz, Darío Fabián condujo el registro y el análisis de entrevistas, todo el Needfinding y el Impact Mapping.
+Para la entrega del **AV1**, el trabajo se distribuyó de modo que cada integrante asumiera secciones completas y respondiera por su contenido. Vasquez Llave, Oscar Lizandro creó el repositorio, definió la estructura de secciones y desarrolló el Capítulo I en su totalidad. Esquicha Alcántara, Diego Alonso elaboró los Objetivos SMART y la perspectiva estratégica y táctica del Domain-Driven Design. Galvez Meza, Salym Pool desarrolló el análisis competitivo, el Ubiquitous Language, el Product Backlog y las capas de infraestructura y los diagramas de código de cada bounded context. Diaz Villalba, Diego Alonso se encargó del diseño de entrevistas, el EventStorming, las User Stories, el Context Mapping y los diagramas de arquitectura de software. Ávila De La Cruz, Darío Fabián condujo el registro y el análisis de entrevistas, todo el Needfinding y el Impact Mapping.
 
-Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron mediante pull requests revisados por al menos otro miembro del equipo, de modo que los commits evidencian el aporte individual y la revisión cruzada. Las capturas de los analíticos de colaboración y de commits del repositorio se presentan en las Figuras 1 y 2.
+Para la entrega del **TB1**, el informe se amplió con los Capítulos III y IV, las conclusiones y la evidencia del Sprint 1, y cada integrante volvió a asumir secciones completas. Vasquez Llave, Oscar Lizandro elaboró las Style Guidelines, el diseño del Landing Page, el Sprint Planning 1, la evidencia de ejecución y los Team Collaboration Insights. Ávila De La Cruz, Darío Fabián elaboró la Information Architecture, los Wireflow Diagrams, el registro de las entrevistas de validación y las evaluaciones según heurísticas. Esquicha Alcántara, Diego Alonso elaboró los wireframes y los mock-ups de las aplicaciones móviles y la evidencia de desarrollo con los commits del Sprint 1. Galvez Meza, Salym Pool elaboró los User Flow Diagrams, el prototipo, el Sprint Backlog 1, la evidencia de pruebas y el diseño de las entrevistas de validación. Diaz Villalba, Diego Alonso elaboró la configuración de software (entorno, código fuente, convenciones y despliegue), la documentación de los servicios, la evidencia de despliegue y las conclusiones.
+
+La implementación del Sprint 1 se organizó por bounded context: cada integrante lideró uno o dos de punta a punta, desde el API hasta las pantallas de la aplicación nativa, según la matriz de la sección 4.2.1.2. Cada integrante trabajó sobre su propia rama y las incorporaciones al informe se integraron en la rama develop del repositorio. Las Figuras 1 y 2 presentan los analíticos de colaboración y de commits del repositorio del informe y del equipo.
+
+Para la entrega del **AV2**, el informe se amplió con la sección 4.2.2 correspondiente al Sprint 2 y con la evaluación según heurísticas de la versión del Sprint 2, y el trabajo se repartió entre los cinco integrantes. Esquicha Alcántara, Diego Alonso elaboró el Sprint Planning 2 y la evidencia de desarrollo con los commits de los tres repositorios de software, y consolidó la sección en el repositorio del informe. Ávila De La Cruz, Darío Fabián elaboró la matriz de líderes y colaboradores y el Sprint Backlog 2 con su tablero en Trello. Galvez Meza, Salym Pool elaboró la evidencia de pruebas y de ejecución. Vasquez Llave, Oscar Lizandro elaboró la evidencia de despliegue. Diaz Villalba, Diego Alonso elaboró la documentación de los servicios, los Team Collaboration Insights del Sprint y la evaluación según heurísticas de las aplicaciones nativa y Flutter. El contenido de la sección 4.2.2 se construyó a partir del trabajo de los cinco integrantes en los repositorios del RESTful API, la aplicación nativa y la aplicación Flutter, cuyo detalle por integrante se presenta en la sección 4.2.2.9.
+
+La implementación del Sprint 2 mantuvo la organización por bounded context según la matriz de la sección 4.2.2.2: Ávila De La Cruz, Darío Fabián lideró IAM y Attendance, Diaz Villalba, Diego Alonso lideró Request y el despliegue, Vasquez Llave, Oscar Lizandro lideró la base de la aplicación Flutter, Workspace y el Dashboard, Galvez Meza, Salym Pool lideró Benefits y Esquicha Alcántara, Diego Alonso lideró Payroll.
 
 **Figura 1:** *Analíticos de colaboración y commits del repositorio del informe*
 
@@ -130,8 +148,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :---- | :---- | :---- |
-| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Estudió las buenas prácticas de conducción de entrevistas de investigación y las aplicó en el registro de entrevistas a los dos segmentos objetivo. Aprendió a construir User Personas, User Task Matrix, User Journey Maps y Empathy Maps en UXPressia, herramienta que no había utilizado antes, y derivó cada característica de los arquetipos del análisis estadístico de las entrevistas registradas. Incorporó además la técnica de Impact Mapping para vincular los objetivos de negocio con las historias de usuario.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Attendance, comprendiendo la integración de sus reglas de negocio, servicios, persistencia y pantallas de consulta de asistencia.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Adquirió el manejo de la técnica de Big Picture EventStorming y la aplicó para modelar el dominio del problema junto con el equipo. Estudió la redacción de criterios de aceptación bajo la estructura Gherkin y la aplicó en las User Stories, incluidas las Technical Stories del RESTful API. Aprendió a modelar arquitectura de software con C4 Model en Structurizr, elaborando los diagramas de contexto, contenedores y despliegue de la solución.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Request, aplicando sus reglas de negocio en el API y construyendo las interfaces para la creación, seguimiento y aprobación de solicitudes.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Estudió el enfoque estratégico de Domain-Driven Design y aplicó las técnicas de Candidate Context Discovery y Domain Message Flows Modeling para identificar y delimitar los siete bounded contexts del dominio. Aprendió a elaborar Bounded Context Canvases siguiendo el proceso iterativo de definición, destilación de reglas de negocio, análisis de capacidades, captura de dependencias y crítica de diseño. Incorporó además los patrones tácticos de agregados, entidades y objetos de valor en las capas de dominio, interfaz y aplicación.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Payroll, implementando la gestión de boletas de pago y sus vistas de consulta y descarga para los usuarios.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Aprendió a construir un Competitive Analysis Landscape y un análisis FODA orientado a la competencia para sustentar la propuesta de valor del producto. Estudió la definición de un Ubiquitous Language y lo consolidó con los términos del negocio en inglés y su glosa en español. Adquirió el manejo de la notación de diagramas de clases UML con especificación de scope y multiplicidad, y de diagramas de diseño de base de datos con constraints, aplicándolos a los siete bounded contexts.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló los bounded contexts Wellbeing y Benefits, implementando la gestión de indicadores ambientales, beneficios y saldo de vacaciones, junto con sus respectivas interfaces.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Estudió y aplicó la técnica de las 5W y 2H para delimitar el problema, y el Lean UX Process de la tercera edición para elaborar el Problem Statement bajo la plantilla de brand new initiative, los cinco tipos de Assumptions, los Hypothesis Statements y el Lean UX Canvas. Investigó de forma autónoma las alternativas de desarrollo móvil nativo y cross-platform, y sustentó con literatura académica la elección del stack declarado en las restricciones tecnológicas del proyecto.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Workspace, implementando la gestión de colaboradores, áreas, posiciones, documentos y organigrama, así como sus pantallas de administración y autogestión.<br><br> | **AV1:** El equipo verificó que el desarrollo de una solución móvil bajo Domain-Driven Design exige incorporar conocimientos que no formaban parte de su formación previa, y que ese aprendizaje debe ocurrir antes de escribir la primera línea de código. Las técnicas de Lean UX, EventStorming, C4 Model y el modelado táctico se estudiaron de forma autónoma a partir de fuentes especializadas y se aplicaron de inmediato sobre el dominio del proyecto, lo que permitió validar la comprensión en un contexto real en lugar de quedarse en la teoría. El equipo concluye que la actualización de conocimientos resulta más efectiva cuando se organiza alrededor de un artefacto concreto que debe producirse, porque obliga a resolver las ambigüedades que una lectura superficial deja pasar.<br><br>**TB1:** El desarrollo de los bounded contexts permitió aplicar los conocimientos de arquitectura, programación backend, persistencia y diseño frontend en funcionalidades completas. El equipo concluye que dividir el trabajo por contextos facilita la especialización y, al mismo tiempo, exige mantener contratos, reglas de negocio y criterios de interfaz coherentes para integrar el producto.<br> |
-| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Reconoció que los arquetipos construidos por inferencia carecen de sustento, lo que lo llevó a rehacer el análisis de entrevistas con porcentajes y a trazar cada característica de los User Personas hasta su origen en las respuestas registradas. Identificó la necesidad de mantenerse actualizado en métodos de investigación de usuarios para que los hallazgos sostengan las decisiones de producto.<br>**TB1:** Reconoció que implementar Attendance exige seguir aprendiendo sobre sincronización de marcaciones, cálculo de estados y presentación de información laboral de forma consistente entre backend y frontend.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Al modelar la arquitectura reconoció que su conocimiento previo de diagramas se limitaba a UML, y asumió el estudio de C4 Model como un nivel de abstracción distinto y complementario. Identificó que la evolución de las herramientas de modelado exige una actualización continua para poder comunicar decisiones de arquitectura a audiencias técnicas y no técnicas.<br>**TB1:** Reconoció que Request requiere aprender continuamente sobre workflows, validaciones, notificaciones y coordinación entre los roles solicitante y aprobador para mantener una experiencia coherente.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Reconoció que la seguridad de la información que expone la solución no se resuelve con conocimientos generales, y asumió el estudio de los controles del OWASP Mobile Application Security Verification Standard para sustentar las decisiones de almacenamiento cifrado y autenticación del contexto de identidad. Identificó que el desarrollo seguro demanda una actualización permanente frente a la aparición de nuevas vulnerabilidades.<br>**TB1:** Reconoció que Payroll requiere mantenerse actualizado en protección de documentos, control de acceso y manejo de información sensible durante todo el ciclo de desarrollo.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Reconoció que el diseño de la persistencia no puede derivarse de forma mecánica del modelo de dominio, y estudió cómo un agregado se traduce en tablas, constraints y relaciones sin perder sus invariantes. Identificó que la separación entre el esquema del servidor y el esquema local del dispositivo es una decisión de diseño propia del desarrollo móvil que debe seguir estudiando.<br>**TB1:** Reconoció que Wellbeing y Benefits requieren aprender de manera continua sobre integración de mediciones, clasificación de indicadores, reglas de saldo y visualización accesible de datos para los usuarios.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Reconoció que el requisito de incorporar un feature de aprendizaje autónomo exige evaluar tecnologías no abordadas en clase con criterio propio, y no adoptar la primera alternativa disponible. Investigó las opciones de autenticación biométrica en Android y en Flutter, contrastó sus diferencias técnicas y documentó la justificación de la elección, asumiendo que esa capacidad de evaluar e integrar tecnología nueva será permanente en su ejercicio profesional.<br>**TB1:** Reconoció que Workspace exige actualizarse continuamente en gestión de perfiles, jerarquías, documentos y sincronización de datos para sostener una experiencia consistente entre la administración y la autogestión.<br><br> | **AV1:** El equipo constató que el alcance del proyecto obligó a cada integrante a identificar por sí mismo qué le faltaba saber antes de poder avanzar, y que ese diagnóstico fue tan determinante como el estudio posterior. Las decisiones que se tomaron sin conocimiento suficiente, como la primera versión del análisis de entrevistas o la delimitación inicial del dominio, tuvieron que rehacerse, lo que evidenció el costo de suponer en lugar de aprender. El equipo concluye que el aprendizaje permanente no es una recomendación general sino una condición operativa del desarrollo de software, porque el stack, las técnicas de modelado y los estándares de seguridad cambian a un ritmo que ninguna formación inicial puede cubrir por completo.<br><br>**TB1:** La implementación confirmó que el aprendizaje continúa durante la construcción y no termina con el diseño. El equipo concluye que cada bounded context presenta retos propios de dominio, integración y experiencia de usuario, por lo que la actualización permanente y la revisión entre integrantes son necesarias para entregar funcionalidades backend y frontend confiables.<br> |
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Estudió las buenas prácticas de conducción de entrevistas de investigación y las aplicó en el registro de entrevistas a los dos segmentos objetivo. Aprendió a construir User Personas, User Task Matrix, User Journey Maps y Empathy Maps en UXPressia, herramienta que no había utilizado antes, y derivó cada característica de los arquetipos del análisis estadístico de las entrevistas registradas. Incorporó además la técnica de Impact Mapping para vincular los objetivos de negocio con las historias de usuario.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Attendance, comprendiendo la integración de sus reglas de negocio, servicios, persistencia y pantallas de consulta de asistencia. En el informe estudió los sistemas de organización, etiquetado, búsqueda y navegación de la Information Architecture y los aplicó al mapa de navegación de la aplicación, además de elaborar los wireflows de los seis user goals. También aprendió a evaluar con heurísticas de Usability, Inclusive Design e Information Architecture usando una escala de severidad, y la aplicó al registro y análisis de las entrevistas de validación.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Adquirió el manejo de la técnica de Big Picture EventStorming y la aplicó para modelar el dominio del problema junto con el equipo. Estudió la redacción de criterios de aceptación bajo la estructura Gherkin y la aplicó en las User Stories, incluidas las Technical Stories del RESTful API. Aprendió a modelar arquitectura de software con C4 Model en Structurizr, elaborando los diagramas de contexto, contenedores y despliegue de la solución.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Request, aplicando sus reglas de negocio en el API y construyendo las interfaces para la creación, seguimiento y aprobación de solicitudes. En el informe aprendió a documentar los endpoints del RESTful API con OpenAPI y Swagger UI, a fijar el entorno de desarrollo y las convenciones del equipo (GitFlow, Conventional Commits y Semantic Versioning) y a desplegar el API con Docker en Render y MySQL en Aiven, y el Landing Page en GitHub Pages.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Estudió el enfoque estratégico de Domain-Driven Design y aplicó las técnicas de Candidate Context Discovery y Domain Message Flows Modeling para identificar y delimitar los siete bounded contexts del dominio. Aprendió a elaborar Bounded Context Canvases siguiendo el proceso iterativo de definición, destilación de reglas de negocio, análisis de capacidades, captura de dependencias y crítica de diseño. Incorporó además los patrones tácticos de agregados, entidades y objetos de valor en las capas de dominio, interfaz y aplicación.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Payroll, implementando la gestión de boletas de pago y sus vistas de consulta y descarga para los usuarios. En el informe elaboró los wireframes de las 83 pantallas de 360 x 800dp y los mock-ups sobre el sistema de diseño en Figma, y organizó la evidencia de commits de los tres repositorios del Sprint 1. Además completó las referencias en formato APA que sustentan los Capítulos III y IV.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Aprendió a construir un Competitive Analysis Landscape y un análisis FODA orientado a la competencia para sustentar la propuesta de valor del producto. Estudió la definición de un Ubiquitous Language y lo consolidó con los términos del negocio en inglés y su glosa en español. Adquirió el manejo de la notación de diagramas de clases UML con especificación de scope y multiplicidad, y de diagramas de diseño de base de datos con constraints, aplicándolos a los siete bounded contexts.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló los bounded contexts Wellbeing y Benefits, implementando la gestión de indicadores ambientales, beneficios y saldo de vacaciones, junto con sus respectivas interfaces. En el informe aprendió a descomponer las User Stories en tasks por capa para armar el Sprint Backlog, a escribir pruebas unitarias con JUnit sobre las reglas de negocio de mayor riesgo y a redactar Acceptance Tests en Gherkin. También elaboró los user flows, el prototipo navegable en Figma y el diseño de las sesiones de validación.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Estudió y aplicó la técnica de las 5W y 2H para delimitar el problema, y el Lean UX Process de la tercera edición para elaborar el Problem Statement bajo la plantilla de brand new initiative, los cinco tipos de Assumptions, los Hypothesis Statements y el Lean UX Canvas. Investigó de forma autónoma las alternativas de desarrollo móvil nativo y cross-platform, y sustentó con literatura académica la elección del stack declarado en las restricciones tecnológicas del proyecto.<br>**TB1:** Para la elaboración del backend y frontend, desarrolló el bounded context Workspace, implementando la gestión de colaboradores, áreas, posiciones, documentos y organigrama, así como sus pantallas de administración y autogestión. En el informe consolidó el sistema de diseño sobre Material Design 3 (tipografía, colores con verificación de contraste WCAG 2.1 y retícula de 8dp), construyó y publicó el Landing Page con selector de idioma y navegación accesible, y planificó el Sprint 1 con la matriz de líderes y colaboradores.<br><br> | **AV1:** El equipo verificó que el desarrollo de una solución móvil bajo Domain-Driven Design exige incorporar conocimientos que no formaban parte de su formación previa, y que ese aprendizaje debe ocurrir antes de escribir la primera línea de código. Las técnicas de Lean UX, EventStorming, C4 Model y el modelado táctico se estudiaron de forma autónoma a partir de fuentes especializadas y se aplicaron de inmediato sobre el dominio del proyecto, lo que permitió validar la comprensión en un contexto real en lugar de quedarse en la teoría. El equipo concluye que la actualización de conocimientos resulta más efectiva cuando se organiza alrededor de un artefacto concreto que debe producirse, porque obliga a resolver las ambigüedades que una lectura superficial deja pasar.<br><br>**TB1:** El desarrollo de los bounded contexts permitió aplicar los conocimientos de arquitectura, programación backend, persistencia y diseño frontend en funcionalidades completas. El equipo concluye que dividir el trabajo por contextos facilita la especialización y, al mismo tiempo, exige mantener contratos, reglas de negocio y criterios de interfaz coherentes para integrar el producto. La elaboración de los Capítulos III y IV mostró que repartir el informe por secciones obliga a cada integrante a aprender la técnica antes de documentarla: Information Architecture, wireframes y mock-ups, Swagger UI, JUnit y Gherkin se estudiaron y se aplicaron sobre el producto real. El equipo concluye que documentar lo que se construyó confirma qué se entendió y qué falta por aprender.<br> |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | **Ávila De La Cruz, Darío Fabián**<br>**AV1:** Reconoció que los arquetipos construidos por inferencia carecen de sustento, lo que lo llevó a rehacer el análisis de entrevistas con porcentajes y a trazar cada característica de los User Personas hasta su origen en las respuestas registradas. Identificó la necesidad de mantenerse actualizado en métodos de investigación de usuarios para que los hallazgos sostengan las decisiones de producto.<br>**TB1:** Reconoció que implementar Attendance exige seguir aprendiendo sobre sincronización de marcaciones, cálculo de estados y presentación de información laboral de forma consistente entre backend y frontend. Las entrevistas de validación le mostraron que observaciones como reducir los textos secundarios o evitar términos técnicos solo aparecen al probar el producto con usuarios, por lo que reconoce que la evaluación con usuarios y con heurísticas debe repetirse en cada Sprint.<br><br>**Diaz Villalba, Diego Alonso**<br>**AV1:** Al modelar la arquitectura reconoció que su conocimiento previo de diagramas se limitaba a UML, y asumió el estudio de C4 Model como un nivel de abstracción distinto y complementario. Identificó que la evolución de las herramientas de modelado exige una actualización continua para poder comunicar decisiones de arquitectura a audiencias técnicas y no técnicas.<br>**TB1:** Reconoció que Request requiere aprender continuamente sobre workflows, validaciones, notificaciones y coordinación entre los roles solicitante y aprobador para mantener una experiencia coherente. Reconoció que el despliegue exige estudiar las reglas de cada plataforma antes de usarla: la exigencia de llave primaria en Aiven se descubrió tarde y obligó a corregir el esquema, así que seguirá aprendiendo sobre infraestructura y entrega continua.<br><br>**Esquicha Alcántara, Diego Alonso**<br>**AV1:** Reconoció que la seguridad de la información que expone la solución no se resuelve con conocimientos generales, y asumió el estudio de los controles del OWASP Mobile Application Security Verification Standard para sustentar las decisiones de almacenamiento cifrado y autenticación del contexto de identidad. Identificó que el desarrollo seguro demanda una actualización permanente frente a la aparición de nuevas vulnerabilidades.<br>**TB1:** Reconoció que Payroll requiere mantenerse actualizado en protección de documentos, control de acceso y manejo de información sensible durante todo el ciclo de desarrollo. Reconoció que mantener la coherencia entre los wireframes, los mock-ups y la aplicación implementada exige seguir aprendiendo del sistema de diseño y de la accesibilidad, porque el diseño se ajusta al pasar a código.<br><br>**Galvez Meza, Salym Pool**<br>**AV1:** Reconoció que el diseño de la persistencia no puede derivarse de forma mecánica del modelo de dominio, y estudió cómo un agregado se traduce en tablas, constraints y relaciones sin perder sus invariantes. Identificó que la separación entre el esquema del servidor y el esquema local del dispositivo es una decisión de diseño propia del desarrollo móvil que debe seguir estudiando.<br>**TB1:** Reconoció que Wellbeing y Benefits requieren aprender de manera continua sobre integración de mediciones, clasificación de indicadores, reglas de saldo y visualización accesible de datos para los usuarios. Reconoció que escribir pruebas y user flows exige seguir aprendiendo, porque cada regla de negocio nueva (saldo de vacaciones, umbrales ambientales) cambia los casos que hay que cubrir y las condiciones que decide el sistema.<br><br>**Vasquez Llave, Oscar Lizandro**<br>**AV1:** Reconoció que el requisito de incorporar un feature de aprendizaje autónomo exige evaluar tecnologías no abordadas en clase con criterio propio, y no adoptar la primera alternativa disponible. Investigó las opciones de autenticación biométrica en Android y en Flutter, contrastó sus diferencias técnicas y documentó la justificación de la elección, asumiendo que esa capacidad de evaluar e integrar tecnología nueva será permanente en su ejercicio profesional.<br>**TB1:** Reconoció que Workspace exige actualizarse continuamente en gestión de perfiles, jerarquías, documentos y sincronización de datos para sostener una experiencia consistente entre la administración y la autogestión. Reconoció que el Landing Page debe evolucionar con la retroalimentación de los usuarios (menos texto secundario, un botón claro para solicitar una demo) y que debe seguir aprendiendo sobre accesibilidad y SEO para mejorarlo.<br><br> | **AV1:** El equipo constató que el alcance del proyecto obligó a cada integrante a identificar por sí mismo qué le faltaba saber antes de poder avanzar, y que ese diagnóstico fue tan determinante como el estudio posterior. Las decisiones que se tomaron sin conocimiento suficiente, como la primera versión del análisis de entrevistas o la delimitación inicial del dominio, tuvieron que rehacerse, lo que evidenció el costo de suponer en lugar de aprender. El equipo concluye que el aprendizaje permanente no es una recomendación general sino una condición operativa del desarrollo de software, porque el stack, las técnicas de modelado y los estándares de seguridad cambian a un ritmo que ninguna formación inicial puede cubrir por completo.<br><br>**TB1:** La implementación confirmó que el aprendizaje continúa durante la construcción y no termina con el diseño. El equipo concluye que cada bounded context presenta retos propios de dominio, integración y experiencia de usuario, por lo que la actualización permanente y la revisión entre integrantes son necesarias para entregar funcionalidades backend y frontend confiables. Las entrevistas de validación y la evaluación heurística de la versión del Sprint 1 (cuatro problemas, de severidad 1 a 3) mostraron que el aprendizaje continúa después de entregar una versión, porque los usuarios detectan lo que el equipo ya no ve. El equipo concluye que revisar el producto con usuarios y con heurísticas en cada Sprint es parte del aprendizaje permanente.<br> |
 
 <div style="page-break-after: always;"></div>
 
@@ -288,12 +306,27 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
       - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
       - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
       - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+    - [4.2.2. Sprint 2](#422-sprint-2)
+      - [4.2.2.1. Sprint Planning 2](#4221-sprint-planning-2)
+      - [4.2.2.2. Aspect Leaders and Collaborators](#4222-aspect-leaders-and-collaborators)
+      - [4.2.2.3. Sprint Backlog 2](#4223-sprint-backlog-2)
+      - [4.2.2.4. Development Evidence for Sprint Review](#4224-development-evidence-for-sprint-review)
+      - [4.2.2.5. Testing Suite Evidence for Sprint Review](#4225-testing-suite-evidence-for-sprint-review)
+      - [4.2.2.6. Execution Evidence for Sprint Review](#4226-execution-evidence-for-sprint-review)
+      - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
+      - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
+      - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
   - [4.3. Validation Interviews](#43-validation-interviews)
     - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
     - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
     - [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
 - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-the-Product](#video-about-the-product)
+- [Video App Validation](#video-app-validation)
+- [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+  - [Anexo A. Videos de Exposiciones](#anexo-a-videos-de-exposiciones)
 
 <div style="page-break-after: always;"></div>
 
@@ -986,7 +1019,7 @@ Edad:  22 años
 
 Distrito: Surco 
 
-Link de la entrevista: [Entrevista 1 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6USPJ4)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6USPJ4
 
 Timing donde inicia la entrevista: 00:00
 
@@ -1012,7 +1045,7 @@ Edad: 25 años
 
 Distrito: Pueblo Libre
 
-Link de la entrevista: [Entrevista 2 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=LU4tZ1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjk0LjY4fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=LU4tZ1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjk0LjY4fX0%3D
 
 Timing donde inicia la entrevista: 04:54
 
@@ -1038,7 +1071,7 @@ Edad: 22 años
 
 Distrito: Chorrillos
 
-Link de la entrevista: [Entrevista 3 - RR.HH](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=Zg0vWd&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTgzLjgxfX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=Zg0vWd&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTgzLjgxfX0%3D
 
 Timing donde inicia la entrevista: 09:43
 
@@ -1065,7 +1098,7 @@ Edad: 25 años
 
 Distrito: Lima
 
-Link de la entrevista: [Entrevista 1 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=2gzoo5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6ODY0LjM5fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=2gzoo5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6ODY0LjM5fX0%3D
 
 Timing donde inicia la entrevista: 14:24
 
@@ -1091,7 +1124,7 @@ Edad: 25 años
 
 Distrito: Barranco 
 
-Link de la entrevista: [Entrevista 2 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=25BIVE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIwNy43NX19)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=25BIVE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTIwNy43NX19
 
 Timing donde inicia la entrevista: 20:07
 
@@ -1117,7 +1150,7 @@ Edad: 19 años
 
 Distrito: Cercado de Lima 
 
-Link de la entrevista: [Entrevista 3 - Colaborador](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=s6pG18&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTM1Ni4wMX19)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQC6m7a-5-5dTYIIH2s8zv9xAad-6xZB91odTukuntZFmeI?e=s6pG18&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTM1Ni4wMX19
 
 Timing donde inicia la entrevista: 22:36
 
@@ -2351,7 +2384,7 @@ El diagrama de contexto muestra a Flowboard como un solo sistema y su relación 
 
 **Figura 45:** *Diagrama de contexto de Flowboard*
 
-![Diagrama de contexto de Flowboard](assets\Chapter-2\contextmapping.png)
+![Diagrama de contexto de Flowboard](assets\Chapter-2\context-diagram.png)
 
 *Nota.* Actores, sistema principal y sistemas externos que interactúan con Flowboard. Elaboración propia.
 
@@ -2976,7 +3009,7 @@ En esta sección se presenta el Database Design Diagram correspondiente al bound
 
 **Figura 59:** *Database Design Diagram del bounded context Request*
 
-![Database Design Diagram del bounded context Request](assets\Chapter-2\domainlayerdiagram-request.png)
+![Database Design Diagram del bounded context Request](assets\Chapter-2\databasedesigndiagram-request.png)
 
 *Nota.* Tablas y relaciones de persistencia del bounded context Request. Elaboración propia.
 
@@ -4098,7 +4131,7 @@ Elaborado en Figma: https://www.figma.com/design/RBVdavhWuchp0u7GVx6m7I/Flowboar
 
 *Nota.* Demostración de los recorridos UG-01 a UG-06 sobre el prototipo de la aplicación nativa. Elaboración propia.
 
-Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQBgfOGMxH1wSr0UULfjUJYbAT5UvLRQwVWrbpoBJTIHLhI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=GKF2Uk
 
 <div style="page-break-after: always;"></div>
 
@@ -4121,10 +4154,13 @@ Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las
 - *Landing Page:* se desarrolla en Visual Studio Code con HTML5, CSS3 y JavaScript sin frameworks, con un motor de internacionalización propio para inglés y español.
 - *RESTful API:* se desarrolla en IntelliJ IDEA o Visual Studio Code con Java 25 (Eclipse Temurin), Spring Boot 4.0.8, Spring Data JPA, Bean Validation y springdoc-openapi 3.0.3. El proyecto se construye con el Maven Wrapper incluido en el repositorio, por lo que no requiere instalar Maven. En desarrollo se usa MySQL 8 local, administrado desde MySQL Workbench.
 - *Aplicación móvil nativa:* se desarrolla en Android Studio con Kotlin 2.4.20 y Jetpack Compose (Compose BOM 2026.09.00, Material 3 1.4.0). La arquitectura usa Hilt para inyección de dependencias, Retrofit 3 con Gson y OkHttp para consumir el API, Navigation Compose con rutas tipadas, Room y DataStore para el almacenamiento local, y Android Gradle Plugin 9.4.1 con Kotlin integrado. Las pruebas se ejecutan sobre el emulador de Android Studio (Pixel 10, API 37) y sobre dispositivos físicos.
+- *Aplicación móvil multiplataforma (desde el Sprint 2):* se desarrolla en Visual Studio Code o Android Studio con Flutter 3.44 (canal stable) y Dart 3.13. Sigue la misma arquitectura por bounded context de la aplicación nativa, con view models basados en `ChangeNotifier`, `get_it` para inyección de dependencias y `http` para consumir el API. Los paquetes principales son `flutter_secure_storage` para guardar la sesión, `local_auth` para la verificación biométrica, `file_picker` y `path_provider` para los archivos, `url_launcher` para abrir enlaces e `intl` para formatos de fecha y moneda.
+
+En el Sprint 2 el RESTful API incorporó Spring Security con autenticación por tokens JWT para el bounded context IAM y Flyway para versionar los cambios del esquema de la base de datos.
 
 **Software Testing.** Las pruebas unitarias del API se escriben con JUnit 5 y las de la aplicación con JUnit 4, ambas incluidas en las dependencias de cada proyecto. Los endpoints se prueban de forma manual desde Swagger UI con datos de muestra.
 
-**Software Deployment.** El Landing Page se publica en GitHub Pages. El API se empaqueta en una imagen Docker y se despliega como Web Service en Render, conectado a una instancia gestionada de MySQL en Aiven. La aplicación se distribuye a los usuarios de prueba mediante Firebase App Distribution.
+**Software Deployment.** El Landing Page se publica en GitHub Pages. El API se empaqueta en una imagen Docker y se despliega como Web Service en Render, conectado a una instancia gestionada de MySQL en Aiven. La distribución de la aplicación a los usuarios de prueba mediante Firebase App Distribution queda prevista para el Sprint 2.
 
 **Software Documentation.** El informe del proyecto se redacta en Markdown dentro de su propio repositorio de GitHub. El API se documenta con OpenAPI Specification a través de Swagger UI, y cada repositorio de código incluye un README.
 
@@ -4144,18 +4180,21 @@ Para el Sprint 1 el equipo configuró un entorno de trabajo común que cubre las
 | Software Development | IntelliJ IDEA Community | Desarrollo del RESTful API | Local | https://www.jetbrains.com/idea/download |
 | Software Development | Eclipse Temurin JDK 25 | Compilación y ejecución del API | Local | https://adoptium.net |
 | Software Development | Android Studio | Desarrollo de la aplicación nativa en Kotlin | Local | https://developer.android.com/studio |
+| Software Development | Flutter SDK 3.44 (Dart 3.13) | Desarrollo de la aplicación multiplataforma (Sprint 2) | Local | https://docs.flutter.dev/get-started/install |
+| Software Development | Flyway | Migraciones versionadas del esquema de la base de datos (Sprint 2) | Local (dependencia) | https://documentation.red-gate.com/flyway |
 | Software Development | MySQL Community Server 8 | Base de datos local de desarrollo | Local | https://dev.mysql.com/downloads/mysql |
 | Software Development | MySQL Workbench | Administración de la base de datos local y en la nube | Local | https://dev.mysql.com/downloads/workbench |
 | Source Code Management | Git | Control de versiones | Local | https://git-scm.com/downloads |
 | Source Code Management | GitHub | Repositorios de la organización Performily-Mobile | SaaS | https://github.com/Performily-Mobile |
 | Source Code Management | GitHub Desktop | Cliente gráfico de Git | Local | https://desktop.github.com |
 | Software Testing | JUnit 5 / JUnit 4 | Pruebas unitarias del API y de la aplicación | Local (dependencia) | https://junit.org |
+| Software Testing | flutter_test | Pruebas de la aplicación multiplataforma | Local (dependencia) | https://api.flutter.dev/flutter/flutter_test/ |
 | Software Testing | Swagger UI | Prueba manual de los endpoints | SaaS (embebido en el API) | https://swagger.io/tools/swagger-ui |
 | Software Deployment | GitHub Pages | Publicación del Landing Page | SaaS | https://pages.github.com |
 | Software Deployment | Docker | Imagen del API para su despliegue | Local | https://www.docker.com/products/docker-desktop |
 | Software Deployment | Render | Hosting del API como Web Service | SaaS | https://render.com |
 | Software Deployment | Aiven for MySQL | Base de datos MySQL gestionada | SaaS | https://aiven.io/mysql |
-| Software Deployment | Firebase App Distribution | Distribución del APK a usuarios de prueba | SaaS | https://firebase.google.com/products/app-distribution |
+| Software Deployment | Firebase App Distribution | Distribución del APK a usuarios de prueba (prevista para el Sprint 3) | SaaS | https://firebase.google.com/products/app-distribution |
 | Software Documentation | OpenAPI / springdoc | Documentación del API | Local (dependencia) | https://springdoc.org |
 | Software Documentation | Markdown en GitHub | Informe del proyecto y README de cada repositorio | SaaS | https://github.com/Performily-Mobile/performily-mobile-report |
 
@@ -4172,6 +4211,7 @@ El equipo utiliza GitHub como plataforma y Git como sistema de control de versio
 | Landing Page | https://github.com/Performily-Mobile/flowboard-mobile-landing-page | Sitio público en HTML5, CSS3 y JavaScript |
 | RESTful API (Web Services) | https://github.com/Performily-Mobile/flowboard-mobile-service | Proyecto Spring Boot con sus pruebas en `src/test` |
 | Aplicación móvil nativa | https://github.com/Performily-Mobile/flowboard-mobile-native-application | Proyecto Android en Kotlin y Jetpack Compose con sus pruebas en `app/src/test` |
+| Aplicación móvil multiplataforma | https://github.com/Performily-Mobile/flowboard-mobile-multiplatform-application | Proyecto Flutter en Dart, iniciado en el Sprint 2 |
 | Informe | https://github.com/Performily-Mobile/performily-mobile-report | Informe del Trabajo Final en Markdown |
 
 *Nota.* Elaboración propia.
@@ -4209,7 +4249,7 @@ Los mensajes de commit siguen la especificación Conventional Commits 1.0.0 con 
 - Todo el código se escribe en inglés: nombres de clases, funciones, variables, archivos, endpoints, tablas y comentarios técnicos. Los textos que ve el usuario están en español y se separan del código mediante archivos de recursos o constantes de presentación.
 - Los nombres revelan la intención y se evitan las abreviaturas ambiguas (`registerEmployee` y no `regEmp`).
 - Se respeta el Ubiquitous Language definido en el Capítulo II: las clases del dominio usan los mismos términos del negocio, por ejemplo `Employee`, `VacationBalance`, `BenefitAssignment`, `Office` o `MetricThreshold`.
-- La sangría es de cuatro espacios en Java y Kotlin y de dos espacios en HTML, CSS y JavaScript. Los archivos terminan con una línea vacía.
+- La sangría es de cuatro espacios en Java y Kotlin y de dos espacios en HTML, CSS, JavaScript y Dart. Los archivos terminan con una línea vacía.
 
 **Landing Page: HTML5, CSS3 y JavaScript**
 
@@ -4236,19 +4276,26 @@ Los mensajes de commit siguen la especificación Conventional Commits 1.0.0 con 
 - Las rutas de navegación son objetos o data classes `@Serializable` con sufijo `Route`, y cada bounded context registra su propio `NavGraph`.
 - Los colores, la tipografía y los íconos se toman del sistema de diseño de `core/designsystem`, que replica los tokens de Figma; no se escriben colores sueltos dentro de las pantallas.
 
+**Aplicación móvil multiplataforma: Dart y Flutter**
+
+- Se siguen las guías Effective Dart y las reglas de `flutter_lints`, configuradas en `analysis_options.yaml`: `UpperCamelCase` para clases y widgets, `lowerCamelCase` para variables, funciones y constantes, y `snake_case` para los nombres de archivo. La sangría es de dos espacios.
+- Cada bounded context es una carpeta dentro de `lib/features` con las mismas capas de la aplicación nativa: `domain` (entity, valueobject, repository), `application` (usecase), `infrastructure` (remote, mapper, repository, local, acl, di) y `presentation` (state, viewmodel, ui/screens, ui/components, ui/navigation). El código compartido vive en `lib/core` (designsystem, di, domain, navigation, network, session y viewmodel).
+- Sufijos por responsabilidad, equivalentes a los de la aplicación nativa: `…Screen`, `…ViewModel`, `…UiState`, `…UseCase`, `…Repository` / `…RepositoryImpl`, `…Service`, `…Dto` y `…Mapper`, con archivos como `my_payslips_screen.dart` o `get_my_payslips_use_case.dart`.
+- Los colores, la tipografía, los espaciados y los componentes se toman de `lib/core/designsystem`; las pantallas no definen estilos sueltos.
+
 **Gherkin**
 
 Los archivos `.feature` siguen “Gherkin Conventions for Readable Specifications”: un `Feature` por User Story, escenarios con nombre descriptivo, pasos `Given-When-Then` en tercera persona y tablas `Examples` para los casos con datos variables.
 
 ### 4.1.4. Software Deployment Configuration
 
-En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El diagrama siguiente resume el recorrido de cada uno en cuatro etapas: el repositorio en GitHub, la construcción, el alojamiento o la distribución, y la ejecución en producción. El Landing Page se publica en GitHub Pages, el RESTful API se construye como imagen Docker y se ejecuta en Render conectado a MySQL en Aiven, y la aplicación nativa se firma, se sube a Firebase App Distribution y se instala en el dispositivo Android del tester. El diagrama complementa el Deployment Diagram de C4 Model de la sección 2.5.3.3, que muestra la misma infraestructura sin el recorrido desde el código.
+En esta sección se describen los pasos para desplegar cada producto a partir de su repositorio. El diagrama siguiente resume el recorrido de cada uno en cuatro etapas: el repositorio en GitHub, la construcción, el alojamiento o la distribución, y la ejecución en producción. El Landing Page se publica en GitHub Pages, el RESTful API se construye como imagen Docker y se ejecuta en Render conectado a MySQL en Aiven, y la aplicación nativa se genera como APK firmado para instalarla en un dispositivo Android, y su distribución a los testers mediante Firebase App Distribution queda prevista para el Sprint 2. El diagrama complementa el Deployment Diagram de C4 Model de la sección 2.5.3.3, que muestra la misma infraestructura sin el recorrido desde el código.
 
 **Figura 113:** *Deployment Diagram de Flowboard*
 
 ![Deployment Diagram de Flowboard](assets/Chapter-4/deployment-pipeline.png)
 
-*Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. Elaboración propia.
+ *Nota.* Recorrido de despliegue de cada producto, desde su repositorio en GitHub hasta el ambiente de producción. La distribución de las aplicaciones mediante Firebase App Distribution se realizará en el Sprint 3. Elaboración propia.
 
 **Landing Page en GitHub Pages**
 
@@ -4264,15 +4311,17 @@ En esta sección se describen los pasos para desplegar cada producto a partir de
 3. *Servicio:* en Render crear un *Web Service* conectado al repositorio `flowboard-mobile-service`, con runtime *Docker* y rama `main`.
 4. *Variables de entorno:* configurar `SPRING_PROFILES_ACTIVE=prod` y las credenciales de la base de datos: `DATABASE_URL` (URL JDBC completa de Aiven con `sslMode=REQUIRED`), `DATABASE_USER` y `DATABASE_PASSWORD`, que `application-prod.properties` lee con la sintaxis `${...}`. Las credenciales nunca se escriben en los archivos de propiedades del repositorio. Render asigna la variable `PORT`, que el API usa con `server.port=${PORT:8080}`.
 5. *Esquema:* el perfil `prod` usa `spring.jpa.hibernate.ddl-auto=validate`, por lo que el esquema debe existir antes del primer despliegue. Se crea ejecutando una vez el API con el perfil `dev` contra la base de Aiven, o con el script SQL del proyecto.
-6. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
+6. *Seguridad (desde el Sprint 2):* configurar además `IAM_JWT_SECRET`, el secreto con el que se firman los tokens JWT, e `IAM_JWT_TTL_SECONDS`, su tiempo de vida en segundos (8 horas si no se define). El secreto no se guarda en el repositorio.
+7. *Migraciones (desde el Sprint 2):* al iniciar, Flyway aplica las migraciones pendientes con `baseline-on-migrate`, de modo que el esquema que ya existía en Aiven se toma como versión base y los cambios nuevos quedan versionados antes de que Hibernate valide el esquema.
+8. *Verificación:* al terminar el despliegue, la raíz del servicio redirige a Swagger UI y `/health` responde el estado del API.
 
-**Aplicación móvil en Firebase App Distribution**
+**Aplicación móvil multiplataforma**
 
-1. Cambiar la constante `BASE_URL` de `core/di/NetworkModule.kt` por la URL pública del API en Render (en desarrollo apunta a `http://localhost:8080/api/v1/` y se usa `adb reverse tcp:8080 tcp:8080` con el emulador).
-2. Actualizar `versionCode` y `versionName` en `app/build.gradle.kts`.
-3. Generar el APK con *Build › Generate Signed App Bundle or APK* (o `./gradlew assembleRelease`), firmado con el keystore del equipo, que no se sube al repositorio.
-4. En la consola de Firebase, dentro del proyecto Flowboard, abrir *App Distribution*, subir el APK, asignar el grupo de testers y agregar las notas de la versión.
-5. Los testers reciben la invitación por correo e instalan la aplicación desde el enlace de Firebase.
+1. Instalar el Flutter SDK 3.44 o superior y ejecutar `flutter pub get` en la raíz del repositorio `flowboard-mobile-multiplatform-application`.
+2. El cliente HTTP (`lib/core/network/api_client.dart`) apunta por defecto al API desplegado en `https://flowboard-mobile-service.onrender.com/api/v1/`.
+3. Generar el instalable de Android con `flutter build apk --release`; el archivo queda en `build/app/outputs/flutter-apk/`.
+4. En el Sprint 3 el instalable se distribuirá a los usuarios de prueba mediante Firebase App Distribution.
+
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
@@ -4408,7 +4457,7 @@ Enlace del tablero: https://trello.com/b/7W5MS9x6/sprint-backlog-1-moviles
 | TS05 | Internacionalización de los mensajes del API | T69 | Mensajes i18n | messages.properties y messages_es.properties por bounded context. | 2 | Oscar | Done |
 | TS06 | Despliegue de los productos digitales | T70 | Despliegue del Landing Page | Publicación en GitHub Pages desde main. | 1 | Oscar | Done |
 | TS06 | Despliegue de los productos digitales | T71 | Dockerfile y perfil prod del API | Dockerfile multi-stage y application-prod.properties para Render y Aiven. | 3 | Diego D. | Done |
-| TS06 | Despliegue de los productos digitales | T72 | Distribución de la app | Configurar Firebase App Distribution y apuntar la app a la URL pública del API. | 3 | Diego D. | In Process |
+| TS06 | Despliegue de los productos digitales | T72 | Distribución de la app | Configurar Firebase App Distribution (prevista para el Sprint 2) | 3 | Diego D. | To Do |
 | SP01 | Investigar el formato de las marcaciones | T73 | Spike de marcaciones | Revisar el formato de exportación de relojes de asistencia. | 2 | Darío | Done |
 | SP02 | Investigar el envío de mediciones ambientales | T74 | Spike de lecturas ambientales | Definir el endpoint de lecturas y el simulador de datos de prueba. | 2 | Salym | Done |
 | SP03 | Evaluar el almacenamiento de documentos y boletas | T75 | Spike de almacenamiento | Comparar almacenamiento local y en la nube para documentos y boletas. | 2 | Diego E. | Done |
@@ -4417,7 +4466,7 @@ Enlace del tablero: https://trello.com/b/7W5MS9x6/sprint-backlog-1-moviles
 
 *Nota.* Elaboración propia.
 
-Al cierre del Sprint quedaron en estado *In Process* la vista de boletas del colaborador en la aplicación (US44), cuyo API ya está disponible, y la distribución de la aplicación por Firebase App Distribution (TS06). Ambos pasan al Sprint 2 junto con el bounded context IAM (US01-US07 y TS02), la notificación de cambio de estado (US36), la paginación de listados (TS04) y la aplicación cross-platform en Flutter.
+Al cierre del Sprint quedó en estado *In Process* la vista de boletas del colaborador en la aplicación (US44), cuyo API ya está disponible. Esta tarea pasa al Sprint 2 junto con el bounded context IAM (US01-US07 y TS02), la notificación de cambio de estado (US36), la paginación de listados (TS04), la aplicación cross-platform en Flutter y la distribución de la aplicación por Firebase App Distribution (T72), que no formó parte del alcance de esta entrega.
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
@@ -4794,10 +4843,10 @@ Feature: Environmental thresholds and indicators
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :---- | :---- | :----: | :---- | :---- | :----: |
-| Performily-Mobile/flowboard-mobile-service | benefits | PENDIENTE | test(benefits): add unit tests for vacation balance and benefit assignment | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-service | develop | PENDIENTE | test: add acceptance feature files for benefits and wellbeing | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-native-application | wellbeing | PENDIENTE | test(wellbeing): add unit tests for validator, use cases and formatters | — | PENDIENTE |
-| Performily-Mobile/flowboard-mobile-native-application | benefits | PENDIENTE | test(benefits): add unit tests for use cases, formatters and mappers | — | PENDIENTE |
+| Performily-Mobile/flowboard-mobile-service | benefits | 42045cf | feat(benefits): add domain model with benefit assignment and vacation balance aggregates | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c659c29 | feat(benefits): add rest controllers, resources and assemblers | — | 04/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | wellbeing | 23f5255 | feat(wellbeing): add use cases for offices, devices, thresholds and history | — | 06/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | benefits | 29d34ab | feat(benefits): add domain model for benefit types, assignments and vacation balances | — | 06/10/2026 |
 
 *Nota.* Elaboración propia.
 
@@ -4895,15 +4944,15 @@ Como resultado del Sprint 1 se obtuvieron el Landing Page publicado y una versi�
 
 *Nota.* Wellbeing, US49 y US51. Elaboración propia.
 
-Enlace del video: PENDIENTE DE CARGAR EN MICROSOFT STREAM
+Enlace del video: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412663_upc_edu_pe/IQBbq2q7T9zbSqz_xRKaZkarAT-D3ADs4kU4wRpbRbo-15c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yYhCCv
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
-En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones `@Operation`, `@Parameter`, `@Schema` y `@ApiResponses` de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única `{ "code", "message", "details" }`, por ejemplo `{"code": "OFFICE_CONFLICT", "message": "..."}` con estado 409.
+En el Sprint 1 se documentaron con OpenAPI Specification los endpoints de los seis bounded contexts implementados. La documentación se genera con springdoc-openapi a partir de las anotaciones @Operation, @Parameter, @Schema y @ApiResponses de los controllers y resources, y se publica con Swagger UI en el mismo servicio. Todos los endpoints responden JSON; los errores usan la estructura única { "code", "message", "details" }, por ejemplo {"code": "OFFICE_CONFLICT", "message": "..."} con estado 409.
 
 - Swagger UI local: http://localhost:8080/swagger-ui/index.html
 - Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
-- Especificación OpenAPI: `/v3/api-docs`
+- Especificación OpenAPI: /v3/api-docs
 - Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
 
 **Tabla 12:** *Endpoints documentados con OpenAPI en el Sprint 1*
@@ -5196,70 +5245,749 @@ En total, el Sprint 1 registró 11 commits en el Landing Page, 64 en el API y 96
 
 Los analíticos muestran que la mayor actividad se concentró entre el 30 de septiembre y el 7 de octubre, cuando se trabajó en paralelo sobre los seis bounded contexts. El Landing Page tiene un único autor porque se asignó completo a un integrante para liberar al resto hacia el API y la aplicación. La diferencia en número de commits entre integrantes responde también al tamaño de los commits: algunos integrantes agruparon una capa completa por commit, mientras que otros hicieron un commit por clase.
 
+### 4.2.2. Sprint 2
+
+#### 4.2.2.1. Sprint Planning 2
+
+El Sprint 2 tuvo como propósito cerrar el alcance funcional del RESTful API con el bounded context IAM, que había quedado fuera del Sprint 1, y llevar la solución a la segunda plataforma del curso con la aplicación cross-platform en Flutter. En la reunión de planificación el equipo acordó tres frentes: implementar la autenticación y la autorización por token de punta a punta (API, aplicación nativa y aplicación Flutter), portar a Flutter los bounded contexts ya entregados en la aplicación nativa respetando la misma arquitectura por capas, y completar en la aplicación nativa la vista del colaborador, que en el Sprint 1 solo se había entregado para Recursos Humanos. Se dejaron para el Sprint 3 la notificación de cambio de estado de las solicitudes (US36), el bounded context Wellbeing en Flutter, la integración con Firebase Cloud Messaging y la distribución de la aplicación por Firebase App Distribution.
+
+**Tabla 16:** *Sprint Planning 2*
+
+| Sprint # | Sprint 2 |
+| :---- | :---- |
+| **Sprint Planning Background** | |
+| Date | 2026-11-11 |
+| Time | 07:00 PM |
+| Location | Discord (virtual) |
+| Prepared By | Esquicha Alcántara, Diego Alonso |
+| Attendees (to planning meeting) | Ávila De La Cruz, Darío Fabián / Diaz Villalba, Diego Alonso / Esquicha Alcántara, Diego Alonso / Galvez Meza, Salym Pool / Vasquez Llave, Oscar Lizandro |
+| Sprint 1 Review Summary | El Sprint 1 cerró con 168 Story Points entregados. Quedaron desplegados el Landing Page en GitHub Pages y el RESTful API en Render con MySQL en Aiven, con seis de los siete bounded contexts (Workspace, Attendance, Request, Benefits, Payroll y Wellbeing) documentados en Swagger UI. La aplicación nativa se entregó con la vista de Recursos Humanos conectada al API. Las entrevistas de validación y la evaluación heurística identificaron cuatro problemas de usabilidad, de severidad 1 a 3. El TB1 obtuvo 19 de 20 puntos y la única observación de la rúbrica fue el criterio Device-tested Native Mobile Application(s), con 2.5 de 3.5 puntos. Al revisar la entrega contra ese criterio, el equipo identificó que la aplicación solo implementaba los User Flows de Recursos Humanos (UF-05 y UF-06), que el Sprint Backlog 1 marcaba como terminadas tareas de la vista del colaborador que se entregaban recién en el Sprint 2, y que el informe no mostraba la aplicación ejecutándose en un dispositivo físico. Por ello, el Sprint 2 prioriza la vista del colaborador, que habilita los User Flows UF-01 a UF-03, y la evidencia de ejecución en dispositivo físico. |
+| Sprint 1 Retrospective Summary | Trabajar por bounded context en ramas propias permitió avanzar en paralelo, pero la base de datos compartida en Aiven obligó a coordinar los cambios de esquema entre integrantes y la exigencia de llave primaria se descubrió tarde. Para el Sprint 2 se acordó versionar los cambios de esquema con una herramienta de migraciones, mantener una rama por bounded context en cada repositorio e integrar en `develop` antes de publicar en `main`. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | *Our focus is on* proteger el RESTful API con autenticación por token y control de acceso por rol, y entregar la aplicación en Flutter con los bounded contexts de la aplicación nativa, salvo Wellbeing, que se implementará en Flutter en el Sprint 3. *We believe it delivers* a los colaboradores y al personal de Recursos Humanos un acceso propio y seguro a su información laboral, en el que cada persona ve solo lo que le corresponde, desde la plataforma móvil que use. *This will be confirmed when* un colaborador inicie sesión con su contraseña temporal, la cambie y consulte sus solicitudes, su asistencia y sus boletas sin ver datos de otros colaboradores, y un usuario de Recursos Humanos restablezca la contraseña de una cuenta y cambie su rol, tanto en la aplicación nativa como en la aplicación Flutter contra el API desplegado. |
+| Sprint 2 Velocity | 27 Story Points |
+| Sum of Story Points | 27 Story Points de ítems nuevos del Product Backlog (10 ítems: US01-US07, TS02 y TS04), más la implementación en Flutter de los Epics ya entregados en la aplicación nativa, estimada en horas en el Sprint Backlog 2. |
+
+*Nota.* Elaboración propia.
+
+#### 4.2.2.2. Aspect Leaders and Collaborators
+
+Los aspectos del Sprint 2 corresponden al nuevo bounded context IAM, a los bounded contexts que se portaron a Flutter o se completaron en la aplicación nativa, a la base de la aplicación Flutter y al despliegue. Igual que en el Sprint 1, cada aspecto tiene un líder que lo implementa de punta a punta y el resto del equipo colabora con la revisión y la integración en `develop`. En IAM, Ávila De La Cruz, Darío Fabián implementó el API y la aplicación nativa, y Diaz Villalba, Diego Alonso implementó la versión en Flutter.
+
+**Tabla 17:** *Leadership-and-Collaboration Matrix del Sprint 2*
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM | Workspace | Attendance | Request | Benefits | Payroll | Dashboard | Flutter Base | Deployment |
+| :---- | :---- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | L | C | L | C | C | C | C | C | C |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | C | C | C | L | C | C | C | C | L |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | C | C | C | C | C | L | C | C | C |
+| Galvez Meza, Salym Pool | SalymGalvez21 | C | C | C | C | L | C | C | C | C |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro / Ixooc | C | L | C | C | C | C | L | L | C |
+
+*Nota.* L = Leader, C = Collaborator. Vasquez Llave, Oscar Lizandro registra commits con dos cuentas de GitHub (oscarlizandro e Ixooc). Elaboración propia.
+
+#### 4.2.2.3. Sprint Backlog 2
+
+El objetivo del Sprint 2 fue completar el Epic de identidad y acceso (EP01) en los tres productos de software y construir la aplicación cross-platform en Flutter. Las User Stories se descompusieron en Engineering Tasks por producto (API, aplicación nativa y aplicación Flutter), estimadas entre 4 y 8 horas cada una, y se asignaron según la matriz de líderes. Las tasks de la aplicación Flutter se vinculan a las User Stories que ya se habían implementado en la aplicación nativa durante el Sprint 1, porque implementan el mismo comportamiento sobre la segunda plataforma. El tablero del Sprint se gestionó en Trello.
+
+**Figura 141:** *Tablero del Sprint 2 en Trello*
+
+![Tablero del Sprint 2 en Trello](assets/Chapter-4/sprint2-backlog-trello.png)
+
+*Nota.* Tablero Sprint Backlog 2 - Moviles en Trello con las columnas To Do, In Process, To Review y Done. Elaboración propia.
+
+Enlace del tablero: https://trello.com/b/ANDhShAa/sprint-backlog-2-moviles
+
+**Tabla 18:** *Sprint Backlog 2*
+
+| User Story Id | User Story Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :----: | :---- | :----: | :---- | :---- | :----: | :---- | :----: |
+| TS02 | Autenticación y autorización del API | T01 | Modelo de cuentas y migraciones | Crear las entidades `UserAccount` y `RevokedToken` con sus repositorios JPA y configurar Flyway sobre la base existente en Aiven. | 4 | Darío | Done |
+| TS02 | Autenticación y autorización del API | T02 | Seguridad con JWT | Configurar Spring Security con filtro JWT, secreto y tiempo de vida por variables de entorno, y rutas públicas para login, Swagger y `/health`. | 5 | Darío | Done |
+| US01 | Generación automática de credenciales | T03 | Cuentas a partir del ciclo de vida del colaborador | Escuchar los eventos de Workspace para crear la cuenta con contraseña temporal al registrar un colaborador y deshabilitarla al cesarlo, con un seeder opcional de cuentas. | 4 | Darío | Done |
+| US02, US04 | Inicio y cierre de sesión | T04 | Endpoints de inicio y cierre de sesión | Implementar `POST /auth/login`, que devuelve el token, el rol, el colaborador y si debe cambiar la contraseña, y `POST /auth/logout`, que revoca el token. | 4 | Darío | Done |
+| US03 | Cambio obligatorio de contraseña temporal | T05 | Endpoint de cambio de contraseña | Validar la contraseña actual y la política (8 caracteres, mayúscula, minúscula, dígito y símbolo), emitir un token nuevo y revocar el anterior. | 4 | Darío | Done |
+| US05, US06 | Cambio de rol / Restablecimiento de contraseña | T06 | Endpoints de administración de cuentas | Implementar el cambio de rol, que impide dejar a la organización sin una cuenta de Recursos Humanos activa, y el restablecimiento con contraseña temporal que invalida las sesiones abiertas. | 4 | Darío | Done |
+| US07 | Restricción de acceso por rol | T07 | Protección de los endpoints de Attendance | Exigir el rol de Recursos Humanos en las consultas generales y tomar la identidad del token en las marcaciones propias. | 4 | Darío | Done |
+| US02, US03 | Inicio de sesión / Cambio de contraseña | T08 | Dominio y casos de uso de IAM en la aplicación nativa | Implementar las entidades, el repositorio, los DTOs remotos y los casos de uso de inicio de sesión, cambio de contraseña y cierre de sesión. | 6 | Darío | Done |
+| US02, US03 | Inicio de sesión / Cambio de contraseña | T09 | Pantallas de IAM en la aplicación nativa | Pantallas de login, cambio de contraseña, seguridad de la cuenta y términos legales con su ViewModel y NavGraph. | 6 | Darío | Done |
+| US04, TS02 | Cierre de sesión / Autenticación | T10 | Sesión cifrada y red en la aplicación nativa | Guardar la sesión en almacenamiento cifrado, enviar el token con un interceptor, cerrar la sesión ante un 401 y configurar la URL base del API con `BuildConfig`. | 5 | Darío | Done |
+| US05, US06 | Cambio de rol / Restablecimiento de contraseña | T11 | Administración de cuentas en la aplicación nativa | Pantalla de cuentas para Recursos Humanos con cambio de rol y restablecimiento de contraseña. | 4 | Darío | Done |
+| US02-US06 | IAM en Flutter | T12 | Dominio y casos de uso de IAM en Flutter | Implementar las entidades, los value objects, los casos de uso, el gestor de sesión, el servicio remoto, los DTOs y los mappers. | 6 | Diego Díaz | Done |
+| US02-US06 | IAM en Flutter | T13 | Pantallas de IAM en Flutter | Pantallas de login con recuperación de acceso y términos legales, cambio de contraseña, cuenta y seguridad, y cuentas de colaboradores para Recursos Humanos. | 6 | Diego Díaz | Done |
+| TS02 | Autenticación y autorización del API | T14 | Sesión segura en Flutter | Guardar la sesión con `flutter_secure_storage`, exigir el inicio de sesión antes de la aplicación, enviar el token desde el cliente HTTP y reportar las sesiones expiradas. | 4 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T15 | Paginación de solicitudes en el API | Agregar los value objects de paginación, las consultas paginadas con filtros y orden, e índices por solicitante y aprobador. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T16 | Paginación de asistencia en el API | Exponer `GET /attendance/records` paginado, optimizar las consultas por área y documentar los endpoints de Attendance. | 4 | Darío | Done |
+| US29, US33 | Ruteo / Aprobación de solicitudes | T17 | Reglas de aprobación | Impedir que un colaborador resuelva su propia solicitud, admitir un comentario al aprobar, permitir corregir el periodo al reenviar y trasladar a Recursos Humanos las pendientes de un aprobador cesado. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T18 | Solicitudes paginadas en la aplicación nativa | Leer las respuestas paginadas, filtrar y contar en el servidor, cargar más al desplazarse y agregar Mis solicitudes para Recursos Humanos. | 5 | Diego Díaz | Done |
+| TS04 | Paginación, filtrado y ordenamiento | T19 | Asistencia paginada en la aplicación nativa | Agregar la paginación al repositorio de asistencia, el ViewModel de registros y la navegación a la asistencia personal. | 5 | Darío | Done |
+| US19, US22, US30, US40 | Vista del colaborador | T20 | Panel del colaborador en la aplicación nativa | Panel de inicio con asistencia propia, saldo de vacaciones, solicitudes y beneficios. | 5 | Oscar | Done |
+| US44 | Consulta de boletas propias | T21 | Boletas del colaborador en la aplicación nativa | Pestaña de boletas con selector de año y visor de la boleta. | 4 | Oscar | Done |
+| — | Sistema de diseño | T22 | Componentes compartidos en la aplicación nativa | Pestañas, buscador, encabezado colapsable, barra de acciones y barra superior comunes a todas las pantallas. | 6 | Oscar | Done |
+| — | Base de la aplicación Flutter | T23 | Shell y navegación por rol en Flutter | Cliente HTTP, inyección de dependencias, proveedor de sesión, barra inferior por rol y navegación independiente por pestaña. | 6 | Oscar | Done |
+| — | Base de la aplicación Flutter | T24 | Sistema de diseño en Flutter | Tokens, tema, superficies, tarjetas, hojas, diálogos y placeholders de carga. | 6 | Oscar | Done |
+| US08-US20 | Workspace en Flutter | T25 | Dominio e infraestructura de Workspace en Flutter | Entidades, value objects, casos de uso, servicios remotos, mappers y almacenamiento local de documentos. | 6 | Oscar | Done |
+| US08-US20 | Workspace en Flutter | T26 | Pantallas de Workspace en Flutter | Pantallas de colaboradores, detalle, perfil propio y organigrama con estados de carga. | 6 | Oscar | Done |
+| — | Dashboard en Flutter | T27 | Panel de Recursos Humanos en Flutter | Panel con saludo e indicadores, rutas del dashboard, acceso a notificaciones y cambio de pestaña desde las pantallas. | 4 | Oscar | Done |
+| US21-US25 | Attendance en Flutter | T28 | Dominio e infraestructura de Attendance en Flutter | Entidades, value objects, casos de uso de marcación, justificación y consultas, servicio remoto y repositorio. | 6 | Darío | Done |
+| US21-US25 | Attendance en Flutter | T29 | Pantallas de Attendance en Flutter | Pantallas de gestión de asistencia por área y por colaborador, horas trabajadas, justificación y asistencia propia. | 6 | Darío | Done |
+| US26-US35 | Request en Flutter | T30 | Dominio e infraestructura de Request en Flutter | Entidades, casos de uso, servicios remotos, mappers, adaptadores anticorrupción y almacenamiento local de adjuntos. | 7 | Diego Díaz | Done |
+| US26-US35 | Request en Flutter | T31 | Pantallas de Request en Flutter | Asistente de nueva solicitud con validación de saldo, detalle con historial, cancelación y reenvío, bandeja del aprobador y catálogo de tipos. | 8 | Diego Díaz | Done |
+| US37-US42 | Benefits en Flutter | T32 | Dominio e infraestructura de Benefits en Flutter | Entidades, value objects, casos de uso de catálogo, asignaciones y saldo, servicios remotos, mappers y caché local del saldo de vacaciones. | 6 | Salym | Done |
+| US37-US42 | Benefits en Flutter | T33 | Pantallas de Benefits en Flutter | Pantallas de Recursos Humanos, beneficios del colaborador y saldo de vacaciones. | 6 | Salym | Done |
+| US43-US46 | Payroll en Flutter | T34 | Dominio e infraestructura de Payroll en Flutter | Entidades, value objects, casos de uso de periodos y boletas, servicios remotos, mapper y almacenamiento local de archivos. | 6 | Diego Esquicha | Done |
+| US43, US45, US46 | Payroll en Flutter | T35 | Pantallas de Payroll para Recursos Humanos en Flutter | Carga y validación de boletas, publicación del periodo y control del estado de pago por área. | 6 | Diego Esquicha | Done |
+| US44 | Consulta de boletas propias | T36 | Boletas propias con verificación de identidad en Flutter | Pantallas de boletas propias y visor, desbloqueadas con huella, rostro o el bloqueo del dispositivo mediante `local_auth`. | 5 | Diego Esquicha | Done |
+| TS06 | Despliegue de los productos digitales | T37 | Endpoint de salud del servicio | Exponer `GET` y `HEAD /health` con verificación de la base de datos para monitorear la disponibilidad del API desplegado. | 4 | Salym | Done |
+
+*Nota.* Elaboración propia.
+
+#### 4.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 el equipo trabajó sobre los tres repositorios de software. El Landing Page no tuvo cambios en este Sprint y se mantiene publicado en GitHub Pages con la versión del Sprint 1.
+
+En el **RESTful API** se implementó el bounded context IAM: las cuentas de usuario y los tokens revocados, la seguridad con JWT sobre Spring Security, el servicio de cuentas y sesiones, la fachada para consultar colaboradores de Workspace, la creación de cuentas a partir de los eventos del ciclo de vida del colaborador y un seeder opcional de cuentas. Se configuró Flyway para versionar el esquema. En Request se paginaron todos los listados con filtros y orden, se agregaron índices y se incorporaron nuevas reglas de aprobación. En Attendance se protegieron los endpoints según el rol y se agregaron consultas paginadas. En la infraestructura compartida se expuso un endpoint público de salud con verificación de la base de datos.
+
+En la **aplicación nativa** se integró IAM con la sesión cifrada, el interceptor que envía el token, el cierre de sesión ante un 401 y las pantallas de login, cambio de contraseña, seguridad de la cuenta y administración de cuentas. Se completó la vista del colaborador con su panel de inicio y la pestaña de boletas, se unificaron los componentes del sistema de diseño y se adaptaron las listas de solicitudes y asistencia a las respuestas paginadas del API.
+
+En la **aplicación Flutter** se construyó la base del proyecto (inyección de dependencias, sesión, barra inferior por rol, navegación por pestaña y sistema de diseño) y se implementaron los bounded contexts IAM, Workspace, Attendance, Request, Benefits y Payroll, además del panel de Recursos Humanos. Cada bounded context conserva las capas domain, application, infrastructure y presentation de la aplicación nativa y consume el mismo API desplegado.
+
+A continuación se presentan los commits de cada repositorio, sin contar los merges. El cuerpo de los mensajes se omite cuando el commit no lo tiene.
+
+**Tabla 19:** *Commits del repositorio del RESTful API en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | attendance | e3a1ce4 | feat(attendance): add recalculation and queries | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 7b487e2 | feat(attendance): optimize attendance lookups and closing | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | f978ce6 | feat(attendance): add reads and protect writes | — | 23/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4fbaadb | perf(request): fetch request type in list queries and load collections in batches | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 69e8bbf | perf(request): add indexes for requester and approver queries | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e3b3e7c | perf(request): update the stored request instead of rebuilding it on save | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1e5b8f9 | feat(shared): add pagination value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 8e59c91 | feat(request): add paged request queries to the repository | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a27c961 | feat(request): add paginated endpoint to get all requests | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4da9270 | fix(request): move pending requests of a terminated approver to HR staff | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | efc6855 | feat(request): allow correcting the period when resubmitting | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | afdd303 | feat(request): add an optional comment when approving | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a85af39 | feat(request): replace the fields of a request type on update | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a05cbf2 | feat(request): replace the fields of a request type on update | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 5006586 | fix(request): prevent an employee from resolving their own request | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 4b57979 | feat(request): filter all requests by approver and several statuses and sort pending requests | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 3981ab5 | feat(iam): add revoked token entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 71d031b | feat(iam): add user account entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | cedf40f | feat(iam): add IAM JPA repositories | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | ad4e0ff | feat(iam): add optional IAM account seeder | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | bf72d08 | feat(iam): add JWT-based IAM security configuration | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9d9c8bd | feat(iam): add IAM account and session service | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 41d3300 | feat(iam): handle employee lifecycle events | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9b82faf | feat(iam): add IAM employee lookup facade | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 282c83c | feat(iam): add IAM REST controller | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 2da8ab7 | feat(iam): configure IAM JWT and seed settings | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 6eacc28 | feat(iam): add Spring Security dependency | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | e6fc324 | fix(iam): default credential version to 1 | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 554fbb1 | feat(iam): configure Flyway database migrations | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 3cd0d65 | feat(iam): verify credential version default | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1be8544 | fix(shared): point swagger requests to the server that serves it | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 1438eda | fix(attendance): remove unused event imports | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | b27745c | refactor(attendance): secure attendance APIs, add record queries | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 3002ac7 | feat(attendance): document APIs | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | fac34f7 | feat(shared): expose public /health endpoint with database check | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c2f0f14 | fix(iam): allow HEAD requests on /health for uptime monitoring | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 20:** *Commits del repositorio de la aplicación nativa en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 8788f3b | feat(designsystem): add shared tabs, search, collapsing header and bottom action bar | — | 18/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 8821104 | style(ui): unify tabs, spacing and bottom actions; fix tab navigation restoring inner screens | — | 18/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | ed8688a | feat(designsystem): add shared top bar and sheet header and apply them to every screen | — | 22/10/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 665a4c1 | feat(request): read paginated responses from the request list endpoints | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 7c33a20 | perf(request): load all and resolved requests with a single call | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 3e6d1cd | feat(request): filter, sort and count requests on the server | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 3f16f2c | feat(request): load more requests while scrolling | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | request | 9c01838 | feat(request): add my requests for HR staff and hide decisions on own requests | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | b8e1e48 | feat(iam): add AuthSession entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | e5df304 | feat(iam): add IamRepository interface and Account domain model | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a307a0c | feat(iam): add IamModule for dependency injection | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | f548a91 | feat(iam): implement IamRepositoryImpl for authentication and account management | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 32e4247 | feat(iam): implement IamRepositoryImpl for authentication and account management | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 7dc7410 | feat(iam): add SecureSessionStore for encrypted session storage | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 36086c4 | feat(iam): add login, password change, account security, and admin account screens with ViewModel and NavGraph | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a4507d8 | feat(iam): add sign in, change password and sign out use cases | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 10e954d | refactor(iam): add compose material icons extended dependency and disable cleartext traffic | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | aff6dcc | feat(navigation): integrate iamNavGraph and authentication state in app shell | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | aad278b | fix(backup): exclude flowboard_iam_secure shared preferences from backup and data extraction | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | e51707f | feat(core): integrate IAM session into CurrentEmployeeProvider and add Auth interceptor | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 22dd446 | feat: enable buildConfig and add BASE_URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 0d926a9 | feat(core): dynamically set Retrofit base URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 7c7b547 | refactor(di): simplify Retrofit base URL configuration in NetworkModule | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 5292890 | refactor(Network): use BuildConfig.BASE_URL for Retrofit configuration | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 623884b | feat(iam): add Account domain entity | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 6736793 | refactor(iam): update resetPassword return type to String and extract Account entity | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 87c9315 | refactor(IAM): extract remote DTOs into separate files and update reset password response | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | a88b773 | fix(iam): handle temporary password return in password reset and fix Account import | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | d1c9230 | refactor(iam): split IamUseCases into individual use case files | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 5a1107e | refactor(iam): handle temporary password in IamViewModel and update package imports | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | c8b28e0 | refactor(IAM): split IamScreens into separate composable screen files | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 68e2f17 | fix(iam): remove unused imports in AccountSecurityScreen | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 144e7ba | fix(designsystem): move the collapsing header only when the list really scrolls | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 15e263f | feat(Auth): handle 401 session expiration and configure dynamic API base URL | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | bd1c9cb | fix(build): point debug builds to Render and allow a local backend | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 2ccfd29 | fix(iam): sign out when the server rejects the token | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | 4cf1656 | refactor(IAM): update login screen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | dad40f8 | feat(iam): redesign LegalScreen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | b62206f | feat(iam): redesign AccountSecurityScreen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | iam | af51f1d | refactor(IAM): update UI for admin accounts and password change screens | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | e9ccfdd | feat(attendance): add UI state, ViewModel for attendance records | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 9c63c7d | feat(Attendance): add employee counts, handle empty employee records, and implement pagination in records screen | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 63e6d18 | feat(attendance): add paginated getRecords support to AttendanceRepository and update summary model | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 2a7fb81 | feat(attendance): implement paginated records and optimize area attendance fetching | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 3dc83b2 | refactor(attendance): replace FlowboardTabs with FilterChip in AttendanceSectionTabs | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | dashboard | edb5b96 | feat(dashboard): add employee home dashboard with own attendance, vacation, requests and benefits | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | attendance | 33dbc18 | feat(Attendance): add navigation to personal attendance | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | ba0d464 | feat(payroll): add employee payslips tab with year selector and payslip viewer | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | e93bf12 | style(ui): fill tab track, standardize account screens, button heights and text styles | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+**Tabla 21:** *Commits del repositorio de la aplicación Flutter en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 21c36b2 | Initial commit | — | 28/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | ece1dad | chore(features): add DDD folder structure for the seven bounded contexts | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 62b9bcb | feat(core): add design system theme with colors, typography, shapes and spacing | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | d61b438 | feat(core): add design system icons and shared components | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 3f7c925 | feat(core): add shared kernel value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 00063ec | feat(core): add api client and api exception | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | c8ebceb | chore(features): add dependency registration stubs for each bounded context | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 58088d4 | feat(core): add session provider and dependency injection | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 8a3f4ec | feat(core): add app shell with role based bottom bar and per tab navigation | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 752c31e | docs: describe architecture and branching | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 8cb87c1 | chore(deps): add intl, flutter_localizations, file_picker, url_launcher and path_provider | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 5b66531 | feat(core): add liquid glass tokens and glass-aware theme | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 3987999 | feat(core): add glass surface, card, sheet and dialog components | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | d6d2b6c | feat(core): add pulsing skeleton placeholders | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | a491057 | style(core): restyle shared components with flat surfaces and glass navigation | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 93dd8d7 | feat(core): add base change notifier view model | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 13346a7 | feat(core): add feature route registry, modal sync and per-tab navigators | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 5b07438 | feat(core): add glass app shell with floating bottom bar | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | be8748b | feat(workspace): add domain entities, value objects and repository contracts | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 6040097 | feat(workspace): add application use cases | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 39fe24f | feat(workspace): add remote services and DTOs | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | e5e22fb | feat(workspace): add DTO to domain mappers | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | f181112 | feat(workspace): add repository implementations and local document storage | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 66c96fa | feat(workspace): register dependencies and routes | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 1016d36 | feat(workspace): add ui states and view models | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | 05e8131 | feat(workspace): add ui components | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | workspace | acb9491 | feat(workspace): add screens with skeleton loading and navigation | — | 01/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | fcad97e | fix(designsystem): add AppScrollBehavior with damped android stretch | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 4c2a2a3 | feat(navigation): add tab switcher to change bottom bar tabs from screens | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | develop | 35be8f5 | feat(navigation): add dashboard routes and notifications icon | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | dashboard | 0998490 | feat(dashboard): port HR dashboard with greeting header and glass design | — | 02/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 52fca33 | feat(attendance): add attendance domain entities | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1f8fc72 | feat(attendance): add attendance domain valueobjects | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 75894fa | feat(attendance): add attendance domain repository | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | d4449fd | feat(attendance): add attendance JSON mapper | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 17ecd11 | feat(attendance): add attendance feature dependencies | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 230b054 | feat(attendance): add attendance remote DTOs | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1c76e10 | feat(attendance): add remote attendance service | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 44204a2 | feat(attendance): implement attendance repository | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 283711e | feat(attendance): add attendance use case exports | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 333d66d | feat(attendance): add attendance query use cases | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 9c179b9 | feat(attendance): add attendance justification use case | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | b4744db | feat(attendance): add punch registration use case | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 1821d00 | feat(attendance): add attendance view model | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 538bfc4 | feat(attendance): add attendance view models | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 8c430e3 | feat(attendance): add attendance view models | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 6bff19c | feat(attendance): add attendance UI state classes | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | b549cc8 | feat(attendance): add presentation components | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 5b1163e | feat(attendance): add management screen | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 4694027 | feat(attendance): add screen entry points | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | bbbedfc | feat(attendance): add route mapping | — | 03/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 03a5e93 | fix(attendance): fix use case typing | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | f82d566 | fix(attendance): fix method return types | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | ff2f295 | fix(attendance): update attendance area dropdown value | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 947a2df | fix(attendance): change lookup declarations | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 3726eda | fix(attendance): type attendance repository results | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | d6787f1 | fix(attendance): fix API return types | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | 29eca4d | fix(attendance): fix screen compilation | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | attendance | ac2d720 | fix(attendance): fix hours return type | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 2cfa8a1 | feat(benefits): add domain value objects | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7e2c5cb | feat(benefits): add domain entities | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 1984d9b | feat(benefits): add repository contracts | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7ea6cd2 | feat(benefits): add catalog and assignment use cases | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | d6659b9 | feat(benefits): add vacation balance use cases | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | efc1af6 | feat(benefits): add remote DTOs and services | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | d9d7f06 | feat(benefits): add API mappers | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 8914a92 | feat(benefits): add offline vacation balance cache | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 884560b | feat(benefits): add workspace directory adapter | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 3f5207a | feat(benefits): implement benefits repositories | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 7725cac | feat(benefits): add UI state classes | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 3513971 | feat(benefits): add presentation components | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 286611f | feat(benefits): add view models | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | a23cba7 | feat(benefits): add route names | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 77b4f18 | feat(benefits): add HR benefits screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 843ba1c | feat(benefits): add vacation balance screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | c9d589e | feat(benefits): add employee benefits screens | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | 1c59ebd | feat(benefits): add route mapping | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | benefits | ca23db5 | feat(benefits): register benefits dependencies | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 29e11eb | feat(payroll): add get payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | ee53139 | feat(payroll): add viewer ui state | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 95cc1a8 | feat(payroll): add error messages | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 5c982ce | feat(payroll): add payslips view model dart | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 33a52f0 | feat(payroll): add payroll period and colors | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 86f0a67 | feat(payroll): add screen payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 6104194 | feat(payroll): add payslips period v2 | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | facdb30 | feat(payroll): add payment and areas | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 6285f7e | feat(payroll): add validate payslips detail | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | a083efc | feat(payroll): add unlock payslips | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 5915880 | feat(payroll): add payroll mapper | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | d7d06ea | feat(payroll): add payment period | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 7c1643e | feat(payroll): add payroll period service and glass | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 676052d | feat(payroll): add payslips upload storage | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 32f3cea | feat(payroll): add payroll fields and opener | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 16cb9d6 | feat(payroll): add payroll routes employee | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 8486c94 | feat(payroll): add payslips file storage v2 | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | a75f43a | feat(payroll): add payslips download link use case | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 4baa53a | feat(payroll): add publication status | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | payroll | 70ac643 | feat(payroll): add multiple choice in flutter | — | 08/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 4a42be9 | feat(request): add domain entities, value objects and repository contracts | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6cd6cda | feat(request): add application use cases | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | abf738e | feat(request): add remote services and DTOs | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | da261b3 | feat(request): add DTO to domain mappers | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 982fcc1 | feat(request): add repository implementations, ACL adapters and local attachment storage | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | faca7eb | feat(request): add ui states and view models | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | e4737c2 | feat(request): add ui components | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 9a65c70 | feat(request): add requests screen with my requests, approval inbox and HR views | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6a645f8 | feat(request): add new request wizard with vacation balance check | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 6dd7bb3 | feat(request): add request detail with history, cancel and resubmit, and approver review | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | addb8a6 | feat(request): add resolved requests and request type catalog with new type form | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | 3acb74a | feat(request): add my requests for HR staff and link it from More | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 51331e5 | refactor(dashboard): read pending requests from the request context | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 9254320 | feat(iam): add domain entities, value objects and repository contracts | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | c32774b | feat(iam): add application use cases and session manager | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 283c6df | feat(iam): add remote service, DTOs and mappers | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 899ddab | chore(deps): add flutter_secure_storage | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | request | cf8eece | fix(request): type the approver preview as nullable and use a null-aware element | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 9c9982f | refactor(dashboard): remove unused request service and dto | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 15a8f68 | feat(core): send the session token and report expired sessions in the api client | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | b283c6e | feat(iam): add secure session store, repository implementation and dependencies | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 61172e2 | feat(iam): add ui states and view models | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 676ce2b | feat(iam): add ui components | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | f1b4df9 | feat(iam): add login screen with access recovery and legal terms | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 86506d1 | feat(iam): add password change screen | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 8f70ea0 | feat(iam): add account and security screen and employee accounts for HR | — | 11/11/2026 |
+| Performily-Mobile/flowboard-mobile-multiplatform-application | iam | 8f0e799 | feat(iam): require sign in before the app and use the session identity | — | 11/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+En el Sprint 2 las pruebas se concentraron en el bounded context IAM, porque de él depende que cada colaborador acceda únicamente a su propia información, como exige la Ley N.° 29733, y en la paginación de los listados, que cambió el contrato de los endpoints que ya consumían ambas aplicaciones. Las pruebas de aceptación de los Web Services se escriben en Gherkin bajo el enfoque BDD, a partir de los criterios de aceptación de las User Stories del Capítulo II, y los códigos de respuesta esperados corresponden a los que devuelve el API desplegado.
+
+**Acceptance Tests de los Web Services (BDD)**
+
+**US02 y US03: Inicio de sesión y cambio de la contraseña temporal** (`sign-in.feature`)
+
+```gherkin
+Feature: Sign in and temporary password change
+  As an employee who signs in for the first time
+  I want to authenticate and define my own password
+  So that only I know my access key
+
+  Background:
+    Given an active account "ana.torres@acme.pe" with a temporary password
+
+  Scenario: Sign in with a temporary password
+    When the user signs in with "ana.torres@acme.pe" and the temporary password
+    Then the response status is 200
+    And the response contains a token, the role and the employee id
+    And "mustChangePassword" is true
+
+  Scenario Outline: Reject invalid sign in attempts
+    When the user signs in with "<username>" and "<password>"
+    Then the response status is <status>
+
+    Examples:
+      | username           | password      | status |
+      | ana.torres@acme.pe | WrongPass1!   | 401    |
+      |                    |               | 400    |
+
+  Scenario Outline: Change the temporary password
+    Given the user is signed in with the temporary password
+    When the user changes the password to "<newPassword>"
+    Then the response status is <status>
+
+    Examples:
+      | newPassword | status |
+      | Flowboard#2026 | 200 |
+      | flowboard      | 400 |
+      | Short1!        | 400 |
+
+  Scenario: The previous token stops working after the change
+    Given the user changed the temporary password
+    When the user calls a protected endpoint with the previous token
+    Then the response status is 401
+```
+
+**US04: Cierre de sesión** (`sign-out.feature`)
+
+```gherkin
+Feature: Sign out
+  As a user of the system
+  I want to close my session
+  So that nobody else can access my information from the same device
+
+  Scenario: The token is revoked on sign out
+    Given the user is signed in
+    When the user signs out
+    Then the response status is 204
+    And a request with the same token returns 401
+```
+
+**US05, US06 y US07: Administración de cuentas y restricción por rol** (`account-management.feature`)
+
+```gherkin
+Feature: Account management restricted by role
+  As HR staff
+  I want to change roles and reset passwords
+  So that I grant or remove privileges and give access back to employees
+
+  Scenario: An employee cannot list the accounts
+    Given the user is signed in with the role "EMPLOYEE"
+    When the user requests the list of accounts
+    Then the response status is 403
+
+  Scenario: Reset the password of an employee
+    Given the user is signed in with the role "HR_STAFF"
+    And the account 8 is active
+    When HR resets the password of the account 8
+    Then the response status is 200
+    And the response contains a temporary password
+    And the next sign in of the account 8 has "mustChangePassword" true
+
+  Scenario: Keep at least one active HR account
+    Given the user is signed in with the role "HR_STAFF"
+    And the account 1 is the only active HR account
+    When HR changes the role of the account 1 to "EMPLOYEE"
+    Then the response status is 422
+```
+
+**TS04: Paginación de las solicitudes** (`request-pagination.feature`)
+
+```gherkin
+Feature: Paginated request lists
+  As a Developer
+  I want list endpoints to support pagination, filters and sorting
+  So that responses stay small and the apps load more items on demand
+
+  Scenario: Get the first page of the requests of an employee
+    Given the employee 3 has 25 requests
+    When the client requests "/requests/me?requesterId=3&page=0&size=20"
+    Then the response status is 200
+    And the page contains 20 requests ordered from newest to oldest
+    And the total of elements is 25
+
+  Scenario: Filter all requests by several statuses
+    When HR requests "/requests?status=APPROVED&status=REJECTED"
+    Then the response status is 200
+    And every request in the page is "APPROVED" or "REJECTED"
+
+  Scenario: Reject an invalid page size
+    When the client requests "/requests/me?requesterId=3&page=0&size=101"
+    Then the response status is 400
+```
+
+**Tabla 22:** *Commits relacionados con Testing en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 3981ab5 | feat(iam): add revoked token entity | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | bf72d08 | feat(iam): add JWT-based IAM security configuration | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 9d9c8bd | feat(iam): add IAM account and session service | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 41d3300 | feat(iam): handle employee lifecycle events | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1e5b8f9 | feat(shared): add pagination value objects | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | 5006586 | fix(request): prevent an employee from resolving their own request | — | 02/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.2.6. Execution Evidence for Sprint Review
+
+Las figuras de esta sección documentan la ejecución funcional de los módulos implementados durante el Sprint 2 y sirven como evidencia del comportamiento observado en las aplicaciones.
+
+Como resultado del Sprint 2 ambas aplicaciones exigen iniciar sesión antes de mostrar cualquier información, y la barra inferior se arma con el rol que devuelve el token. La aplicación nativa ya ofrece la vista del colaborador además de la de Recursos Humanos, y la aplicación Flutter reproduce los bounded contexts de la aplicación nativa conectada al mismo API desplegado.
+
+**Aplicación nativa**
+
+**Figura 142:** *Inicio de sesión en la aplicación nativa*
+
+![Inicio de sesión en la aplicación nativa](assets/Chapter-4/sprint2-native-login.png)
+
+*Nota.* Ingreso con usuario y contraseña y acceso a los términos legales. Elaboración propia.
+
+**Figura 143:** *Cambio obligatorio de la contraseña temporal en la aplicación nativa*
+
+![Cambio de contraseña en la aplicación nativa](assets/Chapter-4/sprint2-native-change-password.png)
+
+*Nota.* Pantalla mostrada en el primer ingreso, con la política de contraseña. Elaboración propia.
+
+**Figura 144:** *Administración de cuentas para Recursos Humanos en la aplicación nativa*
+
+![Cuentas en la aplicación nativa](assets/Chapter-4/sprint2-native-accounts.png)
+
+*Nota.* Listado de cuentas con cambio de rol y restablecimiento de contraseña. Elaboración propia.
+
+**Figura 145:** *Panel de inicio del colaborador en la aplicación nativa*
+
+![Panel del colaborador](assets/Chapter-4/sprint2-native-employee-dashboard.png)
+
+*Nota.* Asistencia propia, saldo de vacaciones, solicitudes y beneficios del colaborador autenticado. Elaboración propia.
+
+**Figura 146:** *Boletas del colaborador en la aplicación nativa*
+
+![Boletas del colaborador](assets/Chapter-4/sprint2-native-payslips.png)
+
+*Nota.* Pestaña de boletas con selector de año y visor. Elaboración propia.
+
+**Aplicación Flutter**
+
+**Figura 147:** *Inicio de sesión en la aplicación Flutter*
+
+![Inicio de sesión en Flutter](assets/Chapter-4/sprint2-flutter-login.png)
+
+*Nota.* Pantalla de ingreso con recuperación de acceso y términos legales. Elaboración propia.
+
+**Figura 148:** *Panel de Recursos Humanos en la aplicación Flutter*
+
+![Panel de Recursos Humanos en Flutter](assets/Chapter-4/sprint2-flutter-hr-dashboard.png)
+
+*Nota.* Saludo, indicadores y barra inferior por rol. Elaboración propia.
+
+**Figura 149:** *Personal y organigrama en la aplicación Flutter*
+
+![Workspace en Flutter](assets/Chapter-4/sprint2-flutter-workspace.png)
+
+*Nota.* Listado de colaboradores del bounded context Workspace. Elaboración propia.
+
+**Figura 150:** *Gestión de asistencia en la aplicación Flutter*
+
+![Attendance en Flutter](assets/Chapter-4/sprint2-flutter-attendance.png)
+
+*Nota.* Registros de asistencia por área y por colaborador. Elaboración propia.
+
+**Figura 151:** *Beneficios y saldo de vacaciones en la aplicación Flutter*
+
+![Benefits en Flutter](assets/Chapter-4/sprint2-flutter-benefits.png)
+
+*Nota.* Saldo de vacaciones con su fecha de sincronización y beneficios asignados. Elaboración propia.
+
+**Figura 152:** *Solicitudes y bandeja de aprobación en la aplicación Flutter*
+
+![Request en Flutter](assets/Chapter-4/sprint2-flutter-requests.png)
+
+*Nota.* Mis solicitudes, bandeja del aprobador y vistas de Recursos Humanos. Elaboración propia.
+
+**Figura 153:** *Verificación de identidad para ver las boletas en la aplicación Flutter*
+
+![Verificación biométrica en Flutter](assets/Chapter-4/sprint2-flutter-payroll-biometric.png)
+
+*Nota.* Solicitud de huella, rostro o bloqueo del dispositivo antes de mostrar la remuneración. Elaboración propia.
+
+**Figura 154:** *Carga de boletas y estado de pagos en la aplicación Flutter*
+
+![Payroll de Recursos Humanos en Flutter](assets/Chapter-4/sprint2-flutter-payroll-hr.png)
+
+*Nota.* Carga de boletas del periodo y control del estado de pago por área. Elaboración propia.
+
+**Concordancia con los User Flows**
+
+La Tabla 23 relaciona los User Flows definidos en el Capítulo III con las pantallas que los implementan al cierre del Sprint 2. En el Sprint 1 solo estaban implementados los flujos de Recursos Humanos (UF-05 y UF-06); con la vista del colaborador y la aplicación Flutter, el Sprint 2 implementa también los flujos del colaborador.
+
+**Tabla 23:** *Concordancia de los User Flows con la implementación del Sprint 2*
+
+| User Flow | Aplicación nativa | Aplicación Flutter | Evidencia | Estado |
+| :---- | :---- | :---- | :---- | :----: |
+| UF-01 Consultar saldo de vacaciones y beneficios | Panel del colaborador, Mi saldo de vacaciones y Mis beneficios | Mi saldo de vacaciones (con caché local para consultarlo sin conexión) y Mis beneficios | Figuras 145 y 151 | Implementado |
+| UF-02 Solicitar vacaciones y seguir el estado | Nueva solicitud, Mis solicitudes y detalle de la solicitud | Asistente de nueva solicitud con validación de saldo, Mis solicitudes y detalle con historial | Figura 152 | Implementado |
+| UF-03 Consultar y descargar una boleta | Pestaña de boletas con selector de año y visor | Mis boletas con verificación de identidad (`local_auth`), visor y descarga | Figuras 146 y 153 | Implementado (verificación biométrica solo en Flutter) |
+| UF-04 Resolver una solicitud desde la notificación | Bandeja de solicitudes pendientes y revisión de la solicitud | Bandeja de solicitudes pendientes y revisión de la solicitud | Figura 152 | Parcial: la resolución se hace desde la bandeja; la notificación (US36) pasa al Sprint 3 |
+| UF-05 Registrar un nuevo colaborador | Registro de colaborador (Sprint 1) | Registro de colaborador | Figura 149 | Implementado |
+| UF-06 Revisar la asistencia de un área | Asistencia por área (Sprint 1) | Reporte de asistencia por área | Figura 150 | Implementado |
+
+*Nota.* Elaboración propia.
+
+Enlace del video: [COMPLETAR: enlace de OneDrive del video de ejecución del Sprint 2, que muestre el inicio de sesión, la vista del colaborador y la aplicación Flutter]
+
+#### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y los que cambiaron de contrato. La documentación se sigue generando con springdoc-openapi y se publica con Swagger UI en el mismo servicio; además, se corrigió la configuración para que Swagger UI envíe las peticiones al mismo servidor que la sirve, lo que permite probar los endpoints directamente desde la versión desplegada. Desde este Sprint todos los endpoints, salvo el inicio de sesión, la documentación y `/health`, exigen el encabezado `Authorization: Bearer <token>`, que Swagger UI permite registrar con su botón *Authorize*. Los endpoints usan el prefijo `/api/v1`, salvo `/health`.
+
+- Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
+- Especificación OpenAPI: /v3/api-docs
+- Repositorio: https://github.com/Performily-Mobile/flowboard-mobile-service
+
+**Tabla 24:** *Endpoints documentados con OpenAPI en el Sprint 2*
+
+| Bounded Context | Verbo HTTP | Endpoint | Acción | Parámetros | Respuesta |
+| :---- | :----: | :---- | :---- | :---- | :----: |
+| IAM | POST | `/auth/login` | Inicia sesión y devuelve el token, el rol, el colaborador y si debe cambiar la contraseña | Body: username, password | 200 |
+| IAM | POST | `/auth/change-password` | Cambia la contraseña, emite un token nuevo y revoca el anterior | Header: Authorization<br>Body: currentPassword, newPassword | 200 |
+| IAM | POST | `/auth/logout` | Cierra la sesión revocando el token | Header: Authorization | 204 |
+| IAM | GET | `/accounts` | Lista las cuentas de usuario (solo Recursos Humanos) | Header: Authorization | 200 |
+| IAM | PATCH | `/accounts/{id}/role` | Cambia el rol de una cuenta (solo Recursos Humanos) | Path: id<br>Body: role | 200 |
+| IAM | POST | `/accounts/{id}/reset-password` | Restablece la contraseña y devuelve una temporal (solo Recursos Humanos) | Path: id | 200 |
+| Request | GET | `/requests` | Página de solicitudes de todos los colaboradores, de la más reciente a la más antigua | Query: requesterId, status (repetible), requestTypeId, approverId, page, size | 200 |
+| Request | GET | `/requests/me` | Página de solicitudes de un colaborador | Query: requesterId, status, page, size | 200 |
+| Request | GET | `/requests/pending-approval` | Página de solicitudes pendientes de un aprobador | Query: approverId, requestTypeId, sort, page, size | 200 |
+| Request | GET | `/requests/pending-approval/hr-staff` | Página de solicitudes pendientes de Recursos Humanos | Query: requestTypeId, sort, page, size | 200 |
+| Attendance | GET | `/attendance/records` | Página de registros de asistencia (solo Recursos Humanos) | Query: from, to, status, page, size | 200 |
+| Attendance | GET | `/attendance/areas/{areaId}/records` | Registros de asistencia de un área en un periodo (solo Recursos Humanos) | Path: areaId<br>Query: from, to | 200 |
+| Shared | GET / HEAD | `/health` | Estado del servicio y de la conexión a la base de datos | — | 200 |
+
+*Nota.* Elaboración propia.
+
+**Figura 155:** *Endpoints de IAM en Swagger UI*
+
+![Endpoints de IAM en Swagger](assets/Chapter-4/sprint2-swagger-iam.png)
+
+*Nota.* Endpoints de autenticación y de cuentas, con el botón *Authorize* para registrar el token. Elaboración propia.
+
+**Figura 156:** *Listado paginado de solicitudes en Swagger UI*
+
+![GET requests paginado en Swagger](assets/Chapter-4/sprint2-swagger-requests-paged.png)
+
+*Nota.* Parámetros de filtro y paginación de `GET /requests` y respuesta 200 con la página. Elaboración propia.
+
+**Tabla 25:** *Commits relacionados con la documentación de los servicios en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 282c83c | feat(iam): add IAM REST controller | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | a27c961 | feat(request): add paginated endpoint to get all requests | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | request | e2b5829 | feat(request): paginate request list endpoints | — | 29/10/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | 1be8544 | fix(shared): point swagger requests to the server that serves it | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | attendance | 3002ac7 | feat(attendance): document APIs | — | 08/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+En el Sprint 2 se mantuvo la arquitectura de despliegue del Sprint 1: el Landing Page en GitHub Pages, el RESTful API como Web Service de Render con runtime Docker desde la rama `main`, y la base de datos MySQL en Aiven. Los cambios de este Sprint fueron cuatro. Primero, el secreto y el tiempo de vida de los tokens JWT se configuran con las variables de entorno `IAM_JWT_SECRET` e `IAM_JWT_TTL_SECONDS` del servicio en Render, de modo que no quedan en el repositorio. Segundo, Flyway se ejecuta al iniciar el servicio con `baseline-on-migrate`, lo que permite versionar el esquema sobre la base que ya existía en Aiven. Tercero, el endpoint público `/health` responde a `GET` y `HEAD` con el estado de la conexión a la base de datos, lo que permite monitorear la disponibilidad del servicio. Cuarto, las compilaciones de la aplicación nativa apuntan al API en Render mediante `BuildConfig`, con la opción de usar un backend local durante el desarrollo, y el cliente HTTP de la aplicación Flutter usa por defecto la misma URL (`https://flowboard-mobile-service.onrender.com/api/v1/`).
+
+La distribución de las aplicaciones por Firebase App Distribution se realizará en el Sprint 3.
+
+**Figura 157:** *API del Sprint 2 desplegado en Render*
+
+![Render Sprint 2](assets/Chapter-4/sprint2-deploy-render.png)
+
+*Nota.* Documentación Swagger UI del API RESTful desplegado en Render, accesible desde su URL pública. Elaboración propia.
+
+**Figura 158:** *Respuesta del endpoint de salud del API desplegado*
+
+![Endpoint /health](assets/Chapter-4/sprint2-deploy-health.png)
+
+*Nota.* `GET /health` del API desplegado en Render, que responde con el estado UP del servicio. Elaboración propia.
+
+Landing Page desplegado: https://performily-mobile.github.io/flowboard-mobile-landing-page/
+
+RESTful API desplegado: https://flowboard-mobile-service.onrender.com
+
+**Tabla 26:** *Commits relacionados con el despliegue en el Sprint 2*
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :---- | :---- | :----: | :---- | :---- | :----: |
+| Performily-Mobile/flowboard-mobile-service | iam | 2da8ab7 | feat(iam): configure IAM JWT and seed settings | — | 04/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | iam | 554fbb1 | feat(iam): configure Flyway database migrations | — | 05/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | 22dd446 | feat: enable buildConfig and add BASE_URL | — | 06/11/2026 |
+| Performily-Mobile/flowboard-mobile-native-application | develop | bd1c9cb | fix(build): point debug builds to Render and allow a local backend | — | 07/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | fac34f7 | feat(shared): expose public /health endpoint with database check | — | 09/11/2026 |
+| Performily-Mobile/flowboard-mobile-service | develop | c2f0f14 | fix(iam): allow HEAD requests on /health for uptime monitoring | — | 09/11/2026 |
+
+*Nota.* Elaboración propia a partir del historial de GitHub.
+
+#### 4.2.2.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2 se mantuvo la organización por bounded context, pero el trabajo se repartió entre dos frentes que avanzaron en paralelo: IAM, que atravesaba los tres productos de software, y la aplicación Flutter, en la que cada integrante portó el bounded context que había liderado en la aplicación nativa durante el Sprint 1.
+
+- **Distribución del trabajo:** Ávila De La Cruz, Darío Fabián implementó IAM en el API y en la aplicación nativa, protegió y paginó Attendance y portó Attendance a Flutter. Diaz Villalba, Diego Alonso paginó Request en el API y en la aplicación nativa, incorporó las nuevas reglas de aprobación y portó Request e IAM a Flutter. Vasquez Llave, Oscar Lizandro construyó la base y el sistema de diseño de la aplicación Flutter, portó Workspace y el panel de Recursos Humanos, y completó en la aplicación nativa la vista del colaborador. Galvez Meza, Salym Pool portó Benefits a Flutter y expuso el endpoint de salud del API. Esquicha Alcántara, Diego Alonso portó Payroll a Flutter e incorporó la verificación de identidad con `local_auth` antes de mostrar las boletas.
+- **Integración:** la base de la aplicación Flutter se construyó primero para que los demás integrantes partieran de la misma estructura de capas, el mismo cliente HTTP y el mismo registro de dependencias por bounded context. Cada bounded context se trabajó en su propia rama y se integró en `develop`. IAM se construyó sobre la rama de Request en Flutter porque ambos necesitan la identidad del colaborador autenticado.
+- **Lecciones:** la incorporación de IAM cambió el contrato de todos los endpoints, porque ahora exigen el token, y obligó a ajustar ambas aplicaciones para enviar la sesión y reaccionar ante una sesión expirada. La paginación tuvo el mismo efecto sobre los listados de solicitudes y asistencia. El equipo concluye que los cambios transversales del API deben planificarse al inicio del Sprint, antes de que las aplicaciones consuman los endpoints.
+
+En total, el Sprint 2 registró 37 commits en el API, 49 en la aplicación nativa y 125 en la aplicación Flutter, sin contar los merges. El Landing Page no registró commits en este Sprint.
+
+**Tabla 27:** *Commits por integrante en el Sprint 2*
+
+| Integrante | GitHub Username | RESTful API | Aplicación nativa | Aplicación Flutter | Total |
+| :---- | :---- | :---: | :---: | :---: | :---: |
+| Ávila De La Cruz, Darío Fabián | Darioout7 | 20 | 37 | 28 | 85 |
+| Diaz Villalba, Diego Alonso | DiazVillalbaDiego | 15 | 6 | 27 | 48 |
+| Esquicha Alcántara, Diego Alonso | DiegoEsquich | 0 | 0 | 20 | 20 |
+| Galvez Meza, Salym Pool | SalymGalvez21 | 2 | 0 | 19 | 21 |
+| Vasquez Llave, Oscar Lizandro | oscarlizandro / Ixooc | 0 | 6 | 31 | 37 |
+| **Total** | | **37** | **49** | **125** | **211** |
+
+*Nota.* Elaboración propia a partir del historial de GitHub, sin contar merges. Los commits de las cuentas oscarlizandro e Ixooc se suman para Vasquez Llave, Oscar Lizandro.
+
+**Figura 159:** *Analíticos de colaboración del repositorio del RESTful API en el Sprint 2*
+
+![Insights del API Sprint 2](assets/Chapter-4/sprint2-insights-service.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 160:** *Analíticos de colaboración del repositorio de la aplicación nativa en el Sprint 2*
+
+![Insights de la aplicación nativa Sprint 2](assets/Chapter-4/sprint2-insights-native.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+**Figura 161:** *Analíticos de colaboración del repositorio de la aplicación Flutter*
+
+![Insights de la aplicación Flutter](assets/Chapter-4/sprint2-insights-flutter.png)
+
+*Nota.* GitHub Insights › Contributors. Elaboración propia.
+
+Los analíticos muestran que la actividad del API se concentró en tres momentos: la optimización de Attendance (23 de octubre), la paginación de Request (29 de octubre y 2 de noviembre) y la implementación de IAM (4 y 5 de noviembre). En la aplicación nativa la mayor actividad ocurrió entre el 3 y el 9 de noviembre, cuando se integró IAM y se completó la vista del colaborador. La aplicación Flutter registra actividad de los cinco integrantes desde el 29 de octubre, cuando se publicó su base, y cada bounded context se concentra en pocos días porque partió de la implementación ya validada en la aplicación nativa. La diferencia en el número de commits responde también al tamaño de cada commit: algunos integrantes registraron una capa completa por commit y otros un archivo por commit.
+
 ## 4.3. Validation Interviews
 
-En esta sección se registran las entrevistas de validación, en las que usuarios de los dos segmentos objetivo interactúan con el Landing Page y con la aplicación nativa, y la evaluación de la experiencia según heurísticas.
+En esta sección se registran las entrevistas de validación del Landing Page con usuarios de los dos segmentos objetivo, y la evaluación de la experiencia según heurísticas, que cubre además la aplicación nativa.
 
 ### 4.3.1. Diseño de Entrevistas
 
-Las sesiones de validación se realizan con la aplicación instalada en el celular del participante o en un dispositivo del equipo, con datos de muestra cargados en el API, y con el Landing Page abierto en el navegador del celular. Cada sesión dura entre 15 y 20 minutos y se graba en video con el consentimiento del participante. Un integrante conduce la sesión y otro toma notas.
+Las sesiones de validación se realizan con el Landing Page abierto en el navegador del celular del participante o en un dispositivo del equipo. Se programan dos entrevistas por segmento, cuatro en total, y cada sesión dura unos 13 minutos y se graba en video con el consentimiento del participante. Las preguntas se organizan por tema y el moderador formula las que el tiempo permite.
 
-**Estructura de la sesión**
+**Preguntas de introducción**
+¿Cómo te llamas, cuántos años tienes y en qué distrito vives? ¿Cuál es tu ocupación actual? ¿Con qué frecuencia usas páginas web o plataformas de trabajo en tu día a día?
 
-1. *Introducción (2 min):* presentación del equipo, propósito de la sesión y consentimiento de grabación. Se aclara que se evalúa el producto y no al participante.
-2. *Datos del participante (1 min):* nombre, edad, distrito, cargo y tiempo en la organización.
-3. *Landing Page (3 min):* tareas sobre el sitio.
-4. *Aplicación (8 a 12 min):* tareas sobre los user flows del segmento, pidiendo al participante que piense en voz alta.
-5. *Preguntas de cierre (3 min):* percepción general.
+**Primera impresión**
+Se le pide al entrevistado que explore la página unos 20 segundos y luego la cierre o la tape. Después se le pregunta: ¿Qué recuerdas de la página? ¿Para qué crees que sirve este producto y a quién va dirigido? ¿Qué fue lo primero que llamó tu atención?
 
-**Segmento 1: Personal de Recursos Humanos**
+**Organización y navegación**
+¿Cómo describirías el orden de las secciones? ¿Moverías o quitarías alguna? ¿Hubo algún término o sección que no entendiste? Si quisieras contactar a ventas o iniciar sesión, ¿dónde harías clic? ¿Qué opinas del menú de navegación?
 
-*Landing Page*
+**Diseño visual y principios de diseño**
+ ¿Qué impresión te da el diseño? ¿Lo sientes moderno, corporativo, confiable o algo diferente? ¿Por qué? ¿Se distinguen bien los títulos y subtítulos, y los botones principales de los secundarios? Explica por qué con un ejemplo. ¿Sientes que los colores, los tipos de letra y los botones son coherentes en toda la página? ¿La página te parece muy cargada o con mucho espacio vacío?
 
-1. ¿Qué entiende que hace Flowboard después de leer la primera sección?
-2. Encuentre la información pensada para Recursos Humanos y el llamado a la acción correspondiente.
-3. Cambie el idioma del sitio y vuelva al español.
+**Accesibilidad**
+¿Pudiste leer todos los textos sin esforzarte? ¿Algún texto se te hizo difícil de ver por el color de fondo o el tamaño? ¿Se diferencian bien los botones del resto del contenido? ¿Probaste o te imaginas usando la página desde el celular? ¿Qué cambiarías?
 
-*Aplicación (user flows del Capítulo III)*
+**Confianza y llamado a la acción**
+¿Qué te haría confiar más en este producto al verlo en la página? ¿Qué harías después de ver esta página: pedir una demo, registrarte o buscar más información? ¿Qué te falta para dar ese paso?
 
-| Tarea | User flow / User Story | Criterio de éxito |
-| :---- | :---- | :---- |
-| Registrar a un nuevo colaborador con su área, posición y jefe directo | UF-05 / US08, US10, US11 | El colaborador aparece en la lista sin ayuda del moderador |
-| Revisar la asistencia de un área en un rango de fechas | UF-06 / US24 | Identifica a quién tiene más tardanzas |
-| Revisar y aprobar o rechazar una solicitud pendiente | UF-04 / US32-US34 | Resuelve la solicitud y, si rechaza, escribe el motivo |
-| Asignar un beneficio a toda un área | US38 | Entiende cuántos colaboradores lo recibirán y cuántos se omiten |
-| Revisar el estado ambiental de un espacio y su histórico | US50, US51 | Identifica la métrica en nivel peligroso y si es un problema persistente |
-
-**Segmento 2: Colaboradores**
-
-*Landing Page*
-
-1. ¿Qué podría hacer usted como colaborador con esta aplicación?
-2. Encuentre la sección que explica cómo se protege su información.
-3. Ubique los términos del servicio y la política de privacidad.
-
-*Aplicación (user flows del Capítulo III)*
-
-| Tarea | User flow / User Story | Criterio de éxito |
-| :---- | :---- | :---- |
-| Consultar su saldo de vacaciones y sus beneficios, incluso sin conexión | UF-01 / US40, US41 | Indica cuántos días tiene disponibles y entiende el aviso de datos sincronizados |
-| Solicitar vacaciones y revisar el estado de la solicitud | UF-02 / US27, US28, US30 | Envía la solicitud y encuentra su estado |
-| Consultar su historial de asistencia | US22 | Encuentra un día con tardanza |
-| Revisar su perfil laboral y su expediente | US18, US19 | Encuentra su jefe directo y un documento |
-
-**Preguntas de cierre (ambos segmentos)**
-
-1. ¿Qué fue lo más fácil y lo más difícil de lo que hizo hoy?
-2. ¿Hubo algún momento en el que no supo qué hacer?
-3. ¿Usaría esta aplicación en su trabajo? ¿Por qué?
-4. Del 1 al 5, ¿qué tan fácil le resultó usarla?
-5. ¿Qué cambiaría o agregaría?
+**Cierre**
+¿Qué es lo mejor de la página y qué es lo que más cambiarías? ¿Algo más que quieras comentar?
 
 ### 4.3.2. Registro de Entrevistas
 
-Las Figuras 141 a 144 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
+Las Figuras 162 a 165 presentan el registro visual de las entrevistas de validación realizadas a los segmentos de Recursos Humanos y colaboradores.
 
-Para cada segmento se realizan entre 3 y 5 entrevistas. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre las tareas.
+Para cada segmento se realizaron dos entrevistas, cuatro en total. Por cada una se registra el nombre, la edad, el distrito, una captura del video, el enlace al video en el OneDrive del curso con el minuto de inicio y la duración, y un resumen de las apreciaciones del entrevistado sobre el Landing Page.
 
 **Segmento 1: Personal de Recursos Humanos**
 
@@ -5271,13 +5999,13 @@ Edad: 22 años
 
 Distrito: Chorrillos
 
-Link de la entrevista: [Validación 1 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tj9fNO)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tj9fNO
 
 Timing donde inicia la entrevista: 0:00
 
 Duración completa de la entrevista: 4 minutos 45 segundos
 
-**Figura 141:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
+**Figura 162:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 1*
 
 ![Entrevista de validación 1 - de Recursos Humanos](assets/Chapter-4/validacion-s1-01.png)
 
@@ -5295,13 +6023,13 @@ Edad: 20 años
 
 Distrito: Lima
 
-Link de la entrevista: [Validación 2 - de Recursos Humanos](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=17HvWM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjg1Ljg1fX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=17HvWM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6Mjg1Ljg1fX0%3D
 
 Timing donde inicia la entrevista: 4:45
 
 Duración completa de la entrevista: 4 minutos 29 segundos
 
-**Figura 142:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
+**Figura 163:** *Captura de la entrevista de validación al segmento de Recursos Humanos, entrevista 2*
 
 ![Entrevista de validación 2 - de Recursos Humanos](assets/Chapter-4/validacion-s1-02.png)
 
@@ -5322,13 +6050,13 @@ Edad: 25
 
 Distrito: Lima
 
-Link de la entrevista: [Validación 1 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=N5E8CD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTU1LjAzfX0%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=N5E8CD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NTU1LjAzfX0%3D
 
 Timing donde inicia la entrevista: 9:15
 
 Duración completa de la entrevista: 5 minutos 53 segundos
 
-**Figura 143:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
+**Figura 164:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 1*
 
 ![Entrevista de validación 1 - de colaboradores](assets/Chapter-4/validacion-s1-03.png)
 
@@ -5346,13 +6074,13 @@ Edad: 26 años
 
 Distrito: Barranco
 
-Link de la entrevista: [Validación 2 - de colaboradores](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=lqH0st&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTA5LjJ9fQ%3D%3D)
+Link de la entrevista: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412270_upc_edu_pe/IQDZxC2q4RlXSLONznDGZQbMAVxXwnoFrSNd-vxlDtWYzEY?e=lqH0st&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTA5LjJ9fQ%3D%3D
 
 Timing donde inicia la entrevista: 15:08
 
 Duración completa de la entrevista: 4 minutos 51 segundos
 
-**Figura 144:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
+**Figura 165:** *Captura de la entrevista de validación al segmento de colaboradores, entrevista 2*
 
 ![Entrevista de validación 2 - de colaboradores](assets/Chapter-4/validacion-s1-04.png)
 
@@ -5364,7 +6092,7 @@ La entrevistada, Andrea, tiene 26 años y trabaja como asistente de Recursos Hum
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-Las Figuras 145 a 148 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
+Las Figuras 166 a 169 presentan las evidencias visuales utilizadas para evaluar la solución según las heurísticas de usabilidad seleccionadas.
 
 **UX Heuristics & Principles Evaluation**
 **Usability - Inclusive Design - Information Architecture**
@@ -5376,7 +6104,7 @@ Las Figuras 145 a 148 presentan las evidencias visuales utilizadas para evaluar 
 | **NRC** | 4951 |
 | **PROFESORES** | Mayta Guillermo, Jorge Luis |
 | **AUDITOR** | Performily |
-| **CLIENTE(S)** | PENDIENTE: nombres de los participantes de las sesiones de validación |
+| **CLIENTE(S)** | Performily |
 
 **SITE o APP A EVALUAR:** Flowboard (Landing Page y aplicación nativa para Android, versión del Sprint 1)
 
@@ -5429,7 +6157,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** La aplicación toma el usuario y el rol de valores fijos, porque el bounded context IAM se implementa en el Sprint 2. El dispositivo siempre abre con el mismo usuario de Recursos Humanos, no es posible cambiar de usuario y ninguna información está protegida por credenciales.
 
-**Figura 145:** *Aplicación abierta directamente en la vista de Recursos Humanos*
+**Figura 166:** *Aplicación abierta directamente en la vista de Recursos Humanos*
 
 ![Problema 1](assets/Chapter-4/heuristica-p3.png)
 
@@ -5444,7 +6172,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Para asignar un beneficio o revisar un espacio de trabajo, el usuario de Recursos Humanos debe abrir “Más” y luego la opción correspondiente. Es una tarea recurrente que queda a dos niveles de profundidad y que el usuario no descubre si no explora el menú.
 
-**Figura 146:** *Menú Más de Recursos Humanos*
+**Figura 167:** *Menú Más de Recursos Humanos*
 
 ![Problema 2](assets/Chapter-4/heuristica-p4.png)
 
@@ -5459,7 +6187,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** Cuando el API no responde, la mayoría de pantallas muestra “No se pudo conectar con el servidor” con un botón Reintentar, sin explicar si el problema es la conexión del celular o el servicio. Solo el saldo de vacaciones conserva los últimos datos sincronizados; el resto de pantallas queda vacío.
 
-**Figura 147:** *Mensaje de error de conexión*
+**Figura 168:** *Mensaje de error de conexión*
 
 ![Problema 3](assets/Chapter-4/heuristica-p5.png)
 
@@ -5474,7 +6202,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Problema:** En el gráfico del histórico, los días con nivel deficiente o peligroso se pintan de otro color. La leyenda indica el significado, pero una persona con dificultad para distinguir colores no puede saber qué barra corresponde a cada nivel.
 
-**Figura 148:** *Gráfico del histórico ambiental*
+**Figura 169:** *Gráfico del histórico ambiental*
 
 ![Problema 4](assets/Chapter-4/heuristica-p7.png)
 
@@ -5482,30 +6210,327 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Recomendación:** Agregar una marca adicional a las barras fuera de rango (por ejemplo un patrón o un ícono de advertencia sobre la barra) y una descripción accesible del gráfico para lectores de pantalla.
 
+**Evaluación de la versión del Sprint 2**
+
+La evaluación anterior se realizó sobre la versión del Sprint 1. Con la entrega del Sprint 2, que incorporó el inicio de sesión, la vista del colaborador y la aplicación Flutter, el equipo repitió la evaluación según heurísticas sobre ambas aplicaciones. Las Figuras 170 a 177 presentan las evidencias visuales de esta segunda evaluación.
+
+**UX Heuristics & Principles Evaluation**
+**Usability - Inclusive Design - Information Architecture**
+
+| | |
+| :---- | :---- |
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | 1ACC0238 Aplicaciones para Dispositivos Móviles |
+| **NRC** | 4951 |
+| **PROFESORES** | Mayta Guillermo, Jorge Luis |
+| **AUDITOR** | Diaz Villalba, Diego Alonso |
+| **CLIENTE(S)** | Performily |
+
+**SITE o APP A EVALUAR:** Flowboard (versión del Sprint 2), en sus dos aplicaciones: la aplicación nativa para Android (Kotlin con Jetpack Compose) y la aplicación multiplataforma (Flutter). Ambas atienden a los dos roles de la plataforma, personal de Recursos Humanos y colaborador. Cuando un problema solo ocurre en una versión, se indica en el título.
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Inicio de sesión con correo corporativo y contraseña.
+2. Recuperación de acceso desde la opción "Olvidé mi contraseña".
+3. Cambio de idioma de la aplicación.
+4. Uso del acceso con huella digital.
+5. Navegación por la barra inferior y por la pestaña "Más", con el rol de Recursos Humanos y con el rol de colaborador.
+6. Acceso a la asistencia propia del personal de Recursos Humanos (marcar entrada y salida).
+7. Consulta de las notificaciones y de la pantalla de inicio del colaborador.
+8. Lectura de los términos y la política de privacidad desde el inicio de sesión.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Creación, revisión y resolución de solicitudes.
+2. Registro y edición de colaboradores.
+3. Carga y descarga de boletas de pago.
+4. Gestión de beneficios y saldo de vacaciones.
+5. Monitoreo de bienestar laboral.
+6. Evaluación de la seguridad del proceso de autenticación.
+7. Pruebas de rendimiento, tiempos de respuesta y uso sin conexión.
+8. Evaluación de las reglas de negocio y del funcionamiento del backend.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario y ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlo. Es importante que sea corregido y se le debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|---|---|---|
+| 1 | Secciones de la app Flutter (Inicio del colaborador, Bienestar y Notificaciones) que muestran una pantalla de "todavía no integrada" | 4 | Information Architecture: Is it Usable? / Information Architecture: Is it Valuable? |
+| 2 | La pantalla "Recuperar acceso" no da ningún contacto ni acción para recuperar la contraseña | 3 | Usability: Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores / Information Architecture: Is it Usable? |
+| 3 | El selector "ES / EN" no cambia el idioma de la aplicación | 2 | Usability: Visibilidad del estado del sistema / Information Architecture: Is it Credible? |
+| 4 | La opción de huella digital aparece siempre deshabilitada | 2 | Usability: Diseño estético y minimalista / Inclusive Design: Agrega valor |
+| 5 | La barra inferior del colaborador no es igual en la app nativa y en la app Flutter | 2 | Usability: Consistencia y estándares / Information Architecture: Is it Findable? |
+| 6 | El personal de RR. HH. marca su propia asistencia desde "Más", escondida en un segundo nivel | 2 | Usability: Flexibilidad y eficiencia de uso / Information Architecture: Is it Findable? |
+| 7 | El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña | 2 | Inclusive Design: Considera la situación / Information Architecture: Is it Accessible? |
+| 8 | El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas | 1 | Usability: Consistencia y estándares / Inclusive Design: Es consistente |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Secciones de la app Flutter que muestran una pantalla de "todavía no integrada"**
+
+**Severidad:** 4
+**Heurística violada:** Information Architecture – Is it Usable? / Information Architecture – Is it Valuable?
+
+**Problema:**
+En la app Flutter, tres opciones que aparecen en la navegación llevan a una pantalla que solo dice "Esta sección todavía no está integrada en la app". Estas opciones son la pestaña "Inicio" del colaborador, la opción "Bienestar" del menú "Más" de Recursos Humanos y el botón de notificaciones del panel de Recursos Humanos. En la app nativa estas mismas secciones sí funcionan. El usuario ve la opción y la toca, pero no puede hacer nada con ella, y en el caso del colaborador "Inicio" es la primera pestaña que ve al ingresar.
+
+**Figura 170:** *Pantalla "todavía no integrada" en la app Flutter*
+
+![Pantalla "todavía no integrada" en la app Flutter](assets/Chapter-4/heuristica-s2-p1.png)
+
+*Nota.* Captura de pantalla de la pestaña "Inicio" del colaborador, de "Más › Bienestar" y del botón de notificaciones del panel de RR. HH. en la app Flutter. Elaboración propia.
+
+**Recomendación:**
+Terminar estas tres pantallas en Flutter siguiendo lo que ya existe en la app nativa. Si no alcanza el tiempo, ocultar esas opciones hasta que estén listas, para que el usuario no entre a una pantalla vacía.
+
+**PROBLEMA #2: La pantalla "Recuperar acceso" no da ningún contacto ni acción**
+
+**Severidad:** 3
+**Heurística violada:** Usabilidad – Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores / Information Architecture – Is it Usable?
+
+**Problema:**
+Al tocar "Olvidé mi contraseña", las dos apps explican que Recursos Humanos genera una contraseña temporal y que llega al correo corporativo. Pero el recuadro "Contacto de Recursos Humanos" solo dice "Solicita el contacto oficial a tu organización", sin correo, teléfono ni botón para escribir. Un colaborador que no puede ingresar no sabe a quién pedir la contraseña temporal, así que no puede resolver el problema por sí solo.
+
+**Figura 171:** *Pantalla Recuperar acceso*
+
+![Pantalla Recuperar acceso](assets/Chapter-4/heuristica-s2-p2.png)
+
+*Nota.* Captura de la pantalla "Recuperar acceso" de ambas apps. Elaboración propia.
+
+**Recomendación:**
+Mostrar un contacto real configurable por organización, por ejemplo un correo de Recursos Humanos con un botón "Escribir a Recursos Humanos" que abra la aplicación de correo.
+
+**PROBLEMA #3: El selector "ES / EN" no cambia el idioma de la aplicación**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Visibilidad del estado del sistema / Information Architecture – Is it Credible?
+
+**Problema:**
+En el pie del inicio de sesión aparece "ES / EN", que se ve como un selector de idioma. En la app nativa es solo un texto con un ícono: no se puede tocar y no pasa nada. En la app Flutter sí se puede tocar, pero abre un aviso que dice que la traducción al inglés todavía no está disponible. Algo que parece una función y no lo es hace dudar al usuario de si la app funciona bien.
+
+**Figura 172:** *Selector ES / EN del inicio de sesión*
+
+![Selector ES / EN del inicio de sesión](assets/Chapter-4/heuristica-s2-p3.png)
+
+*Nota.* Captura del pie del login en ambas apps y del aviso de la app Flutter. Elaboración propia.
+
+**Recomendación:**
+Mientras no exista la traducción, quitar el selector del login y dejar el idioma como información en "Cuenta y seguridad". Si se mantiene, que en ambas apps responda igual, con el mismo aviso.
+
+**PROBLEMA #4: La opción de huella digital aparece siempre deshabilitada**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Diseño estético y minimalista / Inclusive Design – Agrega valor
+
+**Problema:**
+En el inicio de sesión de las dos apps hay un botón "Ingresar con huella digital" que está deshabilitado, y en "Cuenta y seguridad" hay un interruptor "Desbloqueo con huella" también deshabilitado (con el texto "Disponible cuando se integre la autenticación biométrica"). En la app Flutter el botón del login explica esto en un tooltip, pero en la nativa no hay ninguna explicación. Son controles que ocupan espacio y no se pueden usar. La verificación biométrica sí funciona en la app Flutter, pero solo para abrir las boletas propias, por lo que el usuario encuentra la huella habilitada en una pantalla y deshabilitada en otras.
+
+**Figura 173:** *Opción de huella digital deshabilitada*
+
+![Opción de huella digital deshabilitada](assets/Chapter-4/heuristica-s2-p4.png)
+
+*Nota.* Captura del login y de "Cuenta y seguridad" en ambas apps. Elaboración propia.
+
+**Recomendación:**
+Ocultar el botón del login y el interruptor de "Cuenta y seguridad" hasta implementar el ingreso con huella, o reutilizar en ellos la verificación con `local_auth` que ya usa la consulta de boletas en la app Flutter.
+
+**PROBLEMA #5: La barra inferior del colaborador no es igual en las dos apps**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Consistencia y estándares / Information Architecture – Is it Findable?
+
+**Problema:**
+La app nativa le da al colaborador las pestañas Inicio, Solicitudes, Asistencia, Boletas y Más. La app Flutter le da Inicio, Solicitudes, Asistencia, Boletas y Perfil. El README de la app Flutter dice que tiene las mismas funciones y el mismo diseño que la nativa, pero la última pestaña es distinta. En la nativa, el perfil, los beneficios, el saldo de vacaciones, el organigrama y las notificaciones están dentro de "Más", y en Flutter no queda claro dónde encontrarlos. Un usuario que cambia de una app a la otra tiene que volver a aprender dónde está cada cosa.
+
+**Figura 174:** *Barra inferior del colaborador en ambas aplicaciones*
+
+![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5.png)
+
+*Nota.* Captura de la barra inferior del colaborador en ambas apps. Elaboración propia.
+
+**Recomendación:**
+Dejar la misma barra en las dos apps. Lo más simple es que Flutter use "Más" como la nativa, con las mismas secciones del colaborador adentro.
+
+**PROBLEMA #6: El personal de RR. HH. marca su propia asistencia desde "Más"**
+
+**Severidad:** 2
+**Heurística violada:** Usabilidad – Flexibilidad y eficiencia de uso / Information Architecture – Is it Findable?
+
+**Problema:**
+El personal de Recursos Humanos también es colaborador y debe marcar su entrada y salida. Pero la pestaña "Asistencia" de su barra inferior es la del equipo, y su asistencia personal está en "Más › Mi asistencia" (sección "Mi cuenta"). Es una acción que se hace todos los días y necesita entrar a un segundo nivel para hacerla. Además, el nombre "Asistencia" en la barra no deja claro que no es la propia.
+
+**Figura 175:** *Opción Mi asistencia dentro de Más*
+
+![Opción Mi asistencia dentro de Más](assets/Chapter-4/heuristica-s2-p6.png)
+
+*Nota.* Captura de "Más" con la opción "Mi asistencia" en la app nativa o en Flutter. Elaboración propia.
+
+**Recomendación:**
+Agregar un acceso directo para marcar entrada y salida en el panel de Recursos Humanos, o separar claramente en la pestaña "Asistencia" las dos vistas ("Mi asistencia" y "Equipo").
+
+**PROBLEMA #7: El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña**
+
+**Severidad:** 2
+**Heurística violada:** Inclusive Design – Considera la situación / Information Architecture – Is it Accessible?
+
+**Problema:**
+En el pie del inicio de sesión de la app nativa, "Términos y privacidad" es un texto con clic, sin relleno ni tamaño mínimo, por lo que su área táctil es solo la altura del texto. Material Design recomienda al menos 48 dp. Para alguien que usa el celular con una mano o en movimiento, es fácil fallar al tocarlo. En Flutter este enlace es un botón y ya cumple con el tamaño mínimo.
+
+**Figura 176:** *Enlace Términos y privacidad de la app nativa*
+
+![Enlace Términos y privacidad de la app nativa](assets/Chapter-4/heuristica-s2-p7.png)
+
+*Nota.* Captura del pie del login en la app nativa. Elaboración propia.
+
+**Recomendación:**
+Usar un botón de texto (TextButton) en lugar de un texto con clic, o darle al menos 48 dp de alto.
+
+**PROBLEMA #8: El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas**
+
+**Severidad:** 1
+**Heurística violada:** Usabilidad – Consistencia y estándares / Inclusive Design – Es consistente
+
+**Problema:**
+En la pantalla "Recuperar acceso" de la app nativa, el botón para volver es un texto "‹  Recuperar acceso". En el resto de la app, y en la misma pantalla de la app Flutter, se usa la barra superior con la flecha de regreso. Es un problema pequeño porque el usuario igual entiende que puede volver, y además existe el botón "Volver a iniciar sesión" al final, pero rompe el patrón.
+
+**Figura 177:** *Botón de volver de Recuperar acceso en la app nativa*
+
+![Botón de volver de Recuperar acceso en la app nativa](assets/Chapter-4/heuristica-s2-p8.png)
+
+*Nota.* Captura de "Recuperar acceso" en la app nativa y en la Flutter. Elaboración propia.
+
+**Recomendación:**
+Usar la misma barra superior con flecha de regreso (FlowboardTopBar) que usan las demás pantallas.
+
+---
+
+*Nota de la evaluación.* Los hallazgos se basan en la revisión de las dos aplicaciones y de su código fuente (versión local de la rama `develop` de la app Flutter y de la app nativa). La app Flutter sigue en desarrollo, por lo que el problema #1 puede dejar de aplicar cuando se terminen esas pantallas.
+
 <div style="page-break-after: always;"></div>
 
 # Conclusiones y recomendaciones
 
-* Durante el desarrollo de esta primera etapa de Flowboard se logró definir con mayor claridad la problemática que afecta a los procesos de gestión de recursos humanos dentro de organizaciones en crecimiento. A partir del análisis realizado y de las entrevistas dirigidas a personal de Recursos Humanos y colaboradores generales, se identificaron necesidades concretas relacionadas con la centralización de la información, la reducción de procesos manuales y la mejora del acceso a datos laborales desde dispositivos móviles. Entre los principales problemas encontrados destacan la dependencia de hojas de cálculo, la falta de visibilidad sobre el estado de solicitudes, la dificultad para consultar saldos de vacaciones y la necesidad constante de recurrir al área administrativa para obtener información.
+* Durante el desarrollo de Flowboard se logró definir con claridad la problemática que afecta a la gestión de recursos humanos en organizaciones en crecimiento. A partir del análisis del problema y de las entrevistas al personal de Recursos Humanos y a colaboradores generales, se identificaron la dependencia de hojas de cálculo, la falta de visibilidad sobre el estado de las solicitudes, la dificultad para consultar saldos de vacaciones y la necesidad de recurrir al área administrativa para obtener información.
 
-* Estos hallazgos permitieron definir de forma más precisa los segmentos objetivo y orientar el diseño de la solución hacia dos experiencias principales: una enfocada en la administración por parte del personal de Recursos Humanos y otra orientada a la autogestión de los colaboradores. Con ello se desarrollaron artefactos como los User Personas, la User Task Matrix y los diferentes elementos del proceso Lean UX, que ayudaron a transformar los problemas identificados en necesidades y funcionalidades concretas para Flowboard.
+* Estos hallazgos permitieron definir los segmentos objetivo y orientar la solución hacia dos experiencias, una de administración para el personal de Recursos Humanos y otra de autogestión para los colaboradores. Los User Personas, la User Task Matrix y los elementos del proceso Lean UX transformaron los problemas en necesidades y funcionalidades concretas.
 
-* A nivel de diseño de software, se logró establecer una arquitectura estructurada bajo los principios de Domain-Driven Design. El dominio fue dividido en siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing, cada uno con responsabilidades y reglas de negocio claramente delimitadas. Esta separación permitió organizar mejor las capacidades de la solución y definir las relaciones existentes entre los distintos procesos del sistema.
+* A nivel de diseño de software, el dominio se dividió bajo Domain-Driven Design en siete bounded contexts: IAM, Workspace, Attendance, Request, Benefits, Payroll y Wellbeing (Capítulo II). Con EventStorming, Context Mapping, arquitectura en C4 Model y diagramas de componentes, de clases y de base de datos, cada contexto quedó con responsabilidades definidas. Esto permitió que el equipo avanzara en paralelo en el Sprint 1 porque los contratos entre contextos ya estaban establecidos (sección 4.2.1.9).
 
-* Además, se desarrollaron los principales artefactos de arquitectura y diseño necesarios para continuar con la implementación, incluyendo EventStorming, Context Mapping, diagramas de arquitectura, diagramas de componentes, modelos de clases de dominio y diseños de base de datos. De esta manera, Flowboard cuenta actualmente con una base funcional y técnica coherente con las necesidades identificadas, lo que permitirá afrontar las siguientes etapas de desarrollo de las aplicaciones móviles y del API REST con una estructura de dominio previamente definida y organizada.
+* En el Capítulo III el diseño de interfaz se concretó en un sistema de diseño sobre Material Design 3 y en 83 pantallas de la aplicación móvil (sección 3.1.4). Estas pasaron de wireframes a mock-ups y a un prototipo navegable en Figma conectado según seis user flows. El Landing Page también se diseñó, con su wireframe y su mock-up en versión de escritorio y móvil (sección 3.1.3).
 
-* En el Sprint 1 el diseño dejó de ser solo documentación y pasó a una implementación funcional y desplegada: el API REST se ejecuta en Render con una base de datos MySQL gestionada en Aiven, su contrato puede probarse desde Swagger UI, la Landing Page se publica en GitHub Pages y la aplicación nativa Android consume el API desplegado. Esto confirma que la organización por bounded contexts y la arquitectura por capas pueden llevarse al código sin perder la separación de responsabilidades, y deja una base de entrega continua sobre la que el equipo puede seguir iterando.
+* En el Sprint 1 el diseño pasó a una implementación funcional y desplegada. El RESTful API tiene 101 endpoints documentados con Swagger UI (Tabla 12) y se ejecuta en Render con la base de datos MySQL en Aiven, el Landing Page se publicó en GitHub Pages y la aplicación nativa Android implementa seis de los siete bounded contexts sobre el API desplegado (secciones 4.2.1.7 y 4.2.1.8). El equipo registró 171 commits (Tabla 15) y 81 Unit Tests sobre las reglas de negocio de mayor riesgo, vacaciones, beneficios y umbrales ambientales (Tablas 9 y 10), además de 4 features de Gherkin para las pruebas de aceptación (sección 4.2.1.5).
 
-* La evaluación heurística y la revisión de la versión del Sprint 1 mostraron los puntos de mejora más relevantes: la ausencia de inicio de sesión, la baja visibilidad de Beneficios y Bienestar dentro del menú “Más”, los mensajes de error de conexión poco orientadores y el uso exclusivo del color en el gráfico del histórico ambiental. Se recomienda priorizar en el Sprint 2 el bounded context IAM, la vista del colaborador y la mejora del manejo de errores, además de incorporar accesos directos en el Panel de Recursos Humanos y ayudas visuales adicionales al color, de modo que la solución sea más segura, descubrible e inclusiva.
+* Las cuatro entrevistas de validación, dos por segmento, mostraron que los usuarios entienden que Flowboard centraliza la información laboral y permite gestionar trámites desde el celular. También dejaron mejoras para el Landing Page: reducir los textos secundarios y los términos técnicos, subir la sección de módulos y agregar un botón para solicitar una demo (sección 4.3.2). La evaluación heurística de la versión del Sprint 1 encontró cuatro problemas de severidad 1 a 3: la ausencia de inicio de sesión, la baja visibilidad de Beneficios y Bienestar dentro del menú "Más", los mensajes de error de conexión poco orientadores y el uso exclusivo del color en el gráfico del histórico ambiental (sección 4.3.3).
+
+* Como lección del trabajo en equipo del Sprint 1, cada integrante lideró uno o dos bounded contexts en su propia rama, lo que permitió avanzar en paralelo. Aun así, la base de datos compartida en Aiven obligó a coordinar los cambios de esquema y la exigencia de llave primaria se descubrió tarde (sección 4.2.1.9). En el Sprint 2 el equipo atendió esta lección versionando el esquema con Flyway (sección 4.2.2.8).
+
+* En el Sprint 2 se completó el alcance funcional del RESTful API con el bounded context IAM: inicio y cierre de sesión con tokens JWT, cambio obligatorio de la contraseña temporal, restablecimiento de contraseña, cambio de rol y restricción de acceso por rol, además de la paginación, el filtrado y el ordenamiento de los listados de solicitudes y asistencia (secciones 4.2.2.3 y 4.2.2.7). Ambas aplicaciones exigen ahora iniciar sesión y muestran a cada persona solo la información que le corresponde.
+
+* El Sprint 2 llevó la solución a una segunda plataforma con la aplicación cross-platform en Flutter, que implementa IAM, Workspace, Attendance, Request, Benefits y Payroll, además del panel de Recursos Humanos, sobre la misma arquitectura por capas de la aplicación nativa y consumiendo el mismo API desplegado. En la aplicación nativa se completó la vista del colaborador, y la consulta de boletas en Flutter incorporó la verificación de identidad con huella, rostro o el bloqueo del dispositivo. El equipo registró 211 commits en los tres repositorios de software (Tabla 27).
+
+* La revisión de la calificación del TB1 mostró que la evidencia en dispositivo físico y la concordancia con los User Flows son tan importantes como el código. El Sprint 2 atendió las recomendaciones del Sprint 1 de priorizar IAM, la vista del colaborador con la consulta de boletas (US44) y la aplicación en Flutter. La evaluación heurística de la versión del Sprint 2 encontró ocho problemas de severidad 1 a 4, entre ellos secciones de la aplicación Flutter que todavía no están integradas, una pantalla de recuperación de acceso sin un contacto real y diferencias de navegación entre ambas aplicaciones (sección 4.3.3).
+
+* Para el Sprint 3 se recomienda implementar Wellbeing y las secciones pendientes de la aplicación Flutter, la notificación de cambio de estado de las solicitudes (US36) y la distribución de ambas aplicaciones a los testers mediante Firebase App Distribution. También se recomienda corregir los problemas de la evaluación heurística del Sprint 2, unificar la barra inferior del colaborador en ambas aplicaciones, agregar Unit Tests para IAM y para la aplicación Flutter, y repetir la validación con usuarios sobre la versión del Sprint 2 en dispositivos físicos.
+
+<div style="page-break-after: always;"></div>
+
+# Video About-the-Product
+
+El Video About-the-Product está dirigido a los visitantes del Landing Page que quieren conocer el modelo de negocio y las características principales de Flowboard, y a los usuarios de las aplicaciones que quieren saber qué tareas pueden resolver con ellas. Presenta el problema de la gestión de recursos humanos en organizaciones en crecimiento, la propuesta de valor para el personal de Recursos Humanos y para los colaboradores, y un recorrido por las funcionalidades principales de la aplicación. Incluye el testimonio de [COMPLETAR: nombre del usuario entrevistado en la validación, por cada User Persona].
+
+**Figura 178:** *Cuadro representativo del Video About-the-Product*
+
+![Video About-the-Product](assets/Chapter-5/about-the-product-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-product-av2.mp4`
+- URL de OneDrive: [COMPLETAR]
+- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
+- Duración: [COMPLETAR: mm:ss]
+
+<div style="page-break-after: always;"></div>
+
+# Video App Validation
+
+El Video App Validation documenta las sesiones de prueba de las aplicaciones con usuarios de los dos segmentos objetivo, personal de Recursos Humanos y colaboradores. En cada sesión el usuario realiza las tareas definidas en la sección 4.3.1 sobre la versión del Sprint 2 y comenta su experiencia; los hallazgos se evalúan con el formato de evaluación según heurísticas de la sección 4.3.3.
+
+**Figura 179:** *Cuadro representativo del Video App Validation*
+
+![Video App Validation](assets/Chapter-5/app-validation-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-validation-av2.mp4`
+- URL de OneDrive: [COMPLETAR]
+- Participantes: [COMPLETAR: nombre, segmento y fecha de cada sesión]
+- Duración: [COMPLETAR: mm:ss]
+
+<div style="page-break-after: always;"></div>
+
+# Video About-the-Team
+
+El Video About-the-Team resume el proceso de trabajo del equipo Performily durante el proyecto. Muestra sesiones de trabajo reales del equipo, con narración del proceso, y el testimonio ante cámara de cada integrante sobre las actividades que realizó, los outcomes que alcanzó y las competencias que desarrolló.
+
+**Tabla 28:** *Pauta de secuencias del Video About-the-Team*
+
+| Inicio (hh:mm:ss) | Sección |
+| :----: | :---- |
+| [COMPLETAR] | Presentación del equipo y de Flowboard |
+| [COMPLETAR] | Sesiones de trabajo del equipo |
+| [COMPLETAR] | Testimonio de Ávila De La Cruz, Darío Fabián |
+| [COMPLETAR] | Testimonio de Diaz Villalba, Diego Alonso |
+| [COMPLETAR] | Testimonio de Esquicha Alcántara, Diego Alonso |
+| [COMPLETAR] | Testimonio de Galvez Meza, Salym Pool |
+| [COMPLETAR] | Testimonio de Vasquez Llave, Oscar Lizandro |
+| [COMPLETAR] | Cierre |
+
+*Nota.* Elaboración propia.
+
+**Figura 180:** *Cuadro representativo del Video About-the-Team*
+
+![Video About-the-Team](assets/Chapter-5/about-the-team-av2.png)
+
+*Nota.* Elaboración propia.
+
+- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-team-av2.mp4`
+- URL de Microsoft Stream: [COMPLETAR]
+- URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
+- Duración: [COMPLETAR: mm:ss]
 
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
+
+Anggoro, Y., Aminullah, A., Lazuardi, B., Setyorini, E. E. D., & Chin, J. (2026). The role of HRIS (human resource information system) in improving HR management efficiency. Dinasti International Journal of Management Science, 7(3), 609–622. https://doi.org/10.38035/dijms.v7i3.6175
+
+Conventional Commits. (s. f.). Conventional Commits 1.0.0. https://www.conventionalcommits.org/es/v1.0.0/
+
 Escudero, F. (2025, enero 7). Madurez digital: ¿cuál es el panorama de las empresas en el Perú? Www.ey.com. https://www.ey.com/es_pe/insights/revista-execution/disrupcion/madurez-digital 
+
+Driessen, V. (2010, 5 de enero). A successful Git branching model. nvie.com. https://nvie.com/posts/a-successful-git-branching-model/
+
+Feriandy. (2025). Analysis of the role of human resource information system (HRIS) in improving work efficiency and effectiveness in modern organizations. International Journal of Asian Business and Management, 4(5), 1211–1222. https://doi.org/10.55927/ijabm.v4i5.619
 
 Gestión de recursos humanos en el sector público de América latina, 2017-2021: revisión sistemática. (2022). 2, 6(2), 3965–4000. https://doi.org/10.37811/cl_rcm.v6i2.2141 
 
+Google. (s. f.). Material Design 3. https://m3.material.io/
+
 Pérez, E. (2024). Transformación digital en la gestión de recursos humanos. REVISTA CIENTIFICA GLOBAL NEGOTIUM, 7(1), 27–43. https://doi.org/10.53485/rgn.v7i1.423 
+
+Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. https://semver.org/lang/es/
 
 Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. https://doi.org/10.5281/ZENODO.16933151 
 
@@ -5522,3 +6547,23 @@ Hasan, S. S. U., Ghani, A., Daud, A., Akbar, H., & Khan, M. F. (2025). A review 
 Jošt, G., & Taneski, V. (2025). State-of-the-art cross-platform mobile application development frameworks: A comparative study of market and developer trends. Informatics, 12(2), 45. https://doi.org/10.3390/informatics12020045
 
 OWASP Foundation. (s. f.). OWASP Mobile Application Security Verification Standard (MASVS). https://mas.owasp.org/MASVS/ 
+
+Pérez Panduro, S., & Flores, E. (2022). Gestión de recursos humanos en el sector público de América Latina, 2017-2021: revisión sistemática. Ciencia Latina Revista Científica Multidisciplinar, 6(2), 3965–4000. https://doi.org/10.37811/cl_rcm.v6i2.2141
+
+Tejada Ramos, A. A. (2025). Análisis sistemático de la gestión del desempeño en las entidades públicas: herramientas de las oficinas de recursos humanos. Aula Virtual, 6(13), 1027–1066. https://doi.org/10.5281/zenodo.16933151
+
+World Wide Web Consortium. (2018, 5 de junio). Web Content Accessibility Guidelines (WCAG) 2.1. https://www.w3.org/TR/WCAG21/
+
+<div style="page-break-after: always;"></div>
+
+# Anexos
+
+## Anexo A. Videos de Exposiciones
+
+**Tabla 29:** *Videos de exposición por entrega*
+
+| Entrega | Enlace del video de exposición |
+| :---- | :---- |
+| AV2 | [COMPLETAR: enlace privado de OneDrive del video de exposición del AV2] |
+
+*Nota.* Elaboración propia.
