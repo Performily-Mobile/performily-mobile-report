@@ -66,7 +66,7 @@
 
 <p align="center">
   Período 202620<br>
-  Octubre 2026
+  Noviembre 2026
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -5261,7 +5261,7 @@ El Sprint 2 tuvo como propósito cerrar el alcance funcional del RESTful API con
 | Sprint # | Sprint 2 |
 | :---- | :---- |
 | **Sprint Planning Background** | |
-| Date | 2026-11-11 |
+| Date | 2026-10-19 |
 | Time | 07:00 PM |
 | Location | Discord (virtual) |
 | Prepared By | Esquicha Alcántara, Diego Alonso |
@@ -5831,7 +5831,7 @@ Enlace del video: [COMPLETAR: enlace de OneDrive del video de ejecución del Spr
 
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
-En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y los que cambiaron de contrato. La documentación se sigue generando con springdoc-openapi y se publica con Swagger UI en el mismo servicio; además, se corrigió la configuración para que Swagger UI envíe las peticiones al mismo servidor que la sirve, lo que permite probar los endpoints directamente desde la versión desplegada. Desde este Sprint todos los endpoints, salvo el inicio de sesión, la documentación y `/health`, exigen el encabezado `Authorization: Bearer <token>`, que Swagger UI permite registrar con su botón *Authorize*. Los endpoints usan el prefijo `/api/v1`, salvo `/health`.
+En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y los que cambiaron de contrato. La documentación se sigue generando con springdoc-openapi y se publica con Swagger UI en el mismo servicio; además, se corrigió la configuración para que Swagger UI envíe las peticiones al mismo servidor que la sirve, lo que permite probar los endpoints directamente desde la versión desplegada. Desde este Sprint todos los endpoints, salvo el inicio de sesión, la documentación y /health, exigen el encabezado Authorization: Bearer <token>, que Swagger UI permite registrar con su botón *Authorize*. Los endpoints usan el prefijo /api/v1, salvo /health.
 
 - Swagger UI desplegado: https://flowboard-mobile-service.onrender.com/swagger-ui/index.html
 - Especificación OpenAPI: /v3/api-docs
@@ -5883,7 +5883,7 @@ En el Sprint 2 se documentaron con OpenAPI Specification los endpoints nuevos y 
 
 #### 4.2.2.8. Software Deployment Evidence for Sprint Review
 
-En el Sprint 2 se mantuvo la arquitectura de despliegue del Sprint 1: el Landing Page en GitHub Pages, el RESTful API como Web Service de Render con runtime Docker desde la rama `main`, y la base de datos MySQL en Aiven. Los cambios de este Sprint fueron cuatro. Primero, el secreto y el tiempo de vida de los tokens JWT se configuran con las variables de entorno `IAM_JWT_SECRET` e `IAM_JWT_TTL_SECONDS` del servicio en Render, de modo que no quedan en el repositorio. Segundo, Flyway se ejecuta al iniciar el servicio con `baseline-on-migrate`, lo que permite versionar el esquema sobre la base que ya existía en Aiven. Tercero, el endpoint público `/health` responde a `GET` y `HEAD` con el estado de la conexión a la base de datos, lo que permite monitorear la disponibilidad del servicio. Cuarto, las compilaciones de la aplicación nativa apuntan al API en Render mediante `BuildConfig`, con la opción de usar un backend local durante el desarrollo, y el cliente HTTP de la aplicación Flutter usa por defecto la misma URL (`https://flowboard-mobile-service.onrender.com/api/v1/`).
+En el Sprint 2 se mantuvo la arquitectura de despliegue del Sprint 1: el Landing Page en GitHub Pages, el RESTful API como Web Service de Render con runtime Docker desde la rama main, y la base de datos MySQL en Aiven. Los cambios de este Sprint fueron cuatro. Primero, el secreto y el tiempo de vida de los tokens JWT se configuran con las variables de entorno IAM_JWT_SECRET e IAM_JWT_TTL_SECONDS del servicio en Render, de modo que no quedan en el repositorio. Segundo, Flyway se ejecuta al iniciar el servicio con baseline-on-migrate, lo que permite versionar el esquema sobre la base que ya existía en Aiven. Tercero, el endpoint público /health responde a GET y HEAD con el estado de la conexión a la base de datos, lo que permite monitorear la disponibilidad del servicio. Cuarto, las compilaciones de la aplicación nativa apuntan al API en Render mediante BuildConfig, con la opción de usar un backend local durante el desarrollo, y el cliente HTTP de la aplicación Flutter usa por defecto la misma URL (https://flowboard-mobile-service.onrender.com/api/v1/).
 
 La distribución de las aplicaciones por Firebase App Distribution se realizará en el Sprint 3.
 
@@ -5920,8 +5920,8 @@ RESTful API desplegado: https://flowboard-mobile-service.onrender.com
 
 Durante el Sprint 2 se mantuvo la organización por bounded context, pero el trabajo se repartió entre dos frentes que avanzaron en paralelo: IAM, que atravesaba los tres productos de software, y la aplicación Flutter, en la que cada integrante portó el bounded context que había liderado en la aplicación nativa durante el Sprint 1.
 
-- **Distribución del trabajo:** Ávila De La Cruz, Darío Fabián implementó IAM en el API y en la aplicación nativa, protegió y paginó Attendance y portó Attendance a Flutter. Diaz Villalba, Diego Alonso paginó Request en el API y en la aplicación nativa, incorporó las nuevas reglas de aprobación y portó Request e IAM a Flutter. Vasquez Llave, Oscar Lizandro construyó la base y el sistema de diseño de la aplicación Flutter, portó Workspace y el panel de Recursos Humanos, y completó en la aplicación nativa la vista del colaborador. Galvez Meza, Salym Pool portó Benefits a Flutter y expuso el endpoint de salud del API. Esquicha Alcántara, Diego Alonso portó Payroll a Flutter e incorporó la verificación de identidad con `local_auth` antes de mostrar las boletas.
-- **Integración:** la base de la aplicación Flutter se construyó primero para que los demás integrantes partieran de la misma estructura de capas, el mismo cliente HTTP y el mismo registro de dependencias por bounded context. Cada bounded context se trabajó en su propia rama y se integró en `develop`. IAM se construyó sobre la rama de Request en Flutter porque ambos necesitan la identidad del colaborador autenticado.
+- **Distribución del trabajo:** Ávila De La Cruz, Darío Fabián implementó IAM en el API y en la aplicación nativa, protegió y paginó Attendance y portó Attendance a Flutter. Diaz Villalba, Diego Alonso paginó Request en el API y en la aplicación nativa, incorporó las nuevas reglas de aprobación y portó Request e IAM a Flutter. Vasquez Llave, Oscar Lizandro construyó la base y el sistema de diseño de la aplicación Flutter, portó Workspace y el panel de Recursos Humanos, y completó en la aplicación nativa la vista del colaborador. Galvez Meza, Salym Pool portó Benefits a Flutter y expuso el endpoint de salud del API. Esquicha Alcántara, Diego Alonso portó Payroll a Flutter e incorporó la verificación de identidad con local_auth antes de mostrar las boletas.
+- **Integración:** la base de la aplicación Flutter se construyó primero para que los demás integrantes partieran de la misma estructura de capas, el mismo cliente HTTP y el mismo registro de dependencias por bounded context. Cada bounded context se trabajó en su propia rama y se integró en develop. IAM se construyó sobre la rama de Request en Flutter porque ambos necesitan la identidad del colaborador autenticado.
 - **Lecciones:** la incorporación de IAM cambió el contrato de todos los endpoints, porque ahora exigen el token, y obligó a ajustar ambas aplicaciones para enviar la sesión y reaccionar ante una sesión expirada. La paginación tuvo el mismo efecto sobre los listados de solicitudes y asistencia. El equipo concluye que los cambios transversales del API deben planificarse al inicio del Sprint, antes de que las aplicaciones consuman los endpoints.
 
 En total, el Sprint 2 registró 37 commits en el API, 49 en la aplicación nativa y 125 en la aplicación Flutter, sin contar los merges. El Landing Page no registró commits en este Sprint.
@@ -6461,7 +6461,7 @@ El Video About-the-Product está dirigido a los visitantes del Landing Page que 
 
 *Nota.* Elaboración propia.
 
-- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-product-av2.mp4`
+- Archivo: upc-pre-202620-1acc0238-4951-performily-about-the-product-av2.mp4
 - URL de OneDrive: [COMPLETAR]
 - URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
 - Duración: [COMPLETAR: mm:ss]
@@ -6478,7 +6478,7 @@ El Video App Validation documenta las sesiones de prueba de las aplicaciones con
 
 *Nota.* Elaboración propia.
 
-- Archivo: `upc-pre-202620-1acc0238-4951-performily-validation-av2.mp4`
+- Archivo: upc-pre-202620-1acc0238-4951-performily-validation-av2.mp4
 - URL de OneDrive: [COMPLETAR]
 - Participantes: [COMPLETAR: nombre, segmento y fecha de cada sesión]
 - Duración: [COMPLETAR: mm:ss]
@@ -6510,7 +6510,7 @@ El Video About-the-Team resume el proceso de trabajo del equipo Performily duran
 
 *Nota.* Elaboración propia.
 
-- Archivo: `upc-pre-202620-1acc0238-4951-performily-about-the-team-av2.mp4`
+- Archivo: upc-pre-202620-1acc0238-4951-performily-about-the-team-av2.mp4
 - URL de Microsoft Stream: [COMPLETAR]
 - URL de YouTube (incrustado en el Landing Page): [COMPLETAR]
 - Duración: [COMPLETAR: mm:ss]
