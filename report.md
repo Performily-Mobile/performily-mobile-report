@@ -6323,8 +6323,7 @@ El alcance de esta evaluación incluye la revisión de la usabilidad de las sigu
 4. Uso del acceso con huella digital.
 5. Navegación por la barra inferior y por la pestaña "Más", con el rol de Recursos Humanos y con el rol de colaborador.
 6. Acceso a la asistencia propia del personal de Recursos Humanos (marcar entrada y salida).
-7. Consulta de las notificaciones y de la pantalla de inicio del colaborador.
-8. Lectura de los términos y la política de privacidad desde el inicio de sesión.
+
 
 No están incluidas en esta versión de la evaluación las siguientes tareas:
 
@@ -6358,8 +6357,6 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | 4 | La opción de huella digital aparece siempre deshabilitada | 2 | Usability: Diseño estético y minimalista / Inclusive Design: Agrega valor |
 | 5 | La barra inferior del colaborador no es igual en la app nativa y en la app Flutter | 2 | Usability: Consistencia y estándares / Information Architecture: Is it Findable? |
 | 6 | El personal de RR. HH. marca su propia asistencia desde "Más", escondida en un segundo nivel | 2 | Usability: Flexibilidad y eficiencia de uso / Information Architecture: Is it Findable? |
-| 7 | El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña | 2 | Inclusive Design: Considera la situación / Information Architecture: Is it Accessible? |
-| 8 | El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas | 1 | Usability: Consistencia y estándares / Inclusive Design: Es consistente |
 
 **DESCRIPCIÓN DE PROBLEMAS:**
 
@@ -6443,6 +6440,8 @@ La app nativa le da al colaborador las pestañas Inicio, Solicitudes, Asistencia
 
 ![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5-1.png)
 
+![Barra inferior del colaborador en ambas aplicaciones](assets/Chapter-4/heuristica-s2-p5-2.png)
+
 *Nota.* Captura de la barra inferior del colaborador en ambas apps. Elaboración propia.
 
 **Recomendación:**
@@ -6458,46 +6457,13 @@ El personal de Recursos Humanos también es colaborador y debe marcar su entrada
 
 **Figura 175:** *Opción Mi asistencia dentro de Más*
 
-![Opción Mi asistencia dentro de Más](assets/Chapter-4/heuristica-s2-p6.png)
+![Opción Mi asistencia dentro de Más](assets/Chapter-4/heuristica-s2-p6-1.png)
+![Opción Mi asistencia dentro de Más](assets/Chapter-4/heuristica-s2-p6-2.png)
 
 *Nota.* Captura de "Más" con la opción "Mi asistencia" en la app nativa o en Flutter. Elaboración propia.
 
 **Recomendación:**
 Agregar un acceso directo para marcar entrada y salida en el panel de Recursos Humanos, o separar claramente en la pestaña "Asistencia" las dos vistas ("Mi asistencia" y "Equipo").
-
-**PROBLEMA #7: El enlace "Términos y privacidad" de la app nativa tiene un área táctil muy pequeña**
-
-**Severidad:** 2
-**Heurística violada:** Inclusive Design – Considera la situación / Information Architecture – Is it Accessible?
-
-**Problema:**
-En el pie del inicio de sesión de la app nativa, "Términos y privacidad" es un texto con clic, sin relleno ni tamaño mínimo, por lo que su área táctil es solo la altura del texto. Material Design recomienda al menos 48 dp. Para alguien que usa el celular con una mano o en movimiento, es fácil fallar al tocarlo. En Flutter este enlace es un botón y ya cumple con el tamaño mínimo.
-
-**Figura 176:** *Enlace Términos y privacidad de la app nativa*
-
-![Enlace Términos y privacidad de la app nativa](assets/Chapter-4/heuristica-s2-p7.png)
-
-*Nota.* Captura del pie del login en la app nativa. Elaboración propia.
-
-**Recomendación:**
-Usar un botón de texto (TextButton) en lugar de un texto con clic, o darle al menos 48 dp de alto.
-
-**PROBLEMA #8: El botón de volver de "Recuperar acceso" de la app nativa no sigue el patrón de las demás pantallas**
-
-**Severidad:** 1
-**Heurística violada:** Usabilidad – Consistencia y estándares / Inclusive Design – Es consistente
-
-**Problema:**
-En la pantalla "Recuperar acceso" de la app nativa, el botón para volver es un texto "‹  Recuperar acceso". En el resto de la app, y en la misma pantalla de la app Flutter, se usa la barra superior con la flecha de regreso. Es un problema pequeño porque el usuario igual entiende que puede volver, y además existe el botón "Volver a iniciar sesión" al final, pero rompe el patrón.
-
-**Figura 177:** *Botón de volver de Recuperar acceso en la app nativa*
-
-![Botón de volver de Recuperar acceso en la app nativa](assets/Chapter-4/heuristica-s2-p8.png)
-
-*Nota.* Captura de "Recuperar acceso" en la app nativa y en la Flutter. Elaboración propia.
-
-**Recomendación:**
-Usar la misma barra superior con flecha de regreso (FlowboardTopBar) que usan las demás pantallas.
 
 ---
 
